@@ -14,7 +14,7 @@
 </head>
 
 <body class="bg-green-600">
-    <div id="app">
+    <div id="app" class="flex justify-center pt-16">
         <app></app>
     </div>
 
