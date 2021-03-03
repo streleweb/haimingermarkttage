@@ -18,3 +18,12 @@ use Illuminate\Support\Facades\Route;
 });*/
 
 Route::get('/{any}', 'App\Http\Controllers\PagesController@index')->where('any', '.*');
+
+/**
+ * Offline-Route
+ * responds with a default view, if network connection is down.
+ */
+
+Route::get('/offline', function () {    
+    return view('modules/laravelpwa/offline');
+    });

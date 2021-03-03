@@ -11,12 +11,15 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
 
     <title>{{env('APP_NAME')}}</title>
+    @laravelPWA
 </head>
 
-<body class="bg-green-600">
+<body class="bg-blue-600">
     <div id="app" class="flex justify-center pt-16">
         <app></app>
     </div>
+
+    @yield('content')
 
     <script src="{{ mix('js/app.js') }}"></script>
 </body>
