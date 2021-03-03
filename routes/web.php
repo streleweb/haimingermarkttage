@@ -22,8 +22,10 @@ Route::get('/{any}', 'App\Http\Controllers\PagesController@index')->where('any',
 /**
  * Offline-Route
  * responds with a default view, if network connection is down.
+ * 
+ * Falls nicht funkt -> modules/laravel... vendor/laravelpwa/offline bzw. vendor.laravelpwa.offline
  */
 
 Route::get('/offline', function () {    
-    return view('modules/laravelpwa/offline');
+    return view('vendor/laravelpwa/offline');
     });
