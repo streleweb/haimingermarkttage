@@ -1,4 +1,4 @@
-var staticCacheName = "pwa-v" + new Date().getTime();
+/*var staticCacheName = "pwa-v" + new Date().getTime();
 var filesToCache = [
     '/offline',
     '/css/app.css',
@@ -49,4 +49,4 @@ self.addEventListener("fetch", event => {
                 return caches.match('offline');
             })
     )
-});
+});*/

@@ -22,7 +22,7 @@
           />
         </svg>
         <div>
-          <p class="text-xs font-medium ml-2">Produkte</p>
+          <p class="text-xs font-medium ml-2">Produkte Test</p>
         </div>
       </div>
     </div>
