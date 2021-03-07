@@ -1,10 +1,11 @@
 <template>
   <footer
-    class="w-full text-center border-t border-grey p-4 pin-b bg-blue-dark"
+    class="w-full text-center border-t-2 border-gray-400 p-4 pin-b bg-gray-200"
   >
-    <p class="font-bold font-sans text-white">
+    <p class="font-bold font-sans text-black">
       Impressum Datenschutz Kontakt usw.
     </p>
+    <!-- Noch dynamisch machen und verlinken -->
   </footer>
 </template>
 

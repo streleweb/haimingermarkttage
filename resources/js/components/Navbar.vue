@@ -54,7 +54,7 @@
             href="#responsive-header"
             class="no-underline block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white"
           >
-            Foto-Gallerie
+            Foto-Galerie
           </a>
         </div>
         <div>
