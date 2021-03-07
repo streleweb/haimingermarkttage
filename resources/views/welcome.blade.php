@@ -47,14 +47,16 @@
     @laravelPWA
 </head>
 
-<body class="bg-blue-300">
-    <div id="app" class="flex justify-center pt-16">
-        <app></app>
+<body class="bg-gradient-to-b from-gray-900 to-green-500 ... flex flex-col h-full">
+    <div id="app">
+        <app>
+        </app>
     </div>
 
     @yield('content')
 
     <script src="{{ mix('js/app.js') }}"></script>
+
 </body>
 
 </html>
