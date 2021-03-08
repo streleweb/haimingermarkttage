@@ -812,10 +812,10 @@ var staticRenderFns = [
       "footer",
       {
         staticClass:
-          "w-full text-center border-t-2 border-gray-400 p-4 pin-b bg-gray-200"
+          "w-full text-center border-t-2 border-green-400 p-4 pin-b bg-gray-800 opacity-80"
       },
       [
-        _c("p", { staticClass: "font-bold font-sans text-black" }, [
+        _c("p", { staticClass: "font-semibold font-sans text-green-50" }, [
           _vm._v("\n    Impressum Datenschutz Kontakt usw.\n  ")
         ])
       ]
