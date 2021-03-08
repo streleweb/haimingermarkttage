@@ -164,6 +164,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Navbar",
   data: function data() {
@@ -728,7 +730,7 @@ var render = function() {
             "div",
             {
               staticClass:
-                "flex items-center p-4 rounded-lg shadow-xl cursor-pointer hover:bg-green-700 hover:text-gray-100",
+                "flex items-center p-4 rounded-lg shadow-xl cursor-pointer hover:bg-green-900 hover:text-gray-100",
               class: _vm.buttonColor
             },
             [
@@ -846,7 +848,7 @@ var render = function() {
       "nav",
       {
         staticClass:
-          "flex items-center justify-between flex-wrap bg-gray-600 p-4"
+          "flex items-center justify-between flex-wrap bg-green-900 p-4 border-b-2 border-black border-opacity-60"
       },
       [
         _c(

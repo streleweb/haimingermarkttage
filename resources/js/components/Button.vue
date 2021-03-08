@@ -6,7 +6,7 @@
       <div class="p-1 rounded-lg" :class="onHover">
         <!-- Hoverdiv Start -->
         <div
-          class="flex items-center p-4 rounded-lg shadow-xl cursor-pointer hover:bg-green-700 hover:text-gray-100"
+          class="flex items-center p-4 rounded-lg shadow-xl cursor-pointer hover:bg-green-900 hover:text-gray-100"
           :class="buttonColor"
         >
           <svg
