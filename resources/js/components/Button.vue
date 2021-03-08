@@ -1,8 +1,8 @@
 <template>
   <div
-    class="buttoncontainer flex justify-center flex-col items-center text-white text-center"
+    class="buttoncontainer mt-5 flex justify-center flex-col items-center text-white text-center"
   >
-    <div class="p-1 mt-5 md:w-80 text-center">
+    <div class="w-60 md:w-80 text-center">
       <div class="p-1 rounded-lg" :class="onHover">
         <!-- Hoverdiv Start -->
         <div
@@ -21,7 +21,7 @@
             />
           </svg>
           <div>
-            <p class="text-sl font-medium md:ml-20 md:text-3xl md:p-2">
+            <p class="text-sl pl-20 font-medium md:ml-20 md:text-3xl md:p-2">
               {{ buttonInhalt }}
             </p>
           </div>

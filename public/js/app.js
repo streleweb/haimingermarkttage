@@ -243,6 +243,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -718,10 +719,10 @@ var render = function() {
     "div",
     {
       staticClass:
-        "buttoncontainer flex justify-center flex-col items-center text-white text-center"
+        "buttoncontainer mt-5 flex justify-center flex-col items-center text-white text-center"
     },
     [
-      _c("div", { staticClass: "p-1 mt-5 md:w-80 text-center" }, [
+      _c("div", { staticClass: "w-60 md:w-80 text-center" }, [
         _c("div", { staticClass: "p-1 rounded-lg", class: _vm.onHover }, [
           _c(
             "div",
@@ -758,7 +759,7 @@ var render = function() {
                   "p",
                   {
                     staticClass:
-                      "text-sl font-medium md:ml-20 md:text-3xl md:p-2"
+                      "text-sl pl-20 font-medium md:ml-20 md:text-3xl md:p-2"
                   },
                   [
                     _vm._v(

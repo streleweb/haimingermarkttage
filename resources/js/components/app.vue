@@ -5,6 +5,7 @@
     </div>
     <div class="main flex-grow">
       <div class="willkommen font-willkommen">
+        <!-- custom font konfiguriert-->
         <!-- Hier noch Background-Pic oder Video rein -->
         <div class="text-white mb-20 mt-10 text-center text-5xl font-s">
           {{ titleMessage }}
