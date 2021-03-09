@@ -43,7 +43,6 @@
     <!-- end main -->
     <Footer></Footer>
   </div>
-
   <!-- end outer div -->
 </template>
 

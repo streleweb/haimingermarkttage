@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 
+/**
+ * Alle Routen zulassen und zu PagesController-Methoden weiterleiten
+ */
 Route::get('/{any}', 'App\Http\Controllers\PagesController@index')->where('any', '.*');
 
 /**
