@@ -1,4 +1,5 @@
-import Vue from 'vue'
+import Vue from 'vue';
+require('./bootstrap'); //bootstrap.js
 
 //Main pages
 import App from './components/app.vue';
