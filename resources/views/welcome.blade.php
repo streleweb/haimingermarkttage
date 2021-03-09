@@ -51,8 +51,8 @@
 <body class="bg-gradient-to-b from-gray-900 to-green-500 ... flex flex-col h-full overflow-hidden">
 
     <div id="app">
-        <App>
-        </App>
+        <router-view></router-view>
+        <!-- JUST FOR TESTING, dann content component machen, indem die Grundstruktur ist und via router-view die verschiedenen components geladen werden -->
         @yield('content')
     </div>
 

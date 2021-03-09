@@ -20154,6 +20154,8 @@ var render = function() {
     [
       _c("div", { staticClass: "header" }, [_c("navbar")], 1),
       _vm._v(" "),
+      _c("router-view"),
+      _vm._v(" "),
       _c(
         "div",
         { staticClass: "main flex-grow" },
@@ -20180,11 +20182,8 @@ var render = function() {
                         "\n        "
                     )
                   ]
-                ),
-                _vm._v(" "),
-                _c("router-view")
-              ],
-              1
+                )
+              ]
             )
           ]),
           _vm._v(" "),

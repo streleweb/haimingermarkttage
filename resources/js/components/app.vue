@@ -3,6 +3,8 @@
     <div class="header">
       <navbar></navbar>
     </div>
+    <router-view></router-view
+    ><!-- JUST FOR TESTING, dann content component machen, indem die Grundstruktur ist und via router-view die verschiedenen components geladen werden -->
     <div class="main flex-grow">
       <div class="willkommen font-willkommen">
         <!-- custom font konfiguriert in tailwind.config.js-->
@@ -12,8 +14,6 @@
           <div class="text-gray-300 text-center mt-8 text-2xl font-thin bg">
             {{ smallDescription }}
           </div>
-          <router-view></router-view
-          ><!-- JUST FOR TESTING, dann content component machen, indem die Grundstruktur ist und via router-view die verschiedenen components geladen werden -->
         </div>
         <!-- end willkommenstexte -->
       </div>
