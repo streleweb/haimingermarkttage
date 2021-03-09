@@ -41,21 +41,24 @@
         });
     }
     </script>
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
+    <!-- possibly change asset back to mix, don´t know yet -->
 
     <title>{{env('APP_NAME')}}</title>
     @laravelPWA
 </head>
 
 <body class="bg-gradient-to-b from-gray-900 to-green-500 ... flex flex-col h-full overflow-hidden">
+
     <div id="app">
-        <app>
-        </app>
+        <App>
+        </App>
+        @yield('content')
     </div>
 
-    @yield('content')
 
-    <script src="{{ mix('js/app.js') }}"></script>
+
+    <script src="{{ asset('js/app.js') }}"></script><!-- possibly change asset back to mix, don´t know yet -->
 
 </body>
 

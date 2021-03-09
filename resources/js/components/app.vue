@@ -5,19 +5,21 @@
     </div>
     <div class="main flex-grow">
       <div class="willkommen font-willkommen">
-        <!-- custom font konfiguriert-->
+        <!-- custom font konfiguriert in tailwind.config.js-->
         <!-- Hier noch Background-Pic oder Video rein -->
         <div class="text-white mb-20 mt-10 text-center text-5xl font-s">
           {{ titleMessage }}
           <div class="text-gray-300 text-center mt-8 text-2xl font-thin bg">
             {{ smallDescription }}
           </div>
+          <router-view></router-view
+          ><!-- JUST FOR TESTING, dann content component machen, indem die Grundstruktur ist und via router-view die verschiedenen components geladen werden -->
         </div>
         <!-- end willkommenstexte -->
       </div>
       <!-- end willkommen -->
 
-      <!--Button dann als seperaten Component bereitstellen, margin left noch weg und centern-->
+      <!--Buttons mit Custom Props-->
       <Button
         button-inhalt="Produkte"
         button-color="bg-green-400"
@@ -60,7 +62,7 @@ export default {
     return {
       titleMessage: "Willkommen bei den Haiminger Markttagen!",
       smallDescription: "Flanieren, Probieren und Genießen...",
-      //nicht vergessen, Anreiseinfos entweder in DB abspeichern und von dort aus zB via Props zu laden, oder direkt..
+      //nicht vergessen, Anreiseinfos entweder in DB abspeichern und von dort aus zB via Props zu laden, oder via API Call (Axios oder FetchAPI)..
     };
   },
   components: { Navbar, Footer, Apple, Button },
