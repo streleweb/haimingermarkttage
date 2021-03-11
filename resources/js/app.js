@@ -9,10 +9,19 @@ import App from './components/App.vue';
 Vue.use(VueRouter);
 
 
-const app = new Vue({
+/*const app = new Vue({
+    el: '#app',
+    router: new VueRouter(routes),
+    components: { App }
+});*/
+
+
+new Vue({
+    render(h) {
+        return h(App)
+    },
     el: '#app',
     router: new VueRouter(routes),
     components: { App }
 });
-
 

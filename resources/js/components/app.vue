@@ -1,52 +1,15 @@
 <template>
-  <div class="flex flex-col min-h-screen">
+  <div class="outercontainer flex flex-col h-full">
     <div class="header">
       <navbar></navbar>
     </div>
-
-    <div class="main flex-grow">
-      <div class="willkommen font-willkommen">
-        <!-- custom font konfiguriert in tailwind.config.js-->
-        <!-- Hier noch Background-Pic oder Video rein -->
-        <div class="text-white mb-20 mt-10 text-center text-5xl font-s">
-          {{ titleMessage }}
-          <div class="text-gray-300 text-center mt-8 text-2xl font-thin bg">
-            {{ smallDescription }}
-          </div>
-        </div>
-        <!-- end willkommenstexte -->
-      </div>
-      <!-- end willkommen -->
-
-      <!--Buttons mit Custom Props-->
-      <router-link to="/app/produkte">
-        <Button
-          button-inhalt="Produkte"
-          button-color="bg-green-400"
-          on-hover="hover:bg-white"
-        ></Button>
-      </router-link>
-      <Button
-        button-inhalt="Aussteller"
-        button-color="bg-green-400"
-        on-hover="hover:bg-yellow-50"
-      ></Button>
-      <Button
-        button-inhalt="Karte"
-        button-color="bg-green-400"
-        on-hover="hover:bg-yellow-100"
-      ></Button>
-      <Button
-        button-inhalt="Anreise"
-        button-color="bg-green-400"
-        on-hover="hover:bg-yellow-200"
-      ></Button>
-      <!-- end buttoncontainer -->
+    <div class="main flex-1">
+      <!-- flex-grow war davor -->
+      <router-view></router-view>
     </div>
-    <!-- end main -->
     <Footer></Footer>
   </div>
-  <!-- end outer div -->
+  <!-- end outercontainer -->
 </template>
 
 
@@ -54,7 +17,7 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Apple from "./svg/Apple";
-import Button from "./Button";
+import HomeContent from "./HomeContent";
 const default_layout = "default";
 
 export default {
@@ -66,7 +29,7 @@ export default {
       //nicht vergessen, Anreiseinfos entweder in DB abspeichern und von dort aus zB via Props zu laden, oder via API Call (Axios oder FetchAPI)..
     };
   },
-  components: { Navbar, Footer, Apple, Button },
+  components: { Navbar, Footer, Apple, HomeContent },
 };
 </script>
 

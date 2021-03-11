@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="w-full text-center border-t-2 border-green-400 p-4 pin-b bg-gray-800 opacity-80"
+    class="w-full text-center border-t-2 bottom-0 border-green-400 p-4 bg-gray-800 opacity-80"
   >
     <p class="font-semibold font-sans text-green-50">
       Impressum Datenschutz Kontakt usw.
