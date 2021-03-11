@@ -9,6 +9,14 @@ use Illuminate\Database\Eloquent\Model\Aussteller;//
 class Product extends Model
 {
     use HasFactory;
+       /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'product_name'
+    ];
 
     public function aussteller(){
 
