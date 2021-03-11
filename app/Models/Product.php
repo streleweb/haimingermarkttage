@@ -11,11 +11,13 @@ class Product extends Model
     use HasFactory;
 
     public function aussteller(){
-        return $this->belongsToMany(
+
+        return $this->belongsToMany(Aussteller::class);
+        /*return $this->belongsToMany(
             Aussteller::Class,
             'aussteller_products',
             'product_id',
             'aussteller_id'  
-        );
+        );*/
     }
 }

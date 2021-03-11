@@ -8,7 +8,7 @@ class CreateProductsTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * Alphabetisch geordnet, damit eloquent Magic funkt.
      * @return void
      */
     public function up()
