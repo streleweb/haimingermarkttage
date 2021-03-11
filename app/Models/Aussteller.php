@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model\Product;//
+
+class Aussteller extends Model
+{
+    use HasFactory;
+
+    /**
+     * Method for Many-to-Many Product-Relationship
+     */
+    public function products(){
+
+        /*return $this->belongsToMany(RelatedModel, pivot_table_name, 
+        foreign_key_of_current_model_in_pivot_table, foreign_key_of_other_model_in_pivot_table);*/
+
+        return $this->belongsToMany(
+            Product::class,
+            'aussteller_products',
+            'aussteller_id',
+            'product_id'
+        );
+    }
+
+}
