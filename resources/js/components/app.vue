@@ -18,6 +18,7 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Apple from "./svg/Apple";
 import HomeContent from "./HomeContent";
+import PageNotFound from "./PageNotFound";
 const default_layout = "default";
 
 export default {
@@ -29,7 +30,7 @@ export default {
       //nicht vergessen, Anreiseinfos entweder in DB abspeichern und von dort aus zB via Props zu laden, oder via API Call (Axios oder FetchAPI)..
     };
   },
-  components: { Navbar, Footer, Apple, HomeContent },
+  components: { Navbar, Footer, Apple, HomeContent, PageNotFound },
 };
 </script>
 
