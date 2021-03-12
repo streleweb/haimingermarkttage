@@ -15,11 +15,18 @@ class CreateAusstellerProductsTable extends Migration
     {
         Schema::create('aussteller_product', function (Blueprint $table) {
 
-            $table->foreignId('aussteller_id')->constrained();
-            $table->foreignId('product_id')->constrained();
+            
+            $table->id();
+            $table->bigInteger('aussteller_id')->unsigned();
+            $table->bigInteger('product_id')->unsigned();
+            $table->foreign('aussteller_id')->references('id')->on('aussteller');
+            $table->foreign('product_id')->references('id')->on('products');
+           // $table->foreignId('aussteller_id')->constrained();
+           // $table->foreignId('product_id')->constrained();
+            
             //$table->id();
-            /*$table->bigIncrements('id');
-            $table->string('aussteller_id'); //wenn nötig noch als index hinzufügen
+            //$table->bigIncrements('id');
+           /* $table->string('aussteller_id'); //wenn nötig noch als index hinzufügen
             $table->foreign('aussteller_id')
                     ->references('id')
                     ->on('aussteller');

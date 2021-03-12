@@ -11,11 +11,11 @@ class CreateAusstellersTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up() 
     {
         Schema::create('aussteller', function (Blueprint $table) {
-            //$table->id();
-            $table->bigIncrements('id');
+            $table->id();
+            //$table->bigInteger('id');
             $table->string('aussteller_fullname');
             $table->string('aussteller_beschreibung')->nullable();
             $table->string('aussteller_brandingname')->nullable();
