@@ -28,5 +28,11 @@ class Aussteller extends Model
             'product_id'
         );*/
     }
+    /**
+    * Ausstellerfoto mit Aussteller assoziieren mit One-to-One Beziehung
+    */
+    public function ausstellerfoto(){
+        return $this->hasOne('App\Models\Ausstellerfoto');
+    }
 
 }
