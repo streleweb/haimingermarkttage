@@ -9,7 +9,7 @@ class Ausstellerfoto extends Model
 {
     use HasFactory;
 
-    protected $table = "ausstellerfotos";
+    protected $table = "ausstellerfoto";
 
     public function aussteller(){
         return $this->belongsTo('App\Models\Aussteller');

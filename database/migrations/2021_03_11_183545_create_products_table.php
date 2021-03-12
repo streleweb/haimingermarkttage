@@ -13,7 +13,7 @@ class CreateProductsTable extends Migration
      */
     public function up() //role
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('product', function (Blueprint $table) {
             $table->id(); //Hier dann $table->index('aussteller_id'); & $table->foreign('user_id')->references('id')->on('users')      falls wo notwendig  ->onDelete('cascade'); 
            // $table->bigIncrements('id');
             $table->string('product_name')->unique();

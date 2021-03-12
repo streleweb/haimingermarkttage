@@ -20,7 +20,7 @@ class CreateAusstellerProductsTable extends Migration
             $table->bigInteger('aussteller_id')->unsigned();
             $table->bigInteger('product_id')->unsigned();
             $table->foreign('aussteller_id')->references('id')->on('aussteller');
-            $table->foreign('product_id')->references('id')->on('products');
+            $table->foreign('product_id')->references('id')->on('product');
            // $table->foreignId('aussteller_id')->constrained();
            // $table->foreignId('product_id')->constrained();
             

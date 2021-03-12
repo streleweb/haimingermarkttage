@@ -13,7 +13,7 @@ class CreateAusstellerfotosTable extends Migration
      */
     public function up()
     {
-        Schema::create('ausstellerfotos', function (Blueprint $table) {
+        Schema::create('ausstellerfoto', function (Blueprint $table) {
             $table->id();
             $table->string('ausstellerfoto_name');
             $table->string('ausstellerfoto_url');
@@ -31,6 +31,6 @@ class CreateAusstellerfotosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ausstellerfotos');
+        Schema::dropIfExists('ausstellerfoto');
     }
 }
