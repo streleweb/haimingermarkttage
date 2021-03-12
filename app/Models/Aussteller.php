@@ -9,14 +9,15 @@ use Illuminate\Database\Eloquent\Model\Product;//
 class Aussteller extends Model
 {
     use HasFactory;
-    //protected $fillable = ['aussteller_fullname'];
+    
+    protected $fillable = ['aussteller_fullname'];
 
     protected $table = "aussteller_product";
     
     /**
      * Method for Many-to-Many Product-Relationship
      */
-    
+    //maybe noch zu product umbenennen
     public function products(){
 
         return $this->belongsToMany(Product::class, 'aussteller_product');
