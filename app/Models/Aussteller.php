@@ -12,7 +12,7 @@ class Aussteller extends Model
     
     protected $fillable = ['aussteller_fullname'];
 
-    protected $table = "aussteller_product";
+    protected $table = "aussteller"; //war aussteller_product
     
     /**
      * Method for Many-to-Many Product-Relationship

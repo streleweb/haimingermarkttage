@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ausstellerfoto;
 use Illuminate\Http\Request;
+use App\Http\Resources\AusstellerfotoResource;
 
 class AusstellerfotoController extends Controller
 {
@@ -14,7 +15,7 @@ class AusstellerfotoController extends Controller
      */
     public function index()
     {
-        //
+        return AusstellerfotoResource::collection(Ausstellerfoto::all());
     }
 
     /**
@@ -35,13 +36,13 @@ class AusstellerfotoController extends Controller
      */
     public function store(Request $request)
     {
-        //Test
+        /*//Test
         $user = User::find(1);
  
         $phone = new Phone;
         $phone->phone = '9429343852';
  
-        $user->phone()->save($phone);
+        $user->phone()->save($phone);*/
     }
 
     /**

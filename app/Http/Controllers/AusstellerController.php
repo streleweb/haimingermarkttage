@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Aussteller;
 use Illuminate\Http\Request;
+use App\Http\Resources\AusstellerResource;
 
 class AusstellerController extends Controller
 {
@@ -14,7 +15,7 @@ class AusstellerController extends Controller
      */
     public function index()
     {
-        //
+        return AusstellerResource::collection(Aussteller::all());
     }
 
     /**
