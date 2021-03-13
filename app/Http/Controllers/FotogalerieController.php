@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Fotogalerie;
 use Illuminate\Http\Request;
+use App\Http\Resources\FotogalerieResource;
 
 class FotogalerieController extends Controller
 {
@@ -14,7 +15,7 @@ class FotogalerieController extends Controller
      */
     public function index()
     {
-        //
+        return FotogalerieResource::collection(Fotogalerie::all());
     }
 
     /**
