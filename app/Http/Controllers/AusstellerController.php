@@ -15,7 +15,9 @@ class AusstellerController extends Controller
      */
     public function index()
     {
-        return AusstellerResource::collection(Aussteller::all());
+        //return AusstellerResource::collection(Aussteller::all());
+        $ausstellerliste = Aussteller::paginate(4); // für 4 aussteller pro Seite unter /app/aussteller im Frontend
+        return AusstellerResource::collection($ausstellerliste);
     }
 
     /**

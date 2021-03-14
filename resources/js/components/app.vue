@@ -30,7 +30,7 @@ export default {
       //nicht vergessen, Anreiseinfos entweder in DB abspeichern und von dort aus zB via Props zu laden, oder via API Call (Axios oder FetchAPI)..
     };
   },
-  components: { Navbar, Footer, Apple, HomeContent, PageNotFound },
+  components: { Navbar, Footer, Apple },
 };
 </script>
 

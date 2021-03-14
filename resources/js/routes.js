@@ -3,6 +3,7 @@ import Philosophie from './components/Philosophie';
 import Produkte from './components/Produkte';
 import HomeContent from './components/HomeContent';
 import PageNotFound from './components/PageNotFound';
+import Aussteller from './components/Aussteller';
 
 export default {
     mode: 'history', //Browser-Tracking-System benützen, um die Pages zu tracken
@@ -26,13 +27,13 @@ export default {
         {
             path: '/app/philosophie',
             component: Philosophie
-        }]/*,
+        },
 
         {
-            path: '/app/produkte',
-            component: Produkte
+            path: '/app/aussteller',
+            component: Aussteller
         }
 
-    ]*/
+    ]
 
 }
