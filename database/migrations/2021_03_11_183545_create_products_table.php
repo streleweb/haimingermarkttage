@@ -16,7 +16,7 @@ class CreateProductsTable extends Migration
         Schema::create('product', function (Blueprint $table) {
             $table->id(); //Hier dann $table->index('aussteller_id'); & $table->foreign('user_id')->references('id')->on('users')      falls wo notwendig  ->onDelete('cascade'); 
            // $table->bigIncrements('id');
-            $table->string('product_name')->unique();
+            $table->string('product_name');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('product');
     }
 }

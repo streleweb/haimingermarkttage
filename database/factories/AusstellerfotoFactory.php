@@ -12,7 +12,7 @@ class AusstellerfotoFactory extends Factory
      *
      * @var string
      */
-    protected $model = Ausstellerfoto::class;
+    protected $model = \App\Models\Ausstellerfoto::class;
 
     /**
      * Define the model's default state.
@@ -24,8 +24,7 @@ class AusstellerfotoFactory extends Factory
         return [
 
             'ausstellerfoto_name' => $this->faker->words(2, true),
-            'ausstellerfoto_url' => $this->faker->imageUrl('public/storage/images',640,480, null, false)
-            
+            'ausstellerfoto_url' => $this->faker->imageUrl('public/storage/images',640,480, null, false),
         ];
     }
 }

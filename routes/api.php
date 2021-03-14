@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AusstellerfotoController;
 use App\Http\Controllers\AusstellerController;
-use App\Http\Controllers\FotogalerieController;
 
 
 /*
@@ -26,5 +25,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::resource('ausstellerfoto', AusstellerfotoController::class);
 Route::resource('products', ProductController::class);
 Route::resource('aussteller', AusstellerController::class);
-Route::resource('fotogalerie', FotogalerieController::class);
 

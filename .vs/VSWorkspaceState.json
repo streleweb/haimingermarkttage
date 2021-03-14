@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
+    "\\app\\Models",
+    "\\config",
+    "\\database",
+    "\\database\\factories",
+    "\\database\\migrations",
+    "\\database\\seeders"
+  ],
+  "SelectedNode": "\\database\\migrations\\2021_03_11_183545_create_products_table.php",
+  "PreviewInSolutionExplorer": false
+}

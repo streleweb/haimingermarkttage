@@ -12,7 +12,7 @@ class AusstellerFactory extends Factory
      *
      * @var string
      */
-    protected $model = Aussteller::class;
+    protected $model = \App\Models\Aussteller::class;
 
     /**
      * Define the model's default state.

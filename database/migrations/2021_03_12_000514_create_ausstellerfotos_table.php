@@ -18,7 +18,7 @@ class CreateAusstellerfotosTable extends Migration
             $table->string('ausstellerfoto_name');
             $table->string('ausstellerfoto_url');
             $table->bigInteger('aussteller_id')->unsigned();
-            $table->foreign('aussteller_id')->references('id')->on('aussteller');
+            $table->foreign('aussteller_id')->references('id')->on('aussteller')->onDelete('cascade');
             //$table->foreignId('aussteller_id')->constrained();
             //$table->timestamps();
         });

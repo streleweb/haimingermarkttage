@@ -12,7 +12,7 @@ class FotogalerieFactory extends Factory
      *
      * @var string
      */
-    protected $model = Fotogalerie::class;
+    protected $model = \App\Models\Fotogalerie::class;
 
     /**
      * Define the model's default state.
