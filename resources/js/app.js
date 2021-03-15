@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import routes from './routes';
 require('./bootstrap'); //bootstrap.js
-require('axios');
+//require('axios');
 
 //Main pages
 import App from './components/App.vue';

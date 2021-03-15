@@ -18,7 +18,10 @@
             >{{ jeweiligerAussteller.aussteller_fullname }}</a
           >
           <p>{{ jeweiligerAussteller.aussteller_beschreibung }}</p>
-          <a href="" class="text-4xl">{{ jeweiligerAussteller.aussteller_ }}</a>
+
+          <Farbzone
+            :class="jeweiligerAussteller.aussteller_zonenfarbe"
+          ></Farbzone>
         </li>
       </ul>
     </div>
@@ -38,6 +41,7 @@
 
 <script>
 import Button from "./Button";
+import Farbzone from "./Farbzone";
 
 export default {
   data() {
@@ -66,8 +70,18 @@ export default {
         });
     },
 
-    loadAusstellerfoto: function () {},
+    loadAusstellerfoto: function () {
+      axios
+        .get("/api/ausstellerfoto") // load API
+        .then((response) => {
+          this.ausstellerfotos = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
+        }) // assign to this.aussteller array
+        .catch(function (error) {
+          // Fehlerbehandlung
+          console.log(error);
+        });
+    },
   },
-  components: { Button },
+  components: { Button, Farbzone },
 };
 </script>
