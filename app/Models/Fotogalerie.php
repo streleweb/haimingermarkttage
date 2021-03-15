@@ -10,8 +10,4 @@ class Fotogalerie extends Model
     use HasFactory;
 
     protected $table = "fotogalerie";
-
-    public function fotogalerie(){
-        return $this->belongsTo('Fotogalerie');
-    }
 }

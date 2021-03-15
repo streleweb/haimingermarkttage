@@ -3,14 +3,13 @@
     "",
     "\\app",
     "\\app\\Http",
-    "\\app\\Http\\Controllers",
-    "\\app\\Models",
-    "\\config",
-    "\\database",
-    "\\database\\factories",
-    "\\database\\migrations",
-    "\\database\\seeders"
+    "\\app\\Http\\Resources",
+    "\\resources",
+    "\\resources\\js",
+    "\\resources\\js\\components",
+    "\\resources\\views",
+    "\\routes"
   ],
-  "SelectedNode": "\\database\\migrations\\2021_03_11_183545_create_products_table.php",
+  "SelectedNode": "\\resources\\js\\routes.js",
   "PreviewInSolutionExplorer": false
 }

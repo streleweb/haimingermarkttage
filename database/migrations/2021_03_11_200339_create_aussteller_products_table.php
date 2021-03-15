@@ -48,6 +48,6 @@ class CreateAusstellerProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('aussteller_products');
+        Schema::dropIfExists('aussteller_product');
     }
 }

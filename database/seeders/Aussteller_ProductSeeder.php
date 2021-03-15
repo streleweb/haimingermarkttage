@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 use DB;
 
-class ProductSeeder extends Seeder
+class Aussteller_ProductSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,9 +15,10 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('product')->insert([
+        DB::table('aussteller_product')->insert([
             'id' => 1,
-            'product_name' => str_random(10)
+            'aussteller_id' => 1,
+            'product_id' => 1
         ]);
     }
 }
