@@ -48,7 +48,7 @@
     @laravelPWA
 </head>
 
-<body class="bg-gradient-to-b from-gray-900 to-green-500 ... flex flex-col h-full overflow-hidden">
+<body class="bg-gradient-to-b from-gray-900 to-green-500 ... flex h-full flex-col overflow-hidden">
 
     <div id="app">
         <!-- <router-view></router-view> -->

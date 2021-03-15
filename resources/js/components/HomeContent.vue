@@ -19,11 +19,15 @@
         on-hover="hover:bg-white"
       ></Button>
     </router-link>
-    <Button
-      button-inhalt="Aussteller"
-      button-color="bg-green-400"
-      on-hover="hover:bg-yellow-50"
-    ></Button>
+
+    <router-link to="app/aussteller">
+      <Button
+        button-inhalt="Aussteller"
+        button-color="bg-green-400"
+        on-hover="hover:bg-yellow-50"
+      ></Button>
+    </router-link>
+
     <Button
       button-inhalt="Karte"
       button-color="bg-green-400"
