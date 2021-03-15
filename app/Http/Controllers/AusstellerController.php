@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Aussteller;
 use Illuminate\Http\Request;
 use App\Http\Resources\AusstellerResource;
+use Illuminate\Support\Facades\Validator;
 
 class AusstellerController extends Controller
 {
@@ -38,7 +39,27 @@ class AusstellerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(),
+        [
+            'aussteller_fullname' => 'required|min:2|max:30',
+            'aussteller_beschreibung'=> 'nullable|min:10|max:100',
+            'aussteller_zonenfarbe' => 'required|min:2|max:15', //bessere Validation noch schreiben
+        ]);
+
+        if ($validator->fails()) {
+            return Response::json([
+                'error' => $validator->errors()], 200);
+            
+        }else {
+            $aussteller = new Aussteller();
+            $aussteller->aussteller_fullname = $request->aussteller_fullname;
+            $aussteller->aussteller_beschreibung = $request->aussteller_beschreibung;
+            $aussteller->aussteller_zonenfarbe = $request->aussteller_zonenfarbe;
+           
+            if($aussteller->save()){
+                return new AusstellerResource($aussteller);
+            }
+        }
     }
 
     /**

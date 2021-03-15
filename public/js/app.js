@@ -1943,6 +1943,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2396,6 +2405,148 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Ausstelleranlegen.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Ausstelleranlegen.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      name: "Ausstelleranlegen",
+      aussteller: [],
+      ausstellerfotos: [],
+      neuerAussteller: "",
+      formdata: {
+        aussteller_fullname: null,
+        aussteller_beschreibung: null,
+        aussteller_zonenfarbe: null
+      } //Objekt zum Speichern der Model-Daten von oben
+
+    };
+  },
+  //wenn Component geladen ist, führe die Methoden zum
+  //Laden der Aussteller und Ausstellerfotos via Axios Request aus
+  mounted: function mounted() {},
+  methods: {
+    submitform: function submitform() {
+      var formToJson = JSON.stringify(this.formdata);
+      console.log(formToJson);
+
+      try {
+        var result = axios.post("/api/aussteller", {
+          "this": this.formdata
+        });
+        console.log(result.response.data);
+        /*.then((response) => {
+          console.log(response); // debug
+        })
+        .catch(function (error) {
+          // Fehlerbehandlung
+          console.log(error);
+        });*/
+      } catch (error) {
+        console.error(error.response.data);
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/svg/Apple.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/svg/Apple.vue?vue&type=script&lang=js& ***!
@@ -2541,6 +2692,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_HomeContent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/HomeContent */ "./resources/js/components/HomeContent.vue");
 /* harmony import */ var _components_PageNotFound__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/PageNotFound */ "./resources/js/components/PageNotFound.vue");
 /* harmony import */ var _components_Aussteller__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Aussteller */ "./resources/js/components/Aussteller.vue");
+/* harmony import */ var _components_VorstandAdminComponents_Ausstelleranlegen__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/VorstandAdminComponents/Ausstelleranlegen */ "./resources/js/components/VorstandAdminComponents/Ausstelleranlegen.vue");
+
 
 
 
@@ -2568,6 +2721,9 @@ __webpack_require__.r(__webpack_exports__);
   }, {
     path: '/app/aussteller',
     component: _components_Aussteller__WEBPACK_IMPORTED_MODULE_5__.default
+  }, {
+    path: '/app/ausstelleranlegen',
+    component: _components_VorstandAdminComponents_Ausstelleranlegen__WEBPACK_IMPORTED_MODULE_6__.default
   }]
 });
 
@@ -20382,6 +20538,45 @@ component.options.__file = "resources/js/components/Produkte.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/VorstandAdminComponents/Ausstelleranlegen.vue":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/Ausstelleranlegen.vue ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Ausstelleranlegen_vue_vue_type_template_id_270e82d6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Ausstelleranlegen.vue?vue&type=template&id=270e82d6& */ "./resources/js/components/VorstandAdminComponents/Ausstelleranlegen.vue?vue&type=template&id=270e82d6&");
+/* harmony import */ var _Ausstelleranlegen_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Ausstelleranlegen.vue?vue&type=script&lang=js& */ "./resources/js/components/VorstandAdminComponents/Ausstelleranlegen.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _Ausstelleranlegen_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _Ausstelleranlegen_vue_vue_type_template_id_270e82d6___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Ausstelleranlegen_vue_vue_type_template_id_270e82d6___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/VorstandAdminComponents/Ausstelleranlegen.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/svg/Apple.vue":
 /*!***********************************************!*\
   !*** ./resources/js/components/svg/Apple.vue ***!
@@ -20581,6 +20776,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/VorstandAdminComponents/Ausstelleranlegen.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/Ausstelleranlegen.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Ausstelleranlegen_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Ausstelleranlegen.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Ausstelleranlegen.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Ausstelleranlegen_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
 /***/ "./resources/js/components/svg/Apple.vue?vue&type=script&lang=js&":
 /*!************************************************************************!*\
   !*** ./resources/js/components/svg/Apple.vue?vue&type=script&lang=js& ***!
@@ -20767,6 +20978,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/VorstandAdminComponents/Ausstelleranlegen.vue?vue&type=template&id=270e82d6&":
+/*!**************************************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/Ausstelleranlegen.vue?vue&type=template&id=270e82d6& ***!
+  \**************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Ausstelleranlegen_vue_vue_type_template_id_270e82d6___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Ausstelleranlegen_vue_vue_type_template_id_270e82d6___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Ausstelleranlegen_vue_vue_type_template_id_270e82d6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Ausstelleranlegen.vue?vue&type=template&id=270e82d6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Ausstelleranlegen.vue?vue&type=template&id=270e82d6&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/svg/Apple.vue?vue&type=template&id=6af9b694&":
 /*!******************************************************************************!*\
   !*** ./resources/js/components/svg/Apple.vue?vue&type=template&id=6af9b694& ***!
@@ -20848,7 +21076,7 @@ var render = function() {
         "div",
         {
           staticClass:
-            "listofaussteller grid grid-flow-row grid-rows-4 lg:grid-flow-col lg:grid-cols-2 gap-8"
+            "listofaussteller grid grid-flow-row grid-rows-4 lg:grid-flow-col lg:grid-cols-3 gap-3"
         },
         _vm._l(_vm.aussteller, function(jeweiligerAussteller) {
           return _c("ul", {}, [
@@ -20881,21 +21109,42 @@ var render = function() {
       ),
       _vm._v(" "),
       _c(
-        "router-link",
-        { attrs: { to: "/app" } },
+        "div",
+        { staticClass: "flex" },
         [
-          _c("Button", {
-            attrs: {
-              "button-inhalt": "Back to Homescreen",
-              "button-color": "bg-green-400",
-              "on-hover": "hover:bg-yellow-200"
-            }
-          })
+          _c(
+            "router-link",
+            { attrs: { to: "/app" } },
+            [
+              _c("Button", {
+                attrs: {
+                  "button-inhalt": "Back to Homescreen",
+                  "button-color": "bg-green-400",
+                  "on-hover": "hover:bg-yellow-200"
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            { attrs: { to: "/app/ausstelleranlegen" } },
+            [
+              _c("Button", {
+                attrs: {
+                  "button-inhalt": "Aussteller anlegen",
+                  "button-color": "bg-green-400",
+                  "on-hover": "hover:bg-yellow-50"
+                }
+              })
+            ],
+            1
+          )
         ],
         1
       )
-    ],
-    1
+    ]
   )
 }
 var staticRenderFns = [
@@ -20903,7 +21152,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mb-20 mt-10 text-5xl font-s" }, [
+    return _c("div", { staticClass: "text-5xl font-s" }, [
       _c("p", [_vm._v("Unsere heurigen Aussteller")])
     ])
   }
@@ -21471,6 +21720,229 @@ var render = function() {
   return _c("h1", { staticClass: "text-white" }, [_vm._v("PRODUKTE")])
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Ausstelleranlegen.vue?vue&type=template&id=270e82d6&":
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Ausstelleranlegen.vue?vue&type=template&id=270e82d6& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "mt-10 sm:mt-0" }, [
+      _c("div", { staticClass: "md:grid md:grid-cols-3 md:gap-6" }, [
+        _vm._m(1),
+        _vm._v(" "),
+        _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
+          _c("form", { attrs: { method: "POST", action: "/api/aussteller" } }, [
+            _c("div", { staticClass: "shadow overflow-hidden sm:rounded-md" }, [
+              _c("div", { staticClass: "px-4 py-5 bg-gray-300 sm:p-6" }, [
+                _c("div", { staticClass: "grid grid-cols-6 gap-6" }, [
+                  _c("div", { staticClass: "col-span-6 sm:col-span-3" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "block text-sm font-medium text-gray-700",
+                        attrs: { for: "first_name" }
+                      },
+                      [_vm._v("Vor und Nachname")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.formdata.aussteller_fullname,
+                          expression: "formdata.aussteller_fullname"
+                        }
+                      ],
+                      staticClass:
+                        "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md",
+                      attrs: {
+                        type: "text",
+                        name: "aussteller_fullname",
+                        id: "full_name",
+                        autocomplete: "given-name"
+                      },
+                      domProps: { value: _vm.formdata.aussteller_fullname },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.formdata,
+                            "aussteller_fullname",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-span-6 sm:col-span-4" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "block text-sm font-medium text-gray-700",
+                        attrs: { for: "email_address" }
+                      },
+                      [_vm._v("Beschreibung")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.formdata.aussteller_beschreibung,
+                          expression: "formdata.aussteller_beschreibung"
+                        }
+                      ],
+                      staticClass:
+                        "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md",
+                      attrs: {
+                        type: "text",
+                        name: "aussteller_beschreibung",
+                        id: "beschreibung",
+                        autocomplete: "Beschreibung"
+                      },
+                      domProps: { value: _vm.formdata.aussteller_beschreibung },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.formdata,
+                            "aussteller_beschreibung",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-span-6" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "block text-sm font-medium text-gray-700",
+                        attrs: { for: "street_address" }
+                      },
+                      [_vm._v("Zonenfarbe am Markt")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.formdata.aussteller_zonenfarbe,
+                          expression: "formdata.aussteller_zonenfarbe"
+                        }
+                      ],
+                      staticClass:
+                        "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md",
+                      attrs: {
+                        type: "text",
+                        name: "aussteller_zonenfarbe",
+                        id: "zonenfarbe",
+                        autocomplete: "Zonenfarbe"
+                      },
+                      domProps: { value: _vm.formdata.aussteller_zonenfarbe },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.formdata,
+                            "aussteller_zonenfarbe",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _vm._m(2)
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "hidden sm:block", attrs: { "aria-hidden": "true" } },
+      [
+        _c("div", { staticClass: "py-5" }, [
+          _c("div", { staticClass: "border-t border-gray-200" })
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "md:col-span-1" }, [
+      _c("div", { staticClass: "px-4 sm:px-0" }, [
+        _c("h3", { staticClass: "text-lg font-medium leading-6 text-white" }, [
+          _vm._v(
+            "\n            Bitte persönliche Infos des Ausstellers angeben.\n          "
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "px-4 py-3 bg-gray-50 text-right sm:px-6" },
+      [
+        _c(
+          "button",
+          {
+            staticClass:
+              "inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500",
+            attrs: { type: "submit" }
+          },
+          [_vm._v("\n                In DB Speichern\n              ")]
+        )
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 

@@ -2,13 +2,13 @@
   <div class="ausstellercontainer font-willkommen text-center text-white">
     <!-- custom font konfiguriert in tailwind.config.js-->
     <!-- Hier noch Background-Pic oder Video rein -->
-    <div class="mb-20 mt-10 text-5xl font-s">
+    <div class="text-5xl font-s">
       <p>Unsere heurigen Aussteller</p>
       <!-- end willkommenstexte -->
     </div>
 
     <div
-      class="listofaussteller grid grid-flow-row grid-rows-4 lg:grid-flow-col lg:grid-cols-2 gap-8"
+      class="listofaussteller grid grid-flow-row grid-rows-4 lg:grid-flow-col lg:grid-cols-3 gap-3"
     >
       <ul v-for="jeweiligerAussteller in aussteller" class="">
         <li class="border rounded-lg">
@@ -26,15 +26,24 @@
       </ul>
     </div>
     <!-- end willkommen -->
+    <div class="flex">
+      <!--Buttons mit Custom Props-->
+      <router-link to="/app">
+        <Button
+          button-inhalt="Back to Homescreen"
+          button-color="bg-green-400"
+          on-hover="hover:bg-yellow-200"
+        ></Button>
+      </router-link>
 
-    <!--Buttons mit Custom Props-->
-    <router-link to="/app">
-      <Button
-        button-inhalt="Back to Homescreen"
-        button-color="bg-green-400"
-        on-hover="hover:bg-yellow-200"
-      ></Button>
-    </router-link>
+      <router-link to="/app/ausstelleranlegen">
+        <Button
+          button-inhalt="Aussteller anlegen"
+          button-color="bg-green-400"
+          on-hover="hover:bg-yellow-50"
+        ></Button>
+      </router-link>
+    </div>
     <!-- end buttoncontainer -->
   </div>
 </template>
