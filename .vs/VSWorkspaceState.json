@@ -3,13 +3,9 @@
     "",
     "\\app",
     "\\app\\Http",
-    "\\app\\Http\\Resources",
-    "\\resources",
-    "\\resources\\js",
-    "\\resources\\js\\components",
-    "\\resources\\views",
-    "\\routes"
+    "\\app\\Http\\Controllers",
+    "\\app\\Http\\Resources"
   ],
-  "SelectedNode": "\\resources\\js\\routes.js",
+  "SelectedNode": "\\app\\Http\\Resources\\ProductResource.php",
   "PreviewInSolutionExplorer": false
 }

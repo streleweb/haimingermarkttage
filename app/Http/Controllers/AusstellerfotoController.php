@@ -15,7 +15,9 @@ class AusstellerfotoController extends Controller
      */
     public function index()
     {
-        return AusstellerfotoResource::collection(Ausstellerfoto::all());
+        //return AusstellerfotoResource::collection(Ausstellerfoto::all());
+        $ausstellerfotoliste = Ausstellerfoto::paginate(4); // für 4 ausstellerfoto pro Seite unter /app/ausstellerfoto im Frontend
+        return AusstellerfotoResource::collection($ausstellerfotoliste);
     }
 
     /**
@@ -43,6 +45,26 @@ class AusstellerfotoController extends Controller
         $phone->phone = '9429343852';
  
         $user->phone()->save($phone);*/
+
+        $validator = Validator::make($request->all(),
+        [
+            'ausstellerfoto_name' => 'required|min:2|max:30',
+            'ausstellerfoto_url'=> 'nullable|min:10|max:50',
+        ]);
+
+        if ($validator->fails()) {
+            return Response::json([
+                'error' => $validator->errors()], 200);
+            
+        }else {
+            $ausstellerfoto = new Ausstellerfoto();
+            $ausstellerfoto->ausstellerfoto_name = $request->ausstellerfoto_name;
+            $ausstellerfoto->ausstellerfoto_url = $request->ausstellerfoto_url;
+           
+            if($ausstellerfoto->save()){
+                return new AusstellerfotoResource($ausstellerfoto);
+            }
+        }
     }
 
     /**

@@ -14,7 +14,9 @@ class FotogalerieController extends Controller
      */
     public function index()
     {
-        //
+        //return FotogalerieResource::collection(Fotogalerie::all());
+        $fotogalerieliste = Fotogalerie::paginate(4); // für 4 fotogalerie pro Seite unter /app/fotogalerie im Frontend
+        return FotogalerieResource::collection($fotogalerieliste);
     }
 
     /**
@@ -35,7 +37,27 @@ class FotogalerieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(),
+        [
+            'fotogalerie_fotoname' => 'required|min:2|max:30',
+            'fotogalerie_fotobeschreibung'=> 'nullable|min:10|max:50',
+            'fotogalerie_fotourl'=> 'nullable|min:10|max:50',
+        ]);
+
+        if ($validator->fails()) {
+            return Response::json([
+                'error' => $validator->errors()], 200);
+            
+        }else {
+            $fotogalerie = new Fotogalerie();
+            $fotogalerie->fotogalerie_fotoname = $request->fotogalerie_fotoname;
+            $fotogalerie->fotogalerie_fotobeschreibung = $request->fotogalerie_fotobeschreibung;
+            $fotogalerie->fotogalerie_fotourl = $request->fotogalerie_fotourl;
+           
+            if($fotogalerie->save()){
+                return new FotogalerieResource($fotogalerie);
+            }
+        }
     }
 
     /**

@@ -29,7 +29,6 @@ class AusstellerResource extends JsonResource
             'aussteller_straße'=> $this->aussteller_straße,
             'aussteller_postleitzahl'=> $this->aussteller_postleitzahl,
             'aussteller_wohnort'=> $this->aussteller_wohnort,
-    
         ];
     }
 }

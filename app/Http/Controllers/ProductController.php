@@ -15,7 +15,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return ProductResource::collection(Product::all());
+        //return ProductResource::collection(Product::all());
+        $productliste = Product::paginate(4); // für 4 produkte pro Seite unter /app/product im Frontend
+        return ProductResource::collection($productliste);
     }
 
     /**
@@ -47,7 +49,23 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        $validator = Validator::make($request->all(),
+        [
+            'product_name' => 'required|min:2|max:30',
+        ]);
+
+        if ($validator->fails()) {
+            return Response::json([
+                'error' => $validator->errors()], 200);
+            
+        }else {
+            $product = new Product();
+            $product->product_name = $request->product_name;
+           
+            if($product->save()){
+                return new ProductResource($product);
+            }
+        }
     }
 
     /**

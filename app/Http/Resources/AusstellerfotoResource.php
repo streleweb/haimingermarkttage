@@ -20,7 +20,6 @@ class AusstellerfotoResource extends JsonResource
         'ausstellerfoto_name' => $this->ausstellerfoto_name,
         'ausstellerfoto_url' => $this->ausstellerfoto_url,
         'aussteller_id' => $this->aussteller_id,
-         
         ];
     }
 }
