@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Resources\ProductResource;
+use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
@@ -15,8 +16,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //return ProductResource::collection(Product::all());
-        $productliste = Product::paginate(4); // für 4 produkte pro Seite unter /app/product im Frontend
+        $productliste = Product::paginate(4); // für 4 Produkte pro Seite unter /app/product im Frontend
         return ProductResource::collection($productliste);
     }
 
@@ -27,7 +27,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('product.productanlegen');
     }
 
     /**
@@ -37,17 +37,6 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Product $product)
     {
         $validator = Validator::make($request->all(),
         [
@@ -69,6 +58,18 @@ class ProductController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Product $product)
+    {
+        $product = Product::find($id);
+        return $product;
+    }
+
+    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Product  $product
@@ -76,7 +77,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        return view('product.edit')->with('product',$product);
     }
 
     /**
@@ -88,7 +89,13 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $product = Product::findOrFail($id);
+        $product->id = $request->id;
+        $product->product_name = $request->product_name;
+        if($product->save())
+        {
+            return new ProductResource($product);
+        };
     }
 
     /**
@@ -99,6 +106,6 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
     }
 }

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Programm;
 use Illuminate\Http\Request;
+use App\Http\Resources\ProgrammResource;
+use Illuminate\Support\Facades\Validator;
 
 class ProgrammController extends Controller
 {
@@ -14,7 +16,8 @@ class ProgrammController extends Controller
      */
     public function index()
     {
-        //
+        $programmliste = Programm::paginate(4); // für 4 Programme pro Seite unter /app/programm im Frontend
+        return ProgrammResource::collection($programmliste);
     }
 
     /**
@@ -24,7 +27,7 @@ class ProgrammController extends Controller
      */
     public function create()
     {
-        //
+        return view('programm.programmanlegen');
     }
 
     /**
@@ -35,7 +38,25 @@ class ProgrammController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(),
+        [
+            'programm_titel' => 'required|min:2|max:30',
+            'programm_beschreibung'=> 'nullable|min:2|max:30',,
+        ]);
+
+        if ($validator->fails()) {
+            return Response::json([
+                'error' => $validator->errors()], 200);
+            
+        }else {
+            $programm = new Programm();
+            $programm->programm_titel = $request->programm_titel;
+            $programm->programm_beschreibung = $request->programm_beschreibung;
+           
+            if($programm->save()){
+                return new ProgrammResource($programm);
+            }
+        }
     }
 
     /**
@@ -46,7 +67,8 @@ class ProgrammController extends Controller
      */
     public function show(Programm $programm)
     {
-        //
+        $programm = Programm::find($id);
+        return $programm;
     }
 
     /**
@@ -57,7 +79,7 @@ class ProgrammController extends Controller
      */
     public function edit(Programm $programm)
     {
-        //
+        return view('programm.edit')->with('programm',$programm);
     }
 
     /**
@@ -69,7 +91,14 @@ class ProgrammController extends Controller
      */
     public function update(Request $request, Programm $programm)
     {
-        //
+        $programm = Programm::findOrFail($id);
+        $programm->id = $request->id;
+        $programm->programm_titel = $request->programm_titel;
+        $programm->programm_beschreibung = $request->programm_beschreibung;
+        if($programm->save())
+        {
+            return new ProgrammResource($programm);
+        };
     }
 
     /**
@@ -80,6 +109,6 @@ class ProgrammController extends Controller
      */
     public function destroy(Programm $programm)
     {
-        //
+        $programm->delete();
     }
 }

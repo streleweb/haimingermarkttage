@@ -23,6 +23,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::resource('ausstellerfoto', AusstellerfotoController::class);
-Route::resource('products', ProductController::class);
+Route::resource('product', ProductController::class);
 Route::resource('aussteller', AusstellerController::class);
+Route::resource('news', NewsController::class);
+Route::resource('programm', ProgrammController::class);
+Route::resource('fotogalerie', FotogalerieController::class);
 

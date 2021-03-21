@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Ausstellerfoto;
 use Illuminate\Http\Request;
 use App\Http\Resources\AusstellerfotoResource;
+use Illuminate\Support\Facades\Validator;
 
 class AusstellerfotoController extends Controller
 {
@@ -15,8 +16,7 @@ class AusstellerfotoController extends Controller
      */
     public function index()
     {
-        //return AusstellerfotoResource::collection(Ausstellerfoto::all());
-        $ausstellerfotoliste = Ausstellerfoto::paginate(4); // für 4 ausstellerfoto pro Seite unter /app/ausstellerfoto im Frontend
+        $ausstellerfotoliste = Ausstellerfoto::paginate(4); // für 4 Ausstellerfotos pro Seite unter /app/ausstellerfoto im Frontend
         return AusstellerfotoResource::collection($ausstellerfotoliste);
     }
 
@@ -27,7 +27,7 @@ class AusstellerfotoController extends Controller
      */
     public function create()
     {
-        //
+        return view('ausstellerfoto.ausstellerfotoanlegen');
     }
 
     /**
@@ -38,14 +38,6 @@ class AusstellerfotoController extends Controller
      */
     public function store(Request $request)
     {
-        /*//Test
-        $user = User::find(1);
- 
-        $phone = new Phone;
-        $phone->phone = '9429343852';
- 
-        $user->phone()->save($phone);*/
-
         $validator = Validator::make($request->all(),
         [
             'ausstellerfoto_name' => 'required|min:2|max:30',
@@ -75,7 +67,8 @@ class AusstellerfotoController extends Controller
      */
     public function show(Ausstellerfoto $ausstellerfoto)
     {
-        //
+        $ausstellerfoto = Ausstellerfoto::find($id);
+        return $ausstellerfoto;
     }
 
     /**
@@ -86,7 +79,7 @@ class AusstellerfotoController extends Controller
      */
     public function edit(Ausstellerfoto $ausstellerfoto)
     {
-        //
+        return view('ausstellerfoto.edit')->with('ausstellerfoto',$ausstellerfoto);
     }
 
     /**
@@ -98,7 +91,15 @@ class AusstellerfotoController extends Controller
      */
     public function update(Request $request, Ausstellerfoto $ausstellerfoto)
     {
-        //
+        $ausstellerfoto = Ausstellerfoto::findOrFail($id);
+        $ausstellerfoto->id = $request->id;
+        $ausstellerfoto->ausstellerfoto_name = $request->ausstellerfoto_name;
+        $ausstellerfoto->ausstellerfoto_url = $request->ausstellerfoto_url;
+        $ausstellerfoto->aussteller_id = $request->aussteller_id;
+        if($ausstellerfoto->save())
+        {
+            return new NewsResource($ausstellerfoto);
+        };
     }
 
     /**
@@ -109,6 +110,6 @@ class AusstellerfotoController extends Controller
      */
     public function destroy(Ausstellerfoto $ausstellerfoto)
     {
-        //
+        $ausstellerfoto->delete();
     }
 }

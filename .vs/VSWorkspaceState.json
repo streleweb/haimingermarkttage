@@ -4,8 +4,12 @@
     "\\app",
     "\\app\\Http",
     "\\app\\Http\\Controllers",
-    "\\app\\Http\\Resources"
+    "\\app\\Http\\Resources",
+    "\\app\\Models",
+    "\\database",
+    "\\database\\migrations",
+    "\\routes"
   ],
-  "SelectedNode": "\\app\\Http\\Resources\\ProductResource.php",
+  "SelectedNode": "\\app\\Http\\Controllers\\ProductController.php",
   "PreviewInSolutionExplorer": false
 }
