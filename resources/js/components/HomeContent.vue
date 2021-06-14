@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <div class="contentContainer">
+    <!-- Content Container von Willkommen (exklusive Navbar) bis exklusive Footer-->
     <div class="willkommen font-willkommen">
       <!-- custom font konfiguriert in tailwind.config.js-->
       <!-- Hier noch Background-Pic oder Video rein -->
-      <div class="text-white mb-3 mt-10 text-center text-5xl font-s">
+      <div class="text-white mb-3 mt-2 text-center text-5xl font-s">
         {{ titleMessage }}
         <div class="text-gray-300 text-center mt-8 text-2xl font-thin bg">
           {{ smallDescription }}

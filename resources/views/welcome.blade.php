@@ -48,7 +48,7 @@
     @laravelPWA
 </head>
 
-<body class="flex flex-col max-h-screen h-screen bg-black justify-between overflow-hidden">
+<body>
 
     <div id="app">
         @yield('content')

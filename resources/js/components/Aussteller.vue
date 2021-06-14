@@ -35,6 +35,7 @@
       <!--Buttons mit Custom Props-->
       <router-link to="/app">
         <Button
+          svg-source="/../../images/icons/svgs/home.svg"
           button-inhalt="Back to Homescreen"
           button-color="bg-green-400"
           on-hover="hover:bg-yellow-200"

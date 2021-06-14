@@ -20,4 +20,8 @@ der tailwind components integriert. Diese Styles werden durch die
     .resizeLogo {
         @apply h-8;
     }
+
+    .contentContainer {
+        @apply lg:flex lg:flex-1 lg:space-x-20 lg:p-10;
+    }
 }

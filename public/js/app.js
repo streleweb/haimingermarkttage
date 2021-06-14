@@ -1970,6 +1970,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2155,6 +2156,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ "./resources/js/components/Button.vue");
+//
 //
 //
 //
@@ -21688,6 +21690,7 @@ var render = function() {
             [
               _c("Button", {
                 attrs: {
+                  "svg-source": "/../../images/icons/svgs/home.svg",
                   "button-inhalt": "Back to Homescreen",
                   "button-color": "bg-green-400",
                   "on-hover": "hover:bg-yellow-200"
@@ -21886,11 +21889,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "contentContainer" }, [
     _c("div", { staticClass: "willkommen font-willkommen" }, [
       _c(
         "div",
-        { staticClass: "text-white mb-3 mt-10 text-center text-5xl font-s" },
+        { staticClass: "text-white mb-3 mt-2 text-center text-5xl font-s" },
         [
           _vm._v("\n      " + _vm._s(_vm.titleMessage) + "\n      "),
           _c(
