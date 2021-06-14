@@ -586,6 +586,19 @@ video {
   }
 }
 
+.footer {
+  --tw-bg-opacity: 1;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(52, 211, 153, var(--tw-border-opacity));
+  border-top-width: 2px;
+  opacity: 0.8;
+  padding: 1rem;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+}
+
 .space-y-0 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -31180,6 +31193,13 @@ video {
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
 }
+
+/*
+Extracted Components zur Wiederverwendung und Code-Reduktion...
+
+Extrahierte Components werden via @layer von Tailwind automatisch im Speicher
+der tailwind components integriert. Diese Styles werden durch die 
+@layer-directive auch "ge-purged" */
 
 @media (min-width: 640px){
   .sm\:container{

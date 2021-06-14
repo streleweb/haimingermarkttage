@@ -8,7 +8,12 @@
     </div>
 
     <div
-      class="listofaussteller grid grid-flow-row grid-rows-4 lg:grid-flow-col lg:grid-cols-3 gap-3"
+      class="
+        listofaussteller
+        grid grid-flow-row grid-rows-4
+        lg:grid-flow-col lg:grid-cols-3
+        gap-3
+      "
     >
       <ul v-for="jeweiligerAussteller in aussteller" class="">
         <li class="border rounded-lg">

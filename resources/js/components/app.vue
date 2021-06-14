@@ -1,10 +1,21 @@
 <template>
-  <div class="outercontainer flex flex-col h-full">
+  <div
+    class="
+      outercontainer
+      flex flex-col
+      h-full
+      bg-gradient-to-b
+      from-gray-900
+      to-green-500
+      overflow-hidden
+    "
+  >
+    <!-- war bg-gradient-to-b from-gray-900 to-green-500 ... flex h-full flex-col overflow-hidden-->
     <div class="header">
       <navbar></navbar>
     </div>
     <div class="main flex-1">
-      <!-- flex-grow war davor -->
+      <!-- zu flex-grow zuruecksetzen, wenn ausstellerview ausgefeilt -->
       <router-view></router-view>
     </div>
     <Footer></Footer>
@@ -27,7 +38,7 @@ export default {
     return {
       titleMessage: "Willkommen bei den Haiminger Markttagen!",
       smallDescription: "Flanieren, Probieren und Genießen...",
-      //nicht vergessen, Anreiseinfos entweder in DB abspeichern und von dort aus zB via Props zu laden, oder via API Call (Axios oder FetchAPI)..
+      //nicht vergessen, Anreiseinfos entweder in DB abspeichern und  via API Call (Axios oder FetchAPI), oder direkte maske bereitstellen
     };
   },
   components: { Navbar, Footer, Apple },

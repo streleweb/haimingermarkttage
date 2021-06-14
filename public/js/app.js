@@ -1865,6 +1865,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -1876,7 +1887,7 @@ var default_layout = "default";
   data: function data() {
     return {
       titleMessage: "Willkommen bei den Haiminger Markttagen!",
-      smallDescription: "Flanieren, Probieren und Genießen..." //nicht vergessen, Anreiseinfos entweder in DB abspeichern und von dort aus zB via Props zu laden, oder via API Call (Axios oder FetchAPI)..
+      smallDescription: "Flanieren, Probieren und Genießen..." //nicht vergessen, Anreiseinfos entweder in DB abspeichern und  via API Call (Axios oder FetchAPI), oder direkte maske bereitstellen
 
     };
   },
@@ -1902,6 +1913,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ "./resources/js/components/Button.vue");
 /* harmony import */ var _Farbzone__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Farbzone */ "./resources/js/components/Farbzone.vue");
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2092,8 +2108,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
 //
 //
 //
@@ -21030,7 +21044,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "outercontainer flex flex-col h-full" },
+    {
+      staticClass:
+        "\n    outercontainer\n    flex flex-col\n    h-full\n    bg-gradient-to-b\n    from-gray-900\n    to-green-500\n    overflow-hidden\n  "
+    },
     [
       _c("div", { staticClass: "header" }, [_c("navbar")], 1),
       _vm._v(" "),
@@ -21076,7 +21093,7 @@ var render = function() {
         "div",
         {
           staticClass:
-            "listofaussteller grid grid-flow-row grid-rows-4 lg:grid-flow-col lg:grid-cols-3 gap-3"
+            "\n      listofaussteller\n      grid grid-flow-row grid-rows-4\n      lg:grid-flow-col lg:grid-cols-3\n      gap-3\n    "
         },
         _vm._l(_vm.aussteller, function(jeweiligerAussteller) {
           return _c("ul", {}, [
@@ -21304,18 +21321,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "footer",
-      {
-        staticClass:
-          "w-full text-center border-t-2 bottom-0 border-green-400 p-4 bg-gray-800 opacity-80"
-      },
-      [
-        _c("p", { staticClass: "font-semibold font-sans text-green-50" }, [
-          _vm._v("\n    Impressum Datenschutz Kontakt usw.\n  ")
-        ])
-      ]
-    )
+    return _c("footer", { staticClass: "footer" }, [
+      _c("p", { staticClass: "font-semibold font-sans text-green-50" }, [
+        _vm._v("\n    Impressum Datenschutz Kontakt usw. dudl\n  ")
+      ])
+    ])
   }
 ]
 render._withStripped = true

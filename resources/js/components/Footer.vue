@@ -1,9 +1,7 @@
 <template>
-  <footer
-    class="w-full text-center border-t-2 bottom-0 border-green-400 p-4 bg-gray-800 opacity-80"
-  >
+  <footer class="footer">
     <p class="font-semibold font-sans text-green-50">
-      Impressum Datenschutz Kontakt usw.
+      Impressum Datenschutz Kontakt usw. dudl
     </p>
     <!-- Noch dynamisch machen und verlinken -->
   </footer>

@@ -10,13 +10,12 @@ use Illuminate\Support\Facades\Validator;
 class AusstellerController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Aussteller anzeigen
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //return AusstellerResource::collection(Aussteller::all());
         $ausstellerliste = Aussteller::paginate(4); // für 4 aussteller pro Seite unter /app/aussteller im Frontend
         return AusstellerResource::collection($ausstellerliste);
     }
@@ -32,7 +31,7 @@ class AusstellerController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Neuen Aussteller in Datenbank speichern
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -43,7 +42,7 @@ class AusstellerController extends Controller
         [
             'aussteller_fullname' => 'required|min:2|max:30',
             'aussteller_beschreibung'=> 'nullable|min:10|max:100',
-            'aussteller_zonenfarbe' => 'required|min:2|max:15', //bessere Validation noch schreiben
+            'aussteller_zonenfarbe' => 'required|min:2|max:15', 
         ]);
 
         if ($validator->fails()) {
