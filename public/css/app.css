@@ -586,11 +586,27 @@ video {
   }
 }
 
-/*
-    .app {
-        @apply flex flex-col h-full bg-black justify-between;
-    }
-*/
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.sectionarea {
+  position: absolute;
+  bottom: 40px; /*Footer ausschließen: Pixel des Footers*/
+  top: 58px; /*Pixelanzahl der Navbar vertikal*/
+  --tw-bg-opacity: 1;
+  background-color: rgba(4, 120, 87, var(--tw-bg-opacity));
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+/*.contentarea {
+        @apply flex flex-col h-full justify-center;
+    }*/
 
 .navbar {
   --tw-bg-opacity: 1;
@@ -602,22 +618,14 @@ video {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 0.75rem;
 }
 
-.footer {
-  --tw-bg-opacity: 1;
-  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
-  --tw-border-opacity: 1;
-  border-color: rgba(52, 211, 153, var(--tw-border-opacity));
-  border-top-width: 2px;
-  opacity: 0.8;
-  padding: 1rem;
-  position: absolute;
-  bottom: 0px;
-  text-align: center;
-  width: 100%;
+@media (min-width: 1024px){
+  .navbar{
+    justify-content: space-between;
+  }
 }
 
 /*Resizing speziell für das Haiminger Markttage-Logo*/
@@ -630,19 +638,17 @@ video {
   height: 1.25rem;
 }
 
-@media (min-width: 1024px){
-  .contentContainer > :not([hidden]) ~ :not([hidden]){
-    --tw-space-x-reverse: 0;
-    margin-right: calc(5rem * var(--tw-space-x-reverse));
-    margin-left: calc(5rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .contentContainer{
-    display: flex;
-    flex: 1 1 0%;
-    padding: 2.5rem;
-  }
+.homecontentcontainer{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
+
+/*old contentcontainer
+    .contentcontainer {
+        @apply h-full flex flex-col justify-items-end lg:flex lg:flex-1 lg:space-x-20 lg:pt-10;
+    }*/
 
 /* Filter für SVG zu weiß: Nur fuer Main-Buttons konfiguriert */
 
@@ -656,6 +662,24 @@ video {
 .filter-white-icons {
   filter: invert(100%) sepia(0%) saturate(7494%) hue-rotate(350deg)
                 brightness(101%) contrast(104%);
+}
+
+.footer {
+  --tw-bg-opacity: 1;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(52, 211, 153, var(--tw-border-opacity));
+  border-top-width: 2px;
+  flex-wrap: nowrap;
+  height: 2.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  opacity: 0.8;
+  padding: 0.5rem;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
 }
 
 .space-y-0 > :not([hidden]) ~ :not([hidden]){

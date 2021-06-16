@@ -12,23 +12,32 @@ der tailwind components integriert. Diese Styles werden durch die
 @layer-directive auch "ge-purged" */
 
 @layer components{
-/*
+
     .app {
-        @apply flex flex-col h-full bg-black justify-between;
+        @apply flex flex-col h-full w-full;
     }
-*/
+
+    
+    .sectionarea {
+        position: absolute;
+        bottom: 40px; /*Footer ausschließen: Pixel des Footers*/
+        top: 58px; /*Pixelanzahl der Navbar vertikal*/
+        @apply  w-screen bg-green-700 flex flex-col;
+    }
+
+    /*.contentarea {
+        @apply flex flex-col h-full justify-center;
+    }*/
     .navbar {
         @apply flex
         items-center
-        justify-between
+        justify-start
+        lg:justify-between
+        
         flex-nowrap
         p-3
         bg-green-900
         border-b-2 border-black border-opacity-60;
-    }
-
-    .footer {
-        @apply w-full absolute text-center border-t-2 bottom-0 border-green-400 p-4 bg-gray-800 opacity-80;
     }
 
     /*Resizing speziell für das Haiminger Markttage-Logo*/
@@ -40,9 +49,14 @@ der tailwind components integriert. Diese Styles werden durch die
         @apply h-5;
     }
 
-    .contentContainer {
-        @apply lg:flex lg:flex-1 lg:space-x-20 lg:p-10;
+    .homecontentcontainer{
+        @apply h-full flex flex-col w-full;
     }
+
+    /*old contentcontainer
+    .contentcontainer {
+        @apply h-full flex flex-col justify-items-end lg:flex lg:flex-1 lg:space-x-20 lg:pt-10;
+    }*/
 
     /* Filter für SVG zu weiß: Nur fuer Main-Buttons konfiguriert */
     .filter-white {
@@ -56,6 +70,10 @@ der tailwind components integriert. Diese Styles werden durch die
     .filter-white-icons {
         filter: invert(100%) sepia(0%) saturate(7494%) hue-rotate(350deg)
                 brightness(101%) contrast(104%);
+    }
+
+    .footer {
+        @apply w-full fixed h-10 text-center border-t-2 bottom-0 border-green-400 p-2 bg-gray-800 opacity-80 flex-nowrap text-xs;
     }
 
 }

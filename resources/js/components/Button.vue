@@ -7,6 +7,8 @@
       flex-col
       items-center
       text-white text-center
+      h-20
+      mb-2
     "
   >
     <div class="w-60 md:w-80 text-center">
@@ -17,8 +19,9 @@
             flex
             items-center
             justify-between
-            p-4
             rounded-lg
+            pr-4
+            pl-4
             shadow-xl
             cursor-pointer
             hover:bg-green-900
@@ -59,12 +62,4 @@ export default {
 </script>
 
 <style>
-/* Filter für SVG zu weiß */
-.filter-white {
-  filter: invert(100%) sepia(0%) saturate(7494%) hue-rotate(350deg)
-    brightness(101%) contrast(104%);
-
-  height: 5em;
-  width: 3em;
-}
 </style>

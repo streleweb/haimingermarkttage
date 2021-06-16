@@ -48,9 +48,8 @@
     @laravelPWA
 </head>
 
-<body class="flex flex-col w-screen h-screen bg-green-200">
-
-    <div id="app" class="h-full bg-red-400">
+<body class="flex flex-col w-screen h-screen">
+    <div id="app">
         @yield('content')
     </div>
 

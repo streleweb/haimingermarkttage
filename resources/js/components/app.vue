@@ -10,16 +10,17 @@
       to-green-500
       overflow-hidden
     "-->
+
     <!-- war bg-gradient-to-b from-gray-900 to-green-500 ... flex h-full flex-col overflow-hidden-->
-    <header class="top-bar">
+    <header class="navigationbar">
       <navbar></navbar>
     </header>
-    <div class="">
+    <section class="sectionarea">
       <!--war main flex-1-->
       <!-- zu flex-grow zuruecksetzen, wenn ausstellerview ausgefeilt -->
       <router-view></router-view>
-    </div>
-    <Footer></Footer>
+      <Footer></Footer>
+    </section>
   </div>
 
   <!-- end outercontainer -->

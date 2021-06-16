@@ -11,7 +11,7 @@
         border-b-2 border-black border-opacity-60;-->
       <div
         id="#LOGO UND LI CONTAINER"
-        class="flex items-center flex-no-shrink space-x-5 text-white mr-6"
+        class="flex items-center flex-shrink space-x-5 text-white mr-6"
       >
         <!--<svg
           class="fill-current h-8 w-8 mr-2"
@@ -26,7 +26,14 @@
         </svg>-->
 
         <router-link
-          class="font-semibold text-xl tracking-tight inline-flex"
+          class="
+            font-semibold
+            text-xs text-center
+            items-center
+            sm:text-xl
+            tracking-tight
+            inline-flex
+          "
           to="/app"
           ><img
             src="/../../images/icons/pngs/7272transparent.png"
@@ -75,15 +82,16 @@
         <button
           id="app"
           class="
-            flex
+            fixed
+            top-3
+            right-4
             items-center
-            px-3
-            py-2
-            border
-            rounded
             text-white
             focus:outline-none
-            border-white
+            border-white border
+            rounded
+            px-3
+            py-2
           "
         >
           <svg
