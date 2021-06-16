@@ -2373,6 +2373,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Navbar",
   data: function data() {
@@ -21661,9 +21683,9 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "flex flex-col h-screen bg-black justify-between" },
+    { staticClass: "app" },
     [
-      _c("header", [_c("navbar")], 1),
+      _c("header", { staticClass: "top-bar" }, [_c("navbar")], 1),
       _vm._v(" "),
       _c("div", {}, [_c("router-view")], 1),
       _vm._v(" "),
@@ -22064,24 +22086,35 @@ var render = function() {
     _c("nav", { staticClass: "navbar" }, [
       _c(
         "div",
-        { staticClass: "flex items-center flex-no-shrink text-white mr-6" },
+        {
+          staticClass:
+            "flex items-center flex-no-shrink space-x-5 text-white mr-6",
+          attrs: { id: "#LOGO UND LI CONTAINER" }
+        },
         [
-          _c("img", {
-            staticClass: "resizeLogo",
-            attrs: {
-              src: "/../../images/icons/pngs/7272transparent.png",
-              alt: "Logo"
-            }
-          }),
-          _vm._v(" "),
           _c(
             "router-link",
             {
-              staticClass: "font-semibold text-xl tracking-tight",
+              staticClass: "font-semibold text-xl tracking-tight inline-flex",
               attrs: { to: "/app" }
             },
-            [_vm._v("Haiminger Markttage")]
-          )
+            [
+              _c("img", {
+                staticClass: "resizeLogo",
+                attrs: {
+                  src: "/../../images/icons/pngs/7272transparent.png",
+                  alt: "Logo"
+                }
+              }),
+              _vm._v("Haiminger Markttage")
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", [_vm._v("Philosophie")]),
+          _vm._v(" "),
+          _c("div", [_vm._v("News")]),
+          _vm._v(" "),
+          _c("div", [_vm._v("Fotogalerie")])
         ],
         1
       ),
@@ -22114,77 +22147,11 @@ var render = function() {
             )
           ]
         )
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "w-full block flex-grow lg:flex lg:items-center lg:w-auto",
-          attrs: { id: "menu" }
-        },
-        [
-          _c(
-            "div",
-            { staticClass: "text-sm lg:flex-grow" },
-            [
-              _c(
-                "router-link",
-                {
-                  staticClass:
-                    "\n            no-underline\n            block\n            mt-4\n            lg:inline-block\n            lg:mt-0\n            text-white\n            hover:text-white\n            mr-4\n          ",
-                  attrs: { to: "/app/philosophie", exact: "" }
-                },
-                [_vm._v("Philosophie")]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass:
-                    "\n            no-underline\n            block\n            mt-4\n            lg:inline-block\n            lg:mt-0\n            text-white\n            hover:text-white\n            mr-4\n          ",
-                  attrs: { href: "#responsive-header" }
-                },
-                [_vm._v("\n          News\n        ")]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass:
-                    "\n            no-underline\n            block\n            mt-4\n            lg:inline-block\n            lg:mt-0\n            text-white\n            hover:text-white\n          ",
-                  attrs: { href: "#responsive-header" }
-                },
-                [_vm._v("\n          Foto-Galerie\n        ")]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _vm._m(0)
-        ]
-      )
+      ])
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "a",
-        {
-          staticClass:
-            "\n            no-underline\n            inline-block\n            text-sm\n            px-4\n            py-2\n            leading-none\n            border\n            rounded\n            text-white\n            border-white\n            hover:border-transparent\n            hover:text-blue-dark\n            hover:bg-white\n            mt-4\n            lg:mt-0\n          ",
-          attrs: { href: "#" }
-        },
-        [_vm._v("Download")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

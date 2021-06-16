@@ -2,7 +2,17 @@
   <header>
     <!-- Nav -->
     <nav class="navbar">
-      <div class="flex items-center flex-no-shrink text-white mr-6">
+      <!--flex
+        items-center
+        justify-between
+        flex-wrap
+        p-3
+        bg-green-900
+        border-b-2 border-black border-opacity-60;-->
+      <div
+        id="#LOGO UND LI CONTAINER"
+        class="flex items-center flex-no-shrink space-x-5 text-white mr-6"
+      >
         <!--<svg
           class="fill-current h-8 w-8 mr-2"
           width="54"
@@ -14,15 +24,24 @@
             d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
           />
         </svg>-->
-        <img
-          src="/../../images/icons/pngs/7272transparent.png"
-          class="resizeLogo"
-          alt="Logo"
-        />
-        <router-link class="font-semibold text-xl tracking-tight" to="/app"
-          >Haiminger Markttage</router-link
+
+        <router-link
+          class="font-semibold text-xl tracking-tight inline-flex"
+          to="/app"
+          ><img
+            src="/../../images/icons/pngs/7272transparent.png"
+            class="resizeLogo"
+            alt="Logo"
+          />Haiminger Markttage</router-link
         ><!-- Nicht vergessen anstatt to /app noch to haiminger-markttage.at bzw. / -->
+
+        <div>Philosophie</div>
+        <div>News</div>
+        <div>Fotogalerie</div>
       </div>
+      <!--END-LOGOCONTAINER-->
+
+      <!--START BUTTON-div-->
       <div class="block lg:hidden">
         <button
           id="app"
@@ -48,6 +67,9 @@
           </svg>
         </button>
       </div>
+      <!--END BUTTON-div-->
+
+      <!--START OLD List-Items
       <div
         class="w-full block flex-grow lg:flex lg:items-center lg:w-auto"
         id="menu"
@@ -122,7 +144,7 @@
             >Download</a
           >
         </div>
-      </div>
+      </div>--END OLD List-Items (Philosophie, News...)-->
     </nav>
     <!-- END Nav -->
   </header>

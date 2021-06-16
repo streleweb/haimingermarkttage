@@ -586,6 +586,12 @@ video {
   }
 }
 
+/*
+    .app {
+        @apply flex flex-col h-full bg-black justify-between;
+    }
+*/
+
 .navbar {
   --tw-bg-opacity: 1;
   background-color: rgba(6, 78, 59, var(--tw-bg-opacity));
@@ -608,6 +614,7 @@ video {
   border-top-width: 2px;
   opacity: 0.8;
   padding: 1rem;
+  position: absolute;
   bottom: 0px;
   text-align: center;
   width: 100%;

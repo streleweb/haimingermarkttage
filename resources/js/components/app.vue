@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-screen bg-black justify-between">
+  <div class="app">
     <!--Hier video oder Photo noch rein-->
     <!-- "
       outercontainer
@@ -11,7 +11,7 @@
       overflow-hidden
     "-->
     <!-- war bg-gradient-to-b from-gray-900 to-green-500 ... flex h-full flex-col overflow-hidden-->
-    <header>
+    <header class="top-bar">
       <navbar></navbar>
     </header>
     <div class="">
