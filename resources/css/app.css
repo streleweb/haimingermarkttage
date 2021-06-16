@@ -21,7 +21,7 @@ der tailwind components integriert. Diese Styles werden durch die
         @apply flex
         items-center
         justify-between
-        flex-wrap
+        flex-nowrap
         p-3
         bg-green-900
         border-b-2 border-black border-opacity-60;
@@ -31,12 +31,31 @@ der tailwind components integriert. Diese Styles werden durch die
         @apply w-full absolute text-center border-t-2 bottom-0 border-green-400 p-4 bg-gray-800 opacity-80;
     }
 
+    /*Resizing speziell für das Haiminger Markttage-Logo*/
     .resizeLogo {
         @apply h-8;
     }
 
+    .resize-icon {
+        @apply h-5;
+    }
+
     .contentContainer {
         @apply lg:flex lg:flex-1 lg:space-x-20 lg:p-10;
+    }
+
+    /* Filter für SVG zu weiß: Nur fuer Main-Buttons konfiguriert */
+    .filter-white {
+        filter: invert(100%) sepia(0%) saturate(7494%) hue-rotate(350deg)
+                brightness(101%) contrast(104%);
+  
+        height: 5em;
+        width: 3em;
+    }
+
+    .filter-white-icons {
+        filter: invert(100%) sepia(0%) saturate(7494%) hue-rotate(350deg)
+                brightness(101%) contrast(104%);
     }
 
 }

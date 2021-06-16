@@ -2430,6 +2430,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Navbar",
   data: function data() {
@@ -22401,6 +22423,8 @@ var render = function() {
         1
       ),
       _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
       _c("div", { staticClass: "block lg:hidden" }, [
         _c(
           "button",
@@ -22433,7 +22457,55 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "inline-flex pr-4 space-x-2",
+        attrs: { id: "iconcontainer" }
+      },
+      [
+        _c(
+          "a",
+          { attrs: { href: "https://www.facebook.com/Haiminger.Markttage" } },
+          [
+            _c("img", {
+              staticClass: "resize-icon filter-white-icons",
+              attrs: { src: "/images/icons/svgs/facebook-logo.svg", alt: "fb" }
+            })
+          ]
+        ),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "http://www.haiminger-markttage.at/" } }, [
+          _c("img", {
+            staticClass: "resize-icon filter-white-icons",
+            attrs: { src: "/images/icons/svgs/www.svg", alt: "website" }
+          })
+        ]),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            attrs: {
+              href: "mailto:info@haiminger-markttage.at",
+              target: "_newtab"
+            }
+          },
+          [
+            _c("img", {
+              staticClass: "resize-icon filter-white-icons",
+              attrs: { src: "/images/icons/svgs/email.svg", alt: "email" }
+            })
+          ]
+        )
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 

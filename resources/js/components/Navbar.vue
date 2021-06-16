@@ -45,8 +45,30 @@
           >Fotogalerie</router-link
         >
       </div>
-
       <!--END-LOGOCONTAINER-->
+      <!--START- Iconcontainer-->
+      <div id="iconcontainer" class="inline-flex pr-4 space-x-2">
+        <a href="https://www.facebook.com/Haiminger.Markttage"
+          ><img
+            src="/images/icons/svgs/facebook-logo.svg"
+            class="resize-icon filter-white-icons"
+            alt="fb"
+        /></a>
+
+        <a href="http://www.haiminger-markttage.at/"
+          ><img
+            src="/images/icons/svgs/www.svg"
+            class="resize-icon filter-white-icons"
+            alt="website"
+        /></a>
+
+        <a href="mailto:info@haiminger-markttage.at" target="_newtab"
+          ><img
+            src="/images/icons/svgs/email.svg"
+            class="resize-icon filter-white-icons"
+            alt="email"
+        /></a>
+      </div>
 
       <!--START BUTTON-div-->
       <div class="block lg:hidden">
