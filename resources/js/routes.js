@@ -5,6 +5,8 @@ import HomeContent from './components/HomeContent';
 import PageNotFound from './components/PageNotFound';
 import Aussteller from './components/Aussteller';
 import Ausstelleranlegen from './components/VorstandAdminComponents/Ausstelleranlegen';
+import Fotogalerie from './components/Fotogalerie';
+import News from './components/News';
 
 export default {
     mode: 'history', //Browser-Tracking-System benützen, um die Pages zu tracken
@@ -38,6 +40,16 @@ export default {
         {
             path: '/app/ausstelleranlegen',
             component: Ausstelleranlegen
+        },
+
+        {
+            path: '/app/fotogalerie',
+            component: Fotogalerie
+        },
+
+        {
+            path: '/app/news',
+            component: News
         }
 
     ]

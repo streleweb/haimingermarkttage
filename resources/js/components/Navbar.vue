@@ -35,10 +35,17 @@
           />Haiminger Markttage</router-link
         ><!-- Nicht vergessen anstatt to /app noch to haiminger-markttage.at bzw. / -->
 
-        <div>Philosophie</div>
-        <div>News</div>
-        <div>Fotogalerie</div>
+        <router-link to="/app/philosophie" exact class="hidden md:inline-flex"
+          >Philosophie</router-link
+        >
+        <router-link to="/app/news" exact class="hidden md:inline-flex"
+          >News</router-link
+        >
+        <router-link to="/app/fotogalerie" exact class="hidden md:inline-flex"
+          >Fotogalerie</router-link
+        >
       </div>
+
       <!--END-LOGOCONTAINER-->
 
       <!--START BUTTON-div-->
