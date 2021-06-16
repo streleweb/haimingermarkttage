@@ -2088,6 +2088,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Button",
   props: ["buttonInhalt", "buttonColor", "onHover", "svgSource"]
@@ -2298,6 +2307,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -22041,7 +22056,7 @@ var render = function() {
     "div",
     {
       staticClass:
-        "\n    buttoncontainer\n    flex\n    justify-center\n    flex-col\n    items-center\n    text-white text-center\n    h-20\n    mb-2\n  "
+        "\n    buttoncontainer\n    flex\n    justify-center\n    flex-col\n    items-center\n    text-white text-center\n    mb-2\n  "
     },
     [
       _c("div", { staticClass: "w-60 md:w-80 text-center" }, [
@@ -22055,7 +22070,7 @@ var render = function() {
             },
             [
               _c("img", {
-                staticClass: "filter-white",
+                staticClass: "filter-white iconmedium",
                 attrs: { src: _vm.svgSource }
               }),
               _vm._v(" "),
@@ -22064,7 +22079,7 @@ var render = function() {
                   "p",
                   {
                     staticClass:
-                      "text-3xl font-medium md:mr-10 md:text-3xl md:p-2"
+                      "\n              text-2xl\n              sm:text-3xl\n              font-medium\n              md:mr-10\n              md:text-3xl\n              md:p-2\n            "
                   },
                   [
                     _vm._v(
@@ -22372,7 +22387,7 @@ var render = function() {
           _c(
             "router-link",
             {
-              staticClass: "hidden md:inline-flex",
+              staticClass: "hidden philosophiebp:inline-flex",
               attrs: { to: "/app/philosophie", exact: "" }
             },
             [_vm._v("Philosophie")]
@@ -22381,7 +22396,7 @@ var render = function() {
           _c(
             "router-link",
             {
-              staticClass: "hidden md:inline-flex",
+              staticClass: "hidden newsbp:inline-flex",
               attrs: { to: "/app/news", exact: "" }
             },
             [_vm._v("News")]
@@ -22390,7 +22405,7 @@ var render = function() {
           _c(
             "router-link",
             {
-              staticClass: "hidden md:inline-flex",
+              staticClass: "hidden fotogaleriebp:inline-flex",
               attrs: { to: "/app/fotogalerie", exact: "" }
             },
             [_vm._v("Fotogalerie")]
@@ -22441,7 +22456,7 @@ var staticRenderFns = [
     return _c(
       "div",
       {
-        staticClass: "inline-flex pr-4 space-x-2",
+        staticClass: "hidden ssm:inline-flex pr-4 space-x-2",
         attrs: { id: "iconcontainer" }
       },
       [

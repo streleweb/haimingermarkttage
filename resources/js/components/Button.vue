@@ -7,10 +7,10 @@
       flex-col
       items-center
       text-white text-center
-      h-20
       mb-2
     "
   >
+    <!--Custom Button-->
     <div class="w-60 md:w-80 text-center">
       <div class="p-1 rounded-lg" :class="onHover">
         <!-- Hoverdiv Start -->
@@ -29,7 +29,7 @@
           "
           :class="buttonColor"
         >
-          <img :src="svgSource" class="filter-white" />
+          <img :src="svgSource" class="filter-white iconmedium" />
           <!--<svg
             class="h-6 fill-current hover:text-gray-100"
             role="img"
@@ -42,7 +42,16 @@
             />
           </svg>-->
           <div>
-            <p class="text-3xl font-medium md:mr-10 md:text-3xl md:p-2">
+            <p
+              class="
+                text-2xl
+                sm:text-3xl
+                font-medium
+                md:mr-10
+                md:text-3xl
+                md:p-2
+              "
+            >
               {{ buttonInhalt }}
             </p>
           </div>

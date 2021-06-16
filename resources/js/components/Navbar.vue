@@ -42,19 +42,25 @@
           />Haiminger Markttage</router-link
         ><!-- Nicht vergessen anstatt to /app noch to haiminger-markttage.at bzw. / -->
 
-        <router-link to="/app/philosophie" exact class="hidden md:inline-flex"
+        <router-link
+          to="/app/philosophie"
+          exact
+          class="hidden philosophiebp:inline-flex"
           >Philosophie</router-link
         >
-        <router-link to="/app/news" exact class="hidden md:inline-flex"
+        <router-link to="/app/news" exact class="hidden newsbp:inline-flex"
           >News</router-link
         >
-        <router-link to="/app/fotogalerie" exact class="hidden md:inline-flex"
+        <router-link
+          to="/app/fotogalerie"
+          exact
+          class="hidden fotogaleriebp:inline-flex"
           >Fotogalerie</router-link
         >
       </div>
       <!--END-LOGOCONTAINER-->
       <!--START- Iconcontainer-->
-      <div id="iconcontainer" class="inline-flex pr-4 space-x-2">
+      <div id="iconcontainer" class="hidden ssm:inline-flex pr-4 space-x-2">
         <a href="https://www.facebook.com/Haiminger.Markttage"
           ><img
             src="/images/icons/svgs/facebook-logo.svg"

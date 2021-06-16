@@ -62,9 +62,16 @@ der tailwind components integriert. Diese Styles werden durch die
     .filter-white {
         filter: invert(100%) sepia(0%) saturate(7494%) hue-rotate(350deg)
                 brightness(101%) contrast(104%);
-  
+    }
+    /*Medium Icon Size - Class für normale Screens*/
+    .iconmedium{
         height: 5em;
         width: 3em;
+    }
+    /*Small Icon Size Class - für sehr kleine Handyscreens*/
+    .iconsmall{
+        height: 3em;
+        width: 2em;
     }
 
     .filter-white-icons {
@@ -75,5 +82,7 @@ der tailwind components integriert. Diese Styles werden durch die
     .footer {
         @apply w-full fixed h-10 text-center border-t-2 bottom-0 border-green-400 p-2 bg-gray-800 opacity-80 flex-nowrap text-xs;
     }
+
+    /*Background Video Section Area*/
 
 }
