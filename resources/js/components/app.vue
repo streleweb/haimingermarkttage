@@ -11,9 +11,9 @@
       overflow-hidden
     "-->
     <!-- war bg-gradient-to-b from-gray-900 to-green-500 ... flex h-full flex-col overflow-hidden-->
-    <div class="header">
+    <header>
       <navbar></navbar>
-    </div>
+    </header>
     <div class="">
       <!--war main flex-1-->
       <!-- zu flex-grow zuruecksetzen, wenn ausstellerview ausgefeilt -->
@@ -46,4 +46,12 @@ export default {
   components: { Navbar, Footer, Apple },
 };
 </script>
+
+<style>
+/*Custom Selection Color, wenn man Text mit Maus auswählt*/
+::selection {
+  color: rgb(0, 255, 8);
+  background: rgba(116, 116, 116, 0.496);
+}
+</style>
 

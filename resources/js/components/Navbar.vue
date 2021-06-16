@@ -1,17 +1,7 @@
 <template>
   <header>
     <!-- Nav -->
-    <nav
-      class="
-        flex
-        items-center
-        justify-between
-        flex-wrap
-        p-3
-        bg-green-900
-        border-b-2 border-black border-opacity-60
-      "
-    >
+    <nav class="navbar">
       <div class="flex items-center flex-no-shrink text-white mr-6">
         <!--<svg
           class="fill-current h-8 w-8 mr-2"

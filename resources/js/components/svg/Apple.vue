@@ -9,7 +9,7 @@ export default {
 </script>
 
 <style>
-/* Filter für SVG zu weiß */
+/* Filter für SVGs.. Ändert SVG zu schwarz und auf dieser Basis zu weiß..*/
 .filter-white {
   filter: invert(100%) sepia(0%) saturate(7494%) hue-rotate(350deg)
     brightness(101%) contrast(104%);
