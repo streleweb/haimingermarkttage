@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
+
+      'sssm': '258px',
+
       'ssm': '320px',
 
       'fotogaleriebp': '420px',
@@ -16,6 +19,8 @@ module.exports = {
 
       'md': '768px',
       // => @media (min-width: 768px) { ... }
+
+      'kontaktbp': '760px',
 
       'lg': '1024px',
       // => @media (min-width: 1024px) { ... }

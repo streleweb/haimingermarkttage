@@ -18,7 +18,7 @@ der tailwind components integriert. Diese Styles werden durch die
     }
 
     body{
-        background: black;
+        @apply bg-green-700;
     }
 
     
@@ -55,6 +55,10 @@ der tailwind components integriert. Diese Styles werden durch die
 
     .homecontentcontainer{
         @apply h-full flex flex-col w-full justify-evenly;
+    }
+
+    .kontaktcontentcontainer{
+        @apply h-full flex flex-col w-full justify-start;
     }
 
     /*old contentcontainer

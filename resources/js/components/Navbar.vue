@@ -57,6 +57,13 @@
           class="hidden fotogaleriebp:inline-flex"
           >Fotogalerie</router-link
         >
+
+        <router-link
+          to="/app/kontakt"
+          exact
+          class="hidden kontaktbp:inline-flex"
+          >Kontakt</router-link
+        >
       </div>
       <!--END-LOGOCONTAINER-->
       <!--START- Iconcontainer-->

@@ -11,7 +11,7 @@
     "
   >
     <!--Custom Button-->
-    <div class="w-60 md:w-80 text-center">
+    <div class="sm:w-60 md:w-80 text-center">
       <div class="p-1 rounded-lg" :class="onHover">
         <!-- Hoverdiv Start -->
         <div
@@ -20,8 +20,13 @@
             items-center
             justify-between
             rounded-lg
-            pr-4
-            pl-4
+            mt-2
+            h-10
+            px-2
+            ssm:mt-4
+            ssm:pr-4
+            ssm:pl-4
+            sm:h-20
             shadow-xl
             cursor-pointer
             hover:bg-green-900
@@ -29,7 +34,7 @@
           "
           :class="buttonColor"
         >
-          <img :src="svgSource" class="filter-white iconmedium" />
+          <img :src="svgSource" class="filter-white iconsmall ssm:iconmedium" />
           <!--<svg
             class="h-6 fill-current hover:text-gray-100"
             role="img"

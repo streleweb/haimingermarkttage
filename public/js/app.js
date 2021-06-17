@@ -2097,6 +2097,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Button",
   props: ["buttonInhalt", "buttonColor", "onHover", "svgSource"]
@@ -2296,6 +2301,149 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Kontakt.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Kontakt.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ "./resources/js/components/Button.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      name: "Kontakt",
+      titleMessage: "Kontaktieren Sie uns gerne!",
+      contactDescription: "Das Organisationskomitee der Haiminger Markttage steht Ihnen bei Fragen, Anregungen, Kritik oder sonstigen Anliegen gerne zur Verfügung. Schicken Sie uns einfach eine Email oder schreiben Sie uns – wir antworten gerne!" //nicht vergessen, Anreiseinfos entweder in DB abspeichern und von dort aus zB via Props zu laden, oder via API Call (Axios oder FetchAPI)..
+
+    };
+  },
+  components: {
+    Button: _Button__WEBPACK_IMPORTED_MODULE_0__.default
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Navbar.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Navbar.vue?vue&type=script&lang=js& ***!
@@ -2307,6 +2455,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2922,6 +3077,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_VorstandAdminComponents_Ausstelleranlegen__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/VorstandAdminComponents/Ausstelleranlegen */ "./resources/js/components/VorstandAdminComponents/Ausstelleranlegen.vue");
 /* harmony import */ var _components_Fotogalerie__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/Fotogalerie */ "./resources/js/components/Fotogalerie.vue");
 /* harmony import */ var _components_News__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/News */ "./resources/js/components/News.vue");
+/* harmony import */ var _components_Kontakt__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/Kontakt */ "./resources/js/components/Kontakt.vue");
+
 
 
 
@@ -2961,6 +3118,9 @@ __webpack_require__.r(__webpack_exports__);
   }, {
     path: '/app/news',
     component: _components_News__WEBPACK_IMPORTED_MODULE_8__.default
+  }, {
+    path: '/app/kontakt',
+    component: _components_Kontakt__WEBPACK_IMPORTED_MODULE_9__.default
   }]
 });
 
@@ -21123,6 +21283,45 @@ component.options.__file = "resources/js/components/HomeContent.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/Kontakt.vue":
+/*!*********************************************!*\
+  !*** ./resources/js/components/Kontakt.vue ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Kontakt_vue_vue_type_template_id_e28ccef6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Kontakt.vue?vue&type=template&id=e28ccef6& */ "./resources/js/components/Kontakt.vue?vue&type=template&id=e28ccef6&");
+/* harmony import */ var _Kontakt_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Kontakt.vue?vue&type=script&lang=js& */ "./resources/js/components/Kontakt.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _Kontakt_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _Kontakt_vue_vue_type_template_id_e28ccef6___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Kontakt_vue_vue_type_template_id_e28ccef6___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Kontakt.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/Navbar.vue":
 /*!********************************************!*\
   !*** ./resources/js/components/Navbar.vue ***!
@@ -21510,6 +21709,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Kontakt.vue?vue&type=script&lang=js&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Kontakt.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Kontakt_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Kontakt.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Kontakt.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Kontakt_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
 /***/ "./resources/js/components/Navbar.vue?vue&type=script&lang=js&":
 /*!*********************************************************************!*\
   !*** ./resources/js/components/Navbar.vue?vue&type=script&lang=js& ***!
@@ -21763,6 +21978,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeContent_vue_vue_type_template_id_3e008c7f___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeContent_vue_vue_type_template_id_3e008c7f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./HomeContent.vue?vue&type=template&id=3e008c7f& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/HomeContent.vue?vue&type=template&id=3e008c7f&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Kontakt.vue?vue&type=template&id=e28ccef6&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/Kontakt.vue?vue&type=template&id=e28ccef6& ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Kontakt_vue_vue_type_template_id_e28ccef6___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Kontakt_vue_vue_type_template_id_e28ccef6___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Kontakt_vue_vue_type_template_id_e28ccef6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Kontakt.vue?vue&type=template&id=e28ccef6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Kontakt.vue?vue&type=template&id=e28ccef6&");
 
 
 /***/ }),
@@ -22059,18 +22291,18 @@ var render = function() {
         "\n    buttoncontainer\n    flex\n    justify-center\n    flex-col\n    items-center\n    text-white text-center\n    sm:mb-2\n  "
     },
     [
-      _c("div", { staticClass: "w-60 md:w-80 text-center" }, [
+      _c("div", { staticClass: "sm:w-60 md:w-80 text-center" }, [
         _c("div", { staticClass: "p-1 rounded-lg", class: _vm.onHover }, [
           _c(
             "div",
             {
               staticClass:
-                "\n          flex\n          items-center\n          justify-between\n          rounded-lg\n          pr-4\n          pl-4\n          shadow-xl\n          cursor-pointer\n          hover:bg-green-900\n          hover:text-gray-100\n        ",
+                "\n          flex\n          items-center\n          justify-between\n          rounded-lg\n          mt-2\n          h-10\n          px-2\n          ssm:mt-4\n          ssm:pr-4\n          ssm:pl-4\n          sm:h-20\n          shadow-xl\n          cursor-pointer\n          hover:bg-green-900\n          hover:text-gray-100\n        ",
               class: _vm.buttonColor
             },
             [
               _c("img", {
-                staticClass: "filter-white iconmedium",
+                staticClass: "filter-white iconsmall ssm:iconmedium",
                 attrs: { src: _vm.svgSource }
               }),
               _vm._v(" "),
@@ -22339,6 +22571,162 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Kontakt.vue?vue&type=template&id=e28ccef6&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Kontakt.vue?vue&type=template&id=e28ccef6& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "kontaktcontentcontainer" }, [
+    _c(
+      "div",
+      {
+        staticClass:
+          "\n      willkommen\n      font-willkommen\n      flex-shrink\n      mt-2\n      pr-2\n      pl-2\n      mb-4\n      md:flex-grow\n      md:mt-5\n      text-center\n    "
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "\n        text-white\n        sm:mb-5\n        text-xl\n        sm:text-3xl\n        md:text-5xl\n        lg:text-5xl\n        font-s\n      "
+          },
+          [
+            _vm._v("\n      " + _vm._s(_vm.titleMessage) + "\n      "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "\n          text-gray-100 text-base text-justify\n          pt-4\n          pb-4\n          mt-4\n          sssm:px-4\n          sm:px-10\n          md:px-20\n          md:text-xl\n          lg:mt-8\n          lg:px-40\n          lg:text-2xl\n          font-thin\n          bg\n        "
+              },
+              [
+                _vm._v(
+                  "\n        " + _vm._s(_vm.contactDescription) + "\n      "
+                )
+              ]
+            )
+          ]
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass:
+          "buttonContainer flex flex-col flex-shrink sm:pt-4 md:flex-grow"
+      },
+      [
+        _c(
+          "router-link",
+          { attrs: { to: "/app" } },
+          [
+            _c("Button", {
+              attrs: {
+                "svg-source": "/../../images/icons/svgs/home.svg",
+                "button-inhalt": "Home",
+                "button-color": "bg-green-400",
+                "on-hover": "hover:bg-white"
+              }
+            })
+          ],
+          1
+        )
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "ul",
+      {
+        staticClass:
+          "\n      text-white text-xs\n      ssm:text-base\n      grid\n      justify-center\n      items-center\n      gap-1\n      content-evenly\n    ",
+        attrs: { id: "kontaktinfo" }
+      },
+      [
+        _c("li", { staticClass: "justify-self-center" }, [
+          _vm._v("Brunnenweg 5")
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "justify-self-center" }, [
+          _vm._v("A-6425 Haiming")
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "justify-self-center" }, [
+          _vm._v("\n      E-Mail:\n      "),
+          _c(
+            "a",
+            {
+              attrs: {
+                href: "mailto:info@haiminger-markttage.at",
+                target: "_newtab"
+              }
+            },
+            [
+              _vm._v("info@haiminger-markttage.at"),
+              _c("img", {
+                staticClass: "resize-icon filter-white-icons mx-auto",
+                attrs: { src: "/images/icons/svgs/email.svg", alt: "email" }
+              })
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "justify-self-center" }, [
+          _vm._v("\n      Website:\n      "),
+          _c("a", { attrs: { href: "http://www.haiminger-markttage.at/" } }, [
+            _vm._v("haiminger-markttage.at"),
+            _c("img", {
+              staticClass: "resize-icon filter-white-icons mx-auto",
+              attrs: { src: "/images/icons/svgs/www.svg", alt: "website" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "justify-self-center" }, [
+          _vm._v("\n      Zum Kontaktformular:"),
+          _c(
+            "a",
+            { attrs: { href: "http://www.haiminger-markttage.at/kontakt/" } },
+            [
+              _c("img", {
+                staticClass: "resize-icon filter-white-icons mx-auto",
+                attrs: {
+                  src: "/images/icons/svgs/contact-form.svg",
+                  alt: "website"
+                }
+              })
+            ]
+          )
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Navbar.vue?vue&type=template&id=6dde423b&":
 /*!******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Navbar.vue?vue&type=template&id=6dde423b& ***!
@@ -22409,6 +22797,15 @@ var render = function() {
               attrs: { to: "/app/fotogalerie", exact: "" }
             },
             [_vm._v("Fotogalerie")]
+          ),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            {
+              staticClass: "hidden kontaktbp:inline-flex",
+              attrs: { to: "/app/kontakt", exact: "" }
+            },
+            [_vm._v("Kontakt")]
           )
         ],
         1
