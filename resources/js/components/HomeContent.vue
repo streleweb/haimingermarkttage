@@ -21,7 +21,7 @@
       <div
         class="
           text-white
-          mb-3
+          sm:mb-3
           text-2xl
           sm:text-3xl
           md:text-5xl

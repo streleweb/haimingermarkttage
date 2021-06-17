@@ -7,7 +7,7 @@
       flex-col
       items-center
       text-white text-center
-      mb-2
+      sm:mb-2
     "
   >
     <!--Custom Button-->

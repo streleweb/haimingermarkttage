@@ -17,12 +17,16 @@ der tailwind components integriert. Diese Styles werden durch die
         @apply flex flex-col h-full w-full;
     }
 
+    body{
+        background: black;
+    }
+
     
     .sectionarea {
         position: absolute;
         bottom: 40px; /*Footer ausschließen: Pixel des Footers*/
         top: 58px; /*Pixelanzahl der Navbar vertikal*/
-        @apply  w-screen bg-green-700 flex flex-col;
+        @apply  w-screen  flex flex-col;
     }
 
     /*.contentarea {
@@ -50,7 +54,7 @@ der tailwind components integriert. Diese Styles werden durch die
     }
 
     .homecontentcontainer{
-        @apply h-full flex flex-col w-full;
+        @apply h-full flex flex-col w-full justify-evenly;
     }
 
     /*old contentcontainer

@@ -22056,7 +22056,7 @@ var render = function() {
     "div",
     {
       staticClass:
-        "\n    buttoncontainer\n    flex\n    justify-center\n    flex-col\n    items-center\n    text-white text-center\n    mb-2\n  "
+        "\n    buttoncontainer\n    flex\n    justify-center\n    flex-col\n    items-center\n    text-white text-center\n    sm:mb-2\n  "
     },
     [
       _c("div", { staticClass: "w-60 md:w-80 text-center" }, [
@@ -22245,7 +22245,7 @@ var render = function() {
           "div",
           {
             staticClass:
-              "\n        text-white\n        mb-3\n        text-2xl\n        sm:text-3xl\n        md:text-5xl\n        lg:text-5xl\n        font-s\n      "
+              "\n        text-white\n        sm:mb-3\n        text-2xl\n        sm:text-3xl\n        md:text-5xl\n        lg:text-5xl\n        font-s\n      "
           },
           [
             _vm._v("\n      " + _vm._s(_vm.titleMessage) + "\n      "),
