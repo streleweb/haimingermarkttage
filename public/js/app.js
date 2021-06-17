@@ -2100,8 +2100,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Button",
   props: ["buttonInhalt", "buttonColor", "onHover", "svgSource"]
@@ -2313,6 +2311,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ "./resources/js/components/Button.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -22291,13 +22298,13 @@ var render = function() {
         "\n    buttoncontainer\n    flex\n    justify-center\n    flex-col\n    items-center\n    text-white text-center\n    sm:mb-2\n  "
     },
     [
-      _c("div", { staticClass: "sm:w-60 md:w-80 text-center" }, [
+      _c("div", { staticClass: "w-40 sm:w-60 md:w-80 text-center" }, [
         _c("div", { staticClass: "p-1 rounded-lg", class: _vm.onHover }, [
           _c(
             "div",
             {
               staticClass:
-                "\n          flex\n          items-center\n          justify-between\n          rounded-lg\n          mt-2\n          h-10\n          px-2\n          ssm:mt-4\n          ssm:pr-4\n          ssm:pl-4\n          sm:h-20\n          shadow-xl\n          cursor-pointer\n          hover:bg-green-900\n          hover:text-gray-100\n        ",
+                "\n          flex\n          items-center\n          justify-between\n          rounded-lg\n          h-10\n          px-2\n          ssm:px-1\n          sm:px-4\n          sm:h-20\n          shadow-xl\n          cursor-pointer\n          hover:bg-green-900\n          hover:text-gray-100\n        ",
               class: _vm.buttonColor
             },
             [
@@ -22626,7 +22633,7 @@ var render = function() {
       "div",
       {
         staticClass:
-          "buttonContainer flex flex-col flex-shrink sm:pt-4 md:flex-grow"
+          "\n      buttonContainer\n      flex flex-col flex-shrink\n      sm:pt-4\n      md:flex-grow\n      mt-2\n      ssm:mt-4\n    "
       },
       [
         _c(

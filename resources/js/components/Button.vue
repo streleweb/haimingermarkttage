@@ -11,7 +11,7 @@
     "
   >
     <!--Custom Button-->
-    <div class="sm:w-60 md:w-80 text-center">
+    <div class="w-40 sm:w-60 md:w-80 text-center">
       <div class="p-1 rounded-lg" :class="onHover">
         <!-- Hoverdiv Start -->
         <div
@@ -20,12 +20,10 @@
             items-center
             justify-between
             rounded-lg
-            mt-2
             h-10
             px-2
-            ssm:mt-4
-            ssm:pr-4
-            ssm:pl-4
+            ssm:px-1
+            sm:px-4
             sm:h-20
             shadow-xl
             cursor-pointer

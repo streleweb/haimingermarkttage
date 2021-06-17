@@ -96,7 +96,16 @@
       </li>
     </ul>
 
-    <div class="buttonContainer flex flex-col flex-shrink sm:pt-4 md:flex-grow">
+    <div
+      class="
+        buttonContainer
+        flex flex-col flex-shrink
+        sm:pt-4
+        md:flex-grow
+        mt-2
+        ssm:mt-4
+      "
+    >
       <!--Buttons mit Custom Props-->
       <router-link to="/app">
         <Button
