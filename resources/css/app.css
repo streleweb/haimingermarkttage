@@ -37,7 +37,6 @@ der tailwind components integriert. Diese Styles werden durch die
         items-center
         justify-start
         lg:justify-between
-        
         flex-nowrap
         p-3
         bg-green-900

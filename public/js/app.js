@@ -2507,12 +2507,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["open"],
   data: function data() {
-    return {
-      navElements: ["user", "cogs", "th", "share-alt", "star", "comment"]
-    };
+    return {};
   }
 });
 
@@ -3241,7 +3240,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".mobiledropdown[data-v-e0a46da8] {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  position: relative;\n  flex-direction: column;\n  width: 100%;\n  height: calc(100vh - 50px);\n  padding-top: 3rem;\n  background-color: rgb(41, 41, 41);\n  opacity: 1;\n  z-index: 1001;\n}\n.bar-element[data-v-e0a46da8] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 60%;\n  height: 3rem;\n  margin-bottom: 8px;\n  cursor: pointer;\n  color: #fefefe;\n  background-color: #242424;\n}\n.show[data-v-e0a46da8] {\n  opacity: 0;\n  transform: translateX(-60px);\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".mobiledropdown[data-v-e0a46da8] {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  position: relative;\n  flex-direction: column;\n  width: 100%;\n  height: calc(100vh - 50px);\n  padding-top: 3rem;\n  background-color: rgb(41, 41, 41);\n  opacity: 1;\n  z-index: 1001;\n}\n.bar-element[data-v-e0a46da8] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 60%;\n  height: 3rem;\n  margin-bottom: 8px;\n  cursor: pointer;\n  color: #fefefe;\n  background-color: #242424;\n}\n.show[data-v-e0a46da8] {\n  opacity: 0;\n  transform: translateY(-100%);\n}\n.show-enter[data-v-e0a46da8],\r\n.show-leave-to[data-v-e0a46da8] {\n  opacity: 0;\n  transform: translateY(-100%);\n}\n.show-enter-active[data-v-e0a46da8],\r\n.show-leave-active[data-v-e0a46da8] {\n  transition: all 800ms;\n  z-index: 998;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -22982,68 +22981,70 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm.open
-    ? _c(
-        "div",
-        { staticClass: "mobiledropdown mobiledropdowntextconfig" },
-        [
-          _c(
-            "router-link",
-            {
-              staticClass: "bar-element",
-              attrs: { to: "/app/news", exact: "" }
-            },
-            [_vm._v(" News ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "router-link",
-            {
-              staticClass: "bar-element",
-              attrs: { to: "/app/philosophie", exact: "" }
-            },
-            [_vm._v("\n    Philosophie\n  ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "router-link",
-            {
-              staticClass: "bar-element",
-              attrs: { to: "/app/programm", exact: "" }
-            },
-            [_vm._v("\n    Programm\n  ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "router-link",
-            {
-              staticClass: "bar-element",
-              attrs: { to: "/app/Fotogalerie", exact: "" }
-            },
-            [_vm._v("\n    Fotogalerie\n  ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "router-link",
-            {
-              staticClass: "bar-element",
-              attrs: { to: "/app/Kontakt", exact: "" }
-            },
-            [_vm._v("\n    Kontakt\n  ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "router-link",
-            {
-              staticClass: "bar-element",
-              attrs: { to: "/app/Sponsoren", exact: "" }
-            },
-            [_vm._v("\n    Philosophie\n  ")]
-          )
-        ],
-        1
-      )
-    : _vm._e()
+  return _c("transition", { attrs: { name: "show" } }, [
+    _vm.open
+      ? _c(
+          "div",
+          { staticClass: "mobiledropdown mobiledropdowntextconfig" },
+          [
+            _c(
+              "router-link",
+              {
+                staticClass: "bar-element",
+                attrs: { to: "/app/news", exact: "" }
+              },
+              [_vm._v(" News ")]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "bar-element",
+                attrs: { to: "/app/philosophie", exact: "" }
+              },
+              [_vm._v("\n      Philosophie\n    ")]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "bar-element",
+                attrs: { to: "/app/programm", exact: "" }
+              },
+              [_vm._v("\n      Programm\n    ")]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "bar-element",
+                attrs: { to: "/app/Fotogalerie", exact: "" }
+              },
+              [_vm._v("\n      Fotogalerie\n    ")]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "bar-element",
+                attrs: { to: "/app/Kontakt", exact: "" }
+              },
+              [_vm._v("\n      Kontakt\n    ")]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "bar-element",
+                attrs: { to: "/app/Sponsoren", exact: "" }
+              },
+              [_vm._v("\n      Philosophie\n    ")]
+            )
+          ],
+          1
+        )
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

@@ -1,24 +1,25 @@
 <template>
-  <div class="mobiledropdown mobiledropdowntextconfig" v-if="open">
-    <router-link class="bar-element" to="/app/news" exact> News </router-link>
-    <router-link class="bar-element" to="/app/philosophie" exact>
-      Philosophie
-    </router-link>
-    <router-link class="bar-element" to="/app/programm" exact>
-      Programm
-    </router-link>
-    <router-link class="bar-element" to="/app/Fotogalerie" exact>
-      Fotogalerie
-    </router-link>
-    <router-link class="bar-element" to="/app/Kontakt" exact>
-      Kontakt
-    </router-link>
-    <router-link class="bar-element" to="/app/Sponsoren" exact>
-      Philosophie
-    </router-link>
-  </div>
-
-  <!-- end outercontainer -->
+  <transition name="show">
+    <div class="mobiledropdown mobiledropdowntextconfig" v-if="open">
+      <router-link class="bar-element" to="/app/news" exact> News </router-link>
+      <router-link class="bar-element" to="/app/philosophie" exact>
+        Philosophie
+      </router-link>
+      <router-link class="bar-element" to="/app/programm" exact>
+        Programm
+      </router-link>
+      <router-link class="bar-element" to="/app/Fotogalerie" exact>
+        Fotogalerie
+      </router-link>
+      <router-link class="bar-element" to="/app/Kontakt" exact>
+        Kontakt
+      </router-link>
+      <router-link class="bar-element" to="/app/Sponsoren" exact>
+        Philosophie
+      </router-link>
+    </div>
+  </transition>
+  <!-- end root transition element -->
 </template>
 
 
@@ -42,9 +43,7 @@ export default {
 export default {
   props: ["open"],
   data: () => {
-    return {
-      navElements: ["user", "cogs", "th", "share-alt", "star", "comment"],
-    };
+    return {};
   },
 };
 </script>
@@ -78,6 +77,18 @@ export default {
 
 .show {
   opacity: 0;
-  transform: translateX(-60px);
+  transform: translateY(-100%);
+}
+
+.show-enter,
+.show-leave-to {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.show-enter-active,
+.show-leave-active {
+  transition: all 800ms;
+  z-index: 998;
 }
 </style>
