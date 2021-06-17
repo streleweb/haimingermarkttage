@@ -13,8 +13,9 @@
 
     <!-- war bg-gradient-to-b from-gray-900 to-green-500 ... flex h-full flex-col overflow-hidden-->
     <header class="navigationbar">
-      <navbar></navbar>
+      <navbar @togglemenu="mobileMenuOpen = !mobileMenuOpen"></navbar>
     </header>
+    <Mobilemenu :open="mobileMenuOpen"></Mobilemenu>
     <section class="sectionarea">
       <!--war main flex-1-->
       <!-- zu flex-grow zuruecksetzen, wenn ausstellerview ausgefeilt -->
@@ -33,6 +34,7 @@ import Navbar from "./Navbar";
 import Apple from "./svg/Apple";
 import HomeContent from "./HomeContent";
 import PageNotFound from "./PageNotFound";
+import Mobilemenu from "./Mobilemenu.vue";
 const default_layout = "default";
 
 export default {
@@ -42,9 +44,10 @@ export default {
       titleMessage: "Willkommen bei den Haiminger Markttagen!",
       smallDescription: "Flanieren, Probieren und Genießen...",
       //nicht vergessen, Anreiseinfos entweder in DB abspeichern und  via API Call (Axios oder FetchAPI), oder direkte maske bereitstellen
+      mobileMenuOpen: false,
     };
   },
-  components: { Navbar, Footer, Apple },
+  components: { Navbar, Footer, Apple, Mobilemenu },
 };
 </script>
 

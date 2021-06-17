@@ -90,8 +90,8 @@
         /></a>
       </div>
 
-      <!--START BUTTON-div-->
-      <div class="block lg:hidden">
+      <!--START BUTTON-div, via emit kann am Elternelement (App) auf dieses togglemenu event gelistened werden-->
+      <div class="block lg:hidden" @click="$emit('togglemenu')">
         <button
           id="app"
           class="

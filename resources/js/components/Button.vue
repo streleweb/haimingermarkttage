@@ -12,7 +12,7 @@
   >
     <!--Custom Button-->
     <div class="w-40 sm:w-60 md:w-80 text-center">
-      <div class="p-1 rounded-lg" :class="onHover">
+      <div class="p-1 rounded-lg shadow-2xl" :class="onHover">
         <!-- Hoverdiv Start -->
         <div
           class="
