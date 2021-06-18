@@ -21,8 +21,8 @@
       <!--war main flex-1-->
       <!-- zu flex-grow zuruecksetzen, wenn ausstellerview ausgefeilt -->
       <router-view></router-view>
-      <Footer></Footer>
     </section>
+    <Footer></Footer>
   </div>
 
   <!-- end outercontainer -->

@@ -3,8 +3,11 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
+      'hmbp': '220px',
 
       'sssm': '258px',
+
+      'ssmm': '270px',
 
       'ssm': '320px',
 
@@ -18,6 +21,8 @@ module.exports = {
 
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
+
+      'btnbp': '655',
 
       'md': '768px',
       // => @media (min-width: 768px) { ... }

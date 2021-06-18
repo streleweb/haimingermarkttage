@@ -2,35 +2,23 @@
   <div class="homecontentcontainer">
     <!-- Content Container von Willkommen (exklusive Navbar) bis exklusive Footer-->
 
-    <div
-      class="
-        willkommen
-        font-willkommen
-        flex-shrink
-        mt-2
-        pr-2
-        pl-2
-        mb-4
-        md:flex-grow
-        md:mt-5
-        text-center
-      "
-    >
+    <div class="titletext">
       <!-- custom font konfiguriert in tailwind.config.js-->
       <!-- Hier noch Background-Pic oder Video rein -->
-      <div
-        class="
-          text-white
-          sm:mb-3
-          text-2xl
-          sm:text-3xl
-          md:text-5xl
-          lg:text-5xl
-          font-s
-        "
-      >
+      <div class="ueberschrift">
         {{ titleMessage }}
-        <div class="text-gray-300 text-base lg:mt-8 lg:text-2xl font-thin bg">
+        <div
+          class="
+            text-gray-300 text-sm
+            ssmm:text-base
+            ssm:text-lg
+            mt-1
+            lg:mt-8
+            lg:text-2xl
+            font-thin
+            bg
+          "
+        >
           {{ smallDescription }}
         </div>
         <!-- end willkommenstexte -->
@@ -38,7 +26,7 @@
     </div>
     <!-- end willkommen -->
 
-    <div class="buttonContainer flex flex-col flex-shrink md:flex-grow">
+    <div class="buttonContainer flex flex-col flex-shrink flex-grow">
       <!--Buttons mit Custom Props-->
       <router-link to="/app/produkte">
         <Button

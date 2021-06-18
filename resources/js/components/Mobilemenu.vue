@@ -80,14 +80,15 @@ export default {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  position: relative;
+  position: fixed;
+  bottom: 0px;
   flex-direction: column;
   width: 100%;
   height: calc(100vh - 50px);
   padding-top: 3rem;
   background-color: rgb(41, 41, 41);
   opacity: 1;
-  z-index: 1001;
+  z-index: 900;
 }
 
 .bar-element {
