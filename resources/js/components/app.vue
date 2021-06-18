@@ -36,6 +36,7 @@ import HomeContent from "./HomeContent";
 import PageNotFound from "./PageNotFound";
 import Mobilemenu from "./Mobilemenu.vue";
 const default_layout = "default";
+import { EventBus, Eventbus } from "../event-bus";
 
 export default {
   computed: {},
@@ -46,6 +47,18 @@ export default {
       //nicht vergessen, Anreiseinfos entweder in DB abspeichern und  via API Call (Axios oder FetchAPI), oder direkte maske bereitstellen
       mobileMenuOpen: false,
     };
+  },
+  watch: {
+    //Reagiert, wenn Menübutton geklicked wurde und empfängt Bei Klicken eines Menülinks vom Event-Bus einen $emit
+    mobileMenuOpen() {
+      //EventBusHandler für Clicked-Event im MobileMenü, damit der Clicked-State auch hier upgedated wird.
+      const clickHandler = () => {
+        //console.log("This is from App, the Event has been received..");
+        this.mobileMenuOpen = false;
+      };
+      //Den Costum-clickHandler als Callback auf den $emit ausführen
+      EventBus.$on("clickedOnMenuLink", clickHandler);
+    },
   },
   components: { Navbar, Footer, Apple, Mobilemenu },
 };

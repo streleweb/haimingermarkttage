@@ -23,6 +23,7 @@
           text-white
           sm:mb-5
           text-xl
+          iphone6:text-3xl
           sm:text-3xl
           md:text-5xl
           lg:text-5xl
@@ -34,10 +35,9 @@
           class="
             text-gray-100 text-base text-justify
             pt-4
-            pb-4
-            mt-4
             sssm:px-4
             sm:px-10
+            sm:pb-0
             md:px-20
             md:text-xl
             lg:mt-8
@@ -58,12 +58,17 @@
       id="kontaktinfo"
       class="
         text-white text-xs
+        border-t border-b border-gray-800
+        pb-1
         ssm:text-base
         grid
         justify-center
         items-center
         gap-1
         content-evenly
+        bg-gray-600 bg-gradient-to-bl
+        from-green-900
+        to-gray-700
       "
     >
       <li class="justify-self-center">Brunnenweg 5</li>

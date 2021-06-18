@@ -8,6 +8,8 @@ module.exports = {
 
       'ssm': '320px',
 
+      'iphone6': '375px',
+
       'fotogaleriebp': '420px',
 
       'newsbp': '480px',

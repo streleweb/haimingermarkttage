@@ -1,22 +1,30 @@
 <template>
   <transition name="show">
-    <div class="mobiledropdown mobiledropdowntextconfig" v-if="open">
-      <router-link class="bar-element" to="/app/news" exact> News </router-link>
-      <router-link class="bar-element" to="/app/philosophie" exact>
-        Philosophie
-      </router-link>
-      <router-link class="bar-element" to="/app/programm" exact>
-        Programm
-      </router-link>
-      <router-link class="bar-element" to="/app/Fotogalerie" exact>
-        Fotogalerie
-      </router-link>
-      <router-link class="bar-element" to="/app/Kontakt" exact>
-        Kontakt
-      </router-link>
-      <router-link class="bar-element" to="/app/Sponsoren" exact>
-        Philosophie
-      </router-link>
+    <div
+      id="content"
+      class="mobiledropdown mobiledropdowntextconfig"
+      v-if="open"
+    >
+      <div class="mobiledropdown" @click="emitGlobalClickEvent()">
+        <router-link class="bar-element" to="/app/news" exact>
+          News
+        </router-link>
+        <router-link class="bar-element" to="/app/philosophie" exact>
+          Philosophie
+        </router-link>
+        <router-link class="bar-element" to="/app/programm" exact>
+          Programm
+        </router-link>
+        <router-link class="bar-element" to="/app/fotogalerie" exact>
+          Fotogalerie
+        </router-link>
+        <router-link class="bar-element" to="/app/kontakt" exact>
+          Kontakt
+        </router-link>
+        <router-link class="bar-element" to="/app/sponsoren" exact>
+          Unsere Sponsoren
+        </router-link>
+      </div>
     </div>
   </transition>
   <!-- end root transition element -->
@@ -24,29 +32,38 @@
 
 
 <script>
+import { EventBus } from "../event-bus.js";
+
 export default {
   props: ["open"],
   computed: {},
+
   data() {
     return {
       name: "Mobilemenu",
+      hidden: false,
     };
   },
+  methods: {
+    emitGlobalClickEvent() {
+      document.getElementById("content").style.visibility = "hidden";
+      this.hidden = true;
+
+      EventBus.$emit("clickedOnMenuLink");
+    },
+  },
+  watch: {
+    //when visible changes to false, reset it to null
+    hidden() {
+      this.hidden = false;
+    },
+  },
+
   components: {},
 };
 </script>
 
-<style scoped>
-</style>
 
-<script>
-export default {
-  props: ["open"],
-  data: () => {
-    return {};
-  },
-};
-</script>
 
 <style scoped>
 .mobiledropdown {

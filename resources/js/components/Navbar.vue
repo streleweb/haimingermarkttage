@@ -90,7 +90,7 @@
         /></a>
       </div>
 
-      <!--START BUTTON-div, via emit kann am Elternelement (App) auf dieses togglemenu event gelistened werden-->
+      <!--START BUTTON-div, via emit kann am Elternelement (App) auf dieses togglemenu event gelistened-->
       <div class="block lg:hidden" @click="$emit('togglemenu')">
         <button
           id="app"
@@ -202,6 +202,8 @@
 </template>
 
 <script>
+import Mobilemenu from "./Mobilemenu.vue";
+
 export default {
   name: "Navbar",
   data() {
@@ -214,5 +216,6 @@ export default {
       this.showMenu = !this.showMenu;
     },
   },
+  components: { Mobilemenu },
 };
 </script>
