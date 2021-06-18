@@ -5,26 +5,36 @@
       class="mobiledropdown mobiledropdowntextconfig"
       v-if="open"
     >
-      <div class="mobiledropdown" @click="emitGlobalClickEvent()">
-        <router-link class="bar-element" to="/app/news" exact>
-          News
-        </router-link>
-        <router-link class="bar-element" to="/app/philosophie" exact>
-          Philosophie
-        </router-link>
-        <router-link class="bar-element" to="/app/programm" exact>
-          Programm
-        </router-link>
-        <router-link class="bar-element" to="/app/fotogalerie" exact>
-          Fotogalerie
-        </router-link>
-        <router-link class="bar-element" to="/app/kontakt" exact>
-          Kontakt
-        </router-link>
-        <router-link class="bar-element" to="/app/sponsoren" exact>
-          Unsere Sponsoren
-        </router-link>
-      </div>
+      <router-link class="bar-element" to="/app/news" exact
+        ><span class="w-full text-center" @click="emitGlobalClickEvent()">
+          News</span
+        >
+      </router-link>
+      <router-link class="bar-element" to="/app/philosophie" exact
+        ><span class="w-full text-center" @click="emitGlobalClickEvent()">
+          Philosophie</span
+        >
+      </router-link>
+      <router-link class="bar-element" to="/app/programm" exact
+        ><span class="w-full text-center" @click="emitGlobalClickEvent()">
+          Programm</span
+        >
+      </router-link>
+      <router-link class="bar-element" to="/app/fotogalerie" exact
+        ><span class="w-full text-center" @click="emitGlobalClickEvent()">
+          Fotogalerie</span
+        >
+      </router-link>
+      <router-link class="bar-element" to="/app/kontakt" exact
+        ><span class="w-full text-center" @click="emitGlobalClickEvent()">
+          Kontakt</span
+        >
+      </router-link>
+      <router-link class="bar-element" to="/app/sponsoren" exact
+        ><span class="w-full text-center" @click="emitGlobalClickEvent()">
+          Unsere Sponsoren</span
+        >
+      </router-link>
     </div>
   </transition>
   <!-- end root transition element -->

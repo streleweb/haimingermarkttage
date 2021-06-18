@@ -2523,6 +2523,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["open"],
@@ -23049,73 +23059,138 @@ var render = function() {
           },
           [
             _c(
-              "div",
+              "router-link",
               {
-                staticClass: "mobiledropdown",
-                on: {
-                  click: function($event) {
-                    return _vm.emitGlobalClickEvent()
-                  }
-                }
+                staticClass: "bar-element",
+                attrs: { to: "/app/news", exact: "" }
               },
               [
                 _c(
-                  "router-link",
+                  "span",
                   {
-                    staticClass: "bar-element",
-                    attrs: { to: "/app/news", exact: "" }
+                    staticClass: "w-full text-center",
+                    on: {
+                      click: function($event) {
+                        return _vm.emitGlobalClickEvent()
+                      }
+                    }
                   },
-                  [_vm._v("\n        News\n      ")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "bar-element",
-                    attrs: { to: "/app/philosophie", exact: "" }
-                  },
-                  [_vm._v("\n        Philosophie\n      ")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "bar-element",
-                    attrs: { to: "/app/programm", exact: "" }
-                  },
-                  [_vm._v("\n        Programm\n      ")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "bar-element",
-                    attrs: { to: "/app/fotogalerie", exact: "" }
-                  },
-                  [_vm._v("\n        Fotogalerie\n      ")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "bar-element",
-                    attrs: { to: "/app/kontakt", exact: "" }
-                  },
-                  [_vm._v("\n        Kontakt\n      ")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "bar-element",
-                    attrs: { to: "/app/sponsoren", exact: "" }
-                  },
-                  [_vm._v("\n        Unsere Sponsoren\n      ")]
+                  [_vm._v("\n        News")]
                 )
-              ],
-              1
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "bar-element",
+                attrs: { to: "/app/philosophie", exact: "" }
+              },
+              [
+                _c(
+                  "span",
+                  {
+                    staticClass: "w-full text-center",
+                    on: {
+                      click: function($event) {
+                        return _vm.emitGlobalClickEvent()
+                      }
+                    }
+                  },
+                  [_vm._v("\n        Philosophie")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "bar-element",
+                attrs: { to: "/app/programm", exact: "" }
+              },
+              [
+                _c(
+                  "span",
+                  {
+                    staticClass: "w-full text-center",
+                    on: {
+                      click: function($event) {
+                        return _vm.emitGlobalClickEvent()
+                      }
+                    }
+                  },
+                  [_vm._v("\n        Programm")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "bar-element",
+                attrs: { to: "/app/fotogalerie", exact: "" }
+              },
+              [
+                _c(
+                  "span",
+                  {
+                    staticClass: "w-full text-center",
+                    on: {
+                      click: function($event) {
+                        return _vm.emitGlobalClickEvent()
+                      }
+                    }
+                  },
+                  [_vm._v("\n        Fotogalerie")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "bar-element",
+                attrs: { to: "/app/kontakt", exact: "" }
+              },
+              [
+                _c(
+                  "span",
+                  {
+                    staticClass: "w-full text-center",
+                    on: {
+                      click: function($event) {
+                        return _vm.emitGlobalClickEvent()
+                      }
+                    }
+                  },
+                  [_vm._v("\n        Kontakt")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "bar-element",
+                attrs: { to: "/app/sponsoren", exact: "" }
+              },
+              [
+                _c(
+                  "span",
+                  {
+                    staticClass: "w-full text-center",
+                    on: {
+                      click: function($event) {
+                        return _vm.emitGlobalClickEvent()
+                      }
+                    }
+                  },
+                  [_vm._v("\n        Unsere Sponsoren")]
+                )
+              ]
             )
-          ]
+          ],
+          1
         )
       : _vm._e()
   ])
