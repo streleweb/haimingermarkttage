@@ -22,7 +22,8 @@
         class="
           text-white
           sm:mb-3
-          text-2xl
+          text-xl
+          ssmm:text-2xl
           sm:text-3xl
           md:text-5xl
           lg:text-5xl
@@ -30,7 +31,16 @@
         "
       >
         {{ titleMessage }}
-        <div class="text-gray-300 text-base lg:mt-8 lg:text-2xl font-thin bg">
+        <div
+          class="
+            text-gray-300 text-sm
+            ssmm:text-base
+            lg:mt-8
+            lg:text-2xl
+            font-thin
+            bg
+          "
+        >
           {{ smallDescription }}
         </div>
         <!-- end willkommenstexte -->

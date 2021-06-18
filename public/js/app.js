@@ -2304,6 +2304,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -2574,6 +2584,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Mobilemenu_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Mobilemenu.vue */ "./resources/js/components/Mobilemenu.vue");
 /* harmony import */ var _event_bus__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../event-bus */ "./resources/js/event-bus.js");
+//
+//
 //
 //
 //
@@ -22889,7 +22901,7 @@ var render = function() {
           "div",
           {
             staticClass:
-              "\n        text-white\n        sm:mb-3\n        text-2xl\n        sm:text-3xl\n        md:text-5xl\n        lg:text-5xl\n        font-s\n      "
+              "\n        text-white\n        sm:mb-3\n        text-xl\n        ssmm:text-2xl\n        sm:text-3xl\n        md:text-5xl\n        lg:text-5xl\n        font-s\n      "
           },
           [
             _vm._v("\n      " + _vm._s(_vm.titleMessage) + "\n      "),
@@ -22897,7 +22909,7 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  "text-gray-300 text-base lg:mt-8 lg:text-2xl font-thin bg"
+                  "\n          text-gray-300 text-sm\n          ssmm:text-base\n          lg:mt-8\n          lg:text-2xl\n          font-thin\n          bg\n        "
               },
               [_vm._v("\n        " + _vm._s(_vm.smallDescription) + "\n      ")]
             )
@@ -23349,7 +23361,9 @@ var render = function() {
                   alt: "Logo"
                 }
               }),
-              _vm._v("Haiminger Markttage")
+              _c("span", { staticClass: "hidden hmbp:inline-flex" }, [
+                _vm._v("Haiminger Markttage")
+              ])
             ]
           ),
           _vm._v(" "),

@@ -39,7 +39,9 @@
             src="/../../images/icons/pngs/7272transparent.png"
             class="resizeLogo"
             alt="Logo"
-          />Haiminger Markttage</router-link
+          /><span class="hidden hmbp:inline-flex"
+            >Haiminger Markttage</span
+          ></router-link
         ><!-- Nicht vergessen anstatt to /app noch to haiminger-markttage.at bzw. / -->
 
         <router-link
@@ -209,7 +211,7 @@
 
 <script>
 import Mobilemenu from "./Mobilemenu.vue";
-import {EventBus} from "../event-bus";
+import { EventBus } from "../event-bus";
 
 export default {
   name: "Navbar",
@@ -220,31 +222,29 @@ export default {
   },
   methods: {
     //Ändert Inhalt der Navbar zu "Menü", sobald Menü geöffnet wurde.
-    
   },
   components: { Mobilemenu, EventBus },
 
-  watch:{
+  watch: {
     showMenu() {
       const navbar = document.querySelector(".navbar");
 
       if (this.showMenu) {
-        
         /** Alles ausser Menübutton "hidden" */
         var children = navbar.children;
-        for(let i=0; i<children.length-1;i++){
+        for (let i = 0; i < children.length - 1; i++) {
           //console.log(children[i])
           children[i].style.visibility = "hidden";
         }
       } else {
         var children = navbar.children;
-        for(let i=0; i<children.length-1;i++){
+        for (let i = 0; i < children.length - 1; i++) {
           //console.log(children[i])
           children[i].style.visibility = "visible";
         }
       }
-       //Reagiert, wenn Menübutton geklicked wurde und empfängt Bei Klicken eines Menülinks vom Event-Bus einen $emit
-    
+      //Reagiert, wenn Menübutton geklicked wurde und empfängt Bei Klicken eines Menülinks vom Event-Bus einen $emit
+
       //EventBusHandler für Clicked-Event im MobileMenü, damit der Clicked-State auch hier upgedated wird.
       const clickHandler = () => {
         //console.log("This is from App, the Event has been received..");
@@ -252,9 +252,8 @@ export default {
       };
       //Den Costum-clickHandler als Callback auf den $emit ausführen
       EventBus.$on("clickedOnMenuLink", clickHandler);
-    
     },
-  }
+  },
 };
 </script>
 
