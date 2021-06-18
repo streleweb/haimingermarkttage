@@ -30,7 +30,6 @@
 
 
 <script>
-import Background from "./Background.vue";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Apple from "./svg/Apple";
@@ -62,7 +61,7 @@ export default {
       EventBus.$on("clickedOnMenuLink", clickHandler);
     },
   },
-  components: { Background, Navbar, Footer, Apple, Mobilemenu },
+  components: { Navbar, Footer, Apple, Mobilemenu },
 };
 </script>
 
