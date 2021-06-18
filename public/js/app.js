@@ -2314,6 +2314,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -22894,7 +22896,7 @@ var render = function() {
       "div",
       {
         staticClass:
-          "\n      willkommen\n      font-willkommen\n      flex-shrink\n      mt-2\n      pr-2\n      pl-2\n      mb-4\n      md:flex-grow\n      md:mt-5\n      text-center\n    "
+          "\n      willkommen\n      font-willkommen\n      flex-shrink\n      mt-5\n      pr-2\n      pl-2\n      mb-4\n      flex-grow\n      md:mt-5\n      text-center\n    "
       },
       [
         _c(
@@ -22909,7 +22911,7 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  "\n          text-gray-300 text-sm\n          ssmm:text-base\n          lg:mt-8\n          lg:text-2xl\n          font-thin\n          bg\n        "
+                  "\n          text-gray-300 text-sm\n          ssmm:text-base\n          ssm:text-lg\n          mt-1\n          lg:mt-8\n          lg:text-2xl\n          font-thin\n          bg\n        "
               },
               [_vm._v("\n        " + _vm._s(_vm.smallDescription) + "\n      ")]
             )
@@ -22920,7 +22922,7 @@ var render = function() {
     _vm._v(" "),
     _c(
       "div",
-      { staticClass: "buttonContainer flex flex-col flex-shrink md:flex-grow" },
+      { staticClass: "buttonContainer flex flex-col flex-shrink flex-grow" },
       [
         _c(
           "router-link",

@@ -7,11 +7,11 @@
         willkommen
         font-willkommen
         flex-shrink
-        mt-2
+        mt-5
         pr-2
         pl-2
         mb-4
-        md:flex-grow
+        flex-grow
         md:mt-5
         text-center
       "
@@ -35,6 +35,8 @@
           class="
             text-gray-300 text-sm
             ssmm:text-base
+            ssm:text-lg
+            mt-1
             lg:mt-8
             lg:text-2xl
             font-thin
@@ -48,7 +50,7 @@
     </div>
     <!-- end willkommen -->
 
-    <div class="buttonContainer flex flex-col flex-shrink md:flex-grow">
+    <div class="buttonContainer flex flex-col flex-shrink flex-grow">
       <!--Buttons mit Custom Props-->
       <router-link to="/app/produkte">
         <Button
