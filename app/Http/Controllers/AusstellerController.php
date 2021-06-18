@@ -42,16 +42,16 @@ class AusstellerController extends Controller
         [
             'aussteller_fullname' => 'required|min:2|max:30',
             'aussteller_beschreibung'=> 'required|min:10|max:100',
-            'aussteller_brandingname' => 'required|min:2|max:15', 
-            'aussteller_email' => 'required|min:2|max:15',
-            'aussteller_telefonnummer' => 'required|min:2|max:15',
-            'aussteller_websiteurl' => 'required|min:2|max:15',
+            'aussteller_brandingname' => 'required|min:2|max:30', 
+            'aussteller_email' => 'required|min:2|max:30',
+            'aussteller_telefonnummer' => 'required|min:2|max:20',
+            'aussteller_websiteurl' => 'required|min:2|max:100',
             'aussteller_zonenfarbe' => 'required|min:2|max:15',
-            'aussteller_bildurl' => 'required|min:2|max:15',
-            'aussteller_jahre' => 'required|min:2|max:15',
-            'aussteller_straße' => 'required|min:2|max:15',
-            'aussteller_postleitzahl' => 'required|min:2|max:15', 
-            'aussteller_wohnort' => 'required|min:2|max:15', 
+            'aussteller_bildurl' => 'required|min:2|max:100',
+            'aussteller_jahre' => 'required|min:2|max:4',
+            'aussteller_straße' => 'required|min:2|max:30',
+            'aussteller_postleitzahl' => 'required|min:4|max:5', 
+            'aussteller_wohnort' => 'required|min:2|max:30', 
         ]);
 
         if ($validator->fails()) {
@@ -127,7 +127,7 @@ class AusstellerController extends Controller
         $aussteller->aussteller_wohnort = $request->aussteller_wohnort;
         if($aussteller->save())
         {
-            return new NewsResource($aussteller);
+            return new AusstellerResource($aussteller);
         };
     }
 

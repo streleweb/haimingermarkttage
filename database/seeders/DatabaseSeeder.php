@@ -15,10 +15,13 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(AusstellerSeeder::class);
         $this->call(AusstellerfotoSeeder::class);
+        $this->call(Aussteller_ProductSeeder::class);
         $this->call(FotogalerieSeeder::class);
         $this->call(ProductSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(NewsSeeder::class);
         $this->call(ProgrammSeeder::class);
+        $this->call(ProgrammpunktSeeder::class);
+        $this->call(SponsorenSeeder::class);
     }
 }

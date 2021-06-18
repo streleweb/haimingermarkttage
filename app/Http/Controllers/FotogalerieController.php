@@ -42,8 +42,8 @@ class FotogalerieController extends Controller
         $validator = Validator::make($request->all(),
         [
             'fotogalerie_fotoname' => 'required|min:2|max:30',
-            'fotogalerie_fotobeschreibung'=> 'nullable|min:10|max:50',
-            'fotogalerie_fotourl'=> 'nullable|min:10|max:50',
+            'fotogalerie_fotobeschreibung'=> 'nullable|min:10|max:100',
+            'fotogalerie_fotourl'=> 'nullable|min:10|max:100',
         ]);
 
         if ($validator->fails()) {

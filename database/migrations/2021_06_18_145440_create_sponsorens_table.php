@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProgrammsTable extends Migration
+class CreateSponsorensTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateProgrammsTable extends Migration
      */
     public function up()
     {
-        Schema::create('programm', function (Blueprint $table) {
+        Schema::create('sponsoren', function (Blueprint $table) {
             $table->id();
-            $table->string('programm_titel')->nullable();
-            $table->string('programm_beschreibung')->nullable();
+            $table->string('sponsor_brandname');
+            $table->string('sponsor_vorname');
+            $table->string('sponsor_nachname');
+            $table->string('sponsor_websiteurl');
+            $table->string('sponsor_logourl');
         });
     }
 
@@ -27,6 +30,6 @@ class CreateProgrammsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('programm');
+        Schema::dropIfExists('sponsoren');
     }
 }

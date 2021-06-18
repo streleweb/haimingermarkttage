@@ -14,7 +14,6 @@ class CreateAusstellerProductsTable extends Migration
     public function up()
     {
         Schema::create('aussteller_product', function (Blueprint $table) {
-
             
             $table->id();
             $table->bigInteger('aussteller_id')->unsigned();

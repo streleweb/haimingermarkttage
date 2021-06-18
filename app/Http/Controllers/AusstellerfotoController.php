@@ -41,7 +41,7 @@ class AusstellerfotoController extends Controller
         $validator = Validator::make($request->all(),
         [
             'ausstellerfoto_name' => 'required|min:2|max:30',
-            'ausstellerfoto_url'=> 'nullable|min:10|max:50',
+            'ausstellerfoto_url'=> 'nullable|min:10|max:100',
         ]);
 
         if ($validator->fails()) {
@@ -98,7 +98,7 @@ class AusstellerfotoController extends Controller
         $ausstellerfoto->aussteller_id = $request->aussteller_id;
         if($ausstellerfoto->save())
         {
-            return new NewsResource($ausstellerfoto);
+            return new AusstellerfotoResource($ausstellerfoto);
         };
     }
 

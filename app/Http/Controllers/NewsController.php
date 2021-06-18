@@ -40,10 +40,9 @@ class NewsController extends Controller
     {
         $validator = Validator::make($request->all(),
         [
-            'news_anrede' => 'required|min:4|max:4',
-            'news_vorname'=> 'nullable|min:2|max:30',
-            'news_nachname'=> 'nullable|min:2|max:30',
-            'news_email'=> 'nullable|min:2|max:50',
+            'news_titel' => 'required|min:2|max:30',
+            'news_textfeld'=> 'nullable|min:10|max:100',
+            'news_bild_url'=> 'min:2|max:30',
         ]);
 
         if ($validator->fails()) {
@@ -52,10 +51,9 @@ class NewsController extends Controller
             
         }else {
             $news = new News();
-            $news->news_anrede = $request->news_anrede;
-            $news->news_vorname = $request->news_vorname;
-            $news->news_nachname = $request->news_nachname;
-            $news->news_email = $request->news_email;
+            $news->news_titel = $request->news_titel;
+            $news->news_textfeld = $request->news_textfeld;
+            $news->news_bild_url = $request->news_bild_url;
            
             if($news->save()){
                 return new NewsResource($news);
@@ -97,10 +95,9 @@ class NewsController extends Controller
     {
         $news = News::findOrFail($id);
         $news->id = $request->id;
-        $news->news_anrede = $request->news_anrede;
-        $news->news_vorname = $request->news_vorname;
-        $news->news_nachname = $request->news_nachname;
-        $news->news_email = $request->news_email;
+        $news->news_titel = $request->news_titel;
+        $news->news_textfeld = $request->news_textfeld;
+        $news->news_bild_url = $request->news_bild_url;
         if($news->save())
         {
             return new NewsResource($news);

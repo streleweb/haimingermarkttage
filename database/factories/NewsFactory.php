@@ -12,7 +12,7 @@ class NewsFactory extends Factory
      *
      * @var string
      */
-    protected $model = News::class;
+    protected $model = \App\Models\News::class;
 
     /**
      * Define the model's default state.
@@ -22,10 +22,9 @@ class NewsFactory extends Factory
     public function definition()
     {
         return [
-            'news_anrede' => $this->faker->words(1, true),
-            'news_vorname' => $this->faker->name(1, true),
-            'news_nachname' => $this->faker->name(1, true),
-            'news_email' => $this->faker->unique()->safeEmail,
+            'news_titel' => $this->faker->paragraphs(1, true),
+            'news_textfeld' => $this->faker->paragraphs(1, true),
+            'news_bild_url' => $this->faker->imageUrl('public/storage/images',640,480, null, false)
         ];
     }
 }

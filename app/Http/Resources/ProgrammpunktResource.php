@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class NewsResource extends JsonResource
+class ProgrammpunktResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,9 +16,8 @@ class NewsResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'news_titel' => $this->news_titel,
-            'news_textfeld' => $this->news_textfeld,
-            'news_bild_url' => $this->news_bild_url,
+            'programmpunkt_titel' => $this->programmpunkt_titel,
+            'programmpunkt_beschreibung' => $this->programmpunkt_beschreibung,
         ];
     }
 }

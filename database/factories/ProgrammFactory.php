@@ -23,8 +23,7 @@ class ProgrammFactory extends Factory
     {
         return [
             'programm_titel' => $this->faker->paragraphs(1, true),
-            //'programm_datum' => now(),
-            'programm_beschreibung' => $this->faker->paragraphs(1, true),
+            'programm_beschreibung' => $this->faker->paragraphs(1, true)
         ];
     }
 }

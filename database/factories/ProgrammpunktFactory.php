@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Product;
+use App\Models\Programmpunkt;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ProductFactory extends Factory
+class ProgrammpunktFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = \App\Models\Product::class;
+    protected $model = \App\Models\Programmpunkt::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,8 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            'product_name' => $this->faker->words(1,true)
+            'programmpunkt_titel' => $this->faker->paragraphs(1, true),
+            'programmpunkt_beschreibung' => $this->faker->paragraphs(1, true)
         ];
     }
 }
