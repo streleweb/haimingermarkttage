@@ -49,7 +49,9 @@
 </head>
 
 <body class="flex flex-col w-screen h-screen">
+    <img src="/images/background/alotofapples.jpg" alt="">
     <div id="app">
+
         @yield('content')
     </div>
 

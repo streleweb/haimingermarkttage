@@ -19,6 +19,14 @@ der tailwind components integriert. Diese Styles werden durch die
 
     body{
         @apply bg-green-700;
+
+        
+            background-image: url('/images/background/alotofapples.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+          
+
     }
 
     
@@ -41,6 +49,15 @@ der tailwind components integriert. Diese Styles werden durch die
         p-3
         bg-green-900
         border-b-2 border-black border-opacity-60;
+        
+    }
+
+    .navigationbar{
+        position: fixed;
+        top:0px;
+        left:0px;
+        
+        @apply w-full;
     }
 
     /*Resizing speziell für das Haiminger Markttage-Logo*/
@@ -93,7 +110,5 @@ der tailwind components integriert. Diese Styles werden durch die
     .mobiledropdowntextconfig{
         @apply text-xl text-white ;
     }
-
-    /*Background Video Section Area*/
 
 }
