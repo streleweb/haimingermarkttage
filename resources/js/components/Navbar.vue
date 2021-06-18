@@ -90,8 +90,14 @@
         /></a>
       </div>
 
-      <!--START BUTTON-div, via emit kann am Elternelement (App) auf dieses togglemenu event gelistened-->
-      <div class="block lg:hidden" @click="$emit('togglemenu')">
+      <!--START BUTTON-div, via emit kann am Elternelement (App) auf dieses togglemenu event gelistened werden-->
+      <div
+        class="block lg:hidden"
+        @click="
+          showMenu = !showMenu;
+          $emit('togglemenu');
+        "
+      >
         <button
           id="app"
           class="
@@ -212,10 +218,36 @@ export default {
     };
   },
   methods: {
-    toggleNavbar: function () {
-      this.showMenu = !this.showMenu;
-    },
+    //Ändert Inhalt der Navbar zu "Menü", sobald Menü geöffnet wurde.
+    
   },
   components: { Mobilemenu },
+
+  watch:{
+    showMenu() {
+      const navbar = document.querySelector(".navbar");
+
+      if (this.showMenu) {
+        
+        /** Alles ausser Menübutton "hidden" */
+        var children = navbar.children;
+        for(let i=0; i<children.length-1;i++){
+          //console.log(children[i])
+          children[i].style.visibility = "hidden";
+        }
+      } else {
+        var children = navbar.children;
+        for(let i=0; i<children.length-1;i++){
+          //console.log(children[i])
+          children[i].style.visibility = "visible";
+        }
+      }
+    },
+  }
 };
 </script>
+
+<style scoped>
+.menu {
+}
+</style>
