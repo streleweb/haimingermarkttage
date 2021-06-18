@@ -22546,12 +22546,9 @@ var render = function() {
       _vm._v(" "),
       _c("Mobilemenu", { attrs: { open: _vm.mobileMenuOpen } }),
       _vm._v(" "),
-      _c(
-        "section",
-        { staticClass: "sectionarea" },
-        [_c("router-view"), _vm._v(" "), _c("Footer")],
-        1
-      )
+      _c("section", { staticClass: "sectionarea" }, [_c("router-view")], 1),
+      _vm._v(" "),
+      _c("Footer")
     ],
     1
   )
