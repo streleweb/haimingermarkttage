@@ -23,11 +23,11 @@ der tailwind components integriert. Diese Styles werden durch die
     }
 
     
-    .sectionarea {
+    .sectionarea {/*
         position: absolute;
-        bottom: 40px; /*Footer ausschließen: Pixel des Footers*/
-        top: 58px; /*Pixelanzahl der Navbar vertikal*/
-        @apply  w-screen  flex flex-col;
+        bottom: 40px; 
+        top: 58px; */
+        @apply w-screen flex flex-col flex-shrink flex-grow;
     }
 
     /*.contentarea {
@@ -54,7 +54,7 @@ der tailwind components integriert. Diese Styles werden durch die
     }
 
     .homecontentcontainer{
-        @apply h-full flex flex-col w-full justify-evenly;
+        @apply h-full flex flex-col w-full justify-around;
     }
 
     .kontaktcontentcontainer{

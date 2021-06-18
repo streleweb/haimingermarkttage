@@ -6,6 +6,8 @@ module.exports = {
 
       'sssm': '258px',
 
+      'ssmm': '270px',
+
       'ssm': '320px',
 
       'iphone6': '375px',
