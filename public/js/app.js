@@ -2573,6 +2573,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Mobilemenu_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Mobilemenu.vue */ "./resources/js/components/Mobilemenu.vue");
+/* harmony import */ var _event_bus__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../event-bus */ "./resources/js/event-bus.js");
 //
 //
 //
@@ -2783,6 +2784,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Navbar",
   data: function data() {
@@ -2793,10 +2795,13 @@ __webpack_require__.r(__webpack_exports__);
   methods: {//Ändert Inhalt der Navbar zu "Menü", sobald Menü geöffnet wurde.
   },
   components: {
-    Mobilemenu: _Mobilemenu_vue__WEBPACK_IMPORTED_MODULE_0__.default
+    Mobilemenu: _Mobilemenu_vue__WEBPACK_IMPORTED_MODULE_0__.default,
+    EventBus: _event_bus__WEBPACK_IMPORTED_MODULE_1__.EventBus
   },
   watch: {
     showMenu: function showMenu() {
+      var _this = this;
+
       var navbar = document.querySelector(".navbar");
 
       if (this.showMenu) {
@@ -2814,7 +2819,17 @@ __webpack_require__.r(__webpack_exports__);
           //console.log(children[i])
           children[_i].style.visibility = "visible";
         }
-      }
+      } //Reagiert, wenn Menübutton geklicked wurde und empfängt Bei Klicken eines Menülinks vom Event-Bus einen $emit
+      //EventBusHandler für Clicked-Event im MobileMenü, damit der Clicked-State auch hier upgedated wird.
+
+
+      var clickHandler = function clickHandler() {
+        //console.log("This is from App, the Event has been received..");
+        _this.showMenu = false;
+      }; //Den Costum-clickHandler als Callback auf den $emit ausführen
+
+
+      _event_bus__WEBPACK_IMPORTED_MODULE_1__.EventBus.$on("clickedOnMenuLink", clickHandler);
     }
   }
 });

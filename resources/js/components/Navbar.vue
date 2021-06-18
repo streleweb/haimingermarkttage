@@ -209,6 +209,7 @@
 
 <script>
 import Mobilemenu from "./Mobilemenu.vue";
+import {EventBus} from "../event-bus";
 
 export default {
   name: "Navbar",
@@ -221,7 +222,7 @@ export default {
     //Ändert Inhalt der Navbar zu "Menü", sobald Menü geöffnet wurde.
     
   },
-  components: { Mobilemenu },
+  components: { Mobilemenu, EventBus },
 
   watch:{
     showMenu() {
@@ -242,6 +243,16 @@ export default {
           children[i].style.visibility = "visible";
         }
       }
+       //Reagiert, wenn Menübutton geklicked wurde und empfängt Bei Klicken eines Menülinks vom Event-Bus einen $emit
+    
+      //EventBusHandler für Clicked-Event im MobileMenü, damit der Clicked-State auch hier upgedated wird.
+      const clickHandler = () => {
+        //console.log("This is from App, the Event has been received..");
+        this.showMenu = false;
+      };
+      //Den Costum-clickHandler als Callback auf den $emit ausführen
+      EventBus.$on("clickedOnMenuLink", clickHandler);
+    
     },
   }
 };
