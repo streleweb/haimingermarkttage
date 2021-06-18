@@ -2,34 +2,10 @@
   <div class="homecontentcontainer">
     <!-- Content Container von Willkommen (exklusive Navbar) bis exklusive Footer-->
 
-    <div
-      class="
-        willkommen
-        font-willkommen
-        flex-shrink
-        mt-5
-        pr-2
-        pl-2
-        mb-4
-        flex-grow
-        md:mt-5
-        text-center
-      "
-    >
+    <div class="titletext">
       <!-- custom font konfiguriert in tailwind.config.js-->
       <!-- Hier noch Background-Pic oder Video rein -->
-      <div
-        class="
-          text-white
-          sm:mb-3
-          text-xl
-          ssmm:text-2xl
-          sm:text-3xl
-          md:text-5xl
-          lg:text-5xl
-          font-s
-        "
-      >
+      <div class="ueberschrift">
         {{ titleMessage }}
         <div
           class="

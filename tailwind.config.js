@@ -22,6 +22,8 @@ module.exports = {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
+      'btnbp': '655',
+
       'md': '768px',
       // => @media (min-width: 768px) { ... }
 

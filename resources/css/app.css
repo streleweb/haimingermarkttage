@@ -96,6 +96,41 @@ der tailwind components integriert. Diese Styles werden durch die
         @apply text-xl text-white ;
     }
 
-    /*Background Video Section Area*/
+    /*------------------------------------------TEXT CONFIGURATION------------------------------------*/
+
+    .titletext{
+        @apply
+        font-willkommen
+        flex-shrink
+        mt-5
+        pr-2
+        pl-2
+        mb-4
+        flex-grow
+        md:mt-5
+        text-center;
+    }
+
+    .ueberschrift{
+        @apply
+      text-white
+        sm:mb-3
+        text-xl
+        ssmm:text-2xl
+        sm:text-3xl
+        md:text-5xl
+        lg:text-5xl;
+    }
+
+    .logotextstyle{
+        @apply   
+        hidden
+        hmbp:inline-flex
+        text-xs
+        sm:text-xl
+        font-semibold
+        text-center
+        tracking-tight
+    }
 
 }
