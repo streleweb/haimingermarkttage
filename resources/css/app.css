@@ -57,6 +57,10 @@ der tailwind components integriert. Diese Styles werden durch die
         @apply h-full flex flex-col w-full justify-around;
     }
 
+    .fotogaleriecontentcontainer{
+        @apply h-full flex flex-col w-full;
+    }
+
     .kontaktcontentcontainer{
         @apply h-full flex flex-col w-full justify-start;
     }

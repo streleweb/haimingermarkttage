@@ -2,7 +2,7 @@
   <div class="ausstellercontainer font-willkommen text-center text-white">
     <!-- custom font konfiguriert in tailwind.config.js-->
     <!-- Hier noch Background-Pic oder Video rein -->
-    <div class="text-5xl font-s">
+    <div class="titletext ueberschrift">
       <p>Unsere heurigen Aussteller</p>
       <!-- end willkommenstexte -->
     </div>
@@ -78,6 +78,7 @@ export default {
         .get("/api/aussteller") // load API
         .then((response) => {
           this.aussteller = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
+          console.log(this.aussteller);
         }) // assign to this.aussteller array
         .catch(function (error) {
           // Fehlerbehandlung
