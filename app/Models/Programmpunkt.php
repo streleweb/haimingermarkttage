@@ -9,8 +9,10 @@ class Programmpunkt extends Model
 {
     use HasFactory;
 
-    //Fehlermeldung Laravel - updated_at und created_at
-    public $timestamps = false;
-
     protected $table = "programmpunkt";
+
+    public function programm(){
+        return $this->hasOne('App\Models\Programm');
+    }
+
 }

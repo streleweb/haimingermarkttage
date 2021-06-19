@@ -17,6 +17,7 @@ class CreateProgrammsTable extends Migration
             $table->id();
             $table->string('programm_titel')->nullable();
             $table->string('programm_beschreibung')->nullable();
+            $table->timestamps();
         });
     }
 

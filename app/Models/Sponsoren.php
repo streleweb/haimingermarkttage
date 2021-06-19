@@ -9,8 +9,5 @@ class Sponsoren extends Model
 {
     use HasFactory;
 
-    //Fehlermeldung Laravel - updated_at und created_at
-    public $timestamps = false;
-
     protected $table = "sponsoren";
 }

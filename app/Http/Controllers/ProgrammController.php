@@ -41,7 +41,7 @@ class ProgrammController extends Controller
         $validator = Validator::make($request->all(),
         [
             'programm_titel' => 'required|min:2|max:30',
-            'programm_beschreibung'=> 'nullable|min:2|max:30',,
+            'programm_beschreibung'=> 'nullable|min:10|max:100',
         ]);
 
         if ($validator->fails()) {
@@ -109,6 +109,7 @@ class ProgrammController extends Controller
      */
     public function destroy(Programm $programm)
     {
+        $programm = Programm::findOrFail($id);
         $programm->delete();
     }
 }

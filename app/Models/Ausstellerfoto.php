@@ -11,9 +11,6 @@ class Ausstellerfoto extends Model
 
     protected $table = "ausstellerfoto";
 
-    //Fehlermeldung Laravel - updated_at und created_at
-    public $timestamps = false;
-
     public function aussteller(){
         return $this->belongsTo('App\Models\Aussteller');
     }

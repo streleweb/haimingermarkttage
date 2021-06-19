@@ -20,6 +20,7 @@ class CreateAusstellerProductsTable extends Migration
             $table->bigInteger('product_id')->unsigned();
             $table->foreign('aussteller_id')->references('id')->on('aussteller')->onDelete('cascade');
             $table->foreign('product_id')->references('id')->on('product')->onDelete('cascade');
+            $table->timestamps();
            // $table->foreignId('aussteller_id')->constrained();
            // $table->foreignId('product_id')->constrained();
             

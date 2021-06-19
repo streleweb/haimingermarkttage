@@ -41,7 +41,7 @@ class ProgrammpunktController extends Controller
         $validator = Validator::make($request->all(),
         [
             'programmpunkt_titel' => 'required|min:2|max:30',
-            'programmpunkt_beschreibung'=> 'nullable|min:2|max:30',,
+            'programmpunkt_beschreibung'=> 'nullable|min:10|max:100',
         ]);
 
         if ($validator->fails()) {
@@ -109,6 +109,7 @@ class ProgrammpunktController extends Controller
      */
     public function destroy(Programmpunkt $programmpunkt)
     {
+        $programmpunkt = Programmpunkt::findOrFail($id);
         $programmpunkt->delete();
     }
 }

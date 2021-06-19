@@ -12,25 +12,8 @@ class Product extends Model
 
     protected $table = "product";
 
-
-       /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    /*protected $fillable = [
-        'product_name'
-    ];
-*/
     public function aussteller(){
 
-        return $this->belongsToMany(Aussteller::class, 'aussteller_product');
-        /*return $this->belongsToMany(
-            Aussteller::Class,
-            'aussteller_products',
-            'product_id',
-            'aussteller_id'  
-        );
-    }*/
-}
+    return $this->belongsToMany(Aussteller::class, 'aussteller_product');
+    }
 }

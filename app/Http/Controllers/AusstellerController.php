@@ -43,11 +43,11 @@ class AusstellerController extends Controller
             'aussteller_fullname' => 'required|min:2|max:30',
             'aussteller_beschreibung'=> 'required|min:10|max:100',
             'aussteller_brandingname' => 'required|min:2|max:30', 
-            'aussteller_email' => 'required|min:2|max:30',
+            'aussteller_email' => 'required|min:2|max:100',
             'aussteller_telefonnummer' => 'required|min:2|max:20',
-            'aussteller_websiteurl' => 'required|min:2|max:100',
+            'aussteller_websiteurl' => 'required|min:10|max:100',
             'aussteller_zonenfarbe' => 'required|min:2|max:15',
-            'aussteller_bildurl' => 'required|min:2|max:100',
+            'aussteller_bildurl' => 'required|min:10|max:100',
             'aussteller_jahre' => 'required|min:2|max:4',
             'aussteller_straße' => 'required|min:2|max:30',
             'aussteller_postleitzahl' => 'required|min:4|max:5', 
@@ -139,6 +139,7 @@ class AusstellerController extends Controller
      */
     public function destroy(Aussteller $aussteller)
     {
+        $aussteller = Aussteller::findOrFail($id);
         $aussteller->delete();
     }
 }

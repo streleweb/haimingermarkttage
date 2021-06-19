@@ -42,7 +42,7 @@ class NewsController extends Controller
         [
             'news_titel' => 'required|min:2|max:30',
             'news_textfeld'=> 'nullable|min:10|max:100',
-            'news_bild_url'=> 'min:2|max:30',
+            'news_bild_url'=> 'min:10|max:100',
         ]);
 
         if ($validator->fails()) {
@@ -112,6 +112,7 @@ class NewsController extends Controller
      */
     public function destroy(News $news)
     {
+        $news = News::findOrFail($id);
         $news->delete();
     }
 }

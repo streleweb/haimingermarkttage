@@ -20,6 +20,7 @@ class CreateSponsorensTable extends Migration
             $table->string('sponsor_nachname');
             $table->string('sponsor_websiteurl');
             $table->string('sponsor_logourl');
+            $table->timestamps();
         });
     }
 

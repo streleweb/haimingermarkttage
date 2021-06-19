@@ -43,8 +43,8 @@ class SponsorenController extends Controller
             'sponsor_brandname' => 'min:2|max:30',
             'sponsor_vorname'=> 'min:2|max:30',
             'sponsor_nachname'=> 'min:2|max:30',
-            'sponsor_websiteurl'=> 'min:2|max:30',
-            'sponsor_logourl'=> 'min:2|max:30',
+            'sponsor_websiteurl'=> 'min:10|max:100',
+            'sponsor_logourl'=> 'min:10|max:100',
         ]);
 
         if ($validator->fails()) {
@@ -118,6 +118,7 @@ class SponsorenController extends Controller
      */
     public function destroy(Sponsoren $sponsoren)
     {
+        $sponsoren = Sponsoren::findOrFail($id);
         $sponsoren->delete();
     }
 }

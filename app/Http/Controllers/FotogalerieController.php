@@ -114,6 +114,7 @@ class FotogalerieController extends Controller
      */
     public function destroy(Fotogalerie $fotogalerie)
     {
+        $fotogalerie = Fotogalerie::findOrFail($id);
         $fotogalerie->delete();
     }
 }

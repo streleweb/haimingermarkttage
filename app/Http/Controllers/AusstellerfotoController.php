@@ -110,6 +110,7 @@ class AusstellerfotoController extends Controller
      */
     public function destroy(Ausstellerfoto $ausstellerfoto)
     {
+        $ausstellerfoto = Ausstellerfoto::findOrFail($id);
         $ausstellerfoto->delete();
     }
 }
