@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\database",
-    "\\database\\seeders"
+    "\\app",
+    "\\routes"
   ],
-  "SelectedNode": "\\database\\seeders\\ProductSeeder.php",
+  "SelectedNode": "\\routes\\web.php",
   "PreviewInSolutionExplorer": false
 }

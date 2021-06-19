@@ -12,6 +12,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProgrammController;
 use App\Http\Controllers\ProgrammpunktController;
 use App\Http\Controllers\SponsorenController;
+use App\Http\Controllers\AuthController;
 
 
 
@@ -39,5 +40,9 @@ Route::resource('product', ProductController::class);
 Route::resource('programm', ProgrammController::class);
 Route::resource('programmpunkt', ProgrammpunktController::class);
 Route::resource('sponsoren', SponsorenController::class);
+
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
 
 
