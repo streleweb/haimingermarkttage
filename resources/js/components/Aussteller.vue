@@ -8,7 +8,12 @@
     </div>
 
     <div
-      class="listofaussteller grid grid-flow-row grid-rows-4 lg:grid-flow-col lg:grid-cols-3 gap-3"
+      class="
+        listofaussteller
+        grid grid-flow-row grid-rows-4
+        lg:grid-flow-col lg:grid-cols-3
+        gap-3
+      "
     >
       <ul v-for="jeweiligerAussteller in aussteller" class="">
         <li class="border rounded-lg">
@@ -30,6 +35,7 @@
       <!--Buttons mit Custom Props-->
       <router-link to="/app">
         <Button
+          svg-source="/../../images/icons/svgs/home.svg"
           button-inhalt="Back to Homescreen"
           button-color="bg-green-400"
           on-hover="hover:bg-yellow-200"

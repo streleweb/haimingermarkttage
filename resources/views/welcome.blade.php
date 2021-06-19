@@ -10,13 +10,13 @@
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="PWA">
-    <link rel="icon" sizes="512x512" href="/images/icons/icon-512x512.png">
+    <link rel="icon" sizes="72x72" href="/images/icons/pngs/7272transparent.png">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="PWA">
-    <link rel="apple-touch-icon" href="/images/icons/icon-512x512.png">
+    <link rel="apple-touch-icon" href="/images/icons/pngs/7272transparent.png">
 
 
 
@@ -25,7 +25,7 @@
     </script>
     <!-- Tile for Win8 -->
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/images/icons/icon-512x512.png">
+    <meta name="msapplication-TileImage" content="/images/icons/pngs/7272transparent.png">
 
     <script type="text/javascript">
         // Initialize the service worker
@@ -48,11 +48,10 @@
     @laravelPWA
 </head>
 
-<body class="bg-gradient-to-b from-gray-900 to-green-500 ... flex h-full flex-col overflow-hidden">
-
+<body class="flex flex-col w-screen h-screen">
+    <img src="/images/background/alotofapples.jpg" alt="">
     <div id="app">
-        <!-- <router-view></router-view> -->
-        <!-- JUST FOR TESTING, dann content component machen, indem die Grundstruktur ist und via router-view die verschiedenen components geladen werden -->
+
         @yield('content')
     </div>
 

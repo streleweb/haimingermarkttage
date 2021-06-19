@@ -13,7 +13,7 @@ var filesToCache = [
     '/images/icons/icon-512x512.png',
 ];
 
-// Cache on install
+//Cache on install
 self.addEventListener("install", event => {
     this.skipWaiting();
     event.waitUntil(
@@ -38,7 +38,7 @@ self.addEventListener('activate', event => {
     );
 });
 
-// Serve from Cache
+// Vom Cache holen
 self.addEventListener("fetch", event => {
     event.respondWith(
         caches.match(event.request)
@@ -49,4 +49,7 @@ self.addEventListener("fetch", event => {
                 return caches.match('offline');
             })
     )
-});*/
+});
+
+*/
+

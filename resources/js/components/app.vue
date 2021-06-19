@@ -1,25 +1,44 @@
 <template>
-  <div class="outercontainer flex flex-col h-full">
-    <div class="header">
-      <navbar></navbar>
-    </div>
-    <div class="main flex-1">
-      <!-- flex-grow war davor -->
+  <div class="app">
+    <!--Hier video oder Photo noch rein-->
+    <!-- "
+      outercontainer
+      flex flex-col
+      h-full
+      bg-gradient-to-b
+      from-gray-900
+      to-green-500
+      overflow-hidden
+    "-->
+
+    <!-- war bg-gradient-to-b from-gray-900 to-green-500 ... flex h-full flex-col overflow-hidden-->
+    <header class="navigationbar">
+      <navbar @togglemenu="mobileMenuOpen = !mobileMenuOpen"></navbar>
+    </header>
+
+    <Mobilemenu :open="mobileMenuOpen"></Mobilemenu>
+    <section class="sectionarea">
+      <!--war main flex-1-->
+      <!-- zu flex-grow zuruecksetzen, wenn ausstellerview ausgefeilt -->
       <router-view></router-view>
-    </div>
-    <Footer></Footer>
+      <Footer></Footer>
+    </section>
   </div>
+
   <!-- end outercontainer -->
 </template>
 
 
 <script>
+import Background from "./Background.vue";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Apple from "./svg/Apple";
 import HomeContent from "./HomeContent";
 import PageNotFound from "./PageNotFound";
+import Mobilemenu from "./Mobilemenu.vue";
 const default_layout = "default";
+import { EventBus, Eventbus } from "../event-bus";
 
 export default {
   computed: {},
@@ -27,10 +46,31 @@ export default {
     return {
       titleMessage: "Willkommen bei den Haiminger Markttagen!",
       smallDescription: "Flanieren, Probieren und Genießen...",
-      //nicht vergessen, Anreiseinfos entweder in DB abspeichern und von dort aus zB via Props zu laden, oder via API Call (Axios oder FetchAPI)..
+      //nicht vergessen, Anreiseinfos entweder in DB abspeichern und  via API Call (Axios oder FetchAPI), oder direkte maske bereitstellen
+      mobileMenuOpen: false,
     };
   },
-  components: { Navbar, Footer, Apple },
+  watch: {
+    //Reagiert, wenn Menübutton geklicked wurde und empfängt Bei Klicken eines Menülinks vom Event-Bus einen $emit
+    mobileMenuOpen() {
+      //EventBusHandler für Clicked-Event im MobileMenü, damit der Clicked-State auch hier upgedated wird.
+      const clickHandler = () => {
+        //console.log("This is from App, the Event has been received..");
+        this.mobileMenuOpen = false;
+      };
+      //Den Costum-clickHandler als Callback auf den $emit ausführen
+      EventBus.$on("clickedOnMenuLink", clickHandler);
+    },
+  },
+  components: { Background, Navbar, Footer, Apple, Mobilemenu },
 };
 </script>
+
+<style>
+/*Custom Selection Color, wenn man Text mit Maus auswählt*/
+::selection {
+  color: rgb(0, 255, 8);
+  background: rgba(116, 116, 116, 0.496);
+}
+</style>
 

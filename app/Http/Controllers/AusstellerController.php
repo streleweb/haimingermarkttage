@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Validator;
 class AusstellerController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Aussteller anzeigen
      *
      * @return \Illuminate\Http\Response
      */
@@ -31,7 +31,7 @@ class AusstellerController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Neuen Aussteller in Datenbank speichern
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response

@@ -1,11 +1,19 @@
 <template>
   <header>
     <!-- Nav -->
-    <nav
-      class="flex items-center justify-between flex-wrap bg-green-900 p-4 border-b-2 border-black border-opacity-60"
-    >
-      <div class="flex items-center flex-no-shrink text-white mr-6">
-        <svg
+    <nav class="navbar">
+      <!--flex
+        items-center
+        justify-between
+        flex-wrap
+        p-3
+        bg-green-900
+        border-b-2 border-black border-opacity-60;-->
+      <div
+        id="#LOGO UND LI CONTAINER"
+        class="flex items-center flex-shrink space-x-5 text-white mr-6"
+      >
+        <!--<svg
           class="fill-current h-8 w-8 mr-2"
           width="54"
           height="54"
@@ -15,15 +23,95 @@
           <path
             d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
           />
-        </svg>
-        <router-link class="font-semibold text-xl tracking-tight" to="/app"
-          >Haiminger Markttage</router-link
+        </svg>-->
+
+        <router-link
+          class="
+            font-semibold
+            text-xs text-center
+            items-center
+            sm:text-xl
+            tracking-tight
+            inline-flex
+          "
+          to="/app"
+          ><img
+            src="/../../images/icons/pngs/7272transparent.png"
+            class="resizeLogo"
+            alt="Logo"
+          />Haiminger Markttage</router-link
         ><!-- Nicht vergessen anstatt to /app noch to haiminger-markttage.at bzw. / -->
+
+        <router-link
+          to="/app/philosophie"
+          exact
+          class="hidden philosophiebp:inline-flex"
+          >Philosophie</router-link
+        >
+        <router-link to="/app/news" exact class="hidden newsbp:inline-flex"
+          >News</router-link
+        >
+        <router-link
+          to="/app/fotogalerie"
+          exact
+          class="hidden fotogaleriebp:inline-flex"
+          >Fotogalerie</router-link
+        >
+
+        <router-link
+          to="/app/kontakt"
+          exact
+          class="hidden kontaktbp:inline-flex"
+          >Kontakt</router-link
+        >
       </div>
-      <div class="block lg:hidden">
+      <!--END-LOGOCONTAINER-->
+      <!--START- Iconcontainer-->
+      <div id="iconcontainer" class="hidden ssm:inline-flex pr-4 space-x-2">
+        <a href="https://www.facebook.com/Haiminger.Markttage"
+          ><img
+            src="/images/icons/svgs/facebook-logo.svg"
+            class="resize-icon filter-white-icons"
+            alt="fb"
+        /></a>
+
+        <a href="http://www.haiminger-markttage.at/"
+          ><img
+            src="/images/icons/svgs/www.svg"
+            class="resize-icon filter-white-icons"
+            alt="website"
+        /></a>
+
+        <a href="mailto:info@haiminger-markttage.at" target="_newtab"
+          ><img
+            src="/images/icons/svgs/email.svg"
+            class="resize-icon filter-white-icons"
+            alt="email"
+        /></a>
+      </div>
+
+      <!--START BUTTON-div, via emit kann am Elternelement (App) auf dieses togglemenu event gelistened werden-->
+      <div
+        class="block lg:hidden"
+        @click="
+          showMenu = !showMenu;
+          $emit('togglemenu');
+        "
+      >
         <button
           id="app"
-          class="flex items-center px-3 py-2 border rounded text-white focus:outline-none border-white"
+          class="
+            fixed
+            top-3
+            right-4
+            items-center
+            text-white
+            focus:outline-none
+            border-white border
+            rounded
+            px-3
+            py-2
+          "
         >
           <svg
             class="fill-current h-4 w-3 -mt-1 text-white"
@@ -35,13 +123,25 @@
           </svg>
         </button>
       </div>
+      <!--END BUTTON-div-->
+
+      <!--START OLD List-Items
       <div
         class="w-full block flex-grow lg:flex lg:items-center lg:w-auto"
         id="menu"
       >
         <div class="text-sm lg:flex-grow">
           <router-link
-            class="no-underline block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4"
+            class="
+              no-underline
+              block
+              mt-4
+              lg:inline-block
+              lg:mt-0
+              text-white
+              hover:text-white
+              mr-4
+            "
             to="/app/philosophie"
             exact
             >Philosophie</router-link
@@ -49,13 +149,30 @@
 
           <a
             href="#responsive-header"
-            class="no-underline block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4"
+            class="
+              no-underline
+              block
+              mt-4
+              lg:inline-block
+              lg:mt-0
+              text-white
+              hover:text-white
+              mr-4
+            "
           >
             News
           </a>
           <a
             href="#responsive-header"
-            class="no-underline block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white"
+            class="
+              no-underline
+              block
+              mt-4
+              lg:inline-block
+              lg:mt-0
+              text-white
+              hover:text-white
+            "
           >
             Foto-Galerie
           </a>
@@ -63,11 +180,27 @@
         <div>
           <a
             href="#"
-            class="no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-blue-dark hover:bg-white mt-4 lg:mt-0"
+            class="
+              no-underline
+              inline-block
+              text-sm
+              px-4
+              py-2
+              leading-none
+              border
+              rounded
+              text-white
+              border-white
+              hover:border-transparent
+              hover:text-blue-dark
+              hover:bg-white
+              mt-4
+              lg:mt-0
+            "
             >Download</a
           >
         </div>
-      </div>
+      </div>--END OLD List-Items (Philosophie, News...)-->
     </nav>
     <!-- END Nav -->
   </header>
@@ -75,6 +208,9 @@
 </template>
 
 <script>
+import Mobilemenu from "./Mobilemenu.vue";
+import {EventBus} from "../event-bus";
+
 export default {
   name: "Navbar",
   data() {
@@ -83,9 +219,46 @@ export default {
     };
   },
   methods: {
-    toggleNavbar: function () {
-      this.showMenu = !this.showMenu;
-    },
+    //Ändert Inhalt der Navbar zu "Menü", sobald Menü geöffnet wurde.
+    
   },
+  components: { Mobilemenu, EventBus },
+
+  watch:{
+    showMenu() {
+      const navbar = document.querySelector(".navbar");
+
+      if (this.showMenu) {
+        
+        /** Alles ausser Menübutton "hidden" */
+        var children = navbar.children;
+        for(let i=0; i<children.length-1;i++){
+          //console.log(children[i])
+          children[i].style.visibility = "hidden";
+        }
+      } else {
+        var children = navbar.children;
+        for(let i=0; i<children.length-1;i++){
+          //console.log(children[i])
+          children[i].style.visibility = "visible";
+        }
+      }
+       //Reagiert, wenn Menübutton geklicked wurde und empfängt Bei Klicken eines Menülinks vom Event-Bus einen $emit
+    
+      //EventBusHandler für Clicked-Event im MobileMenü, damit der Clicked-State auch hier upgedated wird.
+      const clickHandler = () => {
+        //console.log("This is from App, the Event has been received..");
+        this.showMenu = false;
+      };
+      //Den Costum-clickHandler als Callback auf den $emit ausführen
+      EventBus.$on("clickedOnMenuLink", clickHandler);
+    
+    },
+  }
 };
 </script>
+
+<style scoped>
+.menu {
+}
+</style>
