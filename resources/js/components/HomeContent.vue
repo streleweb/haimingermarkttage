@@ -5,7 +5,7 @@
     <div class="titletext">
       <!-- custom font konfiguriert in tailwind.config.js-->
       <!-- Hier noch Background-Pic oder Video rein -->
-      <div class="ueberschrift">
+      <div class="ueberschrift textshadow-markant">
         {{ titleMessage }}
         <div
           class="

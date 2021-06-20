@@ -89,6 +89,6 @@ export default {
 }
 
 .buttoncolor1 {
-  background-color: #007070c9;
-}
+  background-color: #003d33d2;
+} /*Tailwind color: #004d40d2;*/
 </style>

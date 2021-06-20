@@ -18,7 +18,8 @@ der tailwind components integriert. Diese Styles werden durch die
     }
 
     body{
-        @apply bg-green-700
+        /*bg-green-700*/
+        @apply
         w-screen h-screen max-h-screen;
     }
 
@@ -28,7 +29,10 @@ der tailwind components integriert. Diese Styles werden durch die
         bottom: 40px; 
         top: 58px; */
         @apply w-screen flex flex-col flex-shrink flex-grow;
+        
     }
+
+
 
     /*.contentarea {
         @apply flex flex-col h-full justify-center;
@@ -56,12 +60,14 @@ der tailwind components integriert. Diese Styles werden durch die
     }
 
     .homecontentcontainer{
-        @apply h-full flex flex-col w-full justify-around bg-gradient-to-r from-green-400 to-blue-500;
+        @apply h-full flex flex-col w-full justify-around bg-green-900;
 
-        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url("/images/background/applebg.jpg");
+        background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.1)), url("/images/background/applebg.jpg");
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: cover;
+        opacity: 90%;
+
     }
 
     .homecontentcontainer:after{
@@ -80,10 +86,20 @@ der tailwind components integriert. Diese Styles werden durch die
 
     .fotogaleriecontentcontainer{
         @apply h-full flex w-full justify-center items-center; /*flex-col*/
+        background-image: linear-gradient(to bottom, #16222A, #3A6073);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .kontaktcontentcontainer{
-        @apply h-full flex flex-col w-full justify-start;
+        @apply h-full flex flex-col w-full justify-evenly;
+
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url("/images/background/mailbox-big.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        opacity: 90%;
+        z-index: 0;
     }
 
     /*old contentcontainer
@@ -113,7 +129,7 @@ der tailwind components integriert. Diese Styles werden durch die
     }
 
     .footer {
-       @apply mt-auto p-2 h-8 flex justify-center items-center text-center border-t-2 border-green-400 bg-gray-800 opacity-80 text-xs;
+       @apply mt-auto p-2 h-8 flex justify-center items-center text-center border-t border-white bg-gray-900 text-xs;
     }
     
 
@@ -172,5 +188,11 @@ der tailwind components integriert. Diese Styles werden durch die
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
         rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
       }
+
+    .textshadow-markant{
+        text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+        0px 8px 13px rgba(0,0,0,0.1),
+        0px 18px 23px rgba(0,0,0,0.1);
+    }
 
 }

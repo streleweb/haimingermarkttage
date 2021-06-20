@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="ausstellergradient">
     <div class="ausstellercontainer">
       <!-- custom font konfiguriert in tailwind.config.js-->
       <!-- Hier noch Background-Pic oder Video rein -->
-      <div class="titletext ueberschrift mb-4 w-full">
+      <div class="titletext ueberschrift mb-7 w-full textshadow-markant">
         <p>Unsere heurigen Aussteller</p>
         <!-- end willkommenstexte -->
       </div>
@@ -226,5 +226,11 @@ article img {
 
 .text h3 {
   text-transform: uppercase;
+}
+
+.ausstellergradient {
+  background-image: linear-gradient(to bottom, #536976, #292e49);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>

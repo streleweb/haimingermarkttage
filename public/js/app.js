@@ -3717,7 +3717,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-fd74eb46] {\n  background: #eee5e9;\n  border: none;\n  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 20px;\n  text-align: center;\n  width: 250px;\n  transition: transform 0.3s;\n}\narticle[data-v-fd74eb46]:hover {\n  transform: translateY(5px);\n  box-shadow: 2px 2px 26px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-fd74eb46] {\n  width: 100%;\n  border-top-left-radius: 20px;\n  border-top-right-radius: 20px;\n}\n.text[data-v-fd74eb46] {\n  padding: 0 20px 20px;\n}\n.text h3[data-v-fd74eb46] {\n  text-transform: uppercase;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-fd74eb46] {\n  background: #eee5e9;\n  border: none;\n  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 20px;\n  text-align: center;\n  width: 250px;\n  transition: transform 0.3s;\n}\narticle[data-v-fd74eb46]:hover {\n  transform: translateY(5px);\n  box-shadow: 2px 2px 26px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-fd74eb46] {\n  width: 100%;\n  border-top-left-radius: 20px;\n  border-top-right-radius: 20px;\n}\n.text[data-v-fd74eb46] {\n  padding: 0 20px 20px;\n}\n.text h3[data-v-fd74eb46] {\n  text-transform: uppercase;\n}\n.ausstellergradient[data-v-fd74eb46] {\n  background-image: linear-gradient(to bottom, #536976, #292e49);\n  background-repeat: no-repeat;\n  background-size: cover;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3741,7 +3741,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".cshadow {\n  box-shadow: rgba(109, 140, 177, 0.4) 0px 0px 0px 3px,\r\n    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,\r\n    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;\n}\n.buttoncolor1 {\n  background-color: #007070c9;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".cshadow {\n  box-shadow: rgba(109, 140, 177, 0.4) 0px 0px 0px 3px,\r\n    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,\r\n    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;\n}\n.buttoncolor1 {\n  background-color: #003d33d2;\n} /*Tailwind color: #004d40d2;*/\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -23572,7 +23572,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "ausstellergradient" }, [
     _c("div", { staticClass: "ausstellercontainer" }, [
       _vm._m(0),
       _vm._v(" "),
@@ -23704,9 +23704,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "titletext ueberschrift mb-4 w-full" }, [
-      _c("p", [_vm._v("Unsere heurigen Aussteller")])
-    ])
+    return _c(
+      "div",
+      { staticClass: "titletext ueberschrift mb-7 w-full textshadow-markant" },
+      [_c("p", [_vm._v("Unsere heurigen Aussteller")])]
+    )
   }
 ]
 render._withStripped = true
@@ -24055,7 +24057,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "homecontentcontainer" }, [
     _c("div", { staticClass: "titletext" }, [
-      _c("div", { staticClass: "ueberschrift" }, [
+      _c("div", { staticClass: "ueberschrift textshadow-markant" }, [
         _vm._v("\n      " + _vm._s(_vm.titleMessage) + "\n      "),
         _c(
           "div",
