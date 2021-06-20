@@ -2131,6 +2131,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Button",
   props: ["buttonInhalt", "buttonColor", "onHover", "svgSource"]
@@ -3593,7 +3594,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".cshadow {\n  box-shadow: rgba(109, 140, 177, 0.4) 0px 0px 0px 3px,\r\n    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,\r\n    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".cshadow {\n  box-shadow: rgba(109, 140, 177, 0.4) 0px 0px 0px 3px,\r\n    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,\r\n    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;\n}\n.buttoncolor1 {\n  background-color: #007070c9;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -23511,7 +23512,7 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  "\n          flex\n          items-center\n          justify-between\n          rounded-lg\n          h-10\n          px-2\n          ssm:px-1\n          sm:px-4\n          sm:h-20\n          shadow-xl\n          cursor-pointer\n          hover:bg-green-900\n          hover:text-gray-100\n          cshadow\n          z-50\n        ",
+                  "\n          flex\n          items-center\n          justify-between\n          rounded-lg\n          h-10\n          px-2\n          ssm:px-1\n          sm:px-4\n          sm:h-20\n          shadow-xl\n          cursor-pointer\n          hover:bg-green-900\n          hover:text-gray-100\n          cshadow\n          z-50\n          buttoncolor1\n        ",
                 class: _vm.buttonColor
               },
               [
@@ -23844,7 +23845,7 @@ var render = function() {
               attrs: {
                 "svg-source": "/../../images/icons/svgs/apple1.svg",
                 "button-inhalt": "Produkte",
-                "button-color": "bg-green-400",
+                "button-color": "bg-green-900",
                 "on-hover": "hover:bg-white"
               }
             })
@@ -23860,7 +23861,7 @@ var render = function() {
               attrs: {
                 "svg-source": "/../../images/icons/svgs/aussteller.svg",
                 "button-inhalt": "Aussteller",
-                "button-color": "bg-green-400",
+                "button-color": "bg-green-900",
                 "on-hover": "hover:bg-yellow-50"
               }
             })
@@ -23881,7 +23882,7 @@ var render = function() {
               attrs: {
                 "svg-source": "/../../images/icons/svgs/map.svg",
                 "button-inhalt": "Karte",
-                "button-color": "bg-green-400",
+                "button-color": "bg-green-900",
                 "on-hover": "hover:bg-yellow-100"
               }
             })
@@ -23893,8 +23894,8 @@ var render = function() {
           attrs: {
             "svg-source": "/../../images/icons/svgs/locationpointer.svg",
             "button-inhalt": "Anreise",
-            "button-color": "bg-green-400",
-            "on-hover": "hover:bg-yellow-200"
+            "button-color": "bg-green-900",
+            "on-hover": "hover:bg-yellow-100"
           }
         })
       ],

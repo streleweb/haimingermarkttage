@@ -32,6 +32,7 @@
             hover:text-gray-100
             cshadow
             z-50
+            buttoncolor1
           "
           :class="buttonColor"
         >
@@ -85,5 +86,9 @@ export default {
   box-shadow: rgba(109, 140, 177, 0.4) 0px 0px 0px 3px,
     rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
     rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.buttoncolor1 {
+  background-color: #007070c9;
 }
 </style>

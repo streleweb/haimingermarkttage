@@ -32,7 +32,7 @@
         <Button
           svg-source="/../../images/icons/svgs/apple1.svg"
           button-inhalt="Produkte"
-          button-color="bg-green-400"
+          button-color="bg-green-900"
           on-hover="hover:bg-white"
         ></Button>
       </router-link>
@@ -41,7 +41,7 @@
         <Button
           svg-source="/../../images/icons/svgs/aussteller.svg"
           button-inhalt="Aussteller"
-          button-color="bg-green-400"
+          button-color="bg-green-900"
           on-hover="hover:bg-yellow-50"
         ></Button>
       </router-link>
@@ -52,15 +52,15 @@
         <Button
           svg-source="/../../images/icons/svgs/map.svg"
           button-inhalt="Karte"
-          button-color="bg-green-400"
+          button-color="bg-green-900"
           on-hover="hover:bg-yellow-100"
         ></Button
       ></a>
       <Button
         svg-source="/../../images/icons/svgs/locationpointer.svg"
         button-inhalt="Anreise"
-        button-color="bg-green-400"
-        on-hover="hover:bg-yellow-200"
+        button-color="bg-green-900"
+        on-hover="hover:bg-yellow-100"
       ></Button>
     </div>
     <!-- end buttoncontainer -->
