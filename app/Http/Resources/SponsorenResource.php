@@ -20,7 +20,7 @@ class SponsorenResource extends JsonResource
             'sponsor_vorname' => $this->sponsor_vorname,
             'sponsor_nachname' => $this->sponsor_nachname,
             'sponsor_websiteurl' => $this->sponsor_websiteurl,
-            'sponsor_logourl' => $this->sponsor_logourl,
+            'sponsor_logourl' => $this->sponsor_logourl
         ];
     }
 }

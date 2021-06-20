@@ -1,9 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\app",
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
+    "\\app\\Http\\Resources",
     "\\database",
-    "\\database\\seeders"
+    "\\routes"
   ],
-  "SelectedNode": "\\database\\seeders\\ProductSeeder.php",
+  "SelectedNode": "\\app\\Http\\Controllers\\AusstellerfotoController.php",
   "PreviewInSolutionExplorer": false
 }

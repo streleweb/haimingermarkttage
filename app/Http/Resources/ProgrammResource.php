@@ -17,7 +17,7 @@ class ProgrammResource extends JsonResource
         return [
             'id' => $this->id,
             'programm_titel' => $this->programm_titel,
-            'programm_beschreibung' => $this->programm_beschreibung,
+            'programm_beschreibung' => $this->programm_beschreibung
         ];
     }
 }
