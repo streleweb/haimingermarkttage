@@ -4,9 +4,9 @@
     <carousel @next="goToNext()" @previous="goToPrevious()">
       <carousel-slide
         v-for="(foto, index) in fotos"
-        :key="index"
+        :key="id(index)"
         :index="index"
-        :visibleSlide="id(index)"
+        :visibleSlide="visibleSlide"
       >
         <img :src="urlOfFoto(index)" alt="Foto" />
       </carousel-slide>
@@ -22,6 +22,7 @@ export default {
   data() {
     return {
       fotos: [],
+      visibleSlide: 0,
     };
   },
   /*created wird vor mounted() aufgerufen, deshalb schneller*/
@@ -52,6 +53,7 @@ export default {
 
     id(index) {
       try {
+        console.log(this.fotos[index].id);
         return this.fotos[index].id;
       } catch (error) {
         console.log(error);
@@ -59,8 +61,8 @@ export default {
     },
 
     goToNext() {
-      console.log("i am");
-      if (this.visibleSlide >= this.fotosLength - 1) {
+      console.log(this.visibleSlide);
+      if (this.visibleSlide == this.fotosLength - 1) {
         this.visibleSlide = 0; //Reset - nach dem letzten Bild
       } else {
         this.visibleSlide++;

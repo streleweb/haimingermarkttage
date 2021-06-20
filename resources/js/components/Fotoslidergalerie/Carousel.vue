@@ -3,7 +3,7 @@
     <!--Slot für CarouselSlide-->
     <slot></slot>
 
-    <iframe
+    <img
       class="
         next
         filter-white-icons
@@ -25,7 +25,7 @@
       alt="Next"
       @click="goToNext()"
     />
-    <iframe
+    <img
       class="
         h-8
         w-10
@@ -59,10 +59,12 @@ export default {
   },
   methods: {
     goToNext() {
+      console.log("basst");
       this.$emit("next");
     },
 
     goToPrevious() {
+      console.log("basst auch");
       this.$emit("previous");
     },
   },
@@ -83,8 +85,8 @@ export default {
   @apply flex justify-center items-center;
 }
 
-iframe:focus,
-iframe:hover {
+img:focus,
+img:hover {
   outline: none;
   cursor: pointer;
 
