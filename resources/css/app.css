@@ -19,7 +19,7 @@ der tailwind components integriert. Diese Styles werden durch die
 
     body{
         @apply bg-green-700
-        w-screen h-screen max-h-screen overflow-hidden;
+        w-screen h-screen max-h-screen;
     }
 
     
@@ -42,7 +42,9 @@ der tailwind components integriert. Diese Styles werden durch die
         p-3
         bg-green-900
         border-b-2 border-black border-opacity-60;
+        
     }
+
 
     /*Resizing speziell für das Haiminger Markttage-Logo*/
     .resizeLogo {
@@ -58,7 +60,7 @@ der tailwind components integriert. Diese Styles werden durch die
     }
 
     .fotogaleriecontentcontainer{
-        @apply h-full flex flex-col w-full;
+        @apply h-full flex w-full justify-center items-center; /*flex-col*/
     }
 
     .kontaktcontentcontainer{

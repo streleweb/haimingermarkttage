@@ -2,11 +2,10 @@
   <div class="fotogaleriecontentcontainer">
     <!-- custom font konfiguriert in tailwind.config.js-->
     <!-- Hier noch Background-Pic oder Video rein -->
-    <div class="titletext ueberschrift">
-      <p>Fotogalerie</p>
-      <!-- end willkommenstexte -->
-      <CardList></CardList>
-    </div>
+
+    <!-- end willkommenstexte -->
+    <!--<CardList></CardList>-->
+    <foto-app></foto-app>
 
     <!--
       <ul v-for="foto in fotos" class="">
@@ -34,6 +33,7 @@
 <script>
 import CardList from "./cards/CardList.vue";
 import Button from "./Button";
+import FotoApp from "../components/Fotoslidergalerie/FotoApp.vue";
 
 export default {
   data() {
@@ -44,6 +44,6 @@ export default {
   //wenn Component geladen ist, führe die Methoden zum
   //Laden der Aussteller und Ausstellerfotos via Axios Request aus
 
-  components: { CardList, Button },
+  components: { CardList, Button, FotoApp },
 };
 </script>

@@ -17,8 +17,8 @@ class FotogalerieResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'fotogalerie_fotoname' => $this->fotoname,
-            'fotogalerie_fotobeschreibung' => $this->fotobeschreibung,
+            'fotogalerie_fotoname' => $this->fotogalerie_fotoname,
+            'fotogalerie_fotobeschreibung' => $this->fotogalerie_fotobeschreibung,
             'fotogalerie_fotourl' => $this->fotogalerie_fotourl
         ];
     }
