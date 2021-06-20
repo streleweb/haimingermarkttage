@@ -24,10 +24,14 @@ module.exports = {
 
       'btnbp': '655',
 
+      'ausstellersmbp': '705px',
+
       'md': '768px',
       // => @media (min-width: 768px) { ... }
 
       'kontaktbp': '760px',
+
+      'ausstellerbp': '940px',
 
       'lg': '1024px',
       // => @media (min-width: 1024px) { ... }

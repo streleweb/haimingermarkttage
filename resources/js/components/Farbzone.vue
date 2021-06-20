@@ -1,9 +1,9 @@
 <template>
   <div
-    class="flex items-center justify-items-center h-16 w-16 border border-gray-800"
+    class="h-full w-full rounded border customborder text-xs text-white"
     :class="zonenFarbe"
   >
-    <div class="text-black flex-grow">ZONE</div>
+    Farbzone am Markt
   </div>
 </template>
 

@@ -16,8 +16,9 @@ class AusstellerController extends Controller
      */
     public function index()
     {
-        $ausstellerliste = Aussteller::paginate(4); // für 4 aussteller pro Seite unter /app/aussteller im Frontend
-        return AusstellerResource::collection($ausstellerliste);
+        $ausstellerliste = Aussteller::paginate(4); // Aussteller::paginate(4); für 4 aussteller pro Seite unter /app/aussteller im Frontend
+        //return AusstellerResource::collection($ausstellerliste);
+        return AusstellerResource::collection(Aussteller::all());
     }
 
     /**
@@ -41,7 +42,7 @@ class AusstellerController extends Controller
         $validator = Validator::make($request->all(),
         [
             'aussteller_fullname' => 'required|min:2|max:30',
-            'aussteller_beschreibung'=> 'nullable|min:10|max:100',
+            'aussteller_beschreibung'=> 'nullable|min:10|max:200',
             'aussteller_zonenfarbe' => 'required|min:2|max:15', 
         ]);
 

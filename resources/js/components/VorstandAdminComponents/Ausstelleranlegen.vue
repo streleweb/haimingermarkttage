@@ -32,7 +32,17 @@
                       name="aussteller_fullname"
                       id="full_name"
                       autocomplete="given-name"
-                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                      class="
+                        mt-1
+                        focus:ring-indigo-500
+                        focus:border-indigo-500
+                        block
+                        w-full
+                        shadow-sm
+                        sm:text-sm
+                        border-gray-300
+                        rounded-md
+                      "
                     />
                   </div>
 
@@ -42,13 +52,23 @@
                       class="block text-sm font-medium text-gray-700"
                       >Beschreibung</label
                     >
-                    <input
-                      type="text"
+                    <textarea
+                      maxlength="200"
                       v-model="formdata.aussteller_beschreibung"
                       name="aussteller_beschreibung"
                       id="beschreibung"
                       autocomplete="Beschreibung"
-                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                      class="
+                        mt-1
+                        focus:ring-indigo-500
+                        focus:border-indigo-500
+                        block
+                        w-full
+                        shadow-sm
+                        sm:text-sm
+                        border-gray-300
+                        rounded-md
+                      "
                     />
                   </div>
 
@@ -64,7 +84,17 @@
                       v-model="formdata.aussteller_zonenfarbe"
                       id="zonenfarbe"
                       autocomplete="Zonenfarbe"
-                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                      class="
+                        mt-1
+                        focus:ring-indigo-500
+                        focus:border-indigo-500
+                        block
+                        w-full
+                        shadow-sm
+                        sm:text-sm
+                        border-gray-300
+                        rounded-md
+                      "
                     />
                   </div>
                 </div>
@@ -72,7 +102,22 @@
               <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                 <button
                   type="submit"
-                  class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  class="
+                    inline-flex
+                    justify-center
+                    py-2
+                    px-4
+                    border border-transparent
+                    shadow-sm
+                    text-sm
+                    font-medium
+                    rounded-md
+                    text-white
+                    bg-green-600
+                    hover:bg-black
+                    focus:outline-none
+                    focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+                  "
                 >
                   In DB Speichern
                 </button>
