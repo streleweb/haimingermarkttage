@@ -10,7 +10,7 @@
     <div
       class="
         listofaussteller
-        grid grid-flow-row grid-rows-4
+        grid grid-flow-row grid-rows-2 grid-cols-2
         lg:grid-flow-col lg:grid-cols-3
         gap-3
       "

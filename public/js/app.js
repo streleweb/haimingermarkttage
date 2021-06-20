@@ -23392,7 +23392,7 @@ var render = function() {
         "div",
         {
           staticClass:
-            "\n      listofaussteller\n      grid grid-flow-row grid-rows-4\n      lg:grid-flow-col lg:grid-cols-3\n      gap-3\n    "
+            "\n      listofaussteller\n      grid grid-flow-row grid-rows-2 grid-cols-2\n      lg:grid-flow-col lg:grid-cols-3\n      gap-3\n    "
         },
         _vm._l(_vm.aussteller, function(jeweiligerAussteller) {
           return _c("ul", {}, [
