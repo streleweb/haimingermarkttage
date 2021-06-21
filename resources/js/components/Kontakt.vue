@@ -144,4 +144,7 @@ export default {
 </script>
 
 <style>
+#kontaktinfo {
+  opacity: 80%;
+}
 </style>
