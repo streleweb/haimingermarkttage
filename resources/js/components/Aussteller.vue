@@ -202,22 +202,24 @@ export default {
 .articlestyling {
   background: #eee5e9;
   border: none;
-  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   text-align: center;
   width: 250px;
   transition: transform 0.3s;
+  z-index: 1;
 }
 
 article:hover {
   transform: translateY(5px);
-  box-shadow: 2px 2px 26px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/
+  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/
 }
 
 article img {
   width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  z-index: 1;
 }
 
 .text {
@@ -231,6 +233,12 @@ article img {
 .ausstellergradient {
   background-image: linear-gradient(to bottom, #536976, #292e49);
   background-repeat: no-repeat;
+  background-size: cover;
+
+  background: linear-gradient(rgba(90, 65, 42, 0.342), rgba(65, 65, 65, 0.3)),
+    url("/images/background/hb1.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   background-size: cover;
 }
 </style>
