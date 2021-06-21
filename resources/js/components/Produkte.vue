@@ -1,20 +1,8 @@
 <template>
-  <div class="homecontentcontainer">
+  <div class="max-w-full produktbackground">
     <!-- Content Container von Willkommen (exklusive Navbar) bis exklusive Footer-->
 
-    <div
-      class="
-        font-willkommen
-        flex-shrink
-        pt-5
-        px-1
-        pb-4
-        flex-grow
-        text-center
-        z-index:
-        100;
-      "
-    >
+    <div class="font-willkommen pt-5 px-1 mb-10 text-center z-index:100">
       <!-- custom font konfiguriert in tailwind.config.js-->
       <!-- Hier noch Background-Pic oder Video rein -->
       <div class="ueberschriftprodukte textshadow-markant">
@@ -23,6 +11,7 @@
           class="
             hidden
             hmbp:block
+            mb-5
             text-xs
             px-4
             pt-4
@@ -41,102 +30,40 @@
     </div>
     <!-- end willkommen -->
 
-<div
-        class="
-          grid grid-cols-1
-          sm:grid-cols-2
-          lg:grid-cols-3
-          gap-8
-          items-center
-          w-full
-        "
-      >
-        <!--listofaussteller
-        grid grid-flow-row grid-rows-2 grid-cols-2
-        lg:grid-flow-col lg:grid-cols-3
-        gap-3-->
-        <article
-          v-for="(jeweiligesImg, index) in images"
-          :key="index"
-          class="articlestyling mx-auto overflow-hidden w-full"
-        >
-          <img
-            v-if="imageUrlNotEmpty(index)"
-            :src="imgUrl(index)"
-            alt=""
-            class="border-b-2 border-yellow-50"
-          />
-          <img
-            v-else
-            src="/images/icons/svgs/aussteller.svg"
-            alt="Ausstellerfoto"
-            class="
-              filter-white
-              bg-gray-50 bg-opacity-20
-              border-b-2 border-black
-            "
-          />
-          <div class="text text-center lg:text-lg">
-            <h3 class="font-bold text-gray-800 mb-2">
-              {{ jeweiligerAussteller.aussteller_fullname }}
-            </h3>
-            <p class="text-sm lg:text-base mb-2">
-              {{ jeweiligerAussteller.aussteller_beschreibung }}
-            </p>
-            <div
-              class="
-                bg-gray-800
-                relative
-                bottom-0
-                left-0
-                right-0
-                h-10
-                flex
-                justify-center
-                items-center
-                rounded-lg
-              "
-            >
-              <ul class="inline-flex gap-2 justify-center items-center">
-                <li v-if="webUrlNotEmpty(index)">
-                  <a :href="webUrl(index)"
-                    ><img
-                      src="/images/icons/svgs/www.svg"
-                      class="resize-icon filter-white-icons"
-                      alt="website"
-                  /></a>
-                </li>
-
-                <li v-if="zonenFarbeNotEmpty(index)" class="h-5 w-32">
-                  <Farbzone :zonen-farbe="zonenFarbe(index)"></Farbzone>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!--<li class="border rounded-lg">
-          <a
-            :href="jeweiligerAussteller.aussteller_websiteurl"
-            class="text-4xl"
-            >{{ jeweiligerAussteller.aussteller_fullname }}</a
-          >
-          <p>{{ jeweiligerAussteller.aussteller_beschreibung }}</p>
-
-          <Farbzone
-            :class="jeweiligerAussteller.aussteller_zonenfarbe"
-          ></Farbzone>
-        </li>-->
-        </article>
-
-
     <div
       class="
-        buttonContainer
-        flex flex-col
-        justify-end
-        pb-4
-        flex-shrink flex-grow
+        grid grid-cols-1
+        sm:grid-cols-2
+        lg:grid-cols-3
+        gap-6
+        m-auto
+        max-w-full
       "
     >
+      <article
+        v-for="(jeweiligesImg, index) in images"
+        :key="index"
+        class="articlestyling mx-auto overflow-hidden"
+      >
+        <img
+          :src="jeweiligesImg.imgUrl"
+          alt=""
+          class="border-b border-gray-800 produktecardshadow"
+        />
+
+        <div class="text text-center lg:text-lg">
+          <h3 class="font-bold text-gray-800 mb-2 mt-1">
+            {{ jeweiligesImg.imgTitel }}
+          </h3>
+          <p class="text-sm lg:text-base mb-2">
+            {{ jeweiligesImg.imgBeschreibung }}
+          </p>
+        </div>
+      </article>
+    </div>
+    <!-- end gridcontainer-->
+
+    <div class="buttonContainer flex flex-col justify-end pb-4 mt-10">
       <!--Buttons mit Custom Props-->
       <router-link to="/app">
         <Button
@@ -243,5 +170,44 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.articlestyling {
+  background: #eee5e9;
+  border: none;
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s;
+  z-index: 1;
+}
+
+article:hover {
+  transform: translateY(5px);
+  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/
+}
+
+article img {
+  @apply mx-auto mt-2;
+  width: 130px;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.text {
+  padding: 20px 20px;
+}
+
+.text h3 {
+  text-transform: uppercase;
+}
+
+.produktbackground {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+    url("/images/background/produktbackground.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  opacity: 90%;
+}
 </style>

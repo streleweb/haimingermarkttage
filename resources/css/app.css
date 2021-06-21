@@ -139,7 +139,7 @@ der tailwind components integriert. Diese Styles werden durch die
     }
 
     .footer {
-       @apply mt-auto p-2 h-8 flex justify-center items-center text-center border-t border-white bg-gray-900 text-xs;
+       @apply mt-auto p-2 h-8 flex justify-center items-center text-center border-t border-white bg-gray-900 text-xs w-full;
     }
     
 
@@ -224,6 +224,10 @@ der tailwind components integriert. Diese Styles werden durch die
     .customshadow {
         box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
       }
+
+    .produktecardshadow{
+        box-shadow: 12px 0 15px -4px rgba(0, 0, 0, 0.2), -12px 0 8px -4px rgba(0, 0, 0, 0.2);
+    }
       
     .customborder {
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
