@@ -3257,11 +3257,147 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      name: "HomeContent",
+      name: "Produkte",
+      images: [{
+        imgTitel: "Äpfel und Apfelsaft",
+        imgUrl: "/images/produkte/img_aepfel.jpg",
+        imgBeschreibung: "Das Leitprodukt der Haiminger Markttage in vielen verschie­denen Sorten und einem ausgewogenen Geschmack von süß bis knackig säuerlich."
+      }, {
+        imgTitel: "Erdäpfel",
+        imgUrl: "/images/produkte/img_erdaepfel.jpg",
+        imgBeschreibung: "Egal ob mehlig oder fest-kochend, auf den Markttagen finden sich alle beliebten Erdäpfelsorten."
+      }, {
+        imgTitel: "Wein, Schnäpse u. Liköre",
+        imgUrl: "/images/produkte/img_wein.jpg",
+        imgBeschreibung: "Ein reiches Sortiment von Destillaten ausschließlich aus chemisch unbehandelten Früch­ten sowie gehaltvolle Weine - auch zum Verkosten."
+      }, {
+        imgTitel: "Gemüse und Obst",
+        imgUrl: "/images/produkte/img_obst.jpg",
+        imgBeschreibung: "Regionales Gemüse, Speise- aber auch Zierkürbisse, sowie fruchtiges Obst."
+      }, {
+        imgTitel: "Wurst- und Fleischwaren",
+        imgUrl: "/images/produkte/img_wurst.jpg",
+        imgBeschreibung: "Fleisch, Speck und Würste - wie es sich für eine zünftige Marend gehört."
+      }, {
+        imgTitel: "Käse",
+        imgUrl: "/images/produkte/img_kaese.jpg",
+        imgBeschreibung: "Verschiedenste Käsesorten aus Kuh-, Ziegen- und Schafsmilch."
+      }, {
+        imgTitel: "Brot, Getreide und Gebäck",
+        imgUrl: "/images/produkte/img_brot.jpg",
+        imgBeschreibung: "Fertige Brote oder aber auch Bio-Brotgetreide für's selber-backen."
+      }, {
+        imgTitel: "Honig und Marmeladen",
+        imgUrl: "/images/produkte/img_marmelade.jpg",
+        imgBeschreibung: "Süße Leckereien vom Beerengarten oder Produkte heimischer Imker."
+      }, {
+        imgTitel: "Tees und Gewürze",
+        imgUrl: "/images/produkte/img_tee.jpg",
+        imgBeschreibung: "Aromatische Gewürze und schmackhafte Tees verwöhnen jeden Gaumen."
+      }, {
+        imgTitel: "Blumen und Gestecke",
+        imgUrl: "/images/produkte/img_blume.jpg",
+        imgBeschreibung: "Florale Schmuckteile passend insbesondere für die Herbstzeit."
+      }, {
+        imgTitel: "Bekleidung",
+        imgUrl: "/images/produkte/img_bekleidung.jpg",
+        imgBeschreibung: "Sportbekleidung, Trachtenbe­kleidung, Mützen, Schals, Pat­schen uvm."
+      }, {
+        imgTitel: "Haushalts-, Geschenks- und Dekorationsartikel",
+        imgUrl: "/images/produkte/img_deko.jpg",
+        imgBeschreibung: "Glasartikel, Kerzen, Kosmetik, Heilprodukte - alles für Wohl­befinden und ein schönes Zuhause."
+      }],
       titleMessage: "Weitreichende Produktpalette bei den Haiminger Markttagen!",
       smallDescription: "Die Besucher der Haiminger Markttage sollen die Vielfalt der heimischen, bäuerlichen Produkte erleben. Die Angebotspalette unserer Aussteller ist daher breit gefächert:"
     };
@@ -24950,61 +25086,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render),
 /* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
 /* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "homecontentcontainer" }, [
-    _c(
-      "div",
-      {
-        staticClass:
-          "\n      font-willkommen\n      flex-shrink\n      pt-5\n      px-1\n      pb-4\n      flex-grow\n      text-center\n      z-index:\n      100;\n    "
-      },
-      [
-        _c("div", { staticClass: "ueberschriftprodukte textshadow-markant" }, [
-          _vm._v("\n      " + _vm._s(_vm.titleMessage) + "\n      "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "\n          hidden\n          hmbp:block\n          text-xs\n          px-4\n          pt-4\n          ssm:text-sm\n          btnbp:text-xl\n          btnbp:pt-6\n          btnbp:px-12\n          text-gray-300 text-center\n          produktdescriptionbp:px-14\n        "
-            },
-            [_vm._v("\n        " + _vm._s(_vm.smallDescription) + "\n      ")]
-          )
-        ])
-      ]
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass:
-          "\n      buttonContainer\n      flex flex-col\n      justify-end\n      pb-4\n      flex-shrink flex-grow\n    "
-      },
-      [
-        _c(
-          "router-link",
-          { attrs: { to: "/app" } },
-          [
-            _c("Button", {
-              attrs: {
-                "svg-source": "/../../images/icons/svgs/home.svg",
-                "button-inhalt": "Home",
-                "button-color": "bg-green-400",
-                "on-hover": "hover:bg-white"
-              }
-            })
-          ],
-          1
-        )
-      ],
-      1
-    )
-  ])
-}
+var render = function () {}
 var staticRenderFns = []
-render._withStripped = true
 
 
 
