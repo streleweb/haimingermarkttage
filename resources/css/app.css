@@ -102,6 +102,16 @@ der tailwind components integriert. Diese Styles werden durch die
         z-index: 0;
     }
 
+    .pagenotfoundcontainer{
+        @apply h-full flex flex-col w-full justify-between;
+
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url("/images/background/404.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        z-index: 0;
+    }
+
     /*old contentcontainer
     .contentcontainer {
         @apply h-full flex flex-col justify-items-end lg:flex lg:flex-1 lg:space-x-20 lg:pt-10;
@@ -143,12 +153,21 @@ der tailwind components integriert. Diese Styles werden durch die
         @apply
         font-willkommen
         flex-shrink
-        mt-5
+        pt-5
         pr-2
         pl-2
-        mb-4
+        pb-4
         flex-grow
-        md:mt-5
+        text-center;
+        z-index: 100;
+    }
+
+    .titletextpagenotfound{
+        @apply
+        font-willkommen
+        flex-shrink
+        p-5
+        flex-grow
         text-center;
         z-index: 100;
     }
@@ -163,6 +182,28 @@ der tailwind components integriert. Diese Styles werden durch die
         md:text-5xl
         lg:text-5xl;
         z-index: 1003;
+    }
+
+    .ueberschriftprodukte{
+        @apply
+      text-white
+        sm:mb-3
+        text-xl
+        ssmm:text-2xl
+        md:text-3xl
+        lg:text-5xl;
+        z-index: 1003;
+    }
+
+    .descriptiontext{
+        @apply text-gray-300 text-sm
+            ssmm:text-base
+            ssm:text-lg
+            mt-1
+            lg:mt-8
+            lg:text-2xl
+            font-thin
+            
     }
 
     .logotextstyle{

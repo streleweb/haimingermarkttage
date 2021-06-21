@@ -2622,17 +2622,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -3128,6 +3117,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -3199,11 +3189,87 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ "./resources/js/components/Button.vue");
 //
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      name: "HomeContent",
+      titleMessage: "Weitreichende Produktpalette bei den Haiminger Markttagen!",
+      smallDescription: "Die Besucher der Haiminger Markttage sollen die Vielfalt der heimischen, bäuerlichen Produkte erleben. Die Angebotspalette unserer Aussteller ist daher breit gefächert:"
+    };
+  },
+  components: {
+    Button: _Button__WEBPACK_IMPORTED_MODULE_0__.default
+  }
+});
 
 /***/ }),
 
@@ -24128,14 +24194,9 @@ var render = function() {
     _c("div", { staticClass: "titletext" }, [
       _c("div", { staticClass: "ueberschrift textshadow-markant" }, [
         _vm._v("\n      " + _vm._s(_vm.titleMessage) + "\n      "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "\n          text-gray-300 text-sm\n          ssmm:text-base\n          ssm:text-lg\n          mt-1\n          lg:mt-8\n          lg:text-2xl\n          font-thin\n          bg\n        "
-          },
-          [_vm._v("\n        " + _vm._s(_vm.smallDescription) + "\n      ")]
-        )
+        _c("div", { staticClass: "descriptiontext" }, [
+          _vm._v("\n        " + _vm._s(_vm.smallDescription) + "\n      ")
+        ])
       ])
     ]),
     _vm._v(" "),
@@ -24786,7 +24847,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container font-willkommen" },
+    { staticClass: "pagenotfoundcontainer titletextpagenotfound" },
     [
       _vm._m(0),
       _vm._v(" "),
@@ -24796,7 +24857,8 @@ var render = function() {
         [
           _c("Button", {
             attrs: {
-              "button-inhalt": "Back to Home-Screen",
+              "svg-source": "/../../images/icons/svgs/home.svg",
+              "button-inhalt": "Home",
               "button-color": "bg-green-400",
               "on-hover": "hover:bg-white"
             }
@@ -24813,27 +24875,17 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "text-white mb-20 mt-10 text-center text-5xl font-s" },
-      [
-        _c("p", [_vm._v("Diese Seite exisitiert nicht!")]),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "text-gray-300 text-center mt-8 text-2xl font-thin bg"
-          },
-          [
-            _c("p", [
-              _vm._v(
-                "\n        Bitte geben Sie eine richtige URL ein, oder drücken Sie den Button, um\n        zum Home-Screen zu gelangen!\n      "
-              )
-            ])
-          ]
-        )
-      ]
-    )
+    return _c("div", { staticClass: "ueberschrift" }, [
+      _c("p", [_vm._v("Diese Seite exisitiert nicht!")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "descriptiontext" }, [
+        _c("p", [
+          _vm._v(
+            "\n        Bitte geben Sie eine richtige URL ein, oder drücken Sie den Button, um\n        zum Home-Screen zu gelangen!\n      "
+          )
+        ])
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -24902,7 +24954,54 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", { staticClass: "text-white" }, [_vm._v("PRODUKTE")])
+  return _c("div", { staticClass: "homecontentcontainer" }, [
+    _c(
+      "div",
+      {
+        staticClass:
+          "\n      font-willkommen\n      flex-shrink\n      pt-5\n      px-1\n      pb-4\n      flex-grow\n      text-center\n      z-index:\n      100;\n    "
+      },
+      [
+        _c("div", { staticClass: "ueberschriftprodukte textshadow-markant" }, [
+          _vm._v("\n      " + _vm._s(_vm.titleMessage) + "\n      "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "\n          hidden\n          hmbp:block\n          text-xs\n          px-4\n          pt-4\n          ssm:text-sm\n          btnbp:text-xl\n          btnbp:pt-6\n          btnbp:px-12\n          text-gray-300 text-center\n          produktdescriptionbp:px-14\n        "
+            },
+            [_vm._v("\n        " + _vm._s(_vm.smallDescription) + "\n      ")]
+          )
+        ])
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass:
+          "\n      buttonContainer\n      flex flex-col\n      justify-end\n      pb-4\n      flex-shrink flex-grow\n    "
+      },
+      [
+        _c(
+          "router-link",
+          { attrs: { to: "/app" } },
+          [
+            _c("Button", {
+              attrs: {
+                "svg-source": "/../../images/icons/svgs/home.svg",
+                "button-inhalt": "Home",
+                "button-color": "bg-green-400",
+                "on-hover": "hover:bg-white"
+              }
+            })
+          ],
+          1
+        )
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

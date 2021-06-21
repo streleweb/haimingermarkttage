@@ -7,18 +7,7 @@
       <!-- Hier noch Background-Pic oder Video rein -->
       <div class="ueberschrift textshadow-markant">
         {{ titleMessage }}
-        <div
-          class="
-            text-gray-300 text-sm
-            ssmm:text-base
-            ssm:text-lg
-            mt-1
-            lg:mt-8
-            lg:text-2xl
-            font-thin
-            bg
-          "
-        >
+        <div class="descriptiontext">
           {{ smallDescription }}
         </div>
         <!-- end willkommenstexte -->

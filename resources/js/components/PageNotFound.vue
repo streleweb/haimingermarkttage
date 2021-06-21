@@ -1,10 +1,10 @@
 <template>
-  <div class="container font-willkommen">
+  <div class="pagenotfoundcontainer titletextpagenotfound">
     <!-- custom font konfiguriert in tailwind.config.js-->
     <!-- Hier noch Background-Pic oder Video rein -->
-    <div class="text-white mb-20 mt-10 text-center text-5xl font-s">
+    <div class="ueberschrift">
       <p>Diese Seite exisitiert nicht!</p>
-      <div class="text-gray-300 text-center mt-8 text-2xl font-thin bg">
+      <div class="descriptiontext">
         <p>
           Bitte geben Sie eine richtige URL ein, oder drücken Sie den Button, um
           zum Home-Screen zu gelangen!
@@ -17,7 +17,8 @@
     <!--Buttons mit Custom Props-->
     <router-link to="/app">
       <Button
-        button-inhalt="Back to Home-Screen"
+        svg-source="/../../images/icons/svgs/home.svg"
+        button-inhalt="Home"
         button-color="bg-green-400"
         on-hover="hover:bg-white"
       ></Button>

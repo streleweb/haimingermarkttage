@@ -22,7 +22,7 @@ module.exports = {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
-      'btnbp': '655',
+      'btnbp': '655px',
 
       'ausstellersmbp': '705px',
 
@@ -35,6 +35,8 @@ module.exports = {
 
       'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
+
+      'produktdescriptionbp': '1060px',
 
       'xl': '1280px',
       // => @media (min-width: 1280px) { ... }
