@@ -81,10 +81,10 @@ export default {
   justify-content: flex-start;
   align-items: center;
   position: fixed;
-  bottom: 0px;
+  top: 58px;
   flex-direction: column;
   width: 100%;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 58px);
   padding-top: 3rem;
   background-image: url("/images/background/mobilemenubackground3.svg");
   opacity: 1;

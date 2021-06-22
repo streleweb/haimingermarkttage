@@ -1,17 +1,5 @@
 <template>
   <div class="app">
-    <!--Hier video oder Photo noch rein-->
-    <!-- "
-      outercontainer
-      flex flex-col
-      h-full
-      bg-gradient-to-b
-      from-gray-900
-      to-green-500
-      overflow-hidden
-    "-->
-
-    <!-- war bg-gradient-to-b from-gray-900 to-green-500 ... flex h-full flex-col overflow-hidden-->
     <header class="navigationbar">
       <navbar @togglemenu="mobileMenuOpen = !mobileMenuOpen"></navbar>
     </header>

@@ -1871,18 +1871,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -3144,6 +3132,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ "./resources/js/components/Button.vue");
 //
 //
 //
@@ -3175,7 +3164,62 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      name: "Philosophie",
+      titleMessage: "Geschichte der Haiminger Markttage",
+      description: "Im Jahr 1987 entstand die Idee eine bäuerliche Vermarktungsstruktur zu etablieren. Die Initiatoren Anton Raffl, Ewald Höpperger und der verstorbene Altbürgermeister Wilfried Stigger erarbeiteten ein Konzept für die ersten Haiminger Markttage. " + "Am Vorabend des 10. Oktobers 1987, der als erster Haiminger Markttag in die Geschichte des Dorfes einging, wurde bis weit nach Mitternacht gemeinsam gearbeitet, vorbereitet und auch gebangt, was den Verlauf dieser Veranstaltung anging. Auf insgesamt 12 Marktständen verkauften die Haiminger Bauern und einige Haiminger Unternehmer ihre Produkte. Der Andrang auf diesen ersten Erntemarkt war dermaßen überwältigend, dass die Obstbauern bereits um 11 Uhr ausverkauft waren. " + "Dieser durchschlagende Erfolg hat aufgezeigt, welche Möglichkeiten für die Vermarktung regionaler bäuerlicher Erzeugnisse bestehen. Die Haiminger Bauern waren die ersten in Tirol, die landwirtschaftliche Produkte nach marktwirtschaftlichen Kriterien herstellten und vertrieben. Im Laufe der Jahre erlebten die Haiminger Markttage unter Obmann Hubert Wammes ein stetiges Wachstum. Mittlerweile kann man bei über 80 Anbietern deren Produkte erwerben. " + "Die Haiminger Markttage haben zum Ziel, den Direktverkauf regionaler bäuerlicher Produkte von hoher Qualität zu unterstützen und so den Erzeugern nachhaltige, marktgerechte Preise zu sichern. " + "So konnten nicht nur Endverbraucher, sondern auch Supermarktketten, wie Spar, MPreis oder Billa von der Qualität heimischer Produkte überzeugt werden. "
+    };
+  },
+  components: {
+    Button: _Button__WEBPACK_IMPORTED_MODULE_0__.default
+  }
+});
 
 /***/ }),
 
@@ -3967,7 +4011,31 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".mobiledropdown[data-v-e0a46da8] {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  position: fixed;\n  bottom: 0px;\n  flex-direction: column;\n  width: 100%;\n  height: calc(100vh - 50px);\n  padding-top: 3rem;\n  background-image: url(\"/images/background/mobilemenubackground3.svg\");\n  opacity: 1;\n  z-index: 900;\n}\n.bar-element[data-v-e0a46da8] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 60%;\n  height: 10%;\n  margin-bottom: 1rem;\n  cursor: pointer;\n  color: #fefefe;\n  background-color: #2424247e;\n  border-radius: 18%;\n  transition: 0.3s;\n}\n.bar-element[data-v-e0a46da8]:hover {\n  background-color: #1b741ed3;\n  color: white;\n}\n.bar-element[data-v-e0a46da8]:active {\n  background-color: #6ea070;\n  box-shadow: 3px rgb(0, 56, 33);\n  transform: translateY(4px);\n}\n.show[data-v-e0a46da8] {\n  opacity: 0;\n  transform: translateY(-100%);\n}\n.show-enter[data-v-e0a46da8],\r\n.show-leave-to[data-v-e0a46da8] {\n  opacity: 0;\n  transform: translateY(-100%);\n}\n.show-enter-active[data-v-e0a46da8],\r\n.show-leave-active[data-v-e0a46da8] {\n  transition: all 800ms;\n  z-index: 998;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".mobiledropdown[data-v-e0a46da8] {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  position: fixed;\n  top: 58px;\n  flex-direction: column;\n  width: 100%;\n  height: calc(100vh - 58px);\n  padding-top: 3rem;\n  background-image: url(\"/images/background/mobilemenubackground3.svg\");\n  opacity: 1;\n  z-index: 900;\n}\n.bar-element[data-v-e0a46da8] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 60%;\n  height: 10%;\n  margin-bottom: 1rem;\n  cursor: pointer;\n  color: #fefefe;\n  background-color: #2424247e;\n  border-radius: 18%;\n  transition: 0.3s;\n}\n.bar-element[data-v-e0a46da8]:hover {\n  background-color: #1b741ed3;\n  color: white;\n}\n.bar-element[data-v-e0a46da8]:active {\n  background-color: #6ea070;\n  box-shadow: 3px rgb(0, 56, 33);\n  transform: translateY(4px);\n}\n.show[data-v-e0a46da8] {\n  opacity: 0;\n  transform: translateY(-100%);\n}\n.show-enter[data-v-e0a46da8],\r\n.show-leave-to[data-v-e0a46da8] {\n  opacity: 0;\n  transform: translateY(-100%);\n}\n.show-enter-active[data-v-e0a46da8],\r\n.show-leave-active[data-v-e0a46da8] {\n  transition: all 800ms;\n  z-index: 998;\n}\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Philosophie.vue?vue&type=style&index=0&lang=css&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Philosophie.vue?vue&type=style&index=0&lang=css& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "#kontaktinfo {\n  opacity: 80%;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -21787,6 +21855,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Philosophie.vue?vue&type=style&index=0&lang=css&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Philosophie.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Philosophie_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Philosophie.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Philosophie.vue?vue&type=style&index=0&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Philosophie_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Philosophie_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Produkte.vue?vue&type=style&index=0&id=03bfb46e&scoped=true&lang=css&":
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Produkte.vue?vue&type=style&index=0&id=03bfb46e&scoped=true&lang=css& ***!
@@ -22738,15 +22836,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Philosophie_vue_vue_type_template_id_4e261609___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Philosophie.vue?vue&type=template&id=4e261609& */ "./resources/js/components/Philosophie.vue?vue&type=template&id=4e261609&");
 /* harmony import */ var _Philosophie_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Philosophie.vue?vue&type=script&lang=js& */ "./resources/js/components/Philosophie.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Philosophie_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Philosophie.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/Philosophie.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
+;
 
 
 /* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
   _Philosophie_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
   _Philosophie_vue_vue_type_template_id_4e261609___WEBPACK_IMPORTED_MODULE_0__.render,
   _Philosophie_vue_vue_type_template_id_4e261609___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
@@ -23386,6 +23486,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Mobilemenu_vue_vue_type_style_index_0_id_e0a46da8_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Mobilemenu.vue?vue&type=style&index=0&id=e0a46da8&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Mobilemenu.vue?vue&type=style&index=0&id=e0a46da8&scoped=true&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Philosophie.vue?vue&type=style&index=0&lang=css&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/Philosophie.vue?vue&type=style&index=0&lang=css& ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Philosophie_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Philosophie.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Philosophie.vue?vue&type=style&index=0&lang=css&");
 
 
 /***/ }),
@@ -25043,28 +25156,63 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
+  return _c("div", { staticClass: "philosophiecontentcontainer" }, [
+    _c(
       "div",
-      { staticClass: "text-white text-center p-20 font-willkommen" },
+      {
+        staticClass:
+          "\n      willkommen\n      font-willkommen\n      flex-shrink\n      mt-2\n      pr-2\n      pl-2\n      mb-4\n      md:flex-grow\n      md:mt-5\n      text-center\n    "
+      },
       [
-        _c("h1", { staticClass: "text-7xl" }, [_vm._v("PHILOSOPHIE")]),
-        _vm._v(" "),
-        _c("article", { staticClass: "pt-20 text-3xl" }, [
-          _vm._v(
-            "\n    Im Jahr 1987 entstand die Idee eine bäuerliche Vermarktungsstruktur zu\n    etablieren. Die Initiatoren Anton Raffl, Ewald Höpperger und der\n    verstorbene Altbürgermeister Wilfried Stigger erarbeiteten ein Konzept für\n    die ersten Haiminger Markttage. Am Vorabend des 10. Oktobers 1987, der als\n    erster Haiminger Markttag in die Geschichte des Dorfes einging, wurde bis\n    weit nach Mitternacht gemeinsam gearbeitet, vorbereitet und auch gebangt,\n    was den Verlauf dieser Veranstaltung anging. Auf insgesamt 12 Marktständen\n    verkauften die Haiminger Bauern und einige Haiminger Unternehmer ihre\n    Produkte. Der Andrang auf diesen ersten Erntemarkt war dermaßen\n    überwältigend, dass die Obstbauern bereits um 11 Uhr ausverkauft waren.\n    Dieser durchschlagende Erfolg hat aufgezeigt, welche Möglichkeiten für die\n    Vermarktung regionaler bäuerlicher Erzeugnisse bestehen. Die Haiminger\n    Bauern waren die ersten in Tirol, die landwirtschaftliche Produkte nach\n    marktwirtschaftlichen Kriterien herstellten und vertrieben. Im Laufe der\n    Jahre erlebten die Haiminger Markttage unter Obmann Hubert Wammes ein\n    stetiges Wachstum. Mittlerweile kann man bei über 80 Anbietern deren\n    Produkte erwerben. Die Haiminger Markttage haben zum Ziel, den\n    Direktverkauf regionaler bäuerlicher Produkte von hoher Qualität zu\n    unterstützen und so den Erzeugern nachhaltige, marktgerechte Preise zu\n    sichern. So konnten nicht nur Endverbraucher, sondern auch\n    Supermarktketten, wie Spar, MPreis oder Billa von der Qualität heimischer\n    Produkte überzeugt werden.\n  "
-          )
-        ])
+        _c(
+          "div",
+          {
+            staticClass:
+              "\n        text-white\n        sm:mb-5\n        text-xl\n        iphone6:text-3xl\n        sm:text-3xl\n        md:text-5xl\n        lg:text-5xl\n        font-s\n      "
+          },
+          [
+            _vm._v("\n      " + _vm._s(_vm.titleMessage) + "\n      "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "\n          text-gray-100 text-xs\n          sssm:text-base\n          text-justify\n          pt-4\n          sssm:px-4\n          sm:px-10\n          sm:pb-0\n          md:px-20\n          md:text-xl\n          lg:mt-8\n          lg:px-40\n          lg:text-2xl\n          font-thin\n          bg\n        "
+              },
+              [_vm._v("\n        " + _vm._s(_vm.description) + "\n      ")]
+            )
+          ]
+        )
       ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass:
+          "buttonContainer flex flex-col flex-shrink md:flex-grow mb-2"
+      },
+      [
+        _c(
+          "router-link",
+          { attrs: { to: "/app" } },
+          [
+            _c("Button", {
+              attrs: {
+                "svg-source": "/../../images/icons/svgs/home.svg",
+                "button-inhalt": "Home",
+                "button-color": "bg-green-400",
+                "on-hover": "hover:bg-white"
+              }
+            })
+          ],
+          1
+        )
+      ],
+      1
     )
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
