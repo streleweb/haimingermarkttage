@@ -86,7 +86,7 @@ export default {
   width: 100%;
   height: calc(100vh - 50px);
   padding-top: 3rem;
-  background-color: rgb(41, 41, 41);
+  background-image: url("/images/background/mobilemenubackground3.svg");
   opacity: 1;
   z-index: 900;
 }
@@ -96,11 +96,12 @@ export default {
   justify-content: center;
   align-items: center;
   width: 60%;
-  height: 3rem;
-  margin-bottom: 8px;
+  height: 10%;
+  margin-bottom: 1rem;
   cursor: pointer;
   color: #fefefe;
-  background-color: #242424;
+  background-color: #2424247e;
+  border-radius: 18%;
 }
 
 .show {
