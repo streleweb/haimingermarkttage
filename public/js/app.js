@@ -25016,7 +25016,7 @@ var staticRenderFns = [
           },
           [
             _c("img", {
-              staticClass: "resize-icon filter-white-icons",
+              staticClass: "resize-icon filter-white-icons pl-1",
               attrs: { src: "/images/icons/svgs/email.svg", alt: "email" }
             })
           ]

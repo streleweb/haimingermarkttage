@@ -57,7 +57,7 @@
         <a href="mailto:info@haiminger-markttage.at" target="_newtab"
           ><img
             src="/images/icons/svgs/email.svg"
-            class="resize-icon filter-white-icons"
+            class="resize-icon filter-white-icons pl-1"
             alt="email"
         /></a>
       </div>

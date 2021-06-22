@@ -216,8 +216,7 @@ der tailwind components integriert. Diese Styles werden durch die
             mt-1
             lg:mt-8
             lg:text-2xl
-            font-thin
-            
+            font-thin  
     }
 
     .logotextstyle{
@@ -225,7 +224,7 @@ der tailwind components integriert. Diese Styles werden durch die
         hidden
         hmbp:inline-flex
         text-xs
-        sm:text-xl
+        btnbp:text-xl
         font-semibold
         text-center
         tracking-tight
