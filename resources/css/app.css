@@ -86,7 +86,8 @@ der tailwind components integriert. Diese Styles werden durch die
 
     .fotogaleriecontentcontainer{
         @apply h-full flex w-full justify-center items-center; /*flex-col*/
-        background-image: linear-gradient(to bottom, #16222A, #3A6073);
+        /*background-image: linear-gradient(to bottom, #16222A, #3A6073);*/
+        background-image: url('/images/background/fotogaleriebackground2.svg');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -239,5 +240,6 @@ der tailwind components integriert. Diese Styles werden durch die
         0px 8px 13px rgba(0,0,0,0.1),
         0px 18px 23px rgba(0,0,0,0.1);
     }
+
 
 }
