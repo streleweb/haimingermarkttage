@@ -14,25 +14,13 @@ der tailwind components integriert. Diese Styles werden durch die
 @layer components{
 
     .app {
-        @apply flex flex-col w-screen h-screen max-h-screen;
+        @apply flex flex-col w-full h-full;
     }
 
     body{
-<<<<<<< HEAD
         /*bg-green-700*/
         @apply
         w-screen h-screen max-h-screen;
-=======
-        @apply bg-green-700;
-
-        
-            background-image: url('/images/background/alotofapples.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-          
-
->>>>>>> 509029432f6927ceebba216ba5dede2e55db5b94
     }
 
     
@@ -40,7 +28,7 @@ der tailwind components integriert. Diese Styles werden durch die
         position: absolute;
         bottom: 40px; 
         top: 58px; */
-        @apply w-screen flex flex-col flex-shrink flex-grow;
+        @apply  flex flex-col flex-shrink flex-grow;
         
     }
 
@@ -59,17 +47,6 @@ der tailwind components integriert. Diese Styles werden durch die
         bg-green-900
         border-b-2 border-black border-opacity-60;
         
-<<<<<<< HEAD
-=======
-    }
-
-    .navigationbar{
-        position: fixed;
-        top:0px;
-        left:0px;
-        
-        @apply w-full;
->>>>>>> 509029432f6927ceebba216ba5dede2e55db5b94
     }
 
 
@@ -171,7 +148,6 @@ der tailwind components integriert. Diese Styles werden durch die
         @apply text-xl text-white ;
     }
 
-<<<<<<< HEAD
     /*------------------------------------------TEXT CONFIGURATION------------------------------------*/
 
     .titletext{
@@ -266,6 +242,4 @@ der tailwind components integriert. Diese Styles werden durch die
     }
 
 
-=======
->>>>>>> 509029432f6927ceebba216ba5dede2e55db5b94
 }
