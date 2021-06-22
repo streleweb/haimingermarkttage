@@ -59,12 +59,12 @@ export default {
   },
   methods: {
     goToNext() {
-      console.log("basst");
+      //console.log("basst");
       this.$emit("next");
     },
 
     goToPrevious() {
-      console.log("basst auch");
+      //console.log("basst auch");
       this.$emit("previous");
     },
   },
@@ -106,14 +106,5 @@ img:hover {
 .previous {
   position: fixed;
   left: 0px;
-}
-
-.customshadow {
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-}
-
-.customborder {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 </style>
