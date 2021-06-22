@@ -10,8 +10,7 @@ class FotogalerieResource extends JsonResource
      * Transform the resource into an array.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return array with id, fotogalerie_fotoname, fotogalerie_fotobeschreibung
-     * and fotogalerie_fotourl json.
+     * @return array
      */
     public function toArray($request)
     {

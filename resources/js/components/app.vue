@@ -15,6 +15,7 @@
     <header class="navigationbar">
       <navbar @togglemenu="mobileMenuOpen = !mobileMenuOpen"></navbar>
     </header>
+
     <Mobilemenu :open="mobileMenuOpen"></Mobilemenu>
     <section class="sectionarea">
       <!--war main flex-1-->
@@ -29,6 +30,7 @@
 
 
 <script>
+import Background from "./Background.vue";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Apple from "./svg/Apple";
@@ -60,7 +62,7 @@ export default {
       EventBus.$on("clickedOnMenuLink", clickHandler);
     },
   },
-  components: { Navbar, Footer, Apple, Mobilemenu },
+  components: { Background, Navbar, Footer, Apple, Mobilemenu },
 };
 </script>
 

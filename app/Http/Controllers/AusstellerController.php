@@ -28,7 +28,7 @@ class AusstellerController extends Controller
      */
     public function create()
     {
-        //
+        return view('aussteller.ausstelleranlegen');
     }
 
     /**
@@ -43,7 +43,15 @@ class AusstellerController extends Controller
         [
             'aussteller_fullname' => 'required|min:2|max:30',
             'aussteller_beschreibung'=> 'nullable|min:10|max:200',
-            'aussteller_zonenfarbe' => 'required|min:2|max:15', 
+            'aussteller_zonenfarbe' => 'nullable|min:2|max:15', 
+            'aussteller_beschreibung'=> 'nullable|min:10|max:100',
+            'aussteller_brandingname' => 'nullable|min:2|max:30', 
+            'aussteller_email' => 'nullable|min:2|max:100',
+            'aussteller_telefonnummer' => 'nullable|min:2|max:20',
+            'aussteller_websiteurl' => 'nullable|min:10|max:100',
+            'aussteller_zonenfarbe' => 'nullable|min:2|max:15',
+            'aussteller_bildurl' => 'nullable|min:10|max:100',
+            
         ]);
 
         if ($validator->fails()) {
@@ -54,7 +62,13 @@ class AusstellerController extends Controller
             $aussteller = new Aussteller();
             $aussteller->aussteller_fullname = $request->aussteller_fullname;
             $aussteller->aussteller_beschreibung = $request->aussteller_beschreibung;
+            $aussteller->aussteller_brandingname = $request->aussteller_brandingname;
+            $aussteller->aussteller_email = $request->aussteller_email;
+            $aussteller->aussteller_telefonnummer = $request->aussteller_telefonnummer;
+            $aussteller->aussteller_websiteurl = $request->aussteller_websiteurl;
             $aussteller->aussteller_zonenfarbe = $request->aussteller_zonenfarbe;
+            $aussteller->aussteller_bildurl = $request->aussteller_bildurl;
+           
            
             if($aussteller->save()){
                 return new AusstellerResource($aussteller);
@@ -70,7 +84,8 @@ class AusstellerController extends Controller
      */
     public function show(Aussteller $aussteller)
     {
-        //
+        $aussteller = Aussteller::find($id);
+        return $aussteller;
     }
 
     /**
@@ -81,7 +96,7 @@ class AusstellerController extends Controller
      */
     public function edit(Aussteller $aussteller)
     {
-        //
+        return view('aussteller.edit')->with('aussteller',$aussteller);
     }
 
     /**
@@ -93,7 +108,21 @@ class AusstellerController extends Controller
      */
     public function update(Request $request, Aussteller $aussteller)
     {
-        //
+        $aussteller = Aussteller::findOrFail($id);
+        $aussteller->id = $request->id;
+        $aussteller->aussteller_fullname = $request->aussteller_fullname;
+        $aussteller->aussteller_beschreibung = $request->aussteller_beschreibung;
+        $aussteller->aussteller_brandingname = $request->aussteller_brandingname;
+        $aussteller->aussteller_email = $request->aussteller_email;
+        $aussteller->aussteller_telefonnummer = $request->aussteller_telefonnummer;
+        $aussteller->aussteller_websiteurl = $request->aussteller_websiteurl;
+        $aussteller->aussteller_zonenfarbe = $request->aussteller_zonenfarbe;
+        $aussteller->aussteller_bildurl = $request->aussteller_bildurl;
+        
+        if($aussteller->save())
+        {
+            return new AusstellerResource($aussteller);
+        };
     }
 
     /**
@@ -104,6 +133,7 @@ class AusstellerController extends Controller
      */
     public function destroy(Aussteller $aussteller)
     {
-        //
+        $aussteller = Aussteller::findOrFail($id);
+        $aussteller->delete();
     }
 }

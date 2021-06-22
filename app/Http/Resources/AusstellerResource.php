@@ -25,10 +25,7 @@ class AusstellerResource extends JsonResource
             'aussteller_websiteurl'=> $this->aussteller_websiteurl,
             'aussteller_zonenfarbe'=> $this->aussteller_zonenfarbe,
             'aussteller_bildurl'=> $this->aussteller_bildurl,
-            /*'aussteller_jahre'=> $this->aussteller_jahre,
-            'aussteller_straße'=> $this->aussteller_straße,
-            'aussteller_postleitzahl'=> $this->aussteller_postleitzahl,
-            'aussteller_wohnort'=> $this->aussteller_wohnort,*/
+            
     
         ];
     }

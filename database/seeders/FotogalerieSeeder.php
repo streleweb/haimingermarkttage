@@ -13,6 +13,6 @@ class FotogalerieSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Fotogalerie::factory()->count(100)->create();
     }
 }
