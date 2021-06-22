@@ -102,6 +102,18 @@ export default {
   color: #fefefe;
   background-color: #2424247e;
   border-radius: 18%;
+  transition: 0.3s;
+}
+
+.bar-element:hover {
+  background-color: #1b741ed3;
+  color: white;
+}
+
+.bar-element:active {
+  background-color: #6ea070;
+  box-shadow: 3px rgb(0, 56, 33);
+  transform: translateY(4px);
 }
 
 .show {
