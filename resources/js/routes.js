@@ -9,6 +9,7 @@ import Fotogalerie from './components/Fotogalerie';
 import News from './components/News';
 import Kontakt from './components/Kontakt';
 import Datenschutz from './components/footercomponents/Datenschutz';
+import Impressum from './components/footercomponents/Impressum';
 
 export default {
     mode: 'history', //Browser-Tracking-System benützen, um die Pages zu tracken
@@ -62,6 +63,11 @@ export default {
         {
             path: '/app/datenschutz',
             component: Datenschutz
+        },
+
+        {
+            path: '/app/impressum',
+            component: Impressum
         },
 
     ]

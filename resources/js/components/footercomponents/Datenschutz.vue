@@ -441,12 +441,19 @@
         to-gray-700
       "
     >
-      <li class="justify-self-center">Brunnenweg 5</li>
+      <li class="justify-self-center">
+        Erzeugerorganisation Oberinntalobst GmbH
+      </li>
+      <li class="justify-self-center">Wiesrainstraße 13</li>
       <li class="justify-self-center">A-6425 Haiming</li>
+      <li class="justify-self-center">Tel.: +43 (0) 664 3408802</li>
+      <li class="justify-self-center">Fax: +43 (0) 5266 88429</li>
       <li class="justify-self-center">
         E-Mail:
-        <a href="mailto:info@haiminger-markttage.at" target="_newtab"
-          >info@haiminger-markttage.at<img
+        <a
+          href="mailto:info@haiminger-markttage.at,office@obstlager-haiming.at"
+          target="_newtab"
+          >office@obstlager-haiming.at<img
             src="/images/icons/svgs/email.svg"
             class="resize-icon filter-white-icons mx-auto"
             alt="email"
@@ -470,7 +477,6 @@
         /></a>
       </li>
     </ul>
-
     <div
       class="
         buttonContainer
