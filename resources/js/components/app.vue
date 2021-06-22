@@ -20,7 +20,6 @@
 <script>
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import Apple from "./svg/Apple";
 import HomeContent from "./HomeContent";
 import PageNotFound from "./PageNotFound";
 import Mobilemenu from "./Mobilemenu.vue";
@@ -49,7 +48,7 @@ export default {
       EventBus.$on("clickedOnMenuLink", clickHandler);
     },
   },
-  components: { Navbar, Footer, Apple, Mobilemenu },
+  components: { Navbar, Footer, Mobilemenu },
 };
 </script>
 
