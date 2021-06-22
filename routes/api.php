@@ -31,6 +31,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/aussteller/search/{name}', [AusstellerController::class, 'search']);
+
 Route::resource('aussteller', AusstellerController::class);
 Route::resource('ausstellerfoto', AusstellerfotoController::class);
 Route::resource('fotogalerie', FotogalerieController::class);
