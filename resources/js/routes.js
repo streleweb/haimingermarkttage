@@ -8,6 +8,7 @@ import Ausstelleranlegen from './components/VorstandAdminComponents/Ausstelleran
 import Fotogalerie from './components/Fotogalerie';
 import News from './components/News';
 import Kontakt from './components/Kontakt';
+import Datenschutz from './components/footercomponents/Datenschutz';
 
 export default {
     mode: 'history', //Browser-Tracking-System benützen, um die Pages zu tracken
@@ -56,7 +57,12 @@ export default {
         {
             path: '/app/kontakt',
             component: Kontakt
-        }
+        },
+
+        {
+            path: '/app/datenschutz',
+            component: Datenschutz
+        },
 
     ]
 

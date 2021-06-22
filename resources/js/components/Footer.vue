@@ -1,8 +1,14 @@
 <template>
   <footer class="footer">
-    <p class="font-semibold font-sans text-green-50">
-      Impressum Datenschutz Kontakt usw.
-    </p>
+    <span class="footer-text"
+      ><router-link to="/app/impressum">Impressum</router-link></span
+    >
+    <span class="footer-text"
+      ><router-link to="/app/datenschutz">Datenschutz</router-link></span
+    >
+    <span class="footer-text"
+      ><router-link to="/app/kontakt">Kontakt</router-link></span
+    >
     <!-- Noch dynamisch machen und verlinken -->
   </footer>
 </template>
@@ -13,5 +19,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.footer-text {
+  @apply font-semibold font-sans text-green-50 text-xs;
+}
 </style>

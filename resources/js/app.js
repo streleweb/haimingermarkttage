@@ -16,7 +16,13 @@ Vue.use(VueRouter);
     components: { App }
 });*/
 
-
+/**
+ * Neue Vue Instanz zum Rendern des App-Components
+ * hin zum div mit der id #app im welcome.blade-File
+ * 
+ * Instanziieren des VueRouters mit dem Konfiguartions-File
+ * routes.js
+ */
 new Vue({
     render(h) {
         return h(App)

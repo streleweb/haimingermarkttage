@@ -2250,6 +2250,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Footer"
 });
@@ -3665,6 +3671,531 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/footercomponents/Datenschutz.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/footercomponents/Datenschutz.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Button */ "./resources/js/components/Button.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      name: "Datenschutz",
+      titleMessage: "Datenschutzerklärung"
+    };
+  },
+  components: {
+    Button: _Button__WEBPACK_IMPORTED_MODULE_0__.default
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -3693,6 +4224,14 @@ vue__WEBPACK_IMPORTED_MODULE_2__.default.use(vue_router__WEBPACK_IMPORTED_MODULE
     router: new VueRouter(routes),
     components: { App }
 });*/
+
+/**
+ * Neue Vue Instanz zum Rendern des App-Components
+ * hin zum div mit der id #app im welcome.blade-File
+ * 
+ * Instanziieren des VueRouters mit dem Konfiguartions-File
+ * routes.js
+ */
 
 new vue__WEBPACK_IMPORTED_MODULE_2__.default({
   render: function render(h) {
@@ -3750,8 +4289,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "EventBus": () => (/* binding */ EventBus)
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
- //Eventbus für Events, welche in Childitems vorkommen (zB. Link-Clicks) und zu Grandparent-Komponenten ge"broadcoastet
-//werden sollen.
+
+/**
+ * Eventbus für Events, welche in Childitems vorkommen (zB. Link-Clicks) und zu Grandparent-Komponenten ge-broadcastet
+ * werden sollen.
+ */
 
 var EventBus = new vue__WEBPACK_IMPORTED_MODULE_0__.default();
 
@@ -3778,6 +4320,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Fotogalerie__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/Fotogalerie */ "./resources/js/components/Fotogalerie.vue");
 /* harmony import */ var _components_News__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/News */ "./resources/js/components/News.vue");
 /* harmony import */ var _components_Kontakt__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/Kontakt */ "./resources/js/components/Kontakt.vue");
+/* harmony import */ var _components_footercomponents_Datenschutz__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/footercomponents/Datenschutz */ "./resources/js/components/footercomponents/Datenschutz.vue");
+
 
 
 
@@ -3821,6 +4365,9 @@ __webpack_require__.r(__webpack_exports__);
   }, {
     path: '/app/kontakt',
     component: _components_Kontakt__WEBPACK_IMPORTED_MODULE_9__.default
+  }, {
+    path: '/app/datenschutz',
+    component: _components_footercomponents_Datenschutz__WEBPACK_IMPORTED_MODULE_10__.default
   }]
 });
 
@@ -3892,6 +4439,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".cshadow {\n  box-shadow: rgba(109, 140, 177, 0.4) 0px 0px 0px 3px,\r\n    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,\r\n    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;\n}\n.buttoncolor1 {\n  background-color: #003d33d2;\n} /*Tailwind color: #004d40d2;*/\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&scoped=true&lang=css&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&scoped=true&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".footer-text[data-v-61a7c374] {\n  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n  font-weight: 600;\n  font-size: 0.75rem;\n  line-height: 1rem;\n  --tw-text-opacity: 1;\n  color: rgba(236, 253, 245, var(--tw-text-opacity));\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4036,6 +4607,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-03bfb46e] {\n  background: #eee5e9;\n  border: none;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 20px;\n  text-align: center;\n  width: 250px;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-03bfb46e]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-03bfb46e] {\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 0.5rem;\n  width: 130px;\n  border-radius: 20px;\n  z-index: 1;\n}\n.text[data-v-03bfb46e] {\n  padding: 20px 20px;\n}\n.text h3[data-v-03bfb46e] {\n  text-transform: uppercase;\n}\n.produktbackground[data-v-03bfb46e] {\n  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),\r\n    url(\"/images/background/produktbackground.svg\");\n  background-repeat: no-repeat;\n  background-position: 50% 50%;\n  background-size: cover;\n  opacity: 90%;\n}\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/footercomponents/Datenschutz.vue?vue&type=style&index=0&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/footercomponents/Datenschutz.vue?vue&type=style&index=0&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "#kontaktinfo {\n  opacity: 80%;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -21687,6 +22282,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&scoped=true&lang=css&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&scoped=true&lang=css& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_style_index_0_id_61a7c374_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Footer.vue?vue&type=style&index=0&id=61a7c374&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&scoped=true&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_style_index_0_id_61a7c374_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_style_index_0_id_61a7c374_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Fotoslidergalerie/Carousel.vue?vue&type=style&index=0&id=1349dfc4&scoped=true&lang=css&":
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Fotoslidergalerie/Carousel.vue?vue&type=style&index=0&id=1349dfc4&scoped=true&lang=css& ***!
@@ -21864,6 +22489,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Produkte_vue_vue_type_style_index_0_id_03bfb46e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/footercomponents/Datenschutz.vue?vue&type=style&index=0&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/footercomponents/Datenschutz.vue?vue&type=style&index=0&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Datenschutz_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Datenschutz.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/footercomponents/Datenschutz.vue?vue&type=style&index=0&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Datenschutz_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Datenschutz_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
 
@@ -22319,23 +22974,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Footer.vue?vue&type=template&id=61a7c374& */ "./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&");
+/* harmony import */ var _Footer_vue_vue_type_template_id_61a7c374_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Footer.vue?vue&type=template&id=61a7c374&scoped=true& */ "./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&scoped=true&");
 /* harmony import */ var _Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer.vue?vue&type=script&lang=js& */ "./resources/js/components/Footer.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Footer_vue_vue_type_style_index_0_id_61a7c374_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer.vue?vue&type=style&index=0&id=61a7c374&scoped=true&lang=css& */ "./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
+;
 
 
 /* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
   _Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__.render,
-  _Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _Footer_vue_vue_type_template_id_61a7c374_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Footer_vue_vue_type_template_id_61a7c374_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  null,
+  "61a7c374",
   null
   
 )
@@ -22944,6 +23601,47 @@ component.options.__file = "resources/js/components/cards/CardList.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/footercomponents/Datenschutz.vue":
+/*!******************************************************************!*\
+  !*** ./resources/js/components/footercomponents/Datenschutz.vue ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Datenschutz_vue_vue_type_template_id_1d645e30___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Datenschutz.vue?vue&type=template&id=1d645e30& */ "./resources/js/components/footercomponents/Datenschutz.vue?vue&type=template&id=1d645e30&");
+/* harmony import */ var _Datenschutz_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Datenschutz.vue?vue&type=script&lang=js& */ "./resources/js/components/footercomponents/Datenschutz.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Datenschutz_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Datenschutz.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/footercomponents/Datenschutz.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
+  _Datenschutz_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _Datenschutz_vue_vue_type_template_id_1d645e30___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Datenschutz_vue_vue_type_template_id_1d645e30___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/footercomponents/Datenschutz.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/App.vue?vue&type=script&lang=js&":
 /*!******************************************************************!*\
   !*** ./resources/js/components/App.vue?vue&type=script&lang=js& ***!
@@ -23264,6 +23962,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/footercomponents/Datenschutz.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/components/footercomponents/Datenschutz.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Datenschutz_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Datenschutz.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/footercomponents/Datenschutz.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Datenschutz_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
 /***/ "./resources/js/components/App.vue?vue&type=style&index=0&lang=css&":
 /*!**************************************************************************!*\
   !*** ./resources/js/components/App.vue?vue&type=style&index=0&lang=css& ***!
@@ -23299,6 +24013,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Button_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Button.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Button.vue?vue&type=style&index=0&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&scoped=true&lang=css&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&scoped=true&lang=css& ***!
+  \*****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_style_index_0_id_61a7c374_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Footer.vue?vue&type=style&index=0&id=61a7c374&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Footer.vue?vue&type=style&index=0&id=61a7c374&scoped=true&lang=css&");
 
 
 /***/ }),
@@ -23381,6 +24108,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/footercomponents/Datenschutz.vue?vue&type=style&index=0&lang=css&":
+/*!***************************************************************************************************!*\
+  !*** ./resources/js/components/footercomponents/Datenschutz.vue?vue&type=style&index=0&lang=css& ***!
+  \***************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Datenschutz_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Datenschutz.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/footercomponents/Datenschutz.vue?vue&type=style&index=0&lang=css&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/App.vue?vue&type=template&id=332fccf4&":
 /*!************************************************************************!*\
   !*** ./resources/js/components/App.vue?vue&type=template&id=332fccf4& ***!
@@ -23449,19 +24189,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&":
-/*!***************************************************************************!*\
-  !*** ./resources/js/components/Footer.vue?vue&type=template&id=61a7c374& ***!
-  \***************************************************************************/
+/***/ "./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&scoped=true&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&scoped=true& ***!
+  \***************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_61a7c374_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_61a7c374_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Footer.vue?vue&type=template&id=61a7c374& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_61a7c374_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Footer.vue?vue&type=template&id=61a7c374&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&scoped=true&");
 
 
 /***/ }),
@@ -23717,6 +24457,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CardList_vue_vue_type_template_id_deb8b1b6___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CardList_vue_vue_type_template_id_deb8b1b6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CardList.vue?vue&type=template&id=deb8b1b6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cards/CardList.vue?vue&type=template&id=deb8b1b6&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/footercomponents/Datenschutz.vue?vue&type=template&id=1d645e30&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/components/footercomponents/Datenschutz.vue?vue&type=template&id=1d645e30& ***!
+  \*************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Datenschutz_vue_vue_type_template_id_1d645e30___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Datenschutz_vue_vue_type_template_id_1d645e30___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Datenschutz_vue_vue_type_template_id_1d645e30___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Datenschutz.vue?vue&type=template&id=1d645e30& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/footercomponents/Datenschutz.vue?vue&type=template&id=1d645e30&");
 
 
 /***/ }),
@@ -24038,10 +24795,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&":
-/*!******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374& ***!
-  \******************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&scoped=true&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&scoped=true& ***!
+  \******************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -24054,20 +24811,42 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("footer", { staticClass: "footer" }, [
+    _c(
+      "span",
+      { staticClass: "footer-text" },
+      [
+        _c("router-link", { attrs: { to: "/app/impressum" } }, [
+          _vm._v("Impressum")
+        ])
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c(
+      "span",
+      { staticClass: "footer-text" },
+      [
+        _c("router-link", { attrs: { to: "/app/datenschutz" } }, [
+          _vm._v("Datenschutz")
+        ])
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c(
+      "span",
+      { staticClass: "footer-text" },
+      [
+        _c("router-link", { attrs: { to: "/app/kontakt" } }, [
+          _vm._v("Kontakt")
+        ])
+      ],
+      1
+    )
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("footer", { staticClass: "footer" }, [
-      _c("p", { staticClass: "font-semibold font-sans text-green-50" }, [
-        _vm._v("\n    Impressum Datenschutz Kontakt usw.\n  ")
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -25449,6 +26228,430 @@ var render = function() {
   ])
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/footercomponents/Datenschutz.vue?vue&type=template&id=1d645e30&":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/footercomponents/Datenschutz.vue?vue&type=template&id=1d645e30& ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "datenschutzcontentcontainer" }, [
+    _c(
+      "div",
+      {
+        staticClass:
+          "\n      willkommen\n      font-willkommen\n      flex-shrink\n      mt-2\n      pr-2\n      pl-2\n      mb-4\n      md:flex-grow\n      md:mt-5\n      text-left\n    "
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "\n        text-white\n        sm:mb-5\n        text-xl\n        iphone6:text-3xl\n        sm:text-3xl\n        md:text-5xl\n        lg:text-5xl\n        font-s\n        text-center\n      "
+          },
+          [
+            _vm._v("\n      " + _vm._s(_vm.titleMessage) + "\n      "),
+            _vm._m(0)
+          ]
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass:
+          "\n      buttonContainer\n      flex flex-col flex-shrink\n      sm:pt-4\n      md:flex-grow\n      mt-2\n      ssm:mt-4\n    "
+      },
+      [
+        _c(
+          "router-link",
+          { attrs: { to: "/app" } },
+          [
+            _c("Button", {
+              attrs: {
+                "svg-source": "/../../images/icons/svgs/home.svg",
+                "button-inhalt": "Home",
+                "button-color": "bg-green-400",
+                "on-hover": "hover:bg-white"
+              }
+            })
+          ],
+          1
+        )
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "\n          text-gray-100 text-base text-left\n          pt-4\n          sssm:px-4\n          sm:px-10\n          sm:pb-0\n          md:px-20\n          md:text-xl\n          lg:mt-8\n          lg:px-40\n          lg:text-2xl\n          font-thin\n          bg\n        "
+      },
+      [
+        _vm._v(
+          '\n        Diese Datenschutzerklärung soll die Nutzer dieser Website über die\n        Art, den Umfang und den Zweck der Erhebung und Verwendung\n        personenbezogener Daten durch den Websitebetreiber\n        "www.haiminger-markttage.at/app" informieren. '
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(
+          "\n\n        Die erhobenen Daten auf dieser Webapplikation enthalten die\n        standardgemäßen Http-Header-Informationen, wie zum Beispiel\n        Informationen zu Ihrem Webbrowser, Art Ihres Endgerätes und weitere\n        standardgemäße Connection-Daten. Da diese Website keine\n        Loginfunktionalitäten für Besucher bereitstellt, werden keine\n        personenbezogene Daten Ihrerseits erhoben und gespeichert.\n        Definitionen der verwendeten Begriffe (z.B. “personenbezogene Daten”\n        oder “Verarbeitung”) finden Sie in Art. 4 DSGVO. "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-lg md:text-3xl" }, [
+          _vm._v("Automatische Datenspeicherung")
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(
+          "\n\n        Wenn Sie heutzutage Webseiten besuchen, werden gewisse Informationen\n        automatisch erstellt und gespeichert, so auch auf dieser Webseite.\n        Wenn Sie unsere Webseite so wie jetzt gerade besuchen, speichert unser\n        Webserver (Computer auf dem diese Webseite gespeichert ist)\n        automatisch folgende Daten in Webserver-Logfiles: "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c(
+          "ul",
+          { staticClass: "pl-6", staticStyle: { "list-style-type": "circle" } },
+          [
+            _c("li", [_vm._v("die Adresse (URL) der aufgerufenen Webseite")]),
+            _vm._v(" "),
+            _c("li", [_vm._v("Browser und Browserversion")]),
+            _vm._v(" "),
+            _c("li", [_vm._v("das verwendete Betriebssystem")]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "die Adresse (URL) der zuvor besuchten Seite (Referrer URL)"
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _vm._v(
+                "\n            den Hostname und die IP-Adresse des Geräts von welchem aus\n            zugegriffen wird\n          "
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [_vm._v("Datum und Uhrzeit")])
+          ]
+        ),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(
+          "\n\n        In der Regel werden Webserver-Logfiles zwei Wochen gespeichert und\n        danach automatisch gelöscht. Wir geben diese Daten nicht weiter,\n        können jedoch nicht ausschließen, dass diese Daten beim Vorliegen von\n        rechtswidrigem Verhalten eingesehen werden. "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-lg md:text-3xl" }, [
+          _vm._v("Speicherung persönlicher Daten")
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(
+          "\n\n        Diese Website bietet keine direkten Formularfelder an, in denen Sie\n        uns Ihre persönlichen Daten, wie zum Beispiel Name, E-Mail-Adresse,\n        oder Passwörter übermitteln können. Wir erhalten auf dieser\n        Webapplikation lediglich die im letzten Punkt genannten Daten.\n        "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(
+          "\n\n        Der Kontaktformular-Link verweißt auf unsere Website\n        www.haiminger-markttage.at, auf welcher folgendes gilt: "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(
+          "\n\n        Persönliche Daten, die Sie uns auf dieser Website elektronisch\n        übermitteln, wie zum Beispiel Name, E-Mail-Adresse, Adresse oder\n        andere persönlichen Angaben im Rahmen der Übermittlung eines Formulars\n        werden von uns gemeinsam mit dem Zeitpunkt und der IP-Adresse nur zum\n        jeweils angegebenen Zweck verwendet, sicher verwahrt und nicht an\n        Dritte weitergegeben. Wir nutzen Ihre persönlichen Daten somit nur für\n        die Kommunikation mit jenen Besuchern, die Kontakt ausdrücklich\n        wünschen und für die Abwicklung der auf dieser Webseite angebotenen\n        Dienstleistungen und Produkte. Wir geben Ihre persönlichen Daten ohne\n        Zustimmung nicht weiter, können jedoch nicht ausschließen, dass diese\n        Daten beim Vorliegen von rechtswidrigem Verhalten eingesehen werden.\n        Wenn Sie uns persönliche Daten per E-Mail schicken – somit abseits\n        dieser Webseite – können wir keine sichere Übertragung und den Schutz\n        Ihrer Daten garantieren. Wir empfehlen Ihnen, vertrauliche Daten\n        niemals unverschlüsselt per E-Mail zu übermitteln.\n\n        "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-lg md:text-3xl" }, [
+          _vm._v("\n          Rechte laut Datenschutzgrundverordnung\n        ")
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(
+          "Ihnen stehen laut den Bestimmungen der DSGVO und des\n        österreichischen Datenschutzgesetzes (DSG) grundsätzlich die folgende\n        Rechte zu: Recht auf Berichtigung (Artikel 16 DSGVO) Recht auf\n        Löschung („Recht auf Vergessenwerden“) (Artikel 17 DSGVO) Recht auf\n        Einschränkung der Verarbeitung (Artikel 18 DSGVO) Recht auf\n        Benachrichtigung – Mitteilungspflicht im Zusammenhang mit der\n        Berichtigung oder Löschung personenbezogener Daten oder der\n        Einschränkung der Verarbeitung (Artikel 19 DSGVO) Recht auf\n        Datenübertragbarkeit (Artikel 20 DSGVO) Widerspruchsrecht (Artikel 21\n        DSGVO) Recht, nicht einer ausschließlich auf einer automatisierten\n        Verarbeitung — einschließlich Profiling — beruhenden Entscheidung\n        unterworfen zu werden (Artikel 22 DSGVO) Wenn Sie glauben, dass die\n        Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre\n        datenschutzrechtlichen Ansprüche sonst in einer Weise verletzt worden\n        sind, können Sie sich bei der Aufsichtsbehörde beschweren, welche in\n        Österreich die Datenschutzbehörde ist, deren Webseite Sie unter\n        https://www.dsb.gv.at/ finden.\n\n        "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-lg md:text-3xl" }, [
+          _vm._v("\n          Auswertung des Besucherverhaltens\n        ")
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(
+          "\n        In der folgenden Datenschutzerklärung informieren wir Sie darüber, ob\n        und wie wir Daten Ihres Besuchs dieser Website auswerten. Die\n        Auswertung der gesammelten Daten erfolgt in der Regel anonym und wir\n        können von Ihrem Verhalten auf dieser Website nicht auf Ihre Person\n        schließen. Mehr über Möglichkeiten dieser Auswertung der Besuchsdaten\n        zu widersprechen erfahren Sie in der folgenden Datenschutzerklärung.\n        "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-lg md:text-3xl" }, [
+          _vm._v("TLS-Verschlüsselung mit HTTPS")
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(
+          "\n        Wir verwenden https um Daten abhörsicher im Internet zu übertragen\n        (Datenschutz durch Technikgestaltung Artikel 25 Absatz 1 DSGVO). Durch\n        den Einsatz von TLS (Transport Layer Security), einem\n        Verschlüsselungsprotokoll zur sicheren Datenübertragung im Internet\n        können wir den Schutz vertraulicher Daten sicherstellen. Sie erkennen\n        die Benutzung dieser Absicherung der Datenübertragung am kleinen\n        Schlosssymbol links oben im Browser und der Verwendung des Schemas\n        https (anstatt http) als Teil unserer Internetadresse.\n        "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-lg md:text-3xl" }, [_vm._v("Cookies")]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(
+          "Unsere Webseite verwendet HTTP-Cookies, um nutzerspezifische\n        Daten zu speichern. Im Folgenden erklären wir, was Cookies sind und\n        warum Sie genutzt werden, damit Sie die folgende Datenschutzerklärung\n        besser verstehen. "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-lg md:text-3xl" }, [
+          _vm._v("Was sind Cookies?")
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(
+          "\n        Immer wenn Sie durch das Internet surfen, verwenden Sie einen Browser.\n        Bekannte Browser sind beispielsweise Chrome, Safari, Firefox, Internet\n        Explorer und Microsoft Edge. Die meisten Webseiten speichern kleine\n        Text-Dateien in Ihrem Browser. Diese Dateien nennt man Cookies. Eines\n        ist nicht von der Hand zu weisen: Cookies sind echt nützliche\n        Helferlein. Fast alle Webseiten verwenden Cookies. Genauer gesprochen\n        sind es HTTP-Cookies, da es auch noch anderer Cookies für andere\n        Anwendungsbereiche gibt. HTTP-Cookies sind kleine Dateien, die von\n        unserer Webseite auf Ihrem Computer gespeichert werden. Diese\n        Cookie-Dateien werden automatisch im Cookie-Ordner, quasi dem „Hirn“\n        Ihres Browsers, untergebracht. Ein Cookie besteht aus einem Namen und\n        einem Wert. Bei der Definition eines Cookies müssen zusätzlich ein\n        oder mehrere Attribute angegeben werden. Cookies speichern gewisse\n        Nutzerdaten von Ihnen, wie beispielsweise Sprache oder persönliche\n        Seiteneinstellungen. Wenn Sie unsere Seite wieder aufrufen,\n        übermittelt Ihr Browser die „userbezogenen“ Informationen an unsere\n        Seite zurück. Dank der Cookies weiß unsere Webseite, wer Sie sind und\n        bietet Ihnen die Einstellung, die Sie gewohnt sind. In einigen\n        Browsern hat jedes Cookie eine eigene Datei, in anderen wie\n        beispielsweise Firefox sind alle Cookies in einer einzigen Datei\n        gespeichert. Es gibt sowohl Erstanbieter Cookies als auch\n        Drittanbieter-Cookies. Erstanbieter-Cookies werden direkt von unserer\n        Seite erstellt, Drittanbieter-Cookies werden von Partner-Webseiten\n        (z.B. Google Analytics) erstellt. Jedes Cookie ist individuell zu\n        bewerten, da jedes Cookie andere Daten speichert. Auch die Ablaufzeit\n        eines Cookies variiert von ein paar Minuten bis hin zu ein paar\n        Jahren. Cookies sind keine Software-Programme und enthalten keine\n        Viren, Trojaner oder andere „Schädlinge“. Cookies können auch nicht\n        auf Informationen Ihres PCs zugreifen. So können zum Beispiel\n        Cookie-Daten aussehen: Name: _ga Wert: GA1.2.1326744211.152211103817\n        Verwendungszweck: Unterscheidung der Webseitenbesucher Ablaufdatum:\n        nach 2 Jahren Diese Mindestgrößen sollte ein Browser unterstützen\n        können: Mindestens 4096 Bytes pro Cookie Mindestens 50 Cookies pro\n        Domain Mindestens 3000 Cookies insgesamt.\n        "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-lg md:text-3xl" }, [
+          _vm._v("\n          Welche Arten von Cookies gibt es?\n        ")
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(
+          "\n        Die Frage welche Cookies wir im Speziellen verwenden, hängt von den\n        verwendeten Diensten ab und wird in den folgenden Abschnitten der\n        Datenschutzerklärung geklärt. An dieser Stelle möchten wir kurz auf\n        die verschiedenen Arten von HTTP-Cookies eingehen. Man kann 4 Arten\n        von Cookies unterscheiden: Unerlässliche Cookies Diese Cookies sind\n        nötig, um grundlegende Funktionen der Webseite sicherzustellen. Zum\n        Beispiel braucht es diese Cookies, wenn ein User ein Produkt in den\n        Warenkorb legt, dann auf anderen Seiten weitersurft und später erst\n        zur Kasse geht. Durch diese Cookies wird der Warenkorb nicht gelöscht,\n        selbst wenn der User sein Browserfenster schließt. Zweckmäßige Cookies\n        Diese Cookies sammeln Infos über das Userverhalten und ob der User\n        etwaige Fehlermeldungen bekommt. Zudem werden mithilfe dieser Cookies\n        auch die Ladezeit und das Verhalten der Webseite bei verschiedenen\n        Browsern gemessen. Zielorientierte Cookies Diese Cookies sorgen für\n        eine bessere Nutzerfreundlichkeit. Beispielsweise werden eingegebene\n        Standorte, Schriftgrößen oder Formulardaten gespeichert. Werbe-Cookies\n        Diese Cookies werden auch Targeting-Cookies genannt. Sie dienen dazu\n        dem User individuell angepasste Werbung zu liefern. Das kann sehr\n        praktisch, aber auch sehr nervig sein. Üblicherweise werden Sie beim\n        erstmaligen Besuch einer Webseite gefragt, welche dieser Cookiearten\n        Sie zulassen möchten. Und natürlich wird diese Entscheidung auch in\n        einem Cookie gespeichert.\n        "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-lg md:text-3xl" }, [
+          _vm._v("Wie kann ich Cookies löschen?")
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(
+          "\n        Wie und ob Sie Cookies verwenden wollen, entscheiden Sie selbst.\n        Unabhängig von welchem Service oder welcher Webseite die Cookies\n        stammen, haben Sie immer die Möglichkeit Cookies zu löschen, zu\n        deaktivieren oder nur teilweise zuzulassen. Zum Beispiel können Sie\n        Cookies von Drittanbietern blockieren, aber alle anderen Cookies\n        zulassen. Wenn Sie feststellen möchten, welche Cookies in Ihrem\n        Browser gespeichert wurden, wenn Sie Cookie-Einstellungen ändern oder\n        löschen wollen, können Sie dies in Ihren Browser-Einstellungen finden:\n        Chrome: Cookies in Chrome löschen, aktivieren und verwalten Safari:\n        Verwalten von Cookies und Websitedaten mit Safari Firefox: Cookies\n        löschen, um Daten zu entfernen, die Websites auf Ihrem Computer\n        abgelegt haben Internet Explorer: Löschen und Verwalten von Cookies\n        Microsoft Edge: Löschen und Verwalten von Cookies Falls Sie\n        grundsätzlich keine Cookies haben wollen, können Sie Ihren Browser so\n        einrichten, dass er Sie immer informiert, wenn ein Cookie gesetzt\n        werden soll. So können Sie bei jedem einzelnen Cookie entscheiden, ob\n        Sie das Cookie erlauben oder nicht. Die Vorgangsweise ist je nach\n        Browser verschieden. Am besten Sie suchen die Anleitung in Google mit\n        dem Suchbegriff “Cookies löschen Chrome” oder „Cookies deaktivieren\n        Chrome“ im Falle eines Chrome Browsers.\n        "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-lg md:text-3xl" }, [
+          _vm._v(
+            "\n          Wie sieht es mit meinem Datenschutz aus?\n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(
+          "\n        Seit 2009 gibt es die sogenannten „Cookie-Richtlinien“. Darin ist\n        festgehalten, dass das Speichern von Cookies eine Einwilligung des von\n        Ihnen verlangt. Innerhalb der EU-Länder gibt es allerdings noch sehr\n        unterschiedliche Reaktionen auf diese Richtlinien. In Österreich\n        erfolgte aber die Umsetzung dieser Richtlinie in § 96 Abs. 3 des\n        Telekommunikationsgesetzes (TKG). Wenn Sie mehr über Cookies wissen\n        möchten und vor technischen Dokumentationen nicht zurückscheuen,\n        empfehlen wir https://tools.ietf.org/html/rfc6265, dem Request for\n        Comments der Internet Engineering Task Force (IETF) namens „HTTP State\n        Management Mechanism“.\n\n        "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-lg md:text-3xl" }, [
+          _vm._v("\n          Google-Fonts Datenschutzerklärung\n        ")
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(
+          "\n        Auf unserer Webseite verwenden wir Google Fonts. Das sind die\n        „Google-Schriften“ der Firma Google Inc. (1600 Amphitheatre Parkway\n        Mountain View, CA 94043, USA). Für die Verwendung von\n        Google-Schriftarten müssen Sie sich nicht anmelden bzw. ein Passwort\n        hinterlegen. Weiters werden auch keine Cookies in Ihrem Browser\n        gespeichert. Die Dateien (CSS, Schriftarten/Fonts) werden über die\n        Google-Domains fonts.googleapis.com und fonts.gstatic.com angefordert.\n        Laut Google sind die Anfragen nach CSS und Schriften vollkommen\n        getrennt von allen anderen Google-Diensten. Wenn Sie ein Google-Konto\n        haben, brauchen Sie keine Sorge haben, dass Ihre Google-Kontodaten,\n        während der Verwendung von Google Fonts, an Google übermittelt werden.\n        Google erfasst die Nutzung von CSS (Cascading Style Sheets) und der\n        verwendeten Schriftarten und speichert diese Daten sicher. Wie die\n        Datenspeicherung genau aussieht, werden wir uns noch im Detail\n        ansehen.\n\n        "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-lg md:text-3xl" }, [
+          _vm._v("Was sind Google-Fonts?")
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(
+          "\n        Google Fonts (früher Google Web Fonts) ist ein Verzeichnis mit über\n        800 Schriftarten, die die Google LLC Ihren Nutzern kostenlos zu\n        Verfügung stellen. Viele dieser Schriftarten sind unter der SIL Open\n        Font License veröffentlicht, während andere unter der Apache-Lizenz\n        veröffentlicht wurden. Beides sind freie Software-Lizenzen.\n\n        "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-lg md:text-3xl" }, [
+          _vm._v(
+            "\n          Warum verwenden wir Google-Fonts in unserer Webapplikation?\n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(
+          "\n        Mit Google Fonts können wir auf der eigenen Webseite Schriften nutzen,\n        und müssen sie nicht auf unserem eigenen Server hochladen. Google\n        Fonts ist ein wichtiger Baustein, um die Qualität unserer Webseite\n        hoch zu halten. Alle Google-Schriften sind automatisch für das Web\n        optimiert und dies spart Datenvolumen und ist speziell für die\n        Verwendung bei mobilen Endgeräten ein großer Vorteil. Wenn Sie unsere\n        Seite besuchen, sorgt die niedrige Dateigröße für eine schnelle\n        Ladezeit. Des Weiteren sind Google Fonts sichere Web Fonts.\n        Unterschiedliche Bildsynthese-Systeme (Rendering) in verschiedenen\n        Browsern, Betriebssystemen und mobilen Endgeräten können zu Fehlern\n        führen. Solche Fehler können teilweise Texte bzw. ganze Webseiten\n        optisch verzerren. Dank des schnellen Content Delivery Network (CDN)\n        gibt es mit Google Fonts keine plattformübergreifenden Probleme.\n        Google Fonts unterstützt alle gängigen Browser (Google Chrome, Mozilla\n        Firefox, Apple Safari, Opera) und funktioniert zuverlässig auf den\n        meisten modernen mobilen Betriebssystemen, einschließlich Android 2.2+\n        und iOS 4.2+ (iPhone, iPad, iPod). Wir verwenden die Google Fonts\n        also, damit wir unser gesamtes Online-Service so schön und einheitlich\n        wie möglich darstellen können.\n\n        "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-lg md:text-3xl" }, [
+          _vm._v(
+            "\n          Welche Daten werden von Google gespeichert?\n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(
+          "\n        Wenn Sie unsere Webseite besuchen, werden die Schriften über einen\n        Google-Server nachgeladen. Durch diesen externen Aufruf werden Daten\n        an die Google-Server übermittelt. So erkennt Google auch, dass Sie\n        bzw. Ihre IP-Adresse unsere Webseite besucht. Die Google Fonts API\n        wurde entwickelt, um Verwendung, Speicherung und Erfassung von\n        Endnutzerdaten auf das zu reduzieren, was für eine ordentliche\n        Bereitstellung von Schriften nötig ist. API steht übrigens für\n        „Application Programming Interface“ und dient unter anderem als\n        Datenübermittler im Softwarebereich. Google Fonts speichert CSS- und\n        Schrift-Anfragen sicher bei Google und ist somit geschützt. Durch die\n        gesammelten Nutzungszahlen kann Google feststellen, wie gut die\n        einzelnen Schriften ankommen. Die Ergebnisse veröffentlicht Google auf\n        internen Analyseseiten, wie beispielsweise Google Analytics. Zudem\n        verwendet Google auch Daten des eigenen Web-Crawlers, um\n        festzustellen, welche Webseiten Google-Schriften verwenden. Diese\n        Daten werden in der BigQuery-Datenbank von Google Fonts\n        veröffentlicht. Unternehmer und Entwickler nützen das\n        Google-Webservice BigQuery, um große Datenmengen untersuchen und\n        bewegen zu können. Zu bedenken gilt allerdings noch, dass durch jede\n        Google Font Anfrage auch Informationen wie Spracheinstellungen,\n        IP-Adresse, Version des Browsers, Bildschirmauflösung des Browsers und\n        Name des Browsers automatisch an die Google-Server übertragen werden.\n        Ob diese Daten auch gespeichert werden, ist nicht klar feststellbar\n        bzw. wird von Google nicht eindeutig kommuniziert.\n        "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-lg md:text-3xl" }, [
+          _vm._v(
+            "\n          Wie und wo werden die Daten gespeichert?\n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(
+          "\n        Anfragen für CSS-Assets speichert Google einen Tag lang auf Ihren\n        Servern, die hauptsächlich außerhalb der EU angesiedelt sind. Das\n        ermöglicht uns, mithilfe eines Google-Stylesheets die Schriftarten zu\n        nutzen. Ein Stylesheet ist eine Formatvorlage, über die man einfach\n        und schnell z.B. das Design bzw. die Schriftart einer Webseite ändern\n        kann. Die Font-Dateien werden bei Google ein Jahr gespeichert. Google\n        verfolgt damit das Ziel, die Ladezeit von Webseiten grundsätzlich zu\n        verbessern. Wenn Millionen von Webseiten auf die gleichen Schriften\n        verweisen, werden sie nach dem ersten Besuch zwischengespeichert und\n        erscheinen sofort auf allen anderen später besuchten Webseiten wieder.\n        Manchmal aktualisiert Google Schriftdateien, um die Dateigröße zu\n        reduzieren, die Abdeckung von Sprache zu erhöhen und das Design zu\n        verbessern.\n\n        "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "text-lg md:text-3xl" }, [
+          _vm._v(
+            "\n          Wie kann ich meine Daten löschen bzw. die Datenspeicherung\n          verhindern?\n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(
+          "\n        Jene Daten, die Google für einen Tag bzw. ein Jahr speichert können\n        nicht einfach gelöscht werden. Die Daten werden beim Seitenaufruf\n        automatisch an Google übermittelt. Um diese Daten vorzeitig löschen zu\n        können, müssen Sie den Google-Support auf\n        "
+        ),
+        _c(
+          "a",
+          {
+            attrs: { href: "https://support.google.com/?hl=de&tid=211103817" }
+          },
+          [_vm._v("https://support.google.com/?hl=de&tid=211103817")]
+        ),
+        _vm._v(
+          "\n        kontaktieren. Datenspeicherung verhindern Sie in diesem Fall nur, wenn\n        Sie unsere Seite nicht besuchen. Anders als andere Web-Schriften\n        erlaubt uns Google uneingeschränkten Zugriff auf alle Schriftarten.\n        Wir können also unlimitiert auf ein Meer an Schriftarten zugreifen und\n        so das Optimum für unsere Webseite rausholen. Mehr zu Google Fonts und\n        weiteren Fragen finden Sie auf\n        "
+        ),
+        _c(
+          "a",
+          {
+            attrs: {
+              href: "https://developers.google.com/fonts/faq?tid=211103817"
+            }
+          },
+          [_vm._v("https://developers.google.com/fonts/faq?tid=211103817")]
+        ),
+        _vm._v(
+          "\n        . Dort geht zwar Google auf datenschutzrelevante Angelegenheiten ein,\n        doch wirklich detaillierte Informationen über Datenspeicherung sind\n        nicht enthalten. Es ist relativ schwierig, von Google wirklich präzise\n        Informationen über gespeicherten Daten zu bekommen. Welche Daten\n        grundsätzlich von Google erfasst werden und wofür diese Daten\n        verwendet werden, können Sie auch auf\n        "
+        ),
+        _c(
+          "a",
+          {
+            attrs: { href: "https://www.google.com/intl/de/policies/privacy/" }
+          },
+          [_vm._v("https://www.google.com/intl/de/policies/privacy/")]
+        ),
+        _vm._v("\n        nachlesen.\n      ")
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "ul",
+      {
+        staticClass:
+          "\n      text-white text-xs\n      border-t border-b border-gray-800\n      pb-1\n      ssm:text-base\n      grid\n      justify-center\n      items-center\n      gap-1\n      content-evenly\n      bg-gray-600 bg-gradient-to-bl\n      from-green-900\n      to-gray-700\n    ",
+        attrs: { id: "kontaktinfo" }
+      },
+      [
+        _c("li", { staticClass: "justify-self-center" }, [
+          _vm._v("Brunnenweg 5")
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "justify-self-center" }, [
+          _vm._v("A-6425 Haiming")
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "justify-self-center" }, [
+          _vm._v("\n      E-Mail:\n      "),
+          _c(
+            "a",
+            {
+              attrs: {
+                href: "mailto:info@haiminger-markttage.at",
+                target: "_newtab"
+              }
+            },
+            [
+              _vm._v("info@haiminger-markttage.at"),
+              _c("img", {
+                staticClass: "resize-icon filter-white-icons mx-auto",
+                attrs: { src: "/images/icons/svgs/email.svg", alt: "email" }
+              })
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "justify-self-center" }, [
+          _vm._v("\n      Website:\n      "),
+          _c("a", { attrs: { href: "http://www.haiminger-markttage.at/" } }, [
+            _vm._v("haiminger-markttage.at"),
+            _c("img", {
+              staticClass: "resize-icon filter-white-icons mx-auto",
+              attrs: { src: "/images/icons/svgs/www.svg", alt: "website" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "justify-self-center" }, [
+          _vm._v("\n      Zum Kontaktformular:"),
+          _c(
+            "a",
+            { attrs: { href: "http://www.haiminger-markttage.at/kontakt/" } },
+            [
+              _c("img", {
+                staticClass: "resize-icon filter-white-icons mx-auto",
+                attrs: {
+                  src: "/images/icons/svgs/contact-form.svg",
+                  alt: "website"
+                }
+              })
+            ]
+          )
+        ])
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
