@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AusstellerController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AusstellerfotoController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\FotogalerieController;
@@ -12,9 +13,6 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProgrammController;
 use App\Http\Controllers\ProgrammpunktController;
 use App\Http\Controllers\SponsorenController;
-
-
-
 
 /*
 |--------------------------------------------------------------------------
@@ -26,14 +24,34 @@ use App\Http\Controllers\SponsorenController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+/*
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
-});
+});*/
+
+//Public routes - posts noch verhindern!
 
 Route::get('/aussteller/search/{name}', [AusstellerController::class, 'search']);
+Route::get('/aussteller', [AusstellerController::class, 'index']);
+Route::get('/aussteller/{id}', [AusstellerController::class, 'show']);
 
-Route::resource('aussteller', AusstellerController::class);
+//Admin-Public-Routes
+Route::post('/admin/register', [AuthController::class, 'register']);
+Route::post('/admin/login', [AuthController::class, 'login']);
+
+//Protected routes through Sanctum -- Token-based requests
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    
+    Route::post('/aussteller', [AusstellerController::class, 'store']);
+    Route::put('/aussteller/{id}', [AusstellerController::class, 'update']);
+    Route::delete('/aussteller/{id}', [AusstellerController::class, 'destroy']);
+    //logout
+    Route::post('/admin/logout', [AuthController::class, 'logout']);
+});
+
+
+
+
 Route::resource('ausstellerfoto', AusstellerfotoController::class);
 Route::resource('fotogalerie', FotogalerieController::class);
 Route::resource('news', NewsController::class);
