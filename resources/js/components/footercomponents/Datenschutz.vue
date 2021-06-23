@@ -485,6 +485,7 @@
         md:flex-grow
         mt-2
         ssm:mt-4
+        mb-2
       "
     >
       <!--Buttons mit Custom Props-->
