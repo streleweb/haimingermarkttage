@@ -1,5 +1,7 @@
 module.exports = {
-  purge: [],
+  purge: ['./resources/**/*.blade.php',
+    './resources/**/*.js',
+    './resources/**/*.vue'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
@@ -64,6 +66,8 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
 
