@@ -13,7 +13,7 @@ class AuthController extends Controller
         $fields = $request->validate([
             'name' => 'required|string',
             'email' => 'required|string|unique:users,email', //unique zur User-Tabelle und der E-Mail-Spalte
-            'password' => 'required|string|confirmed' //confirmation-field verlangen
+            'password' => 'required|string|confirmed|min:6' //confirmation-field verlangen
         ]);
 
         $user = User::create([
