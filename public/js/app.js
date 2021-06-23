@@ -4427,6 +4427,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -4641,7 +4644,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/*Custom Selection Color, wenn man Text mit Maus auswählt*/\n::-moz-selection {\n  color: rgb(0, 255, 8);\n  background: rgba(116, 116, 116, 0.496);\n}\n::selection {\n  color: rgb(0, 255, 8);\n  background: rgba(116, 116, 116, 0.496);\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/*Custom Selection Color, wenn man Text mit Maus auswählt*/\n::-moz-selection {\n  color: rgb(0, 255, 8);\n  background: rgba(116, 116, 116, 0.496);\n}\n::selection {\n  color: rgb(0, 255, 8);\n  background: rgba(116, 116, 116, 0.496);\n}\n.navigationbar {\n  height: 58px;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27107,7 +27110,7 @@ var render = function() {
       "div",
       {
         staticClass:
-          "\n      buttonContainer\n      flex flex-col flex-shrink\n      sm:pt-4\n      md:flex-grow\n      mt-2\n      ssm:mt-4\n    "
+          "\n      buttonContainer\n      flex flex-col flex-shrink\n      sm:pt-4\n      md:flex-grow\n      mt-2\n      ssm:mt-4\n      mb-2\n    "
       },
       [
         _c(
@@ -27233,7 +27236,12 @@ var staticRenderFns = [
         _c("br"),
         _c("br"),
         _vm._v(
-          "\n\n        Quelle: Erstellt mit dem Datenschutz Generator von firmenwebseiten.at\n        in Kooperation mit wallentin.cc Sie erreichen uns unter folgenden\n        Kontaktdaten:\n      "
+          "\n\n        Quelle: Erstellt mit dem Datenschutz Generator von firmenwebseiten.at\n        in Kooperation mit wallentin.cc\n\n        "
+        ),
+        _c("br"),
+        _c("br"),
+        _vm._v(
+          "\n        Sie erreichen uns unter folgenden Kontaktdaten:\n      "
         )
       ]
     )

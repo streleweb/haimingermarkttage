@@ -58,5 +58,9 @@ export default {
   color: rgb(0, 255, 8);
   background: rgba(116, 116, 116, 0.496);
 }
+
+.navigationbar {
+  height: 58px;
+}
 </style>
 

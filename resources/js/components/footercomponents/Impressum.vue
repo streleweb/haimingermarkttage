@@ -124,8 +124,10 @@
           <br /><br />
 
           Quelle: Erstellt mit dem Datenschutz Generator von firmenwebseiten.at
-          in Kooperation mit wallentin.cc Sie erreichen uns unter folgenden
-          Kontaktdaten:
+          in Kooperation mit wallentin.cc
+
+          <br /><br />
+          Sie erreichen uns unter folgenden Kontaktdaten:
         </div>
         <!-- end willkommenstexte -->
       </div>
@@ -194,6 +196,7 @@
         md:flex-grow
         mt-2
         ssm:mt-4
+        mb-2
       "
     >
       <!--Buttons mit Custom Props-->
