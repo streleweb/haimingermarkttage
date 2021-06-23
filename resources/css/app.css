@@ -266,5 +266,14 @@ der tailwind components integriert. Diese Styles werden durch die
         0px 18px 23px rgba(0,0,0,0.1);
     }
 
+    .navbg{
+        transition: 0.3s;
+    }
+    
+    .navbg:hover {
+        @apply bg-green-800 rounded-lg;
+        color:#FFFFFF;
+    }
+
 
 }

@@ -84,11 +84,12 @@ export default {
   top: 58px;
   flex-direction: column;
   width: 100%;
-  height: calc(100vh - 58px);
+  height: 100vh;
   padding-top: 3rem;
   background-image: url("/images/background/mobilemenubackground3.svg");
   opacity: 1;
-  z-index: 900;
+  z-index: 4000;
+  overflow: hidden;
 }
 
 .bar-element {
