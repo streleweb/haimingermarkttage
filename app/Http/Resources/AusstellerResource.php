@@ -24,7 +24,7 @@ class AusstellerResource extends JsonResource
             'aussteller_telefonnummer'=> $this->aussteller_telefonnummer,
             'aussteller_websiteurl'=> $this->aussteller_websiteurl,
             'aussteller_zonenfarbe'=> $this->aussteller_zonenfarbe,
-            'aussteller_bildurl'=> $this->aussteller_bildurl,
+            'aussteller_bildurl'=> $this->aussteller_bildurl
             
     
         ];
