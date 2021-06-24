@@ -164,7 +164,7 @@ der tailwind components integriert. Diese Styles werden durch die
     }
 
     .footer {
-       @apply mt-auto p-2 h-8 inline-flex flex-nowrap justify-center gap-3 items-center text-center border-t border-white bg-gray-900 w-full;
+       @apply mt-auto py-2 h-8 inline-flex flex-nowrap justify-center gap-3 items-center text-center border-t border-white bg-gray-900 w-full;
 
        z-index: 3000;
     }
@@ -229,7 +229,7 @@ der tailwind components integriert. Diese Styles werden durch die
             mt-1
             lg:mt-8
             lg:text-2xl
-            font-thin  
+            font-thin;  
     }
 
     .logotextstyle{
@@ -240,7 +240,7 @@ der tailwind components integriert. Diese Styles werden durch die
         btnbp:text-xl
         font-semibold
         text-center
-        tracking-tight
+        tracking-tight;
     }
 
     .buttonshadow{

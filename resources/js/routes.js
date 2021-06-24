@@ -10,6 +10,9 @@ import News from './components/News';
 import Kontakt from './components/Kontakt';
 import Datenschutz from './components/footercomponents/Datenschutz';
 import Impressum from './components/footercomponents/Impressum';
+import Login from './components/VorstandAdminComponents/Login';
+import Dashboard from './components/VorstandAdminComponents/Dashboard';
+import EditAussteller from './components/VorstandAdminComponents/EditAussteller';
 
 export default {
     mode: 'history', //Browser-Tracking-System benützen, um die Pages zu tracken
@@ -69,6 +72,20 @@ export default {
             path: '/app/impressum',
             component: Impressum
         },
+        {
+            path: '/app/admin/login',
+            component: Login
+        },
+
+        {
+            path: '/app/admin/dashboard',
+            component: Dashboard
+        },
+
+        {
+            path: '/app/admin/dashboard/aussteller',
+            component: EditAussteller
+        }
 
     ]
 
