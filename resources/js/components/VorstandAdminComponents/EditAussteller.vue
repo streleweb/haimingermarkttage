@@ -395,4 +395,102 @@
     </div>
   </div>
 </template>
+
+
+<script>
+export default {
+  data() {
+    return {
+      name: "Ausstelleranlegen",
+      aussteller: [],
+      formdata: {
+        aussteller_fullname: null,
+        aussteller_beschreibung: null,
+        aussteller_zonenfarbe: null,
+      }, //Objekt zum Speichern der Model-Daten von oben
+    };
+  },
+  //wenn Component geladen ist, führe die Methoden zum
+  //Laden der Aussteller und Ausstellerfotos via Axios Request aus
+  mounted() {},
+
+  methods: {
+    submitform() {
+      let formToJson = JSON.stringify(this.formdata);
+      console.log(formToJson);
+      try {
+        let result = axios.post("/api/aussteller", {
+          this: this.formdata,
+        });
+        console.log(result.response.data);
+        /*.then((response) => {
+          console.log(response); // debug
+        })
+        .catch(function (error) {
+          // Fehlerbehandlung
+          console.log(error);
+        });*/
+      } catch (error) {
+        console.error(error.response.data);
+      }
+    },
+    loadAussteller: function () {
+      axios
+        .get("/api/aussteller") // load API
+        .then((response) => {
+          this.aussteller = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
+          console.log(this.aussteller);
+        }) // assign to this.aussteller array
+        .catch(function (error) {
+          // Fehlerbehandlung
+          console.log(error);
+        });
+    },
+
+    imgUrl(index) {
+      try {
+        return (
+          "/images/aussteller/" + this.aussteller[index].aussteller_bildurl
+        );
+      } catch (error) {
+        console.log(error);
+      }
+    },
+
+    webUrl(index) {
+      return this.aussteller[index].aussteller_websiteurl;
+    },
+
+    webUrlNotEmpty(index) {
+      return (
+        this.aussteller[index].aussteller_bildurl != null &&
+        this.aussteller[index].aussteller_bildurl != ""
+      );
+    },
+
+    imageUrlNotEmpty(index) {
+      return (
+        this.aussteller[index].aussteller_websiteurl != null &&
+        this.aussteller[index].aussteller_websiteurl != ""
+      );
+    },
+
+    zonenFarbeNotEmpty(index) {
+      return (
+        this.aussteller[index].aussteller_zonenfarbe != null &&
+        this.aussteller[index].aussteller_zonenfarbe != ""
+      );
+    },
+
+    zonenFarbe(index) {
+      return this.aussteller[index].aussteller_zonenfarbe;
+    },
+  },
+};
+</script>
+
+<style>
+</style>
+
+
       

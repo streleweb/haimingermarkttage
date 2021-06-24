@@ -13,6 +13,7 @@ import Impressum from './components/footercomponents/Impressum';
 import Login from './components/VorstandAdminComponents/Login';
 import Dashboard from './components/VorstandAdminComponents/Dashboard';
 import EditAussteller from './components/VorstandAdminComponents/EditAussteller';
+import EditNews from './components/VorstandAdminComponents/EditNews';
 
 export default {
     mode: 'history', //Browser-Tracking-System benützen, um die Pages zu tracken
@@ -85,6 +86,11 @@ export default {
         {
             path: '/app/admin/dashboard/aussteller',
             component: EditAussteller
+        },
+
+        {
+            path: '/app/admin/dashboard/news',
+            component: EditNews
         }
 
     ]

@@ -3957,6 +3957,702 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      name: "Ausstelleranlegen",
+      aussteller: [],
+      formdata: {
+        aussteller_fullname: null,
+        aussteller_beschreibung: null,
+        aussteller_zonenfarbe: null
+      } //Objekt zum Speichern der Model-Daten von oben
+
+    };
+  },
+  //wenn Component geladen ist, führe die Methoden zum
+  //Laden der Aussteller und Ausstellerfotos via Axios Request aus
+  mounted: function mounted() {},
+  methods: {
+    submitform: function submitform() {
+      var formToJson = JSON.stringify(this.formdata);
+      console.log(formToJson);
+
+      try {
+        var result = axios.post("/api/aussteller", {
+          "this": this.formdata
+        });
+        console.log(result.response.data);
+        /*.then((response) => {
+          console.log(response); // debug
+        })
+        .catch(function (error) {
+          // Fehlerbehandlung
+          console.log(error);
+        });*/
+      } catch (error) {
+        console.error(error.response.data);
+      }
+    },
+    loadAussteller: function loadAussteller() {
+      var _this = this;
+
+      axios.get("/api/aussteller") // load API
+      .then(function (response) {
+        _this.aussteller = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
+
+        console.log(_this.aussteller);
+      }) // assign to this.aussteller array
+      ["catch"](function (error) {
+        // Fehlerbehandlung
+        console.log(error);
+      });
+    },
+    imgUrl: function imgUrl(index) {
+      try {
+        return "/images/aussteller/" + this.aussteller[index].aussteller_bildurl;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    webUrl: function webUrl(index) {
+      return this.aussteller[index].aussteller_websiteurl;
+    },
+    webUrlNotEmpty: function webUrlNotEmpty(index) {
+      return this.aussteller[index].aussteller_bildurl != null && this.aussteller[index].aussteller_bildurl != "";
+    },
+    imageUrlNotEmpty: function imageUrlNotEmpty(index) {
+      return this.aussteller[index].aussteller_websiteurl != null && this.aussteller[index].aussteller_websiteurl != "";
+    },
+    zonenFarbeNotEmpty: function zonenFarbeNotEmpty(index) {
+      return this.aussteller[index].aussteller_zonenfarbe != null && this.aussteller[index].aussteller_zonenfarbe != "";
+    },
+    zonenFarbe: function zonenFarbe(index) {
+      return this.aussteller[index].aussteller_zonenfarbe;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      name: "EditNews",
+      news: [],
+      formdata: {
+        news_titel: null,
+        news_textfeld: null,
+        news_bildurl: null
+      } //Objekt zum Speichern der Model-Daten von oben
+
+    };
+  },
+  //wenn Component geladen ist, führe die Methoden zum
+  //Laden der Aussteller und Ausstellerfotos via Axios Request aus
+  mounted: function mounted() {},
+  methods: {
+    submitform: function submitform() {
+      var formToJson = JSON.stringify(this.formdata);
+      console.log(formToJson);
+
+      try {
+        var result = axios.post("/api/news", {
+          "this": this.formdata
+        });
+        console.log(result.response.data);
+        /*.then((response) => {
+          console.log(response); // debug
+        })
+        .catch(function (error) {
+          // Fehlerbehandlung
+          console.log(error);
+        });*/
+      } catch (error) {
+        console.error(error.response.data);
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cards/Card.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/cards/Card.vue?vue&type=script&lang=js& ***!
@@ -4961,6 +5657,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_VorstandAdminComponents_Login__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/VorstandAdminComponents/Login */ "./resources/js/components/VorstandAdminComponents/Login.vue");
 /* harmony import */ var _components_VorstandAdminComponents_Dashboard__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/VorstandAdminComponents/Dashboard */ "./resources/js/components/VorstandAdminComponents/Dashboard.vue");
 /* harmony import */ var _components_VorstandAdminComponents_EditAussteller__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/VorstandAdminComponents/EditAussteller */ "./resources/js/components/VorstandAdminComponents/EditAussteller.vue");
+/* harmony import */ var _components_VorstandAdminComponents_EditNews__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/VorstandAdminComponents/EditNews */ "./resources/js/components/VorstandAdminComponents/EditNews.vue");
+
 
 
 
@@ -5024,6 +5722,9 @@ __webpack_require__.r(__webpack_exports__);
   }, {
     path: '/app/admin/dashboard/aussteller',
     component: _components_VorstandAdminComponents_EditAussteller__WEBPACK_IMPORTED_MODULE_14__.default
+  }, {
+    path: '/app/admin/dashboard/news',
+    component: _components_VorstandAdminComponents_EditNews__WEBPACK_IMPORTED_MODULE_15__.default
   }]
 });
 
@@ -24340,15 +25041,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _EditAussteller_vue_vue_type_template_id_7436eaa4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EditAussteller.vue?vue&type=template&id=7436eaa4& */ "./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=template&id=7436eaa4&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _EditAussteller_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EditAussteller.vue?vue&type=script&lang=js& */ "./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 ;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
-  script,
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _EditAussteller_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
   _EditAussteller_vue_vue_type_template_id_7436eaa4___WEBPACK_IMPORTED_MODULE_0__.render,
   _EditAussteller_vue_vue_type_template_id_7436eaa4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
@@ -24361,6 +25064,45 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/VorstandAdminComponents/EditAussteller.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/VorstandAdminComponents/EditNews.vue":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/EditNews.vue ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _EditNews_vue_vue_type_template_id_5d79314f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EditNews.vue?vue&type=template&id=5d79314f& */ "./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=template&id=5d79314f&");
+/* harmony import */ var _EditNews_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EditNews.vue?vue&type=script&lang=js& */ "./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _EditNews_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _EditNews_vue_vue_type_template_id_5d79314f___WEBPACK_IMPORTED_MODULE_0__.render,
+  _EditNews_vue_vue_type_template_id_5d79314f___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/VorstandAdminComponents/EditNews.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -24863,6 +25605,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Dashboard.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Dashboard.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EditAussteller_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./EditAussteller.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EditAussteller_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNews_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./EditNews.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNews_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
@@ -25435,6 +26209,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EditAussteller_vue_vue_type_template_id_7436eaa4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EditAussteller_vue_vue_type_template_id_7436eaa4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./EditAussteller.vue?vue&type=template&id=7436eaa4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=template&id=7436eaa4&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=template&id=5d79314f&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=template&id=5d79314f& ***!
+  \*****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNews_vue_vue_type_template_id_5d79314f___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNews_vue_vue_type_template_id_5d79314f___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNews_vue_vue_type_template_id_5d79314f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./EditNews.vue?vue&type=template&id=5d79314f& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=template&id=5d79314f&");
 
 
 /***/ }),
@@ -27349,13 +28140,19 @@ var render = function() {
                     ),
                     _vm._v(" "),
                     _c(
-                      "a",
+                      "div",
                       {
                         staticClass:
-                          "\n                text-gray-300\n                hover:bg-gray-700\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              ",
-                        attrs: { href: "#" }
+                          "\n                text-gray-300\n                hover:bg-gray-700\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
                       },
-                      [_vm._v("News")]
+                      [
+                        _c(
+                          "router-link",
+                          { attrs: { to: "/app/admin/dashboard/news" } },
+                          [_vm._v("News")]
+                        )
+                      ],
+                      1
                     ),
                     _vm._v(" "),
                     _c(
@@ -28004,6 +28801,264 @@ var staticRenderFns = [
         ])
       ])
     ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=template&id=5d79314f&":
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=template&id=5d79314f& ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "flex flex-col justify-center items-center" },
+    [
+      _c(
+        "div",
+        {
+          staticClass:
+            "\n      inline-flex\n      self-end\n      py-2\n      px-4\n      mb-2\n      border border-transparent\n      shadow-sm\n      text-sm\n      font-medium\n      rounded-md\n      text-white\n      bg-green-600\n      hover:bg-green-700\n      focus:outline-none\n      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n    "
+        },
+        [
+          _c("router-link", { attrs: { to: "/app/admin/dashboard" } }, [
+            _vm._v("\n      Zurück zur Übersicht\n    ")
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "mt-10 sm:mt-0" }, [
+        _c("div", { staticClass: "md:grid md:grid-cols-3 md:gap-6" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
+            _c(
+              "form",
+              { attrs: { method: "POST", action: "/api/aussteller" } },
+              [
+                _c(
+                  "div",
+                  { staticClass: "shadow overflow-hidden sm:rounded-md" },
+                  [
+                    _c("div", { staticClass: "px-4 py-5 bg-gray-300 sm:p-6" }, [
+                      _c("div", { staticClass: "grid grid-cols-6 gap-6" }, [
+                        _c("div", { staticClass: "col-span-6 sm:col-span-3" }, [
+                          _c(
+                            "label",
+                            {
+                              staticClass:
+                                "block text-sm font-medium text-gray-700",
+                              attrs: { for: "first_name" }
+                            },
+                            [_vm._v("Vor und Nachname")]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.formdata.aussteller_fullname,
+                                expression: "formdata.aussteller_fullname"
+                              }
+                            ],
+                            staticClass:
+                              "\n                      mt-1\n                      focus:ring-indigo-500\n                      focus:border-indigo-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
+                            attrs: {
+                              type: "text",
+                              name: "aussteller_fullname",
+                              id: "full_name",
+                              autocomplete: "given-name"
+                            },
+                            domProps: {
+                              value: _vm.formdata.aussteller_fullname
+                            },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.formdata,
+                                  "aussteller_fullname",
+                                  $event.target.value
+                                )
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-span-6 sm:col-span-4" }, [
+                          _c(
+                            "label",
+                            {
+                              staticClass:
+                                "block text-sm font-medium text-gray-700",
+                              attrs: { for: "email_address" }
+                            },
+                            [_vm._v("Beschreibung")]
+                          ),
+                          _vm._v(" "),
+                          _c("textarea", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.formdata.aussteller_beschreibung,
+                                expression: "formdata.aussteller_beschreibung"
+                              }
+                            ],
+                            staticClass:
+                              "\n                      mt-1\n                      focus:ring-green-500\n                      focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
+                            attrs: {
+                              maxlength: "200",
+                              name: "aussteller_beschreibung",
+                              id: "beschreibung",
+                              autocomplete: "Beschreibung"
+                            },
+                            domProps: {
+                              value: _vm.formdata.aussteller_beschreibung
+                            },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.formdata,
+                                  "aussteller_beschreibung",
+                                  $event.target.value
+                                )
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-span-6" }, [
+                          _c(
+                            "label",
+                            {
+                              staticClass:
+                                "block text-sm font-medium text-gray-700",
+                              attrs: { for: "street_address" }
+                            },
+                            [_vm._v("Zonenfarbe am Markt")]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.formdata.aussteller_zonenfarbe,
+                                expression: "formdata.aussteller_zonenfarbe"
+                              }
+                            ],
+                            staticClass:
+                              "\n                      mt-1\n                      focus:ring-indigo-500\n                      focus:border-indigo-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
+                            attrs: {
+                              type: "text",
+                              name: "aussteller_zonenfarbe",
+                              id: "zonenfarbe",
+                              autocomplete: "Zonenfarbe"
+                            },
+                            domProps: {
+                              value: _vm.formdata.aussteller_zonenfarbe
+                            },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.formdata,
+                                  "aussteller_zonenfarbe",
+                                  $event.target.value
+                                )
+                              }
+                            }
+                          })
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(2)
+                  ]
+                )
+              ]
+            )
+          ])
+        ])
+      ])
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "hidden sm:block", attrs: { "aria-hidden": "true" } },
+      [
+        _c("div", { staticClass: "py-5" }, [
+          _c("div", { staticClass: "border-t border-gray-200" })
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "md:col-span-1" }, [
+      _c("div", { staticClass: "px-4 sm:px-0" }, [
+        _c("h3", { staticClass: "text-lg font-medium leading-6 text-white" }, [
+          _vm._v(
+            "\n            Bitte persönliche Infos des Ausstellers angeben.\n          "
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "px-4 py-3 bg-gray-50 text-right sm:px-6" },
+      [
+        _c(
+          "button",
+          {
+            staticClass:
+              "\n                  inline-flex\n                  justify-center\n                  py-2\n                  px-4\n                  border border-transparent\n                  shadow-sm\n                  text-sm\n                  font-medium\n                  rounded-md\n                  text-white\n                  bg-green-600\n                  hover:bg-black\n                  focus:outline-none\n                  focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500\n                ",
+            attrs: { type: "submit" }
+          },
+          [_vm._v("\n                In DB Speichern\n              ")]
+        )
+      ]
+    )
   }
 ]
 render._withStripped = true

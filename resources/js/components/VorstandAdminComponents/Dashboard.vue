@@ -103,8 +103,7 @@
                 </router-link>
               </div>
 
-              <a
-                href="#"
+              <div
                 class="
                   text-gray-300
                   hover:bg-gray-700
@@ -115,8 +114,9 @@
                   text-sm
                   font-medium
                 "
-                >News</a
               >
+                <router-link to="/app/admin/dashboard/news">News</router-link>
+              </div>
 
               <a
                 href="#"
