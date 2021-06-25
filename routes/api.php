@@ -41,6 +41,7 @@ Route::post('/admin/login', [AuthController::class, 'login']);
 Route::post('/admin/logout', [AuthController::class, 'logout']);
 
 
+
  //Protected routes through Sanctum -- Token-based requests
 Route::group(['middleware' => ['auth:sanctum']], function () {
     
@@ -51,6 +52,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //Nur Admins könnten sich registrieren
     Route::post('/admin/register', [AuthController::class, 'register']);
     //logout
+   
     
 });
 
