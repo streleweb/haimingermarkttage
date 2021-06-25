@@ -14,6 +14,7 @@ import Login from './components/VorstandAdminComponents/Login';
 import Dashboard from './components/VorstandAdminComponents/Dashboard';
 import EditAussteller from './components/VorstandAdminComponents/EditAussteller';
 import EditNews from './components/VorstandAdminComponents/EditNews';
+import AusstellerUebersicht from './components/VorstandAdminComponents/AusstellerUebersicht';
 
 export default {
     mode: 'history', //Browser-Tracking-System benützen, um die Pages zu tracken
@@ -75,24 +76,30 @@ export default {
         },
         {
             path: '/app/admin/login',
-            component: Login
+            component: Login,
+            name: 'adminLogin'
         },
 
         {
             path: '/app/admin/dashboard',
-            component: Dashboard
+            component: Dashboard,
+            name: 'admindashboard'
         },
 
         {
-            path: '/app/admin/dashboard/aussteller',
+            path: '/app/admin/dashboard/editaussteller',
             component: EditAussteller
         },
 
         {
             path: '/app/admin/dashboard/news',
             component: EditNews
-        }
+        },
 
+        {
+            path: '/app/admin/dashboard/ausstelleruebersicht',
+            component: AusstellerUebersicht
+        }
     ]
 
 }

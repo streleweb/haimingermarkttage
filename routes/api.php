@@ -36,17 +36,22 @@ Route::get('/aussteller', [AusstellerController::class, 'index']);
 Route::get('/aussteller/{id}', [AusstellerController::class, 'show']);
 
 //Admin-Public-Routes
-Route::post('/admin/register', [AuthController::class, 'register']);
-Route::post('/admin/login', [AuthController::class, 'login']);
 
-//Protected routes through Sanctum -- Token-based requests
+Route::post('/admin/login', [AuthController::class, 'login']);
+Route::post('/admin/logout', [AuthController::class, 'logout']);
+
+
+ //Protected routes through Sanctum -- Token-based requests
 Route::group(['middleware' => ['auth:sanctum']], function () {
     
     Route::post('/aussteller', [AusstellerController::class, 'store']);
     Route::put('/aussteller/{id}', [AusstellerController::class, 'update']);
     Route::delete('/aussteller/{id}', [AusstellerController::class, 'destroy']);
+
+    //Nur Admins könnten sich registrieren
+    Route::post('/admin/register', [AuthController::class, 'register']);
     //logout
-    Route::post('/admin/logout', [AuthController::class, 'logout']);
+    
 });
 
 

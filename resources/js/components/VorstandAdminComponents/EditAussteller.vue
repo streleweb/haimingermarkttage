@@ -1,38 +1,223 @@
 <template>
-  <div class="mt-2 px-10 py-5">
-    <div class="flex flex-col">
-      <div
-        class="
-          inline-flex
-          self-end
-          py-2
-          px-4
-          mb-2
-          border border-transparent
-          shadow-sm
-          text-sm
-          font-medium
-          rounded-md
-          text-white
-          bg-green-600
-          hover:bg-green-700
-          focus:outline-none
-          focus:ring-2 focus:ring-offset-2 focus:ring-green-500
-        "
-      >
-        <router-link to="/app/admin/dashboard">
-          Zurück zur Übersicht
-        </router-link>
+<div class="h-full w-full">
+<nav class="bg-gray-800 border-b border-gray-300">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          
+            <span class="sr-only">Open main menu</span>
+           
+            <!--
+            Icon when menu is open.
+
+            Heroicon name: outline/x
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+            <svg
+              class="hidden h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="
+            flex-1 flex
+            items-center
+            justify-center
+            sm:items-stretch
+            sm:justify-start
+          "
+        >
+          <div class="flex-shrink-0 flex items-center"></div>
+          <div class="hidden sm:block sm:ml-6">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <router-link to="/app/admin/dashboard"
+                ><span class="text-gray-500 text-lg"
+                  >Dashboard</span
+                ></router-link
+              >
+              <div
+                class="
+                  bg-gray-900
+                  text-white
+                  px-3
+                  py-2
+                  rounded-md
+                  text-sm
+                  font-medium
+                "
+                aria-current="page"
+              >
+                <router-link to="/app/admin/dashboard/ausstelleruebersicht"
+                  >Aussteller
+                </router-link>
+              </div>
+
+              <div
+                class="
+                  text-gray-300
+                  hover:bg-gray-700
+                  hover:text-white
+                  px-3
+                  py-2
+                  rounded-md
+                  text-sm
+                  font-medium
+                "
+              >
+                <router-link to="/app/admin/dashboard/news">News</router-link>
+              </div>
+
+              <a
+                href="#"
+                class="
+                  text-gray-300
+                  hover:bg-gray-700
+                  hover:text-white
+                  px-3
+                  py-2
+                  rounded-md
+                  text-sm
+                  font-medium
+                "
+                >Programm</a
+              >
+
+              <a
+                href="#"
+                class="
+                  text-gray-300
+                  hover:bg-gray-700
+                  hover:text-white
+                  px-3
+                  py-2
+                  rounded-md
+                  text-sm
+                  font-medium
+                "
+                >platzhalter</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="
+            absolute
+            inset-y-0
+            right-0
+            flex
+            items-center
+            pr-2
+            sm:static
+            sm:inset-auto
+            sm:ml-6
+            sm:pr-0
+          "
+        >
+          
+            <span class="text-white">Logout <img src="/public/images/icons/svgs/ausloggen.svg" class= "filter-white" alt=""></span>
+          </div>
+        </div>
       </div>
+    
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a
+          href="#"
+          class="
+            text-gray-300
+            hover:bg-gray-700
+            hover:text-white
+            block
+            px-3
+            py-1
+            rounded-md
+            text-base
+            font-medium
+          "
+          ><router-link to="/app/admin/dashboard">Dashboard</router-link></a
+        >
+        <a
+          href="#"
+          class="
+            bg-gray-900
+            text-white
+            block
+            px-3
+            py-1
+            rounded-md
+            text-base
+            font-medium
+          "
+          aria-current="page"
+          >Aussteller</a
+        > 
+        <!--Wenn Menü aufgeklappt-->
+        
+
+        <a
+          href="#"
+          class="
+            text-gray-300
+            hover:bg-gray-700
+            hover:text-white
+            block
+            px-3
+            py-1
+            rounded-md
+            text-base
+            font-medium
+          "
+          >News</a
+        >
+
+        <a
+          href="#"
+          class="
+            text-gray-300
+            hover:bg-gray-700
+            hover:text-white
+            block
+            px-3
+            py-1
+            rounded-md
+            text-base
+            font-medium
+          "
+          >Programm</a
+        >
+      </div>
+    </div>
+  </nav>
+  <!-- DASHBOARD ENDE-->
+  <div class="pt-2 px-10 py-5 bg-gray-700">
+    <div class="flex flex-col">
+      
       <div class="md:grid md:grid-cols-3 md:gap-6">
         <div class="md:col-span-1">
           <div class="px-4 sm:px-0">
-            <h3 class="text-lg font-medium leading-6 text-gray-900">
+            <h3 class="text-lg font-medium leading-6 text-white">
               Aussteller ändern
             </h3>
-            <p class="mt-1 text-sm text-gray-600">
+            <p class="mt-1 text-sm text-gray-300">
               Aussteller für das kommende Jahr hinzufügen, löschen, oder
-              updaten...
+              updaten... Bei Updates bitte alle gewünschten Felder befüllen.
             </p>
           </div>
         </div>
@@ -138,6 +323,8 @@
                           d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"
                         />
                       </svg>
+                      <!--Farbzone noch -->
+
                     </span>
                     <button
                       type="button"
@@ -202,10 +389,10 @@
       <div class="md:grid md:grid-cols-3 md:gap-6">
         <div class="md:col-span-1">
           <div class="px-4 sm:px-0">
-            <h3 class="text-lg font-medium leading-6 text-gray-900">
+            <h3 class="text-lg font-medium leading-6 text-white">
               Personal Information
             </h3>
-            <p class="mt-1 text-sm text-gray-600">
+            <p class="mt-1 text-sm text-gray-400">
               Ausstellerinformationen. Vor- und Nachname sind Pflichtfelder.
             </p>
           </div>
@@ -219,7 +406,7 @@
                     <label
                       for="first_name"
                       class="block text-sm font-medium text-gray-700"
-                      >Vorname</label
+                      >Vor- und Nachname</label
                     >
                     <input
                       type="text"
@@ -244,13 +431,14 @@
                     <label
                       for="last_name"
                       class="block text-sm font-medium text-gray-700"
-                      >Nachname</label
+                      >Handelsname, falls vorhanden...</label
                     >
                     <input
                       type="text"
                       name="last_name"
                       id="last_name"
                       autocomplete="family-name"
+                      placeholder="Optional [Bsp.: Eier Tirol]"
                       class="
                         mt-1
                         focus:ring-green-500
@@ -276,6 +464,7 @@
                       name="email_address"
                       id="email_address"
                       autocomplete="email"
+                      placeholder="Optional"
                       class="
                         mt-1
                         focus:ring-green-500
@@ -301,6 +490,7 @@
                       name="street_address"
                       id="street_address"
                       autocomplete="street-address"
+                      placeholder="Optional"
                       class="
                         mt-1
                         focus:ring-green-500
@@ -325,6 +515,7 @@
                       type="text"
                       name="city"
                       id="city"
+                      placeholder="Optional"
                       class="
                         mt-1
                         focus:ring-green-500
@@ -350,6 +541,7 @@
                       name="postal_code"
                       id="postal_code"
                       autocomplete="postal-code"
+                      placeholder="Optional"
                       class="
                         mt-1
                         focus:ring-green-500
@@ -393,6 +585,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 </template>
 

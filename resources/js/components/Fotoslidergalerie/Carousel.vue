@@ -44,7 +44,7 @@
         hover:opacity-50
       "
       src="/images/icons/svgs/back.svg"
-      alt="Next"
+      alt="Previous"
       @click="goToPrevious()"
     />
   </div>

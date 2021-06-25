@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import routes from './routes';
+import Vuex from 'vuex'
 require('./bootstrap'); //bootstrap.js
 //require('axios');
 
@@ -8,6 +9,7 @@ require('./bootstrap'); //bootstrap.js
 import App from './components/App.vue';
 
 Vue.use(VueRouter);
+Vue.use(Vuex);
 
 
 /*const app = new Vue({

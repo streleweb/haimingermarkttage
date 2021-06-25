@@ -18,10 +18,6 @@
           w-full
         "
       >
-        <!--listofaussteller
-        grid grid-flow-row grid-rows-2 grid-cols-2
-        lg:grid-flow-col lg:grid-cols-3
-        gap-3-->
         <article
           v-for="(jeweiligerAussteller, index) in aussteller"
           :key="index"
@@ -80,33 +76,8 @@
               </ul>
             </div>
           </div>
-          <!--<li class="border rounded-lg">
-          <a
-            :href="jeweiligerAussteller.aussteller_websiteurl"
-            class="text-4xl"
-            >{{ jeweiligerAussteller.aussteller_fullname }}</a
-          >
-          <p>{{ jeweiligerAussteller.aussteller_beschreibung }}</p>
-
-          <Farbzone
-            :class="jeweiligerAussteller.aussteller_zonenfarbe"
-          ></Farbzone>
-        </li>-->
         </article>
-
-        <!-- end willkommen -->
       </div>
-
-      <!--
-      <router-link to="/app/ausstelleranlegen">
-        <Button
-          button-inhalt="Aussteller anlegen"
-          button-color="bg-green-400"
-          on-hover="hover:bg-yellow-50"
-        ></Button>
-      </router-link>
-    </div>-->
-      <!-- end buttoncontainer -->
     </div>
     <div class="flex justify-center mt-5 mb-5">
       <!--Buttons mit Custom Props-->
@@ -130,7 +101,6 @@ export default {
   data() {
     return {
       aussteller: [],
-      ausstellerfotos: [],
     };
   },
   //wenn Component geladen ist, führe die Methoden zum
@@ -165,17 +135,18 @@ export default {
     },
 
     webUrl(index) {
-      return this.aussteller[index].aussteller_websiteurl;
+      let http = "http://";
+      return http + this.aussteller[index].aussteller_websiteurl;
     },
 
-    webUrlNotEmpty(index) {
+    imageUrlNotEmpty(index) {
       return (
         this.aussteller[index].aussteller_bildurl != null &&
         this.aussteller[index].aussteller_bildurl != ""
       );
     },
 
-    imageUrlNotEmpty(index) {
+    webUrlNotEmpty(index) {
       return (
         this.aussteller[index].aussteller_websiteurl != null &&
         this.aussteller[index].aussteller_websiteurl != ""

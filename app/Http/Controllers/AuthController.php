@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
+use Auth;
 
 class AuthController extends Controller
 {
@@ -64,11 +65,14 @@ class AuthController extends Controller
     }
 
     public function logout(Request $request){
-        auth()->user()->tokens()->delete(); //Alle möglichen Tokens löschen
+
+        Auth::logout();
+        return response(null, 200);
+        /*auth()->user()->tokens()->delete(); //Alle möglichen Tokens löschen
 
         return[
             'message' => 'Logged out!'
-        ];
+        ];*/
     }
 
 

@@ -14,6 +14,8 @@
     "
   >
     <div class="max-w-md w-full space-y-8">
+      <p v-if="loading">loading...</p>
+      <p v-if="error" style="color: red">error</p>
       <div>
         <img
           class="mx-auto h-20 w-auto border border-green-500"
@@ -24,12 +26,13 @@
           Admin login
         </h2>
       </div>
-      <form class="mt-8 space-y-6" action="#" method="POST">
+      <div class="mt-8 space-y-6">
         <input type="hidden" name="remember" value="true" />
         <div class="rounded-md shadow-sm -space-y-px">
           <div>
             <label for="email-address" class="sr-only">Email address</label>
             <input
+              v-model="user.email"
               id="email-address"
               name="email"
               type="email"
@@ -59,6 +62,7 @@
           <div>
             <label for="password" class="sr-only">Passwort</label>
             <input
+              v-model="user.password"
               id="password"
               name="password"
               type="password"
@@ -116,7 +120,7 @@
 
         <div>
           <button
-            type="submit"
+            @click="handleLogin()"
             class="
               group
               relative
@@ -155,7 +159,53 @@
             Sign in
           </button>
         </div>
-      </form>
+      </div>
     </div>
   </div>
 </template>
+
+
+
+<script>
+export default {
+  name: "Login",
+
+  data() {
+    return {
+      user: {
+        email: null,
+        password: null,
+      },
+      loading: false,
+      error: null,
+      einloggenErfolgreich: null,
+    };
+  },
+
+  methods: {
+    async handleLogin() {
+      this.error = null;
+      try {
+        await axios
+          .get("/http://localhost/sanctum/csrf-cookie")
+          .then((response) => {
+            axios
+              .post("http://localhost:8000/api/admin/login", this.user)
+              .then((response) => {
+                alert("Login erfolgreich, " + response.data.user.name + "!");
+                this.einloggenErfolgreich = true;
+              });
+            this.$router.push({ name: "admindashboard" });
+          });
+      } catch (error) {
+        this.error = error;
+      } finally {
+        this.loading = false;
+      }
+    },
+  },
+};
+</script>
+
+<style>
+</style>
