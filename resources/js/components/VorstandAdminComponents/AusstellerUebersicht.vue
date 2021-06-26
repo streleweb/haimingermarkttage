@@ -1,7 +1,12 @@
 <template>
 
+<div class="w-full">
+<div v-if="loggedIn() == false" class="flex w-full h-full items-center justify-center text-red-900 bg-gray-900"> 
+  Nicht eingeloggt! Bitte loggen Sie sich ein, um auf diese Seite zugreifen zu können...</div>
+<!-- Check for Login-Status, only display if logged in-->
+
 <!-- DASHBOARD -->
-<div class="h-full w-full">
+<div v-if="loggedIn()" class="h-full w-full">
  
 <nav class="bg-gray-800 border-b border-gray-300">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -232,6 +237,9 @@
   <div class="ausstellergradient">
     <div class="ausstellercontainer">
       
+      <div class="inline-flex justify-end pt-5 pr-10 items-center w-full"><!--Neuen Aussteller hinzufügen Button-->
+      <router-link to="/app/admin/dashboard/ausstelleranlegen"><button class="btn btn-green">Neuen Aussteller hinzufügen</button></router-link>
+      <!--Neuen Aussteller hinzufügen Button END--></div>
       <div
         class="
           grid grid-cols-1
@@ -313,6 +321,7 @@
     </div>
   </div>
   </div>
+  </div>
 </template>
 
 <script>
@@ -341,6 +350,10 @@ export default {
   },
 
   methods: {
+    loggedIn() {
+      if (localStorage.getItem("isLoggedIn") == "true") return true;
+      else return false;
+    },
     async handleLogout() {
       this.loading = true;
       try {
@@ -432,6 +445,9 @@ export default {
 .btn-gray {
   @apply bg-gray-500 text-white;
 }
+.btn-green {
+  @apply bg-green-500 text-white;
+}
 .btn-red {
   @apply bg-red-500 text-white;
 }
@@ -443,6 +459,9 @@ export default {
 }
 .btn-gray:hover {
   @apply bg-gray-700;
+}
+.btn-green:hover {
+  @apply bg-green-700 text-white;
 }
 
 .articlestyling {

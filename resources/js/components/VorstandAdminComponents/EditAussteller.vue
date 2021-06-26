@@ -1,5 +1,10 @@
 <template>
-<div class="h-full w-full">
+<div class= "w-full">
+<div v-if="loggedIn() == false" class="flex w-full h-full items-center justify-center text-red-900 bg-gray-900"> 
+  Nicht eingeloggt! Bitte loggen Sie sich ein, um auf diese Seite zugreifen zu können...</div>
+<!-- Check for Login-Status, only display if logged in-->
+<div v-if="loggedIn()" class="w-full ">
+
 <nav class="bg-gray-800 border-b border-gray-300">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
@@ -227,8 +232,8 @@
               Aussteller ändern
             </h3>
             <p class="mt-1 text-sm text-gray-300">
-              Aussteller für das kommende Jahr hinzufügen, löschen, oder
-              updaten... Bei Updates bitte alle gewünschten Felder befüllen.
+              Hier können jeweilige Ausstellerinformationen für das kommende Jahr abgeändert werden, ohne
+              den Aussteller löschen und wieder hinzufügen zu müssen...
             </p>
           </div>
         </div>
@@ -404,7 +409,7 @@
               Personal Information
             </h3>
             <p class="mt-1 text-sm text-gray-400">
-              Ausstellerinformationen. Vor- und Nachname sind Pflichtfelder.
+              Ausstellerinformationen. Vor- und Nachname ist ein Pflichtfeld.
             </p>
           </div>
         </div>
@@ -598,6 +603,7 @@
     </div>
   </div>
   </div>
+  </div>
 </template>
 
 
@@ -619,6 +625,10 @@ export default {
   mounted() {},
 
   methods: {
+    loggedIn() {
+      if (localStorage.getItem("isLoggedIn") == "true") return true;
+      else return false;
+    },
     submitform() {
       let formToJson = JSON.stringify(this.formdata);
       console.log(formToJson);

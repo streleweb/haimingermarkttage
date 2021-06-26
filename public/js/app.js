@@ -3695,6 +3695,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -3721,6 +3730,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     /*this.loadAusstellerfoto();*/
   },
   methods: {
+    loggedIn: function loggedIn() {
+      if (localStorage.getItem("isLoggedIn") == "true") return true;else return false;
+    },
     handleLogout: function handleLogout() {
       var _this = this;
 
@@ -3855,6 +3867,236 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4006,6 +4248,53 @@ __webpack_require__.r(__webpack_exports__);
   //Laden der Aussteller und Ausstellerfotos via Axios Request aus
   mounted: function mounted() {},
   methods: {
+    loggedIn: function loggedIn() {
+      if (localStorage.getItem("isLoggedIn") == "true") {
+        return true;
+      } else return false;
+    },
+    handleLogout: function handleLogout() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.prev = 0;
+                _context.next = 3;
+                return axios.post("http://localhost:8000/api/admin/logout");
+
+              case 3:
+                //LocalStorage LoggedIn-Status löschen
+                localStorage.removeItem("isLoggedIn");
+                localStorage;
+
+                _this.$router.push({
+                  name: "adminLogin"
+                });
+
+                _context.next = 11;
+                break;
+
+              case 8:
+                _context.prev = 8;
+                _context.t0 = _context["catch"](0);
+                console.log(_context.t0);
+
+              case 11:
+                _context.prev = 11;
+                _this.loading = false;
+                return _context.finish(11);
+
+              case 14:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[0, 8, 11, 14]]);
+      }))();
+    },
     submitform: function submitform() {
       var formToJson = JSON.stringify(this.formdata);
       console.log(formToJson);
@@ -4275,6 +4564,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Dashboard",
   data: function data() {
@@ -4283,6 +4577,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     };
   },
   methods: {
+    loggedIn: function loggedIn() {
+      if (localStorage.getItem("isLoggedIn") == "true") {
+        return true;
+      } else return false;
+    },
     handleLogout: function handleLogout() {
       var _this = this;
 
@@ -4945,6 +5244,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -4962,6 +5267,9 @@ __webpack_require__.r(__webpack_exports__);
   //Laden der Aussteller und Ausstellerfotos via Axios Request aus
   mounted: function mounted() {},
   methods: {
+    loggedIn: function loggedIn() {
+      if (localStorage.getItem("isLoggedIn") == "true") return true;else return false;
+    },
     submitform: function submitform() {
       var formToJson = JSON.stringify(this.formdata);
       console.log(formToJson);
@@ -5206,6 +5514,9 @@ __webpack_require__.r(__webpack_exports__);
   //Laden der Aussteller und Ausstellerfotos via Axios Request aus
   mounted: function mounted() {},
   methods: {
+    loggedIn: function loggedIn() {
+      if (localStorage.getItem("loggedIn") == "true") return true;else return false;
+    },
     submitform: function submitform() {
       var formToJson = JSON.stringify(this.formdata);
       console.log(formToJson);
@@ -6897,9 +7208,6 @@ __webpack_require__.r(__webpack_exports__);
     path: '/app/aussteller',
     component: _components_Aussteller__WEBPACK_IMPORTED_MODULE_5__.default
   }, {
-    path: '/app/ausstelleranlegen',
-    component: _components_VorstandAdminComponents_Ausstelleranlegen__WEBPACK_IMPORTED_MODULE_6__.default
-  }, {
     path: '/app/fotogalerie',
     component: _components_Fotogalerie__WEBPACK_IMPORTED_MODULE_7__.default
   }, {
@@ -6926,6 +7234,9 @@ __webpack_require__.r(__webpack_exports__);
       requiresAuth: true
     } //protected - Login erforderlich
 
+  }, {
+    path: '/app/admin/dashboard/ausstelleranlegen',
+    component: _components_VorstandAdminComponents_Ausstelleranlegen__WEBPACK_IMPORTED_MODULE_6__.default
   }, {
     path: '/app/admin/dashboard/editaussteller',
     component: _components_VorstandAdminComponents_EditAussteller__WEBPACK_IMPORTED_MODULE_14__.default,
@@ -7236,7 +7547,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".btn[data-v-3adb8d1e] {\n  border-radius: 0.25rem;\n  font-weight: 700;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n}\n.btn-blue[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(59, 130, 246, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.btn-gray[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(107, 114, 128, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.btn-red[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(239, 68, 68, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.btn-blue[data-v-3adb8d1e]:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(29, 78, 216, var(--tw-bg-opacity));\n}\n.btn-red[data-v-3adb8d1e]:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(185, 28, 28, var(--tw-bg-opacity));\n}\n.btn-gray[data-v-3adb8d1e]:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));\n}\n.articlestyling[data-v-3adb8d1e] {\n  background: #eee5e9;\n  border: none;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 20px;\n  text-align: center;\n  width: 250px;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-3adb8d1e]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-3adb8d1e] {\n  width: 100%;\n  border-top-left-radius: 20px;\n  border-top-right-radius: 20px;\n  z-index: 1;\n}\n.text[data-v-3adb8d1e] {\n  padding: 0 20px 20px;\n}\n.text h3[data-v-3adb8d1e] {\n  text-transform: uppercase;\n}\n.ausstellergradient[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: 50% 50%;\n  background-size: cover;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".btn[data-v-3adb8d1e] {\n  border-radius: 0.25rem;\n  font-weight: 700;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n}\n.btn-blue[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(59, 130, 246, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.btn-gray[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(107, 114, 128, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.btn-green[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(16, 185, 129, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.btn-red[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(239, 68, 68, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.btn-blue[data-v-3adb8d1e]:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(29, 78, 216, var(--tw-bg-opacity));\n}\n.btn-red[data-v-3adb8d1e]:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(185, 28, 28, var(--tw-bg-opacity));\n}\n.btn-gray[data-v-3adb8d1e]:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));\n}\n.btn-green[data-v-3adb8d1e]:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(4, 120, 87, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.articlestyling[data-v-3adb8d1e] {\n  background: #eee5e9;\n  border: none;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 20px;\n  text-align: center;\n  width: 250px;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-3adb8d1e]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-3adb8d1e] {\n  width: 100%;\n  border-top-left-radius: 20px;\n  border-top-right-radius: 20px;\n  z-index: 1;\n}\n.text[data-v-3adb8d1e] {\n  padding: 0 20px 20px;\n}\n.text h3[data-v-3adb8d1e] {\n  text-transform: uppercase;\n}\n.ausstellergradient[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: 50% 50%;\n  background-size: cover;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -29816,346 +30127,68 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "h-full w-full" }, [
-    _c("nav", { staticClass: "bg-gray-800 border-b border-gray-300" }, [
-      _c("div", { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" }, [
-        _c(
+  return _c("div", { staticClass: "w-full" }, [
+    _vm.loggedIn() == false
+      ? _c(
           "div",
-          { staticClass: "relative flex items-center justify-between h-16" },
+          {
+            staticClass:
+              "flex w-full h-full items-center justify-center text-red-900 bg-gray-900"
+          },
           [
+            _vm._v(
+              " \r\n  Nicht eingeloggt! Bitte loggen Sie sich ein, um auf diese Seite zugreifen zu können..."
+            )
+          ]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.loggedIn()
+      ? _c("div", { staticClass: "h-full w-full" }, [
+          _c("nav", { staticClass: "bg-gray-800 border-b border-gray-300" }, [
             _c(
               "div",
-              {
-                staticClass:
-                  "absolute inset-y-0 left-0 flex items-center sm:hidden"
-              },
-              [
-                _c("span", { staticClass: "sr-only" }, [
-                  _vm._v("Open main menu")
-                ]),
-                _vm._v(" "),
-                _c(
-                  "svg",
-                  {
-                    staticClass: "hidden h-6 w-6",
-                    attrs: {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      fill: "none",
-                      viewBox: "0 0 24 24",
-                      stroke: "currentColor",
-                      "aria-hidden": "true"
-                    }
-                  },
-                  [
-                    _c("path", {
-                      attrs: {
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
-                        "stroke-width": "2",
-                        d: "M6 18L18 6M6 6l12 12"
-                      }
-                    })
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "\r\n            flex-1 flex\r\n            items-center\r\n            justify-center\r\n            sm:items-stretch\r\n            sm:justify-start\r\n          "
-              },
-              [
-                _c("div", { staticClass: "flex-shrink-0 flex items-center" }),
-                _vm._v(" "),
-                _c("div", { staticClass: "hidden sm:block sm:ml-6" }, [
-                  _c(
-                    "div",
-                    { staticClass: "flex space-x-4" },
-                    [
-                      _c(
-                        "router-link",
-                        { attrs: { to: "/app/admin/dashboard" } },
-                        [
-                          _c("span", { staticClass: "text-gray-500 text-lg" }, [
-                            _vm._v("Dashboard")
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\r\n                  bg-gray-900\r\n                  text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
-                          attrs: { "aria-current": "page" }
-                        },
-                        [
-                          _c(
-                            "router-link",
-                            {
-                              attrs: {
-                                to: "/app/admin/dashboard/ausstelleruebersicht"
-                              }
-                            },
-                            [_vm._v("Aussteller\r\n                ")]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
-                        },
-                        [
-                          _c(
-                            "router-link",
-                            { attrs: { to: "/app/admin/dashboard/news" } },
-                            [_vm._v("News")]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass:
-                            "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
-                          attrs: { href: "#" }
-                        },
-                        [_vm._v("Programm")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass:
-                            "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
-                          attrs: { href: "#" }
-                        },
-                        [_vm._v("platzhalter")]
-                      )
-                    ],
-                    1
-                  )
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "\r\n            absolute\r\n            inset-y-0\r\n            right-0\r\n            flex\r\n            items-center\r\n            pr-2\r\n            sm:static\r\n            sm:inset-auto\r\n            sm:ml-6\r\n            sm:pr-0\r\n          "
-              },
+              { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" },
               [
                 _c(
                   "div",
                   {
                     staticClass:
-                      "\r\n                  text-gray-300\r\n                  hover:bg-red-900\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                      "relative flex items-center justify-between h-16"
                   },
                   [
-                    _c(
-                      "span",
-                      {
-                        staticClass: "text-white cursor-pointer",
-                        on: {
-                          click: function($event) {
-                            return _vm.handleLogout()
-                          }
-                        }
-                      },
-                      [
-                        _vm._v("Logout "),
-                        _c("img", {
-                          staticClass: "filter-white",
-                          attrs: {
-                            src: "/public/images/icons/svgs/ausloggen.svg",
-                            alt: ""
-                          }
-                        })
-                      ]
-                    )
-                  ]
-                )
-              ]
-            )
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "sm:hidden", attrs: { id: "mobile-menu" } }, [
-        _c("div", { staticClass: "px-2 pt-2 pb-3 space-y-1" }, [
-          _c(
-            "a",
-            {
-              staticClass:
-                "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
-              attrs: { href: "#" }
-            },
-            [
-              _c("router-link", { attrs: { to: "/app/admin/dashboard" } }, [
-                _vm._v("Dashboard")
-              ])
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "\r\n            bg-gray-900\r\n            text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
-              attrs: { href: "#", "aria-current": "page" }
-            },
-            [_vm._v("Aussteller")]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
-              attrs: { href: "#" }
-            },
-            [_vm._v("News")]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
-              attrs: { href: "#" }
-            },
-            [_vm._v("Programm")]
-          )
-        ])
-      ])
-    ]),
-    _vm._v(" "),
-    _vm.loading
-      ? _c("p", [
-          _c("img", {
-            staticClass: "mx-auto",
-            attrs: {
-              src: "/images/icons/gifs/loadingtransparent.gif",
-              alt: "loading..."
-            }
-          })
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _c("div", { staticClass: "ausstellergradient" }, [
-      _c("div", { staticClass: "ausstellercontainer" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "\r\n          grid grid-cols-1\r\n          sm:grid-cols-2\r\n          lg:grid-cols-3\r\n          gap-8\r\n          items-center\r\n          w-full pt-4\r\n        "
-          },
-          [
-            _vm.error
-              ? _c("p", { staticStyle: {} }, [_vm._v(_vm._s(_vm.error))])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm._l(_vm.aussteller, function(jeweiligerAussteller, index) {
-              return _c(
-                "article",
-                {
-                  key: index,
-                  staticClass: "articlestyling mx-auto overflow-hidden w-full"
-                },
-                [
-                  _vm.imageUrlNotEmpty(index)
-                    ? _c("img", {
-                        staticClass: "border-b-2 border-yellow-50",
-                        attrs: { src: _vm.imgUrl(index), alt: "" }
-                      })
-                    : _c("img", {
-                        staticClass:
-                          "\r\n              filter-white\r\n              bg-gray-50 bg-opacity-20\r\n              border-b-2 border-black\r\n            ",
-                        attrs: {
-                          src: "/images/icons/svgs/aussteller.svg",
-                          alt: "Ausstellerfoto"
-                        }
-                      }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "text text-center lg:text-lg" }, [
-                    _c("h3", { staticClass: "font-bold text-gray-800 mb-2" }, [
-                      _vm._v(
-                        "\r\n              " +
-                          _vm._s(jeweiligerAussteller.aussteller_fullname) +
-                          "\r\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "text-sm lg:text-base mb-2" }, [
-                      _vm._v(
-                        "\r\n              " +
-                          _vm._s(jeweiligerAussteller.aussteller_beschreibung) +
-                          "\r\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
                     _c(
                       "div",
                       {
                         staticClass:
-                          "\r\n                bg-gray-800\r\n                relative\r\n                bottom-0\r\n                left-0\r\n                right-0\r\n                h-10\r\n                flex\r\n                justify-center\r\n                items-center\r\n                rounded-lg\r\n              "
+                          "absolute inset-y-0 left-0 flex items-center sm:hidden"
                       },
                       [
+                        _c("span", { staticClass: "sr-only" }, [
+                          _vm._v("Open main menu")
+                        ]),
+                        _vm._v(" "),
                         _c(
-                          "ul",
+                          "svg",
                           {
-                            staticClass:
-                              "inline-flex gap-2 justify-center items-center"
+                            staticClass: "hidden h-6 w-6",
+                            attrs: {
+                              xmlns: "http://www.w3.org/2000/svg",
+                              fill: "none",
+                              viewBox: "0 0 24 24",
+                              stroke: "currentColor",
+                              "aria-hidden": "true"
+                            }
                           },
                           [
-                            _vm.webUrlNotEmpty(index)
-                              ? _c("li", [
-                                  _c(
-                                    "a",
-                                    {
-                                      attrs: {
-                                        href: _vm.webUrl(index),
-                                        target: "_blank"
-                                      }
-                                    },
-                                    [
-                                      _c("img", {
-                                        staticClass:
-                                          "resize-icon filter-white-icons",
-                                        attrs: {
-                                          src: "/images/icons/svgs/www.svg",
-                                          alt: "website"
-                                        }
-                                      })
-                                    ]
-                                  )
-                                ])
-                              : _vm._e(),
-                            _vm._v(" "),
-                            _vm.zonenFarbeNotEmpty(index)
-                              ? _c(
-                                  "li",
-                                  { staticClass: "h-5 w-32" },
-                                  [
-                                    _c("Farbzone", {
-                                      attrs: {
-                                        "zonen-farbe": _vm.zonenFarbe(index)
-                                      }
-                                    })
-                                  ],
-                                  1
-                                )
-                              : _vm._e()
+                            _c("path", {
+                              attrs: {
+                                "stroke-linecap": "round",
+                                "stroke-linejoin": "round",
+                                "stroke-width": "2",
+                                d: "M6 18L18 6M6 6l12 12"
+                              }
+                            })
                           ]
                         )
                       ]
@@ -30163,39 +30196,404 @@ var render = function() {
                     _vm._v(" "),
                     _c(
                       "div",
-                      { staticClass: "gap-2 justify-start items-center mt-3" },
+                      {
+                        staticClass:
+                          "\r\n            flex-1 flex\r\n            items-center\r\n            justify-center\r\n            sm:items-stretch\r\n            sm:justify-start\r\n          "
+                      },
+                      [
+                        _c("div", {
+                          staticClass: "flex-shrink-0 flex items-center"
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "hidden sm:block sm:ml-6" }, [
+                          _c(
+                            "div",
+                            { staticClass: "flex space-x-4" },
+                            [
+                              _c(
+                                "router-link",
+                                { attrs: { to: "/app/admin/dashboard" } },
+                                [
+                                  _c(
+                                    "span",
+                                    { staticClass: "text-gray-500 text-lg" },
+                                    [_vm._v("Dashboard")]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "\r\n                  bg-gray-900\r\n                  text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                  attrs: { "aria-current": "page" }
+                                },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      attrs: {
+                                        to:
+                                          "/app/admin/dashboard/ausstelleruebersicht"
+                                      }
+                                    },
+                                    [_vm._v("Aussteller\r\n                ")]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                                },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      attrs: { to: "/app/admin/dashboard/news" }
+                                    },
+                                    [_vm._v("News")]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                  attrs: { href: "#" }
+                                },
+                                [_vm._v("Programm")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                  attrs: { href: "#" }
+                                },
+                                [_vm._v("platzhalter")]
+                              )
+                            ],
+                            1
+                          )
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "\r\n            absolute\r\n            inset-y-0\r\n            right-0\r\n            flex\r\n            items-center\r\n            pr-2\r\n            sm:static\r\n            sm:inset-auto\r\n            sm:ml-6\r\n            sm:pr-0\r\n          "
+                      },
                       [
                         _c(
-                          "router-link",
+                          "div",
                           {
-                            attrs: { to: "/app/admin/dashboard/editaussteller" }
+                            staticClass:
+                              "\r\n                  text-gray-300\r\n                  hover:bg-red-900\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
                           },
                           [
-                            _c("button", { staticClass: "btn btn-blue" }, [
-                              _vm._v("edit")
-                            ])
+                            _c(
+                              "span",
+                              {
+                                staticClass: "text-white cursor-pointer",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.handleLogout()
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v("Logout "),
+                                _c("img", {
+                                  staticClass: "filter-white",
+                                  attrs: {
+                                    src:
+                                      "/public/images/icons/svgs/ausloggen.svg",
+                                    alt: ""
+                                  }
+                                })
+                              ]
+                            )
                           ]
-                        ),
-                        _vm._v(" "),
-                        _c("button", { staticClass: "btn btn-gray" }, [
-                          _vm._v("hide")
-                        ]),
-                        _vm._v(" "),
-                        _c("button", { staticClass: "btn btn-red" }, [
-                          _vm._v("delete")
-                        ])
-                      ],
-                      1
+                        )
+                      ]
                     )
-                  ])
-                ]
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "sm:hidden", attrs: { id: "mobile-menu" } },
+              [
+                _c("div", { staticClass: "px-2 pt-2 pb-3 space-y-1" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#" }
+                    },
+                    [
+                      _c(
+                        "router-link",
+                        { attrs: { to: "/app/admin/dashboard" } },
+                        [_vm._v("Dashboard")]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            bg-gray-900\r\n            text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#", "aria-current": "page" }
+                    },
+                    [_vm._v("Aussteller")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("News")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Programm")]
+                  )
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _vm.loading
+            ? _c("p", [
+                _c("img", {
+                  staticClass: "mx-auto",
+                  attrs: {
+                    src: "/images/icons/gifs/loadingtransparent.gif",
+                    alt: "loading..."
+                  }
+                })
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _c("div", { staticClass: "ausstellergradient" }, [
+            _c("div", { staticClass: "ausstellercontainer" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "inline-flex justify-end pt-5 pr-10 items-center w-full"
+                },
+                [
+                  _c(
+                    "router-link",
+                    { attrs: { to: "/app/admin/dashboard/ausstelleranlegen" } },
+                    [
+                      _c("button", { staticClass: "btn btn-green" }, [
+                        _vm._v("Neuen Aussteller hinzufügen")
+                      ])
+                    ]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "\r\n          grid grid-cols-1\r\n          sm:grid-cols-2\r\n          lg:grid-cols-3\r\n          gap-8\r\n          items-center\r\n          w-full pt-4\r\n        "
+                },
+                [
+                  _vm.error
+                    ? _c("p", { staticStyle: {} }, [_vm._v(_vm._s(_vm.error))])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm._l(_vm.aussteller, function(jeweiligerAussteller, index) {
+                    return _c(
+                      "article",
+                      {
+                        key: index,
+                        staticClass:
+                          "articlestyling mx-auto overflow-hidden w-full"
+                      },
+                      [
+                        _vm.imageUrlNotEmpty(index)
+                          ? _c("img", {
+                              staticClass: "border-b-2 border-yellow-50",
+                              attrs: { src: _vm.imgUrl(index), alt: "" }
+                            })
+                          : _c("img", {
+                              staticClass:
+                                "\r\n              filter-white\r\n              bg-gray-50 bg-opacity-20\r\n              border-b-2 border-black\r\n            ",
+                              attrs: {
+                                src: "/images/icons/svgs/aussteller.svg",
+                                alt: "Ausstellerfoto"
+                              }
+                            }),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "text text-center lg:text-lg" },
+                          [
+                            _c(
+                              "h3",
+                              { staticClass: "font-bold text-gray-800 mb-2" },
+                              [
+                                _vm._v(
+                                  "\r\n              " +
+                                    _vm._s(
+                                      jeweiligerAussteller.aussteller_fullname
+                                    ) +
+                                    "\r\n            "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "p",
+                              { staticClass: "text-sm lg:text-base mb-2" },
+                              [
+                                _vm._v(
+                                  "\r\n              " +
+                                    _vm._s(
+                                      jeweiligerAussteller.aussteller_beschreibung
+                                    ) +
+                                    "\r\n            "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "\r\n                bg-gray-800\r\n                relative\r\n                bottom-0\r\n                left-0\r\n                right-0\r\n                h-10\r\n                flex\r\n                justify-center\r\n                items-center\r\n                rounded-lg\r\n              "
+                              },
+                              [
+                                _c(
+                                  "ul",
+                                  {
+                                    staticClass:
+                                      "inline-flex gap-2 justify-center items-center"
+                                  },
+                                  [
+                                    _vm.webUrlNotEmpty(index)
+                                      ? _c("li", [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                href: _vm.webUrl(index),
+                                                target: "_blank"
+                                              }
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass:
+                                                  "resize-icon filter-white-icons",
+                                                attrs: {
+                                                  src:
+                                                    "/images/icons/svgs/www.svg",
+                                                  alt: "website"
+                                                }
+                                              })
+                                            ]
+                                          )
+                                        ])
+                                      : _vm._e(),
+                                    _vm._v(" "),
+                                    _vm.zonenFarbeNotEmpty(index)
+                                      ? _c(
+                                          "li",
+                                          { staticClass: "h-5 w-32" },
+                                          [
+                                            _c("Farbzone", {
+                                              attrs: {
+                                                "zonen-farbe": _vm.zonenFarbe(
+                                                  index
+                                                )
+                                              }
+                                            })
+                                          ],
+                                          1
+                                        )
+                                      : _vm._e()
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "gap-2 justify-start items-center mt-3"
+                              },
+                              [
+                                _c(
+                                  "router-link",
+                                  {
+                                    attrs: {
+                                      to: "/app/admin/dashboard/editaussteller"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "button",
+                                      { staticClass: "btn btn-blue" },
+                                      [_vm._v("edit")]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("button", { staticClass: "btn btn-gray" }, [
+                                  _vm._v("hide")
+                                ]),
+                                _vm._v(" "),
+                                _c("button", { staticClass: "btn btn-red" }, [
+                                  _vm._v("delete")
+                                ])
+                              ],
+                              1
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  })
+                ],
+                2
               )
-            })
-          ],
-          2
-        )
-      ])
-    ])
+            ])
+          ])
+        ])
+      : _vm._e()
   ])
 }
 var staticRenderFns = []
@@ -30221,155 +30619,480 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _vm._m(0),
+  return _c("div", { staticClass: "w-full h-full" }, [
+    _vm.loggedIn() == false
+      ? _c(
+          "div",
+          {
+            staticClass:
+              "flex w-full h-full items-center justify-center text-red-900 bg-gray-900"
+          },
+          [
+            _vm._v(
+              " Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard zugreifen zu können..."
+            )
+          ]
+        )
+      : _vm._e(),
     _vm._v(" "),
-    _c("div", { staticClass: "mt-10 sm:mt-0" }, [
-      _c("div", { staticClass: "md:grid md:grid-cols-3 md:gap-6" }, [
-        _vm._m(1),
-        _vm._v(" "),
-        _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
-          _c("form", { attrs: { method: "POST", action: "/api/aussteller" } }, [
-            _c("div", { staticClass: "shadow overflow-hidden sm:rounded-md" }, [
-              _c("div", { staticClass: "px-4 py-5 bg-gray-300 sm:p-6" }, [
-                _c("div", { staticClass: "grid grid-cols-6 gap-6" }, [
-                  _c("div", { staticClass: "col-span-6 sm:col-span-3" }, [
+    _vm.loggedIn()
+      ? _c("div", { staticClass: "w-full" }, [
+          _c("nav", { staticClass: "bg-gray-800 border-b border-gray-300" }, [
+            _c(
+              "div",
+              { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "relative flex items-center justify-between h-16"
+                  },
+                  [
                     _c(
-                      "label",
+                      "div",
                       {
-                        staticClass: "block text-sm font-medium text-gray-700",
-                        attrs: { for: "first_name" }
+                        staticClass:
+                          "absolute inset-y-0 left-0 flex items-center sm:hidden"
                       },
-                      [_vm._v("Vor und Nachname")]
+                      [
+                        _c("span", { staticClass: "sr-only" }, [
+                          _vm._v("Open main menu")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "svg",
+                          {
+                            staticClass: "hidden h-6 w-6",
+                            attrs: {
+                              xmlns: "http://www.w3.org/2000/svg",
+                              fill: "none",
+                              viewBox: "0 0 24 24",
+                              stroke: "currentColor",
+                              "aria-hidden": "true"
+                            }
+                          },
+                          [
+                            _c("path", {
+                              attrs: {
+                                "stroke-linecap": "round",
+                                "stroke-linejoin": "round",
+                                "stroke-width": "2",
+                                d: "M6 18L18 6M6 6l12 12"
+                              }
+                            })
+                          ]
+                        )
+                      ]
                     ),
                     _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.formdata.aussteller_fullname,
-                          expression: "formdata.aussteller_fullname"
-                        }
-                      ],
-                      staticClass:
-                        "\n                      mt-1\n                      focus:ring-indigo-500\n                      focus:border-indigo-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
-                      attrs: {
-                        type: "text",
-                        name: "aussteller_fullname",
-                        id: "full_name",
-                        autocomplete: "given-name"
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "\r\n            flex-1 flex\r\n            items-center\r\n            justify-center\r\n            sm:items-stretch\r\n            sm:justify-start\r\n          "
                       },
-                      domProps: { value: _vm.formdata.aussteller_fullname },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(
-                            _vm.formdata,
-                            "aussteller_fullname",
-                            $event.target.value
+                      [
+                        _c("div", {
+                          staticClass: "flex-shrink-0 flex items-center"
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "hidden sm:block sm:ml-6" }, [
+                          _c(
+                            "div",
+                            { staticClass: "flex space-x-4" },
+                            [
+                              _c(
+                                "router-link",
+                                { attrs: { to: "/app/admin/dashboard" } },
+                                [
+                                  _c(
+                                    "span",
+                                    { staticClass: "text-gray-500 text-lg" },
+                                    [_vm._v("Dashboard")]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                                },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      attrs: {
+                                        to:
+                                          "/app/admin/dashboard/ausstelleruebersicht"
+                                      }
+                                    },
+                                    [_vm._v("Aussteller\r\n                ")]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                                },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      attrs: { to: "/app/admin/dashboard/news" }
+                                    },
+                                    [_vm._v("News")]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                  attrs: { href: "#" }
+                                },
+                                [_vm._v("Programm")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                  attrs: { href: "#" }
+                                },
+                                [_vm._v("platzhalter")]
+                              )
+                            ],
+                            1
                           )
-                        }
-                      }
-                    })
-                  ]),
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "\r\n            absolute\r\n            inset-y-0\r\n            right-0\r\n            flex\r\n            items-center\r\n            pr-2\r\n            sm:static\r\n            sm:inset-auto\r\n            sm:ml-6\r\n            sm:pr-0\r\n          "
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "\r\n                  text-gray-300\r\n                  hover:bg-red-900\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                          },
+                          [
+                            _c(
+                              "span",
+                              {
+                                staticClass: "text-white cursor-pointer",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.handleLogout()
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v("Logout "),
+                                _c("img", {
+                                  staticClass: "filter-white",
+                                  attrs: {
+                                    src:
+                                      "/public/images/icons/svgs/ausloggen.svg",
+                                    alt: ""
+                                  }
+                                })
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "sm:hidden", attrs: { id: "mobile-menu" } },
+              [
+                _c("div", { staticClass: "px-2 pt-2 pb-3 space-y-1" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            bg-gray-900\r\n            text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#", "aria-current": "page" }
+                    },
+                    [_vm._v("Dashboard")]
+                  ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-span-6 sm:col-span-4" }, [
-                    _c(
-                      "label",
-                      {
-                        staticClass: "block text-sm font-medium text-gray-700",
-                        attrs: { for: "email_address" }
-                      },
-                      [_vm._v("Beschreibung")]
-                    ),
-                    _vm._v(" "),
-                    _c("textarea", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.formdata.aussteller_beschreibung,
-                          expression: "formdata.aussteller_beschreibung"
-                        }
-                      ],
+                  _c(
+                    "a",
+                    {
                       staticClass:
-                        "\n                      mt-1\n                      focus:ring-indigo-500\n                      focus:border-indigo-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
-                      attrs: {
-                        maxlength: "200",
-                        name: "aussteller_beschreibung",
-                        id: "beschreibung",
-                        autocomplete: "Beschreibung"
-                      },
-                      domProps: { value: _vm.formdata.aussteller_beschreibung },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
+                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#" }
+                    },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          attrs: {
+                            to: "/app/admin/dashboard/ausstelleruebersicht"
                           }
-                          _vm.$set(
-                            _vm.formdata,
-                            "aussteller_beschreibung",
-                            $event.target.value
-                          )
-                        }
-                      }
-                    })
-                  ]),
+                        },
+                        [_vm._v("Aussteller")]
+                      )
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-span-6" }, [
-                    _c(
-                      "label",
-                      {
-                        staticClass: "block text-sm font-medium text-gray-700",
-                        attrs: { for: "street_address" }
-                      },
-                      [_vm._v("Zonenfarbe am Markt")]
-                    ),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.formdata.aussteller_zonenfarbe,
-                          expression: "formdata.aussteller_zonenfarbe"
-                        }
-                      ],
+                  _c(
+                    "a",
+                    {
                       staticClass:
-                        "\n                      mt-1\n                      focus:ring-indigo-500\n                      focus:border-indigo-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
-                      attrs: {
-                        type: "text",
-                        name: "aussteller_zonenfarbe",
-                        id: "zonenfarbe",
-                        autocomplete: "Zonenfarbe"
-                      },
-                      domProps: { value: _vm.formdata.aussteller_zonenfarbe },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(
-                            _vm.formdata,
-                            "aussteller_zonenfarbe",
-                            $event.target.value
-                          )
-                        }
-                      }
-                    })
+                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("News")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Programm")]
+                  )
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "bg-gray-800 flex flex-col justify-evenly p-4" },
+            [
+              _c("div", { staticClass: "mt-10 sm:mt-0" }, [
+                _c("div", { staticClass: "grid grid-cols gap-6" }, [
+                  _vm._m(0),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
+                    _c(
+                      "form",
+                      { attrs: { method: "POST", action: "/api/aussteller" } },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "shadow overflow-hidden sm:rounded-md"
+                          },
+                          [
+                            _c(
+                              "div",
+                              { staticClass: "px-4 py-5 bg-gray-300 sm:p-6" },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "grid grid-cols-6 gap-6" },
+                                  [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "col-span-6 sm:col-span-3"
+                                      },
+                                      [
+                                        _c(
+                                          "label",
+                                          {
+                                            staticClass:
+                                              "block text-sm font-medium text-gray-700",
+                                            attrs: { for: "first_name" }
+                                          },
+                                          [_vm._v("Vor und Nachname")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value:
+                                                _vm.formdata
+                                                  .aussteller_fullname,
+                                              expression:
+                                                "formdata.aussteller_fullname"
+                                            }
+                                          ],
+                                          staticClass:
+                                            "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                          attrs: {
+                                            type: "text",
+                                            name: "aussteller_fullname",
+                                            id: "full_name",
+                                            placeholder: "Pflichtfeld",
+                                            autocomplete: "given-name"
+                                          },
+                                          domProps: {
+                                            value:
+                                              _vm.formdata.aussteller_fullname
+                                          },
+                                          on: {
+                                            input: function($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.$set(
+                                                _vm.formdata,
+                                                "aussteller_fullname",
+                                                $event.target.value
+                                              )
+                                            }
+                                          }
+                                        })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "col-span-6 sm:col-span-4"
+                                      },
+                                      [
+                                        _c(
+                                          "label",
+                                          {
+                                            staticClass:
+                                              "block text-sm font-medium text-gray-700",
+                                            attrs: { for: "email_address" }
+                                          },
+                                          [_vm._v("Beschreibung")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("textarea", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value:
+                                                _vm.formdata
+                                                  .aussteller_beschreibung,
+                                              expression:
+                                                "formdata.aussteller_beschreibung"
+                                            }
+                                          ],
+                                          staticClass:
+                                            "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                          attrs: {
+                                            maxlength: "200",
+                                            name: "aussteller_beschreibung",
+                                            id: "beschreibung",
+                                            autocomplete: "Beschreibung",
+                                            placeholder: "Optional"
+                                          },
+                                          domProps: {
+                                            value:
+                                              _vm.formdata
+                                                .aussteller_beschreibung
+                                          },
+                                          on: {
+                                            input: function($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.$set(
+                                                _vm.formdata,
+                                                "aussteller_beschreibung",
+                                                $event.target.value
+                                              )
+                                            }
+                                          }
+                                        })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "col-span-6" }, [
+                                      _c(
+                                        "label",
+                                        {
+                                          staticClass:
+                                            "block text-sm font-medium text-gray-700",
+                                          attrs: { for: "street_address" }
+                                        },
+                                        [_vm._v("Zonenfarbe am Markt")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value:
+                                              _vm.formdata
+                                                .aussteller_zonenfarbe,
+                                            expression:
+                                              "formdata.aussteller_zonenfarbe"
+                                          }
+                                        ],
+                                        staticClass:
+                                          "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                        attrs: {
+                                          type: "text",
+                                          name: "aussteller_zonenfarbe",
+                                          id: "zonenfarbe",
+                                          autocomplete: "Zonenfarbe",
+                                          placeholder: "Optional"
+                                        },
+                                        domProps: {
+                                          value:
+                                            _vm.formdata.aussteller_zonenfarbe
+                                        },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.formdata,
+                                              "aussteller_zonenfarbe",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ])
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _vm._m(1)
+                          ]
+                        )
+                      ]
+                    )
                   ])
                 ])
-              ]),
-              _vm._v(" "),
-              _vm._m(2)
-            ])
-          ])
+              ])
+            ]
+          )
         ])
-      ])
-    ])
+      : _vm._e()
   ])
 }
 var staticRenderFns = [
@@ -30377,27 +31100,20 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "hidden sm:block", attrs: { "aria-hidden": "true" } },
-      [
-        _c("div", { staticClass: "py-5" }, [
-          _c("div", { staticClass: "border-t border-gray-200" })
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "md:col-span-1" }, [
-      _c("div", { staticClass: "px-4 sm:px-0" }, [
-        _c("h3", { staticClass: "text-lg font-medium leading-6 text-white" }, [
-          _vm._v(
-            "\n            Bitte persönliche Infos des Ausstellers angeben.\n          "
-          )
-        ])
+      _c("div", { staticClass: "px-4 sm:px-0 text-gray-400" }, [
+        _c(
+          "h3",
+          { staticClass: "text-lg font-medium leading-6 text-white pb-1" },
+          [
+            _vm._v(
+              "\r\n                Neuen Aussteller anlegen\r\n              "
+            )
+          ]
+        ),
+        _vm._v(
+          "\r\n              Neuer Aussteller wird in DB gespeichert und in Web-App eingebettet...\r\n            "
+        )
       ])
     ])
   },
@@ -30413,10 +31129,14 @@ var staticRenderFns = [
           "button",
           {
             staticClass:
-              "\n                  inline-flex\n                  justify-center\n                  py-2\n                  px-4\n                  border border-transparent\n                  shadow-sm\n                  text-sm\n                  font-medium\n                  rounded-md\n                  text-white\n                  bg-green-600\n                  hover:bg-black\n                  focus:outline-none\n                  focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500\n                ",
+              "\r\n                      inline-flex\r\n                      justify-center\r\n                      py-2\r\n                      px-4\r\n                      border border-transparent\r\n                      shadow-sm\r\n                      text-sm\r\n                      font-medium\r\n                      rounded-md\r\n                      text-white\r\n                      bg-green-600\r\n                      hover:bg-black\r\n                      focus:outline-none\r\n                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\r\n                    ",
             attrs: { type: "submit" }
           },
-          [_vm._v("\n                In DB Speichern\n              ")]
+          [
+            _vm._v(
+              "\r\n                    In DB Speichern\r\n                  "
+            )
+          ]
         )
       ]
     )
@@ -30444,232 +31164,274 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "w-full h-full" }, [
-    _c("nav", { staticClass: "bg-gray-800 border-b border-gray-300" }, [
-      _c("div", { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" }, [
-        _c(
+  return _c("div", { staticClass: "w-full h-full bg-gray-900" }, [
+    _vm.loggedIn() == false
+      ? _c(
           "div",
-          { staticClass: "relative flex items-center justify-between h-16" },
+          {
+            staticClass:
+              "flex w-full h-full items-center justify-center text-red-900 bg-gray-900"
+          },
           [
+            _vm._v(
+              " Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard zugreifen zu können..."
+            )
+          ]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.loggedIn()
+      ? _c("div", { staticClass: "w-full" }, [
+          _c("nav", { staticClass: "bg-gray-800 border-b border-gray-300" }, [
             _c(
               "div",
-              {
-                staticClass:
-                  "absolute inset-y-0 left-0 flex items-center sm:hidden"
-              },
-              [
-                _c("span", { staticClass: "sr-only" }, [
-                  _vm._v("Open main menu")
-                ]),
-                _vm._v(" "),
-                _c(
-                  "svg",
-                  {
-                    staticClass: "hidden h-6 w-6",
-                    attrs: {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      fill: "none",
-                      viewBox: "0 0 24 24",
-                      stroke: "currentColor",
-                      "aria-hidden": "true"
-                    }
-                  },
-                  [
-                    _c("path", {
-                      attrs: {
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
-                        "stroke-width": "2",
-                        d: "M6 18L18 6M6 6l12 12"
-                      }
-                    })
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "\r\n            flex-1 flex\r\n            items-center\r\n            justify-center\r\n            sm:items-stretch\r\n            sm:justify-start\r\n          "
-              },
-              [
-                _c("div", { staticClass: "flex-shrink-0 flex items-center" }),
-                _vm._v(" "),
-                _c("div", { staticClass: "hidden sm:block sm:ml-6" }, [
-                  _c(
-                    "div",
-                    { staticClass: "flex space-x-4" },
-                    [
-                      _c(
-                        "router-link",
-                        { attrs: { to: "/app/admin/dashboard" } },
-                        [
-                          _c("span", { staticClass: "text-gray-500 text-lg" }, [
-                            _vm._v("Dashboard")
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
-                        },
-                        [
-                          _c(
-                            "router-link",
-                            {
-                              attrs: {
-                                to: "/app/admin/dashboard/ausstelleruebersicht"
-                              }
-                            },
-                            [_vm._v("Aussteller\r\n                ")]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
-                        },
-                        [
-                          _c(
-                            "router-link",
-                            { attrs: { to: "/app/admin/dashboard/news" } },
-                            [_vm._v("News")]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass:
-                            "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
-                          attrs: { href: "#" }
-                        },
-                        [_vm._v("Programm")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass:
-                            "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
-                          attrs: { href: "#" }
-                        },
-                        [_vm._v("platzhalter")]
-                      )
-                    ],
-                    1
-                  )
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "\r\n            absolute\r\n            inset-y-0\r\n            right-0\r\n            flex\r\n            items-center\r\n            pr-2\r\n            sm:static\r\n            sm:inset-auto\r\n            sm:ml-6\r\n            sm:pr-0\r\n          "
-              },
+              { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" },
               [
                 _c(
                   "div",
                   {
                     staticClass:
-                      "\r\n                  text-gray-300\r\n                  hover:bg-red-900\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                      "relative flex items-center justify-between h-16"
                   },
                   [
                     _c(
-                      "span",
+                      "div",
                       {
-                        staticClass: "text-white cursor-pointer",
-                        on: {
-                          click: function($event) {
-                            return _vm.handleLogout()
-                          }
-                        }
+                        staticClass:
+                          "absolute inset-y-0 left-0 flex items-center sm:hidden"
                       },
                       [
-                        _vm._v("Logout "),
-                        _c("img", {
-                          staticClass: "filter-white",
-                          attrs: {
-                            src: "/public/images/icons/svgs/ausloggen.svg",
-                            alt: ""
-                          }
-                        })
+                        _c("span", { staticClass: "sr-only" }, [
+                          _vm._v("Open main menu")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "svg",
+                          {
+                            staticClass: "hidden h-6 w-6",
+                            attrs: {
+                              xmlns: "http://www.w3.org/2000/svg",
+                              fill: "none",
+                              viewBox: "0 0 24 24",
+                              stroke: "currentColor",
+                              "aria-hidden": "true"
+                            }
+                          },
+                          [
+                            _c("path", {
+                              attrs: {
+                                "stroke-linecap": "round",
+                                "stroke-linejoin": "round",
+                                "stroke-width": "2",
+                                d: "M6 18L18 6M6 6l12 12"
+                              }
+                            })
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "\r\n            flex-1 flex\r\n            items-center\r\n            justify-center\r\n            sm:items-stretch\r\n            sm:justify-start\r\n          "
+                      },
+                      [
+                        _c("div", {
+                          staticClass: "flex-shrink-0 flex items-center"
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "hidden sm:block sm:ml-6" }, [
+                          _c(
+                            "div",
+                            { staticClass: "flex space-x-4" },
+                            [
+                              _c(
+                                "router-link",
+                                { attrs: { to: "/app/admin/dashboard" } },
+                                [
+                                  _c(
+                                    "span",
+                                    { staticClass: "text-gray-500 text-lg" },
+                                    [_vm._v("Dashboard")]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                                },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      attrs: {
+                                        to:
+                                          "/app/admin/dashboard/ausstelleruebersicht"
+                                      }
+                                    },
+                                    [_vm._v("Aussteller\r\n                ")]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                                },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      attrs: { to: "/app/admin/dashboard/news" }
+                                    },
+                                    [_vm._v("News")]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                  attrs: { href: "#" }
+                                },
+                                [_vm._v("Programm")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                  attrs: { href: "#" }
+                                },
+                                [_vm._v("platzhalter")]
+                              )
+                            ],
+                            1
+                          )
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "\r\n            absolute\r\n            inset-y-0\r\n            right-0\r\n            flex\r\n            items-center\r\n            pr-2\r\n            sm:static\r\n            sm:inset-auto\r\n            sm:ml-6\r\n            sm:pr-0\r\n          "
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "\r\n                  text-gray-300\r\n                  hover:bg-red-900\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                          },
+                          [
+                            _c(
+                              "span",
+                              {
+                                staticClass: "text-white cursor-pointer",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.handleLogout()
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v("Logout "),
+                                _c("img", {
+                                  staticClass: "filter-white",
+                                  attrs: {
+                                    src:
+                                      "/public/images/icons/svgs/ausloggen.svg",
+                                    alt: ""
+                                  }
+                                })
+                              ]
+                            )
+                          ]
+                        )
                       ]
                     )
                   ]
                 )
               ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "sm:hidden", attrs: { id: "mobile-menu" } },
+              [
+                _c("div", { staticClass: "px-2 pt-2 pb-3 space-y-1" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            bg-gray-900\r\n            text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#", "aria-current": "page" }
+                    },
+                    [_vm._v("Dashboard")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#" }
+                    },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          attrs: {
+                            to: "/app/admin/dashboard/ausstelleruebersicht"
+                          }
+                        },
+                        [_vm._v("Aussteller")]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("News")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Programm")]
+                  )
+                ])
+              ]
             )
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "sm:hidden", attrs: { id: "mobile-menu" } }, [
-        _c("div", { staticClass: "px-2 pt-2 pb-3 space-y-1" }, [
-          _c(
-            "a",
-            {
-              staticClass:
-                "\r\n            bg-gray-900\r\n            text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
-              attrs: { href: "#", "aria-current": "page" }
-            },
-            [_vm._v("Dashboard")]
-          ),
+          ]),
           _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
-              attrs: { href: "#" }
-            },
-            [
-              _c(
-                "router-link",
-                { attrs: { to: "/app/admin/dashboard/ausstelleruebersicht" } },
-                [_vm._v("Aussteller")]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
-              attrs: { href: "#" }
-            },
-            [_vm._v("News")]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
-              attrs: { href: "#" }
-            },
-            [_vm._v("Programm")]
-          )
+          _vm._m(0)
         ])
-      ])
-    ]),
-    _vm._v(" "),
-    _vm._m(0)
+      : _vm._e()
   ])
 }
 var staticRenderFns = [
@@ -30679,10 +31441,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      {
-        staticClass: "bg-gray-900 h-full w-full",
-        attrs: { id: "dashboardcontent" }
-      },
+      { staticClass: "h-full w-full", attrs: { id: "dashboardcontent" } },
       [
         _c(
           "div",
@@ -30718,45 +31477,168 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "h-full w-full" }, [
-    _c("nav", { staticClass: "bg-gray-800 border-b border-gray-300" }, [
-      _c("div", { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" }, [
-        _c(
+  return _c("div", { staticClass: "w-full" }, [
+    _vm.loggedIn() == false
+      ? _c(
           "div",
-          { staticClass: "relative flex items-center justify-between h-16" },
+          {
+            staticClass:
+              "flex w-full h-full items-center justify-center text-red-900 bg-gray-900"
+          },
           [
+            _vm._v(
+              " \r\n  Nicht eingeloggt! Bitte loggen Sie sich ein, um auf diese Seite zugreifen zu können..."
+            )
+          ]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.loggedIn()
+      ? _c("div", { staticClass: "w-full " }, [
+          _c("nav", { staticClass: "bg-gray-800 border-b border-gray-300" }, [
             _c(
               "div",
-              {
-                staticClass:
-                  "absolute inset-y-0 left-0 flex items-center sm:hidden"
-              },
+              { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" },
               [
-                _c("span", { staticClass: "sr-only" }, [
-                  _vm._v("Open main menu")
-                ]),
-                _vm._v(" "),
                 _c(
-                  "svg",
+                  "div",
                   {
-                    staticClass: "hidden h-6 w-6",
-                    attrs: {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      fill: "none",
-                      viewBox: "0 0 24 24",
-                      stroke: "currentColor",
-                      "aria-hidden": "true"
-                    }
+                    staticClass:
+                      "relative flex items-center justify-between h-16"
                   },
                   [
-                    _c("path", {
-                      attrs: {
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
-                        "stroke-width": "2",
-                        d: "M6 18L18 6M6 6l12 12"
-                      }
-                    })
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "absolute inset-y-0 left-0 flex items-center sm:hidden"
+                      },
+                      [
+                        _c("span", { staticClass: "sr-only" }, [
+                          _vm._v("Open main menu")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "svg",
+                          {
+                            staticClass: "hidden h-6 w-6",
+                            attrs: {
+                              xmlns: "http://www.w3.org/2000/svg",
+                              fill: "none",
+                              viewBox: "0 0 24 24",
+                              stroke: "currentColor",
+                              "aria-hidden": "true"
+                            }
+                          },
+                          [
+                            _c("path", {
+                              attrs: {
+                                "stroke-linecap": "round",
+                                "stroke-linejoin": "round",
+                                "stroke-width": "2",
+                                d: "M6 18L18 6M6 6l12 12"
+                              }
+                            })
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "\r\n            flex-1 flex\r\n            items-center\r\n            justify-center\r\n            sm:items-stretch\r\n            sm:justify-start\r\n          "
+                      },
+                      [
+                        _c("div", {
+                          staticClass: "flex-shrink-0 flex items-center"
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "hidden sm:block sm:ml-6" }, [
+                          _c(
+                            "div",
+                            { staticClass: "flex space-x-4" },
+                            [
+                              _c(
+                                "router-link",
+                                { attrs: { to: "/app/admin/dashboard" } },
+                                [
+                                  _c(
+                                    "span",
+                                    { staticClass: "text-gray-500 text-lg" },
+                                    [_vm._v("Dashboard")]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "\r\n                  bg-gray-900\r\n                  text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                  attrs: { "aria-current": "page" }
+                                },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      attrs: {
+                                        to:
+                                          "/app/admin/dashboard/ausstelleruebersicht"
+                                      }
+                                    },
+                                    [_vm._v("Aussteller\r\n                ")]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                                },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      attrs: { to: "/app/admin/dashboard/news" }
+                                    },
+                                    [_vm._v("News")]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                  attrs: { href: "#" }
+                                },
+                                [_vm._v("Programm")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                  attrs: { href: "#" }
+                                },
+                                [_vm._v("platzhalter")]
+                              )
+                            ],
+                            1
+                          )
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _vm._m(0)
                   ]
                 )
               ]
@@ -30764,236 +31646,161 @@ var render = function() {
             _vm._v(" "),
             _c(
               "div",
-              {
-                staticClass:
-                  "\r\n            flex-1 flex\r\n            items-center\r\n            justify-center\r\n            sm:items-stretch\r\n            sm:justify-start\r\n          "
-              },
+              { staticClass: "sm:hidden", attrs: { id: "mobile-menu" } },
               [
-                _c("div", { staticClass: "flex-shrink-0 flex items-center" }),
-                _vm._v(" "),
-                _c("div", { staticClass: "hidden sm:block sm:ml-6" }, [
+                _c("div", { staticClass: "px-2 pt-2 pb-3 space-y-1" }, [
                   _c(
-                    "div",
-                    { staticClass: "flex space-x-4" },
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#" }
+                    },
                     [
                       _c(
                         "router-link",
                         { attrs: { to: "/app/admin/dashboard" } },
-                        [
-                          _c("span", { staticClass: "text-gray-500 text-lg" }, [
-                            _vm._v("Dashboard")
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\r\n                  bg-gray-900\r\n                  text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
-                          attrs: { "aria-current": "page" }
-                        },
-                        [
-                          _c(
-                            "router-link",
-                            {
-                              attrs: {
-                                to: "/app/admin/dashboard/ausstelleruebersicht"
-                              }
-                            },
-                            [_vm._v("Aussteller\r\n                ")]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
-                        },
-                        [
-                          _c(
-                            "router-link",
-                            { attrs: { to: "/app/admin/dashboard/news" } },
-                            [_vm._v("News")]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass:
-                            "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
-                          attrs: { href: "#" }
-                        },
-                        [_vm._v("Programm")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass:
-                            "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
-                          attrs: { href: "#" }
-                        },
-                        [_vm._v("platzhalter")]
+                        [_vm._v("Dashboard")]
                       )
                     ],
                     1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            bg-gray-900\r\n            text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#", "aria-current": "page" }
+                    },
+                    [_vm._v("Aussteller")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("News")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Programm")]
                   )
                 ])
               ]
-            ),
-            _vm._v(" "),
-            _vm._m(0)
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "sm:hidden", attrs: { id: "mobile-menu" } }, [
-        _c("div", { staticClass: "px-2 pt-2 pb-3 space-y-1" }, [
-          _c(
-            "a",
-            {
-              staticClass:
-                "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
-              attrs: { href: "#" }
-            },
-            [
-              _c("router-link", { attrs: { to: "/app/admin/dashboard" } }, [
-                _vm._v("Dashboard")
-              ])
-            ],
-            1
-          ),
+            )
+          ]),
           _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "\r\n            bg-gray-900\r\n            text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
-              attrs: { href: "#", "aria-current": "page" }
-            },
-            [_vm._v("Aussteller")]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
-              attrs: { href: "#" }
-            },
-            [_vm._v("News")]
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
-              attrs: { href: "#" }
-            },
-            [_vm._v("Programm")]
-          )
-        ])
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "pt-2 px-10 py-5 bg-gray-700" }, [
-      _c("div", { staticClass: "flex flex-col" }, [
-        _c("div", { staticClass: "md:grid md:grid-cols-3 md:gap-6" }, [
-          _vm._m(1),
-          _vm._v(" "),
-          _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
-            _c("form", { attrs: { action: "#", method: "POST" } }, [
-              _c(
-                "div",
-                { staticClass: "shadow sm:rounded-md sm:overflow-hidden" },
-                [
-                  _c(
-                    "div",
-                    { staticClass: "px-4 py-5 bg-white space-y-6 sm:p-6" },
-                    [
-                      _vm._m(2),
-                      _vm._v(" "),
-                      _vm._m(3),
-                      _vm._v(" "),
-                      _c("div", [
+          _c("div", { staticClass: "pt-2 px-10 py-5 bg-gray-700" }, [
+            _c("div", { staticClass: "flex flex-col" }, [
+              _c("div", { staticClass: "md:grid md:grid-cols-3 md:gap-6" }, [
+                _vm._m(1),
+                _vm._v(" "),
+                _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
+                  _c("form", { attrs: { action: "#", method: "POST" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "shadow sm:rounded-md sm:overflow-hidden"
+                      },
+                      [
                         _c(
-                          "label",
+                          "div",
                           {
-                            staticClass:
-                              "block text-sm font-medium text-gray-700"
+                            staticClass: "px-4 py-5 bg-white space-y-6 sm:p-6"
                           },
                           [
-                            _vm._v(
-                              "\r\n                    Foto\r\n                  "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "mt-1 flex items-center" }, [
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "\r\n                        inline-block\r\n                        h-12\r\n                        w-12\r\n                        rounded-full\r\n                        overflow-hidden\r\n                        bg-gray-100\r\n                      "
-                            },
-                            [
+                            _vm._m(2),
+                            _vm._v(" "),
+                            _vm._m(3),
+                            _vm._v(" "),
+                            _c("div", [
                               _c(
-                                "svg",
+                                "label",
                                 {
-                                  staticClass: "h-full w-full text-gray-300",
-                                  attrs: {
-                                    fill: "currentColor",
-                                    viewBox: "0 0 24 24"
-                                  }
+                                  staticClass:
+                                    "block text-sm font-medium text-gray-700"
                                 },
                                 [
-                                  _c("path", {
-                                    attrs: {
-                                      d:
-                                        "M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"
-                                    }
-                                  })
+                                  _vm._v(
+                                    "\r\n                    Foto\r\n                  "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "mt-1 flex items-center" },
+                                [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "\r\n                        inline-block\r\n                        h-12\r\n                        w-12\r\n                        rounded-full\r\n                        overflow-hidden\r\n                        bg-gray-100\r\n                      "
+                                    },
+                                    [
+                                      _c(
+                                        "svg",
+                                        {
+                                          staticClass:
+                                            "h-full w-full text-gray-300",
+                                          attrs: {
+                                            fill: "currentColor",
+                                            viewBox: "0 0 24 24"
+                                          }
+                                        },
+                                        [
+                                          _c("path", {
+                                            attrs: {
+                                              d:
+                                                "M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"
+                                            }
+                                          })
+                                        ]
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "\r\n                        ml-5\r\n                        bg-white\r\n                        py-2\r\n                        px-3\r\n                        border border-gray-300\r\n                        rounded-md\r\n                        shadow-sm\r\n                        text-sm\r\n                        leading-4\r\n                        font-medium\r\n                        text-gray-700\r\n                        hover:bg-gray-50\r\n                        focus:outline-none\r\n                        focus:ring-2 focus:ring-offset-2 focus:ring-green-500\r\n                      ",
+                                      attrs: { type: "button" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\r\n                      Ändern\r\n                    "
+                                      )
+                                    ]
+                                  )
                                 ]
                               )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass:
-                                "\r\n                        ml-5\r\n                        bg-white\r\n                        py-2\r\n                        px-3\r\n                        border border-gray-300\r\n                        rounded-md\r\n                        shadow-sm\r\n                        text-sm\r\n                        leading-4\r\n                        font-medium\r\n                        text-gray-700\r\n                        hover:bg-gray-50\r\n                        focus:outline-none\r\n                        focus:ring-2 focus:ring-offset-2 focus:ring-green-500\r\n                      ",
-                              attrs: { type: "button" }
-                            },
-                            [
-                              _vm._v(
-                                "\r\n                      Ändern\r\n                    "
-                              )
-                            ]
-                          )
-                        ])
-                      ])
-                    ]
-                  )
-                ]
-              )
-            ])
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _vm._m(4),
+            _vm._v(" "),
+            _vm._m(5)
           ])
         ])
-      ]),
-      _vm._v(" "),
-      _vm._m(4),
-      _vm._v(" "),
-      _vm._m(5)
-    ])
+      : _vm._e()
   ])
 }
 var staticRenderFns = [
@@ -31042,7 +31849,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", { staticClass: "mt-1 text-sm text-gray-300" }, [
           _vm._v(
-            "\r\n              Aussteller für das kommende Jahr hinzufügen, löschen, oder\r\n              updaten... Bei Updates bitte alle gewünschten Felder befüllen.\r\n            "
+            "\r\n              Hier können jeweilige Ausstellerinformationen für das kommende Jahr abgeändert werden, ohne\r\n              den Aussteller löschen und wieder hinzufügen zu müssen...\r\n            "
           )
         ])
       ])
@@ -31163,7 +31970,7 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("p", { staticClass: "mt-1 text-sm text-gray-400" }, [
               _vm._v(
-                "\r\n              Ausstellerinformationen. Vor- und Nachname sind Pflichtfelder.\r\n            "
+                "\r\n              Ausstellerinformationen. Vor- und Nachname ist ein Pflichtfeld.\r\n            "
               )
             ])
           ])

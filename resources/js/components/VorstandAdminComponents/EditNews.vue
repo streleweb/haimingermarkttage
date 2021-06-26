@@ -171,6 +171,10 @@ export default {
   mounted() {},
 
   methods: {
+    loggedIn() {
+      if (localStorage.getItem("loggedIn") == "true") return true;
+      else return false;
+    },
     submitform() {
       let formToJson = JSON.stringify(this.formdata);
       console.log(formToJson);

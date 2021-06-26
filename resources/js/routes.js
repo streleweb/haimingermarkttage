@@ -49,11 +49,6 @@ export default {
         },
 
         {
-            path: '/app/ausstelleranlegen',
-            component: Ausstelleranlegen
-        },
-
-        {
             path: '/app/fotogalerie',
             component: Fotogalerie
         },
@@ -88,6 +83,11 @@ export default {
             component: Dashboard,
             name: 'admindashboard',
             meta: { requiresAuth: true } //protected - Login erforderlich
+        },
+
+        {
+            path: '/app/admin/dashboard/ausstelleranlegen',
+            component: Ausstelleranlegen
         },
 
         {

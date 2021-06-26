@@ -1,5 +1,9 @@
 <template>
-<div class="w-full h-full">
+<div class="w-full h-full bg-gray-900">
+<div v-if="loggedIn() == false" class="flex w-full h-full items-center justify-center text-red-900 bg-gray-900"> Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard zugreifen zu können...</div>
+<!-- Check for Login-Status, only display if logged in-->
+<div v-if="loggedIn()" class="w-full">
+  
   <nav class="bg-gray-800 border-b border-gray-300">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
@@ -217,9 +221,10 @@
       </div>
     </div>
   </nav>
-  <div id="dashboardcontent" class="bg-gray-900 h-full w-full">
+  <div id="dashboardcontent" class="h-full w-full">
     <div class= "flex pt-60 w-full justify-center text-white text-4xl text-gray-800">Welcome Home</div>
   </div>
+</div>
 </div>
 </template>
 
@@ -232,6 +237,11 @@ export default {
     };
   },
   methods: {
+    loggedIn() {
+      if (localStorage.getItem("isLoggedIn") == "true") {
+        return true;
+      } else return false;
+    },
     async handleLogout() {
       this.loading = true;
       try {
