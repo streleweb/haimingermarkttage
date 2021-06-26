@@ -15,6 +15,7 @@ import Dashboard from './components/VorstandAdminComponents/Dashboard';
 import EditAussteller from './components/VorstandAdminComponents/EditAussteller';
 import EditNews from './components/VorstandAdminComponents/EditNews';
 import AusstellerUebersicht from './components/VorstandAdminComponents/AusstellerUebersicht';
+import Register from './components/VorstandAdminComponents/Register';
 
 export default {
     mode: 'history', //Browser-Tracking-System benützen, um die Pages zu tracken
@@ -99,6 +100,11 @@ export default {
         {
             path: '/app/admin/dashboard/ausstelleruebersicht',
             component: AusstellerUebersicht
+        },
+
+        {
+            path: '/app/admin/register',
+            component: Register
         }
     ]
 

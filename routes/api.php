@@ -37,8 +37,8 @@ Route::get('/aussteller/{id}', [AusstellerController::class, 'show']);
 
 //Admin-Public-Routes
 
-Route::post('/admin/login', [AuthController::class, 'login']);
-Route::post('/admin/logout', [AuthController::class, 'logout']);
+
+Route::post('/admin/register', [AuthController::class, 'register']);
 
 
 
@@ -49,10 +49,10 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::put('/aussteller/{id}', [AusstellerController::class, 'update']);
     Route::delete('/aussteller/{id}', [AusstellerController::class, 'destroy']);
 
-    //Nur Admins könnten sich registrieren
-    Route::post('/admin/register', [AuthController::class, 'register']);
+    //Nur Admins könnten sich registrieren 
     //logout
-   
+    Route::post('/admin/logout', [AuthController::class, 'logout']);
+    Route::post('/admin/login', [AuthController::class, 'login']);
     
 });
 

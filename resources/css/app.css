@@ -60,6 +60,10 @@ der tailwind components integriert. Diese Styles werden durch die
         @apply h-5;
     }
 
+    .resize-loadinggif{
+        @apply h-10;
+    }
+
     .homecontentcontainer{
         @apply h-full flex flex-col w-full justify-around bg-green-900;
 

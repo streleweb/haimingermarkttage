@@ -13,9 +13,30 @@
       w-screen
     "
   >
-    <div class="max-w-md w-full space-y-8">
-      <p v-if="loading">loading...</p>
-      <p v-if="error" style="color: red">error</p>
+    <div
+      class="
+        max-w-md
+        w-full
+        space-y-8
+        flex flex-col
+        justify-center
+        items-center
+      "
+    >
+      <p v-if="loading">
+        <img
+          src="/images/icons/gifs/loadingtransparent.gif"
+          alt="loading..."
+          class="resize-loadinggif"
+        />
+      </p>
+      <div
+        class="text-red-500 text-center content-center"
+        v-if="error"
+        id="fehler"
+      >
+        {{ error }}
+      </div>
       <div>
         <img
           class="mx-auto h-20 w-auto border border-green-500"
@@ -33,6 +54,7 @@
             <label for="email-address" class="sr-only">Email address</label>
             <input
               v-model="user.email"
+              :class="{ 'border-red-600': inputfieldred }"
               id="email-address"
               name="email"
               type="email"
@@ -63,6 +85,7 @@
             <label for="password" class="sr-only">Passwort</label>
             <input
               v-model="user.password"
+              :class="{ 'border-red-600': inputfieldred }"
               id="password"
               name="password"
               type="password"
@@ -178,12 +201,21 @@ export default {
       },
       loading: false,
       error: null,
-      einloggenErfolgreich: null,
+      inputfieldred: false,
     };
+  },
+
+  watch: {
+    error() {
+      if (this.error != null) {
+        this.inputfieldred = true;
+      }
+    },
   },
 
   methods: {
     async handleLogin() {
+      this.loading = true;
       this.error = null;
       try {
         await axios
@@ -194,18 +226,34 @@ export default {
               .then((response) => {
                 alert("Login erfolgreich, " + response.data.user.name + "!");
                 this.einloggenErfolgreich = true;
+                this.$router.push({ name: "admindashboard" });
+                //console.log("axiospost:" + response);
+              })
+              .catch((err) => {
+                if (err.response) {
+                  //Wenn Client error response bekommen hat (5xx, 4xx)
+                  this.error =
+                    "Login nicht erfolgreich.. Überprüfen Sie bitte Ihre Login-Daten";
+                  console.log(response);
+                } else if (err.request) {
+                  //wenn Client keine Response bekommt, oder der Request nicht gesendet wurde
+                  this.error =
+                    "Konnte keine Server-Response erhalten, bitte überprüfen Sie ihre Internet-Connection";
+                } else {
+                  this.error =
+                    "Ihre Logindaten stimmen, es ist ein anderer Fehler aufgetreten.";
+                }
               });
-            this.$router.push({ name: "admindashboard" });
           });
       } catch (error) {
-        this.error = error;
+        console.log("Try: " + error);
       } finally {
         this.loading = false;
+        this.error = null;
       }
     },
   },
 };
 </script>
 
-<style>
-</style>
+

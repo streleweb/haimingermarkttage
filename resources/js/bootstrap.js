@@ -8,6 +8,9 @@ window._ = require('lodash');
 
 window.axios = require('axios');
 window.axios.defaults.withCredentials = true;
+var token = '33|ryvH8WgjJDLqDtoZ5vEl9eTz8DJ5mNNzqMLjldpo';
+window.axios.defaults.headers.common = { 'Authorization': `Bearer ${token}` }
+
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
