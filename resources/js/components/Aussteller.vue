@@ -1,6 +1,13 @@
 <template>
   <div class="ausstellergradient">
     <div class="ausstellercontainer">
+      <p v-if="loading">
+        <img
+          src="/images/icons/gifs/loadingtransparent.gif"
+          alt="loading..."
+          class="mt-40 mx-auto z-50"
+        />
+      </p>
       <!-- custom font konfiguriert in tailwind.config.js-->
       <!-- Hier noch Background-Pic oder Video rein -->
       <div class="titletext ueberschrift mb-7 w-full textshadow-markant">
@@ -101,12 +108,15 @@ export default {
   data() {
     return {
       aussteller: [],
+      loading: false,
     };
   },
   //wenn Component geladen ist, führe die Methoden zum
   //Laden der Aussteller und Ausstellerfotos via Axios Request aus
   created() {
+    this.loading = true;
     this.loadAussteller();
+    this.loading = false;
     /*this.loadAusstellerfoto();*/
   },
 

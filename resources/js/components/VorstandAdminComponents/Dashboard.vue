@@ -1,4 +1,5 @@
 <template>
+<div class="w-full h-full">
   <nav class="bg-gray-800 border-b border-gray-300">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
@@ -50,15 +51,15 @@
               >
               <div
                 class="
-                  bg-gray-900
-                  text-white
+                  text-gray-300
+                  hover:bg-gray-700
+                  hover:text-white
                   px-3
                   py-2
                   rounded-md
                   text-sm
                   font-medium
                 "
-                aria-current="page"
               >
                 <router-link to="/app/admin/dashboard/ausstelleruebersicht"
                   >Aussteller
@@ -138,7 +139,7 @@
                   font-medium
                 "
               >
-                <span class="text-white" @click="handleLogout()">Logout <img src="/public/images/icons/svgs/ausloggen.svg" class= "filter-white" alt=""></span>
+                <span class="text-white cursor-pointer" @click="handleLogout()">Logout <img src="/public/images/icons/svgs/ausloggen.svg" class= "filter-white" alt=""></span>
               </div>
             
           </div>
@@ -216,6 +217,10 @@
       </div>
     </div>
   </nav>
+  <div id="dashboardcontent" class="bg-gray-900 h-full w-full">
+    <div class= "flex pt-60 w-full justify-center text-white text-4xl text-gray-800">Welcome Home</div>
+  </div>
+</div>
 </template>
 
 <script>
@@ -231,6 +236,9 @@ export default {
       this.loading = true;
       try {
         await axios.post("http://localhost:8000/api/admin/logout");
+        //LocalStorage LoggedIn-Status löschen
+        localStorage.removeItem("isLoggedIn");
+        localStorage;
         this.$router.push({ name: "adminLogin" });
       } catch (error) {
         console.log(error);

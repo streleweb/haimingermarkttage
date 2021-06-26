@@ -121,9 +121,8 @@ der tailwind components integriert. Diese Styles werden durch die
     .philosophiecontentcontainer{
         @apply h-full flex flex-col w-full justify-evenly;
 
-        background: linear-gradient(rgba(60, 39, 0, 1)
-
-        , rgba(25, 16, 0, 0.6)), url("/images/background/buch.svg");
+        background: rgb(0,51,47);
+        background: linear-gradient(90deg, rgba(0,51,47,1) 0%, rgba(18,88,91,0.9262079831932774) 47%, rgba(13,42,27,1) 100%, rgba(21,70,21,1) 100%, rgba(22,73,20,1) 100%, rgba(25,83,18,1) 100%, rgba(0,212,255,1) 100%), url("/images/background/buch.svg");
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: cover;

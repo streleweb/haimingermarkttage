@@ -8,9 +8,13 @@ window._ = require('lodash');
 
 window.axios = require('axios');
 window.axios.defaults.withCredentials = true;
-var token = '33|ryvH8WgjJDLqDtoZ5vEl9eTz8DJ5mNNzqMLjldpo';
-window.axios.defaults.headers.common = { 'Authorization': `Bearer ${token}` }
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+window.axios.defaults.headers.common['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT, DELETE';
 
+var token = '56|bGo7EMpuLHbpwIkS0DKkMGZRnQXMYViKyuy4R47J';  //old token 33|ryvH8WgjJDLqDtoZ5vEl9eTz8DJ5mNNzqMLjldpo
+window.axios.defaults.headers.common = { 'Authorization': `Bearer ${token}` }
+window.axios.defaults.crossDomain = true;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 

@@ -31,6 +31,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //Public routes - posts noch verhindern!
 
+
 Route::get('/aussteller/search/{name}', [AusstellerController::class, 'search']);
 Route::get('/aussteller', [AusstellerController::class, 'index']);
 Route::get('/aussteller/{id}', [AusstellerController::class, 'show']);

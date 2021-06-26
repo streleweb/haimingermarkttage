@@ -30,6 +30,7 @@
           class="resize-loadinggif"
         />
       </p>
+
       <div
         class="text-red-500 text-center content-center"
         v-if="error"
@@ -47,7 +48,7 @@
           Admin login
         </h2>
       </div>
-      <div class="mt-8 space-y-6">
+      <div class="mt-8 space-y-6 w-5/6 md:w-100">
         <input type="hidden" name="remember" value="true" />
         <div class="rounded-md shadow-sm -space-y-px">
           <div>
@@ -114,32 +115,7 @@
           </div>
         </div>
 
-        <div class="flex items-center justify-between">
-          <div class="flex items-center">
-            <input
-              id="remember_me"
-              name="remember_me"
-              type="checkbox"
-              class="
-                h-4
-                w-4
-                text-green-600
-                focus:ring-green-500
-                border-gray-300
-                rounded
-              "
-            />
-            <label for="remember_me" class="ml-2 block text-sm text-gray-900">
-              Remember me
-            </label>
-          </div>
-
-          <div class="text-sm">
-            <a href="#" class="font-medium text-green-700 hover:text-green-500">
-              Forgot your password?
-            </a>
-          </div>
-        </div>
+        <div class="flex items-center justify-between"></div>
 
         <div>
           <button
@@ -219,15 +195,22 @@ export default {
       this.error = null;
       try {
         await axios
-          .get("/http://localhost/sanctum/csrf-cookie")
+          .create({
+            withCredentials: true, //siehe CORS-config Laravel
+          })
+          .get("http://localhost:8000/api/sanctum/csrf-cookie")
           .then((response) => {
             axios
               .post("http://localhost:8000/api/admin/login", this.user)
               .then((response) => {
-                alert("Login erfolgreich, " + response.data.user.name + "!");
-                this.einloggenErfolgreich = true;
+                alert("Login erfolgreich!");
+                //LoggedIn-Status in localStorage abspeichern
+                localStorage.setItem("isLoggedIn", "true");
                 this.$router.push({ name: "admindashboard" });
-                //console.log("axiospost:" + response);
+                //console.log(response.data.token);
+                //var responseBearerTokenVonBody = response.data.token;
+                //window.axios.defaults.headers.common = {
+                // Authorization: `Bearer ${responseBearerTokenVonBody}`,
               })
               .catch((err) => {
                 if (err.response) {
@@ -255,5 +238,7 @@ export default {
   },
 };
 </script>
+
+
 
 

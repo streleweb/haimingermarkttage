@@ -1,6 +1,8 @@
 <template>
+
 <!-- DASHBOARD -->
 <div class="h-full w-full">
+ 
 <nav class="bg-gray-800 border-b border-gray-300">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
@@ -128,9 +130,20 @@
             sm:pr-0
           "
         >
-          
-            <span class="text-white">Logout <img src="/public/images/icons/svgs/ausloggen.svg" class= "filter-white" alt=""></span>
-          </div>
+          <div
+                class="
+                  text-gray-300
+                  hover:bg-red-900
+                  hover:text-white
+                  px-3
+                  py-2
+                  rounded-md
+                  text-sm
+                  font-medium
+                "
+              >
+            <span @click="handleLogout()" class="text-white cursor-pointer">Logout <img src="/public/images/icons/svgs/ausloggen.svg" class= "filter-white" alt=""></span>
+          </div></div>
         </div>
       </div>
     
@@ -207,6 +220,14 @@
     </div>
   </nav>
   <!-- DASHBOARD ENDE-->
+
+   <p v-if="loading">
+        <img
+          src="/images/icons/gifs/loadingtransparent.gif"
+          alt="loading..."
+          class="mx-auto"
+        />
+      </p>
 
   <div class="ausstellergradient">
     <div class="ausstellercontainer">
@@ -304,16 +325,34 @@ export default {
     return {
       aussteller: [],
       error: null,
+      loading: false,
     };
   },
   //wenn Component geladen ist, führe die Methoden zum
   //Laden der Aussteller und Ausstellerfotos via Axios Request aus
   created() {
+    console.log(localStorage.getItem("isLoggedIn"));
+    //Wenn Admin nicht eingeloggt ist, redirect auf LoginPage
+    if (localStorage.getItem("isLoggedIn") != "true") {
+      this.$router.push({ name: "adminLogin" });
+    }
     this.loadAussteller();
     /*this.loadAusstellerfoto();*/
   },
 
   methods: {
+    async handleLogout() {
+      this.loading = true;
+      try {
+        await axios.post("http://localhost:8000/api/admin/logout");
+        //LocalStorage LoggedIn-Status löschen
+        localStorage.removeItem("isLoggedIn");
+        localStorage;
+        this.$router.push({ name: "adminLogin" });
+      } catch (error) {
+        console.log(error);
+      }
+    },
     /*loadAussteller: function () {
       axios
         .get("/api/aussteller") // load API
@@ -327,12 +366,15 @@ export default {
         });*/
 
     async loadAussteller() {
+      this.loading = true;
       try {
         let { data } = await repository.getAussteller();
         this.aussteller = data.data;
         console.log(this.aussteller);
       } catch (error) {
         this.error = error;
+      } finally {
+        this.loading = false;
       }
     },
     imgUrl(index) {

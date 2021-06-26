@@ -2,6 +2,8 @@
 
 return [
 
+    'prefix' => 'api',  //added, damit CORS nicht schreit wegen dem Call auf http://localhost/sanctum/csrf-cookie
+
     /*
     |--------------------------------------------------------------------------
     | Stateful Domains

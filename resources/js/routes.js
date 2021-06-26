@@ -17,6 +17,8 @@ import EditNews from './components/VorstandAdminComponents/EditNews';
 import AusstellerUebersicht from './components/VorstandAdminComponents/AusstellerUebersicht';
 import Register from './components/VorstandAdminComponents/Register';
 
+
+
 export default {
     mode: 'history', //Browser-Tracking-System benützen, um die Pages zu tracken
     //linkActiveClass: 'font-willkommen', für später, falls Router zu Klasse switchen soll
@@ -78,28 +80,32 @@ export default {
         {
             path: '/app/admin/login',
             component: Login,
-            name: 'adminLogin'
+            name: 'adminLogin',
         },
 
         {
             path: '/app/admin/dashboard',
             component: Dashboard,
-            name: 'admindashboard'
+            name: 'admindashboard',
+            meta: { requiresAuth: true } //protected - Login erforderlich
         },
 
         {
             path: '/app/admin/dashboard/editaussteller',
-            component: EditAussteller
+            component: EditAussteller,
+            meta: { requiresAuth: true } //protected - Login erforderlich
         },
 
         {
             path: '/app/admin/dashboard/news',
-            component: EditNews
+            component: EditNews,
+            meta: { requiresAuth: true } //protected - Login erforderlich
         },
 
         {
             path: '/app/admin/dashboard/ausstelleruebersicht',
-            component: AusstellerUebersicht
+            component: AusstellerUebersicht,
+            meta: { requiresAuth: true } //protected - Login erforderlich
         },
 
         {

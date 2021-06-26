@@ -2030,18 +2030,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      aussteller: []
+      aussteller: [],
+      loading: false
     };
   },
   //wenn Component geladen ist, führe die Methoden zum
   //Laden der Aussteller und Ausstellerfotos via Axios Request aus
   created: function created() {
+    this.loading = true;
     this.loadAussteller();
+    this.loading = false;
     /*this.loadAusstellerfoto();*/
   },
   methods: {
@@ -3664,6 +3674,27 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -3671,16 +3702,64 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   data: function data() {
     return {
       aussteller: [],
-      error: null
+      error: null,
+      loading: false
     };
   },
   //wenn Component geladen ist, führe die Methoden zum
   //Laden der Aussteller und Ausstellerfotos via Axios Request aus
   created: function created() {
+    console.log(localStorage.getItem("isLoggedIn")); //Wenn Admin nicht eingeloggt ist, redirect auf LoginPage
+
+    if (localStorage.getItem("isLoggedIn") != "true") {
+      this.$router.push({
+        name: "adminLogin"
+      });
+    }
+
     this.loadAussteller();
     /*this.loadAusstellerfoto();*/
   },
   methods: {
+    handleLogout: function handleLogout() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _this.loading = true;
+                _context.prev = 1;
+                _context.next = 4;
+                return axios.post("http://localhost:8000/api/admin/logout");
+
+              case 4:
+                //LocalStorage LoggedIn-Status löschen
+                localStorage.removeItem("isLoggedIn");
+                localStorage;
+
+                _this.$router.push({
+                  name: "adminLogin"
+                });
+
+                _context.next = 12;
+                break;
+
+              case 9:
+                _context.prev = 9;
+                _context.t0 = _context["catch"](1);
+                console.log(_context.t0);
+
+              case 12:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[1, 9]]);
+      }))();
+    },
+
     /*loadAussteller: function () {
       axios
         .get("/api/aussteller") // load API
@@ -3693,38 +3772,44 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           console.log(error);
         });*/
     loadAussteller: function loadAussteller() {
-      var _this = this;
+      var _this2 = this;
 
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
         var _yield$repository$get, data;
 
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
           while (1) {
-            switch (_context.prev = _context.next) {
+            switch (_context2.prev = _context2.next) {
               case 0:
-                _context.prev = 0;
-                _context.next = 3;
+                _this2.loading = true;
+                _context2.prev = 1;
+                _context2.next = 4;
                 return _repository_repository__WEBPACK_IMPORTED_MODULE_3__.default.getAussteller();
 
-              case 3:
-                _yield$repository$get = _context.sent;
+              case 4:
+                _yield$repository$get = _context2.sent;
                 data = _yield$repository$get.data;
-                _this.aussteller = data.data;
-                console.log(_this.aussteller);
-                _context.next = 12;
+                _this2.aussteller = data.data;
+                console.log(_this2.aussteller);
+                _context2.next = 13;
                 break;
 
-              case 9:
-                _context.prev = 9;
-                _context.t0 = _context["catch"](0);
-                _this.error = _context.t0;
+              case 10:
+                _context2.prev = 10;
+                _context2.t0 = _context2["catch"](1);
+                _this2.error = _context2.t0;
 
-              case 12:
+              case 13:
+                _context2.prev = 13;
+                _this2.loading = false;
+                return _context2.finish(13);
+
+              case 16:
               case "end":
-                return _context.stop();
+                return _context2.stop();
             }
           }
-        }, _callee, null, [[0, 9]]);
+        }, _callee2, null, [[1, 10, 13, 16]]);
       }))();
     },
     imgUrl: function imgUrl(index) {
@@ -4185,6 +4270,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Dashboard",
   data: function data() {
@@ -4207,29 +4297,33 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 return axios.post("http://localhost:8000/api/admin/logout");
 
               case 4:
+                //LocalStorage LoggedIn-Status löschen
+                localStorage.removeItem("isLoggedIn");
+                localStorage;
+
                 _this.$router.push({
                   name: "adminLogin"
                 });
 
-                _context.next = 10;
+                _context.next = 12;
                 break;
 
-              case 7:
-                _context.prev = 7;
+              case 9:
+                _context.prev = 9;
                 _context.t0 = _context["catch"](1);
                 console.log(_context.t0);
 
-              case 10:
-                _context.prev = 10;
+              case 12:
+                _context.prev = 12;
                 _this.loading = false;
-                return _context.finish(10);
+                return _context.finish(12);
 
-              case 13:
+              case 15:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[1, 7, 10, 13]]);
+        }, _callee, null, [[1, 9, 12, 15]]);
       }))();
     }
   }
@@ -4248,6 +4342,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5312,30 +5417,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Login",
   data: function data() {
@@ -5369,14 +5450,22 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _this.error = null;
                 _context.prev = 2;
                 _context.next = 5;
-                return axios.get("/http://localhost/sanctum/csrf-cookie").then(function (response) {
+                return axios.create({
+                  withCredentials: true //siehe CORS-config Laravel
+
+                }).get("http://localhost:8000/api/sanctum/csrf-cookie").then(function (response) {
                   axios.post("http://localhost:8000/api/admin/login", _this.user).then(function (response) {
-                    alert("Login erfolgreich, " + response.data.user.name + "!");
-                    _this.einloggenErfolgreich = true;
+                    alert("Login erfolgreich!"); //LoggedIn-Status in localStorage abspeichern
+
+                    //LoggedIn-Status in localStorage abspeichern
+                    localStorage.setItem("isLoggedIn", "true");
 
                     _this.$router.push({
                       name: "admindashboard"
-                    }); //console.log("axiospost:" + response);
+                    }); //console.log(response.data.token);
+                    //var responseBearerTokenVonBody = response.data.token;
+                    //window.axios.defaults.headers.common = {
+                    // Authorization: `Bearer ${responseBearerTokenVonBody}`,
 
                   })["catch"](function (err) {
                     if (err.response) {
@@ -6621,10 +6710,15 @@ window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.withCredentials = true;
-var token = '33|ryvH8WgjJDLqDtoZ5vEl9eTz8DJ5mNNzqMLjldpo';
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+window.axios.defaults.headers.common['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT, DELETE';
+var token = '56|bGo7EMpuLHbpwIkS0DKkMGZRnQXMYViKyuy4R47J'; //old token 33|ryvH8WgjJDLqDtoZ5vEl9eTz8DJ5mNNzqMLjldpo
+
 window.axios.defaults.headers.common = {
   'Authorization': "Bearer ".concat(token)
 };
+window.axios.defaults.crossDomain = true;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
@@ -6827,16 +6921,32 @@ __webpack_require__.r(__webpack_exports__);
   }, {
     path: '/app/admin/dashboard',
     component: _components_VorstandAdminComponents_Dashboard__WEBPACK_IMPORTED_MODULE_13__.default,
-    name: 'admindashboard'
+    name: 'admindashboard',
+    meta: {
+      requiresAuth: true
+    } //protected - Login erforderlich
+
   }, {
     path: '/app/admin/dashboard/editaussteller',
-    component: _components_VorstandAdminComponents_EditAussteller__WEBPACK_IMPORTED_MODULE_14__.default
+    component: _components_VorstandAdminComponents_EditAussteller__WEBPACK_IMPORTED_MODULE_14__.default,
+    meta: {
+      requiresAuth: true
+    } //protected - Login erforderlich
+
   }, {
     path: '/app/admin/dashboard/news',
-    component: _components_VorstandAdminComponents_EditNews__WEBPACK_IMPORTED_MODULE_15__.default
+    component: _components_VorstandAdminComponents_EditNews__WEBPACK_IMPORTED_MODULE_15__.default,
+    meta: {
+      requiresAuth: true
+    } //protected - Login erforderlich
+
   }, {
     path: '/app/admin/dashboard/ausstelleruebersicht',
-    component: _components_VorstandAdminComponents_AusstellerUebersicht__WEBPACK_IMPORTED_MODULE_16__.default
+    component: _components_VorstandAdminComponents_AusstellerUebersicht__WEBPACK_IMPORTED_MODULE_16__.default,
+    meta: {
+      requiresAuth: true
+    } //protected - Login erforderlich
+
   }, {
     path: '/app/admin/register',
     component: _components_VorstandAdminComponents_Register__WEBPACK_IMPORTED_MODULE_17__.default
@@ -28284,6 +28394,18 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "ausstellergradient" }, [
     _c("div", { staticClass: "ausstellercontainer" }, [
+      _vm.loading
+        ? _c("p", [
+            _c("img", {
+              staticClass: "mt-40 mx-auto z-50",
+              attrs: {
+                src: "/images/icons/gifs/loadingtransparent.gif",
+                alt: "loading..."
+              }
+            })
+          ])
+        : _vm._e(),
+      _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
       _c(
@@ -29825,7 +29947,45 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _vm._m(0)
+            _c(
+              "div",
+              {
+                staticClass:
+                  "\r\n            absolute\r\n            inset-y-0\r\n            right-0\r\n            flex\r\n            items-center\r\n            pr-2\r\n            sm:static\r\n            sm:inset-auto\r\n            sm:ml-6\r\n            sm:pr-0\r\n          "
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "\r\n                  text-gray-300\r\n                  hover:bg-red-900\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                  },
+                  [
+                    _c(
+                      "span",
+                      {
+                        staticClass: "text-white cursor-pointer",
+                        on: {
+                          click: function($event) {
+                            return _vm.handleLogout()
+                          }
+                        }
+                      },
+                      [
+                        _vm._v("Logout "),
+                        _c("img", {
+                          staticClass: "filter-white",
+                          attrs: {
+                            src: "/public/images/icons/svgs/ausloggen.svg",
+                            alt: ""
+                          }
+                        })
+                      ]
+                    )
+                  ]
+                )
+              ]
+            )
           ]
         )
       ]),
@@ -29879,6 +30039,18 @@ var render = function() {
         ])
       ])
     ]),
+    _vm._v(" "),
+    _vm.loading
+      ? _c("p", [
+          _c("img", {
+            staticClass: "mx-auto",
+            attrs: {
+              src: "/images/icons/gifs/loadingtransparent.gif",
+              alt: "loading..."
+            }
+          })
+        ])
+      : _vm._e(),
     _vm._v(" "),
     _c("div", { staticClass: "ausstellergradient" }, [
       _c("div", { staticClass: "ausstellercontainer" }, [
@@ -30026,29 +30198,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "\r\n            absolute\r\n            inset-y-0\r\n            right-0\r\n            flex\r\n            items-center\r\n            pr-2\r\n            sm:static\r\n            sm:inset-auto\r\n            sm:ml-6\r\n            sm:pr-0\r\n          "
-      },
-      [
-        _c("span", { staticClass: "text-white" }, [
-          _vm._v("Logout "),
-          _c("img", {
-            staticClass: "filter-white",
-            attrs: { src: "/public/images/icons/svgs/ausloggen.svg", alt: "" }
-          })
-        ])
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -30294,232 +30444,258 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("nav", { staticClass: "bg-gray-800 border-b border-gray-300" }, [
-    _c("div", { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" }, [
-      _c(
-        "div",
-        { staticClass: "relative flex items-center justify-between h-16" },
-        [
-          _c(
-            "div",
-            {
-              staticClass:
-                "absolute inset-y-0 left-0 flex items-center sm:hidden"
-            },
-            [
-              _c("span", { staticClass: "sr-only" }, [
-                _vm._v("Open main menu")
-              ]),
-              _vm._v(" "),
-              _c(
-                "svg",
-                {
-                  staticClass: "hidden h-6 w-6",
-                  attrs: {
-                    xmlns: "http://www.w3.org/2000/svg",
-                    fill: "none",
-                    viewBox: "0 0 24 24",
-                    stroke: "currentColor",
-                    "aria-hidden": "true"
-                  }
-                },
-                [
-                  _c("path", {
-                    attrs: {
-                      "stroke-linecap": "round",
-                      "stroke-linejoin": "round",
-                      "stroke-width": "2",
-                      d: "M6 18L18 6M6 6l12 12"
-                    }
-                  })
-                ]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "\n          flex-1 flex\n          items-center\n          justify-center\n          sm:items-stretch\n          sm:justify-start\n        "
-            },
-            [
-              _c("div", { staticClass: "flex-shrink-0 flex items-center" }),
-              _vm._v(" "),
-              _c("div", { staticClass: "hidden sm:block sm:ml-6" }, [
-                _c(
-                  "div",
-                  { staticClass: "flex space-x-4" },
-                  [
-                    _c(
-                      "router-link",
-                      { attrs: { to: "/app/admin/dashboard" } },
-                      [
-                        _c("span", { staticClass: "text-gray-500 text-lg" }, [
-                          _vm._v("Dashboard")
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "\n                bg-gray-900\n                text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              ",
-                        attrs: { "aria-current": "page" }
-                      },
-                      [
-                        _c(
-                          "router-link",
-                          {
-                            attrs: {
-                              to: "/app/admin/dashboard/ausstelleruebersicht"
-                            }
-                          },
-                          [_vm._v("Aussteller\n              ")]
-                        )
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "\n                text-gray-300\n                hover:bg-gray-700\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
-                      },
-                      [
-                        _c(
-                          "router-link",
-                          { attrs: { to: "/app/admin/dashboard/news" } },
-                          [_vm._v("News")]
-                        )
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        staticClass:
-                          "\n                text-gray-300\n                hover:bg-gray-700\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              ",
-                        attrs: { href: "#" }
-                      },
-                      [_vm._v("Programm")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        staticClass:
-                          "\n                text-gray-300\n                hover:bg-gray-700\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              ",
-                        attrs: { href: "#" }
-                      },
-                      [_vm._v("platzhalter")]
-                    )
-                  ],
-                  1
-                )
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "\n          absolute\n          inset-y-0\n          right-0\n          flex\n          items-center\n          pr-2\n          sm:static\n          sm:inset-auto\n          sm:ml-6\n          sm:pr-0\n        "
-            },
-            [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "\n                text-gray-300\n                hover:bg-red-900\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
-                },
-                [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "text-white",
-                      on: {
-                        click: function($event) {
-                          return _vm.handleLogout()
-                        }
-                      }
-                    },
-                    [
-                      _vm._v("Logout "),
-                      _c("img", {
-                        staticClass: "filter-white",
-                        attrs: {
-                          src: "/public/images/icons/svgs/ausloggen.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  )
-                ]
-              )
-            ]
-          )
-        ]
-      )
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "sm:hidden", attrs: { id: "mobile-menu" } }, [
-      _c("div", { staticClass: "px-2 pt-2 pb-3 space-y-1" }, [
+  return _c("div", { staticClass: "w-full h-full" }, [
+    _c("nav", { staticClass: "bg-gray-800 border-b border-gray-300" }, [
+      _c("div", { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" }, [
         _c(
-          "a",
-          {
-            staticClass:
-              "\n          bg-gray-900\n          text-white\n          block\n          px-3\n          py-1\n          rounded-md\n          text-base\n          font-medium\n        ",
-            attrs: { href: "#", "aria-current": "page" }
-          },
-          [_vm._v("Dashboard")]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass:
-              "\n          text-gray-300\n          hover:bg-gray-700\n          hover:text-white\n          block\n          px-3\n          py-1\n          rounded-md\n          text-base\n          font-medium\n        ",
-            attrs: { href: "#" }
-          },
+          "div",
+          { staticClass: "relative flex items-center justify-between h-16" },
           [
             _c(
-              "router-link",
-              { attrs: { to: "/app/admin/dashboard/ausstelleruebersicht" } },
-              [_vm._v("Aussteller")]
+              "div",
+              {
+                staticClass:
+                  "absolute inset-y-0 left-0 flex items-center sm:hidden"
+              },
+              [
+                _c("span", { staticClass: "sr-only" }, [
+                  _vm._v("Open main menu")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "svg",
+                  {
+                    staticClass: "hidden h-6 w-6",
+                    attrs: {
+                      xmlns: "http://www.w3.org/2000/svg",
+                      fill: "none",
+                      viewBox: "0 0 24 24",
+                      stroke: "currentColor",
+                      "aria-hidden": "true"
+                    }
+                  },
+                  [
+                    _c("path", {
+                      attrs: {
+                        "stroke-linecap": "round",
+                        "stroke-linejoin": "round",
+                        "stroke-width": "2",
+                        d: "M6 18L18 6M6 6l12 12"
+                      }
+                    })
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "\r\n            flex-1 flex\r\n            items-center\r\n            justify-center\r\n            sm:items-stretch\r\n            sm:justify-start\r\n          "
+              },
+              [
+                _c("div", { staticClass: "flex-shrink-0 flex items-center" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "hidden sm:block sm:ml-6" }, [
+                  _c(
+                    "div",
+                    { staticClass: "flex space-x-4" },
+                    [
+                      _c(
+                        "router-link",
+                        { attrs: { to: "/app/admin/dashboard" } },
+                        [
+                          _c("span", { staticClass: "text-gray-500 text-lg" }, [
+                            _vm._v("Dashboard")
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                        },
+                        [
+                          _c(
+                            "router-link",
+                            {
+                              attrs: {
+                                to: "/app/admin/dashboard/ausstelleruebersicht"
+                              }
+                            },
+                            [_vm._v("Aussteller\r\n                ")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                        },
+                        [
+                          _c(
+                            "router-link",
+                            { attrs: { to: "/app/admin/dashboard/news" } },
+                            [_vm._v("News")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                          attrs: { href: "#" }
+                        },
+                        [_vm._v("Programm")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass:
+                            "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                          attrs: { href: "#" }
+                        },
+                        [_vm._v("platzhalter")]
+                      )
+                    ],
+                    1
+                  )
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "\r\n            absolute\r\n            inset-y-0\r\n            right-0\r\n            flex\r\n            items-center\r\n            pr-2\r\n            sm:static\r\n            sm:inset-auto\r\n            sm:ml-6\r\n            sm:pr-0\r\n          "
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "\r\n                  text-gray-300\r\n                  hover:bg-red-900\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                  },
+                  [
+                    _c(
+                      "span",
+                      {
+                        staticClass: "text-white cursor-pointer",
+                        on: {
+                          click: function($event) {
+                            return _vm.handleLogout()
+                          }
+                        }
+                      },
+                      [
+                        _vm._v("Logout "),
+                        _c("img", {
+                          staticClass: "filter-white",
+                          attrs: {
+                            src: "/public/images/icons/svgs/ausloggen.svg",
+                            alt: ""
+                          }
+                        })
+                      ]
+                    )
+                  ]
+                )
+              ]
             )
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass:
-              "\n          text-gray-300\n          hover:bg-gray-700\n          hover:text-white\n          block\n          px-3\n          py-1\n          rounded-md\n          text-base\n          font-medium\n        ",
-            attrs: { href: "#" }
-          },
-          [_vm._v("News")]
-        ),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass:
-              "\n          text-gray-300\n          hover:bg-gray-700\n          hover:text-white\n          block\n          px-3\n          py-1\n          rounded-md\n          text-base\n          font-medium\n        ",
-            attrs: { href: "#" }
-          },
-          [_vm._v("Programm")]
+          ]
         )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "sm:hidden", attrs: { id: "mobile-menu" } }, [
+        _c("div", { staticClass: "px-2 pt-2 pb-3 space-y-1" }, [
+          _c(
+            "a",
+            {
+              staticClass:
+                "\r\n            bg-gray-900\r\n            text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+              attrs: { href: "#", "aria-current": "page" }
+            },
+            [_vm._v("Dashboard")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass:
+                "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+              attrs: { href: "#" }
+            },
+            [
+              _c(
+                "router-link",
+                { attrs: { to: "/app/admin/dashboard/ausstelleruebersicht" } },
+                [_vm._v("Aussteller")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass:
+                "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+              attrs: { href: "#" }
+            },
+            [_vm._v("News")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass:
+                "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+              attrs: { href: "#" }
+            },
+            [_vm._v("Programm")]
+          )
+        ])
       ])
-    ])
+    ]),
+    _vm._v(" "),
+    _vm._m(0)
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "bg-gray-900 h-full w-full",
+        attrs: { id: "dashboardcontent" }
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "flex pt-60 w-full justify-center text-white text-4xl text-gray-800"
+          },
+          [_vm._v("Welcome Home")]
+        )
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -30832,13 +31008,25 @@ var staticRenderFns = [
           "\r\n            absolute\r\n            inset-y-0\r\n            right-0\r\n            flex\r\n            items-center\r\n            pr-2\r\n            sm:static\r\n            sm:inset-auto\r\n            sm:ml-6\r\n            sm:pr-0\r\n          "
       },
       [
-        _c("span", { staticClass: "text-white" }, [
-          _vm._v("Logout "),
-          _c("img", {
-            staticClass: "filter-white",
-            attrs: { src: "/public/images/icons/svgs/ausloggen.svg", alt: "" }
-          })
-        ])
+        _c(
+          "div",
+          {
+            staticClass:
+              "\r\n                  text-gray-300\r\n                  hover:bg-red-900\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+          },
+          [
+            _c("span", { staticClass: "text-white cursor-pointer" }, [
+              _vm._v("Logout "),
+              _c("img", {
+                staticClass: "filter-white",
+                attrs: {
+                  src: "/public/images/icons/svgs/ausloggen.svg",
+                  alt: ""
+                }
+              })
+            ])
+          ]
+        )
       ]
     )
   },
@@ -31475,7 +31663,7 @@ var render = function() {
           _vm._v(" "),
           _vm._m(0),
           _vm._v(" "),
-          _c("div", { staticClass: "mt-8 space-y-6" }, [
+          _c("div", { staticClass: "mt-8 space-y-6 w-5/6 md:w-100" }, [
             _c("input", {
               attrs: { type: "hidden", name: "remember", value: "true" }
             }),
@@ -31560,7 +31748,7 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _vm._m(1),
+            _c("div", { staticClass: "flex items-center justify-between" }),
             _vm._v(" "),
             _c("div", [
               _c(
@@ -31635,40 +31823,6 @@ var staticRenderFns = [
         },
         [_vm._v("\n        Admin login\n      ")]
       )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex items-center justify-between" }, [
-      _c("div", { staticClass: "flex items-center" }, [
-        _c("input", {
-          staticClass:
-            "\n              h-4\n              w-4\n              text-green-600\n              focus:ring-green-500\n              border-gray-300\n              rounded\n            ",
-          attrs: { id: "remember_me", name: "remember_me", type: "checkbox" }
-        }),
-        _vm._v(" "),
-        _c(
-          "label",
-          {
-            staticClass: "ml-2 block text-sm text-gray-900",
-            attrs: { for: "remember_me" }
-          },
-          [_vm._v("\n            Remember me\n          ")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "text-sm" }, [
-        _c(
-          "a",
-          {
-            staticClass: "font-medium text-green-700 hover:text-green-500",
-            attrs: { href: "#" }
-          },
-          [_vm._v("\n            Forgot your password?\n          ")]
-        )
-      ])
     ])
   }
 ]

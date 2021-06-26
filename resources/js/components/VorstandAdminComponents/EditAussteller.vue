@@ -127,9 +127,20 @@
             sm:pr-0
           "
         >
-          
-            <span class="text-white">Logout <img src="/public/images/icons/svgs/ausloggen.svg" class= "filter-white" alt=""></span>
-          </div>
+          <div
+                class="
+                  text-gray-300
+                  hover:bg-red-900
+                  hover:text-white
+                  px-3
+                  py-2
+                  rounded-md
+                  text-sm
+                  font-medium
+                "
+              >
+            <span class="text-white cursor-pointer">Logout <img src="/public/images/icons/svgs/ausloggen.svg" class= "filter-white" alt=""></span>
+          </div></div>
         </div>
       </div>
     
