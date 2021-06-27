@@ -13,6 +13,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProgrammController;
 use App\Http\Controllers\ProgrammpunktController;
 use App\Http\Controllers\SponsorenController;
+use App\Http\Controllers\ImageUploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,11 +45,31 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/aussteller', [AusstellerController::class, 'store']);
     Route::put('/aussteller/{id}', [AusstellerController::class, 'update']);
     Route::delete('/aussteller/{id}', [AusstellerController::class, 'destroy']);
+    //imageupload
+    Route::post('/aussteller/upload', [ImageUploadController::class, 'handle']);
 
     //logout
     Route::post('/admin/logout', [AuthController::class, 'logout']);
     //login
     Route::post('/admin/login', [AuthController::class, 'login']);
+
+    Route::post('/upload', function(){
+        $avarta = Input::file('image');
+        
+
+           $upload_folder = '/images/aussteller/';
+     
+           $file_name = str_random(). '.' . $avarta->getClientOriginalExtension();
+     
+           $avarta->move(public_path() . $upload_folder, $file_name);
+     
+           echo URL::asset($upload_folder . $file_name);  // get upload file url
+     
+           return Response::make('Success', 200);
+        });
+       
+
+    
 
 });
 

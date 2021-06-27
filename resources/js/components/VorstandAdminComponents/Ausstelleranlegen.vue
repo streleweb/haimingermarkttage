@@ -1,5 +1,5 @@
 <template>
-<div class="w-full h-full">
+<div class="w-full">
 <div v-if="loggedIn() == false" class="flex w-full h-full items-center justify-center text-red-900 bg-gray-900"> Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard zugreifen zu können...</div>
 <!-- Check for Login-Status, only display if logged in-->
 <div v-if="loggedIn()" class="w-full">
@@ -221,25 +221,25 @@
       </div>
     </div>
   </nav>
-  <div class="bg-gray-800 flex flex-col justify-evenly p-4">
+  <div class="bg-gray-800 flex flex-col justify-evenly  p-4 md:p-10 lg:p-20">
       <div class="mt-10 sm:mt-0">
-        <div class="grid grid-cols gap-6">
-          <div class="md:col-span-1">
-            <div class="px-4 sm:px-0 text-gray-400">
+        <div class="">
+          
+            <div class=" text-gray-400">
               <h3 class="text-lg font-medium leading-6 text-white pb-1">
                 Neuen Aussteller anlegen
               </h3>
               Neuer Aussteller wird in DB gespeichert und in Web-App eingebettet...
             </div>
-          </div>
+          
           <div class="mt-5 md:mt-0 md:col-span-2">
             <form method="POST" action="/api/aussteller">
               <div class="shadow overflow-hidden sm:rounded-md">
                 <div class="px-4 py-5 bg-gray-300 sm:p-6">
-                  <div class="grid grid-cols-6 gap-6">
-                    <div class="col-span-6 sm:col-span-3">
+                  
+                    
                       <label
-                        for="first_name"
+                        for="name"
                         class="block text-sm font-medium text-gray-700"
                         >Vor und Nachname</label
                       >
@@ -262,6 +262,94 @@
                           rounded-md
                         "
                       />
+                      <label
+                        class="block text-sm font-medium text-gray-700"
+                        >Handelsname (Branding-Name) des Ausstellers</label
+                      >
+                      <input
+                        type="text"
+                        v-model="formdata.aussteller_brandingname"
+                        name="aussteller_fullname"
+                        id="full_name"
+                        placeholder="Optional"
+                        autocomplete="given-name"
+                        class="
+                          mt-1
+                          focus:ring-green-500
+                          focus:border-green-500
+                          block
+                          w-full
+                          shadow-sm
+                          sm:text-sm
+                          border-gray-300
+                          rounded-md
+                        "
+                      />
+                    <!--EMAIL START-->
+                    <div class="col-span-6 sm:col-span-4">
+                    <label
+                      for="email_address"
+                      class="block text-sm font-medium text-gray-700"
+                      >Aussteller-E-Mail</label
+                    >
+                    <input
+                      type="text"
+                      name="email_address"
+                      id="email_address"
+                      autocomplete="email"
+                      placeholder="Optional"
+                      class="
+                        mt-1
+                        focus:ring-green-500
+                        focus:border-green-500
+                        block
+                        w-full
+                        shadow-sm
+                        sm:text-sm
+                        border-gray-300
+                        rounded-md
+                      "
+                    />
+                  </div><!--EMAIL END-->
+
+                  <div>
+                    <label
+                      for="company_website"
+                      class="block text-sm font-medium text-gray-700"
+                    >
+                      Aussteller-Website
+                    </label>
+                    <div class="mt-1 flex rounded-md shadow-sm">
+                      <span
+                        class="
+                          inline-flex
+                          items-center
+                          px-3
+                          rounded-l-md
+                          border border-r-0 border-gray-300
+                          bg-gray-50
+                          text-gray-500 text-sm
+                        "
+                      >
+                        http://
+                      </span>
+                      <input
+                        type="text"
+                        name="company_website"
+                        id="company_website"
+                        class="
+                          focus:ring-green-500
+                          focus:border-green-500
+                          flex-1
+                          block
+                          w-full
+                          rounded-none rounded-r-md
+                          sm:text-sm
+                          border-gray-300
+                        "
+                        placeholder="www.example.com"
+                      />
+                    </div>
                     </div>
 
                     <div class="col-span-6 sm:col-span-4">
@@ -276,8 +364,9 @@
                         name="aussteller_beschreibung"
                         id="beschreibung"
                         autocomplete="Beschreibung"
-                        placeholder="Optional [Beschreibung der angebotenen Produkte des Ausstellers]"
+                        placeholder="Optional [Beschreibung inkl. der angebotenen Produkte des Ausstellers]"
                         class="
+                          
                           mt-1
                           focus:ring-green-500
                           focus:border-green-500
@@ -331,10 +420,17 @@
     </label>
   </div>
   <!--COLORBUTTONS END-->
-                    </div>
-                  </div>
-                </div>
-                <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+  </div>
+  <!--IMAGE FILE UPLOAD START-->
+  <div class="py-2 bg-green-900 text-white mb-1 px-2">Ausstellerfoto Upload</div>
+<form @submit.prevent="upload()" >
+  <input @change="handleOnChange" type="file">
+  <button>Upload Photo</button>
+</form>
+<!--IMAGE FILE UPLOAD END-->
+</div>
+
+                  <div class="px-4 py-3 bg-gray-500 border-t-2 border-gray-800 text-right sm:px-6">
                   <button
                     type="submit"
                     class="
@@ -356,8 +452,10 @@
                   >
                     In DB Speichern
                   </button>
-                </div>
+                
               </div>
+                </div>
+                
             </form>
           </div>
         </div>
@@ -372,6 +470,7 @@ export default {
   data() {
     return {
       name: "Ausstelleranlegen",
+      image: null,
       aussteller: [],
       ausstellerfotos: [],
       neuerAussteller: "",
@@ -379,6 +478,9 @@ export default {
         aussteller_fullname: null,
         aussteller_beschreibung: null,
         aussteller_zonenfarbe: null,
+        aussteller_brandingname: null,
+        aussteller_websiteurl: null,
+        aussteller_bildurl: null,
       }, //Objekt zum Speichern der Model-Daten von oben
     };
   },
@@ -387,6 +489,16 @@ export default {
   mounted() {},
 
   methods: {
+    //image aus dem inputfield lesen
+    handleOnChange(e) {
+      this.image = e.target.files[0];
+    },
+    //image uploaden
+    upload() {
+      const formData = new FormData();
+      formData.set("image", this.image);
+      axios.post("http://localhost:8000/api/aussteller/upload", formData);
+    },
     //assign-Color Methods for Radio-Buttons
     //Wird im Tailwind-Textformat in DB gespeichert und so wieder herausgeholt
     assignColorRed() {

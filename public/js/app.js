@@ -4244,17 +4244,119 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       name: "Ausstelleranlegen",
+      image: null,
       aussteller: [],
       ausstellerfotos: [],
       neuerAussteller: "",
       formdata: {
         aussteller_fullname: null,
         aussteller_beschreibung: null,
-        aussteller_zonenfarbe: null
+        aussteller_zonenfarbe: null,
+        aussteller_brandingname: null,
+        aussteller_websiteurl: null,
+        aussteller_bildurl: null
       } //Objekt zum Speichern der Model-Daten von oben
 
     };
@@ -4263,6 +4365,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   //Laden der Aussteller und Ausstellerfotos via Axios Request aus
   mounted: function mounted() {},
   methods: {
+    //image aus dem inputfield lesen
+    handleOnChange: function handleOnChange(e) {
+      this.image = e.target.files[0];
+    },
+    //image uploaden
+    upload: function upload() {
+      var formData = new FormData();
+      formData.set("image", this.image);
+      axios.post("http://localhost:8000/api/aussteller/upload", formData);
+    },
     //assign-Color Methods for Radio-Buttons
     //Wird im Tailwind-Textformat in DB gespeichert und so wieder herausgeholt
     assignColorRed: function assignColorRed() {
@@ -30920,7 +31032,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "w-full h-full" }, [
+  return _c("div", { staticClass: "w-full" }, [
     _vm.loggedIn() == false
       ? _c(
           "div",
@@ -31187,10 +31299,13 @@ var render = function() {
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "bg-gray-800 flex flex-col justify-evenly p-4" },
+            {
+              staticClass:
+                "bg-gray-800 flex flex-col justify-evenly  p-4 md:p-10 lg:p-20"
+            },
             [
               _c("div", { staticClass: "mt-10 sm:mt-0" }, [
-                _c("div", { staticClass: "grid grid-cols gap-6" }, [
+                _c("div", {}, [
                   _vm._m(0),
                   _vm._v(" "),
                   _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
@@ -31209,295 +31324,347 @@ var render = function() {
                               { staticClass: "px-4 py-5 bg-gray-300 sm:p-6" },
                               [
                                 _c(
+                                  "label",
+                                  {
+                                    staticClass:
+                                      "block text-sm font-medium text-gray-700",
+                                    attrs: { for: "name" }
+                                  },
+                                  [_vm._v("Vor und Nachname")]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.formdata.aussteller_fullname,
+                                      expression: "formdata.aussteller_fullname"
+                                    }
+                                  ],
+                                  staticClass:
+                                    "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                  attrs: {
+                                    type: "text",
+                                    name: "aussteller_fullname",
+                                    id: "full_name",
+                                    placeholder: "Pflichtfeld",
+                                    autocomplete: "given-name"
+                                  },
+                                  domProps: {
+                                    value: _vm.formdata.aussteller_fullname
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.formdata,
+                                        "aussteller_fullname",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "label",
+                                  {
+                                    staticClass:
+                                      "block text-sm font-medium text-gray-700"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "Handelsname (Branding-Name) des Ausstellers"
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value:
+                                        _vm.formdata.aussteller_brandingname,
+                                      expression:
+                                        "formdata.aussteller_brandingname"
+                                    }
+                                  ],
+                                  staticClass:
+                                    "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                  attrs: {
+                                    type: "text",
+                                    name: "aussteller_fullname",
+                                    id: "full_name",
+                                    placeholder: "Optional",
+                                    autocomplete: "given-name"
+                                  },
+                                  domProps: {
+                                    value: _vm.formdata.aussteller_brandingname
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.formdata,
+                                        "aussteller_brandingname",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _vm._m(1),
+                                _vm._v(" "),
+                                _vm._m(2),
+                                _vm._v(" "),
+                                _c(
                                   "div",
-                                  { staticClass: "grid grid-cols-6 gap-6" },
+                                  { staticClass: "col-span-6 sm:col-span-4" },
                                   [
                                     _c(
-                                      "div",
+                                      "label",
                                       {
-                                        staticClass: "col-span-6 sm:col-span-3"
+                                        staticClass:
+                                          "block text-sm font-medium text-gray-700",
+                                        attrs: { for: "email_address" }
+                                      },
+                                      [_vm._v("Beschreibung")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("textarea", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value:
+                                            _vm.formdata
+                                              .aussteller_beschreibung,
+                                          expression:
+                                            "formdata.aussteller_beschreibung"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "\r\n                          \r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                      attrs: {
+                                        maxlength: "200",
+                                        name: "aussteller_beschreibung",
+                                        id: "beschreibung",
+                                        autocomplete: "Beschreibung",
+                                        placeholder:
+                                          "Optional [Beschreibung inkl. der angebotenen Produkte des Ausstellers]"
+                                      },
+                                      domProps: {
+                                        value:
+                                          _vm.formdata.aussteller_beschreibung
+                                      },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.formdata,
+                                            "aussteller_beschreibung",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "col-span-6" }, [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass:
+                                        "block text-sm font-medium text-gray-700",
+                                      attrs: { for: "street_address" }
+                                    },
+                                    [_vm._v("Zonenfarbe am Markt")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "pt-3" }, [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "container",
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.assignColorBlue()
+                                          }
+                                        }
                                       },
                                       [
-                                        _c(
-                                          "label",
-                                          {
-                                            staticClass:
-                                              "block text-sm font-medium text-gray-700",
-                                            attrs: { for: "first_name" }
-                                          },
-                                          [_vm._v("Vor und Nachname")]
-                                        ),
+                                        _vm._v("Blau\r\n      "),
+                                        _c("div", {
+                                          staticClass:
+                                            "bg-blue-500 h-2 w-5 rounded-md"
+                                        }),
                                         _vm._v(" "),
                                         _c("input", {
-                                          directives: [
-                                            {
-                                              name: "model",
-                                              rawName: "v-model",
-                                              value:
-                                                _vm.formdata
-                                                  .aussteller_fullname,
-                                              expression:
-                                                "formdata.aussteller_fullname"
-                                            }
-                                          ],
-                                          staticClass:
-                                            "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
                                           attrs: {
-                                            type: "text",
-                                            name: "aussteller_fullname",
-                                            id: "full_name",
-                                            placeholder: "Pflichtfeld",
-                                            autocomplete: "given-name"
-                                          },
-                                          domProps: {
-                                            value:
-                                              _vm.formdata.aussteller_fullname
-                                          },
-                                          on: {
-                                            input: function($event) {
-                                              if ($event.target.composing) {
-                                                return
-                                              }
-                                              _vm.$set(
-                                                _vm.formdata,
-                                                "aussteller_fullname",
-                                                $event.target.value
-                                              )
-                                            }
+                                            type: "radio",
+                                            checked: "checked",
+                                            name: "radio"
                                           }
-                                        })
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", { staticClass: "checkmark" })
                                       ]
                                     ),
                                     _vm._v(" "),
                                     _c(
-                                      "div",
+                                      "label",
                                       {
-                                        staticClass: "col-span-6 sm:col-span-4"
+                                        staticClass: "container",
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.assignColorRed()
+                                          }
+                                        }
                                       },
                                       [
-                                        _c(
-                                          "label",
-                                          {
-                                            staticClass:
-                                              "block text-sm font-medium text-gray-700",
-                                            attrs: { for: "email_address" }
-                                          },
-                                          [_vm._v("Beschreibung")]
-                                        ),
-                                        _vm._v(" "),
-                                        _c("textarea", {
-                                          directives: [
-                                            {
-                                              name: "model",
-                                              rawName: "v-model",
-                                              value:
-                                                _vm.formdata
-                                                  .aussteller_beschreibung,
-                                              expression:
-                                                "formdata.aussteller_beschreibung"
-                                            }
-                                          ],
+                                        _vm._v("Rot\r\n      "),
+                                        _c("div", {
                                           staticClass:
-                                            "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                            "bg-red-600 h-2 w-5 rounded-md"
+                                        }),
+                                        _vm._v(" "),
+                                        _c("input", {
                                           attrs: {
-                                            maxlength: "200",
-                                            name: "aussteller_beschreibung",
-                                            id: "beschreibung",
-                                            autocomplete: "Beschreibung",
-                                            placeholder:
-                                              "Optional [Beschreibung der angebotenen Produkte des Ausstellers]"
-                                          },
-                                          domProps: {
-                                            value:
-                                              _vm.formdata
-                                                .aussteller_beschreibung
-                                          },
-                                          on: {
-                                            input: function($event) {
-                                              if ($event.target.composing) {
-                                                return
-                                              }
-                                              _vm.$set(
-                                                _vm.formdata,
-                                                "aussteller_beschreibung",
-                                                $event.target.value
-                                              )
-                                            }
+                                            type: "radio",
+                                            name: "radio"
                                           }
-                                        })
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", { staticClass: "checkmark" })
                                       ]
                                     ),
                                     _vm._v(" "),
-                                    _c("div", { staticClass: "col-span-6" }, [
-                                      _c(
-                                        "label",
-                                        {
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "container",
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.assignColorYellow()
+                                          }
+                                        }
+                                      },
+                                      [
+                                        _vm._v("Gelb\r\n      "),
+                                        _c("div", {
                                           staticClass:
-                                            "block text-sm font-medium text-gray-700",
-                                          attrs: { for: "street_address" }
-                                        },
-                                        [_vm._v("Zonenfarbe am Markt")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "pt-3" }, [
-                                        _c(
-                                          "label",
-                                          {
-                                            staticClass: "container",
-                                            on: {
-                                              click: function($event) {
-                                                return _vm.assignColorBlue()
-                                              }
-                                            }
-                                          },
-                                          [
-                                            _vm._v("Blau\r\n      "),
-                                            _c("div", {
-                                              staticClass:
-                                                "bg-blue-500 h-2 w-5 rounded-md"
-                                            }),
-                                            _vm._v(" "),
-                                            _c("input", {
-                                              attrs: {
-                                                type: "radio",
-                                                checked: "checked",
-                                                name: "radio"
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("span", {
-                                              staticClass: "checkmark"
-                                            })
-                                          ]
-                                        ),
+                                            "bg-yellow-300 h-2 w-5 rounded-md"
+                                        }),
                                         _vm._v(" "),
-                                        _c(
-                                          "label",
-                                          {
-                                            staticClass: "container",
-                                            on: {
-                                              click: function($event) {
-                                                return _vm.assignColorRed()
-                                              }
-                                            }
-                                          },
-                                          [
-                                            _vm._v("Rot\r\n      "),
-                                            _c("div", {
-                                              staticClass:
-                                                "bg-red-600 h-2 w-5 rounded-md"
-                                            }),
-                                            _vm._v(" "),
-                                            _c("input", {
-                                              attrs: {
-                                                type: "radio",
-                                                name: "radio"
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("span", {
-                                              staticClass: "checkmark"
-                                            })
-                                          ]
-                                        ),
+                                        _c("input", {
+                                          attrs: {
+                                            type: "radio",
+                                            name: "radio"
+                                          }
+                                        }),
                                         _vm._v(" "),
-                                        _c(
-                                          "label",
-                                          {
-                                            staticClass: "container",
-                                            on: {
-                                              click: function($event) {
-                                                return _vm.assignColorYellow()
-                                              }
-                                            }
-                                          },
-                                          [
-                                            _vm._v("Gelb\r\n      "),
-                                            _c("div", {
-                                              staticClass:
-                                                "bg-yellow-300 h-2 w-5 rounded-md"
-                                            }),
-                                            _vm._v(" "),
-                                            _c("input", {
-                                              attrs: {
-                                                type: "radio",
-                                                name: "radio"
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("span", {
-                                              staticClass: "checkmark"
-                                            })
-                                          ]
-                                        ),
+                                        _c("span", { staticClass: "checkmark" })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "container",
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.assignColorGreen()
+                                          }
+                                        }
+                                      },
+                                      [
+                                        _vm._v("Grün\r\n      "),
+                                        _c("div", {
+                                          staticClass:
+                                            "bg-green-500 h-2 w-5 rounded-md"
+                                        }),
                                         _vm._v(" "),
-                                        _c(
-                                          "label",
-                                          {
-                                            staticClass: "container",
-                                            on: {
-                                              click: function($event) {
-                                                return _vm.assignColorGreen()
-                                              }
-                                            }
-                                          },
-                                          [
-                                            _vm._v("Grün\r\n      "),
-                                            _c("div", {
-                                              staticClass:
-                                                "bg-green-500 h-2 w-5 rounded-md"
-                                            }),
-                                            _vm._v(" "),
-                                            _c("input", {
-                                              attrs: {
-                                                type: "radio",
-                                                name: "radio"
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("span", {
-                                              staticClass: "checkmark"
-                                            })
-                                          ]
-                                        ),
+                                        _c("input", {
+                                          attrs: {
+                                            type: "radio",
+                                            name: "radio"
+                                          }
+                                        }),
                                         _vm._v(" "),
-                                        _c(
-                                          "label",
-                                          {
-                                            staticClass: "container",
-                                            on: {
-                                              click: function($event) {
-                                                return _vm.assignColorBrown()
-                                              }
-                                            }
-                                          },
-                                          [
-                                            _vm._v("Braun\r\n      "),
-                                            _c("div", {
-                                              staticClass:
-                                                "bg-yellow-900 h-2 w-5 rounded-md"
-                                            }),
-                                            _vm._v(" "),
-                                            _c("input", {
-                                              attrs: {
-                                                type: "radio",
-                                                name: "radio"
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("span", {
-                                              staticClass: "checkmark"
-                                            })
-                                          ]
-                                        )
-                                      ])
-                                    ])
+                                        _c("span", { staticClass: "checkmark" })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "container",
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.assignColorBrown()
+                                          }
+                                        }
+                                      },
+                                      [
+                                        _vm._v("Braun\r\n      "),
+                                        _c("div", {
+                                          staticClass:
+                                            "bg-yellow-900 h-2 w-5 rounded-md"
+                                        }),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          attrs: {
+                                            type: "radio",
+                                            name: "radio"
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", { staticClass: "checkmark" })
+                                      ]
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-2 bg-green-900 text-white mb-1 px-2"
+                                  },
+                                  [_vm._v("Ausstellerfoto Upload")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "form",
+                                  {
+                                    on: {
+                                      submit: function($event) {
+                                        $event.preventDefault()
+                                        return _vm.upload()
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("input", {
+                                      attrs: { type: "file" },
+                                      on: { change: _vm.handleOnChange }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("button", [_vm._v("Upload Photo")])
                                   ]
                                 )
                               ]
                             ),
                             _vm._v(" "),
-                            _vm._m(1)
+                            _vm._m(3)
                           ]
                         )
                       ]
@@ -31516,20 +31683,90 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "md:col-span-1" }, [
-      _c("div", { staticClass: "px-4 sm:px-0 text-gray-400" }, [
+    return _c("div", { staticClass: " text-gray-400" }, [
+      _c(
+        "h3",
+        { staticClass: "text-lg font-medium leading-6 text-white pb-1" },
+        [
+          _vm._v(
+            "\r\n                Neuen Aussteller anlegen\r\n              "
+          )
+        ]
+      ),
+      _vm._v(
+        "\r\n              Neuer Aussteller wird in DB gespeichert und in Web-App eingebettet...\r\n            "
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-span-6 sm:col-span-4" }, [
+      _c(
+        "label",
+        {
+          staticClass: "block text-sm font-medium text-gray-700",
+          attrs: { for: "email_address" }
+        },
+        [_vm._v("Aussteller-E-Mail")]
+      ),
+      _vm._v(" "),
+      _c("input", {
+        staticClass:
+          "\r\n                        mt-1\r\n                        focus:ring-green-500\r\n                        focus:border-green-500\r\n                        block\r\n                        w-full\r\n                        shadow-sm\r\n                        sm:text-sm\r\n                        border-gray-300\r\n                        rounded-md\r\n                      ",
+        attrs: {
+          type: "text",
+          name: "email_address",
+          id: "email_address",
+          autocomplete: "email",
+          placeholder: "Optional"
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c(
+        "label",
+        {
+          staticClass: "block text-sm font-medium text-gray-700",
+          attrs: { for: "company_website" }
+        },
+        [
+          _vm._v(
+            "\r\n                      Aussteller-Website\r\n                    "
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "mt-1 flex rounded-md shadow-sm" }, [
         _c(
-          "h3",
-          { staticClass: "text-lg font-medium leading-6 text-white pb-1" },
+          "span",
+          {
+            staticClass:
+              "\r\n                          inline-flex\r\n                          items-center\r\n                          px-3\r\n                          rounded-l-md\r\n                          border border-r-0 border-gray-300\r\n                          bg-gray-50\r\n                          text-gray-500 text-sm\r\n                        "
+          },
           [
             _vm._v(
-              "\r\n                Neuen Aussteller anlegen\r\n              "
+              "\r\n                        http://\r\n                      "
             )
           ]
         ),
-        _vm._v(
-          "\r\n              Neuer Aussteller wird in DB gespeichert und in Web-App eingebettet...\r\n            "
-        )
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          flex-1\r\n                          block\r\n                          w-full\r\n                          rounded-none rounded-r-md\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                        ",
+          attrs: {
+            type: "text",
+            name: "company_website",
+            id: "company_website",
+            placeholder: "www.example.com"
+          }
+        })
       ])
     ])
   },
@@ -31539,7 +31776,10 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "px-4 py-3 bg-gray-50 text-right sm:px-6" },
+      {
+        staticClass:
+          "px-4 py-3 bg-gray-500 border-t-2 border-gray-800 text-right sm:px-6"
+      },
       [
         _c(
           "button",
