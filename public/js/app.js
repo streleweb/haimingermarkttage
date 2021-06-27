@@ -4347,9 +4347,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -4363,6 +4360,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         aussteller_beschreibung: null,
         aussteller_zonenfarbe: null,
         aussteller_brandingname: null,
+        aussteller_email: null,
         aussteller_websiteurl: null,
         aussteller_bildurl: null
       } //Objekt zum Speichern der Model-Daten von oben
@@ -4386,30 +4384,33 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     upload: function upload() {
       var _this = this;
 
+      //formdata reset, falls öfter aufgerufen wird
+      this.formdata.aussteller_bildurl = null;
       var formData = new FormData();
       formData.set("image", this.image);
       console.log(this.formData);
       axios.post("http://localhost:8000/api/aussteller/upload", formData).then(function (response) {
-        _this.aussteller_bildurl = response.data.filepath;
+        //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
+        _this.formdata.aussteller_bildurl = response.data.filepath;
       });
       console.log(this.aussteller_bildurl);
     },
     //assign-Color Methods for Radio-Buttons
     //Wird im Tailwind-Textformat in DB gespeichert und so wieder herausgeholt
     assignColorRed: function assignColorRed() {
-      this.aussteller_zonenfarbe = "bg-red-600";
+      this.formdata.aussteller_zonenfarbe = "bg-red-600";
     },
     assignColorBlue: function assignColorBlue() {
-      this.aussteller_zonenfarbe = "bg-blue-500";
+      this.formdata.aussteller_zonenfarbe = "bg-blue-500";
     },
     assignColorGreen: function assignColorGreen() {
-      this.aussteller_zonenfarbe = "bg-green-500";
+      this.formdata.aussteller_zonenfarbe = "bg-green-500";
     },
     assignColorBrown: function assignColorBrown() {
-      this.aussteller_zonenfarbe = "bg-yellow-900";
+      this.formdata.aussteller_zonenfarbe = "bg-yellow-900";
     },
     assignColorYellow: function assignColorYellow() {
-      this.aussteller_zonenfarbe = "bg-yellow-300";
+      this.formdata.aussteller_zonenfarbe = "bg-yellow-300";
     },
     loggedIn: function loggedIn() {
       if (localStorage.getItem("isLoggedIn") == "true") {
@@ -4463,10 +4464,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       console.log(formToJson);
 
       try {
-        var result = axios.post("/api/aussteller", {
-          "this": this.formdata
-        });
-        console.log(result.response.data);
+        axios.post("/api/aussteller", this.formdata); //console.log(result.response.data);
+
         /*.then((response) => {
           console.log(response); // debug
         })
@@ -4474,8 +4473,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           // Fehlerbehandlung
           console.log(error);
         });*/
-      } catch (error) {
-        console.error(error.response.data);
+      } catch (error) {//console.error(error.response.data);
       }
     }
   }
@@ -31360,7 +31358,6 @@ var render = function() {
                                   "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
                                 attrs: {
                                   type: "text",
-                                  name: "aussteller_fullname",
                                   id: "full_name",
                                   placeholder: "Pflichtfeld",
                                   autocomplete: "given-name"
@@ -31409,8 +31406,7 @@ var render = function() {
                                   "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
                                 attrs: {
                                   type: "text",
-                                  name: "aussteller_fullname",
-                                  id: "full_name",
+                                  id: "handelsname",
                                   placeholder: "Optional",
                                   autocomplete: "given-name"
                                 },
@@ -31431,9 +31427,129 @@ var render = function() {
                                 }
                               }),
                               _vm._v(" "),
-                              _vm._m(1),
+                              _c(
+                                "div",
+                                { staticClass: "col-span-6 sm:col-span-4" },
+                                [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass:
+                                        "block text-sm font-medium text-gray-700",
+                                      attrs: { for: "email_address" }
+                                    },
+                                    [_vm._v("Aussteller-E-Mail")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.formdata.aussteller_email,
+                                        expression: "formdata.aussteller_email"
+                                      }
+                                    ],
+                                    staticClass:
+                                      "\r\n                        mt-1\r\n                        focus:ring-green-500\r\n                        focus:border-green-500\r\n                        block\r\n                        w-full\r\n                        shadow-sm\r\n                        sm:text-sm\r\n                        border-gray-300\r\n                        rounded-md\r\n                      ",
+                                    attrs: {
+                                      type: "text",
+                                      id: "email_address",
+                                      autocomplete: "email",
+                                      placeholder: "Optional"
+                                    },
+                                    domProps: {
+                                      value: _vm.formdata.aussteller_email
+                                    },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.formdata,
+                                          "aussteller_email",
+                                          $event.target.value
+                                        )
+                                      }
+                                    }
+                                  })
+                                ]
+                              ),
                               _vm._v(" "),
-                              _vm._m(2),
+                              _c("div", [
+                                _c(
+                                  "label",
+                                  {
+                                    staticClass:
+                                      "block text-sm font-medium text-gray-700",
+                                    attrs: { for: "company_website" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\r\n                      Aussteller-Website\r\n                    "
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "mt-1 flex rounded-md shadow-sm"
+                                  },
+                                  [
+                                    _c(
+                                      "span",
+                                      {
+                                        staticClass:
+                                          "\r\n                          inline-flex\r\n                          items-center\r\n                          px-3\r\n                          rounded-l-md\r\n                          border border-r-0 border-gray-300\r\n                          bg-gray-50\r\n                          text-gray-500 text-sm\r\n                        "
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\r\n                        http://\r\n                      "
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value:
+                                            _vm.formdata.aussteller_websiteurl,
+                                          expression:
+                                            "formdata.aussteller_websiteurl"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          flex-1\r\n                          block\r\n                          w-full\r\n                          rounded-none rounded-r-md\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                        ",
+                                      attrs: {
+                                        type: "text",
+                                        id: "aussteller_website",
+                                        placeholder: "www.example.com"
+                                      },
+                                      domProps: {
+                                        value:
+                                          _vm.formdata.aussteller_websiteurl
+                                      },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.formdata,
+                                            "aussteller_websiteurl",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                )
+                              ]),
                               _vm._v(" "),
                               _c(
                                 "div",
@@ -31464,7 +31580,6 @@ var render = function() {
                                       "\r\n                          \r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
                                     attrs: {
                                       maxlength: "200",
-                                      name: "aussteller_beschreibung",
                                       id: "beschreibung",
                                       autocomplete: "Beschreibung",
                                       placeholder:
@@ -31741,78 +31856,6 @@ var staticRenderFns = [
       _vm._v(
         '\r\n              Neuer Aussteller wird in DB gespeichert und in Web-App eingebettet...\r\n              Klicken Sie zuerst auf "Upload Photo" oder "Kein Photo", ehe der\r\n              Submit-Button erscheint.\r\n            '
       )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-span-6 sm:col-span-4" }, [
-      _c(
-        "label",
-        {
-          staticClass: "block text-sm font-medium text-gray-700",
-          attrs: { for: "email_address" }
-        },
-        [_vm._v("Aussteller-E-Mail")]
-      ),
-      _vm._v(" "),
-      _c("input", {
-        staticClass:
-          "\r\n                        mt-1\r\n                        focus:ring-green-500\r\n                        focus:border-green-500\r\n                        block\r\n                        w-full\r\n                        shadow-sm\r\n                        sm:text-sm\r\n                        border-gray-300\r\n                        rounded-md\r\n                      ",
-        attrs: {
-          type: "text",
-          name: "email_address",
-          id: "email_address",
-          autocomplete: "email",
-          placeholder: "Optional"
-        }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "label",
-        {
-          staticClass: "block text-sm font-medium text-gray-700",
-          attrs: { for: "company_website" }
-        },
-        [
-          _vm._v(
-            "\r\n                      Aussteller-Website\r\n                    "
-          )
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "mt-1 flex rounded-md shadow-sm" }, [
-        _c(
-          "span",
-          {
-            staticClass:
-              "\r\n                          inline-flex\r\n                          items-center\r\n                          px-3\r\n                          rounded-l-md\r\n                          border border-r-0 border-gray-300\r\n                          bg-gray-50\r\n                          text-gray-500 text-sm\r\n                        "
-          },
-          [
-            _vm._v(
-              "\r\n                        http://\r\n                      "
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c("input", {
-          staticClass:
-            "\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          flex-1\r\n                          block\r\n                          w-full\r\n                          rounded-none rounded-r-md\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                        ",
-          attrs: {
-            type: "text",
-            name: "company_website",
-            id: "company_website",
-            placeholder: "www.example.com"
-          }
-        })
-      ])
     ])
   }
 ]

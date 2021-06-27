@@ -251,7 +251,6 @@
                       <input
                         type="text"
                         v-model="formdata.aussteller_fullname"
-                        name="aussteller_fullname"
                         id="full_name"
                         placeholder="Pflichtfeld"
                         autocomplete="given-name"
@@ -274,8 +273,7 @@
                       <input
                         type="text"
                         v-model="formdata.aussteller_brandingname"
-                        name="aussteller_fullname"
-                        id="full_name"
+                        id="handelsname"
                         placeholder="Optional"
                         autocomplete="given-name"
                         class="
@@ -299,7 +297,7 @@
                     >
                     <input
                       type="text"
-                      name="email_address"
+                      v-model="formdata.aussteller_email"
                       id="email_address"
                       autocomplete="email"
                       placeholder="Optional"
@@ -340,8 +338,8 @@
                       </span>
                       <input
                         type="text"
-                        name="company_website"
-                        id="company_website"
+                        v-model="formdata.aussteller_websiteurl"
+                        id="aussteller_website"
                         class="
                           focus:ring-green-500
                           focus:border-green-500
@@ -366,7 +364,6 @@
                       <textarea
                         maxlength="200"
                         v-model="formdata.aussteller_beschreibung"
-                        name="aussteller_beschreibung"
                         id="beschreibung"
                         autocomplete="Beschreibung"
                         placeholder="Optional [Beschreibung inkl. der angebotenen Produkte des Ausstellers]"
@@ -487,6 +484,7 @@ export default {
         aussteller_beschreibung: null,
         aussteller_zonenfarbe: null,
         aussteller_brandingname: null,
+        aussteller_email: null,
         aussteller_websiteurl: null,
         aussteller_bildurl: null,
       }, //Objekt zum Speichern der Model-Daten von oben
@@ -508,13 +506,16 @@ export default {
     },
     //image uploaden
     upload() {
+      //formdata reset, falls öfter aufgerufen wird
+      this.formdata.aussteller_bildurl = null;
       const formData = new FormData();
       formData.set("image", this.image);
       console.log(this.formData);
       axios
         .post("http://localhost:8000/api/aussteller/upload", formData)
         .then((response) => {
-          this.aussteller_bildurl = response.data.filepath;
+          //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
+          this.formdata.aussteller_bildurl = response.data.filepath;
         });
       console.log(this.aussteller_bildurl);
     },
@@ -522,19 +523,19 @@ export default {
     //assign-Color Methods for Radio-Buttons
     //Wird im Tailwind-Textformat in DB gespeichert und so wieder herausgeholt
     assignColorRed() {
-      this.aussteller_zonenfarbe = "bg-red-600";
+      this.formdata.aussteller_zonenfarbe = "bg-red-600";
     },
     assignColorBlue() {
-      this.aussteller_zonenfarbe = "bg-blue-500";
+      this.formdata.aussteller_zonenfarbe = "bg-blue-500";
     },
     assignColorGreen() {
-      this.aussteller_zonenfarbe = "bg-green-500";
+      this.formdata.aussteller_zonenfarbe = "bg-green-500";
     },
     assignColorBrown() {
-      this.aussteller_zonenfarbe = "bg-yellow-900";
+      this.formdata.aussteller_zonenfarbe = "bg-yellow-900";
     },
     assignColorYellow() {
-      this.aussteller_zonenfarbe = "bg-yellow-300";
+      this.formdata.aussteller_zonenfarbe = "bg-yellow-300";
     },
 
     loggedIn() {
@@ -559,10 +560,8 @@ export default {
       let formToJson = JSON.stringify(this.formdata);
       console.log(formToJson);
       try {
-        let result = axios.post("/api/aussteller", {
-          this: this.formdata,
-        });
-        console.log(result.response.data);
+        axios.post("/api/aussteller", this.formdata);
+        //console.log(result.response.data);
         /*.then((response) => {
           console.log(response); // debug
         })
@@ -571,7 +570,7 @@ export default {
           console.log(error);
         });*/
       } catch (error) {
-        console.error(error.response.data);
+        //console.error(error.response.data);
       }
     },
   },
