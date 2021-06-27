@@ -3,6 +3,8 @@
 <div v-if="loggedIn() == false" class="flex w-full h-full items-center justify-center text-red-900 bg-gray-900"> Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard zugreifen zu können...</div>
 <!-- Check for Login-Status, only display if logged in-->
 <div v-if="loggedIn()" class="w-full">
+
+ 
   
   <nav class="bg-gray-800 border-b border-gray-300">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -221,7 +223,8 @@
       </div>
     </div>
   </nav>
-  <div class="bg-gray-800 flex flex-col justify-evenly  p-4 md:p-10 lg:p-20">
+ 
+  <div class="bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20">
       <div class="mt-10 sm:mt-0">
         <div class="">
           
@@ -470,7 +473,7 @@ export default {
   data() {
     return {
       name: "Ausstelleranlegen",
-      image: null,
+      image: "",
       aussteller: [],
       ausstellerfotos: [],
       neuerAussteller: "",
@@ -492,11 +495,14 @@ export default {
     //image aus dem inputfield lesen
     handleOnChange(e) {
       this.image = e.target.files[0];
+      /*console.log(this.image);
+      console.log(this.image.name);*/
     },
     //image uploaden
     upload() {
       const formData = new FormData();
       formData.set("image", this.image);
+      console.log(this.formData);
       axios.post("http://localhost:8000/api/aussteller/upload", formData);
     },
     //assign-Color Methods for Radio-Buttons

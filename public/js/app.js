@@ -4342,11 +4342,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       name: "Ausstelleranlegen",
-      image: null,
+      image: "",
       aussteller: [],
       ausstellerfotos: [],
       neuerAussteller: "",
@@ -4368,11 +4371,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     //image aus dem inputfield lesen
     handleOnChange: function handleOnChange(e) {
       this.image = e.target.files[0];
+      /*console.log(this.image);
+      console.log(this.image.name);*/
     },
     //image uploaden
     upload: function upload() {
       var formData = new FormData();
       formData.set("image", this.image);
+      console.log(this.formData);
       axios.post("http://localhost:8000/api/aussteller/upload", formData);
     },
     //assign-Color Methods for Radio-Buttons
@@ -31301,7 +31307,7 @@ var render = function() {
             "div",
             {
               staticClass:
-                "bg-gray-800 flex flex-col justify-evenly  p-4 md:p-10 lg:p-20"
+                "bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20"
             },
             [
               _c("div", { staticClass: "mt-10 sm:mt-0" }, [

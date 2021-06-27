@@ -47,29 +47,11 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::delete('/aussteller/{id}', [AusstellerController::class, 'destroy']);
     //imageupload
     Route::post('/aussteller/upload', [ImageUploadController::class, 'handle']);
-
+   
     //logout
     Route::post('/admin/logout', [AuthController::class, 'logout']);
     //login
     Route::post('/admin/login', [AuthController::class, 'login']);
-
-    Route::post('/upload', function(){
-        $avarta = Input::file('image');
-        
-
-           $upload_folder = '/images/aussteller/';
-     
-           $file_name = str_random(). '.' . $avarta->getClientOriginalExtension();
-     
-           $avarta->move(public_path() . $upload_folder, $file_name);
-     
-           echo URL::asset($upload_folder . $file_name);  // get upload file url
-     
-           return Response::make('Success', 200);
-        });
-       
-
-    
 
 });
 
