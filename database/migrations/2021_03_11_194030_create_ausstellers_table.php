@@ -20,14 +20,9 @@ class CreateAusstellersTable extends Migration
             $table->string('aussteller_beschreibung')->nullable();
             $table->string('aussteller_brandingname')->nullable();
             $table->string('aussteller_email')->unique()->nullable();
-            $table->string('aussteller_telefonnummer')->unique()->nullable();
             $table->string('aussteller_websiteurl')->unique()->nullable();
             $table->string('aussteller_zonenfarbe')->unique()->nullable();
             $table->string('aussteller_bildurl')->nullable();
-            /*$table->integer('aussteller_jahre')->nullable();            
-            $table->string('aussteller_straße')->nullable();
-            $table->integer('aussteller_postleitzahl')->nullable();
-            $table->string('aussteller_wohnort')->nullable();*/
             $table->timestamps();
         });
     }

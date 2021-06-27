@@ -233,10 +233,12 @@
                 Neuen Aussteller anlegen
               </h3>
               Neuer Aussteller wird in DB gespeichert und in Web-App eingebettet...
+              Klicken Sie zuerst auf "Upload Photo" oder "Kein Photo", ehe der
+              Submit-Button erscheint.
             </div>
           
           <div class="mt-5 md:mt-0 md:col-span-2">
-            <form method="POST" action="/api/aussteller">
+            <div>
               <div class="shadow overflow-hidden sm:rounded-md">
                 <div class="px-4 py-5 bg-gray-300 sm:p-6">
                   
@@ -391,51 +393,54 @@
                       >
                       <!--COLORBUTTONS START-->
   <div class="pt-3">
-    <label class="container" @click="assignColorBlue()"
+    <label class="container" @click="assignColorBlue"
       >Blau
-      <div class="bg-blue-500 h-2 w-5 rounded-md"></div>
-      <input type="radio" checked="checked" name="radio" />
-      <span class="checkmark"></span>
+      <div class="bg-blue-500 h-2 w-5 rounded-md" @click="assignColorBlue"></div>
+      <input @click="assignColorBlue" type="radio" checked="checked" name="radio" />
+      <span @click="assignColorBlue" class="checkmark"></span>
     </label>
-    <label class="container" @click="assignColorRed()"
+    <label class="container" @click="assignColorRed"
       >Rot
-      <div class="bg-red-600 h-2 w-5 rounded-md"></div>
-      <input type="radio" name="radio" />
-      <span class="checkmark"></span>
+      <div @click="assignColorRed" class="bg-red-600 h-2 w-5 rounded-md"></div>
+      <input @click="assignColorRed" type="radio" name="radio" />
+      <span @click="assignColorRed" class="checkmark"></span>
     </label>
-    <label class="container" @click="assignColorYellow()"
+    <label class="container" @click="assignColorYellow"
       >Gelb
-      <div class="bg-yellow-300 h-2 w-5 rounded-md"></div>
-      <input type="radio" name="radio" />
-      <span class="checkmark"></span>
+      <div @click="assignColorYellow" class="bg-yellow-300 h-2 w-5 rounded-md"></div>
+      <input @click="assignColorYellow" type="radio" name="radio" />
+      <span @click="assignColorYellow" class="checkmark"></span>
     </label>
-    <label class="container" @click="assignColorGreen()"
+    <label class="container" @click="assignColorGreen"
       >Grün
-      <div class="bg-green-500 h-2 w-5 rounded-md"></div>
-      <input type="radio" name="radio" />
-      <span class="checkmark"></span>
+      <div @click="assignColorGreen" class="bg-green-500 h-2 w-5 rounded-md"></div>
+      <input @click="assignColorGreen" type="radio" name="radio" />
+      <span @click="assignColorGreen" class="checkmark"></span>
     </label>
-    <label class="container" @click="assignColorBrown()"
+    <label class="container" @click="assignColorBrown"
       >Braun
-      <div class="bg-yellow-900 h-2 w-5 rounded-md"></div>
-      <input type="radio" name="radio" />
-      <span class="checkmark"></span>
+      <div @click="assignColorBrown" class="bg-yellow-900 h-2 w-5 rounded-md"></div>
+      <input @click="assignColorBrown" type="radio" name="radio" />
+      <span @click="assignColorBrown" class="checkmark"></span>
     </label>
   </div>
   <!--COLORBUTTONS END-->
   </div>
   <!--IMAGE FILE UPLOAD START-->
   <div class="py-2 bg-green-900 text-white mb-1 px-2">Ausstellerfoto Upload</div>
-<form @submit.prevent="upload()" >
+<form @submit.prevent="upload()">
   <input @change="handleOnChange" type="file">
-  <button>Upload Photo</button>
+  <button @click="showSubmitButton" class="bg-green-900 px-1 text-white border border-green-600 rounded-md hover:bg-green-500">Upload Photo</button>
+  <button @click="showSubmitButton" class="bg-green-900 px-1 text-white border border-green-600 rounded-md hover:bg-green-500">No Photo</button>
 </form>
 <!--IMAGE FILE UPLOAD END-->
 </div>
 
                   <div class="px-4 py-3 bg-gray-500 border-t-2 border-gray-800 text-right sm:px-6">
                   <button
-                    type="submit"
+                  id="submitbutton"
+                  @click="submitform"
+                  :class=submitvisibility
                     class="
                       inline-flex
                       justify-center
@@ -459,7 +464,7 @@
               </div>
                 </div>
                 
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -475,8 +480,8 @@ export default {
       name: "Ausstelleranlegen",
       image: "",
       aussteller: [],
-      ausstellerfotos: [],
       neuerAussteller: "",
+      submitvisibility: "hidden",
       formdata: {
         aussteller_fullname: null,
         aussteller_beschreibung: null,
@@ -492,6 +497,9 @@ export default {
   mounted() {},
 
   methods: {
+    showSubmitButton() {
+      this.submitvisibility = "block";
+    },
     //image aus dem inputfield lesen
     handleOnChange(e) {
       this.image = e.target.files[0];
@@ -503,8 +511,14 @@ export default {
       const formData = new FormData();
       formData.set("image", this.image);
       console.log(this.formData);
-      axios.post("http://localhost:8000/api/aussteller/upload", formData);
+      axios
+        .post("http://localhost:8000/api/aussteller/upload", formData)
+        .then((response) => {
+          this.aussteller_bildurl = response.data.filepath;
+        });
+      console.log(this.aussteller_bildurl);
     },
+
     //assign-Color Methods for Radio-Buttons
     //Wird im Tailwind-Textformat in DB gespeichert und so wieder herausgeholt
     assignColorRed() {

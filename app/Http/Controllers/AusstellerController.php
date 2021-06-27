@@ -46,9 +46,7 @@ class AusstellerController extends Controller
             'aussteller_zonenfarbe' => 'nullable|min:2|max:15', 
             'aussteller_brandingname' => 'nullable|min:2|max:30', 
             'aussteller_email' => 'nullable|min:2|max:100',
-            'aussteller_telefonnummer' => 'nullable|min:2|max:20',
             'aussteller_websiteurl' => 'nullable|min:10|max:100',
-            'aussteller_zonenfarbe' => 'nullable|min:2|max:15',
             'aussteller_bildurl' => 'nullable|min:10|max:100',
             
         ]);
@@ -63,7 +61,6 @@ class AusstellerController extends Controller
             $aussteller->aussteller_beschreibung = $request->aussteller_beschreibung;
             $aussteller->aussteller_brandingname = $request->aussteller_brandingname;
             $aussteller->aussteller_email = $request->aussteller_email;
-            $aussteller->aussteller_telefonnummer = $request->aussteller_telefonnummer;
             $aussteller->aussteller_websiteurl = $request->aussteller_websiteurl;
             $aussteller->aussteller_zonenfarbe = $request->aussteller_zonenfarbe;
             $aussteller->aussteller_bildurl = $request->aussteller_bildurl;

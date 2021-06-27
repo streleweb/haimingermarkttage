@@ -35,6 +35,8 @@ Route::get('/aussteller/search/{name}', [AusstellerController::class, 'search'])
 Route::get('/aussteller', [AusstellerController::class, 'index']);
 Route::get('/aussteller/{id}', [AusstellerController::class, 'show']);
 
+
+Route::post('/admin/register', [AuthController::class, 'register']);
 //Admin-Public-Routes
 
  //Protected routes through Sanctum -- Token-based requests
