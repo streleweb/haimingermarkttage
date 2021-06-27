@@ -4347,6 +4347,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -4388,7 +4393,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       this.formdata.aussteller_bildurl = null;
       var formData = new FormData();
       formData.set("image", this.image);
-      console.log(this.formData);
       axios.post("http://localhost:8000/api/aussteller/upload", formData).then(function (response) {
         //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
         _this.formdata.aussteller_bildurl = response.data.filepath;
@@ -7791,7 +7795,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* Farbzonenbuttons */\n.container {\n  display: block;\n  position: relative;\n  padding-left: 2rem;\n  margin-bottom: 0.8rem;\n  cursor: pointer;\n  font-size: 0.9rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n/* Hide the browser's default radio button */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n}\n\n/* Create a custom radio button */\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 50%;\n}\n\n/* On mouse-over, add a grey background color */\n.container:hover input ~ .checkmark {\n  background-color: #ccc;\n}\n\n/* When the radio button is checked, add a blue background */\n.container input:checked ~ .checkmark {\n  background-color: #2196f3;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n.container input:checked ~ .checkmark:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n.container .checkmark:after {\n  top: 9px;\n  left: 9px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: white;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* Farbzonenbuttons */\n.container {\n  display: block;\n  position: relative;\n  padding-left: 2rem;\n  margin-bottom: 0.8rem;\n  cursor: pointer;\n  font-size: 0.9rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n/* Hide the browser's default radio button */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n}\n\n/* Create a custom radio button */\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 50%;\n}\n\n/* On mouse-over, add a grey background color */\n.container:hover input ~ .checkmark {\n  background-color: #ccc;\n}\n\n/* When the radio button is checked, add a blue background */\n.container input:checked ~ .checkmark {\n  background-color: #2196f3;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n.container input:checked ~ .checkmark:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n.container .checkmark:after {\n  top: 9px;\n  left: 9px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: white;\n}\n.alert {\n  padding: 20px;\n  background-color: #f44336;\n  color: white;\n}\n.closebtn {\n  margin-left: 15px;\n  color: white;\n  font-weight: bold;\n  float: right;\n  font-size: 22px;\n  line-height: 20px;\n  cursor: pointer;\n  transition: 0.3s;\n}\n.closebtn:hover {\n  color: black;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -31632,11 +31636,7 @@ var render = function() {
                                       }),
                                       _vm._v(" "),
                                       _c("input", {
-                                        attrs: {
-                                          type: "radio",
-                                          checked: "checked",
-                                          name: "radio"
-                                        },
+                                        attrs: { type: "radio", name: "radio" },
                                         on: { click: _vm.assignColorBlue }
                                       }),
                                       _vm._v(" "),
@@ -31753,14 +31753,7 @@ var render = function() {
                                 ])
                               ]),
                               _vm._v(" "),
-                              _c(
-                                "div",
-                                {
-                                  staticClass:
-                                    "py-2 bg-green-900 text-white mb-1 px-2"
-                                },
-                                [_vm._v("Ausstellerfoto Upload")]
-                              ),
+                              _vm._m(1),
                               _vm._v(" "),
                               _c(
                                 "form",
@@ -31857,6 +31850,37 @@ var staticRenderFns = [
         '\r\n              Neuer Aussteller wird in DB gespeichert und in Web-App eingebettet...\r\n              Klicken Sie zuerst auf "Upload Photo" oder "Kein Photo", ehe der\r\n              Submit-Button erscheint.\r\n            '
       )
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "py-2 bg-green-900 text-white mb-1 px-2" },
+      [
+        _vm._v("Ausstellerfoto Upload\r\n    "),
+        _c("div", { staticClass: "alert" }, [
+          _c(
+            "span",
+            {
+              staticClass: "closebtn",
+              attrs: { onclick: "this.parentElement.style.display='none';" }
+            },
+            [_vm._v("×")]
+          ),
+          _vm._v(" "),
+          _c("strong", [_vm._v("Achtung!")]),
+          _vm._v(
+            " Hochladen des Fotos in folgenden Formaten möglich: ausstellername.dateiendung "
+          ),
+          _c("br"),
+          _vm._v(
+            "  Bsp: aussteller1.jpg  Bitte keine Sonderzeichen im Dateinamen!\r\n"
+          )
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true

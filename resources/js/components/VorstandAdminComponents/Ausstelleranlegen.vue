@@ -393,7 +393,7 @@
     <label class="container" @click="assignColorBlue"
       >Blau
       <div class="bg-blue-500 h-2 w-5 rounded-md" @click="assignColorBlue"></div>
-      <input @click="assignColorBlue" type="radio" checked="checked" name="radio" />
+      <input @click="assignColorBlue" type="radio"  name="radio" />
       <span @click="assignColorBlue" class="checkmark"></span>
     </label>
     <label class="container" @click="assignColorRed"
@@ -424,7 +424,12 @@
   <!--COLORBUTTONS END-->
   </div>
   <!--IMAGE FILE UPLOAD START-->
-  <div class="py-2 bg-green-900 text-white mb-1 px-2">Ausstellerfoto Upload</div>
+  <div class="py-2 bg-green-900 text-white mb-1 px-2">Ausstellerfoto Upload
+    <div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Achtung!</strong> Hochladen des Fotos in folgenden Formaten möglich: ausstellername.dateiendung <br>  Bsp: aussteller1.jpg  Bitte keine Sonderzeichen im Dateinamen!
+</div>
+  </div>
 <form @submit.prevent="upload()">
   <input @change="handleOnChange" type="file">
   <button @click="showSubmitButton" class="bg-green-900 px-1 text-white border border-green-600 rounded-md hover:bg-green-500">Upload Photo</button>
@@ -510,7 +515,7 @@ export default {
       this.formdata.aussteller_bildurl = null;
       const formData = new FormData();
       formData.set("image", this.image);
-      console.log(this.formData);
+
       axios
         .post("http://localhost:8000/api/aussteller/upload", formData)
         .then((response) => {
@@ -640,6 +645,27 @@ export default {
   height: 8px;
   border-radius: 50%;
   background: white;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
 }
 </style>
 
