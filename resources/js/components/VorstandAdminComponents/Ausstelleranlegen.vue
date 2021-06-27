@@ -276,7 +276,7 @@
                         name="aussteller_beschreibung"
                         id="beschreibung"
                         autocomplete="Beschreibung"
-                        placeholder="Optional"
+                        placeholder="Optional [Beschreibung der angebotenen Produkte des Ausstellers]"
                         class="
                           mt-1
                           focus:ring-green-500
@@ -297,25 +297,40 @@
                         class="block text-sm font-medium text-gray-700"
                         >Zonenfarbe am Markt</label
                       >
-                      <input
-                        type="text"
-                        name="aussteller_zonenfarbe"
-                        v-model="formdata.aussteller_zonenfarbe"
-                        id="zonenfarbe"
-                        autocomplete="Zonenfarbe"
-                        placeholder="Optional"
-                        class="
-                          mt-1
-                          focus:ring-green-500
-                          focus:border-green-500
-                          block
-                          w-full
-                          shadow-sm
-                          sm:text-sm
-                          border-gray-300
-                          rounded-md
-                        "
-                      />
+                      <!--COLORBUTTONS START-->
+  <div class="pt-3">
+    <label class="container" @click="assignColorBlue()"
+      >Blau
+      <div class="bg-blue-500 h-2 w-5 rounded-md"></div>
+      <input type="radio" checked="checked" name="radio" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container" @click="assignColorRed()"
+      >Rot
+      <div class="bg-red-600 h-2 w-5 rounded-md"></div>
+      <input type="radio" name="radio" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container" @click="assignColorYellow()"
+      >Gelb
+      <div class="bg-yellow-300 h-2 w-5 rounded-md"></div>
+      <input type="radio" name="radio" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container" @click="assignColorGreen()"
+      >Grün
+      <div class="bg-green-500 h-2 w-5 rounded-md"></div>
+      <input type="radio" name="radio" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container" @click="assignColorBrown()"
+      >Braun
+      <div class="bg-yellow-900 h-2 w-5 rounded-md"></div>
+      <input type="radio" name="radio" />
+      <span class="checkmark"></span>
+    </label>
+  </div>
+  <!--COLORBUTTONS END-->
                     </div>
                   </div>
                 </div>
@@ -372,6 +387,24 @@ export default {
   mounted() {},
 
   methods: {
+    //assign-Color Methods for Radio-Buttons
+    //Wird im Tailwind-Textformat in DB gespeichert und so wieder herausgeholt
+    assignColorRed() {
+      this.aussteller_zonenfarbe = "bg-red-600";
+    },
+    assignColorBlue() {
+      this.aussteller_zonenfarbe = "bg-blue-500";
+    },
+    assignColorGreen() {
+      this.aussteller_zonenfarbe = "bg-green-500";
+    },
+    assignColorBrown() {
+      this.aussteller_zonenfarbe = "bg-yellow-900";
+    },
+    assignColorYellow() {
+      this.aussteller_zonenfarbe = "bg-yellow-300";
+    },
+
     loggedIn() {
       if (localStorage.getItem("isLoggedIn") == "true") {
         return true;
@@ -414,5 +447,68 @@ export default {
 </script>
 
 <style>
+/* Farbzonenbuttons */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
 </style>
 

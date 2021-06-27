@@ -16,7 +16,7 @@ import EditAussteller from './components/VorstandAdminComponents/EditAussteller'
 import EditNews from './components/VorstandAdminComponents/EditNews';
 import AusstellerUebersicht from './components/VorstandAdminComponents/AusstellerUebersicht';
 import Register from './components/VorstandAdminComponents/Register';
-
+import ColorRadioButtons from './components/VorstandAdminComponents/utilies/ColorRadioButtons';
 
 
 export default {
@@ -111,6 +111,11 @@ export default {
         {
             path: '/app/admin/register',
             component: Register
+        },
+
+        {
+            path: '/colorradiobuttons',
+            component: ColorRadioButtons
         }
     ]
 
