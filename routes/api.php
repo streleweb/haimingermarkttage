@@ -49,7 +49,10 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::delete('/aussteller/{id}', [AusstellerController::class, 'destroy']);
 
     //imageupload
-    Route::post('/aussteller/upload', [ImageUploadController::class, 'handle']);
+    Route::post('/imageupload', [ImageUploadController::class, 'handle']);
+
+    //fotogalerie upload/edit 
+    Route::post('/fotogalerie', [FotogalerieController::class, 'store']);
    
     //logout
     Route::post('/admin/logout', [AuthController::class, 'logout']);

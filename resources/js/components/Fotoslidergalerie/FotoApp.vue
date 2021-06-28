@@ -45,7 +45,7 @@ export default {
     },
     urlOfFoto(index) {
       try {
-        return "/images/fotogalerie/" + this.fotos[index].fotogalerie_fotourl;
+        return "/images/aussteller/" + this.fotos[index].fotogalerie_fotourl;
       } catch (error) {
         console.log(error);
       }

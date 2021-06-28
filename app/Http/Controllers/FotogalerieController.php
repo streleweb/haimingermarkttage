@@ -6,6 +6,7 @@ use App\Models\Fotogalerie;
 use App\Http\Resources\FotogalerieResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Carbon\Carbon; //Date
 
 class FotogalerieController extends Controller
 {
@@ -17,8 +18,9 @@ class FotogalerieController extends Controller
     public function index()
     {
 
-        $fotogalerieliste = Fotogalerie::paginate(4); // für 4 Fotogalerien pro Seite unter /app/fotogalerie im Frontend
-        return FotogalerieResource::collection($fotogalerieliste);
+        //$fotogalerieliste = Fotogalerie::paginate(4); // für 4 Fotogalerien pro Seite unter /app/fotogalerie im Frontend
+        //return FotogalerieResource::collection($fotogalerieliste);
+        return FotogalerieResource::collection(Fotogalerie::all());
     }
 
     /**
@@ -42,22 +44,26 @@ class FotogalerieController extends Controller
         $validator = Validator::make($request->all(),
         [
             'fotogalerie_fotoname' => 'required|min:2|max:30',
-            'fotogalerie_fotobeschreibung'=> 'nullable|min:10|max:100',
-            'fotogalerie_fotourl'=> 'nullable|min:10|max:100',
+            'fotogalerie_fotobeschreibung'=> 'nullable|min:10|max:50',
+            'fotogalerie_fotourl'=> 'nullable|max:100',
         ]);
 
         if ($validator->fails()) {
-            return Response::json([
-                'error' => $validator->errors()], 200);
+            return \response('Validation-Error: Achten Sie auf die Zeichenlängen! ', 200)
+            ->header('Content-Type', 'text/plain');
             
         }else {
             $fotogalerie = new Fotogalerie();
             $fotogalerie->fotogalerie_fotoname = $request->fotogalerie_fotoname;
             $fotogalerie->fotogalerie_fotobeschreibung = $request->fotogalerie_fotobeschreibung;
             $fotogalerie->fotogalerie_fotourl = $request->fotogalerie_fotourl;
+            $date = Carbon::now();
+            $fotogalerie->created_at=$date->toDateTimeString();
            
             if($fotogalerie->save()){
-                return new FotogalerieResource($fotogalerie);
+                //return new FotogalerieResource($fotogalerie);
+                return \response('Fotoinfos gespeichert! ', 200)
+                ->header('Content-Type', 'text/plain');
             }
         }
     }
@@ -112,9 +118,16 @@ class FotogalerieController extends Controller
      * @param  \App\Models\Fotogalerie  $fotogalerie
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Fotogalerie $fotogalerie)
+    public function destroy($id)
     {
         $fotogalerie = Fotogalerie::findOrFail($id);
-        $fotogalerie->delete();
+        if($fotogalerie->delete()){
+            return \response('Foto gelöscht! ', 200)
+            ->header('Content-Type', 'text/plain');
+        }
+        else{
+            return \response('Fehler, Foto nicht gelöscht! ', 200)
+                ->header('Content-Type', 'text/plain');
+        }
     }
 }

@@ -104,8 +104,7 @@
                 >Programm</a
               >
 
-              <a
-                href="#"
+              <div
                 class="
                   text-gray-300
                   hover:bg-gray-700
@@ -116,7 +115,7 @@
                   text-sm
                   font-medium
                 "
-                >platzhalter</a
+                ><router-link to="/app/admin/dashboard/editfotogalerie">Fotogalerie</router-link></div
               >
             </div>
           </div>
@@ -230,7 +229,7 @@
         <img
           src="/images/icons/gifs/loadingtransparent.gif"
           alt="loading..."
-          class="mx-auto"
+          class="m-auto resize-loadinggif"
         />
       </p>
 

@@ -2485,7 +2485,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     urlOfFoto: function urlOfFoto(index) {
       try {
-        return "/images/fotogalerie/" + this.fotos[index].fotogalerie_fotourl;
+        return "/images/aussteller/" + this.fotos[index].fotogalerie_fotourl;
       } catch (error) {
         console.log(error);
       }
@@ -3894,6 +3894,134 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -3973,9 +4101,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       this.formdata.aussteller_bildurl = null;
       var formData = new FormData();
       formData.set("image", this.image);
-      axios.post("http://localhost:8000/api/aussteller/upload", formData).then(function (response) {
+      axios.post("http://localhost:8000/api/imageupload", formData).then(function (response) {
         //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
         _this2.formdata.aussteller_bildurl = response.data.filepath;
+        sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
+          title: "Foto gespeichert!",
+          confirmButtonText: "ok",
+          confirmButtonColor: "#3cb371"
+        });
       }); //console.log(this.aussteller_bildurl);
     },
     //assign-Color Methods for Radio-Buttons
@@ -4029,16 +4162,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _context2.t0 = _context2["catch"](0);
 
               case 10:
-                _context2.prev = 10;
-                _this3.loading = false;
-                return _context2.finish(10);
-
-              case 13:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2, null, [[0, 8, 10, 13]]);
+        }, _callee2, null, [[0, 8]]);
       }))();
     },
     submitform: function submitform() {
@@ -4099,7 +4227,6 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-//
 //
 //
 //
@@ -5125,7 +5252,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -5177,9 +5303,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       this.formdata.aussteller_bildurl = null;
       var formData = new FormData();
       formData.set("image", this.image);
-      axios.post("http://localhost:8000/api/aussteller/upload", formData).then(function (response) {
+      axios.post("http://localhost:8000/api/imageupload", formData).then(function (response) {
         //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
         _this.formdata.aussteller_bildurl = response.data.filepath;
+        sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+          title: "Foto gespeichert!",
+          confirmButtonText: "ok",
+          confirmButtonColor: "#3cb371"
+        });
       }); //console.log(this.aussteller_bildurl);
     },
     //assign-Color Methods for Radio-Buttons
@@ -5300,7 +5431,6 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-//
 //
 //
 //
@@ -6514,6 +6644,600 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      name: "Ausstelleranlegen",
+      image: "",
+      fotos: [],
+      loading: null,
+      neuerAussteller: "",
+      submitvisibility: "hidden",
+      formdata: {
+        fotogalerie_fotoname: null,
+        fotogalerie_fotobeschreibung: null,
+        fotogalerie_fotourl: null //created_at: null,
+        //updated_at: null,
+
+      } //Objekt zum Speichern der Model-Daten von oben
+
+    };
+  },
+  //Noch bevor Component gemounted ist, checke Login-Status...
+  //Lade Aussteller nur dann, wenn Admin eingeloggt ist,
+  //andernfalls erfolgt ein Redirect zur Login-Page
+  created: function created() {
+    this.loading = true;
+    this.loadFotos(); //console.log(localStorage.getItem("isLoggedIn"));
+    //Wenn Admin nicht eingeloggt ist, redirect auf LoginPage
+
+    if (localStorage.getItem("isLoggedIn") != "true") {
+      this.$router.push({
+        name: "adminLogin"
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.loading = false;
+  },
+  methods: {
+    showSubmitButton: function showSubmitButton() {
+      this.submitvisibility = "block";
+    },
+    //image aus dem inputfield lesen
+    handleOnChange: function handleOnChange(e) {
+      this.image = e.target.files[0];
+      /*console.log(this.image);
+      console.log(this.image.name);*/
+    },
+    //images holen
+    loadFotos: function loadFotos() {
+      var _this = this;
+
+      axios.get("/api/fotogalerie") // load API
+      .then(function (response) {
+        _this.fotos = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
+
+        console.log(_this.fotos);
+      }) // assign to this.foto array
+      ["catch"](function (error) {
+        // Fehlerbehandlung
+        console.log(error);
+      });
+    },
+    upload: function upload() {
+      var _this2 = this;
+
+      //formdata reset, falls öfter aufgerufen wird
+      this.formdata.aussteller_bildurl = null;
+      var formData = new FormData();
+      formData.set("image", this.image);
+      axios.post("http://localhost:8000/api/imageupload", formData).then(function (response) {
+        //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
+        _this2.formdata.fotogalerie_fotourl = response.data.filepath; //console.log(response.data);
+
+        sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+          title: response.data.filename + " wurde erfolgreich gespeichert!",
+          confirmButtonText: "ok",
+          confirmButtonColor: "#3cb371"
+        });
+      }); //console.log(this.aussteller_bildurl);
+    },
+    deleteFoto: function deleteFoto(index) {
+      var _this3 = this;
+
+      axios["delete"]("http://localhost:8000/api/fotogalerie/" + this.fotos[index].id).then(function (response) {
+        console.log(response); //laravel response zu component object hinzufügen zur späteren Ausgabe
+
+        _this3.laravelResponseData = response.data;
+        sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+          title: response.data
+        });
+        location.reload();
+      });
+    },
+    urlOfFoto: function urlOfFoto(index) {
+      try {
+        return "/images/aussteller/" + this.fotos[index].fotogalerie_fotourl;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    id: function id(index) {
+      try {
+        console.log(this.fotos[index].id);
+        return this.fotos[index].id;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    loggedIn: function loggedIn() {
+      if (localStorage.getItem("isLoggedIn") == "true") {
+        return true;
+      } else return false;
+    },
+    handleLogout: function handleLogout() {
+      var _this4 = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.prev = 0;
+                _context.next = 3;
+                return axios.post("http://localhost:8000/api/admin/logout");
+
+              case 3:
+                //LocalStorage LoggedIn-Status löschen
+                localStorage.removeItem("isLoggedIn");
+                localStorage;
+
+                _this4.$router.push({
+                  name: "adminLogin"
+                });
+
+                _context.next = 11;
+                break;
+
+              case 8:
+                _context.prev = 8;
+                _context.t0 = _context["catch"](0);
+                console.log(_context.t0);
+
+              case 11:
+                _context.prev = 11;
+                _this4.loading = false;
+                return _context.finish(11);
+
+              case 14:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[0, 8, 11, 14]]);
+      }))();
+    },
+    submitform: function submitform() {
+      var formToJson = JSON.stringify(this.formdata);
+      console.log(formToJson);
+
+      try {
+        axios.post("/api/fotogalerie", this.formdata) //console.log(result.response.data);
+        .then(function (response) {
+          //console.log(response);
+          //alert(response.data);
+          sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+            title: response.data,
+            confirmButtonText: "ok",
+            confirmButtonColor: "#3cb371"
+          }); //Swal.fire(response.data);
+        })["catch"](function (error) {
+          // Fehlerbehandlung
+          //console.log(error);
+          sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+            title: error,
+            confirmButtonText: "ok",
+            confirmButtonColor: "#3cb371"
+          });
+        });
+      } catch (error) {//console.error(error.response.data);
+      } finally {
+        setTimeout(function () {}, 1500);
+        location.reload();
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Login.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Login.vue?vue&type=script&lang=js& ***!
@@ -7146,60 +7870,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }))();
     }
   }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "ColorRadioButtons"
 });
 
 /***/ }),
@@ -8194,8 +8864,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_VorstandAdminComponents_EditNews__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/VorstandAdminComponents/EditNews */ "./resources/js/components/VorstandAdminComponents/EditNews.vue");
 /* harmony import */ var _components_VorstandAdminComponents_AusstellerUebersicht__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/VorstandAdminComponents/AusstellerUebersicht */ "./resources/js/components/VorstandAdminComponents/AusstellerUebersicht.vue");
 /* harmony import */ var _components_VorstandAdminComponents_Register__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/VorstandAdminComponents/Register */ "./resources/js/components/VorstandAdminComponents/Register.vue");
-/* harmony import */ var _components_VorstandAdminComponents_utilies_ColorRadioButtons__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/VorstandAdminComponents/utilies/ColorRadioButtons */ "./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue");
-/* harmony import */ var _components_VorstandAdminComponents_AusstellerAendern__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/VorstandAdminComponents/AusstellerAendern */ "./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue");
+/* harmony import */ var _components_VorstandAdminComponents_AusstellerAendern__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/VorstandAdminComponents/AusstellerAendern */ "./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue");
+/* harmony import */ var _components_VorstandAdminComponents_FotogalerieComponents_AddPhotos__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/VorstandAdminComponents/FotogalerieComponents/AddPhotos */ "./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue");
 
 
 
@@ -8239,6 +8909,7 @@ __webpack_require__.r(__webpack_exports__);
     component: _components_Aussteller__WEBPACK_IMPORTED_MODULE_5__.default
   }, {
     path: '/app/fotogalerie',
+    name: 'Fotogalerie',
     component: _components_Fotogalerie__WEBPACK_IMPORTED_MODULE_7__.default
   }, {
     path: '/app/news',
@@ -8270,7 +8941,7 @@ __webpack_require__.r(__webpack_exports__);
   }, {
     path: '/app/admin/dashboard/ausstelleraendern',
     name: 'AusstellerAendern',
-    component: _components_VorstandAdminComponents_AusstellerAendern__WEBPACK_IMPORTED_MODULE_19__.default,
+    component: _components_VorstandAdminComponents_AusstellerAendern__WEBPACK_IMPORTED_MODULE_18__.default,
     meta: {
       requiresAuth: true
     } //protected - Login erforderlich
@@ -8294,8 +8965,9 @@ __webpack_require__.r(__webpack_exports__);
     path: '/app/admin/register',
     component: _components_VorstandAdminComponents_Register__WEBPACK_IMPORTED_MODULE_17__.default
   }, {
-    path: '/colorradiobuttons',
-    component: _components_VorstandAdminComponents_utilies_ColorRadioButtons__WEBPACK_IMPORTED_MODULE_18__.default
+    path: '/app/admin/dashboard/editfotogalerie',
+    name: _components_VorstandAdminComponents_FotogalerieComponents_AddPhotos__WEBPACK_IMPORTED_MODULE_19__.default,
+    component: _components_VorstandAdminComponents_FotogalerieComponents_AddPhotos__WEBPACK_IMPORTED_MODULE_19__.default
   }]
 });
 
@@ -8637,10 +9309,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, "/* Farbzonenbuttons */\n.container {\n
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=style&index=0&id=4143032d&scoped=true&lang=css&":
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=style&index=0&id=4143032d&scoped=true&lang=css& ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=style&index=0&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=style&index=0&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -8654,7 +9326,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* The container */\n.container[data-v-4143032d] {\n  display: block;\n  position: relative;\n  padding-left: 2rem;\n  margin-bottom: 0.8rem;\n  cursor: pointer;\n  font-size: 0.9rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n/* Hide the browser's default radio button */\n.container input[data-v-4143032d] {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n}\n\n/* Create a custom radio button */\n.checkmark[data-v-4143032d] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 50%;\n}\n\n/* On mouse-over, add a grey background color */\n.container:hover input ~ .checkmark[data-v-4143032d] {\n  background-color: #ccc;\n}\n\n/* When the radio button is checked, add a blue background */\n.container input:checked ~ .checkmark[data-v-4143032d] {\n  background-color: #2196f3;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark[data-v-4143032d]:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n.container input:checked ~ .checkmark[data-v-4143032d]:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n.container .checkmark[data-v-4143032d]:after {\n  top: 9px;\n  left: 9px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: white;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* Farbzonenbuttons */\n.container {\n  display: block;\n  position: relative;\n  padding-left: 2rem;\n  margin-bottom: 0.8rem;\n  cursor: pointer;\n  font-size: 0.9rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n/* Hide the browser's default radio button */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n}\n\n/* Create a custom radio button */\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 50%;\n}\n\n/* On mouse-over, add a grey background color */\n.container:hover input ~ .checkmark {\n  background-color: #ccc;\n}\n\n/* When the radio button is checked, add a blue background */\n.container input:checked ~ .checkmark {\n  background-color: #2196f3;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n.container input:checked ~ .checkmark:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n.container .checkmark:after {\n  top: 9px;\n  left: 9px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: white;\n}\n.alert {\n  padding: 20px;\n  background-color: #f44336;\n  color: white;\n}\n.closebtn {\n  margin-left: 15px;\n  color: white;\n  font-weight: bold;\n  float: right;\n  font-size: 22px;\n  line-height: 20px;\n  cursor: pointer;\n  transition: 0.3s;\n}\n.closebtn:hover {\n  color: black;\n}\n.btn-red {\n  --tw-bg-opacity: 1;\n  background-color: rgba(239, 68, 68, var(--tw-bg-opacity));\n  --tw-border-opacity: 1;\n  border-color: rgba(255, 255, 255, var(--tw-border-opacity));\n  border-radius: 0.5rem;\n  border-width: 1px;\n  height: 50%;\n  margin-top: auto;\n  margin-bottom: auto;\n  padding: 0.25rem;\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.btn-red:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(185, 28, 28, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -27382,10 +28054,10 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=style&index=0&id=4143032d&scoped=true&lang=css&":
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=style&index=0&id=4143032d&scoped=true&lang=css& ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=style&index=0&lang=css&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=style&index=0&lang=css& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -27395,7 +28067,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ColorRadioButtons_vue_vue_type_style_index_0_id_4143032d_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ColorRadioButtons.vue?vue&type=style&index=0&id=4143032d&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=style&index=0&id=4143032d&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AddPhotos_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AddPhotos.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=style&index=0&lang=css&");
 
             
 
@@ -27404,11 +28076,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ColorRadioButtons_vue_vue_type_style_index_0_id_4143032d_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AddPhotos_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ColorRadioButtons_vue_vue_type_style_index_0_id_4143032d_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AddPhotos_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
 
@@ -31789,6 +32461,47 @@ component.options.__file = "resources/js/components/VorstandAdminComponents/Edit
 
 /***/ }),
 
+/***/ "./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue ***!
+  \*********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _AddPhotos_vue_vue_type_template_id_1127eb84___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AddPhotos.vue?vue&type=template&id=1127eb84& */ "./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=template&id=1127eb84&");
+/* harmony import */ var _AddPhotos_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AddPhotos.vue?vue&type=script&lang=js& */ "./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=script&lang=js&");
+/* harmony import */ var _AddPhotos_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AddPhotos.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
+  _AddPhotos_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _AddPhotos_vue_vue_type_template_id_1127eb84___WEBPACK_IMPORTED_MODULE_0__.render,
+  _AddPhotos_vue_vue_type_template_id_1127eb84___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/VorstandAdminComponents/Login.vue":
 /*!*******************************************************************!*\
   !*** ./resources/js/components/VorstandAdminComponents/Login.vue ***!
@@ -31863,47 +32576,6 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/VorstandAdminComponents/Register.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue":
-/*!***************************************************************************************!*\
-  !*** ./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue ***!
-  \***************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _ColorRadioButtons_vue_vue_type_template_id_4143032d_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ColorRadioButtons.vue?vue&type=template&id=4143032d&scoped=true& */ "./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=template&id=4143032d&scoped=true&");
-/* harmony import */ var _ColorRadioButtons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ColorRadioButtons.vue?vue&type=script&lang=js& */ "./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=script&lang=js&");
-/* harmony import */ var _ColorRadioButtons_vue_vue_type_style_index_0_id_4143032d_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ColorRadioButtons.vue?vue&type=style&index=0&id=4143032d&scoped=true&lang=css& */ "./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=style&index=0&id=4143032d&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-;
-
-
-/* normalize component */
-
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
-  _ColorRadioButtons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _ColorRadioButtons_vue_vue_type_template_id_4143032d_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _ColorRadioButtons_vue_vue_type_template_id_4143032d_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  "4143032d",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -32358,6 +33030,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AddPhotos_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AddPhotos.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AddPhotos_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
 /***/ "./resources/js/components/VorstandAdminComponents/Login.vue?vue&type=script&lang=js&":
 /*!********************************************************************************************!*\
   !*** ./resources/js/components/VorstandAdminComponents/Login.vue?vue&type=script&lang=js& ***!
@@ -32387,22 +33075,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Register.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Register.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
-
-/***/ }),
-
-/***/ "./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=script&lang=js&":
-/*!****************************************************************************************************************!*\
-  !*** ./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ColorRadioButtons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ColorRadioButtons.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ColorRadioButtons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
@@ -32620,15 +33292,15 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=style&index=0&id=4143032d&scoped=true&lang=css&":
-/*!************************************************************************************************************************************************!*\
-  !*** ./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=style&index=0&id=4143032d&scoped=true&lang=css& ***!
-  \************************************************************************************************************************************************/
+/***/ "./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=style&index=0&lang=css&":
+/*!******************************************************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ColorRadioButtons_vue_vue_type_style_index_0_id_4143032d_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ColorRadioButtons.vue?vue&type=style&index=0&id=4143032d&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=style&index=0&id=4143032d&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AddPhotos_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AddPhotos.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=style&index=0&lang=css&");
 
 
 /***/ }),
@@ -33050,6 +33722,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=template&id=1127eb84&":
+/*!****************************************************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=template&id=1127eb84& ***!
+  \****************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AddPhotos_vue_vue_type_template_id_1127eb84___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AddPhotos_vue_vue_type_template_id_1127eb84___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AddPhotos_vue_vue_type_template_id_1127eb84___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AddPhotos.vue?vue&type=template&id=1127eb84& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=template&id=1127eb84&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/VorstandAdminComponents/Login.vue?vue&type=template&id=204df287&":
 /*!**************************************************************************************************!*\
   !*** ./resources/js/components/VorstandAdminComponents/Login.vue?vue&type=template&id=204df287& ***!
@@ -33080,23 +33769,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_template_id_0d2344f5___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_template_id_0d2344f5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Register.vue?vue&type=template&id=0d2344f5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Register.vue?vue&type=template&id=0d2344f5&");
-
-
-/***/ }),
-
-/***/ "./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=template&id=4143032d&scoped=true&":
-/*!**********************************************************************************************************************************!*\
-  !*** ./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=template&id=4143032d&scoped=true& ***!
-  \**********************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ColorRadioButtons_vue_vue_type_template_id_4143032d_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ColorRadioButtons_vue_vue_type_template_id_4143032d_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ColorRadioButtons_vue_vue_type_template_id_4143032d_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ColorRadioButtons.vue?vue&type=template&id=4143032d&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=template&id=4143032d&scoped=true&");
 
 
 /***/ }),
@@ -34671,11 +35343,11 @@ var render = function() {
           "div",
           {
             staticClass:
-              "flex w-full h-full items-center justify-center text-red-900 bg-gray-900"
+              "\n      flex\n      w-full\n      h-full\n      items-center\n      justify-center\n      text-red-900\n      bg-gray-900\n    "
           },
           [
             _vm._v(
-              " Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard zugreifen zu können..."
+              "\n    Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard\n    zugreifen zu können...\n  "
             )
           ]
         )
@@ -34736,7 +35408,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\r\n            flex-1 flex\r\n            items-center\r\n            justify-center\r\n            sm:items-stretch\r\n            sm:justify-start\r\n          "
+                          "\n              flex-1 flex\n              items-center\n              justify-center\n              sm:items-stretch\n              sm:justify-start\n            "
                       },
                       [
                         _c("div", {
@@ -34764,7 +35436,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
                                 },
                                 [
                                   _c(
@@ -34775,7 +35447,7 @@ var render = function() {
                                           "/app/admin/dashboard/ausstelleruebersicht"
                                       }
                                     },
-                                    [_vm._v("Aussteller\r\n                ")]
+                                    [_vm._v("Aussteller\n                  ")]
                                   )
                                 ],
                                 1
@@ -34785,7 +35457,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
                                 },
                                 [
                                   _c(
@@ -34803,20 +35475,31 @@ var render = function() {
                                 "a",
                                 {
                                   staticClass:
-                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
                                   attrs: { href: "#" }
                                 },
                                 [_vm._v("Programm")]
                               ),
                               _vm._v(" "),
                               _c(
-                                "a",
+                                "div",
                                 {
                                   staticClass:
-                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
-                                  attrs: { href: "#" }
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
                                 },
-                                [_vm._v("platzhalter")]
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      attrs: {
+                                        to:
+                                          "/app/admin/dashboard/editfotogalerie"
+                                      }
+                                    },
+                                    [_vm._v("Fotogalerie")]
+                                  )
+                                ],
+                                1
                               )
                             ],
                             1
@@ -34829,14 +35512,14 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\r\n            absolute\r\n            inset-y-0\r\n            right-0\r\n            flex\r\n            items-center\r\n            pr-2\r\n            sm:static\r\n            sm:inset-auto\r\n            sm:ml-6\r\n            sm:pr-0\r\n          "
+                          "\n              absolute\n              inset-y-0\n              right-0\n              flex\n              items-center\n              pr-2\n              sm:static\n              sm:inset-auto\n              sm:ml-6\n              sm:pr-0\n            "
                       },
                       [
                         _c(
                           "div",
                           {
                             staticClass:
-                              "\r\n                  text-gray-300\r\n                  hover:bg-red-900\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                              "\n                text-gray-300\n                hover:bg-red-900\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
                           },
                           [
                             _c(
@@ -34850,7 +35533,7 @@ var render = function() {
                                 }
                               },
                               [
-                                _vm._v("Logout "),
+                                _vm._v("Logout\n                "),
                                 _c("img", {
                                   staticClass: "filter-white",
                                   attrs: {
@@ -34879,7 +35562,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\r\n            bg-gray-900\r\n            text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                        "\n              bg-gray-900\n              text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#", "aria-current": "page" }
                     },
                     [_vm._v("Dashboard")]
@@ -34889,7 +35572,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#" }
                     },
                     [
@@ -34910,7 +35593,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#" }
                     },
                     [_vm._v("News")]
@@ -34920,7 +35603,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#" }
                     },
                     [_vm._v("Programm")]
@@ -34957,7 +35640,7 @@ var render = function() {
                         {
                           key: index,
                           staticClass:
-                            "flex justify-center pl-3 text-white bg-green-900 mb-3 border border-gray-600"
+                            "\n              flex\n              justify-center\n              pl-3\n              text-white\n              bg-green-900\n              mb-3\n              border border-gray-600\n            "
                         },
                         [
                           _c("span", { staticClass: "inline-flex w-32" }, [
@@ -35002,7 +35685,7 @@ var render = function() {
                                     }
                                   ],
                                   staticClass:
-                                    "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                    "\n                      mt-1\n                      focus:ring-green-500\n                      focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
                                   attrs: {
                                     maxlength: "30",
                                     type: "text",
@@ -35052,7 +35735,7 @@ var render = function() {
                                     }
                                   ],
                                   staticClass:
-                                    "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                    "\n                      mt-1\n                      focus:ring-green-500\n                      focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
                                   attrs: {
                                     maxlength: "30",
                                     type: "text",
@@ -35102,7 +35785,7 @@ var render = function() {
                                         }
                                       ],
                                       staticClass:
-                                        "\r\n                        mt-1\r\n                        focus:ring-green-500\r\n                        focus:border-green-500\r\n                        block\r\n                        w-full\r\n                        shadow-sm\r\n                        sm:text-sm\r\n                        border-gray-300\r\n                        rounded-md\r\n                      ",
+                                        "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
                                       attrs: {
                                         maxlength: "100",
                                         type: "text",
@@ -35139,7 +35822,7 @@ var render = function() {
                                     },
                                     [
                                       _vm._v(
-                                        "\r\n                      Aussteller-Website\r\n                    "
+                                        "\n                      Aussteller-Website\n                    "
                                       )
                                     ]
                                   ),
@@ -35155,11 +35838,11 @@ var render = function() {
                                         "span",
                                         {
                                           staticClass:
-                                            "\r\n                          inline-flex\r\n                          items-center\r\n                          px-3\r\n                          rounded-l-md\r\n                          border border-r-0 border-gray-300\r\n                          bg-gray-50\r\n                          text-gray-500 text-sm\r\n                        "
+                                            "\n                          inline-flex\n                          items-center\n                          px-3\n                          rounded-l-md\n                          border border-r-0 border-gray-300\n                          bg-gray-50\n                          text-gray-500 text-sm\n                        "
                                         },
                                         [
                                           _vm._v(
-                                            "\r\n                        http://\r\n                      "
+                                            "\n                        http://\n                      "
                                           )
                                         ]
                                       ),
@@ -35177,7 +35860,7 @@ var render = function() {
                                           }
                                         ],
                                         staticClass:
-                                          "\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          flex-1\r\n                          block\r\n                          w-full\r\n                          rounded-none rounded-r-md\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                        ",
+                                          "\n                          focus:ring-green-500\n                          focus:border-green-500\n                          flex-1\n                          block\n                          w-full\n                          rounded-none rounded-r-md\n                          sm:text-sm\n                          border-gray-300\n                        ",
                                         attrs: {
                                           maxlength: "50",
                                           type: "text",
@@ -35232,7 +35915,7 @@ var render = function() {
                                         }
                                       ],
                                       staticClass:
-                                        "\r\n                          \r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                        "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
                                       attrs: {
                                         maxlength: "250",
                                         id: "beschreibung",
@@ -35279,7 +35962,9 @@ var render = function() {
                                         on: { click: _vm.assignColorBlue }
                                       },
                                       [
-                                        _vm._v("Blau\r\n      "),
+                                        _vm._v(
+                                          "Blau\n                        "
+                                        ),
                                         _c("div", {
                                           staticClass:
                                             "bg-blue-500 h-2 w-5 rounded-md",
@@ -35308,7 +35993,7 @@ var render = function() {
                                         on: { click: _vm.assignColorRed }
                                       },
                                       [
-                                        _vm._v("Rot\r\n      "),
+                                        _vm._v("Rot\n                        "),
                                         _c("div", {
                                           staticClass:
                                             "bg-red-600 h-2 w-5 rounded-md",
@@ -35337,7 +36022,9 @@ var render = function() {
                                         on: { click: _vm.assignColorYellow }
                                       },
                                       [
-                                        _vm._v("Gelb\r\n      "),
+                                        _vm._v(
+                                          "Gelb\n                        "
+                                        ),
                                         _c("div", {
                                           staticClass:
                                             "bg-yellow-300 h-2 w-5 rounded-md",
@@ -35366,7 +36053,9 @@ var render = function() {
                                         on: { click: _vm.assignColorGreen }
                                       },
                                       [
-                                        _vm._v("Grün\r\n      "),
+                                        _vm._v(
+                                          "Grün\n                        "
+                                        ),
                                         _c("div", {
                                           staticClass:
                                             "bg-green-500 h-2 w-5 rounded-md",
@@ -35395,7 +36084,9 @@ var render = function() {
                                         on: { click: _vm.assignColorBrown }
                                       },
                                       [
-                                        _vm._v("Braun\r\n      "),
+                                        _vm._v(
+                                          "Braun\n                        "
+                                        ),
                                         _c("div", {
                                           staticClass:
                                             "bg-yellow-900 h-2 w-5 rounded-md",
@@ -35444,10 +36135,14 @@ var render = function() {
                                       "button",
                                       {
                                         staticClass:
-                                          "bg-green-900 text-xs sm:text-base p-1 text-white border border-green-600 rounded-md hover:bg-green-500",
+                                          "\n                        bg-green-900\n                        text-xs\n                        sm:text-base\n                        p-1\n                        text-white\n                        border border-green-600\n                        rounded-md\n                        hover:bg-green-500\n                      ",
                                         on: { click: _vm.showSubmitButton }
                                       },
-                                      [_vm._v("Upload photo")]
+                                      [
+                                        _vm._v(
+                                          "\n                      Upload photo\n                    "
+                                        )
+                                      ]
                                     )
                                   ]
                                 ),
@@ -35463,10 +36158,14 @@ var render = function() {
                                       "button",
                                       {
                                         staticClass:
-                                          "bg-green-900 text-xs sm:text-base p-1 mt-2 text-white border border-green-600 rounded-md hover:bg-green-500",
+                                          "\n                        bg-green-900\n                        text-xs\n                        sm:text-base\n                        p-1\n                        mt-2\n                        text-white\n                        border border-green-600\n                        rounded-md\n                        hover:bg-green-500\n                      ",
                                         on: { click: _vm.showSubmitButton }
                                       },
-                                      [_vm._v("Kein Ausstellerfoto uploaden")]
+                                      [
+                                        _vm._v(
+                                          "\n                      Kein Ausstellerfoto uploaden\n                    "
+                                        )
+                                      ]
                                     )
                                   ]
                                 )
@@ -35477,21 +36176,21 @@ var render = function() {
                               "div",
                               {
                                 staticClass:
-                                  " flex justify-center px-4 py-3 bg-gray-600 border-t-2 border-gray-800 text-right sm:px-6"
+                                  "\n                    flex\n                    justify-center\n                    px-4\n                    py-3\n                    bg-gray-600\n                    border-t-2 border-gray-800\n                    text-right\n                    sm:px-6\n                  "
                               },
                               [
                                 _c(
                                   "button",
                                   {
                                     staticClass:
-                                      "\r\n                      inline-flex\r\n                      justify-center\r\n                      py-2\r\n                      px-4\r\n                      border border-transparent\r\n                      shadow-sm\r\n                      text-sm\r\n                      font-medium\r\n                      rounded-md\r\n                      text-white\r\n                      bg-green-600\r\n                      hover:bg-black\r\n                      focus:outline-none\r\n                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\r\n                    ",
+                                      "\n                      inline-flex\n                      justify-center\n                      py-2\n                      px-4\n                      border border-transparent\n                      shadow-sm\n                      text-sm\n                      font-medium\n                      rounded-md\n                      text-white\n                      bg-green-600\n                      hover:bg-black\n                      focus:outline-none\n                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n                    ",
                                     class: _vm.submitvisibility,
                                     attrs: { id: "submitbutton" },
                                     on: { click: _vm.submitform }
                                   },
                                   [
                                     _vm._v(
-                                      "\r\n                    In DB Speichern\r\n                  "
+                                      "\n                    In DB Speichern\n                  "
                                     )
                                   ]
                                 )
@@ -35516,14 +36215,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: " text-gray-400 pb-3" }, [
+    return _c("div", { staticClass: "text-gray-400 pb-3" }, [
       _c(
         "h3",
         { staticClass: "text-lg font-medium leading-6 text-white pb-1" },
-        [_vm._v("\r\n                Aussteller ändern\r\n              ")]
+        [_vm._v("\n              Aussteller ändern\n            ")]
       ),
       _vm._v(
-        '\r\n              Folgende Aussteller sind momentan gespeichert und können verändert werden. Bitte Geben Sie den\r\n              Namen genau wie angezeigt in das Pflichtfeld "Vor und Nachname" ein, um die Ausstellerinformationen\r\n              dieses Ausstellers abzuändern.\r\n            '
+        '\n            Folgende Aussteller sind momentan gespeichert und können verändert\n            werden. Bitte Geben Sie den Namen genau wie angezeigt in das\n            Pflichtfeld "Vor und Nachname" ein, um die Ausstellerinformationen\n            dieses Ausstellers abzuändern.\n          '
       )
     ])
   },
@@ -35535,7 +36234,9 @@ var staticRenderFns = [
       "div",
       { staticClass: "py-2 bg-green-900 text-white mb-1 px-2" },
       [
-        _vm._v("Ausstellerfoto Upload\r\n    "),
+        _vm._v(
+          "\n                    Ausstellerfoto Upload\n                    "
+        ),
         _c("div", { staticClass: "alert" }, [
           _c(
             "span",
@@ -35547,9 +36248,11 @@ var staticRenderFns = [
           ),
           _vm._v(" "),
           _c("strong", [_vm._v("Achtung!")]),
-          _vm._v(" Maximale Filesize: 1.9MB "),
+          _vm._v(" Maximale Filesize: 1.9MB\n                      "),
           _c("br"),
-          _vm._v("  Bsp: ausstellername.jpg oder ausstellername.png\r\n")
+          _vm._v(
+            "\n                      Bsp: ausstellername.jpg oder ausstellername.png\n                    "
+          )
         ])
       ]
     )
@@ -35723,13 +36426,24 @@ var render = function() {
                               ),
                               _vm._v(" "),
                               _c(
-                                "a",
+                                "div",
                                 {
                                   staticClass:
-                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
-                                  attrs: { href: "#" }
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
                                 },
-                                [_vm._v("platzhalter")]
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      attrs: {
+                                        to:
+                                          "/app/admin/dashboard/editfotogalerie"
+                                      }
+                                    },
+                                    [_vm._v("Fotogalerie")]
+                                  )
+                                ],
+                                1
                               )
                             ],
                             1
@@ -35842,7 +36556,7 @@ var render = function() {
           _vm.loading
             ? _c("p", [
                 _c("img", {
-                  staticClass: "mx-auto",
+                  staticClass: "m-auto resize-loadinggif",
                   attrs: {
                     src: "/images/icons/gifs/loadingtransparent.gif",
                     alt: "loading..."
@@ -36259,13 +36973,24 @@ var render = function() {
                               ),
                               _vm._v(" "),
                               _c(
-                                "a",
+                                "div",
                                 {
                                   staticClass:
-                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
-                                  attrs: { href: "#" }
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
                                 },
-                                [_vm._v("platzhalter")]
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      attrs: {
+                                        to:
+                                          "/app/admin/dashboard/editfotogalerie"
+                                      }
+                                    },
+                                    [_vm._v("Fotogalerie")]
+                                  )
+                                ],
+                                1
                               )
                             ],
                             1
@@ -37123,13 +37848,24 @@ var render = function() {
                               ),
                               _vm._v(" "),
                               _c(
-                                "a",
+                                "div",
                                 {
                                   staticClass:
-                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
-                                  attrs: { href: "#" }
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
                                 },
-                                [_vm._v("platzhalter")]
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      attrs: {
+                                        to:
+                                          "/app/admin/dashboard/editfotogalerie"
+                                      }
+                                    },
+                                    [_vm._v("Fotogalerie")]
+                                  )
+                                ],
+                                1
                               )
                             ],
                             1
@@ -38229,6 +38965,606 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=template&id=1127eb84&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=template&id=1127eb84& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "w-full h-full bg-gray-900" }, [
+    _vm.loggedIn() == false
+      ? _c(
+          "div",
+          {
+            staticClass:
+              "flex w-full h-full items-center justify-center text-red-900 bg-gray-900"
+          },
+          [
+            _vm._v(
+              " Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard zugreifen zu können..."
+            )
+          ]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.loggedIn()
+      ? _c("div", { staticClass: "w-full" }, [
+          _c("nav", { staticClass: "bg-gray-800 border-b border-gray-300" }, [
+            _c(
+              "div",
+              { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "relative flex items-center justify-between h-16"
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "absolute inset-y-0 left-0 flex items-center sm:hidden"
+                      },
+                      [
+                        _c("span", { staticClass: "sr-only" }, [
+                          _vm._v("Open main menu")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "svg",
+                          {
+                            staticClass: "hidden h-6 w-6",
+                            attrs: {
+                              xmlns: "http://www.w3.org/2000/svg",
+                              fill: "none",
+                              viewBox: "0 0 24 24",
+                              stroke: "currentColor",
+                              "aria-hidden": "true"
+                            }
+                          },
+                          [
+                            _c("path", {
+                              attrs: {
+                                "stroke-linecap": "round",
+                                "stroke-linejoin": "round",
+                                "stroke-width": "2",
+                                d: "M6 18L18 6M6 6l12 12"
+                              }
+                            })
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "\r\n            flex-1 flex\r\n            items-center\r\n            justify-center\r\n            sm:items-stretch\r\n            sm:justify-start\r\n          "
+                      },
+                      [
+                        _c("div", {
+                          staticClass: "flex-shrink-0 flex items-center"
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "hidden sm:block sm:ml-6" }, [
+                          _c(
+                            "div",
+                            { staticClass: "flex space-x-4" },
+                            [
+                              _c(
+                                "router-link",
+                                { attrs: { to: "/app/admin/dashboard" } },
+                                [
+                                  _c(
+                                    "span",
+                                    { staticClass: "text-gray-500 text-lg" },
+                                    [_vm._v("Dashboard")]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                                },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      attrs: {
+                                        to:
+                                          "/app/admin/dashboard/ausstelleruebersicht"
+                                      }
+                                    },
+                                    [_vm._v("Aussteller\r\n                ")]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                                },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      attrs: { to: "/app/admin/dashboard/news" }
+                                    },
+                                    [_vm._v("News")]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                  attrs: { href: "#" }
+                                },
+                                [_vm._v("Programm")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                  attrs: { "aria-current": "page" }
+                                },
+                                [_vm._v("\r\n                Fotogalerie")]
+                              )
+                            ],
+                            1
+                          )
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "\r\n            absolute\r\n            inset-y-0\r\n            right-0\r\n            flex\r\n            items-center\r\n            pr-2\r\n            sm:static\r\n            sm:inset-auto\r\n            sm:ml-6\r\n            sm:pr-0\r\n          "
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "\r\n                  text-gray-300\r\n                  hover:bg-red-900\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                          },
+                          [
+                            _c(
+                              "span",
+                              {
+                                staticClass: "text-white cursor-pointer",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.handleLogout()
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v("Logout "),
+                                _c("img", {
+                                  staticClass: "filter-white",
+                                  attrs: {
+                                    src:
+                                      "/public/images/icons/svgs/ausloggen.svg",
+                                    alt: ""
+                                  }
+                                })
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "sm:hidden", attrs: { id: "mobile-menu" } },
+              [
+                _c("div", { staticClass: "px-2 pt-2 pb-3 space-y-1" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            bg-gray-900\r\n            text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#", "aria-current": "page" }
+                    },
+                    [_vm._v("Dashboard")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#" }
+                    },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          attrs: {
+                            to: "/app/admin/dashboard/ausstelleruebersicht"
+                          }
+                        },
+                        [_vm._v("Aussteller")]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("News")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Programm")]
+                  )
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20"
+            },
+            [
+              _vm.loading
+                ? _c("p", { staticClass: "mx-auto" }, [
+                    _c("img", {
+                      staticClass: "m-auto resize-loadinggif",
+                      attrs: {
+                        src: "/images/icons/gifs/loadingtransparent.gif",
+                        alt: "loading..."
+                      }
+                    })
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _c("div", { staticClass: "mt-10 sm:mt-0" }, [
+                _c(
+                  "div",
+                  {},
+                  [
+                    _vm._m(0),
+                    _vm._v(" "),
+                    _vm._l(_vm.fotos, function(jeweiligesFoto, index) {
+                      return _c(
+                        "div",
+                        {
+                          key: index,
+                          staticClass:
+                            "\r\n                flex\r\n                justify-evenly\r\n                pl-3\r\n                text-white\r\n                bg-green-900\r\n                mb-3\r\n                border border-gray-600\r\n              "
+                        },
+                        [
+                          _c(
+                            "span",
+                            { staticClass: "flex w-32 items-center" },
+                            [
+                              _vm._v(
+                                _vm._s(jeweiligesFoto.fotogalerie_fotoname)
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("img", {
+                            staticClass:
+                              "w-20 h-20 border border-gray-50 rounded-lg my-2",
+                            attrs: { src: _vm.urlOfFoto(index), alt: "Foto" }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn btn-red",
+                              attrs: { "key:index": "" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.deleteFoto(index)
+                                }
+                              }
+                            },
+                            [_vm._v("delete")]
+                          )
+                        ]
+                      )
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
+                      _c("div", [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "shadow overflow-hidden sm:rounded-md"
+                          },
+                          [
+                            _c(
+                              "h3",
+                              {
+                                staticClass:
+                                  "text-lg font-medium leading-6 text-white pb-1"
+                              },
+                              [
+                                _vm._v(
+                                  "\r\n                Foto hinzufügen\r\n              "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "px-4 py-5 bg-gray-300 sm:p-6" },
+                              [
+                                _c(
+                                  "label",
+                                  {
+                                    staticClass:
+                                      "block text-sm font-medium text-gray-700",
+                                    attrs: { for: "name" }
+                                  },
+                                  [_vm._v("Foto-Titel")]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.formdata.fotogalerie_fotoname,
+                                      expression:
+                                        "formdata.fotogalerie_fotoname"
+                                    }
+                                  ],
+                                  staticClass:
+                                    "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                  attrs: {
+                                    maxlength: "30",
+                                    type: "text",
+                                    id: "full_name",
+                                    placeholder: "Pflichtfeld",
+                                    autocomplete: "given-name"
+                                  },
+                                  domProps: {
+                                    value: _vm.formdata.fotogalerie_fotoname
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.formdata,
+                                        "fotogalerie_fotoname",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "col-span-6 sm:col-span-4" },
+                                  [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass:
+                                          "block text-sm font-medium text-gray-700",
+                                        attrs: { for: "email_address" }
+                                      },
+                                      [_vm._v("Fotobeschreibung")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("textarea", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value:
+                                            _vm.formdata
+                                              .fotogalerie_fotobeschreibung,
+                                          expression:
+                                            "formdata.fotogalerie_fotobeschreibung"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "\r\n                          \r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                      attrs: {
+                                        maxlength: "50",
+                                        id: "beschreibung",
+                                        autocomplete: "Beschreibung",
+                                        placeholder: "Optional"
+                                      },
+                                      domProps: {
+                                        value:
+                                          _vm.formdata
+                                            .fotogalerie_fotobeschreibung
+                                      },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.formdata,
+                                            "fotogalerie_fotobeschreibung",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _vm._m(1),
+                                _vm._v(" "),
+                                _c(
+                                  "form",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-center mt-3",
+                                    on: {
+                                      submit: function($event) {
+                                        $event.preventDefault()
+                                        return _vm.upload($event)
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("input", {
+                                      staticClass: "text-xs sm:text-base",
+                                      attrs: { type: "file" },
+                                      on: { change: _vm.handleOnChange }
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass:
+                                          "bg-green-900 text-xs sm:text-base p-1 text-white border border-green-600 rounded-md hover:bg-green-500",
+                                        on: { click: _vm.showSubmitButton }
+                                      },
+                                      [_vm._v("Upload photo")]
+                                    )
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  " flex justify-center px-4 py-3 bg-gray-600 border-t-2 border-gray-800 text-right sm:px-6"
+                              },
+                              [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass:
+                                      "\r\n                      inline-flex\r\n                      justify-center\r\n                      py-2\r\n                      px-4\r\n                      border border-transparent\r\n                      shadow-sm\r\n                      text-sm\r\n                      font-medium\r\n                      rounded-md\r\n                      text-white\r\n                      bg-green-600\r\n                      hover:bg-black\r\n                      focus:outline-none\r\n                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\r\n                    ",
+                                    class: _vm.submitvisibility,
+                                    attrs: { id: "submitbutton" },
+                                    on: { click: _vm.submitform }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\r\n                    In DB Speichern\r\n                  "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ])
+                    ])
+                  ],
+                  2
+                )
+              ])
+            ]
+          )
+        ])
+      : _vm._e()
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: " text-gray-400 pb-3" }, [
+      _c(
+        "h3",
+        { staticClass: "text-lg font-medium leading-6 text-white pb-1" },
+        [_vm._v("\r\n                Fotogalerie\r\n              ")]
+      ),
+      _vm._v(
+        '\r\n              Der Foto-Titel und die Fotobeschreibung werden im Foto-Carousel eingebettet. Maximallänge Foto-Titel: 30 Zeichen, Fotobeschreibung: 50 Zeichen.\r\n              Folgende Fotos sind bereits vorhanden, klicken Sie auf "delete", um diese aus der Datenbank und aus der Galerie zu löschen. Achten Sie bitte darauf,\r\n              dass Sie zuerst das Foto auf "Upload photo" raufladen und danach auf den Button "In DB speichern" klicken. Falls Sie keinen Fototitel hinzufügen möchten,\r\n              können Sie den "In DB speichern"-Button auch nicht drücken. Das Photo wird trotzdem gespeichert und ist in der Fotogalerie ersichtlich.\r\n            '
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "py-2 bg-green-900 text-white mb-1 px-2" },
+      [
+        _vm._v("Foto Upload\r\n                "),
+        _c("div", { staticClass: "alert" }, [
+          _c(
+            "span",
+            {
+              staticClass: "closebtn",
+              attrs: { onclick: "this.parentElement.style.display='none';" }
+            },
+            [_vm._v("×")]
+          ),
+          _vm._v(" "),
+          _c("strong", [_vm._v("Achtung!")]),
+          _vm._v(" Maximale Filesize: 1.9MB "),
+          _c("br"),
+          _vm._v(
+            "  Bsp: haimingermarkttage2020-1.jpg , hm1.png..\r\n                "
+          )
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Login.vue?vue&type=template&id=204df287&":
 /*!*****************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Login.vue?vue&type=template&id=204df287& ***!
@@ -38783,85 +40119,6 @@ var staticRenderFns = [
           },
           [_vm._v("\n            Forgot your password?\n          ")]
         )
-      ])
-    ])
-  }
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=template&id=4143032d&scoped=true&":
-/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue?vue&type=template&id=4143032d&scoped=true& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "fixed right-3 top-1/2" }, [
-      _c("label", { staticClass: "container" }, [
-        _vm._v("Blau\n    "),
-        _c("div", { staticClass: "bg-blue-500 h-2 w-5 rounded-md" }),
-        _vm._v(" "),
-        _c("input", {
-          attrs: { type: "radio", checked: "checked", name: "radio" }
-        }),
-        _vm._v(" "),
-        _c("span", { staticClass: "checkmark" })
-      ]),
-      _vm._v(" "),
-      _c("label", { staticClass: "container" }, [
-        _vm._v("Rot\n    "),
-        _c("div", { staticClass: "bg-red-600 h-2 w-5 rounded-md" }),
-        _vm._v(" "),
-        _c("input", { attrs: { type: "radio", name: "radio" } }),
-        _vm._v(" "),
-        _c("span", { staticClass: "checkmark" })
-      ]),
-      _vm._v(" "),
-      _c("label", { staticClass: "container" }, [
-        _vm._v("Gelb\n    "),
-        _c("div", { staticClass: "bg-yellow-300 h-2 w-5 rounded-md" }),
-        _vm._v(" "),
-        _c("input", { attrs: { type: "radio", name: "radio" } }),
-        _vm._v(" "),
-        _c("span", { staticClass: "checkmark" })
-      ]),
-      _vm._v(" "),
-      _c("label", { staticClass: "container" }, [
-        _vm._v("Grün\n    "),
-        _c("div", { staticClass: "bg-green-500 h-2 w-5 rounded-md" }),
-        _vm._v(" "),
-        _c("input", { attrs: { type: "radio", name: "radio" } }),
-        _vm._v(" "),
-        _c("span", { staticClass: "checkmark" })
-      ]),
-      _vm._v(" "),
-      _c("label", { staticClass: "container" }, [
-        _vm._v("Braun\n    "),
-        _c("div", { staticClass: "bg-yellow-900 h-2 w-5 rounded-md" }),
-        _vm._v(" "),
-        _c("input", { attrs: { type: "radio", name: "radio" } }),
-        _vm._v(" "),
-        _c("span", { staticClass: "checkmark" })
       ])
     ])
   }

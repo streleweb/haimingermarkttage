@@ -102,8 +102,7 @@
                 >Programm</a
               >
 
-              <a
-                href="#"
+              <div
                 class="
                   text-gray-300
                   hover:bg-gray-700
@@ -114,7 +113,7 @@
                   text-sm
                   font-medium
                 "
-                >platzhalter</a
+                ><router-link to="/app/admin/dashboard/editfotogalerie">Fotogalerie</router-link></div
               >
             </div>
           </div>
@@ -534,10 +533,15 @@ export default {
       formData.set("image", this.image);
 
       axios
-        .post("http://localhost:8000/api/aussteller/upload", formData)
+        .post("http://localhost:8000/api/imageupload", formData)
         .then((response) => {
           //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
           this.formdata.aussteller_bildurl = response.data.filepath;
+          Swal.fire({
+            title: "Foto gespeichert!",
+            confirmButtonText: "ok",
+            confirmButtonColor: "#3cb371",
+          });
         });
       //console.log(this.aussteller_bildurl);
     },

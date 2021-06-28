@@ -16,8 +16,8 @@ import EditAussteller from './components/VorstandAdminComponents/EditAussteller'
 import EditNews from './components/VorstandAdminComponents/EditNews';
 import AusstellerUebersicht from './components/VorstandAdminComponents/AusstellerUebersicht';
 import Register from './components/VorstandAdminComponents/Register';
-import ColorRadioButtons from './components/VorstandAdminComponents/utilies/ColorRadioButtons';
 import AusstellerAendern from './components/VorstandAdminComponents/AusstellerAendern';
+import AddPhotos from './components/VorstandAdminComponents/FotogalerieComponents/AddPhotos';
 
 
 export default {
@@ -51,6 +51,7 @@ export default {
 
         {
             path: '/app/fotogalerie',
+            name: 'Fotogalerie',
             component: Fotogalerie
         },
 
@@ -116,10 +117,13 @@ export default {
             component: Register
         },
 
+
         {
-            path: '/colorradiobuttons',
-            component: ColorRadioButtons
-        }
+            path: '/app/admin/dashboard/editfotogalerie',
+            name: AddPhotos,
+            component: AddPhotos
+        },
+
     ]
 
 }
