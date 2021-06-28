@@ -313,7 +313,7 @@
             </div>
             <div class="gap-2 justify-start items-center mt-3">
               
-              <button :accesskey="jeweiligerAussteller.full_name" key:index @click="deleteAussteller(jeweiligerAussteller.full_name)" class="btn btn-red">delete</button>
+              <button key:index @click="deleteAussteller(index)" class="btn btn-red">delete</button>
             </div>
           </div>
         </article>

@@ -245,7 +245,6 @@ export default {
     if (localStorage.getItem("isLoggedIn") != "true") {
       this.$router.push({ name: "adminLogin" });
     }
-    this.loadAussteller();
   },
 
   methods: {

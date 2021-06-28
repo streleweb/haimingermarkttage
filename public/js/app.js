@@ -5501,8 +5501,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         name: "adminLogin"
       });
     }
-
-    this.loadAussteller();
   },
   methods: {
     loggedIn: function loggedIn() {
@@ -35937,15 +35935,10 @@ var render = function() {
                                   "button",
                                   {
                                     staticClass: "btn btn-red",
-                                    attrs: {
-                                      accesskey: jeweiligerAussteller.full_name,
-                                      "key:index": ""
-                                    },
+                                    attrs: { "key:index": "" },
                                     on: {
                                       click: function($event) {
-                                        return _vm.deleteAussteller(
-                                          jeweiligerAussteller.full_name
-                                        )
+                                        return _vm.deleteAussteller(index)
                                       }
                                     }
                                   },
