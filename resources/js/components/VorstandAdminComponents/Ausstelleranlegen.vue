@@ -1,5 +1,5 @@
 <template>
-<div class="w-full">
+<div class="w-full h-full bg-gray-900">
 <div v-if="loggedIn() == false" class="flex w-full h-full items-center justify-center text-red-900 bg-gray-900"> Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard zugreifen zu können...</div>
 <!-- Check for Login-Status, only display if logged in-->
 <div v-if="loggedIn()" class="w-full">
@@ -436,16 +436,16 @@
   </div>
 <form @submit.prevent="upload" class="flex items-center justify-center mt-3">
   <input @change="handleOnChange" type="file" class="text-xs sm:text-base">
-  <button @click="showSubmitButton" class="bg-green-900 text-xs sm:text-base px-1 text-white border border-green-600 rounded-md hover:bg-green-500">Upload photo</button>
+  <button @click="showSubmitButton" class="bg-green-900 text-xs sm:text-base p-1 text-white border border-green-600 rounded-md hover:bg-green-500">Upload photo</button>
   
 </form>
 <div class="flex items-center justify-center">
-  <button @click="showSubmitButton" class="bg-green-900 text-xs sm:text-base px-1 mt-2 text-white border border-green-600 rounded-md hover:bg-green-500">Kein Ausstellerfoto uploaden</button>
+  <button @click="showSubmitButton" class="bg-green-900 text-xs sm:text-base p-1 mt-2 text-white border border-green-600 rounded-md hover:bg-green-500">Kein Ausstellerfoto uploaden</button>
 </div>
 <!--IMAGE FILE UPLOAD END-->
 </div>
 
-                  <div class="px-4 py-3 bg-gray-500 border-t-2 border-gray-800 text-right sm:px-6">
+                  <div class=" flex justify-center px-4 py-3 bg-gray-600 border-t-2 border-gray-800 text-right sm:px-6">
                   <button
                   id="submitbutton"
                   @click="submitform"
@@ -483,6 +483,8 @@
 </template>
 
 <script>
+import Swal from "sweetalert2";
+
 export default {
   data() {
     return {
@@ -577,7 +579,13 @@ export default {
           //console.log(result.response.data);
           .then((response) => {
             //console.log(response);
-            alert(response.data);
+            //alert(response.data);
+            Swal.fire({
+              title: response.data,
+              confirmButtonText: "ok",
+              confirmButtonColor: "#3cb371",
+            });
+            //Swal.fire(response.data);
           })
           .catch(function (error) {
             // Fehlerbehandlung

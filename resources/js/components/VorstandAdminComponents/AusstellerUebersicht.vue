@@ -1,6 +1,6 @@
 <template>
 
-<div class="w-full">
+<div class="w-full h-full bg-gray-700">
 <div v-if="loggedIn() == false" class="flex w-full h-full items-center justify-center text-red-900 bg-gray-900"> 
   Nicht eingeloggt! Bitte loggen Sie sich ein, um auf diese Seite zugreifen zu können...</div>
 <!-- Check for Login-Status, only display if logged in-->
@@ -310,7 +310,6 @@
             </div>
             <div class="gap-2 justify-start items-center mt-3">
               <router-link to="/app/admin/dashboard/editaussteller"><button class="btn btn-blue">edit</button></router-link>
-              <button class="btn btn-gray">hide</button>
               <button @click="deleteAussteller(index)" class="btn btn-red">delete</button>
             </div>
           </div>
@@ -328,6 +327,8 @@
 import Button from "../Button";
 import Farbzone from "../Farbzone";
 import repository from "./repository/repository";
+
+import Swal from "sweetalert2";
 
 export default {
   data() {
@@ -361,9 +362,16 @@ export default {
           console.log(response);
           //laravel response zu component object hinzufügen zur späteren Ausgabe
           this.laravelResponseData = response.data;
-          alert(response.data);
-          //page reloaden zum refreshen
-          location.reload();
+          Swal.fire({
+            title: response.data,
+            text: "Seite wird in 3 sekunden neu geladen...",
+            confirmButtonText: "ok",
+            confirmButtonColor: "#3cb371",
+          });
+          //Nach 3 Sekunden Page refresh
+          setTimeout(() => {
+            location.reload();
+          }, 3000);
         });
     },
 

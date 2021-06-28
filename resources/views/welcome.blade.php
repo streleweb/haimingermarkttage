@@ -22,6 +22,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
+
     </script>
     <!-- Tile for Win8 -->
     <meta name="msapplication-TileColor" content="#ffffff">
