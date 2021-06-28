@@ -18,7 +18,8 @@ class FotogalerieResource extends JsonResource
             'id' => $this->id,
             'fotogalerie_fotoname' => $this->fotogalerie_fotoname,
             'fotogalerie_fotobeschreibung' => $this->fotogalerie_fotobeschreibung,
-            'fotogalerie_fotourl' => $this->fotogalerie_fotourl
+            'fotogalerie_fotourl' => $this->fotogalerie_fotourl,
+            'created_at' => $this->created_at
         ];
     }
 }

@@ -2455,6 +2455,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -34398,7 +34404,21 @@ var render = function() {
               key: _vm.id(index),
               attrs: { index: index, visibleSlide: _vm.visibleSlide }
             },
-            [_c("img", { attrs: { src: _vm.urlOfFoto(index), alt: "Foto" } })]
+            [
+              _c(
+                "span",
+                { staticClass: "text-white font-semibold fixed left-6 top-16" },
+                [_vm._v(_vm._s(foto.fotogalerie_fotoname))]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                { staticClass: "text-gray-400 fixed right-6 bottom-10" },
+                [_vm._v(_vm._s(foto.fotogalerie_fotobeschreibung))]
+              ),
+              _vm._v(" "),
+              _c("img", { attrs: { src: _vm.urlOfFoto(index), alt: "Foto" } })
+            ]
           )
         }),
         1

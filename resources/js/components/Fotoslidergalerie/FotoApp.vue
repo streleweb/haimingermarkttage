@@ -8,6 +8,12 @@
         :index="index"
         :visibleSlide="visibleSlide"
       >
+        <span class="text-white font-semibold fixed left-6 top-16">{{
+          foto.fotogalerie_fotoname
+        }}</span>
+        <span class="text-gray-400 fixed right-6 bottom-10">{{
+          foto.fotogalerie_fotobeschreibung
+        }}</span>
         <img :src="urlOfFoto(index)" alt="Foto" />
       </carousel-slide>
     </carousel>
