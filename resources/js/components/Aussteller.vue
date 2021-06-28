@@ -76,6 +76,14 @@
                       alt="website"
                   /></a>
                 </li>
+                <li v-if="ausstellerEmailNotEmpty(index)">
+                  <a :href="ausstellerEmail(index)" target="_newtab"
+                    ><img
+                      src="/images/icons/svgs/email.png"
+                      class="h-4 filter-white-icons"
+                      alt="website"
+                  /></a>
+                </li>
 
                 <li v-if="zonenFarbeNotEmpty(index)" class="h-5 w-32">
                   <Farbzone :zonen-farbe="zonenFarbe(index)"></Farbzone>
@@ -126,8 +134,8 @@ export default {
         .get("/api/aussteller") // load API
         .then((response) => {
           this.aussteller = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
-          console.log(this.aussteller);
-        }) // assign to this.aussteller array
+          console.log(this.aussteller); // assign to this.aussteller array
+        })
         .catch(function (error) {
           // Fehlerbehandlung
           console.log(error);
@@ -172,6 +180,17 @@ export default {
 
     zonenFarbe(index) {
       return this.aussteller[index].aussteller_zonenfarbe;
+    },
+
+    ausstellerEmailNotEmpty(index) {
+      return (
+        this.aussteller[index].aussteller_email != null &&
+        this.aussteller[index].aussteller_email != ""
+      );
+    },
+
+    ausstellerEmail(index) {
+      return "mailto:http://" + this.aussteller[index].aussteller_email;
     },
   },
 

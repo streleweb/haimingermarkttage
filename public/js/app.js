@@ -2037,6 +2037,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2062,9 +2070,8 @@ __webpack_require__.r(__webpack_exports__);
       .then(function (response) {
         _this.aussteller = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
 
-        console.log(_this.aussteller);
-      }) // assign to this.aussteller array
-      ["catch"](function (error) {
+        console.log(_this.aussteller); // assign to this.aussteller array
+      })["catch"](function (error) {
         // Fehlerbehandlung
         console.log(error);
       });
@@ -2091,6 +2098,12 @@ __webpack_require__.r(__webpack_exports__);
     },
     zonenFarbe: function zonenFarbe(index) {
       return this.aussteller[index].aussteller_zonenfarbe;
+    },
+    ausstellerEmailNotEmpty: function ausstellerEmailNotEmpty(index) {
+      return this.aussteller[index].aussteller_email != null && this.aussteller[index].aussteller_email != "";
+    },
+    ausstellerEmail: function ausstellerEmail(index) {
+      return "mailto:http://" + this.aussteller[index].aussteller_email;
     }
   },
   components: {
@@ -33242,6 +33255,29 @@ var render = function() {
                                   }
                                 })
                               ])
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm.ausstellerEmailNotEmpty(index)
+                          ? _c("li", [
+                              _c(
+                                "a",
+                                {
+                                  attrs: {
+                                    href: _vm.ausstellerEmail(index),
+                                    target: "_newtab"
+                                  }
+                                },
+                                [
+                                  _c("img", {
+                                    staticClass: "h-4 filter-white-icons",
+                                    attrs: {
+                                      src: "/images/icons/svgs/email.png",
+                                      alt: "website"
+                                    }
+                                  })
+                                ]
+                              )
                             ])
                           : _vm._e(),
                         _vm._v(" "),
