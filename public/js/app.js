@@ -3712,7 +3712,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     return {
       aussteller: [],
       error: null,
-      loading: false
+      loading: false,
+      laravelResponseData: null
     };
   },
   //wenn Component geladen ist, führe die Methoden zum
@@ -3730,18 +3731,30 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     /*this.loadAusstellerfoto();*/
   },
   methods: {
+    deleteAussteller: function deleteAussteller(index) {
+      var _this = this;
+
+      axios["delete"]("http://localhost:8000/api/aussteller/" + this.aussteller[index].aussteller_fullname).then(function (response) {
+        console.log(response); //laravel response zu component object hinzufügen zur späteren Ausgabe
+
+        _this.laravelResponseData = response.data;
+        alert(response.data); //page reloaden zum refreshen
+
+        location.reload();
+      });
+    },
     loggedIn: function loggedIn() {
       if (localStorage.getItem("isLoggedIn") == "true") return true;else return false;
     },
     handleLogout: function handleLogout() {
-      var _this = this;
+      var _this2 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _this.loading = true;
+                _this2.loading = true;
                 _context.prev = 1;
                 _context.next = 4;
                 return axios.post("http://localhost:8000/api/admin/logout");
@@ -3751,7 +3764,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 localStorage.removeItem("isLoggedIn");
                 localStorage;
 
-                _this.$router.push({
+                _this2.$router.push({
                   name: "adminLogin"
                 });
 
@@ -3784,7 +3797,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           console.log(error);
         });*/
     loadAussteller: function loadAussteller() {
-      var _this2 = this;
+      var _this3 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
         var _yield$repository$get, data;
@@ -3793,7 +3806,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                _this2.loading = true;
+                _this3.loading = true;
                 _context2.prev = 1;
                 _context2.next = 4;
                 return _repository_repository__WEBPACK_IMPORTED_MODULE_3__.default.getAussteller();
@@ -3801,19 +3814,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 4:
                 _yield$repository$get = _context2.sent;
                 data = _yield$repository$get.data;
-                _this2.aussteller = data.data;
-                console.log(_this2.aussteller);
+                _this3.aussteller = data.data;
+                console.log(_this3.aussteller);
                 _context2.next = 13;
                 break;
 
               case 10:
                 _context2.prev = 10;
                 _context2.t0 = _context2["catch"](1);
-                _this2.error = _context2.t0;
+                _this3.error = _context2.t0;
 
               case 13:
                 _context2.prev = 13;
-                _this2.loading = false;
+                _this3.loading = false;
                 return _context2.finish(13);
 
               case 16:
@@ -4352,6 +4365,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -4396,8 +4416,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       axios.post("http://localhost:8000/api/aussteller/upload", formData).then(function (response) {
         //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
         _this.formdata.aussteller_bildurl = response.data.filepath;
-      });
-      console.log(this.aussteller_bildurl);
+      }); //console.log(this.aussteller_bildurl);
     },
     //assign-Color Methods for Radio-Buttons
     //Wird im Tailwind-Textformat in DB gespeichert und so wieder herausgeholt
@@ -4468,16 +4487,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       console.log(formToJson);
 
       try {
-        axios.post("/api/aussteller", this.formdata); //console.log(result.response.data);
-
-        /*.then((response) => {
-          console.log(response); // debug
-        })
-        .catch(function (error) {
+        axios.post("/api/aussteller", this.formdata) //console.log(result.response.data);
+        .then(function (response) {
+          //console.log(response);
+          alert(response.data);
+        })["catch"](function (error) {
           // Fehlerbehandlung
           console.log(error);
-        });*/
+        });
       } catch (error) {//console.error(error.response.data);
+      } finally {
+        this.$router.push({
+          name: "ausstelleruebersicht"
+        });
       }
     }
   }
@@ -7475,6 +7497,7 @@ __webpack_require__.r(__webpack_exports__);
   }, {
     path: '/app/admin/dashboard/ausstelleruebersicht',
     component: _components_VorstandAdminComponents_AusstellerUebersicht__WEBPACK_IMPORTED_MODULE_16__.default,
+    name: 'ausstelleruebersicht',
     meta: {
       requiresAuth: true
     } //protected - Login erforderlich
@@ -31010,9 +31033,18 @@ var render = function() {
                                   _vm._v("hide")
                                 ]),
                                 _vm._v(" "),
-                                _c("button", { staticClass: "btn btn-red" }, [
-                                  _vm._v("delete")
-                                ])
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-red",
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.deleteAussteller(index)
+                                      }
+                                    }
+                                  },
+                                  [_vm._v("delete")]
+                                )
                               ],
                               1
                             )
@@ -31361,6 +31393,7 @@ var render = function() {
                                 staticClass:
                                   "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
                                 attrs: {
+                                  maxlength: "30",
                                   type: "text",
                                   id: "full_name",
                                   placeholder: "Pflichtfeld",
@@ -31409,6 +31442,7 @@ var render = function() {
                                 staticClass:
                                   "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
                                 attrs: {
+                                  maxlength: "30",
                                   type: "text",
                                   id: "handelsname",
                                   placeholder: "Optional",
@@ -31457,6 +31491,7 @@ var render = function() {
                                     staticClass:
                                       "\r\n                        mt-1\r\n                        focus:ring-green-500\r\n                        focus:border-green-500\r\n                        block\r\n                        w-full\r\n                        shadow-sm\r\n                        sm:text-sm\r\n                        border-gray-300\r\n                        rounded-md\r\n                      ",
                                     attrs: {
+                                      maxlength: "100",
                                       type: "text",
                                       id: "email_address",
                                       autocomplete: "email",
@@ -31530,6 +31565,7 @@ var render = function() {
                                       staticClass:
                                         "\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          flex-1\r\n                          block\r\n                          w-full\r\n                          rounded-none rounded-r-md\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                        ",
                                       attrs: {
+                                        maxlength: "50",
                                         type: "text",
                                         id: "aussteller_website",
                                         placeholder: "www.example.com"
@@ -31583,7 +31619,7 @@ var render = function() {
                                     staticClass:
                                       "\r\n                          \r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
                                     attrs: {
-                                      maxlength: "200",
+                                      maxlength: "250",
                                       id: "beschreibung",
                                       autocomplete: "Beschreibung",
                                       placeholder:
@@ -31758,15 +31794,18 @@ var render = function() {
                               _c(
                                 "form",
                                 {
+                                  staticClass:
+                                    "flex items-center justify-center mt-3",
                                   on: {
                                     submit: function($event) {
                                       $event.preventDefault()
-                                      return _vm.upload()
+                                      return _vm.upload($event)
                                     }
                                   }
                                 },
                                 [
                                   _c("input", {
+                                    staticClass: "text-xs sm:text-base",
                                     attrs: { type: "file" },
                                     on: { change: _vm.handleOnChange }
                                   }),
@@ -31775,20 +31814,29 @@ var render = function() {
                                     "button",
                                     {
                                       staticClass:
-                                        "bg-green-900 px-1 text-white border border-green-600 rounded-md hover:bg-green-500",
+                                        "bg-green-900 text-xs sm:text-base px-1 text-white border border-green-600 rounded-md hover:bg-green-500",
                                       on: { click: _vm.showSubmitButton }
                                     },
-                                    [_vm._v("Upload Photo")]
-                                  ),
-                                  _vm._v(" "),
+                                    [_vm._v("Upload photo")]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "flex items-center justify-center"
+                                },
+                                [
                                   _c(
                                     "button",
                                     {
                                       staticClass:
-                                        "bg-green-900 px-1 text-white border border-green-600 rounded-md hover:bg-green-500",
+                                        "bg-green-900 text-xs sm:text-base px-1 mt-2 text-white border border-green-600 rounded-md hover:bg-green-500",
                                       on: { click: _vm.showSubmitButton }
                                     },
-                                    [_vm._v("No Photo")]
+                                    [_vm._v("Kein Ausstellerfoto uploaden")]
                                   )
                                 ]
                               )
@@ -31836,7 +31884,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: " text-gray-400" }, [
+    return _c("div", { staticClass: " text-gray-400 pb-3" }, [
       _c(
         "h3",
         { staticClass: "text-lg font-medium leading-6 text-white pb-1" },
@@ -31847,7 +31895,7 @@ var staticRenderFns = [
         ]
       ),
       _vm._v(
-        '\r\n              Neuer Aussteller wird in DB gespeichert und in Web-App eingebettet...\r\n              Klicken Sie zuerst auf "Upload Photo" oder "Kein Photo", ehe der\r\n              Submit-Button erscheint.\r\n            '
+        '\r\n              Neuer Aussteller wird in DB gespeichert und in Web-App eingebettet...\r\n              Klicken Sie zuerst auf "Upload" oder "Kein Ausstellerfoto uploaden", ehe der\r\n              Submit-Button erscheint und Sie die Daten in die Datenbank speichern können.\r\n            '
       )
     ])
   },
@@ -31871,13 +31919,9 @@ var staticRenderFns = [
           ),
           _vm._v(" "),
           _c("strong", [_vm._v("Achtung!")]),
-          _vm._v(
-            " Hochladen des Fotos in folgenden Formaten möglich: ausstellername.dateiendung "
-          ),
+          _vm._v(" Maximale Filesize: 1.9MB "),
           _c("br"),
-          _vm._v(
-            "  Bsp: aussteller1.jpg  Bitte keine Sonderzeichen im Dateinamen!\r\n"
-          )
+          _vm._v("  Bsp: ausstellername.jpg oder ausstellername.png\r\n")
         ])
       ]
     )

@@ -21,7 +21,7 @@ class CreateAusstellersTable extends Migration
             $table->string('aussteller_brandingname')->nullable();
             $table->string('aussteller_email')->unique()->nullable();
             $table->string('aussteller_websiteurl')->unique()->nullable();
-            $table->string('aussteller_zonenfarbe')->unique()->nullable();
+            $table->string('aussteller_zonenfarbe')->nullable();
             $table->string('aussteller_bildurl')->nullable();
             $table->timestamps();
         });

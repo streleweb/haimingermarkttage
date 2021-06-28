@@ -311,7 +311,7 @@
             <div class="gap-2 justify-start items-center mt-3">
               <router-link to="/app/admin/dashboard/editaussteller"><button class="btn btn-blue">edit</button></router-link>
               <button class="btn btn-gray">hide</button>
-              <button class="btn btn-red">delete</button>
+              <button @click="deleteAussteller(index)" class="btn btn-red">delete</button>
             </div>
           </div>
         </article>
@@ -335,6 +335,7 @@ export default {
       aussteller: [],
       error: null,
       loading: false,
+      laravelResponseData: null,
     };
   },
   //wenn Component geladen ist, führe die Methoden zum
@@ -350,6 +351,22 @@ export default {
   },
 
   methods: {
+    deleteAussteller(index) {
+      axios
+        .delete(
+          "http://localhost:8000/api/aussteller/" +
+            this.aussteller[index].aussteller_fullname
+        )
+        .then((response) => {
+          console.log(response);
+          //laravel response zu component object hinzufügen zur späteren Ausgabe
+          this.laravelResponseData = response.data;
+          alert(response.data);
+          //page reloaden zum refreshen
+          location.reload();
+        });
+    },
+
     loggedIn() {
       if (localStorage.getItem("isLoggedIn") == "true") return true;
       else return false;

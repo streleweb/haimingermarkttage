@@ -105,6 +105,7 @@ export default {
         {
             path: '/app/admin/dashboard/ausstelleruebersicht',
             component: AusstellerUebersicht,
+            name: 'ausstelleruebersicht',
             meta: { requiresAuth: true } //protected - Login erforderlich
         },
 

@@ -228,13 +228,13 @@
       <div class="mt-10 sm:mt-0">
         <div class="">
           
-            <div class=" text-gray-400">
+            <div class=" text-gray-400 pb-3">
               <h3 class="text-lg font-medium leading-6 text-white pb-1">
                 Neuen Aussteller anlegen
               </h3>
               Neuer Aussteller wird in DB gespeichert und in Web-App eingebettet...
-              Klicken Sie zuerst auf "Upload Photo" oder "Kein Photo", ehe der
-              Submit-Button erscheint.
+              Klicken Sie zuerst auf "Upload" oder "Kein Ausstellerfoto uploaden", ehe der
+              Submit-Button erscheint und Sie die Daten in die Datenbank speichern können.
             </div>
           
           <div class="mt-5 md:mt-0 md:col-span-2">
@@ -249,6 +249,7 @@
                         >Vor und Nachname</label
                       >
                       <input
+                        maxlength="30"
                         type="text"
                         v-model="formdata.aussteller_fullname"
                         id="full_name"
@@ -271,6 +272,7 @@
                         >Handelsname (Branding-Name) des Ausstellers</label
                       >
                       <input
+                        maxlength="30"
                         type="text"
                         v-model="formdata.aussteller_brandingname"
                         id="handelsname"
@@ -296,6 +298,7 @@
                       >Aussteller-E-Mail</label
                     >
                     <input
+                      maxlength="100"
                       type="text"
                       v-model="formdata.aussteller_email"
                       id="email_address"
@@ -337,6 +340,7 @@
                         http://
                       </span>
                       <input
+                        maxlength="50"
                         type="text"
                         v-model="formdata.aussteller_websiteurl"
                         id="aussteller_website"
@@ -362,7 +366,7 @@
                         >Beschreibung</label
                       >
                       <textarea
-                        maxlength="200"
+                        maxlength="250"
                         v-model="formdata.aussteller_beschreibung"
                         id="beschreibung"
                         autocomplete="Beschreibung"
@@ -427,14 +431,17 @@
   <div class="py-2 bg-green-900 text-white mb-1 px-2">Ausstellerfoto Upload
     <div class="alert">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  <strong>Achtung!</strong> Hochladen des Fotos in folgenden Formaten möglich: ausstellername.dateiendung <br>  Bsp: aussteller1.jpg  Bitte keine Sonderzeichen im Dateinamen!
+  <strong>Achtung!</strong> Maximale Filesize: 1.9MB <br>  Bsp: ausstellername.jpg oder ausstellername.png
 </div>
   </div>
-<form @submit.prevent="upload()">
-  <input @change="handleOnChange" type="file">
-  <button @click="showSubmitButton" class="bg-green-900 px-1 text-white border border-green-600 rounded-md hover:bg-green-500">Upload Photo</button>
-  <button @click="showSubmitButton" class="bg-green-900 px-1 text-white border border-green-600 rounded-md hover:bg-green-500">No Photo</button>
+<form @submit.prevent="upload" class="flex items-center justify-center mt-3">
+  <input @change="handleOnChange" type="file" class="text-xs sm:text-base">
+  <button @click="showSubmitButton" class="bg-green-900 text-xs sm:text-base px-1 text-white border border-green-600 rounded-md hover:bg-green-500">Upload photo</button>
+  
 </form>
+<div class="flex items-center justify-center">
+  <button @click="showSubmitButton" class="bg-green-900 text-xs sm:text-base px-1 mt-2 text-white border border-green-600 rounded-md hover:bg-green-500">Kein Ausstellerfoto uploaden</button>
+</div>
 <!--IMAGE FILE UPLOAD END-->
 </div>
 
@@ -522,7 +529,7 @@ export default {
           //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
           this.formdata.aussteller_bildurl = response.data.filepath;
         });
-      console.log(this.aussteller_bildurl);
+      //console.log(this.aussteller_bildurl);
     },
 
     //assign-Color Methods for Radio-Buttons
@@ -565,17 +572,21 @@ export default {
       let formToJson = JSON.stringify(this.formdata);
       console.log(formToJson);
       try {
-        axios.post("/api/aussteller", this.formdata);
-        //console.log(result.response.data);
-        /*.then((response) => {
-          console.log(response); // debug
-        })
-        .catch(function (error) {
-          // Fehlerbehandlung
-          console.log(error);
-        });*/
+        axios
+          .post("/api/aussteller", this.formdata)
+          //console.log(result.response.data);
+          .then((response) => {
+            //console.log(response);
+            alert(response.data);
+          })
+          .catch(function (error) {
+            // Fehlerbehandlung
+            console.log(error);
+          });
       } catch (error) {
         //console.error(error.response.data);
+      } finally {
+        this.$router.push({ name: "ausstelleruebersicht" });
       }
     },
   },

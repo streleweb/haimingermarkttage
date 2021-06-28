@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Aussteller;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
 use App\Http\Resources\AusstellerResource;
 use Illuminate\Support\Facades\Validator;
 
@@ -39,8 +40,9 @@ class AusstellerController extends Controller
      */
     public function store(Request $request)
     {
-        //falls Aussteller schon vorhanden, Fehlerresponse zurückgeben
-        if (Aussteller::where('aussteller_email', $request->get('aussteller_email'))->exists()) {
+        //falls Aussteller schon vorhanden, nicht leer, nicht null, Fehlerresponse zurückgeben
+        if (Aussteller::where('aussteller_email', $request->get('aussteller_email'))->exists() 
+        && $request->get('aussteller_email') != "" && $request->get('aussteller_email') != null) {
             return 'Aussteller gibt es schon!';
          }
          else{
@@ -48,7 +50,7 @@ class AusstellerController extends Controller
             $validator = Validator::make($request->all(),
                 [
                   'aussteller_fullname' => 'required|min:2|max:30',
-                  'aussteller_beschreibung'=> 'nullable|max:200',
+                  'aussteller_beschreibung'=> 'nullable|max:250',
                   'aussteller_zonenfarbe' => 'nullable|min:5|max:50', 
                   'aussteller_brandingname' => 'nullable|min:1|max:30', 
                   'aussteller_email' => 'nullable|min:2|max:100',
@@ -58,8 +60,8 @@ class AusstellerController extends Controller
                 ]);
           
               if ($validator->fails()) {
-                  return Response::json([
-                    'error' => $validator->errors()], 200);
+                return \response('Error: Aussteller Name ist ein Pflichtfeld.. Geben Sie nicht zu viele Zeichen ein', 200)
+                ->header('Content-Type', 'text/plain');
 
               }else {
                   $aussteller = new Aussteller();
@@ -73,11 +75,13 @@ class AusstellerController extends Controller
 
 
                   if($aussteller->save()){
-                      return new AusstellerResource($aussteller);
+                    return \response('Aussteller erfolgreich gespeichert!', 200)
+                    ->header('Content-Type', 'text/plain');
                   }
 
                   else{ 
-                      return "Aussteller konnte nicht angelegt werden...";
+                    return \response('Aussteller konnte nicht angelegt werden! Gibt es ihn schon?', 200)
+                    ->header('Content-Type', 'text/plain');
                       }
                 }
         }
@@ -129,9 +133,13 @@ class AusstellerController extends Controller
      * @param  \App\Models\Aussteller  $aussteller
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($ausstellerFullName)
     {
-        return Aussteller::destroy($id); //returned 1, wenn erfolgreich, 0 wenn nicht.
+        if(Aussteller::where('aussteller_fullname', $ausstellerFullName)->delete()){
+            return \response('Aussteller erfolgreich gelöscht!', 200)
+            ->header('Content-Type', 'text/plain');
+        }
+        else return \response('Aussteller nicht vorhanden...', 200)->header('Content-Type', 'text/plain');
     }
 
     /**

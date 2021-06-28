@@ -18,6 +18,7 @@ class ImageUploadController extends Controller
         
         $file = $request->file('image');
         $fullFileName =$file->getClientOriginalName(); //gets full file name
+
         //Log::info($fullFileName);
 
         //Image public abspeichern
