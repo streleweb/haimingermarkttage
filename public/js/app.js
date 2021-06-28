@@ -2045,6 +2045,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2104,6 +2110,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     ausstellerEmail: function ausstellerEmail(index) {
       return "mailto:http://" + this.aussteller[index].aussteller_email;
+    },
+    ausstellerBrandingNameNotEmpty: function ausstellerBrandingNameNotEmpty(index) {
+      return this.aussteller[index].aussteller_brandingname != null && this.aussteller[index].aussteller_brandingname != "";
     }
   },
   components: {
@@ -4418,6 +4427,21 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -4578,6 +4602,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     zonenFarbe: function zonenFarbe(index) {
       return this.aussteller[index].aussteller_zonenfarbe;
+    },
+    ausstellerEmailNotEmpty: function ausstellerEmailNotEmpty(index) {
+      return this.aussteller[index].aussteller_email != null && this.aussteller[index].aussteller_email != "";
+    },
+    ausstellerEmail: function ausstellerEmail(index) {
+      return "mailto:http://" + this.aussteller[index].aussteller_email;
+    },
+    ausstellerBrandingNameNotEmpty: function ausstellerBrandingNameNotEmpty(index) {
+      return this.aussteller[index].aussteller_brandingname != null && this.aussteller[index].aussteller_brandingname != "";
     }
   },
   components: {
@@ -33214,13 +33247,29 @@ var render = function() {
                   }),
               _vm._v(" "),
               _c("div", { staticClass: "text text-center lg:text-lg" }, [
-                _c("h3", { staticClass: "font-bold text-gray-800 mb-2" }, [
+                _c("h3", { staticClass: "font-bold text-gray-800 mb-1" }, [
                   _vm._v(
                     "\n            " +
                       _vm._s(jeweiligerAussteller.aussteller_fullname) +
                       "\n          "
                   )
                 ]),
+                _vm._v(" "),
+                _vm.ausstellerBrandingNameNotEmpty(index)
+                  ? _c(
+                      "h2",
+                      { staticClass: "font-semibold text-gray-700 mb-2" },
+                      [
+                        _vm._v(
+                          "\n            " +
+                            _vm._s(
+                              jeweiligerAussteller.aussteller_brandingname
+                            ) +
+                            "\n          "
+                        )
+                      ]
+                    )
+                  : _vm._e(),
                 _vm._v(" "),
                 _c("p", { staticClass: "text-sm lg:text-base mb-2" }, [
                   _vm._v(
@@ -35886,6 +35935,25 @@ var render = function() {
                               ]
                             ),
                             _vm._v(" "),
+                            _vm.ausstellerBrandingNameNotEmpty(index)
+                              ? _c(
+                                  "h2",
+                                  {
+                                    staticClass:
+                                      "font-semibold text-gray-700 mb-2"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\r\n              " +
+                                        _vm._s(
+                                          jeweiligerAussteller.aussteller_brandingname
+                                        ) +
+                                        "\r\n            "
+                                    )
+                                  ]
+                                )
+                              : _vm._e(),
+                            _vm._v(" "),
                             _c(
                               "p",
                               { staticClass: "text-sm lg:text-base mb-2" },
@@ -35931,6 +35999,33 @@ var render = function() {
                                                 attrs: {
                                                   src:
                                                     "/images/icons/svgs/www.svg",
+                                                  alt: "website"
+                                                }
+                                              })
+                                            ]
+                                          )
+                                        ])
+                                      : _vm._e(),
+                                    _vm._v(" "),
+                                    _vm.ausstellerEmailNotEmpty(index)
+                                      ? _c("li", [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: {
+                                                href: _vm.ausstellerEmail(
+                                                  index
+                                                ),
+                                                target: "_newtab"
+                                              }
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass:
+                                                  "h-4 filter-white-icons",
+                                                attrs: {
+                                                  src:
+                                                    "/images/icons/svgs/email.png",
                                                   alt: "website"
                                                 }
                                               })

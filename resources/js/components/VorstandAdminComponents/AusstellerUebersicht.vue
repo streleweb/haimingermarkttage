@@ -279,6 +279,12 @@
             <h3 class="font-bold text-gray-800 mb-2">
               {{ jeweiligerAussteller.aussteller_fullname }}
             </h3>
+            <h2
+              v-if="ausstellerBrandingNameNotEmpty(index)"
+              class="font-semibold text-gray-700 mb-2"
+            >
+              {{ jeweiligerAussteller.aussteller_brandingname }}
+            </h2>
             <p class="text-sm lg:text-base mb-2">
               {{ jeweiligerAussteller.aussteller_beschreibung }}
             </p>
@@ -302,6 +308,15 @@
                     ><img
                       src="/images/icons/svgs/www.svg"
                       class="resize-icon filter-white-icons"
+                      alt="website"
+                  /></a>
+                </li>
+
+                <li v-if="ausstellerEmailNotEmpty(index)">
+                  <a :href="ausstellerEmail(index)" target="_newtab"
+                    ><img
+                      src="/images/icons/svgs/email.png"
+                      class="h-4 filter-white-icons"
                       alt="website"
                   /></a>
                 </li>
@@ -454,6 +469,24 @@ export default {
 
     zonenFarbe(index) {
       return this.aussteller[index].aussteller_zonenfarbe;
+    },
+
+    ausstellerEmailNotEmpty(index) {
+      return (
+        this.aussteller[index].aussteller_email != null &&
+        this.aussteller[index].aussteller_email != ""
+      );
+    },
+
+    ausstellerEmail(index) {
+      return "mailto:http://" + this.aussteller[index].aussteller_email;
+    },
+
+    ausstellerBrandingNameNotEmpty(index) {
+      return (
+        this.aussteller[index].aussteller_brandingname != null &&
+        this.aussteller[index].aussteller_brandingname != ""
+      );
     },
   },
 
