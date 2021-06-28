@@ -17,6 +17,7 @@ import EditNews from './components/VorstandAdminComponents/EditNews';
 import AusstellerUebersicht from './components/VorstandAdminComponents/AusstellerUebersicht';
 import Register from './components/VorstandAdminComponents/Register';
 import ColorRadioButtons from './components/VorstandAdminComponents/utilies/ColorRadioButtons';
+import AusstellerAendern from './components/VorstandAdminComponents/AusstellerAendern';
 
 
 export default {
@@ -91,8 +92,9 @@ export default {
         },
 
         {
-            path: '/app/admin/dashboard/editaussteller',
-            component: EditAussteller,
+            path: '/app/admin/dashboard/ausstelleraendern',
+            name: 'AusstellerAendern',
+            component: AusstellerAendern,
             meta: { requiresAuth: true } //protected - Login erforderlich
         },
 

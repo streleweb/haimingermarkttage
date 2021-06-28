@@ -41,9 +41,10 @@ class AusstellerController extends Controller
     public function store(Request $request)
     {
         //falls Aussteller schon vorhanden, nicht leer, nicht null, Fehlerresponse zurückgeben
-        if (Aussteller::where('aussteller_email', $request->get('aussteller_email'))->exists() 
+        if (Aussteller::where('aussteller_fullname', $request->get('aussteller_fullname'))->exists() 
         && $request->get('aussteller_email') != "" && $request->get('aussteller_email') != null) {
-            return 'Aussteller gibt es schon!';
+            return \response('Error: Aussteller ist schon in DB vorhanden! ', 200)
+                    ->header('Content-Type', 'text/plain');
          }
          else{
             
@@ -101,16 +102,18 @@ class AusstellerController extends Controller
         return $aussteller;
     }
 
+    
     /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Aussteller  $aussteller
      * @return \Illuminate\Http\Response
      */
+    /*
     public function edit(Aussteller $aussteller)
     {
         return view('aussteller.edit')->with('aussteller',$aussteller);
-    }
+    }*/
 
     /**
      * Update the specified resource in storage.
@@ -119,11 +122,23 @@ class AusstellerController extends Controller
      * @param  \App\Models\Aussteller  $aussteller
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
+        $requestFullName = $request->get('aussteller_fullname');
+        if (Aussteller::where('aussteller_fullname', $requestFullName)->exists() 
+        && $requestFullName != "" && $requestFullName != null) {
+            
+            $aussteller = Aussteller::where('aussteller_fullname', $requestFullName);
+            $aussteller->update($request->all());
+            return \response('Updated.',200)->header('Content-Type', 'text/plain');
+        }else {
+            return \response('Error: Aussteller ist nicht in DB vorhanden! ', 200)
+                    ->header('Content-Type', 'text/plain');}
+
+            /*
         $aussteller = Aussteller::findOrFail($id);
         if($aussteller->update($request->all())) return $aussteller;
-        else return "Aussteller konnte nicht upgedated werden...";
+        else return "Aussteller konnte nicht upgedated werden...";*/
         
     }
 

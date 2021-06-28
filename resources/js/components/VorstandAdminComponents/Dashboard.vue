@@ -236,6 +236,18 @@ export default {
       loading: null,
     };
   },
+
+  //wenn Component geladen ist, führe die Methoden zum
+  //Laden der Aussteller und Ausstellerfotos via Axios Request aus
+  created() {
+    console.log(localStorage.getItem("isLoggedIn"));
+    //Wenn Admin nicht eingeloggt ist, redirect auf LoginPage
+    if (localStorage.getItem("isLoggedIn") != "true") {
+      this.$router.push({ name: "adminLogin" });
+    }
+    this.loadAussteller();
+  },
+
   methods: {
     loggedIn() {
       if (localStorage.getItem("isLoggedIn") == "true") {

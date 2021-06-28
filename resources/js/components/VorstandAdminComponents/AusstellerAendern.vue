@@ -223,19 +223,29 @@
       </div>
     </div>
   </nav>
+  <!--END DASHBOARD-->
+
  
   <div class="bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20">
+      <p v-if="error" style="...">{{error}}</p>
+        
       <div class="mt-10 sm:mt-0">
         <div class="">
           
             <div class=" text-gray-400 pb-3">
               <h3 class="text-lg font-medium leading-6 text-white pb-1">
-                Neuen Aussteller anlegen
+                Aussteller ändern
               </h3>
-              Neuer Aussteller wird in DB gespeichert und in Web-App eingebettet...
-              Klicken Sie zuerst auf "Upload" oder "Kein Ausstellerfoto uploaden", ehe der
-              Submit-Button erscheint und Sie die Daten in die Datenbank speichern können.
+              Folgende Aussteller sind momentan gespeichert und können verändert werden. Bitte Geben Sie den
+              Namen genau wie angezeigt in das Pflichtfeld "Vor und Nachname" ein, um die Ausstellerinformationen
+              dieses Ausstellers abzuändern.
             </div>
+
+            <p
+          v-for="(jeweiligerAussteller, index) in aussteller"
+          :key="index"
+          class="flex justify-center pl-3 text-white bg-green-900 mb-3 border border-gray-600"
+        > <span class="inline-flex w-32">- {{jeweiligerAussteller.aussteller_fullname}}</span></p>
           
           <div class="mt-5 md:mt-0 md:col-span-2">
             <div>
@@ -249,9 +259,9 @@
                         >Vor und Nachname</label
                       >
                       <input
+                        v-model="formdata.aussteller_fullname"
                         maxlength="30"
                         type="text"
-                        v-model="formdata.aussteller_fullname"
                         id="full_name"
                         placeholder="Pflichtfeld"
                         autocomplete="given-name"
@@ -483,6 +493,7 @@
 </template>
 
 <script>
+import repository from "./repository/repository";
 import Swal from "sweetalert2";
 
 export default {
@@ -491,7 +502,7 @@ export default {
       name: "Ausstelleranlegen",
       image: "",
       aussteller: [],
-      neuerAussteller: "",
+      error: null,
       submitvisibility: "hidden",
       formdata: {
         aussteller_fullname: null,
@@ -505,18 +516,23 @@ export default {
     };
   },
 
-  //Noch bevor Component gemounted ist, checke Login-Status...
-  //Lade Aussteller nur dann, wenn Admin eingeloggt ist,
-  //andernfalls erfolgt ein Redirect zur Login-Page
+  //Noch bevor Component gemounted ist, checke Login-Status
+  //Falls nicht eingeloggt -> Redirect zu Login-Page
   created() {
-    console.log(localStorage.getItem("isLoggedIn"));
+    //console.log(localStorage.getItem("isLoggedIn"));
     //Wenn Admin nicht eingeloggt ist, redirect auf LoginPage
     if (localStorage.getItem("isLoggedIn") != "true") {
       this.$router.push({ name: "adminLogin" });
     }
+    this.loadAussteller();
   },
 
   methods: {
+    async loadAussteller() {
+      let { data } = await repository.getAussteller();
+      this.aussteller = data.data;
+      // console.log(this.aussteller);
+    },
     showSubmitButton() {
       this.submitvisibility = "block";
     },
@@ -573,17 +589,17 @@ export default {
         localStorage;
         this.$router.push({ name: "adminLogin" });
       } catch (error) {
-        console.log(error);
+        //console.log(error);
       } finally {
         this.loading = false;
       }
     },
     submitform() {
       let formToJson = JSON.stringify(this.formdata);
-      console.log(formToJson);
+      //console.log(formToJson);
       try {
         axios
-          .post("/api/aussteller", this.formdata)
+          .put("/api/aussteller/", this.formdata)
           //console.log(result.response.data);
           .then((response) => {
             //console.log(response);

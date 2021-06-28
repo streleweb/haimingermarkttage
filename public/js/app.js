@@ -3356,6 +3356,703 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _repository_repository__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./repository/repository */ "./resources/js/components/VorstandAdminComponents/repository/repository.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_2__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      name: "Ausstelleranlegen",
+      image: "",
+      aussteller: [],
+      error: null,
+      submitvisibility: "hidden",
+      formdata: {
+        aussteller_fullname: null,
+        aussteller_beschreibung: null,
+        aussteller_zonenfarbe: null,
+        aussteller_brandingname: null,
+        aussteller_email: null,
+        aussteller_websiteurl: null,
+        aussteller_bildurl: null
+      } //Objekt zum Speichern der Model-Daten von oben
+
+    };
+  },
+  //Noch bevor Component gemounted ist, checke Login-Status
+  //Falls nicht eingeloggt -> Redirect zu Login-Page
+  created: function created() {
+    //console.log(localStorage.getItem("isLoggedIn"));
+    //Wenn Admin nicht eingeloggt ist, redirect auf LoginPage
+    if (localStorage.getItem("isLoggedIn") != "true") {
+      this.$router.push({
+        name: "adminLogin"
+      });
+    }
+
+    this.loadAussteller();
+  },
+  methods: {
+    loadAussteller: function loadAussteller() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        var _yield$repository$get, data;
+
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return _repository_repository__WEBPACK_IMPORTED_MODULE_1__.default.getAussteller();
+
+              case 2:
+                _yield$repository$get = _context.sent;
+                data = _yield$repository$get.data;
+                _this.aussteller = data.data; // console.log(this.aussteller);
+
+              case 5:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    },
+    showSubmitButton: function showSubmitButton() {
+      this.submitvisibility = "block";
+    },
+    //image aus dem inputfield lesen
+    handleOnChange: function handleOnChange(e) {
+      this.image = e.target.files[0];
+      /*console.log(this.image);
+      console.log(this.image.name);*/
+    },
+    //image uploaden
+    upload: function upload() {
+      var _this2 = this;
+
+      //formdata reset, falls öfter aufgerufen wird
+      this.formdata.aussteller_bildurl = null;
+      var formData = new FormData();
+      formData.set("image", this.image);
+      axios.post("http://localhost:8000/api/aussteller/upload", formData).then(function (response) {
+        //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
+        _this2.formdata.aussteller_bildurl = response.data.filepath;
+      }); //console.log(this.aussteller_bildurl);
+    },
+    //assign-Color Methods for Radio-Buttons
+    //Wird im Tailwind-Textformat in DB gespeichert und so wieder herausgeholt
+    assignColorRed: function assignColorRed() {
+      this.formdata.aussteller_zonenfarbe = "bg-red-600";
+    },
+    assignColorBlue: function assignColorBlue() {
+      this.formdata.aussteller_zonenfarbe = "bg-blue-500";
+    },
+    assignColorGreen: function assignColorGreen() {
+      this.formdata.aussteller_zonenfarbe = "bg-green-500";
+    },
+    assignColorBrown: function assignColorBrown() {
+      this.formdata.aussteller_zonenfarbe = "bg-yellow-900";
+    },
+    assignColorYellow: function assignColorYellow() {
+      this.formdata.aussteller_zonenfarbe = "bg-yellow-300";
+    },
+    loggedIn: function loggedIn() {
+      if (localStorage.getItem("isLoggedIn") == "true") {
+        return true;
+      } else return false;
+    },
+    handleLogout: function handleLogout() {
+      var _this3 = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.prev = 0;
+                _context2.next = 3;
+                return axios.post("http://localhost:8000/api/admin/logout");
+
+              case 3:
+                //LocalStorage LoggedIn-Status löschen
+                localStorage.removeItem("isLoggedIn");
+                localStorage;
+
+                _this3.$router.push({
+                  name: "adminLogin"
+                });
+
+                _context2.next = 10;
+                break;
+
+              case 8:
+                _context2.prev = 8;
+                _context2.t0 = _context2["catch"](0);
+
+              case 10:
+                _context2.prev = 10;
+                _this3.loading = false;
+                return _context2.finish(10);
+
+              case 13:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, null, [[0, 8, 10, 13]]);
+      }))();
+    },
+    submitform: function submitform() {
+      var formToJson = JSON.stringify(this.formdata); //console.log(formToJson);
+
+      try {
+        axios.put("/api/aussteller/", this.formdata) //console.log(result.response.data);
+        .then(function (response) {
+          //console.log(response);
+          //alert(response.data);
+          sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
+            title: response.data,
+            confirmButtonText: "ok",
+            confirmButtonColor: "#3cb371"
+          }); //Swal.fire(response.data);
+        })["catch"](function (error) {
+          // Fehlerbehandlung
+          //console.log(error);
+          sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
+            title: error,
+            confirmButtonText: "ok",
+            confirmButtonColor: "#3cb371"
+          });
+        });
+      } catch (error) {//console.error(error.response.data);
+      } finally {
+        this.$router.push({
+          name: "ausstelleruebersicht"
+        });
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/AusstellerUebersicht.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/AusstellerUebersicht.vue?vue&type=script&lang=js& ***!
@@ -3705,6 +4402,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
 
 
 
@@ -3718,8 +4418,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       laravelResponseData: null
     };
   },
-  //wenn Component geladen ist, führe die Methoden zum
-  //Laden der Aussteller und Ausstellerfotos via Axios Request aus
   created: function created() {
     console.log(localStorage.getItem("isLoggedIn")); //Wenn Admin nicht eingeloggt ist, redirect auf LoginPage
 
@@ -3730,7 +4428,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
 
     this.loadAussteller();
-    /*this.loadAusstellerfoto();*/
   },
   methods: {
     deleteAussteller: function deleteAussteller(index) {
@@ -4404,9 +5101,18 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
     };
   },
-  //wenn Component geladen ist, führe die Methoden zum
-  //Laden der Aussteller und Ausstellerfotos via Axios Request aus
-  mounted: function mounted() {},
+  //Noch bevor Component gemounted ist, checke Login-Status...
+  //Lade Aussteller nur dann, wenn Admin eingeloggt ist,
+  //andernfalls erfolgt ein Redirect zur Login-Page
+  created: function created() {
+    console.log(localStorage.getItem("isLoggedIn")); //Wenn Admin nicht eingeloggt ist, redirect auf LoginPage
+
+    if (localStorage.getItem("isLoggedIn") != "true") {
+      this.$router.push({
+        name: "adminLogin"
+      });
+    }
+  },
   methods: {
     showSubmitButton: function showSubmitButton() {
       this.submitvisibility = "block";
@@ -4510,7 +5216,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           }); //Swal.fire(response.data);
         })["catch"](function (error) {
           // Fehlerbehandlung
-          console.log(error);
+          //console.log(error);
+          sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+            title: error,
+            confirmButtonText: "ok",
+            confirmButtonColor: "#3cb371"
+          });
         });
       } catch (error) {//console.error(error.response.data);
       } finally {
@@ -4779,6 +5490,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     return {
       loading: null
     };
+  },
+  //wenn Component geladen ist, führe die Methoden zum
+  //Laden der Aussteller und Ausstellerfotos via Axios Request aus
+  created: function created() {
+    console.log(localStorage.getItem("isLoggedIn")); //Wenn Admin nicht eingeloggt ist, redirect auf LoginPage
+
+    if (localStorage.getItem("isLoggedIn") != "true") {
+      this.$router.push({
+        name: "adminLogin"
+      });
+    }
+
+    this.loadAussteller();
   },
   methods: {
     loggedIn: function loggedIn() {
@@ -7427,6 +8151,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_VorstandAdminComponents_AusstellerUebersicht__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/VorstandAdminComponents/AusstellerUebersicht */ "./resources/js/components/VorstandAdminComponents/AusstellerUebersicht.vue");
 /* harmony import */ var _components_VorstandAdminComponents_Register__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/VorstandAdminComponents/Register */ "./resources/js/components/VorstandAdminComponents/Register.vue");
 /* harmony import */ var _components_VorstandAdminComponents_utilies_ColorRadioButtons__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/VorstandAdminComponents/utilies/ColorRadioButtons */ "./resources/js/components/VorstandAdminComponents/utilies/ColorRadioButtons.vue");
+/* harmony import */ var _components_VorstandAdminComponents_AusstellerAendern__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/VorstandAdminComponents/AusstellerAendern */ "./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue");
+
 
 
 
@@ -7498,8 +8224,9 @@ __webpack_require__.r(__webpack_exports__);
     path: '/app/admin/dashboard/ausstelleranlegen',
     component: _components_VorstandAdminComponents_Ausstelleranlegen__WEBPACK_IMPORTED_MODULE_6__.default
   }, {
-    path: '/app/admin/dashboard/editaussteller',
-    component: _components_VorstandAdminComponents_EditAussteller__WEBPACK_IMPORTED_MODULE_14__.default,
+    path: '/app/admin/dashboard/ausstelleraendern',
+    name: 'AusstellerAendern',
+    component: _components_VorstandAdminComponents_AusstellerAendern__WEBPACK_IMPORTED_MODULE_19__.default,
     meta: {
       requiresAuth: true
     } //protected - Login erforderlich
@@ -7788,6 +8515,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-03bfb46e] {\n  background: #eee5e9;\n  border: none;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 20px;\n  text-align: center;\n  width: 250px;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-03bfb46e]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-03bfb46e] {\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 0.5rem;\n  width: 130px;\n  border-radius: 20px;\n  z-index: 1;\n}\n.text[data-v-03bfb46e] {\n  padding: 20px 20px;\n}\n.text h3[data-v-03bfb46e] {\n  text-transform: uppercase;\n}\n.produktbackground[data-v-03bfb46e] {\n  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),\r\n    url(\"/images/background/produktbackground.svg\");\n  background-repeat: no-repeat;\n  background-position: 50% 50%;\n  background-size: cover;\n  opacity: 90%;\n}\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=style&index=0&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=style&index=0&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "/* Farbzonenbuttons */\n.container {\n  display: block;\n  position: relative;\n  padding-left: 2rem;\n  margin-bottom: 0.8rem;\n  cursor: pointer;\n  font-size: 0.9rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n/* Hide the browser's default radio button */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n}\n\n/* Create a custom radio button */\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 50%;\n}\n\n/* On mouse-over, add a grey background color */\n.container:hover input ~ .checkmark {\n  background-color: #ccc;\n}\n\n/* When the radio button is checked, add a blue background */\n.container input:checked ~ .checkmark {\n  background-color: #2196f3;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n.container input:checked ~ .checkmark:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n.container .checkmark:after {\n  top: 9px;\n  left: 9px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: white;\n}\n.alert {\n  padding: 20px;\n  background-color: #f44336;\n  color: white;\n}\n.closebtn {\n  margin-left: 15px;\n  color: white;\n  font-weight: bold;\n  float: right;\n  font-size: 22px;\n  line-height: 20px;\n  cursor: pointer;\n  transition: 0.3s;\n}\n.closebtn:hover {\n  color: black;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -26497,6 +27248,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=style&index=0&lang=css&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=style&index=0&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AusstellerAendern_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AusstellerAendern.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=style&index=0&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AusstellerAendern_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AusstellerAendern_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/AusstellerUebersicht.vue?vue&type=style&index=0&id=3adb8d1e&scoped=true&lang=css&":
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/AusstellerUebersicht.vue?vue&type=style&index=0&id=3adb8d1e&scoped=true&lang=css& ***!
@@ -30724,6 +31505,47 @@ component.options.__file = "resources/js/components/Produkte.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _AusstellerAendern_vue_vue_type_template_id_60ed6b53___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AusstellerAendern.vue?vue&type=template&id=60ed6b53& */ "./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=template&id=60ed6b53&");
+/* harmony import */ var _AusstellerAendern_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AusstellerAendern.vue?vue&type=script&lang=js& */ "./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=script&lang=js&");
+/* harmony import */ var _AusstellerAendern_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AusstellerAendern.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
+  _AusstellerAendern_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _AusstellerAendern_vue_vue_type_template_id_60ed6b53___WEBPACK_IMPORTED_MODULE_0__.render,
+  _AusstellerAendern_vue_vue_type_template_id_60ed6b53___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/VorstandAdminComponents/AusstellerAendern.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/VorstandAdminComponents/AusstellerUebersicht.vue":
 /*!**********************************************************************************!*\
   !*** ./resources/js/components/VorstandAdminComponents/AusstellerUebersicht.vue ***!
@@ -31396,6 +32218,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AusstellerAendern_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AusstellerAendern.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AusstellerAendern_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
 /***/ "./resources/js/components/VorstandAdminComponents/AusstellerUebersicht.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************!*\
   !*** ./resources/js/components/VorstandAdminComponents/AusstellerUebersicht.vue?vue&type=script&lang=js& ***!
@@ -31695,6 +32533,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Produkte_vue_vue_type_style_index_0_id_03bfb46e_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Produkte.vue?vue&type=style&index=0&id=03bfb46e&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Produkte.vue?vue&type=style&index=0&id=03bfb46e&scoped=true&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=style&index=0&lang=css&":
+/*!****************************************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=style&index=0&lang=css& ***!
+  \****************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AusstellerAendern_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AusstellerAendern.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=style&index=0&lang=css&");
 
 
 /***/ }),
@@ -32049,6 +32900,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Produkte_vue_vue_type_template_id_03bfb46e_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Produkte_vue_vue_type_template_id_03bfb46e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Produkte.vue?vue&type=template&id=03bfb46e&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Produkte.vue?vue&type=template&id=03bfb46e&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=template&id=60ed6b53&":
+/*!**************************************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=template&id=60ed6b53& ***!
+  \**************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AusstellerAendern_vue_vue_type_template_id_60ed6b53___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AusstellerAendern_vue_vue_type_template_id_60ed6b53___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AusstellerAendern_vue_vue_type_template_id_60ed6b53___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AusstellerAendern.vue?vue&type=template&id=60ed6b53& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=template&id=60ed6b53&");
 
 
 /***/ }),
@@ -33698,6 +34566,918 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=template&id=60ed6b53&":
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue?vue&type=template&id=60ed6b53& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "w-full h-full bg-gray-900" }, [
+    _vm.loggedIn() == false
+      ? _c(
+          "div",
+          {
+            staticClass:
+              "flex w-full h-full items-center justify-center text-red-900 bg-gray-900"
+          },
+          [
+            _vm._v(
+              " Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard zugreifen zu können..."
+            )
+          ]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.loggedIn()
+      ? _c("div", { staticClass: "w-full" }, [
+          _c("nav", { staticClass: "bg-gray-800 border-b border-gray-300" }, [
+            _c(
+              "div",
+              { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "relative flex items-center justify-between h-16"
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "absolute inset-y-0 left-0 flex items-center sm:hidden"
+                      },
+                      [
+                        _c("span", { staticClass: "sr-only" }, [
+                          _vm._v("Open main menu")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "svg",
+                          {
+                            staticClass: "hidden h-6 w-6",
+                            attrs: {
+                              xmlns: "http://www.w3.org/2000/svg",
+                              fill: "none",
+                              viewBox: "0 0 24 24",
+                              stroke: "currentColor",
+                              "aria-hidden": "true"
+                            }
+                          },
+                          [
+                            _c("path", {
+                              attrs: {
+                                "stroke-linecap": "round",
+                                "stroke-linejoin": "round",
+                                "stroke-width": "2",
+                                d: "M6 18L18 6M6 6l12 12"
+                              }
+                            })
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "\r\n            flex-1 flex\r\n            items-center\r\n            justify-center\r\n            sm:items-stretch\r\n            sm:justify-start\r\n          "
+                      },
+                      [
+                        _c("div", {
+                          staticClass: "flex-shrink-0 flex items-center"
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "hidden sm:block sm:ml-6" }, [
+                          _c(
+                            "div",
+                            { staticClass: "flex space-x-4" },
+                            [
+                              _c(
+                                "router-link",
+                                { attrs: { to: "/app/admin/dashboard" } },
+                                [
+                                  _c(
+                                    "span",
+                                    { staticClass: "text-gray-500 text-lg" },
+                                    [_vm._v("Dashboard")]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                                },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      attrs: {
+                                        to:
+                                          "/app/admin/dashboard/ausstelleruebersicht"
+                                      }
+                                    },
+                                    [_vm._v("Aussteller\r\n                ")]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                                },
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      attrs: { to: "/app/admin/dashboard/news" }
+                                    },
+                                    [_vm._v("News")]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                  attrs: { href: "#" }
+                                },
+                                [_vm._v("Programm")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                  attrs: { href: "#" }
+                                },
+                                [_vm._v("platzhalter")]
+                              )
+                            ],
+                            1
+                          )
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "\r\n            absolute\r\n            inset-y-0\r\n            right-0\r\n            flex\r\n            items-center\r\n            pr-2\r\n            sm:static\r\n            sm:inset-auto\r\n            sm:ml-6\r\n            sm:pr-0\r\n          "
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "\r\n                  text-gray-300\r\n                  hover:bg-red-900\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                          },
+                          [
+                            _c(
+                              "span",
+                              {
+                                staticClass: "text-white cursor-pointer",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.handleLogout()
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v("Logout "),
+                                _c("img", {
+                                  staticClass: "filter-white",
+                                  attrs: {
+                                    src:
+                                      "/public/images/icons/svgs/ausloggen.svg",
+                                    alt: ""
+                                  }
+                                })
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "sm:hidden", attrs: { id: "mobile-menu" } },
+              [
+                _c("div", { staticClass: "px-2 pt-2 pb-3 space-y-1" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            bg-gray-900\r\n            text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#", "aria-current": "page" }
+                    },
+                    [_vm._v("Dashboard")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#" }
+                    },
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          attrs: {
+                            to: "/app/admin/dashboard/ausstelleruebersicht"
+                          }
+                        },
+                        [_vm._v("Aussteller")]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("News")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Programm")]
+                  )
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20"
+            },
+            [
+              _vm.error
+                ? _c("p", { staticStyle: {} }, [_vm._v(_vm._s(_vm.error))])
+                : _vm._e(),
+              _vm._v(" "),
+              _c("div", { staticClass: "mt-10 sm:mt-0" }, [
+                _c(
+                  "div",
+                  {},
+                  [
+                    _vm._m(0),
+                    _vm._v(" "),
+                    _vm._l(_vm.aussteller, function(
+                      jeweiligerAussteller,
+                      index
+                    ) {
+                      return _c(
+                        "p",
+                        {
+                          key: index,
+                          staticClass:
+                            "flex justify-center pl-3 text-white bg-green-900 mb-3 border border-gray-600"
+                        },
+                        [
+                          _c("span", { staticClass: "inline-flex w-32" }, [
+                            _vm._v(
+                              "- " +
+                                _vm._s(jeweiligerAussteller.aussteller_fullname)
+                            )
+                          ])
+                        ]
+                      )
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
+                      _c("div", [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "shadow overflow-hidden sm:rounded-md"
+                          },
+                          [
+                            _c(
+                              "div",
+                              { staticClass: "px-4 py-5 bg-gray-300 sm:p-6" },
+                              [
+                                _c(
+                                  "label",
+                                  {
+                                    staticClass:
+                                      "block text-sm font-medium text-gray-700",
+                                    attrs: { for: "name" }
+                                  },
+                                  [_vm._v("Vor und Nachname")]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.formdata.aussteller_fullname,
+                                      expression: "formdata.aussteller_fullname"
+                                    }
+                                  ],
+                                  staticClass:
+                                    "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                  attrs: {
+                                    maxlength: "30",
+                                    type: "text",
+                                    id: "full_name",
+                                    placeholder: "Pflichtfeld",
+                                    autocomplete: "given-name"
+                                  },
+                                  domProps: {
+                                    value: _vm.formdata.aussteller_fullname
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.formdata,
+                                        "aussteller_fullname",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "label",
+                                  {
+                                    staticClass:
+                                      "block text-sm font-medium text-gray-700"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "Handelsname (Branding-Name) des Ausstellers"
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value:
+                                        _vm.formdata.aussteller_brandingname,
+                                      expression:
+                                        "formdata.aussteller_brandingname"
+                                    }
+                                  ],
+                                  staticClass:
+                                    "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                  attrs: {
+                                    maxlength: "30",
+                                    type: "text",
+                                    id: "handelsname",
+                                    placeholder: "Optional",
+                                    autocomplete: "given-name"
+                                  },
+                                  domProps: {
+                                    value: _vm.formdata.aussteller_brandingname
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.formdata,
+                                        "aussteller_brandingname",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "col-span-6 sm:col-span-4" },
+                                  [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass:
+                                          "block text-sm font-medium text-gray-700",
+                                        attrs: { for: "email_address" }
+                                      },
+                                      [_vm._v("Aussteller-E-Mail")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.formdata.aussteller_email,
+                                          expression:
+                                            "formdata.aussteller_email"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "\r\n                        mt-1\r\n                        focus:ring-green-500\r\n                        focus:border-green-500\r\n                        block\r\n                        w-full\r\n                        shadow-sm\r\n                        sm:text-sm\r\n                        border-gray-300\r\n                        rounded-md\r\n                      ",
+                                      attrs: {
+                                        maxlength: "100",
+                                        type: "text",
+                                        id: "email_address",
+                                        autocomplete: "email",
+                                        placeholder: "Optional"
+                                      },
+                                      domProps: {
+                                        value: _vm.formdata.aussteller_email
+                                      },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.formdata,
+                                            "aussteller_email",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("div", [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass:
+                                        "block text-sm font-medium text-gray-700",
+                                      attrs: { for: "company_website" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\r\n                      Aussteller-Website\r\n                    "
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "mt-1 flex rounded-md shadow-sm"
+                                    },
+                                    [
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "\r\n                          inline-flex\r\n                          items-center\r\n                          px-3\r\n                          rounded-l-md\r\n                          border border-r-0 border-gray-300\r\n                          bg-gray-50\r\n                          text-gray-500 text-sm\r\n                        "
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\r\n                        http://\r\n                      "
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value:
+                                              _vm.formdata
+                                                .aussteller_websiteurl,
+                                            expression:
+                                              "formdata.aussteller_websiteurl"
+                                          }
+                                        ],
+                                        staticClass:
+                                          "\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          flex-1\r\n                          block\r\n                          w-full\r\n                          rounded-none rounded-r-md\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                        ",
+                                        attrs: {
+                                          maxlength: "50",
+                                          type: "text",
+                                          id: "aussteller_website",
+                                          placeholder: "www.example.com"
+                                        },
+                                        domProps: {
+                                          value:
+                                            _vm.formdata.aussteller_websiteurl
+                                        },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.formdata,
+                                              "aussteller_websiteurl",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "col-span-6 sm:col-span-4" },
+                                  [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass:
+                                          "block text-sm font-medium text-gray-700",
+                                        attrs: { for: "email_address" }
+                                      },
+                                      [_vm._v("Beschreibung")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("textarea", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value:
+                                            _vm.formdata
+                                              .aussteller_beschreibung,
+                                          expression:
+                                            "formdata.aussteller_beschreibung"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "\r\n                          \r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                      attrs: {
+                                        maxlength: "250",
+                                        id: "beschreibung",
+                                        autocomplete: "Beschreibung",
+                                        placeholder:
+                                          "Optional [Beschreibung inkl. der angebotenen Produkte des Ausstellers]"
+                                      },
+                                      domProps: {
+                                        value:
+                                          _vm.formdata.aussteller_beschreibung
+                                      },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.formdata,
+                                            "aussteller_beschreibung",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "col-span-6" }, [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass:
+                                        "block text-sm font-medium text-gray-700",
+                                      attrs: { for: "street_address" }
+                                    },
+                                    [_vm._v("Zonenfarbe am Markt")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "pt-3" }, [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "container",
+                                        on: { click: _vm.assignColorBlue }
+                                      },
+                                      [
+                                        _vm._v("Blau\r\n      "),
+                                        _c("div", {
+                                          staticClass:
+                                            "bg-blue-500 h-2 w-5 rounded-md",
+                                          on: { click: _vm.assignColorBlue }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          attrs: {
+                                            type: "radio",
+                                            name: "radio"
+                                          },
+                                          on: { click: _vm.assignColorBlue }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", {
+                                          staticClass: "checkmark",
+                                          on: { click: _vm.assignColorBlue }
+                                        })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "container",
+                                        on: { click: _vm.assignColorRed }
+                                      },
+                                      [
+                                        _vm._v("Rot\r\n      "),
+                                        _c("div", {
+                                          staticClass:
+                                            "bg-red-600 h-2 w-5 rounded-md",
+                                          on: { click: _vm.assignColorRed }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          attrs: {
+                                            type: "radio",
+                                            name: "radio"
+                                          },
+                                          on: { click: _vm.assignColorRed }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", {
+                                          staticClass: "checkmark",
+                                          on: { click: _vm.assignColorRed }
+                                        })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "container",
+                                        on: { click: _vm.assignColorYellow }
+                                      },
+                                      [
+                                        _vm._v("Gelb\r\n      "),
+                                        _c("div", {
+                                          staticClass:
+                                            "bg-yellow-300 h-2 w-5 rounded-md",
+                                          on: { click: _vm.assignColorYellow }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          attrs: {
+                                            type: "radio",
+                                            name: "radio"
+                                          },
+                                          on: { click: _vm.assignColorYellow }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", {
+                                          staticClass: "checkmark",
+                                          on: { click: _vm.assignColorYellow }
+                                        })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "container",
+                                        on: { click: _vm.assignColorGreen }
+                                      },
+                                      [
+                                        _vm._v("Grün\r\n      "),
+                                        _c("div", {
+                                          staticClass:
+                                            "bg-green-500 h-2 w-5 rounded-md",
+                                          on: { click: _vm.assignColorGreen }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          attrs: {
+                                            type: "radio",
+                                            name: "radio"
+                                          },
+                                          on: { click: _vm.assignColorGreen }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", {
+                                          staticClass: "checkmark",
+                                          on: { click: _vm.assignColorGreen }
+                                        })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "container",
+                                        on: { click: _vm.assignColorBrown }
+                                      },
+                                      [
+                                        _vm._v("Braun\r\n      "),
+                                        _c("div", {
+                                          staticClass:
+                                            "bg-yellow-900 h-2 w-5 rounded-md",
+                                          on: { click: _vm.assignColorBrown }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          attrs: {
+                                            type: "radio",
+                                            name: "radio"
+                                          },
+                                          on: { click: _vm.assignColorBrown }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", {
+                                          staticClass: "checkmark",
+                                          on: { click: _vm.assignColorBrown }
+                                        })
+                                      ]
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _vm._m(1),
+                                _vm._v(" "),
+                                _c(
+                                  "form",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-center mt-3",
+                                    on: {
+                                      submit: function($event) {
+                                        $event.preventDefault()
+                                        return _vm.upload($event)
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("input", {
+                                      staticClass: "text-xs sm:text-base",
+                                      attrs: { type: "file" },
+                                      on: { change: _vm.handleOnChange }
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass:
+                                          "bg-green-900 text-xs sm:text-base p-1 text-white border border-green-600 rounded-md hover:bg-green-500",
+                                        on: { click: _vm.showSubmitButton }
+                                      },
+                                      [_vm._v("Upload photo")]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-center"
+                                  },
+                                  [
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass:
+                                          "bg-green-900 text-xs sm:text-base p-1 mt-2 text-white border border-green-600 rounded-md hover:bg-green-500",
+                                        on: { click: _vm.showSubmitButton }
+                                      },
+                                      [_vm._v("Kein Ausstellerfoto uploaden")]
+                                    )
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  " flex justify-center px-4 py-3 bg-gray-600 border-t-2 border-gray-800 text-right sm:px-6"
+                              },
+                              [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass:
+                                      "\r\n                      inline-flex\r\n                      justify-center\r\n                      py-2\r\n                      px-4\r\n                      border border-transparent\r\n                      shadow-sm\r\n                      text-sm\r\n                      font-medium\r\n                      rounded-md\r\n                      text-white\r\n                      bg-green-600\r\n                      hover:bg-black\r\n                      focus:outline-none\r\n                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\r\n                    ",
+                                    class: _vm.submitvisibility,
+                                    attrs: { id: "submitbutton" },
+                                    on: { click: _vm.submitform }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\r\n                    In DB Speichern\r\n                  "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ])
+                    ])
+                  ],
+                  2
+                )
+              ])
+            ]
+          )
+        ])
+      : _vm._e()
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: " text-gray-400 pb-3" }, [
+      _c(
+        "h3",
+        { staticClass: "text-lg font-medium leading-6 text-white pb-1" },
+        [_vm._v("\r\n                Aussteller ändern\r\n              ")]
+      ),
+      _vm._v(
+        '\r\n              Folgende Aussteller sind momentan gespeichert und können verändert werden. Bitte Geben Sie den\r\n              Namen genau wie angezeigt in das Pflichtfeld "Vor und Nachname" ein, um die Ausstellerinformationen\r\n              dieses Ausstellers abzuändern.\r\n            '
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "py-2 bg-green-900 text-white mb-1 px-2" },
+      [
+        _vm._v("Ausstellerfoto Upload\r\n    "),
+        _c("div", { staticClass: "alert" }, [
+          _c(
+            "span",
+            {
+              staticClass: "closebtn",
+              attrs: { onclick: "this.parentElement.style.display='none';" }
+            },
+            [_vm._v("×")]
+          ),
+          _vm._v(" "),
+          _c("strong", [_vm._v("Achtung!")]),
+          _vm._v(" Maximale Filesize: 1.9MB "),
+          _c("br"),
+          _vm._v("  Bsp: ausstellername.jpg oder ausstellername.png\r\n")
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/AusstellerUebersicht.vue?vue&type=template&id=3adb8d1e&scoped=true&":
 /*!********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/AusstellerUebersicht.vue?vue&type=template&id=3adb8d1e&scoped=true& ***!
@@ -33994,9 +35774,19 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "inline-flex justify-end pt-5 pr-10 items-center w-full"
+                    "inline-flex justify-start gap-3 pt-5 px-4 items-center w-full"
                 },
                 [
+                  _c(
+                    "router-link",
+                    { attrs: { to: "/app/admin/dashboard/ausstelleraendern" } },
+                    [
+                      _c("button", { staticClass: "btn btn-blue" }, [
+                        _vm._v("Aussteller ändern")
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
                   _c(
                     "router-link",
                     { attrs: { to: "/app/admin/dashboard/ausstelleranlegen" } },
@@ -34144,35 +35934,24 @@ var render = function() {
                               },
                               [
                                 _c(
-                                  "router-link",
-                                  {
-                                    attrs: {
-                                      to: "/app/admin/dashboard/editaussteller"
-                                    }
-                                  },
-                                  [
-                                    _c(
-                                      "button",
-                                      { staticClass: "btn btn-blue" },
-                                      [_vm._v("edit")]
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
                                   "button",
                                   {
                                     staticClass: "btn btn-red",
+                                    attrs: {
+                                      accesskey: jeweiligerAussteller.full_name,
+                                      "key:index": ""
+                                    },
                                     on: {
                                       click: function($event) {
-                                        return _vm.deleteAussteller(index)
+                                        return _vm.deleteAussteller(
+                                          jeweiligerAussteller.full_name
+                                        )
                                       }
                                     }
                                   },
                                   [_vm._v("delete")]
                                 )
-                              ],
-                              1
+                              ]
                             )
                           ]
                         )

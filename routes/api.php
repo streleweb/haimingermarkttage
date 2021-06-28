@@ -45,8 +45,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //Route::post('/admin/register', [AuthController::class, 'register']);
     
     Route::post('/aussteller', [AusstellerController::class, 'store']);
-    Route::put('/aussteller/{id}', [AusstellerController::class, 'update']);
+    Route::put('/aussteller', [AusstellerController::class, 'update']);
     Route::delete('/aussteller/{id}', [AusstellerController::class, 'destroy']);
+
     //imageupload
     Route::post('/aussteller/upload', [ImageUploadController::class, 'handle']);
    

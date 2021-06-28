@@ -237,9 +237,12 @@
   <div class="ausstellergradient">
     <div class="ausstellercontainer">
       
-      <div class="inline-flex justify-end pt-5 pr-10 items-center w-full"><!--Neuen Aussteller hinzufügen Button-->
+      <div class="inline-flex justify-start gap-3 pt-5 px-4 items-center w-full">
+      <router-link to="/app/admin/dashboard/ausstelleraendern"><button class="btn btn-blue">Aussteller ändern</button></router-link>
+      <!--Neuen Aussteller hinzufügen Button-->
       <router-link to="/app/admin/dashboard/ausstelleranlegen"><button class="btn btn-green">Neuen Aussteller hinzufügen</button></router-link>
-      <!--Neuen Aussteller hinzufügen Button END--></div>
+      <!--Neuen Aussteller hinzufügen Button END-->
+      </div>
       <div
         class="
           grid grid-cols-1
@@ -309,8 +312,8 @@
               </ul>
             </div>
             <div class="gap-2 justify-start items-center mt-3">
-              <router-link to="/app/admin/dashboard/editaussteller"><button class="btn btn-blue">edit</button></router-link>
-              <button @click="deleteAussteller(index)" class="btn btn-red">delete</button>
+              
+              <button :accesskey="jeweiligerAussteller.full_name" key:index @click="deleteAussteller(jeweiligerAussteller.full_name)" class="btn btn-red">delete</button>
             </div>
           </div>
         </article>
@@ -339,8 +342,7 @@ export default {
       laravelResponseData: null,
     };
   },
-  //wenn Component geladen ist, führe die Methoden zum
-  //Laden der Aussteller und Ausstellerfotos via Axios Request aus
+
   created() {
     console.log(localStorage.getItem("isLoggedIn"));
     //Wenn Admin nicht eingeloggt ist, redirect auf LoginPage
@@ -348,7 +350,6 @@ export default {
       this.$router.push({ name: "adminLogin" });
     }
     this.loadAussteller();
-    /*this.loadAusstellerfoto();*/
   },
 
   methods: {
