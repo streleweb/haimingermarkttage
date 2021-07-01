@@ -272,7 +272,7 @@
                 border border-gray-600
               "
             >
-              <span class="inline-flex w-32"
+              <span class="inline-flex"
                 >- {{ jeweiligerAussteller.aussteller_fullname }}</span
               >
             </p>

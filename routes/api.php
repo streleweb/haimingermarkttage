@@ -35,29 +35,30 @@ Route::get('/aussteller/search/{name}', [AusstellerController::class, 'search'])
 Route::get('/aussteller', [AusstellerController::class, 'index']);
 Route::get('/aussteller/{id}', [AusstellerController::class, 'show']);
 
-
-Route::post('/admin/register', [AuthController::class, 'register']);
+ //Route::post('/admin/register', [AuthController::class, 'register']);
+//Route::post('/admin/register', [AuthController::class, 'register']);
 //Admin-Public-Routes
 
- //Protected routes through Sanctum -- Token-based requests
+ //Protected routes through Sanctum. Token-based requests
 Route::group(['middleware' => ['auth:sanctum']], function () {
 
-    //Route::post('/admin/register', [AuthController::class, 'register']);
-    
-    Route::post('/aussteller', [AusstellerController::class, 'store']);
-    Route::put('/aussteller', [AusstellerController::class, 'update']);
-    Route::delete('/aussteller/{id}', [AusstellerController::class, 'destroy']);
-
-    //imageupload
-    Route::post('/imageupload', [ImageUploadController::class, 'handle']);
-
-    //fotogalerie upload/edit 
-    Route::post('/fotogalerie', [FotogalerieController::class, 'store']);
-   
     //logout
     Route::post('/admin/logout', [AuthController::class, 'logout']);
     //login
     Route::post('/admin/login', [AuthController::class, 'login']);
+
+    //Aussteller-Post-Routes
+    Route::post('/aussteller', [AusstellerController::class, 'store']);
+    Route::put('/aussteller', [AusstellerController::class, 'update']);
+    Route::delete('/aussteller/{id}', [AusstellerController::class, 'destroy']);
+
+    //Imageupload
+    Route::post('/imageupload', [ImageUploadController::class, 'handle']);
+
+    //Fotogalerie upload/edit 
+    Route::post('/fotogalerie', [FotogalerieController::class, 'store']);
+   
+    //News
 
 });
 

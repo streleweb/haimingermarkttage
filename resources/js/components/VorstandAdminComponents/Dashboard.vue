@@ -1,5 +1,5 @@
 <template>
-<div class="w-full h-full bg-gray-900">
+<div class="w-full h-full dashboardbackground">
 <div v-if="loggedIn() == false" class="flex w-full h-full items-center justify-center text-red-900 bg-gray-900"> Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard zugreifen zu können...</div>
 <!-- Check for Login-Status, only display if logged in-->
 <div v-if="loggedIn()" class="w-full">
@@ -221,7 +221,7 @@
     </div>
   </nav>
   <div id="dashboardcontent" class="h-full w-full">
-    <div class= "flex pt-60 w-full justify-center text-white text-4xl text-gray-800">Welcome Home</div>
+    <div class= "flex pt-40 lg:pt-60 w-full justify-center text-white text-2xl sm:text-3xl md:text-4xl text-gray-800">Welcome Home</div>
   </div>
 </div>
 </div>
@@ -271,4 +271,10 @@ export default {
 </script>
 
 <style>
+.dashboardbackground {
+  @apply bg-gray-900;
+
+  background: linear-gradient(rgb(1, 15, 0, 0.99), rgba(0, 0, 0, 0.97)),
+    url("/images/icons/svgs/wheels.png");
+}
 </style>

@@ -166,6 +166,8 @@
 
 
 <script>
+import Swal from "sweetalert2";
+
 export default {
   name: "Login",
 

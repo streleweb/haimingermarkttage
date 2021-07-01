@@ -28,7 +28,7 @@ der tailwind components integriert. Diese Styles werden durch die
         position: absolute;
         bottom: 40px; 
         top: 58px; */
-        @apply flex flex-col flex-shrink flex-grow;
+        @apply flex flex-col flex-grow; /*flex-shrink flex-grow*/
         
     }
 

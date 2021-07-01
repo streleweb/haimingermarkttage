@@ -18,6 +18,8 @@ import AusstellerUebersicht from './components/VorstandAdminComponents/Ausstelle
 import Register from './components/VorstandAdminComponents/Register';
 import AusstellerAendern from './components/VorstandAdminComponents/AusstellerAendern';
 import AddPhotos from './components/VorstandAdminComponents/FotogalerieComponents/AddPhotos';
+import Karte from './components/Karte';
+import Anreise from './components/Anreise';
 
 
 export default {
@@ -58,6 +60,16 @@ export default {
         {
             path: '/app/news',
             component: News
+        },
+
+        {
+            path: '/app/karte',
+            component: Karte
+        },
+
+        {
+            path: '/app/anreise',
+            component: Anreise
         },
 
         {
@@ -123,6 +135,8 @@ export default {
             name: AddPhotos,
             component: AddPhotos
         },
+
+
 
     ]
 

@@ -55,8 +55,9 @@
           <div class="text-lg md:text-3xl">Technische Umsetzung</div>
           <br />
 
-          Frontend(VueJs, TailwindCSS) + Laravel-REST-API: Peter Strele <br />
-          Datenbankimplementierung + Laravel-Sanctum-Authentifizierung:
+          Frontend(Vue.JS, Tailwind CSS), Laravel-Sanctum-Authentifizierung &
+          Laravel-REST-API: Peter Strele <br />
+          Datenbank-Modellierung, Laravel-Migrations & Laravel-REST-API:
           Christoph Lottersberger
           <br /><br />
           <div class="text-lg md:text-3xl">EU-Streitschlichtung</div>
