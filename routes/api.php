@@ -13,7 +13,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProgrammController;
 use App\Http\Controllers\ProgrammpunktController;
 use App\Http\Controllers\SponsorenController;
-use App\Http\Controllers\ImageUploadController;
+use App\Http\Controllers\ImageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::delete('/aussteller/{id}', [AusstellerController::class, 'destroy']);
 
     //Imageupload
-    Route::post('/imageupload', [ImageUploadController::class, 'handle']);
+    Route::post('/imageupload', [ImageController::class, 'handle']);
 
     //Fotogalerie upload/edit 
     Route::post('/fotogalerie', [FotogalerieController::class, 'store']);

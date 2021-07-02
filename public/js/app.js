@@ -4233,7 +4233,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   //Falls nicht eingeloggt -> Redirect zu Login-Page
   created: function created() {
     //console.log(localStorage.getItem("isLoggedIn"));
-    //Wenn Admin nicht eingeloggt ist, redirect auf LoginPage
     if (localStorage.getItem("isLoggedIn") != "true") {
       this.$router.push({
         name: "adminLogin"
@@ -4259,7 +4258,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 2:
                 _yield$repository$get = _context.sent;
                 data = _yield$repository$get.data;
-                _this.aussteller = data.data; // console.log(this.aussteller);
+                _this.aussteller = data.data; //console.log(this.aussteller);
 
               case 5:
               case "end":
@@ -4282,7 +4281,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     upload: function upload() {
       var _this2 = this;
 
-      //formdata reset, falls öfter aufgerufen wird
+      //formdata reset, falls öfter aufgerufen wurde
       this.formdata.aussteller_bildurl = null;
       var formData = new FormData();
       formData.set("image", this.image);
@@ -5489,7 +5488,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var formData = new FormData();
       formData.set("image", this.image);
       axios.post("http://localhost:8000/api/imageupload", formData).then(function (response) {
-        //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
+        //Server-Response-URL des Images zur aussteller_bildurl innerhalb der formdata adden
         _this.formdata.aussteller_bildurl = response.data.filepath;
         sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
           title: "Foto gespeichert!",
@@ -7650,18 +7649,24 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
                 }).get("http://localhost:8000/api/sanctum/csrf-cookie").then(function (response) {
                   axios.post("http://localhost:8000/api/admin/login", _this.user).then(function (response) {
-                    alert("Login erfolgreich!"); //LoggedIn-Status in localStorage abspeichern
+                    //debug
+                    //console.log(response.data.token);
+                    if (response.status == 201) {
+                      //LoggedIn-Status in localStorage abspeichern
+                      localStorage.setItem("isLoggedIn", "true");
 
-                    //LoggedIn-Status in localStorage abspeichern
-                    localStorage.setItem("isLoggedIn", "true");
-
-                    _this.$router.push({
-                      name: "admindashboard"
-                    }); //console.log(response.data.token);
-                    //var responseBearerTokenVonBody = response.data.token;
-                    //window.axios.defaults.headers.common = {
-                    // Authorization: `Bearer ${responseBearerTokenVonBody}`,
-
+                      _this.$router.push({
+                        name: "admindashboard"
+                      });
+                    } else {
+                      localStorage.setItem("isLoggedIn", "false");
+                      sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+                        title: "Login nicht erfolgreich!",
+                        text: "Überprüfen Sie bitte Ihre Login-Daten",
+                        confirmButtonText: "ok",
+                        confirmButtonColor: "#3cb371"
+                      });
+                    }
                   })["catch"](function (err) {
                     if (err.response) {
                       //Wenn Client error response bekommen hat (5xx, 4xx)
@@ -8858,21 +8863,15 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); //bootstrap.js
 //require('axios');
-//Main pages
+//Main page
 
 
 
 vue__WEBPACK_IMPORTED_MODULE_2__.default.use(vue_router__WEBPACK_IMPORTED_MODULE_3__.default);
 vue__WEBPACK_IMPORTED_MODULE_2__.default.use(vuex__WEBPACK_IMPORTED_MODULE_4__.default);
-/*const app = new Vue({
-    el: '#app',
-    router: new VueRouter(routes),
-    components: { App }
-});*/
-
 /**
- * Neue Vue Instanz zum Rendern des App-Components
- * hin zum div mit der id #app im welcome.blade-File
+ * Neue Vue Instanz zum Mounten des App-Components
+ * hin zum div mit der id #app im welcome.blade.php-File
  * 
  * Instanziieren des VueRouters mit dem Konfiguartions-File
  * routes.js

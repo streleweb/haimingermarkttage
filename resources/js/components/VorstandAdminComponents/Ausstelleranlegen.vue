@@ -535,7 +535,7 @@ export default {
       axios
         .post("http://localhost:8000/api/imageupload", formData)
         .then((response) => {
-          //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
+          //Server-Response-URL des Images zur aussteller_bildurl innerhalb der formdata adden
           this.formdata.aussteller_bildurl = response.data.filepath;
           Swal.fire({
             title: "Foto gespeichert!",

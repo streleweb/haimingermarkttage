@@ -648,7 +648,6 @@ export default {
   //Falls nicht eingeloggt -> Redirect zu Login-Page
   created() {
     //console.log(localStorage.getItem("isLoggedIn"));
-    //Wenn Admin nicht eingeloggt ist, redirect auf LoginPage
     if (localStorage.getItem("isLoggedIn") != "true") {
       this.$router.push({ name: "adminLogin" });
     }
@@ -659,7 +658,7 @@ export default {
     async loadAussteller() {
       let { data } = await repository.getAussteller();
       this.aussteller = data.data;
-      // console.log(this.aussteller);
+      //console.log(this.aussteller);
     },
     showSubmitButton() {
       this.submitvisibility = "block";
@@ -672,7 +671,7 @@ export default {
     },
     //image uploaden
     upload() {
-      //formdata reset, falls öfter aufgerufen wird
+      //formdata reset, falls öfter aufgerufen wurde
       this.formdata.aussteller_bildurl = null;
       const formData = new FormData();
       formData.set("image", this.image);

@@ -205,14 +205,21 @@ export default {
             axios
               .post("http://localhost:8000/api/admin/login", this.user)
               .then((response) => {
-                alert("Login erfolgreich!");
-                //LoggedIn-Status in localStorage abspeichern
-                localStorage.setItem("isLoggedIn", "true");
-                this.$router.push({ name: "admindashboard" });
+                //debug
                 //console.log(response.data.token);
-                //var responseBearerTokenVonBody = response.data.token;
-                //window.axios.defaults.headers.common = {
-                // Authorization: `Bearer ${responseBearerTokenVonBody}`,
+                if (response.status == 201) {
+                  //LoggedIn-Status in localStorage abspeichern
+                  localStorage.setItem("isLoggedIn", "true");
+                  this.$router.push({ name: "admindashboard" });
+                } else {
+                  localStorage.setItem("isLoggedIn", "false");
+                  Swal.fire({
+                    title: "Login nicht erfolgreich!",
+                    text: "Überprüfen Sie bitte Ihre Login-Daten",
+                    confirmButtonText: "ok",
+                    confirmButtonColor: "#3cb371",
+                  });
+                }
               })
               .catch((err) => {
                 if (err.response) {
