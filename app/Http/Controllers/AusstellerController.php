@@ -40,14 +40,14 @@ class AusstellerController extends Controller
      */
     public function store(Request $request)
     {
-        //falls Aussteller schon vorhanden, nicht leer, nicht null, Fehlerresponse zurückgeben
+        //Falls ein Aussteller schon vorhanden ist, nicht leer ist und nicht null ist,
+        //eine Fehler-Response zurückgeben
         if (Aussteller::where('aussteller_fullname', $request->get('aussteller_fullname'))->exists() 
         && $request->get('aussteller_email') != "" && $request->get('aussteller_email') != null) {
             return \response('Error: Aussteller ist schon in DB vorhanden! ', 200)
                     ->header('Content-Type', 'text/plain');
          }
-         else{
-            
+        else{
             $validator = Validator::make($request->all(),
                 [
                   'aussteller_fullname' => 'required|min:2|max:30',
@@ -60,11 +60,11 @@ class AusstellerController extends Controller
 
                 ]);
           
-              if ($validator->fails()) {
+            if ($validator->fails()) {
                 return \response('Error: Aussteller Name ist ein Pflichtfeld.. Geben Sie nicht zu viele Zeichen ein', 200)
                 ->header('Content-Type', 'text/plain');
 
-              }else {
+            }else{
                   $aussteller = new Aussteller();
                   $aussteller->aussteller_fullname = $request->aussteller_fullname;
                   $aussteller->aussteller_beschreibung = $request->aussteller_beschreibung;
@@ -81,7 +81,8 @@ class AusstellerController extends Controller
                   }
 
                   else{ 
-                    return \response('Aussteller konnte nicht angelegt werden! Gibt es ihn schon?', 200)
+                    return \response('Aussteller konnte nicht angelegt werden! Stellen Sie sicher, dass der Aussteller noch
+                                      nicht angelegt ist.', 200)
                     ->header('Content-Type', 'text/plain');
                       }
                 }

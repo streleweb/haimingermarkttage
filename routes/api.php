@@ -41,7 +41,6 @@ Route::get('/aussteller/{id}', [AusstellerController::class, 'show']);
 
  //Protected routes through Sanctum. Token-based requests
 Route::group(['middleware' => ['auth:sanctum']], function () {
-
     //logout
     Route::post('/admin/logout', [AuthController::class, 'logout']);
     //login
@@ -64,7 +63,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
 
 
-
+//Achtung, de Routen müssn no abgeändert werdn, nicht für Diplomarbeit verwenden so
 Route::resource('ausstellerfoto', AusstellerfotoController::class);
 Route::resource('fotogalerie', FotogalerieController::class);
 Route::resource('news', NewsController::class);
