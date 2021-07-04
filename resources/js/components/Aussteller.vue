@@ -117,6 +117,7 @@
 <script>
 import Button from "./Button";
 import Farbzone from "./Farbzone";
+import Swal from "sweetalert2";
 
 export default {
   data() {
@@ -139,9 +140,26 @@ export default {
       axios
         .get("/api/aussteller")
         .then((response) => {
-          if(response.status == )
-          this.aussteller = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
-          console.log(this.aussteller); // assign to this.aussteller array
+          //console.log("Debug status:" + response.status);
+          if (response.status == 200) {
+            this.aussteller = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
+            if (this.aussteller.length <= 0) {
+              Swal.fire({
+                title:
+                  "Momentan befinden sich keine Aussteller in der Datenbank!",
+                text: "Die Aussteller für das kommende Jahr werden in Kürze aktualisiert.",
+                confirmButtonText: "ok",
+                confirmButtonColor: "#3cb371",
+              });
+            }
+          } else {
+            Swal.fire({
+              title: "Konnte Aussteller leider nicht aus der DB laden!",
+              text: "Wir werden uns in Kürze darum kümmern.",
+              confirmButtonText: "ok",
+              confirmButtonColor: "#3cb371",
+            });
+          }
         })
         .catch((error) => {
           console.log(error);

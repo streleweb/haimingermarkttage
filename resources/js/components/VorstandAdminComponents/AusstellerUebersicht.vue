@@ -229,7 +229,7 @@
         <img
           src="/images/icons/gifs/loadingtransparent.gif"
           alt="loading..."
-          class="m-auto resize-loadinggif"
+          class="m-auto resize-loadinggif absolute z-5000 bg-gray-900"
         />
       </p>
 
@@ -401,6 +401,7 @@ export default {
         //LocalStorage LoggedIn-Status löschen
         localStorage.removeItem("isLoggedIn");
         localStorage;
+        this.loading = false;
         this.$router.push({ name: "adminLogin" });
       } catch (error) {
         console.log(error);
@@ -423,9 +424,12 @@ export default {
       try {
         let { data } = await repository.getAussteller();
         this.aussteller = data.data;
-        console.log(this.aussteller);
       } catch (error) {
-        this.error = error;
+        Swal.fire({
+          title: "Konnte Aussteller nicht laden.",
+          confirmButtonText: "ok",
+          confirmButtonColor: "#3cb371",
+        });
       } finally {
         this.loading = false;
       }

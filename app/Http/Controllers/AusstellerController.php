@@ -129,8 +129,33 @@ class AusstellerController extends Controller
         if (Aussteller::where('aussteller_fullname', $requestFullName)->exists() 
         && $requestFullName != "" && $requestFullName != null) {
             
-            $aussteller = Aussteller::where('aussteller_fullname', $requestFullName);
-            $aussteller->update($request->all());
+            //$aussteller = Aussteller::where('aussteller_fullname', $requestFullName);
+            $aussteller = Aussteller::find($request->get('id'));
+            //added 04 07 2021 to make it possible to update Aussteller only on specific fields
+            
+        if($request->get('aussteller_beschreibung') != null && $request->get('aussteller_beschreibung') != ""){
+            $aussteller->aussteller_beschreibung = $request->aussteller_beschreibung;
+        }
+        if($request->get('aussteller_brandingname') != null && $request->get('aussteller_brandingname') != ""){
+            $aussteller->aussteller_brandingname = $request->aussteller_brandingname;
+        }
+        if($request->get('aussteller_email') != null && $request->get('aussteller_email') != ""){
+            $aussteller->aussteller_email = $request->aussteller_email;
+        }
+        if($request->get('aussteller_websiteurl') != null && $request->get('aussteller_websiteurl') != ""){
+            $aussteller->aussteller_websiteurl = $request->aussteller_websiteurl;
+        }
+        if($request->get('aussteller_zonenfarbe') != null && $request->get('aussteller_zonenfarbe') != ""){
+            $aussteller->aussteller_zonenfarbe = $request->aussteller_zonenfarbe;
+        }
+        if($request->get('aussteller_bildurl') != null && $request->get('aussteller_bildurl') != ""){
+            $aussteller->aussteller_bildurl = $request->aussteller_bildurl;
+        }
+        
+
+        $aussteller->save();
+
+            //$aussteller->update($request->all());
             return \response('Updated.',200)->header('Content-Type', 'text/plain');
         }else {
             return \response('Error: Aussteller ist nicht in DB vorhanden! ', 200)

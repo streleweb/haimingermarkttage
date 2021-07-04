@@ -1,20 +1,5 @@
 <template>
   <div class="w-full h-full bg-gray-900">
-    <div
-      v-if="loggedIn() == false"
-      class="
-        flex
-        w-full
-        h-full
-        items-center
-        justify-center
-        text-red-900
-        bg-gray-900
-      "
-    >
-      Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard
-      zugreifen zu können...
-    </div>
     <!-- Check for Login-Status, only display if logged in-->
     <div v-if="loggedIn()" class="w-full">
       <nav class="bg-gray-800 border-b border-gray-300">
@@ -628,11 +613,13 @@ export default {
   data() {
     return {
       name: "Ausstelleranlegen",
+      loading: null, //für die Einblendung vom loading-gif
       image: "",
       aussteller: [],
       error: null,
       submitvisibility: "hidden",
       formdata: {
+        id: null,
         aussteller_fullname: null,
         aussteller_beschreibung: null,
         aussteller_zonenfarbe: null,
@@ -656,9 +643,11 @@ export default {
 
   methods: {
     async loadAussteller() {
+      this.loading = true;
       let { data } = await repository.getAussteller();
       this.aussteller = data.data;
-      //console.log(this.aussteller);
+      this.loading = false;
+      console.log(this.aussteller);
     },
     showSubmitButton() {
       this.submitvisibility = "block";

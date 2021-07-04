@@ -12,7 +12,6 @@ import Datenschutz from './components/footercomponents/Datenschutz';
 import Impressum from './components/footercomponents/Impressum';
 import Login from './components/VorstandAdminComponents/Login';
 import Dashboard from './components/VorstandAdminComponents/Dashboard';
-import EditAussteller from './components/VorstandAdminComponents/EditAussteller';
 import EditNews from './components/VorstandAdminComponents/EditNews';
 import AusstellerUebersicht from './components/VorstandAdminComponents/AusstellerUebersicht';
 import Register from './components/VorstandAdminComponents/Register';

@@ -2012,9 +2012,218 @@ var default_layout = "default";
 /*!*****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Aussteller.vue?vue&type=script&lang=js& ***!
   \*****************************************************************************************************************************************************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\resources\\js\\components\\Aussteller.vue: Unexpected token (142:32)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         \u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m\"/api/aussteller\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 141 |\u001b[39m         \u001b[33m.\u001b[39mthen((response) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m           \u001b[36mif\u001b[39m(response\u001b[33m.\u001b[39mstatus \u001b[33m==\u001b[39m )\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 143 |\u001b[39m           \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maussteller \u001b[33m=\u001b[39m response\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdata\u001b[33m;\u001b[39m \u001b[90m// 1. data = axios syntax, 2. data = das Property \"data\" innerhalb der JSON response\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 144 |\u001b[39m           console\u001b[33m.\u001b[39mlog(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maussteller)\u001b[33m;\u001b[39m \u001b[90m// assign to this.aussteller array\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 145 |\u001b[39m         })\u001b[0m\n    at Parser._raise (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:816:17)\n    at Parser.raiseWithData (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:809:17)\n    at Parser.raise (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:770:17)\n    at Parser.unexpected (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:9893:16)\n    at Parser.parseExprAtom (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:11307:20)\n    at Parser.parseExprSubscripts (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10881:23)\n    at Parser.parseUpdate (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10861:21)\n    at Parser.parseMaybeUnary (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10839:23)\n    at Parser.parseExprOpBaseRightExpr (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10782:34)\n    at Parser.parseExprOpRightExpr (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10775:21)\n    at Parser.parseExprOp (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10741:27)\n    at Parser.parseExprOps (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10702:17)\n    at Parser.parseMaybeConditional (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10670:23)\n    at Parser.parseMaybeAssign (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10633:21)\n    at Parser.parseExpressionBase (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10573:23)\n    at D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10567:39");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ "./resources/js/components/Button.vue");
+/* harmony import */ var _Farbzone__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Farbzone */ "./resources/js/components/Farbzone.vue");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_2__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      aussteller: [],
+      loading: false
+    };
+  },
+  //wenn Component created ist, führe die Methoden zum
+  //Laden der Aussteller und Ausstellerfotos via Axios Request aus
+  created: function created() {
+    this.loading = true;
+    this.loadAussteller();
+    this.loading = false;
+    /*this.loadAusstellerfoto();*/
+  },
+  methods: {
+    loadAussteller: function loadAussteller() {
+      var _this = this;
+
+      axios.get("/api/aussteller").then(function (response) {
+        //console.log("Debug status:" + response.status);
+        if (response.status == 200) {
+          _this.aussteller = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
+
+          if (_this.aussteller.length <= 0) {
+            sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
+              title: "Momentan befinden sich keine Aussteller in der Datenbank!",
+              text: "Die Aussteller für das kommende Jahr werden in Kürze aktualisiert.",
+              confirmButtonText: "ok",
+              confirmButtonColor: "#3cb371"
+            });
+          }
+        } else {
+          sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
+            title: "Konnte Aussteller leider nicht aus der DB laden!",
+            text: "Wir werden uns in Kürze darum kümmern.",
+            confirmButtonText: "ok",
+            confirmButtonColor: "#3cb371"
+          });
+        }
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    },
+    imgUrl: function imgUrl(index) {
+      try {
+        return "/images/aussteller/" + this.aussteller[index].aussteller_bildurl;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    webUrl: function webUrl(index) {
+      var http = "http://";
+      return http + this.aussteller[index].aussteller_websiteurl;
+    },
+    imageUrlNotEmpty: function imageUrlNotEmpty(index) {
+      return this.aussteller[index].aussteller_bildurl != null && this.aussteller[index].aussteller_bildurl != "";
+    },
+    webUrlNotEmpty: function webUrlNotEmpty(index) {
+      return this.aussteller[index].aussteller_websiteurl != null && this.aussteller[index].aussteller_websiteurl != "";
+    },
+    zonenFarbeNotEmpty: function zonenFarbeNotEmpty(index) {
+      return this.aussteller[index].aussteller_zonenfarbe != null && this.aussteller[index].aussteller_zonenfarbe != "";
+    },
+    zonenFarbe: function zonenFarbe(index) {
+      return this.aussteller[index].aussteller_zonenfarbe;
+    },
+    ausstellerEmailNotEmpty: function ausstellerEmailNotEmpty(index) {
+      return this.aussteller[index].aussteller_email != null && this.aussteller[index].aussteller_email != "";
+    },
+    ausstellerEmail: function ausstellerEmail(index) {
+      return "mailto:http://" + this.aussteller[index].aussteller_email;
+    },
+    ausstellerBrandingNameNotEmpty: function ausstellerBrandingNameNotEmpty(index) {
+      return this.aussteller[index].aussteller_brandingname != null && this.aussteller[index].aussteller_brandingname != "";
+    }
+  },
+  components: {
+    Button: _Button__WEBPACK_IMPORTED_MODULE_0__.default,
+    Farbzone: _Farbzone__WEBPACK_IMPORTED_MODULE_1__.default
+  }
+});
 
 /***/ }),
 
@@ -3039,6 +3248,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -3052,6 +3263,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -4000,32 +4212,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       name: "Ausstelleranlegen",
+      loading: null,
+      //für die Einblendung vom loading-gif
       image: "",
       aussteller: [],
       error: null,
       submitvisibility: "hidden",
       formdata: {
+        id: null,
         aussteller_fullname: null,
         aussteller_beschreibung: null,
         aussteller_zonenfarbe: null,
@@ -4060,15 +4260,18 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
+                _this.loading = true;
+                _context.next = 3;
                 return _repository_repository__WEBPACK_IMPORTED_MODULE_1__.default.getAussteller();
 
-              case 2:
+              case 3:
                 _yield$repository$get = _context.sent;
                 data = _yield$repository$get.data;
-                _this.aussteller = data.data; //console.log(this.aussteller);
+                _this.aussteller = data.data;
+                _this.loading = false;
+                console.log(_this.aussteller);
 
-              case 5:
+              case 8:
               case "end":
                 return _context.stop();
             }
@@ -4625,25 +4828,26 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 //LocalStorage LoggedIn-Status löschen
                 localStorage.removeItem("isLoggedIn");
                 localStorage;
+                _this2.loading = false;
 
                 _this2.$router.push({
                   name: "adminLogin"
                 });
 
-                _context.next = 12;
+                _context.next = 13;
                 break;
 
-              case 9:
-                _context.prev = 9;
+              case 10:
+                _context.prev = 10;
                 _context.t0 = _context["catch"](1);
                 console.log(_context.t0);
 
-              case 12:
+              case 13:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[1, 9]]);
+        }, _callee, null, [[1, 10]]);
       }))();
     },
 
@@ -4677,26 +4881,29 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _yield$repository$get = _context2.sent;
                 data = _yield$repository$get.data;
                 _this3.aussteller = data.data;
-                console.log(_this3.aussteller);
-                _context2.next = 13;
+                _context2.next = 12;
                 break;
 
-              case 10:
-                _context2.prev = 10;
+              case 9:
+                _context2.prev = 9;
                 _context2.t0 = _context2["catch"](1);
-                _this3.error = _context2.t0;
+                sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
+                  title: "Konnte Aussteller nicht laden.",
+                  confirmButtonText: "ok",
+                  confirmButtonColor: "#3cb371"
+                });
 
-              case 13:
-                _context2.prev = 13;
+              case 12:
+                _context2.prev = 12;
                 _this3.loading = false;
-                return _context2.finish(13);
+                return _context2.finish(12);
 
-              case 16:
+              case 15:
               case "end":
                 return _context2.stop();
             }
           }
-        }, _callee2, null, [[1, 10, 13, 16]]);
+        }, _callee2, null, [[1, 9, 12, 15]]);
       }))();
     },
     imgUrl: function imgUrl(index) {
@@ -5842,726 +6049,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data: function data() {
-    return {
-      name: "Ausstelleranlegen",
-      aussteller: [],
-      formdata: {
-        aussteller_fullname: null,
-        aussteller_beschreibung: null,
-        aussteller_zonenfarbe: null
-      } //Objekt zum Speichern der Model-Daten von oben
-
-    };
-  },
-  //wenn Component geladen ist, führe die Methoden zum
-  //Laden der Aussteller und Ausstellerfotos via Axios Request aus
-  mounted: function mounted() {},
-  methods: {
-    loggedIn: function loggedIn() {
-      if (localStorage.getItem("isLoggedIn") == "true") return true;else return false;
-    },
-    submitform: function submitform() {
-      var formToJson = JSON.stringify(this.formdata);
-      console.log(formToJson);
-
-      try {
-        var result = axios.post("/api/aussteller", {
-          "this": this.formdata
-        });
-        console.log(result.response.data);
-        /*.then((response) => {
-          console.log(response); // debug
-        })
-        .catch(function (error) {
-          // Fehlerbehandlung
-          console.log(error);
-        });*/
-      } catch (error) {
-        console.error(error.response.data);
-      }
-    },
-    loadAussteller: function loadAussteller() {
-      var _this = this;
-
-      axios.get("/api/aussteller") // load API
-      .then(function (response) {
-        _this.aussteller = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
-
-        console.log(_this.aussteller);
-      }) // assign to this.aussteller array
-      ["catch"](function (error) {
-        // Fehlerbehandlung
-        console.log(error);
-      });
-    },
-    imgUrl: function imgUrl(index) {
-      try {
-        return "/images/aussteller/" + this.aussteller[index].aussteller_bildurl;
-      } catch (error) {
-        console.log(error);
-      }
-    },
-    webUrl: function webUrl(index) {
-      return this.aussteller[index].aussteller_websiteurl;
-    },
-    webUrlNotEmpty: function webUrlNotEmpty(index) {
-      return this.aussteller[index].aussteller_bildurl != null && this.aussteller[index].aussteller_bildurl != "";
-    },
-    imageUrlNotEmpty: function imageUrlNotEmpty(index) {
-      return this.aussteller[index].aussteller_websiteurl != null && this.aussteller[index].aussteller_websiteurl != "";
-    },
-    zonenFarbeNotEmpty: function zonenFarbeNotEmpty(index) {
-      return this.aussteller[index].aussteller_zonenfarbe != null && this.aussteller[index].aussteller_zonenfarbe != "";
-    },
-    zonenFarbe: function zonenFarbe(index) {
-      return this.aussteller[index].aussteller_zonenfarbe;
-    }
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=script&lang=js& ***!
@@ -6573,6 +6060,459 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -8993,15 +8933,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_footercomponents_Impressum__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/footercomponents/Impressum */ "./resources/js/components/footercomponents/Impressum.vue");
 /* harmony import */ var _components_VorstandAdminComponents_Login__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/VorstandAdminComponents/Login */ "./resources/js/components/VorstandAdminComponents/Login.vue");
 /* harmony import */ var _components_VorstandAdminComponents_Dashboard__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/VorstandAdminComponents/Dashboard */ "./resources/js/components/VorstandAdminComponents/Dashboard.vue");
-/* harmony import */ var _components_VorstandAdminComponents_EditAussteller__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/VorstandAdminComponents/EditAussteller */ "./resources/js/components/VorstandAdminComponents/EditAussteller.vue");
-/* harmony import */ var _components_VorstandAdminComponents_EditNews__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/VorstandAdminComponents/EditNews */ "./resources/js/components/VorstandAdminComponents/EditNews.vue");
-/* harmony import */ var _components_VorstandAdminComponents_AusstellerUebersicht__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/VorstandAdminComponents/AusstellerUebersicht */ "./resources/js/components/VorstandAdminComponents/AusstellerUebersicht.vue");
-/* harmony import */ var _components_VorstandAdminComponents_Register__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/VorstandAdminComponents/Register */ "./resources/js/components/VorstandAdminComponents/Register.vue");
-/* harmony import */ var _components_VorstandAdminComponents_AusstellerAendern__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/VorstandAdminComponents/AusstellerAendern */ "./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue");
-/* harmony import */ var _components_VorstandAdminComponents_FotogalerieComponents_AddPhotos__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/VorstandAdminComponents/FotogalerieComponents/AddPhotos */ "./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue");
-/* harmony import */ var _components_Karte__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/Karte */ "./resources/js/components/Karte.vue");
-/* harmony import */ var _components_Anreise__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/Anreise */ "./resources/js/components/Anreise.vue");
-
+/* harmony import */ var _components_VorstandAdminComponents_EditNews__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/VorstandAdminComponents/EditNews */ "./resources/js/components/VorstandAdminComponents/EditNews.vue");
+/* harmony import */ var _components_VorstandAdminComponents_AusstellerUebersicht__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/VorstandAdminComponents/AusstellerUebersicht */ "./resources/js/components/VorstandAdminComponents/AusstellerUebersicht.vue");
+/* harmony import */ var _components_VorstandAdminComponents_Register__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/VorstandAdminComponents/Register */ "./resources/js/components/VorstandAdminComponents/Register.vue");
+/* harmony import */ var _components_VorstandAdminComponents_AusstellerAendern__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/VorstandAdminComponents/AusstellerAendern */ "./resources/js/components/VorstandAdminComponents/AusstellerAendern.vue");
+/* harmony import */ var _components_VorstandAdminComponents_FotogalerieComponents_AddPhotos__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/VorstandAdminComponents/FotogalerieComponents/AddPhotos */ "./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue");
+/* harmony import */ var _components_Karte__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/Karte */ "./resources/js/components/Karte.vue");
+/* harmony import */ var _components_Anreise__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/Anreise */ "./resources/js/components/Anreise.vue");
 
 
 
@@ -9053,10 +8991,10 @@ __webpack_require__.r(__webpack_exports__);
     component: _components_News__WEBPACK_IMPORTED_MODULE_8__.default
   }, {
     path: '/app/karte',
-    component: _components_Karte__WEBPACK_IMPORTED_MODULE_20__.default
+    component: _components_Karte__WEBPACK_IMPORTED_MODULE_19__.default
   }, {
     path: '/app/anreise',
-    component: _components_Anreise__WEBPACK_IMPORTED_MODULE_21__.default
+    component: _components_Anreise__WEBPACK_IMPORTED_MODULE_20__.default
   }, {
     path: '/app/kontakt',
     component: _components_Kontakt__WEBPACK_IMPORTED_MODULE_9__.default
@@ -9084,21 +9022,21 @@ __webpack_require__.r(__webpack_exports__);
   }, {
     path: '/app/admin/dashboard/ausstelleraendern',
     name: 'AusstellerAendern',
-    component: _components_VorstandAdminComponents_AusstellerAendern__WEBPACK_IMPORTED_MODULE_18__.default,
+    component: _components_VorstandAdminComponents_AusstellerAendern__WEBPACK_IMPORTED_MODULE_17__.default,
     meta: {
       requiresAuth: true
     } //protected - Login erforderlich
 
   }, {
     path: '/app/admin/dashboard/news',
-    component: _components_VorstandAdminComponents_EditNews__WEBPACK_IMPORTED_MODULE_15__.default,
+    component: _components_VorstandAdminComponents_EditNews__WEBPACK_IMPORTED_MODULE_14__.default,
     meta: {
       requiresAuth: true
     } //protected - Login erforderlich
 
   }, {
     path: '/app/admin/dashboard/ausstelleruebersicht',
-    component: _components_VorstandAdminComponents_AusstellerUebersicht__WEBPACK_IMPORTED_MODULE_16__.default,
+    component: _components_VorstandAdminComponents_AusstellerUebersicht__WEBPACK_IMPORTED_MODULE_15__.default,
     name: 'ausstelleruebersicht',
     meta: {
       requiresAuth: true
@@ -9106,11 +9044,11 @@ __webpack_require__.r(__webpack_exports__);
 
   }, {
     path: '/app/admin/register',
-    component: _components_VorstandAdminComponents_Register__WEBPACK_IMPORTED_MODULE_17__.default
+    component: _components_VorstandAdminComponents_Register__WEBPACK_IMPORTED_MODULE_16__.default
   }, {
     path: '/app/admin/dashboard/editfotogalerie',
-    name: _components_VorstandAdminComponents_FotogalerieComponents_AddPhotos__WEBPACK_IMPORTED_MODULE_19__.default,
-    component: _components_VorstandAdminComponents_FotogalerieComponents_AddPhotos__WEBPACK_IMPORTED_MODULE_19__.default
+    name: _components_VorstandAdminComponents_FotogalerieComponents_AddPhotos__WEBPACK_IMPORTED_MODULE_18__.default,
+    component: _components_VorstandAdminComponents_FotogalerieComponents_AddPhotos__WEBPACK_IMPORTED_MODULE_18__.default
   }]
 });
 
@@ -9518,6 +9456,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".dashboardbackground {\n  --tw-bg-opacity: 1;\n  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));\n  background: linear-gradient(rgb(1, 15, 0, 0.99), rgba(0, 0, 0, 0.97)),\r\n    url(\"/images/icons/svgs/wheels.png\");\n}\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=style&index=0&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=style&index=0&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "/* Farbzonenbuttons */\n.container {\n  display: block;\n  position: relative;\n  padding-left: 2rem;\n  margin-bottom: 0.8rem;\n  cursor: pointer;\n  font-size: 0.9rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n/* Hide the browser's default radio button */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n}\n\n/* Create a custom radio button */\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 50%;\n}\n\n/* On mouse-over, add a grey background color */\n.container:hover input ~ .checkmark {\n  background-color: #ccc;\n}\n\n/* When the radio button is checked, add a blue background */\n.container input:checked ~ .checkmark {\n  background-color: #2196f3;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n.container input:checked ~ .checkmark:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n.container .checkmark:after {\n  top: 9px;\n  left: 9px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: white;\n}\n.alert {\n  padding: 20px;\n  background-color: #f44336;\n  color: white;\n}\n.closebtn {\n  margin-left: 15px;\n  color: white;\n  font-weight: bold;\n  float: right;\n  font-size: 22px;\n  line-height: 20px;\n  cursor: pointer;\n  transition: 0.3s;\n}\n.closebtn:hover {\n  color: black;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -28359,6 +28321,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=style&index=0&lang=css&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=style&index=0&lang=css& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNews_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./EditNews.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=style&index=0&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNews_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNews_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=style&index=0&lang=css&":
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=style&index=0&lang=css& ***!
@@ -32772,45 +32764,6 @@ component.options.__file = "resources/js/components/VorstandAdminComponents/Dash
 
 /***/ }),
 
-/***/ "./resources/js/components/VorstandAdminComponents/EditAussteller.vue":
-/*!****************************************************************************!*\
-  !*** ./resources/js/components/VorstandAdminComponents/EditAussteller.vue ***!
-  \****************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _EditAussteller_vue_vue_type_template_id_7436eaa4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EditAussteller.vue?vue&type=template&id=7436eaa4& */ "./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=template&id=7436eaa4&");
-/* harmony import */ var _EditAussteller_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EditAussteller.vue?vue&type=script&lang=js& */ "./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
-  _EditAussteller_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _EditAussteller_vue_vue_type_template_id_7436eaa4___WEBPACK_IMPORTED_MODULE_0__.render,
-  _EditAussteller_vue_vue_type_template_id_7436eaa4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/VorstandAdminComponents/EditAussteller.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
 /***/ "./resources/js/components/VorstandAdminComponents/EditNews.vue":
 /*!**********************************************************************!*\
   !*** ./resources/js/components/VorstandAdminComponents/EditNews.vue ***!
@@ -32824,15 +32777,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _EditNews_vue_vue_type_template_id_5d79314f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EditNews.vue?vue&type=template&id=5d79314f& */ "./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=template&id=5d79314f&");
 /* harmony import */ var _EditNews_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EditNews.vue?vue&type=script&lang=js& */ "./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _EditNews_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./EditNews.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
+;
 
 
 /* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
   _EditNews_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
   _EditNews_vue_vue_type_template_id_5d79314f___WEBPACK_IMPORTED_MODULE_0__.render,
   _EditNews_vue_vue_type_template_id_5d79314f___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
@@ -33419,22 +33374,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************!*\
-  !*** ./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EditAussteller_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./EditAussteller.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EditAussteller_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
-
-/***/ }),
-
 /***/ "./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************!*\
   !*** ./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=script&lang=js& ***!
@@ -33748,6 +33687,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Dashboard.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Dashboard.vue?vue&type=style&index=0&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=style&index=0&lang=css&":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=style&index=0&lang=css& ***!
+  \*******************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNews_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./EditNews.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=style&index=0&lang=css&");
 
 
 /***/ }),
@@ -34178,23 +34130,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_template_id_79dd259c___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_template_id_79dd259c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Dashboard.vue?vue&type=template&id=79dd259c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Dashboard.vue?vue&type=template&id=79dd259c&");
-
-
-/***/ }),
-
-/***/ "./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=template&id=7436eaa4&":
-/*!***********************************************************************************************************!*\
-  !*** ./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=template&id=7436eaa4& ***!
-  \***********************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EditAussteller_vue_vue_type_template_id_7436eaa4___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EditAussteller_vue_vue_type_template_id_7436eaa4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EditAussteller_vue_vue_type_template_id_7436eaa4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./EditAussteller.vue?vue&type=template&id=7436eaa4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=template&id=7436eaa4&");
 
 
 /***/ }),
@@ -36054,21 +35989,6 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "w-full h-full bg-gray-900" }, [
-    _vm.loggedIn() == false
-      ? _c(
-          "div",
-          {
-            staticClass:
-              "\n      flex\n      w-full\n      h-full\n      items-center\n      justify-center\n      text-red-900\n      bg-gray-900\n    "
-          },
-          [
-            _vm._v(
-              "\n    Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard\n    zugreifen zu können...\n  "
-            )
-          ]
-        )
-      : _vm._e(),
-    _vm._v(" "),
     _vm.loggedIn()
       ? _c("div", { staticClass: "w-full" }, [
           _c("nav", { staticClass: "bg-gray-800 border-b border-gray-300" }, [
@@ -37272,7 +37192,8 @@ var render = function() {
           _vm.loading
             ? _c("p", [
                 _c("img", {
-                  staticClass: "m-auto resize-loadinggif",
+                  staticClass:
+                    "m-auto resize-loadinggif absolute z-5000 bg-gray-900",
                   attrs: {
                     src: "/images/icons/gifs/loadingtransparent.gif",
                     alt: "loading..."
@@ -38735,10 +38656,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=template&id=7436eaa4&":
-/*!**************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditAussteller.vue?vue&type=template&id=7436eaa4& ***!
-  \**************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=template&id=5d79314f&":
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=template&id=5d79314f& ***!
+  \********************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -38751,22 +38672,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "w-full" }, [
-    _vm.loggedIn() == false
-      ? _c(
-          "div",
-          {
-            staticClass:
-              "\n      flex\n      w-full\n      h-full\n      items-center\n      justify-center\n      text-red-900\n      bg-gray-900\n    "
-          },
-          [
-            _vm._v(
-              "\n    Nicht eingeloggt! Bitte loggen Sie sich ein, um auf diese Seite zugreifen\n    zu können...\n  "
-            )
-          ]
-        )
-      : _vm._e(),
-    _vm._v(" "),
+  return _c("div", { staticClass: "w-full h-full bg-gray-900" }, [
     _vm.loggedIn()
       ? _c("div", { staticClass: "w-full" }, [
           _c("nav", { staticClass: "bg-gray-800 border-b border-gray-300" }, [
@@ -38850,8 +38756,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    bg-gray-900\n                    text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
-                                  attrs: { "aria-current": "page" }
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
                                 },
                                 [
                                   _c(
@@ -38897,13 +38802,24 @@ var render = function() {
                               ),
                               _vm._v(" "),
                               _c(
-                                "a",
+                                "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
-                                  attrs: { href: "#" }
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
                                 },
-                                [_vm._v("platzhalter")]
+                                [
+                                  _c(
+                                    "router-link",
+                                    {
+                                      attrs: {
+                                        to:
+                                          "/app/admin/dashboard/editfotogalerie"
+                                      }
+                                    },
+                                    [_vm._v("Fotogalerie")]
+                                  )
+                                ],
+                                1
                               )
                             ],
                             1
@@ -38912,7 +38828,46 @@ var render = function() {
                       ]
                     ),
                     _vm._v(" "),
-                    _vm._m(0)
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "\n              absolute\n              inset-y-0\n              right-0\n              flex\n              items-center\n              pr-2\n              sm:static\n              sm:inset-auto\n              sm:ml-6\n              sm:pr-0\n            "
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "\n                text-gray-300\n                hover:bg-red-900\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
+                          },
+                          [
+                            _c(
+                              "span",
+                              {
+                                staticClass: "text-white cursor-pointer",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.handleLogout()
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v("Logout\n                "),
+                                _c("img", {
+                                  staticClass: "filter-white",
+                                  attrs: {
+                                    src:
+                                      "/public/images/icons/svgs/ausloggen.svg",
+                                    alt: ""
+                                  }
+                                })
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
                   ]
                 )
               ]
@@ -38927,27 +38882,31 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
-                      attrs: { href: "#" }
+                        "\n              bg-gray-900\n              text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                      attrs: { href: "#", "aria-current": "page" }
                     },
-                    [
-                      _c(
-                        "router-link",
-                        { attrs: { to: "/app/admin/dashboard" } },
-                        [_vm._v("Dashboard")]
-                      )
-                    ],
-                    1
+                    [_vm._v("Dashboard")]
                   ),
                   _vm._v(" "),
                   _c(
                     "a",
                     {
                       staticClass:
-                        "\n              bg-gray-900\n              text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
-                      attrs: { href: "#", "aria-current": "page" }
+                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                      attrs: { href: "#" }
                     },
-                    [_vm._v("Aussteller")]
+                    [
+                      _c(
+                        "router-link",
+                        {
+                          attrs: {
+                            to: "/app/admin/dashboard/ausstelleruebersicht"
+                          }
+                        },
+                        [_vm._v("Aussteller")]
+                      )
+                    ],
+                    1
                   ),
                   _vm._v(" "),
                   _c(
@@ -38974,105 +38933,599 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "pt-2 px-10 py-5 bg-gray-700" }, [
-            _c("div", { staticClass: "flex flex-col" }, [
-              _c("div", { staticClass: "md:grid md:grid-cols-3 md:gap-6" }, [
-                _vm._m(1),
-                _vm._v(" "),
-                _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
-                  _c("form", { attrs: { action: "#", method: "POST" } }, [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "shadow sm:rounded-md sm:overflow-hidden"
-                      },
-                      [
+          _c(
+            "div",
+            {
+              staticClass:
+                "bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20"
+            },
+            [
+              _vm.error
+                ? _c("p", { staticStyle: {} }, [_vm._v(_vm._s(_vm.error))])
+                : _vm._e(),
+              _vm._v(" "),
+              _c("div", { staticClass: "mt-10 sm:mt-0" }, [
+                _c(
+                  "div",
+                  {},
+                  [
+                    _vm._m(0),
+                    _vm._v(" "),
+                    _vm._l(_vm.aussteller, function(
+                      jeweiligerAussteller,
+                      index
+                    ) {
+                      return _c(
+                        "p",
+                        {
+                          key: index,
+                          staticClass:
+                            "\n              flex\n              justify-center\n              pl-3\n              text-white\n              bg-green-900\n              mb-3\n              border border-gray-600\n            "
+                        },
+                        [
+                          _c("span", { staticClass: "inline-flex" }, [
+                            _vm._v(
+                              "- " +
+                                _vm._s(jeweiligerAussteller.aussteller_fullname)
+                            )
+                          ])
+                        ]
+                      )
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
+                      _c("div", [
                         _c(
                           "div",
                           {
-                            staticClass: "px-4 py-5 bg-white space-y-6 sm:p-6"
+                            staticClass: "shadow overflow-hidden sm:rounded-md"
                           },
                           [
-                            _vm._m(2),
-                            _vm._v(" "),
-                            _vm._m(3),
-                            _vm._v(" "),
-                            _c("div", [
-                              _c(
-                                "label",
-                                {
+                            _c(
+                              "div",
+                              { staticClass: "px-4 py-5 bg-gray-300 sm:p-6" },
+                              [
+                                _c(
+                                  "label",
+                                  {
+                                    staticClass:
+                                      "block text-sm font-medium text-gray-700",
+                                    attrs: { for: "name" }
+                                  },
+                                  [_vm._v("Vor und Nachname")]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.formdata.aussteller_fullname,
+                                      expression: "formdata.aussteller_fullname"
+                                    }
+                                  ],
                                   staticClass:
-                                    "block text-sm font-medium text-gray-700"
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                      Foto\n                    "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "mt-1 flex items-center" },
-                                [
+                                    "\n                      mt-1\n                      focus:ring-green-500\n                      focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
+                                  attrs: {
+                                    maxlength: "30",
+                                    type: "text",
+                                    id: "full_name",
+                                    placeholder: "Pflichtfeld",
+                                    autocomplete: "given-name"
+                                  },
+                                  domProps: {
+                                    value: _vm.formdata.aussteller_fullname
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.formdata,
+                                        "aussteller_fullname",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "label",
+                                  {
+                                    staticClass:
+                                      "block text-sm font-medium text-gray-700"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "Handelsname (Branding-Name) des Ausstellers"
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value:
+                                        _vm.formdata.aussteller_brandingname,
+                                      expression:
+                                        "formdata.aussteller_brandingname"
+                                    }
+                                  ],
+                                  staticClass:
+                                    "\n                      mt-1\n                      focus:ring-green-500\n                      focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
+                                  attrs: {
+                                    maxlength: "30",
+                                    type: "text",
+                                    id: "handelsname",
+                                    placeholder: "Optional",
+                                    autocomplete: "given-name"
+                                  },
+                                  domProps: {
+                                    value: _vm.formdata.aussteller_brandingname
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.formdata,
+                                        "aussteller_brandingname",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "col-span-6 sm:col-span-4" },
+                                  [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass:
+                                          "block text-sm font-medium text-gray-700",
+                                        attrs: { for: "email_address" }
+                                      },
+                                      [_vm._v("Aussteller-E-Mail")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.formdata.aussteller_email,
+                                          expression:
+                                            "formdata.aussteller_email"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
+                                      attrs: {
+                                        maxlength: "100",
+                                        type: "text",
+                                        id: "email_address",
+                                        autocomplete: "email",
+                                        placeholder: "Optional"
+                                      },
+                                      domProps: {
+                                        value: _vm.formdata.aussteller_email
+                                      },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.formdata,
+                                            "aussteller_email",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("div", [
                                   _c(
-                                    "span",
+                                    "label",
                                     {
                                       staticClass:
-                                        "\n                          inline-block\n                          h-12\n                          w-12\n                          rounded-full\n                          overflow-hidden\n                          bg-gray-100\n                        "
+                                        "block text-sm font-medium text-gray-700",
+                                      attrs: { for: "company_website" }
                                     },
                                     [
-                                      _c(
-                                        "svg",
-                                        {
-                                          staticClass:
-                                            "h-full w-full text-gray-300",
-                                          attrs: {
-                                            fill: "currentColor",
-                                            viewBox: "0 0 24 24"
-                                          }
-                                        },
-                                        [
-                                          _c("path", {
-                                            attrs: {
-                                              d:
-                                                "M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"
-                                            }
-                                          })
-                                        ]
+                                      _vm._v(
+                                        "\n                      Aussteller-Website\n                    "
                                       )
                                     ]
                                   ),
                                   _vm._v(" "),
                                   _c(
-                                    "button",
+                                    "div",
                                     {
                                       staticClass:
-                                        "\n                          ml-5\n                          bg-white\n                          py-2\n                          px-3\n                          border border-gray-300\n                          rounded-md\n                          shadow-sm\n                          text-sm\n                          leading-4\n                          font-medium\n                          text-gray-700\n                          hover:bg-gray-50\n                          focus:outline-none\n                          focus:ring-2\n                          focus:ring-offset-2\n                          focus:ring-green-500\n                        ",
-                                      attrs: { type: "button" }
+                                        "mt-1 flex rounded-md shadow-sm"
                                     },
                                     [
-                                      _vm._v(
-                                        "\n                        Ändern\n                      "
-                                      )
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass:
+                                            "\n                          inline-flex\n                          items-center\n                          px-3\n                          rounded-l-md\n                          border border-r-0 border-gray-300\n                          bg-gray-50\n                          text-gray-500 text-sm\n                        "
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                        http://\n                      "
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("input", {
+                                        directives: [
+                                          {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value:
+                                              _vm.formdata
+                                                .aussteller_websiteurl,
+                                            expression:
+                                              "formdata.aussteller_websiteurl"
+                                          }
+                                        ],
+                                        staticClass:
+                                          "\n                          focus:ring-green-500\n                          focus:border-green-500\n                          flex-1\n                          block\n                          w-full\n                          rounded-none rounded-r-md\n                          sm:text-sm\n                          border-gray-300\n                        ",
+                                        attrs: {
+                                          maxlength: "50",
+                                          type: "text",
+                                          id: "aussteller_website",
+                                          placeholder: "www.example.com"
+                                        },
+                                        domProps: {
+                                          value:
+                                            _vm.formdata.aussteller_websiteurl
+                                        },
+                                        on: {
+                                          input: function($event) {
+                                            if ($event.target.composing) {
+                                              return
+                                            }
+                                            _vm.$set(
+                                              _vm.formdata,
+                                              "aussteller_websiteurl",
+                                              $event.target.value
+                                            )
+                                          }
+                                        }
+                                      })
                                     ]
                                   )
-                                ]
-                              )
-                            ])
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "col-span-6 sm:col-span-4" },
+                                  [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass:
+                                          "block text-sm font-medium text-gray-700",
+                                        attrs: { for: "email_address" }
+                                      },
+                                      [_vm._v("Beschreibung")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("textarea", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value:
+                                            _vm.formdata
+                                              .aussteller_beschreibung,
+                                          expression:
+                                            "formdata.aussteller_beschreibung"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
+                                      attrs: {
+                                        maxlength: "250",
+                                        id: "beschreibung",
+                                        autocomplete: "Beschreibung",
+                                        placeholder:
+                                          "Optional [Beschreibung inkl. der angebotenen Produkte des Ausstellers]"
+                                      },
+                                      domProps: {
+                                        value:
+                                          _vm.formdata.aussteller_beschreibung
+                                      },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.formdata,
+                                            "aussteller_beschreibung",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "col-span-6" }, [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass:
+                                        "block text-sm font-medium text-gray-700",
+                                      attrs: { for: "street_address" }
+                                    },
+                                    [_vm._v("Zonenfarbe am Markt")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "pt-3" }, [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "container",
+                                        on: { click: _vm.assignColorBlue }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "Blau\n                        "
+                                        ),
+                                        _c("div", {
+                                          staticClass:
+                                            "bg-blue-500 h-2 w-5 rounded-md",
+                                          on: { click: _vm.assignColorBlue }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          attrs: {
+                                            type: "radio",
+                                            name: "radio"
+                                          },
+                                          on: { click: _vm.assignColorBlue }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", {
+                                          staticClass: "checkmark",
+                                          on: { click: _vm.assignColorBlue }
+                                        })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "container",
+                                        on: { click: _vm.assignColorRed }
+                                      },
+                                      [
+                                        _vm._v("Rot\n                        "),
+                                        _c("div", {
+                                          staticClass:
+                                            "bg-red-600 h-2 w-5 rounded-md",
+                                          on: { click: _vm.assignColorRed }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          attrs: {
+                                            type: "radio",
+                                            name: "radio"
+                                          },
+                                          on: { click: _vm.assignColorRed }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", {
+                                          staticClass: "checkmark",
+                                          on: { click: _vm.assignColorRed }
+                                        })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "container",
+                                        on: { click: _vm.assignColorYellow }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "Gelb\n                        "
+                                        ),
+                                        _c("div", {
+                                          staticClass:
+                                            "bg-yellow-300 h-2 w-5 rounded-md",
+                                          on: { click: _vm.assignColorYellow }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          attrs: {
+                                            type: "radio",
+                                            name: "radio"
+                                          },
+                                          on: { click: _vm.assignColorYellow }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", {
+                                          staticClass: "checkmark",
+                                          on: { click: _vm.assignColorYellow }
+                                        })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "container",
+                                        on: { click: _vm.assignColorGreen }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "Grün\n                        "
+                                        ),
+                                        _c("div", {
+                                          staticClass:
+                                            "bg-green-500 h-2 w-5 rounded-md",
+                                          on: { click: _vm.assignColorGreen }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          attrs: {
+                                            type: "radio",
+                                            name: "radio"
+                                          },
+                                          on: { click: _vm.assignColorGreen }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", {
+                                          staticClass: "checkmark",
+                                          on: { click: _vm.assignColorGreen }
+                                        })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "container",
+                                        on: { click: _vm.assignColorBrown }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "Braun\n                        "
+                                        ),
+                                        _c("div", {
+                                          staticClass:
+                                            "bg-yellow-900 h-2 w-5 rounded-md",
+                                          on: { click: _vm.assignColorBrown }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          attrs: {
+                                            type: "radio",
+                                            name: "radio"
+                                          },
+                                          on: { click: _vm.assignColorBrown }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("span", {
+                                          staticClass: "checkmark",
+                                          on: { click: _vm.assignColorBrown }
+                                        })
+                                      ]
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _vm._m(1),
+                                _vm._v(" "),
+                                _c(
+                                  "form",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-center mt-3",
+                                    on: {
+                                      submit: function($event) {
+                                        $event.preventDefault()
+                                        return _vm.upload($event)
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("input", {
+                                      staticClass: "text-xs sm:text-base",
+                                      attrs: { type: "file" },
+                                      on: { change: _vm.handleOnChange }
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass:
+                                          "\n                        bg-green-900\n                        text-xs\n                        sm:text-base\n                        p-1\n                        text-white\n                        border border-green-600\n                        rounded-md\n                        hover:bg-green-500\n                      ",
+                                        on: { click: _vm.showSubmitButton }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                      Upload photo\n                    "
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-center"
+                                  },
+                                  [
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass:
+                                          "\n                        bg-green-900\n                        text-xs\n                        sm:text-base\n                        p-1\n                        mt-2\n                        text-white\n                        border border-green-600\n                        rounded-md\n                        hover:bg-green-500\n                      ",
+                                        on: { click: _vm.showSubmitButton }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                      Kein Ausstellerfoto uploaden\n                    "
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "\n                    flex\n                    justify-center\n                    px-4\n                    py-3\n                    bg-gray-600\n                    border-t-2 border-gray-800\n                    text-right\n                    sm:px-6\n                  "
+                              },
+                              [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass:
+                                      "\n                      inline-flex\n                      justify-center\n                      py-2\n                      px-4\n                      border border-transparent\n                      shadow-sm\n                      text-sm\n                      font-medium\n                      rounded-md\n                      text-white\n                      bg-green-600\n                      hover:bg-black\n                      focus:outline-none\n                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n                    ",
+                                    class: _vm.submitvisibility,
+                                    attrs: { id: "submitbutton" },
+                                    on: { click: _vm.submitform }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                    In DB Speichern\n                  "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
                           ]
                         )
-                      ]
-                    )
-                  ])
-                ])
+                      ])
+                    ])
+                  ],
+                  2
+                )
               ])
-            ]),
-            _vm._v(" "),
-            _vm._m(4),
-            _vm._v(" "),
-            _vm._m(5)
-          ])
+            ]
+          )
         ])
       : _vm._e()
   ])
@@ -39082,603 +39535,45 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "\n              absolute\n              inset-y-0\n              right-0\n              flex\n              items-center\n              pr-2\n              sm:static\n              sm:inset-auto\n              sm:ml-6\n              sm:pr-0\n            "
-      },
-      [
-        _c(
-          "div",
-          {
-            staticClass:
-              "\n                text-gray-300\n                hover:bg-red-900\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
-          },
-          [
-            _c("span", { staticClass: "text-white cursor-pointer" }, [
-              _vm._v("Logout\n                "),
-              _c("img", {
-                staticClass: "filter-white",
-                attrs: {
-                  src: "/public/images/icons/svgs/ausloggen.svg",
-                  alt: ""
-                }
-              })
-            ])
-          ]
-        )
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "md:col-span-1" }, [
-      _c("div", { staticClass: "px-4 sm:px-0" }, [
-        _c("h3", { staticClass: "text-lg font-medium leading-6 text-white" }, [
-          _vm._v("\n                Aussteller ändern\n              ")
-        ]),
-        _vm._v(" "),
-        _c("p", { staticClass: "mt-1 text-sm text-gray-300" }, [
-          _vm._v(
-            "\n                Hier können jeweilige Ausstellerinformationen für das kommende\n                Jahr abgeändert werden, ohne den Aussteller löschen und wieder\n                hinzufügen zu müssen...\n              "
-          )
-        ])
-      ])
+    return _c("div", { staticClass: "text-gray-400 pb-3" }, [
+      _c(
+        "h3",
+        { staticClass: "text-lg font-medium leading-6 text-white pb-1" },
+        [_vm._v("\n              Aussteller ändern\n            ")]
+      ),
+      _vm._v(
+        '\n            Folgende Aussteller sind momentan gespeichert und können verändert\n            werden. Bitte Geben Sie den Namen genau wie angezeigt in das\n            Pflichtfeld "Vor und Nachname" ein, um die Ausstellerinformationen\n            dieses Ausstellers abzuändern.\n          '
+      )
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "grid grid-cols-3 gap-6" }, [
-      _c("div", { staticClass: "col-span-3 sm:col-span-2" }, [
-        _c(
-          "label",
-          {
-            staticClass: "block text-sm font-medium text-gray-700",
-            attrs: { for: "company_website" }
-          },
-          [
-            _vm._v(
-              "\n                        Aussteller-Website\n                      "
-            )
-          ]
+    return _c(
+      "div",
+      { staticClass: "py-2 bg-green-900 text-white mb-1 px-2" },
+      [
+        _vm._v(
+          "\n                    Ausstellerfoto Upload\n                    "
         ),
-        _vm._v(" "),
-        _c("div", { staticClass: "mt-1 flex rounded-md shadow-sm" }, [
+        _c("div", { staticClass: "alert" }, [
           _c(
             "span",
             {
-              staticClass:
-                "\n                            inline-flex\n                            items-center\n                            px-3\n                            rounded-l-md\n                            border border-r-0 border-gray-300\n                            bg-gray-50\n                            text-gray-500 text-sm\n                          "
+              staticClass: "closebtn",
+              attrs: { onclick: "this.parentElement.style.display='none';" }
             },
-            [
-              _vm._v(
-                "\n                          http://\n                        "
-              )
-            ]
+            [_vm._v("×")]
           ),
           _vm._v(" "),
-          _c("input", {
-            staticClass:
-              "\n                            focus:ring-green-500\n                            focus:border-green-500\n                            flex-1\n                            block\n                            w-full\n                            rounded-none rounded-r-md\n                            sm:text-sm\n                            border-gray-300\n                          ",
-            attrs: {
-              type: "text",
-              name: "company_website",
-              id: "company_website",
-              placeholder: "www.example.com"
-            }
-          })
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c(
-        "label",
-        {
-          staticClass: "block text-sm font-medium text-gray-700",
-          attrs: { for: "about" }
-        },
-        [
+          _c("strong", [_vm._v("Achtung!")]),
+          _vm._v(" Maximale Filesize: 1.9MB\n                      "),
+          _c("br"),
           _vm._v(
-            "\n                      Aussteller-Beschreibung (max. 200 Zeichen)\n                    "
-          )
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "mt-1" }, [
-        _c("textarea", {
-          staticClass:
-            "\n                          shadow-sm\n                          focus:ring-green-500\n                          focus:border-green-500\n                          mt-1\n                          block\n                          w-full\n                          sm:text-sm\n                          border border-gray-300\n                          rounded-md\n                        ",
-          attrs: {
-            id: "about",
-            name: "about",
-            rows: "3",
-            placeholder: "you@example.com"
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 text-sm text-gray-500" }, [
-        _vm._v(
-          "\n                      Dieser Text wird auf der jeweiligen Aussteller-Karte\n                      angezeigt.\n                    "
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "hidden sm:block", attrs: { "aria-hidden": "true" } },
-      [
-        _c("div", { staticClass: "py-5" }, [
-          _c("div", { staticClass: "border-t border-gray-200" })
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mt-10 sm:mt-0" }, [
-      _c("div", { staticClass: "md:grid md:grid-cols-3 md:gap-6" }, [
-        _c("div", { staticClass: "md:col-span-1" }, [
-          _c("div", { staticClass: "px-4 sm:px-0" }, [
-            _c(
-              "h3",
-              { staticClass: "text-lg font-medium leading-6 text-white" },
-              [_vm._v("\n                Personal Information\n              ")]
-            ),
-            _vm._v(" "),
-            _c("p", { staticClass: "mt-1 text-sm text-gray-400" }, [
-              _vm._v(
-                "\n                Ausstellerinformationen. Vor- und Nachname ist ein\n                Pflichtfeld.\n              "
-              )
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
-          _c("form", { attrs: { action: "#", method: "POST" } }, [
-            _c("div", { staticClass: "shadow overflow-hidden sm:rounded-md" }, [
-              _c("div", { staticClass: "px-4 py-5 bg-white sm:p-6" }, [
-                _c("div", { staticClass: "grid grid-cols-6 gap-6" }, [
-                  _c("div", { staticClass: "col-span-6 sm:col-span-3" }, [
-                    _c(
-                      "label",
-                      {
-                        staticClass: "block text-sm font-medium text-gray-700",
-                        attrs: { for: "first_name" }
-                      },
-                      [_vm._v("Vor- und Nachname")]
-                    ),
-                    _vm._v(" "),
-                    _c("input", {
-                      staticClass:
-                        "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
-                      attrs: {
-                        type: "text",
-                        name: "first_name",
-                        id: "first_name",
-                        autocomplete: "given-name"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-span-6 sm:col-span-3" }, [
-                    _c(
-                      "label",
-                      {
-                        staticClass: "block text-sm font-medium text-gray-700",
-                        attrs: { for: "last_name" }
-                      },
-                      [_vm._v("Handelsname, falls vorhanden...")]
-                    ),
-                    _vm._v(" "),
-                    _c("input", {
-                      staticClass:
-                        "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
-                      attrs: {
-                        type: "text",
-                        name: "last_name",
-                        id: "last_name",
-                        autocomplete: "family-name",
-                        placeholder: "Optional [Bsp.: Eier Tirol]"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-span-6 sm:col-span-4" }, [
-                    _c(
-                      "label",
-                      {
-                        staticClass: "block text-sm font-medium text-gray-700",
-                        attrs: { for: "email_address" }
-                      },
-                      [_vm._v("Email")]
-                    ),
-                    _vm._v(" "),
-                    _c("input", {
-                      staticClass:
-                        "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
-                      attrs: {
-                        type: "text",
-                        name: "email_address",
-                        id: "email_address",
-                        autocomplete: "email",
-                        placeholder: "Optional"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-span-6" }, [
-                    _c(
-                      "label",
-                      {
-                        staticClass: "block text-sm font-medium text-gray-700",
-                        attrs: { for: "street_address" }
-                      },
-                      [_vm._v("Straße / Adresse")]
-                    ),
-                    _vm._v(" "),
-                    _c("input", {
-                      staticClass:
-                        "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
-                      attrs: {
-                        type: "text",
-                        name: "street_address",
-                        id: "street_address",
-                        autocomplete: "street-address",
-                        placeholder: "Optional"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-span-6 sm:col-span-6 lg:col-span-2" },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass:
-                            "block text-sm font-medium text-gray-700",
-                          attrs: { for: "city" }
-                        },
-                        [_vm._v("Ort")]
-                      ),
-                      _vm._v(" "),
-                      _c("input", {
-                        staticClass:
-                          "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
-                        attrs: {
-                          type: "text",
-                          name: "city",
-                          id: "city",
-                          placeholder: "Optional"
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-span-6 sm:col-span-3 lg:col-span-2" },
-                    [
-                      _c(
-                        "label",
-                        {
-                          staticClass:
-                            "block text-sm font-medium text-gray-700",
-                          attrs: { for: "postal_code" }
-                        },
-                        [_vm._v("PLZ")]
-                      ),
-                      _vm._v(" "),
-                      _c("input", {
-                        staticClass:
-                          "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
-                        attrs: {
-                          type: "text",
-                          name: "postal_code",
-                          id: "postal_code",
-                          autocomplete: "postal-code",
-                          placeholder: "Optional"
-                        }
-                      })
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "px-4 py-3 bg-gray-50 text-right sm:px-6" },
-                [
-                  _c(
-                    "button",
-                    {
-                      staticClass:
-                        "\n                      inline-flex\n                      justify-center\n                      py-2\n                      px-4\n                      border border-transparent\n                      shadow-sm\n                      text-sm\n                      font-medium\n                      rounded-md\n                      text-white\n                      bg-green-600\n                      hover:bg-green-700\n                      focus:outline-none\n                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n                    ",
-                      attrs: { type: "submit" }
-                    },
-                    [_vm._v("\n                    Save\n                  ")]
-                  )
-                ]
-              )
-            ])
-          ])
-        ])
-      ])
-    ])
-  }
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=template&id=5d79314f&":
-/*!********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/EditNews.vue?vue&type=template&id=5d79314f& ***!
-  \********************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "flex flex-col justify-center items-center" },
-    [
-      _c(
-        "div",
-        {
-          staticClass:
-            "\n      inline-flex\n      self-end\n      py-2\n      px-4\n      mb-2\n      border border-transparent\n      shadow-sm\n      text-sm\n      font-medium\n      rounded-md\n      text-white\n      bg-green-600\n      hover:bg-green-700\n      focus:outline-none\n      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n    "
-        },
-        [
-          _c("router-link", { attrs: { to: "/app/admin/dashboard" } }, [
-            _vm._v("\n      Zurück zur Übersicht\n    ")
-          ])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "mt-10 sm:mt-0" }, [
-        _c("div", { staticClass: "md:grid md:grid-cols-3 md:gap-6" }, [
-          _vm._m(1),
-          _vm._v(" "),
-          _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
-            _c(
-              "form",
-              { attrs: { method: "POST", action: "/api/aussteller" } },
-              [
-                _c(
-                  "div",
-                  { staticClass: "shadow overflow-hidden sm:rounded-md" },
-                  [
-                    _c("div", { staticClass: "px-4 py-5 bg-gray-300 sm:p-6" }, [
-                      _c("div", { staticClass: "grid grid-cols-6 gap-6" }, [
-                        _c("div", { staticClass: "col-span-6 sm:col-span-3" }, [
-                          _c(
-                            "label",
-                            {
-                              staticClass:
-                                "block text-sm font-medium text-gray-700",
-                              attrs: { for: "first_name" }
-                            },
-                            [_vm._v("Vor und Nachname")]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.formdata.aussteller_fullname,
-                                expression: "formdata.aussteller_fullname"
-                              }
-                            ],
-                            staticClass:
-                              "\n                      mt-1\n                      focus:ring-indigo-500\n                      focus:border-indigo-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
-                            attrs: {
-                              type: "text",
-                              name: "aussteller_fullname",
-                              id: "full_name",
-                              autocomplete: "given-name"
-                            },
-                            domProps: {
-                              value: _vm.formdata.aussteller_fullname
-                            },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.$set(
-                                  _vm.formdata,
-                                  "aussteller_fullname",
-                                  $event.target.value
-                                )
-                              }
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-span-6 sm:col-span-4" }, [
-                          _c(
-                            "label",
-                            {
-                              staticClass:
-                                "block text-sm font-medium text-gray-700",
-                              attrs: { for: "email_address" }
-                            },
-                            [_vm._v("Beschreibung")]
-                          ),
-                          _vm._v(" "),
-                          _c("textarea", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.formdata.aussteller_beschreibung,
-                                expression: "formdata.aussteller_beschreibung"
-                              }
-                            ],
-                            staticClass:
-                              "\n                      mt-1\n                      focus:ring-green-500\n                      focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
-                            attrs: {
-                              maxlength: "200",
-                              name: "aussteller_beschreibung",
-                              id: "beschreibung",
-                              autocomplete: "Beschreibung"
-                            },
-                            domProps: {
-                              value: _vm.formdata.aussteller_beschreibung
-                            },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.$set(
-                                  _vm.formdata,
-                                  "aussteller_beschreibung",
-                                  $event.target.value
-                                )
-                              }
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-span-6" }, [
-                          _c(
-                            "label",
-                            {
-                              staticClass:
-                                "block text-sm font-medium text-gray-700",
-                              attrs: { for: "street_address" }
-                            },
-                            [_vm._v("Zonenfarbe am Markt")]
-                          ),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.formdata.aussteller_zonenfarbe,
-                                expression: "formdata.aussteller_zonenfarbe"
-                              }
-                            ],
-                            staticClass:
-                              "\n                      mt-1\n                      focus:ring-indigo-500\n                      focus:border-indigo-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
-                            attrs: {
-                              type: "text",
-                              name: "aussteller_zonenfarbe",
-                              id: "zonenfarbe",
-                              autocomplete: "Zonenfarbe"
-                            },
-                            domProps: {
-                              value: _vm.formdata.aussteller_zonenfarbe
-                            },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.$set(
-                                  _vm.formdata,
-                                  "aussteller_zonenfarbe",
-                                  $event.target.value
-                                )
-                              }
-                            }
-                          })
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _vm._m(2)
-                  ]
-                )
-              ]
-            )
-          ])
-        ])
-      ])
-    ]
-  )
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "hidden sm:block", attrs: { "aria-hidden": "true" } },
-      [
-        _c("div", { staticClass: "py-5" }, [
-          _c("div", { staticClass: "border-t border-gray-200" })
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "md:col-span-1" }, [
-      _c("div", { staticClass: "px-4 sm:px-0" }, [
-        _c("h3", { staticClass: "text-lg font-medium leading-6 text-white" }, [
-          _vm._v(
-            "\n            Bitte persönliche Infos des Ausstellers angeben.\n          "
+            "\n                      Bsp: ausstellername.jpg oder ausstellername.png\n                    "
           )
         ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "px-4 py-3 bg-gray-50 text-right sm:px-6" },
-      [
-        _c(
-          "button",
-          {
-            staticClass:
-              "\n                  inline-flex\n                  justify-center\n                  py-2\n                  px-4\n                  border border-transparent\n                  shadow-sm\n                  text-sm\n                  font-medium\n                  rounded-md\n                  text-white\n                  bg-green-600\n                  hover:bg-black\n                  focus:outline-none\n                  focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500\n                ",
-            attrs: { type: "submit" }
-          },
-          [_vm._v("\n                In DB Speichern\n              ")]
-        )
       ]
     )
   }
