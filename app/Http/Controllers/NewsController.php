@@ -16,8 +16,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $newsliste = News::paginate(4); // für 4 News pro Seite unter /app/news im Frontend
-        return NewsResource::collection($newsliste);
+        return NewsResource::collection(News::all());
     }
 
     /**
@@ -41,8 +40,8 @@ class NewsController extends Controller
         $validator = Validator::make($request->all(),
         [
             'news_titel' => 'required|min:2|max:30',
-            'news_textfeld'=> 'nullable|min:10|max:100',
-            'news_bild_url'=> 'min:10|max:100',
+            'news_textfeld'=> 'required|min:10|max:400',
+            'news_bild_url'=> 'nullable|max:100',
         ]);
 
         if ($validator->fails()) {

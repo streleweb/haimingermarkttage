@@ -17,7 +17,6 @@
       "
     >
       <!-- custom font konfiguriert in tailwind.config.js-->
-      <!-- Hier noch Background-Pic oder Video rein -->
       <div
         class="
           text-white

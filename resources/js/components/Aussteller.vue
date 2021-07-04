@@ -125,7 +125,7 @@ export default {
       loading: false,
     };
   },
-  //wenn Component geladen ist, führe die Methoden zum
+  //wenn Component created ist, führe die Methoden zum
   //Laden der Aussteller und Ausstellerfotos via Axios Request aus
   created() {
     this.loading = true;
@@ -135,15 +135,15 @@ export default {
   },
 
   methods: {
-    loadAussteller: function () {
+    loadAussteller() {
       axios
-        .get("/api/aussteller") // load API
+        .get("/api/aussteller")
         .then((response) => {
+          if(response.status == )
           this.aussteller = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
           console.log(this.aussteller); // assign to this.aussteller array
         })
-        .catch(function (error) {
-          // Fehlerbehandlung
+        .catch((error) => {
           console.log(error);
         });
     },

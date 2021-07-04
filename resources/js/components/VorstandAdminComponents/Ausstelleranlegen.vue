@@ -1,138 +1,152 @@
 <template>
-<div class="w-full h-full bg-gray-900">
-<div v-if="loggedIn() == false" class="flex w-full h-full items-center justify-center text-red-900 bg-gray-900"> Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard zugreifen zu können...</div>
-<!-- Check for Login-Status, only display if logged in-->
-<div v-if="loggedIn()" class="w-full">
+  <div class="w-full h-full bg-gray-900">
+    <div
+      v-if="loggedIn() == false"
+      class="
+        flex
+        w-full
+        h-full
+        items-center
+        justify-center
+        text-red-900
+        bg-gray-900
+      "
+    >
+      Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard
+      zugreifen zu können...
+    </div>
+    <!-- Check for Login-Status, only display if logged in-->
+    <div v-if="loggedIn()" class="w-full">
+      <nav class="bg-gray-800 border-b border-gray-300">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div class="relative flex items-center justify-between h-16">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <span class="sr-only">Open main menu</span>
 
- 
-  
-  <nav class="bg-gray-800 border-b border-gray-300">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-      <div class="relative flex items-center justify-between h-16">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-          
-            <span class="sr-only">Open main menu</span>
-           
-            <!--
+              <!--
             Icon when menu is open.
 
             Heroicon name: outline/x
 
             Menu open: "block", Menu closed: "hidden"
           -->
-            <svg
-              class="hidden h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="
-            flex-1 flex
-            items-center
-            justify-center
-            sm:items-stretch
-            sm:justify-start
-          "
-        >
-          <div class="flex-shrink-0 flex items-center"></div>
-          <div class="hidden sm:block sm:ml-6">
-            <div class="flex space-x-4">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <router-link to="/app/admin/dashboard"
-                ><span class="text-gray-500 text-lg"
-                  >Dashboard</span
-                ></router-link
+              <svg
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
               >
-              <div
-                class="
-                  text-gray-300
-                  hover:bg-gray-700
-                  hover:text-white
-                  px-3
-                  py-2
-                  rounded-md
-                  text-sm
-                  font-medium
-                "
-              >
-                <router-link to="/app/admin/dashboard/ausstelleruebersicht"
-                  >Aussteller
-                </router-link>
-              </div>
-
-              <div
-                class="
-                  text-gray-300
-                  hover:bg-gray-700
-                  hover:text-white
-                  px-3
-                  py-2
-                  rounded-md
-                  text-sm
-                  font-medium
-                "
-              >
-                <router-link to="/app/admin/dashboard/news">News</router-link>
-              </div>
-
-              <a
-                href="#"
-                class="
-                  text-gray-300
-                  hover:bg-gray-700
-                  hover:text-white
-                  px-3
-                  py-2
-                  rounded-md
-                  text-sm
-                  font-medium
-                "
-                >Programm</a
-              >
-
-              <div
-                class="
-                  text-gray-300
-                  hover:bg-gray-700
-                  hover:text-white
-                  px-3
-                  py-2
-                  rounded-md
-                  text-sm
-                  font-medium
-                "
-                ><router-link to="/app/admin/dashboard/editfotogalerie">Fotogalerie</router-link></div
-              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
             </div>
-          </div>
-        </div>
-        <div
-          class="
-            absolute
-            inset-y-0
-            right-0
-            flex
-            items-center
-            pr-2
-            sm:static
-            sm:inset-auto
-            sm:ml-6
-            sm:pr-0
-          "
-        >
-          <div
+            <div
+              class="
+                flex-1 flex
+                items-center
+                justify-center
+                sm:items-stretch
+                sm:justify-start
+              "
+            >
+              <div class="flex-shrink-0 flex items-center"></div>
+              <div class="hidden sm:block sm:ml-6">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <router-link to="/app/admin/dashboard"
+                    ><span class="text-gray-500 text-lg"
+                      >Dashboard</span
+                    ></router-link
+                  >
+                  <div
+                    class="
+                      text-gray-300
+                      hover:bg-gray-700
+                      hover:text-white
+                      px-3
+                      py-2
+                      rounded-md
+                      text-sm
+                      font-medium
+                    "
+                  >
+                    <router-link to="/app/admin/dashboard/ausstelleruebersicht"
+                      >Aussteller
+                    </router-link>
+                  </div>
+
+                  <div
+                    class="
+                      text-gray-300
+                      hover:bg-gray-700
+                      hover:text-white
+                      px-3
+                      py-2
+                      rounded-md
+                      text-sm
+                      font-medium
+                    "
+                  >
+                    <router-link to="/app/admin/dashboard/news"
+                      >News</router-link
+                    >
+                  </div>
+
+                  <a
+                    href="#"
+                    class="
+                      text-gray-300
+                      hover:bg-gray-700
+                      hover:text-white
+                      px-3
+                      py-2
+                      rounded-md
+                      text-sm
+                      font-medium
+                    "
+                    >Programm</a
+                  >
+
+                  <div
+                    class="
+                      text-gray-300
+                      hover:bg-gray-700
+                      hover:text-white
+                      px-3
+                      py-2
+                      rounded-md
+                      text-sm
+                      font-medium
+                    "
+                  >
+                    <router-link to="/app/admin/dashboard/editfotogalerie"
+                      >Fotogalerie</router-link
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                absolute
+                inset-y-0
+                right-0
+                flex
+                items-center
+                pr-2
+                sm:static
+                sm:inset-auto
+                sm:ml-6
+                sm:pr-0
+              "
+            >
+              <div
                 class="
                   text-gray-300
                   hover:bg-red-900
@@ -144,165 +158,120 @@
                   font-medium
                 "
               >
-                <span class="text-white cursor-pointer" @click="handleLogout()">Logout <img src="/public/images/icons/svgs/ausloggen.svg" class= "filter-white" alt=""></span>
+                <span class="text-white cursor-pointer" @click="handleLogout()"
+                  >Logout
+                  <img
+                    src="/public/images/icons/svgs/ausloggen.svg"
+                    class="filter-white"
+                    alt=""
+                /></span>
               </div>
-            
+            </div>
           </div>
         </div>
-      </div>
-    
 
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="sm:hidden" id="mobile-menu">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a
-          href="#"
-          class="
-            bg-gray-900
-            text-white
-            block
-            px-3
-            py-1
-            rounded-md
-            text-base
-            font-medium
-          "
-          aria-current="page"
-          >Dashboard</a
-        >
-        <!--Wenn Menü aufgeklappt-->
-        <a
-          href="#"
-          class="
-            text-gray-300
-            hover:bg-gray-700
-            hover:text-white
-            block
-            px-3
-            py-1
-            rounded-md
-            text-base
-            font-medium
-          "
-          ><router-link to="/app/admin/dashboard/ausstelleruebersicht">Aussteller</router-link> </a
-        >
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a
+              href="#"
+              class="
+                bg-gray-900
+                text-white
+                block
+                px-3
+                py-1
+                rounded-md
+                text-base
+                font-medium
+              "
+              aria-current="page"
+              >Dashboard</a
+            >
+            <!--Wenn Menü aufgeklappt-->
+            <a
+              href="#"
+              class="
+                text-gray-300
+                hover:bg-gray-700
+                hover:text-white
+                block
+                px-3
+                py-1
+                rounded-md
+                text-base
+                font-medium
+              "
+              ><router-link to="/app/admin/dashboard/ausstelleruebersicht"
+                >Aussteller</router-link
+              >
+            </a>
 
-        <a
-          href="#"
-          class="
-            text-gray-300
-            hover:bg-gray-700
-            hover:text-white
-            block
-            px-3
-            py-1
-            rounded-md
-            text-base
-            font-medium
-          "
-          >News</a
-        >
+            <a
+              href="#"
+              class="
+                text-gray-300
+                hover:bg-gray-700
+                hover:text-white
+                block
+                px-3
+                py-1
+                rounded-md
+                text-base
+                font-medium
+              "
+              >News</a
+            >
 
-        <a
-          href="#"
-          class="
-            text-gray-300
-            hover:bg-gray-700
-            hover:text-white
-            block
-            px-3
-            py-1
-            rounded-md
-            text-base
-            font-medium
-          "
-          >Programm</a
-        >
-      </div>
-    </div>
-  </nav>
- 
-  <div class="bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20">
-      <div class="mt-10 sm:mt-0">
-        <div class="">
-          
-            <div class=" text-gray-400 pb-3">
+            <a
+              href="#"
+              class="
+                text-gray-300
+                hover:bg-gray-700
+                hover:text-white
+                block
+                px-3
+                py-1
+                rounded-md
+                text-base
+                font-medium
+              "
+              >Programm</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <div class="bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20">
+        <div class="mt-10 sm:mt-0">
+          <div class="">
+            <div class="text-gray-400 pb-3">
               <h3 class="text-lg font-medium leading-6 text-white pb-1">
                 Neuen Aussteller anlegen
               </h3>
-              Neuer Aussteller wird in DB gespeichert und in Web-App eingebettet...
-              Klicken Sie zuerst auf "Upload" oder "Kein Ausstellerfoto uploaden", ehe der
-              Submit-Button erscheint und Sie die Daten in die Datenbank speichern können.
+              Neuer Aussteller wird in DB gespeichert und in Web-App
+              eingebettet... Klicken Sie zuerst auf "Upload" oder "Kein
+              Ausstellerfoto uploaden", ehe der Submit-Button erscheint und Sie
+              die Daten in die Datenbank speichern können.
             </div>
-          
-          <div class="mt-5 md:mt-0 md:col-span-2">
-            <div>
-              <div class="shadow overflow-hidden sm:rounded-md">
-                <div class="px-4 py-5 bg-gray-300 sm:p-6">
-                  
-                    
-                      <label
-                        for="name"
-                        class="block text-sm font-medium text-gray-700"
-                        >Vor und Nachname</label
-                      >
-                      <input
-                        maxlength="30"
-                        type="text"
-                        v-model="formdata.aussteller_fullname"
-                        id="full_name"
-                        placeholder="Pflichtfeld"
-                        autocomplete="given-name"
-                        class="
-                          mt-1
-                          focus:ring-green-500
-                          focus:border-green-500
-                          block
-                          w-full
-                          shadow-sm
-                          sm:text-sm
-                          border-gray-300
-                          rounded-md
-                        "
-                      />
-                      <label
-                        class="block text-sm font-medium text-gray-700"
-                        >Handelsname (Branding-Name) des Ausstellers</label
-                      >
-                      <input
-                        maxlength="30"
-                        type="text"
-                        v-model="formdata.aussteller_brandingname"
-                        id="handelsname"
-                        placeholder="Optional"
-                        autocomplete="given-name"
-                        class="
-                          mt-1
-                          focus:ring-green-500
-                          focus:border-green-500
-                          block
-                          w-full
-                          shadow-sm
-                          sm:text-sm
-                          border-gray-300
-                          rounded-md
-                        "
-                      />
-                    <!--EMAIL START-->
-                    <div class="col-span-6 sm:col-span-4">
+
+            <div class="mt-5 md:mt-0 md:col-span-2">
+              <div>
+                <div class="shadow overflow-hidden sm:rounded-md">
+                  <div class="px-4 py-5 bg-gray-300 sm:p-6">
                     <label
-                      for="email_address"
+                      for="name"
                       class="block text-sm font-medium text-gray-700"
-                      >Aussteller-E-Mail</label
+                      >Vor und Nachname</label
                     >
                     <input
-                      maxlength="100"
+                      maxlength="30"
                       type="text"
-                      v-model="formdata.aussteller_email"
-                      id="email_address"
-                      autocomplete="email"
-                      placeholder="Optional"
+                      v-model="formdata.aussteller_fullname"
+                      id="full_name"
+                      placeholder="Pflichtfeld"
+                      autocomplete="given-name"
                       class="
                         mt-1
                         focus:ring-green-500
@@ -315,47 +284,96 @@
                         rounded-md
                       "
                     />
-                  </div><!--EMAIL END-->
-
-                  <div>
-                    <label
-                      for="company_website"
-                      class="block text-sm font-medium text-gray-700"
+                    <label class="block text-sm font-medium text-gray-700"
+                      >Handelsname (Branding-Name) des Ausstellers</label
                     >
-                      Aussteller-Website
-                    </label>
-                    <div class="mt-1 flex rounded-md shadow-sm">
-                      <span
-                        class="
-                          inline-flex
-                          items-center
-                          px-3
-                          rounded-l-md
-                          border border-r-0 border-gray-300
-                          bg-gray-50
-                          text-gray-500 text-sm
-                        "
+                    <input
+                      maxlength="30"
+                      type="text"
+                      v-model="formdata.aussteller_brandingname"
+                      id="handelsname"
+                      placeholder="Optional"
+                      autocomplete="given-name"
+                      class="
+                        mt-1
+                        focus:ring-green-500
+                        focus:border-green-500
+                        block
+                        w-full
+                        shadow-sm
+                        sm:text-sm
+                        border-gray-300
+                        rounded-md
+                      "
+                    />
+                    <!--EMAIL START-->
+                    <div class="col-span-6 sm:col-span-4">
+                      <label
+                        for="email_address"
+                        class="block text-sm font-medium text-gray-700"
+                        >Aussteller-E-Mail</label
                       >
-                        http://
-                      </span>
                       <input
-                        maxlength="50"
+                        maxlength="100"
                         type="text"
-                        v-model="formdata.aussteller_websiteurl"
-                        id="aussteller_website"
+                        v-model="formdata.aussteller_email"
+                        id="email_address"
+                        autocomplete="email"
+                        placeholder="Optional"
                         class="
+                          mt-1
                           focus:ring-green-500
                           focus:border-green-500
-                          flex-1
                           block
                           w-full
-                          rounded-none rounded-r-md
+                          shadow-sm
                           sm:text-sm
                           border-gray-300
+                          rounded-md
                         "
-                        placeholder="www.example.com"
                       />
                     </div>
+                    <!--EMAIL END-->
+
+                    <div>
+                      <label
+                        for="company_website"
+                        class="block text-sm font-medium text-gray-700"
+                      >
+                        Aussteller-Website
+                      </label>
+                      <div class="mt-1 flex rounded-md shadow-sm">
+                        <span
+                          class="
+                            inline-flex
+                            items-center
+                            px-3
+                            rounded-l-md
+                            border border-r-0 border-gray-300
+                            bg-gray-50
+                            text-gray-500 text-sm
+                          "
+                        >
+                          http://
+                        </span>
+                        <input
+                          maxlength="50"
+                          type="text"
+                          v-model="formdata.aussteller_websiteurl"
+                          id="aussteller_website"
+                          class="
+                            focus:ring-green-500
+                            focus:border-green-500
+                            flex-1
+                            block
+                            w-full
+                            rounded-none rounded-r-md
+                            sm:text-sm
+                            border-gray-300
+                          "
+                          placeholder="www.example.com"
+                        />
+                      </div>
                     </div>
 
                     <div class="col-span-6 sm:col-span-4">
@@ -371,7 +389,6 @@
                         autocomplete="Beschreibung"
                         placeholder="Optional [Beschreibung inkl. der angebotenen Produkte des Ausstellers]"
                         class="
-                          
                           mt-1
                           focus:ring-green-500
                           focus:border-green-500
@@ -392,92 +409,193 @@
                         >Zonenfarbe am Markt</label
                       >
                       <!--COLORBUTTONS START-->
-  <div class="pt-3">
-    <label class="container" @click="assignColorBlue"
-      >Blau
-      <div class="bg-blue-500 h-2 w-5 rounded-md" @click="assignColorBlue"></div>
-      <input @click="assignColorBlue" type="radio"  name="radio" />
-      <span @click="assignColorBlue" class="checkmark"></span>
-    </label>
-    <label class="container" @click="assignColorRed"
-      >Rot
-      <div @click="assignColorRed" class="bg-red-600 h-2 w-5 rounded-md"></div>
-      <input @click="assignColorRed" type="radio" name="radio" />
-      <span @click="assignColorRed" class="checkmark"></span>
-    </label>
-    <label class="container" @click="assignColorYellow"
-      >Gelb
-      <div @click="assignColorYellow" class="bg-yellow-300 h-2 w-5 rounded-md"></div>
-      <input @click="assignColorYellow" type="radio" name="radio" />
-      <span @click="assignColorYellow" class="checkmark"></span>
-    </label>
-    <label class="container" @click="assignColorGreen"
-      >Grün
-      <div @click="assignColorGreen" class="bg-green-500 h-2 w-5 rounded-md"></div>
-      <input @click="assignColorGreen" type="radio" name="radio" />
-      <span @click="assignColorGreen" class="checkmark"></span>
-    </label>
-    <label class="container" @click="assignColorBrown"
-      >Braun
-      <div @click="assignColorBrown" class="bg-yellow-900 h-2 w-5 rounded-md"></div>
-      <input @click="assignColorBrown" type="radio" name="radio" />
-      <span @click="assignColorBrown" class="checkmark"></span>
-    </label>
-  </div>
-  <!--COLORBUTTONS END-->
-  </div>
-  <!--IMAGE FILE UPLOAD START-->
-  <div class="py-2 bg-green-900 text-white mb-1 px-2">Ausstellerfoto Upload
-    <div class="alert">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  <strong>Achtung!</strong> Maximale Filesize: 1.9MB <br>  Bsp: ausstellername.jpg oder ausstellername.png
-</div>
-  </div>
-<form @submit.prevent="upload" class="flex items-center justify-center mt-3">
-  <input @change="handleOnChange" type="file" class="text-xs sm:text-base">
-  <button @click="showSubmitButton" class="bg-green-900 text-xs sm:text-base p-1 text-white border border-green-600 rounded-md hover:bg-green-500">Upload photo</button>
-  
-</form>
-<div class="flex items-center justify-center">
-  <button @click="showSubmitButton" class="bg-green-900 text-xs sm:text-base p-1 mt-2 text-white border border-green-600 rounded-md hover:bg-green-500">Kein Ausstellerfoto uploaden</button>
-</div>
-<!--IMAGE FILE UPLOAD END-->
-</div>
+                      <div class="pt-3">
+                        <label class="container" @click="assignColorBlue"
+                          >Blau
+                          <div
+                            class="bg-blue-500 h-2 w-5 rounded-md"
+                            @click="assignColorBlue"
+                          ></div>
+                          <input
+                            @click="assignColorBlue"
+                            type="radio"
+                            name="radio"
+                          />
+                          <span
+                            @click="assignColorBlue"
+                            class="checkmark"
+                          ></span>
+                        </label>
+                        <label class="container" @click="assignColorRed"
+                          >Rot
+                          <div
+                            @click="assignColorRed"
+                            class="bg-red-600 h-2 w-5 rounded-md"
+                          ></div>
+                          <input
+                            @click="assignColorRed"
+                            type="radio"
+                            name="radio"
+                          />
+                          <span
+                            @click="assignColorRed"
+                            class="checkmark"
+                          ></span>
+                        </label>
+                        <label class="container" @click="assignColorYellow"
+                          >Gelb
+                          <div
+                            @click="assignColorYellow"
+                            class="bg-yellow-300 h-2 w-5 rounded-md"
+                          ></div>
+                          <input
+                            @click="assignColorYellow"
+                            type="radio"
+                            name="radio"
+                          />
+                          <span
+                            @click="assignColorYellow"
+                            class="checkmark"
+                          ></span>
+                        </label>
+                        <label class="container" @click="assignColorGreen"
+                          >Grün
+                          <div
+                            @click="assignColorGreen"
+                            class="bg-green-500 h-2 w-5 rounded-md"
+                          ></div>
+                          <input
+                            @click="assignColorGreen"
+                            type="radio"
+                            name="radio"
+                          />
+                          <span
+                            @click="assignColorGreen"
+                            class="checkmark"
+                          ></span>
+                        </label>
+                        <label class="container" @click="assignColorBrown"
+                          >Braun
+                          <div
+                            @click="assignColorBrown"
+                            class="bg-yellow-900 h-2 w-5 rounded-md"
+                          ></div>
+                          <input
+                            @click="assignColorBrown"
+                            type="radio"
+                            name="radio"
+                          />
+                          <span
+                            @click="assignColorBrown"
+                            class="checkmark"
+                          ></span>
+                        </label>
+                      </div>
+                      <!--COLORBUTTONS END-->
+                    </div>
+                    <!--IMAGE FILE UPLOAD START-->
+                    <div class="py-2 bg-green-900 text-white mb-1 px-2">
+                      Ausstellerfoto Upload
+                      <div class="alert">
+                        <span
+                          class="closebtn"
+                          onclick="this.parentElement.style.display='none';"
+                          >&times;</span
+                        >
+                        <strong>Achtung!</strong> Maximale Filesize: 1.9MB
+                        <br />
+                        Bsp: ausstellername.jpg oder ausstellername.png
+                      </div>
+                    </div>
+                    <form
+                      @submit.prevent="upload"
+                      class="flex items-center justify-center mt-3"
+                    >
+                      <input
+                        @change="handleOnChange"
+                        type="file"
+                        class="text-xs sm:text-base"
+                      />
+                      <button
+                        @click="showSubmitButton"
+                        class="
+                          bg-green-900
+                          text-xs
+                          sm:text-base
+                          p-1
+                          text-white
+                          border border-green-600
+                          rounded-md
+                          hover:bg-green-500
+                        "
+                      >
+                        Upload photo
+                      </button>
+                    </form>
+                    <div class="flex items-center justify-center">
+                      <button
+                        @click="showSubmitButton"
+                        class="
+                          bg-green-900
+                          text-xs
+                          sm:text-base
+                          p-1
+                          mt-2
+                          text-white
+                          border border-green-600
+                          rounded-md
+                          hover:bg-green-500
+                        "
+                      >
+                        Kein Ausstellerfoto uploaden
+                      </button>
+                    </div>
+                    <!--IMAGE FILE UPLOAD END-->
+                  </div>
 
-                  <div class=" flex justify-center px-4 py-3 bg-gray-600 border-t-2 border-gray-800 text-right sm:px-6">
-                  <button
-                  id="submitbutton"
-                  @click="submitform"
-                  :class=submitvisibility
+                  <div
                     class="
-                      inline-flex
+                      flex
                       justify-center
-                      py-2
                       px-4
-                      border border-transparent
-                      shadow-sm
-                      text-sm
-                      font-medium
-                      rounded-md
-                      text-white
-                      bg-green-600
-                      hover:bg-black
-                      focus:outline-none
-                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500
+                      py-3
+                      bg-gray-600
+                      border-t-2 border-gray-800
+                      text-right
+                      sm:px-6
                     "
                   >
-                    In DB Speichern
-                  </button>
-                
-              </div>
+                    <button
+                      id="submitbutton"
+                      @click="submitform"
+                      :class="submitvisibility"
+                      class="
+                        inline-flex
+                        justify-center
+                        py-2
+                        px-4
+                        border border-transparent
+                        shadow-sm
+                        text-sm
+                        font-medium
+                        rounded-md
+                        text-white
+                        bg-green-600
+                        hover:bg-black
+                        focus:outline-none
+                        focus:ring-2 focus:ring-offset-2 focus:ring-green-500
+                      "
+                    >
+                      In DB Speichern
+                    </button>
+                  </div>
                 </div>
-                
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 </template>
 

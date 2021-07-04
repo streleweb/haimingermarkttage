@@ -18,7 +18,9 @@ class NewsResource extends JsonResource
             'id' => $this->id,
             'news_titel' => $this->news_titel,
             'news_textfeld' => $this->news_textfeld,
-            'news_bild_url' => $this->news_bild_url
+            'news_bild_url' => $this->news_bild_url,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at
         ];
     }
 }

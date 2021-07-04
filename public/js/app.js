@@ -2012,200 +2012,9 @@ var default_layout = "default";
 /*!*****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Aussteller.vue?vue&type=script&lang=js& ***!
   \*****************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ "./resources/js/components/Button.vue");
-/* harmony import */ var _Farbzone__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Farbzone */ "./resources/js/components/Farbzone.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data: function data() {
-    return {
-      aussteller: [],
-      loading: false
-    };
-  },
-  //wenn Component geladen ist, führe die Methoden zum
-  //Laden der Aussteller und Ausstellerfotos via Axios Request aus
-  created: function created() {
-    this.loading = true;
-    this.loadAussteller();
-    this.loading = false;
-    /*this.loadAusstellerfoto();*/
-  },
-  methods: {
-    loadAussteller: function loadAussteller() {
-      var _this = this;
-
-      axios.get("/api/aussteller") // load API
-      .then(function (response) {
-        _this.aussteller = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
-
-        console.log(_this.aussteller); // assign to this.aussteller array
-      })["catch"](function (error) {
-        // Fehlerbehandlung
-        console.log(error);
-      });
-    },
-    imgUrl: function imgUrl(index) {
-      try {
-        return "/images/aussteller/" + this.aussteller[index].aussteller_bildurl;
-      } catch (error) {
-        console.log(error);
-      }
-    },
-    webUrl: function webUrl(index) {
-      var http = "http://";
-      return http + this.aussteller[index].aussteller_websiteurl;
-    },
-    imageUrlNotEmpty: function imageUrlNotEmpty(index) {
-      return this.aussteller[index].aussteller_bildurl != null && this.aussteller[index].aussteller_bildurl != "";
-    },
-    webUrlNotEmpty: function webUrlNotEmpty(index) {
-      return this.aussteller[index].aussteller_websiteurl != null && this.aussteller[index].aussteller_websiteurl != "";
-    },
-    zonenFarbeNotEmpty: function zonenFarbeNotEmpty(index) {
-      return this.aussteller[index].aussteller_zonenfarbe != null && this.aussteller[index].aussteller_zonenfarbe != "";
-    },
-    zonenFarbe: function zonenFarbe(index) {
-      return this.aussteller[index].aussteller_zonenfarbe;
-    },
-    ausstellerEmailNotEmpty: function ausstellerEmailNotEmpty(index) {
-      return this.aussteller[index].aussteller_email != null && this.aussteller[index].aussteller_email != "";
-    },
-    ausstellerEmail: function ausstellerEmail(index) {
-      return "mailto:http://" + this.aussteller[index].aussteller_email;
-    },
-    ausstellerBrandingNameNotEmpty: function ausstellerBrandingNameNotEmpty(index) {
-      return this.aussteller[index].aussteller_brandingname != null && this.aussteller[index].aussteller_brandingname != "";
-    }
-  },
-  components: {
-    Button: _Button__WEBPACK_IMPORTED_MODULE_0__.default,
-    Farbzone: _Farbzone__WEBPACK_IMPORTED_MODULE_1__.default
-  }
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\resources\\js\\components\\Aussteller.vue: Unexpected token (142:32)\n\n\u001b[0m \u001b[90m 140 |\u001b[39m         \u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m\"/api/aussteller\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 141 |\u001b[39m         \u001b[33m.\u001b[39mthen((response) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 142 |\u001b[39m           \u001b[36mif\u001b[39m(response\u001b[33m.\u001b[39mstatus \u001b[33m==\u001b[39m )\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 143 |\u001b[39m           \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maussteller \u001b[33m=\u001b[39m response\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdata\u001b[33m;\u001b[39m \u001b[90m// 1. data = axios syntax, 2. data = das Property \"data\" innerhalb der JSON response\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 144 |\u001b[39m           console\u001b[33m.\u001b[39mlog(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39maussteller)\u001b[33m;\u001b[39m \u001b[90m// assign to this.aussteller array\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 145 |\u001b[39m         })\u001b[0m\n    at Parser._raise (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:816:17)\n    at Parser.raiseWithData (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:809:17)\n    at Parser.raise (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:770:17)\n    at Parser.unexpected (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:9893:16)\n    at Parser.parseExprAtom (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:11307:20)\n    at Parser.parseExprSubscripts (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10881:23)\n    at Parser.parseUpdate (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10861:21)\n    at Parser.parseMaybeUnary (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10839:23)\n    at Parser.parseExprOpBaseRightExpr (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10782:34)\n    at Parser.parseExprOpRightExpr (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10775:21)\n    at Parser.parseExprOp (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10741:27)\n    at Parser.parseExprOps (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10702:17)\n    at Parser.parseMaybeConditional (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10670:23)\n    at Parser.parseMaybeAssign (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10633:21)\n    at Parser.parseExpressionBase (D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10573:23)\n    at D:\\IMST KOLLEG\\Diplomarbeit\\DEVELOPMENT\\NEWWORKSPACE\\WORKSPACE\\WORKSPACE\\HaimingerMarkttageApp\\node_modules\\@babel\\parser\\lib\\index.js:10567:39");
 
 /***/ }),
 
@@ -2813,7 +2622,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ "./resources/js/components/Button.vue");
-//
 //
 //
 //
@@ -5436,6 +5244,124 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -5927,6 +5853,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -37605,11 +37550,11 @@ var render = function() {
           "div",
           {
             staticClass:
-              "flex w-full h-full items-center justify-center text-red-900 bg-gray-900"
+              "\n      flex\n      w-full\n      h-full\n      items-center\n      justify-center\n      text-red-900\n      bg-gray-900\n    "
           },
           [
             _vm._v(
-              " Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard zugreifen zu können..."
+              "\n    Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard\n    zugreifen zu können...\n  "
             )
           ]
         )
@@ -37670,7 +37615,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\r\n            flex-1 flex\r\n            items-center\r\n            justify-center\r\n            sm:items-stretch\r\n            sm:justify-start\r\n          "
+                          "\n              flex-1 flex\n              items-center\n              justify-center\n              sm:items-stretch\n              sm:justify-start\n            "
                       },
                       [
                         _c("div", {
@@ -37698,7 +37643,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
                                 },
                                 [
                                   _c(
@@ -37709,7 +37654,7 @@ var render = function() {
                                           "/app/admin/dashboard/ausstelleruebersicht"
                                       }
                                     },
-                                    [_vm._v("Aussteller\r\n                ")]
+                                    [_vm._v("Aussteller\n                  ")]
                                   )
                                 ],
                                 1
@@ -37719,7 +37664,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
                                 },
                                 [
                                   _c(
@@ -37737,7 +37682,7 @@ var render = function() {
                                 "a",
                                 {
                                   staticClass:
-                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
                                   attrs: { href: "#" }
                                 },
                                 [_vm._v("Programm")]
@@ -37747,7 +37692,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
                                 },
                                 [
                                   _c(
@@ -37774,14 +37719,14 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\r\n            absolute\r\n            inset-y-0\r\n            right-0\r\n            flex\r\n            items-center\r\n            pr-2\r\n            sm:static\r\n            sm:inset-auto\r\n            sm:ml-6\r\n            sm:pr-0\r\n          "
+                          "\n              absolute\n              inset-y-0\n              right-0\n              flex\n              items-center\n              pr-2\n              sm:static\n              sm:inset-auto\n              sm:ml-6\n              sm:pr-0\n            "
                       },
                       [
                         _c(
                           "div",
                           {
                             staticClass:
-                              "\r\n                  text-gray-300\r\n                  hover:bg-red-900\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                              "\n                text-gray-300\n                hover:bg-red-900\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
                           },
                           [
                             _c(
@@ -37795,7 +37740,7 @@ var render = function() {
                                 }
                               },
                               [
-                                _vm._v("Logout "),
+                                _vm._v("Logout\n                "),
                                 _c("img", {
                                   staticClass: "filter-white",
                                   attrs: {
@@ -37824,7 +37769,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\r\n            bg-gray-900\r\n            text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                        "\n              bg-gray-900\n              text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#", "aria-current": "page" }
                     },
                     [_vm._v("Dashboard")]
@@ -37834,7 +37779,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#" }
                     },
                     [
@@ -37855,7 +37800,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#" }
                     },
                     [_vm._v("News")]
@@ -37865,7 +37810,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#" }
                     },
                     [_vm._v("Programm")]
@@ -37916,7 +37861,7 @@ var render = function() {
                                   }
                                 ],
                                 staticClass:
-                                  "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                  "\n                      mt-1\n                      focus:ring-green-500\n                      focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
                                 attrs: {
                                   maxlength: "30",
                                   type: "text",
@@ -37965,7 +37910,7 @@ var render = function() {
                                   }
                                 ],
                                 staticClass:
-                                  "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                  "\n                      mt-1\n                      focus:ring-green-500\n                      focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
                                 attrs: {
                                   maxlength: "30",
                                   type: "text",
@@ -38014,7 +37959,7 @@ var render = function() {
                                       }
                                     ],
                                     staticClass:
-                                      "\r\n                        mt-1\r\n                        focus:ring-green-500\r\n                        focus:border-green-500\r\n                        block\r\n                        w-full\r\n                        shadow-sm\r\n                        sm:text-sm\r\n                        border-gray-300\r\n                        rounded-md\r\n                      ",
+                                      "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
                                     attrs: {
                                       maxlength: "100",
                                       type: "text",
@@ -38051,7 +37996,7 @@ var render = function() {
                                   },
                                   [
                                     _vm._v(
-                                      "\r\n                      Aussteller-Website\r\n                    "
+                                      "\n                      Aussteller-Website\n                    "
                                     )
                                   ]
                                 ),
@@ -38067,11 +38012,11 @@ var render = function() {
                                       "span",
                                       {
                                         staticClass:
-                                          "\r\n                          inline-flex\r\n                          items-center\r\n                          px-3\r\n                          rounded-l-md\r\n                          border border-r-0 border-gray-300\r\n                          bg-gray-50\r\n                          text-gray-500 text-sm\r\n                        "
+                                          "\n                          inline-flex\n                          items-center\n                          px-3\n                          rounded-l-md\n                          border border-r-0 border-gray-300\n                          bg-gray-50\n                          text-gray-500 text-sm\n                        "
                                       },
                                       [
                                         _vm._v(
-                                          "\r\n                        http://\r\n                      "
+                                          "\n                        http://\n                      "
                                         )
                                       ]
                                     ),
@@ -38088,7 +38033,7 @@ var render = function() {
                                         }
                                       ],
                                       staticClass:
-                                        "\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          flex-1\r\n                          block\r\n                          w-full\r\n                          rounded-none rounded-r-md\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                        ",
+                                        "\n                          focus:ring-green-500\n                          focus:border-green-500\n                          flex-1\n                          block\n                          w-full\n                          rounded-none rounded-r-md\n                          sm:text-sm\n                          border-gray-300\n                        ",
                                       attrs: {
                                         maxlength: "50",
                                         type: "text",
@@ -38142,7 +38087,7 @@ var render = function() {
                                       }
                                     ],
                                     staticClass:
-                                      "\r\n                          \r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                      "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
                                     attrs: {
                                       maxlength: "250",
                                       id: "beschreibung",
@@ -38189,7 +38134,7 @@ var render = function() {
                                       on: { click: _vm.assignColorBlue }
                                     },
                                     [
-                                      _vm._v("Blau\r\n      "),
+                                      _vm._v("Blau\n                        "),
                                       _c("div", {
                                         staticClass:
                                           "bg-blue-500 h-2 w-5 rounded-md",
@@ -38215,7 +38160,7 @@ var render = function() {
                                       on: { click: _vm.assignColorRed }
                                     },
                                     [
-                                      _vm._v("Rot\r\n      "),
+                                      _vm._v("Rot\n                        "),
                                       _c("div", {
                                         staticClass:
                                           "bg-red-600 h-2 w-5 rounded-md",
@@ -38241,7 +38186,7 @@ var render = function() {
                                       on: { click: _vm.assignColorYellow }
                                     },
                                     [
-                                      _vm._v("Gelb\r\n      "),
+                                      _vm._v("Gelb\n                        "),
                                       _c("div", {
                                         staticClass:
                                           "bg-yellow-300 h-2 w-5 rounded-md",
@@ -38267,7 +38212,7 @@ var render = function() {
                                       on: { click: _vm.assignColorGreen }
                                     },
                                     [
-                                      _vm._v("Grün\r\n      "),
+                                      _vm._v("Grün\n                        "),
                                       _c("div", {
                                         staticClass:
                                           "bg-green-500 h-2 w-5 rounded-md",
@@ -38293,7 +38238,7 @@ var render = function() {
                                       on: { click: _vm.assignColorBrown }
                                     },
                                     [
-                                      _vm._v("Braun\r\n      "),
+                                      _vm._v("Braun\n                        "),
                                       _c("div", {
                                         staticClass:
                                           "bg-yellow-900 h-2 w-5 rounded-md",
@@ -38339,10 +38284,14 @@ var render = function() {
                                     "button",
                                     {
                                       staticClass:
-                                        "bg-green-900 text-xs sm:text-base p-1 text-white border border-green-600 rounded-md hover:bg-green-500",
+                                        "\n                        bg-green-900\n                        text-xs\n                        sm:text-base\n                        p-1\n                        text-white\n                        border border-green-600\n                        rounded-md\n                        hover:bg-green-500\n                      ",
                                       on: { click: _vm.showSubmitButton }
                                     },
-                                    [_vm._v("Upload photo")]
+                                    [
+                                      _vm._v(
+                                        "\n                      Upload photo\n                    "
+                                      )
+                                    ]
                                   )
                                 ]
                               ),
@@ -38358,10 +38307,14 @@ var render = function() {
                                     "button",
                                     {
                                       staticClass:
-                                        "bg-green-900 text-xs sm:text-base p-1 mt-2 text-white border border-green-600 rounded-md hover:bg-green-500",
+                                        "\n                        bg-green-900\n                        text-xs\n                        sm:text-base\n                        p-1\n                        mt-2\n                        text-white\n                        border border-green-600\n                        rounded-md\n                        hover:bg-green-500\n                      ",
                                       on: { click: _vm.showSubmitButton }
                                     },
-                                    [_vm._v("Kein Ausstellerfoto uploaden")]
+                                    [
+                                      _vm._v(
+                                        "\n                      Kein Ausstellerfoto uploaden\n                    "
+                                      )
+                                    ]
                                   )
                                 ]
                               )
@@ -38372,21 +38325,21 @@ var render = function() {
                             "div",
                             {
                               staticClass:
-                                " flex justify-center px-4 py-3 bg-gray-600 border-t-2 border-gray-800 text-right sm:px-6"
+                                "\n                    flex\n                    justify-center\n                    px-4\n                    py-3\n                    bg-gray-600\n                    border-t-2 border-gray-800\n                    text-right\n                    sm:px-6\n                  "
                             },
                             [
                               _c(
                                 "button",
                                 {
                                   staticClass:
-                                    "\r\n                      inline-flex\r\n                      justify-center\r\n                      py-2\r\n                      px-4\r\n                      border border-transparent\r\n                      shadow-sm\r\n                      text-sm\r\n                      font-medium\r\n                      rounded-md\r\n                      text-white\r\n                      bg-green-600\r\n                      hover:bg-black\r\n                      focus:outline-none\r\n                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\r\n                    ",
+                                    "\n                      inline-flex\n                      justify-center\n                      py-2\n                      px-4\n                      border border-transparent\n                      shadow-sm\n                      text-sm\n                      font-medium\n                      rounded-md\n                      text-white\n                      bg-green-600\n                      hover:bg-black\n                      focus:outline-none\n                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n                    ",
                                   class: _vm.submitvisibility,
                                   attrs: { id: "submitbutton" },
                                   on: { click: _vm.submitform }
                                 },
                                 [
                                   _vm._v(
-                                    "\r\n                    In DB Speichern\r\n                  "
+                                    "\n                    In DB Speichern\n                  "
                                   )
                                 ]
                               )
@@ -38409,18 +38362,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: " text-gray-400 pb-3" }, [
+    return _c("div", { staticClass: "text-gray-400 pb-3" }, [
       _c(
         "h3",
         { staticClass: "text-lg font-medium leading-6 text-white pb-1" },
-        [
-          _vm._v(
-            "\r\n                Neuen Aussteller anlegen\r\n              "
-          )
-        ]
+        [_vm._v("\n              Neuen Aussteller anlegen\n            ")]
       ),
       _vm._v(
-        '\r\n              Neuer Aussteller wird in DB gespeichert und in Web-App eingebettet...\r\n              Klicken Sie zuerst auf "Upload" oder "Kein Ausstellerfoto uploaden", ehe der\r\n              Submit-Button erscheint und Sie die Daten in die Datenbank speichern können.\r\n            '
+        '\n            Neuer Aussteller wird in DB gespeichert und in Web-App\n            eingebettet... Klicken Sie zuerst auf "Upload" oder "Kein\n            Ausstellerfoto uploaden", ehe der Submit-Button erscheint und Sie\n            die Daten in die Datenbank speichern können.\n          '
       )
     ])
   },
@@ -38432,7 +38381,9 @@ var staticRenderFns = [
       "div",
       { staticClass: "py-2 bg-green-900 text-white mb-1 px-2" },
       [
-        _vm._v("Ausstellerfoto Upload\r\n    "),
+        _vm._v(
+          "\n                    Ausstellerfoto Upload\n                    "
+        ),
         _c("div", { staticClass: "alert" }, [
           _c(
             "span",
@@ -38444,9 +38395,11 @@ var staticRenderFns = [
           ),
           _vm._v(" "),
           _c("strong", [_vm._v("Achtung!")]),
-          _vm._v(" Maximale Filesize: 1.9MB "),
+          _vm._v(" Maximale Filesize: 1.9MB\n                      "),
           _c("br"),
-          _vm._v("  Bsp: ausstellername.jpg oder ausstellername.png\r\n")
+          _vm._v(
+            "\n                      Bsp: ausstellername.jpg oder ausstellername.png\n                    "
+          )
         ])
       ]
     )
@@ -38804,18 +38757,18 @@ var render = function() {
           "div",
           {
             staticClass:
-              "flex w-full h-full items-center justify-center text-red-900 bg-gray-900"
+              "\n      flex\n      w-full\n      h-full\n      items-center\n      justify-center\n      text-red-900\n      bg-gray-900\n    "
           },
           [
             _vm._v(
-              " \r\n  Nicht eingeloggt! Bitte loggen Sie sich ein, um auf diese Seite zugreifen zu können..."
+              "\n    Nicht eingeloggt! Bitte loggen Sie sich ein, um auf diese Seite zugreifen\n    zu können...\n  "
             )
           ]
         )
       : _vm._e(),
     _vm._v(" "),
     _vm.loggedIn()
-      ? _c("div", { staticClass: "w-full " }, [
+      ? _c("div", { staticClass: "w-full" }, [
           _c("nav", { staticClass: "bg-gray-800 border-b border-gray-300" }, [
             _c(
               "div",
@@ -38869,7 +38822,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\r\n            flex-1 flex\r\n            items-center\r\n            justify-center\r\n            sm:items-stretch\r\n            sm:justify-start\r\n          "
+                          "\n              flex-1 flex\n              items-center\n              justify-center\n              sm:items-stretch\n              sm:justify-start\n            "
                       },
                       [
                         _c("div", {
@@ -38897,7 +38850,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\r\n                  bg-gray-900\r\n                  text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                    "\n                    bg-gray-900\n                    text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
                                   attrs: { "aria-current": "page" }
                                 },
                                 [
@@ -38909,7 +38862,7 @@ var render = function() {
                                           "/app/admin/dashboard/ausstelleruebersicht"
                                       }
                                     },
-                                    [_vm._v("Aussteller\r\n                ")]
+                                    [_vm._v("Aussteller\n                  ")]
                                   )
                                 ],
                                 1
@@ -38919,7 +38872,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
                                 },
                                 [
                                   _c(
@@ -38937,7 +38890,7 @@ var render = function() {
                                 "a",
                                 {
                                   staticClass:
-                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
                                   attrs: { href: "#" }
                                 },
                                 [_vm._v("Programm")]
@@ -38947,7 +38900,7 @@ var render = function() {
                                 "a",
                                 {
                                   staticClass:
-                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
                                   attrs: { href: "#" }
                                 },
                                 [_vm._v("platzhalter")]
@@ -38974,7 +38927,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#" }
                     },
                     [
@@ -38991,7 +38944,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\r\n            bg-gray-900\r\n            text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                        "\n              bg-gray-900\n              text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#", "aria-current": "page" }
                     },
                     [_vm._v("Aussteller")]
@@ -39001,7 +38954,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#" }
                     },
                     [_vm._v("News")]
@@ -39011,7 +38964,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#" }
                     },
                     [_vm._v("Programm")]
@@ -39053,7 +39006,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "\r\n                    Foto\r\n                  "
+                                    "\n                      Foto\n                    "
                                   )
                                 ]
                               ),
@@ -39066,7 +39019,7 @@ var render = function() {
                                     "span",
                                     {
                                       staticClass:
-                                        "\r\n                        inline-block\r\n                        h-12\r\n                        w-12\r\n                        rounded-full\r\n                        overflow-hidden\r\n                        bg-gray-100\r\n                      "
+                                        "\n                          inline-block\n                          h-12\n                          w-12\n                          rounded-full\n                          overflow-hidden\n                          bg-gray-100\n                        "
                                     },
                                     [
                                       _c(
@@ -39095,12 +39048,12 @@ var render = function() {
                                     "button",
                                     {
                                       staticClass:
-                                        "\r\n                        ml-5\r\n                        bg-white\r\n                        py-2\r\n                        px-3\r\n                        border border-gray-300\r\n                        rounded-md\r\n                        shadow-sm\r\n                        text-sm\r\n                        leading-4\r\n                        font-medium\r\n                        text-gray-700\r\n                        hover:bg-gray-50\r\n                        focus:outline-none\r\n                        focus:ring-2 focus:ring-offset-2 focus:ring-green-500\r\n                      ",
+                                        "\n                          ml-5\n                          bg-white\n                          py-2\n                          px-3\n                          border border-gray-300\n                          rounded-md\n                          shadow-sm\n                          text-sm\n                          leading-4\n                          font-medium\n                          text-gray-700\n                          hover:bg-gray-50\n                          focus:outline-none\n                          focus:ring-2\n                          focus:ring-offset-2\n                          focus:ring-green-500\n                        ",
                                       attrs: { type: "button" }
                                     },
                                     [
                                       _vm._v(
-                                        "\r\n                      Ändern\r\n                    "
+                                        "\n                        Ändern\n                      "
                                       )
                                     ]
                                   )
@@ -39133,18 +39086,18 @@ var staticRenderFns = [
       "div",
       {
         staticClass:
-          "\r\n            absolute\r\n            inset-y-0\r\n            right-0\r\n            flex\r\n            items-center\r\n            pr-2\r\n            sm:static\r\n            sm:inset-auto\r\n            sm:ml-6\r\n            sm:pr-0\r\n          "
+          "\n              absolute\n              inset-y-0\n              right-0\n              flex\n              items-center\n              pr-2\n              sm:static\n              sm:inset-auto\n              sm:ml-6\n              sm:pr-0\n            "
       },
       [
         _c(
           "div",
           {
             staticClass:
-              "\r\n                  text-gray-300\r\n                  hover:bg-red-900\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+              "\n                text-gray-300\n                hover:bg-red-900\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
           },
           [
             _c("span", { staticClass: "text-white cursor-pointer" }, [
-              _vm._v("Logout "),
+              _vm._v("Logout\n                "),
               _c("img", {
                 staticClass: "filter-white",
                 attrs: {
@@ -39165,12 +39118,12 @@ var staticRenderFns = [
     return _c("div", { staticClass: "md:col-span-1" }, [
       _c("div", { staticClass: "px-4 sm:px-0" }, [
         _c("h3", { staticClass: "text-lg font-medium leading-6 text-white" }, [
-          _vm._v("\r\n              Aussteller ändern\r\n            ")
+          _vm._v("\n                Aussteller ändern\n              ")
         ]),
         _vm._v(" "),
         _c("p", { staticClass: "mt-1 text-sm text-gray-300" }, [
           _vm._v(
-            "\r\n              Hier können jeweilige Ausstellerinformationen für das kommende Jahr abgeändert werden, ohne\r\n              den Aussteller löschen und wieder hinzufügen zu müssen...\r\n            "
+            "\n                Hier können jeweilige Ausstellerinformationen für das kommende\n                Jahr abgeändert werden, ohne den Aussteller löschen und wieder\n                hinzufügen zu müssen...\n              "
           )
         ])
       ])
@@ -39190,7 +39143,7 @@ var staticRenderFns = [
           },
           [
             _vm._v(
-              "\r\n                      Aussteller-Website\r\n                    "
+              "\n                        Aussteller-Website\n                      "
             )
           ]
         ),
@@ -39200,18 +39153,18 @@ var staticRenderFns = [
             "span",
             {
               staticClass:
-                "\r\n                          inline-flex\r\n                          items-center\r\n                          px-3\r\n                          rounded-l-md\r\n                          border border-r-0 border-gray-300\r\n                          bg-gray-50\r\n                          text-gray-500 text-sm\r\n                        "
+                "\n                            inline-flex\n                            items-center\n                            px-3\n                            rounded-l-md\n                            border border-r-0 border-gray-300\n                            bg-gray-50\n                            text-gray-500 text-sm\n                          "
             },
             [
               _vm._v(
-                "\r\n                        http://\r\n                      "
+                "\n                          http://\n                        "
               )
             ]
           ),
           _vm._v(" "),
           _c("input", {
             staticClass:
-              "\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          flex-1\r\n                          block\r\n                          w-full\r\n                          rounded-none rounded-r-md\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                        ",
+              "\n                            focus:ring-green-500\n                            focus:border-green-500\n                            flex-1\n                            block\n                            w-full\n                            rounded-none rounded-r-md\n                            sm:text-sm\n                            border-gray-300\n                          ",
             attrs: {
               type: "text",
               name: "company_website",
@@ -39236,7 +39189,7 @@ var staticRenderFns = [
         },
         [
           _vm._v(
-            "\r\n                    Aussteller-Beschreibung (max. 200 Zeichen)\r\n                  "
+            "\n                      Aussteller-Beschreibung (max. 200 Zeichen)\n                    "
           )
         ]
       ),
@@ -39244,7 +39197,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "mt-1" }, [
         _c("textarea", {
           staticClass:
-            "\r\n                        shadow-sm\r\n                        focus:ring-green-500\r\n                        focus:border-green-500\r\n                        mt-1\r\n                        block\r\n                        w-full\r\n                        sm:text-sm\r\n                        border border-gray-300\r\n                        rounded-md\r\n                      ",
+            "\n                          shadow-sm\n                          focus:ring-green-500\n                          focus:border-green-500\n                          mt-1\n                          block\n                          w-full\n                          sm:text-sm\n                          border border-gray-300\n                          rounded-md\n                        ",
           attrs: {
             id: "about",
             name: "about",
@@ -39256,7 +39209,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("p", { staticClass: "mt-2 text-sm text-gray-500" }, [
         _vm._v(
-          "\r\n                    Dieser Text wird auf der jeweiligen Aussteller-Karte\r\n                    angezeigt.\r\n                  "
+          "\n                      Dieser Text wird auf der jeweiligen Aussteller-Karte\n                      angezeigt.\n                    "
         )
       ])
     ])
@@ -39286,12 +39239,12 @@ var staticRenderFns = [
             _c(
               "h3",
               { staticClass: "text-lg font-medium leading-6 text-white" },
-              [_vm._v("\r\n              Personal Information\r\n            ")]
+              [_vm._v("\n                Personal Information\n              ")]
             ),
             _vm._v(" "),
             _c("p", { staticClass: "mt-1 text-sm text-gray-400" }, [
               _vm._v(
-                "\r\n              Ausstellerinformationen. Vor- und Nachname ist ein Pflichtfeld.\r\n            "
+                "\n                Ausstellerinformationen. Vor- und Nachname ist ein\n                Pflichtfeld.\n              "
               )
             ])
           ])
@@ -39314,7 +39267,7 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("input", {
                       staticClass:
-                        "\r\n                        mt-1\r\n                        focus:ring-green-500\r\n                        focus:border-green-500\r\n                        block\r\n                        w-full\r\n                        shadow-sm\r\n                        sm:text-sm\r\n                        border-gray-300\r\n                        rounded-md\r\n                      ",
+                        "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
                       attrs: {
                         type: "text",
                         name: "first_name",
@@ -39336,7 +39289,7 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("input", {
                       staticClass:
-                        "\r\n                        mt-1\r\n                        focus:ring-green-500\r\n                        focus:border-green-500\r\n                        block\r\n                        w-full\r\n                        shadow-sm\r\n                        sm:text-sm\r\n                        border-gray-300\r\n                        rounded-md\r\n                      ",
+                        "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
                       attrs: {
                         type: "text",
                         name: "last_name",
@@ -39359,7 +39312,7 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("input", {
                       staticClass:
-                        "\r\n                        mt-1\r\n                        focus:ring-green-500\r\n                        focus:border-green-500\r\n                        block\r\n                        w-full\r\n                        shadow-sm\r\n                        sm:text-sm\r\n                        border-gray-300\r\n                        rounded-md\r\n                      ",
+                        "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
                       attrs: {
                         type: "text",
                         name: "email_address",
@@ -39382,7 +39335,7 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("input", {
                       staticClass:
-                        "\r\n                        mt-1\r\n                        focus:ring-green-500\r\n                        focus:border-green-500\r\n                        block\r\n                        w-full\r\n                        shadow-sm\r\n                        sm:text-sm\r\n                        border-gray-300\r\n                        rounded-md\r\n                      ",
+                        "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
                       attrs: {
                         type: "text",
                         name: "street_address",
@@ -39409,7 +39362,7 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c("input", {
                         staticClass:
-                          "\r\n                        mt-1\r\n                        focus:ring-green-500\r\n                        focus:border-green-500\r\n                        block\r\n                        w-full\r\n                        shadow-sm\r\n                        sm:text-sm\r\n                        border-gray-300\r\n                        rounded-md\r\n                      ",
+                          "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
                         attrs: {
                           type: "text",
                           name: "city",
@@ -39436,7 +39389,7 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c("input", {
                         staticClass:
-                          "\r\n                        mt-1\r\n                        focus:ring-green-500\r\n                        focus:border-green-500\r\n                        block\r\n                        w-full\r\n                        shadow-sm\r\n                        sm:text-sm\r\n                        border-gray-300\r\n                        rounded-md\r\n                      ",
+                          "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
                         attrs: {
                           type: "text",
                           name: "postal_code",
@@ -39458,10 +39411,10 @@ var staticRenderFns = [
                     "button",
                     {
                       staticClass:
-                        "\r\n                    inline-flex\r\n                    justify-center\r\n                    py-2\r\n                    px-4\r\n                    border border-transparent\r\n                    shadow-sm\r\n                    text-sm\r\n                    font-medium\r\n                    rounded-md\r\n                    text-white\r\n                    bg-green-600\r\n                    hover:bg-green-700\r\n                    focus:outline-none\r\n                    focus:ring-2 focus:ring-offset-2 focus:ring-green-500\r\n                  ",
+                        "\n                      inline-flex\n                      justify-center\n                      py-2\n                      px-4\n                      border border-transparent\n                      shadow-sm\n                      text-sm\n                      font-medium\n                      rounded-md\n                      text-white\n                      bg-green-600\n                      hover:bg-green-700\n                      focus:outline-none\n                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n                    ",
                       attrs: { type: "submit" }
                     },
-                    [_vm._v("\r\n                  Save\r\n                ")]
+                    [_vm._v("\n                    Save\n                  ")]
                   )
                 ]
               )
