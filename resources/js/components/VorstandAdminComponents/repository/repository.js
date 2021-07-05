@@ -18,5 +18,9 @@ export default {
 
     getAussteller() {
         return api.get("http://localhost:8000/api/aussteller");
-    }
+    },
+
+    postFotogalerie(formData) {
+        return api.post("http://localhost:8000/api/imageupload", formData);
+    },
 }

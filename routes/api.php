@@ -4,12 +4,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AusstellerController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\AusstellerfotoController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\FotogalerieController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PagesController;
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProgrammController;
 use App\Http\Controllers\ProgrammpunktController;
 use App\Http\Controllers\SponsorenController;
@@ -34,6 +32,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/aussteller/search/{name}', [AusstellerController::class, 'search']);
 Route::get('/aussteller', [AusstellerController::class, 'index']);
 Route::get('/aussteller/{id}', [AusstellerController::class, 'show']);
+Route::get('/news', [NewsController::class, 'index']);
+Route::get('/fotogalerie', [FotogalerieController::class, 'index']);
 
  //Route::post('/admin/register', [AuthController::class, 'register']);
 //Route::post('/admin/register', [AuthController::class, 'register']);
@@ -55,19 +55,24 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/imageupload', [ImageController::class, 'handle']);
 
     //Fotogalerie upload/edit 
-    Route::post('/fotogalerie', [FotogalerieController::class, 'store']);
+    Route::post('fotogalerie', [FotogalerieController::class, 'store']);
+    Route::delete('/fotogalerie/{id}', [FotogalerieController::class, 'destroy']);
+    Route::put('fotogalerie', [FotogalerieController::class, 'update']);
+
    
     //News
+    Route::post('/news', [NewsController::class, 'store']);
+    Route::delete('/news', [NewsController::class, 'destroy']);
 
 });
 
 
 
 //Achtung, de Routen müssn no abgeändert werdn, nicht für Diplomarbeit verwenden so
-Route::resource('ausstellerfoto', AusstellerfotoController::class);
-Route::resource('fotogalerie', FotogalerieController::class);
-Route::resource('news', NewsController::class);
-Route::resource('product', ProductController::class);
+
+
+
+
 Route::resource('programm', ProgrammController::class);
 Route::resource('programmpunkt', ProgrammpunktController::class);
 Route::resource('sponsoren', SponsorenController::class);

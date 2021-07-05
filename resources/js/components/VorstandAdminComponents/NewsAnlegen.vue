@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-full bg-gray-900">
     <!-- Check for Login-Status, only display if logged in-->
-    <div v-if="loggedIn()" class="w-full">
+    <div v-if="loggedIn" class="w-full">
       <nav class="bg-gray-800 border-b border-gray-300">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
           <div class="relative flex items-center justify-between h-16">
@@ -44,7 +44,7 @@
               <div class="hidden sm:block sm:ml-6">
                 <div class="flex space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  <router-link to="/app/admin/dashboard"
+                  <router-link to="/app/admin/dashboard" exact
                     ><span class="text-gray-500 text-lg"
                       >Dashboard</span
                     ></router-link
@@ -67,6 +67,7 @@
                   </div>
 
                   <div
+                    aria-current="page"
                     class="
                       text-gray-300
                       hover:bg-gray-700
@@ -83,8 +84,7 @@
                     >
                   </div>
 
-                  <a
-                    href="#"
+                  <div
                     class="
                       text-gray-300
                       hover:bg-gray-700
@@ -95,8 +95,9 @@
                       text-sm
                       font-medium
                     "
-                    >Programm</a
                   >
+                    Programm
+                  </div>
 
                   <div
                     class="
@@ -159,8 +160,7 @@
         <div class="sm:hidden" id="mobile-menu">
           <div class="px-2 pt-2 pb-3 space-y-1">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a
-              href="#"
+            <div
               class="
                 bg-gray-900
                 text-white
@@ -171,12 +171,11 @@
                 text-base
                 font-medium
               "
-              aria-current="page"
-              >Dashboard</a
             >
+              <router-link to="/app/admin/dashboard">Dashboard</router-link>
+            </div>
             <!--Wenn Menü aufgeklappt-->
-            <a
-              href="#"
+            <div
               class="
                 text-gray-300
                 hover:bg-gray-700
@@ -188,12 +187,14 @@
                 text-base
                 font-medium
               "
-              ><router-link to="/app/admin/dashboard/ausstelleruebersicht"
+            >
+              <router-link to="/app/admin/dashboard/ausstelleruebersicht"
                 >Aussteller</router-link
               >
-            </a>
+            </div>
 
             <a
+              aria-current="page"
               href="#"
               class="
                 text-gray-300
@@ -206,8 +207,9 @@
                 text-base
                 font-medium
               "
-              >News</a
             >
+              News
+            </a>
 
             <a
               href="#"
@@ -230,22 +232,19 @@
       <!--END DASHBOARD-->
 
       <div class="bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20">
-        <p v-if="error" style="...">{{ error }}</p>
-
         <div class="mt-10 sm:mt-0">
           <div class="">
             <div class="text-gray-400 pb-3">
               <h3 class="text-lg font-medium leading-6 text-white pb-1">
-                Aussteller ändern
+                News anlegen
               </h3>
-              Folgende Aussteller sind momentan gespeichert und können verändert
-              werden. Bitte Geben Sie den Namen genau wie angezeigt in das
-              Pflichtfeld "Vor und Nachname" ein, um die Ausstellerinformationen
-              dieses Ausstellers abzuändern.
+              Hier können Sie neue News anlegen. Falls Sie alte News ändern
+              möchten, löschen Sie bitte den jeweiligen News-Post und legen Sie
+              einen neuen an. Folgende News-Titel sind momentan in der DB.
             </div>
 
             <p
-              v-for="(jeweiligerAussteller, index) in aussteller"
+              v-for="(jeweiligeNews, index) in news"
               :key="index"
               class="
                 flex
@@ -257,9 +256,7 @@
                 border border-gray-600
               "
             >
-              <span class="inline-flex"
-                >- {{ jeweiligerAussteller.aussteller_fullname }}</span
-              >
+              <span class="inline-flex">- {{ jeweiligeNews.news_titel }}</span>
             </p>
 
             <div class="mt-5 md:mt-0 md:col-span-2">
@@ -269,13 +266,13 @@
                     <label
                       for="name"
                       class="block text-sm font-medium text-gray-700"
-                      >Vor und Nachname</label
+                      >Neuer News-Titel</label
                     >
                     <input
-                      v-model="formdata.aussteller_fullname"
+                      v-model="formdata.news_titel"
                       maxlength="30"
                       type="text"
-                      id="full_name"
+                      id="news_titel"
                       placeholder="Pflichtfeld"
                       autocomplete="given-name"
                       class="
@@ -290,110 +287,19 @@
                         rounded-md
                       "
                     />
-                    <label class="block text-sm font-medium text-gray-700"
-                      >Handelsname (Branding-Name) des Ausstellers</label
-                    >
-                    <input
-                      maxlength="30"
-                      type="text"
-                      v-model="formdata.aussteller_brandingname"
-                      id="handelsname"
-                      placeholder="Optional"
-                      autocomplete="given-name"
-                      class="
-                        mt-1
-                        focus:ring-green-500
-                        focus:border-green-500
-                        block
-                        w-full
-                        shadow-sm
-                        sm:text-sm
-                        border-gray-300
-                        rounded-md
-                      "
-                    />
-                    <!--EMAIL START-->
-                    <div class="col-span-6 sm:col-span-4">
-                      <label
-                        for="email_address"
-                        class="block text-sm font-medium text-gray-700"
-                        >Aussteller-E-Mail</label
-                      >
-                      <input
-                        maxlength="100"
-                        type="text"
-                        v-model="formdata.aussteller_email"
-                        id="email_address"
-                        autocomplete="email"
-                        placeholder="Optional"
-                        class="
-                          mt-1
-                          focus:ring-green-500
-                          focus:border-green-500
-                          block
-                          w-full
-                          shadow-sm
-                          sm:text-sm
-                          border-gray-300
-                          rounded-md
-                        "
-                      />
-                    </div>
-                    <!--EMAIL END-->
-
-                    <div>
-                      <label
-                        for="company_website"
-                        class="block text-sm font-medium text-gray-700"
-                      >
-                        Aussteller-Website
-                      </label>
-                      <div class="mt-1 flex rounded-md shadow-sm">
-                        <span
-                          class="
-                            inline-flex
-                            items-center
-                            px-3
-                            rounded-l-md
-                            border border-r-0 border-gray-300
-                            bg-gray-50
-                            text-gray-500 text-sm
-                          "
-                        >
-                          http://
-                        </span>
-                        <input
-                          maxlength="50"
-                          type="text"
-                          v-model="formdata.aussteller_websiteurl"
-                          id="aussteller_website"
-                          class="
-                            focus:ring-green-500
-                            focus:border-green-500
-                            flex-1
-                            block
-                            w-full
-                            rounded-none rounded-r-md
-                            sm:text-sm
-                            border-gray-300
-                          "
-                          placeholder="www.example.com"
-                        />
-                      </div>
-                    </div>
 
                     <div class="col-span-6 sm:col-span-4">
                       <label
                         for="email_address"
                         class="block text-sm font-medium text-gray-700"
-                        >Beschreibung</label
+                        >News-Textinhalt</label
                       >
                       <textarea
-                        maxlength="250"
-                        v-model="formdata.aussteller_beschreibung"
-                        id="beschreibung"
+                        maxlength="400"
+                        v-model="formdata.news_textfeld"
+                        id="news_textfeld"
                         autocomplete="Beschreibung"
-                        placeholder="Optional [Beschreibung inkl. der angebotenen Produkte des Ausstellers]"
+                        placeholder="Pflichtfeld. [Inhalt der News, wird unter dem Titel eingefügt]"
                         class="
                           mt-1
                           focus:ring-green-500
@@ -408,100 +314,9 @@
                       />
                     </div>
 
-                    <div class="col-span-6">
-                      <label
-                        for="street_address"
-                        class="block text-sm font-medium text-gray-700"
-                        >Zonenfarbe am Markt</label
-                      >
-                      <!--COLORBUTTONS START-->
-                      <div class="pt-3">
-                        <label class="container" @click="assignColorBlue"
-                          >Blau
-                          <div
-                            class="bg-blue-500 h-2 w-5 rounded-md"
-                            @click="assignColorBlue"
-                          ></div>
-                          <input
-                            @click="assignColorBlue"
-                            type="radio"
-                            name="radio"
-                          />
-                          <span
-                            @click="assignColorBlue"
-                            class="checkmark"
-                          ></span>
-                        </label>
-                        <label class="container" @click="assignColorRed"
-                          >Rot
-                          <div
-                            @click="assignColorRed"
-                            class="bg-red-600 h-2 w-5 rounded-md"
-                          ></div>
-                          <input
-                            @click="assignColorRed"
-                            type="radio"
-                            name="radio"
-                          />
-                          <span
-                            @click="assignColorRed"
-                            class="checkmark"
-                          ></span>
-                        </label>
-                        <label class="container" @click="assignColorYellow"
-                          >Gelb
-                          <div
-                            @click="assignColorYellow"
-                            class="bg-yellow-300 h-2 w-5 rounded-md"
-                          ></div>
-                          <input
-                            @click="assignColorYellow"
-                            type="radio"
-                            name="radio"
-                          />
-                          <span
-                            @click="assignColorYellow"
-                            class="checkmark"
-                          ></span>
-                        </label>
-                        <label class="container" @click="assignColorGreen"
-                          >Grün
-                          <div
-                            @click="assignColorGreen"
-                            class="bg-green-500 h-2 w-5 rounded-md"
-                          ></div>
-                          <input
-                            @click="assignColorGreen"
-                            type="radio"
-                            name="radio"
-                          />
-                          <span
-                            @click="assignColorGreen"
-                            class="checkmark"
-                          ></span>
-                        </label>
-                        <label class="container" @click="assignColorBrown"
-                          >Braun
-                          <div
-                            @click="assignColorBrown"
-                            class="bg-yellow-900 h-2 w-5 rounded-md"
-                          ></div>
-                          <input
-                            @click="assignColorBrown"
-                            type="radio"
-                            name="radio"
-                          />
-                          <span
-                            @click="assignColorBrown"
-                            class="checkmark"
-                          ></span>
-                        </label>
-                      </div>
-                      <!--COLORBUTTONS END-->
-                    </div>
                     <!--IMAGE FILE UPLOAD START-->
                     <div class="py-2 bg-green-900 text-white mb-1 px-2">
-                      Ausstellerfoto Upload
+                      Foto Upload
                       <div class="alert">
                         <span
                           class="closebtn"
@@ -510,7 +325,7 @@
                         >
                         <strong>Achtung!</strong> Maximale Filesize: 1.9MB
                         <br />
-                        Bsp: ausstellername.jpg oder ausstellername.png
+                        Bsp: newsbildname.jpg oder newsbildname.png
                       </div>
                     </div>
                     <form
@@ -553,7 +368,7 @@
                           hover:bg-green-500
                         "
                       >
-                        Kein Ausstellerfoto uploaden
+                        Kein News-Foto uploaden
                       </button>
                     </div>
                     <!--IMAGE FILE UPLOAD END-->
@@ -607,44 +422,142 @@
 
 
 <script>
+import repository from "./repository/repository";
+import Swal from "sweetalert2";
+
 export default {
   data() {
     return {
-      name: "EditNews",
-      news: [],
+      name: "NewsAnlegen",
+      loading: null, //für die Einblendung vom loading-gif
+      image: "",
+      aussteller: [],
+      error: null,
+      submitvisibility: "hidden",
       formdata: {
-        news_titel: null,
-        news_textfeld: null,
-        news_bildurl: null,
+        aussteller_fullname: null,
+        aussteller_beschreibung: null,
+        aussteller_zonenfarbe: null,
+        aussteller_brandingname: null,
+        aussteller_email: null,
+        aussteller_websiteurl: null,
+        aussteller_bildurl: null,
       }, //Objekt zum Speichern der Model-Daten von oben
     };
   },
-  //wenn Component geladen ist, führe die Methoden zum
-  //Laden der Aussteller und Ausstellerfotos via Axios Request aus
-  mounted() {},
+
+  //Noch bevor Component gemounted ist, checke Login-Status
+  //Falls nicht eingeloggt -> Redirect zu Login-Page
+  created() {
+    //console.log(localStorage.getItem("isLoggedIn"));
+    if (localStorage.getItem("isLoggedIn") != "true") {
+      this.$router.push({ name: "adminLogin" });
+    }
+    this.loadAussteller();
+  },
 
   methods: {
+    async loadAussteller() {
+      this.loading = true;
+      let { data } = await repository.getAussteller();
+      this.aussteller = data.data;
+      this.loading = false;
+      console.log(this.aussteller);
+    },
+    showSubmitButton() {
+      this.submitvisibility = "block";
+    },
+    //image aus dem inputfield lesen
+    handleOnChange(e) {
+      this.image = e.target.files[0];
+      /*console.log(this.image);
+      console.log(this.image.name);*/
+    },
+    //image uploaden
+    upload() {
+      //formdata reset, falls öfter aufgerufen wurde
+      this.formdata.aussteller_bildurl = null;
+      const formData = new FormData();
+      formData.set("image", this.image);
+
+      axios
+        .post("http://localhost:8000/api/imageupload", formData)
+        .then((response) => {
+          //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
+          this.formdata.aussteller_bildurl = response.data.filepath;
+          Swal.fire({
+            title: "Foto gespeichert!",
+            confirmButtonText: "ok",
+            confirmButtonColor: "#3cb371",
+          });
+        });
+      //console.log(this.aussteller_bildurl);
+    },
+
+    //assign-Color Methods for Radio-Buttons
+    //Wird im Tailwind-Textformat in DB gespeichert und so wieder herausgeholt
+    assignColorRed() {
+      this.formdata.aussteller_zonenfarbe = "bg-red-600";
+    },
+    assignColorBlue() {
+      this.formdata.aussteller_zonenfarbe = "bg-blue-500";
+    },
+    assignColorGreen() {
+      this.formdata.aussteller_zonenfarbe = "bg-green-500";
+    },
+    assignColorBrown() {
+      this.formdata.aussteller_zonenfarbe = "bg-yellow-900";
+    },
+    assignColorYellow() {
+      this.formdata.aussteller_zonenfarbe = "bg-yellow-300";
+    },
+
     loggedIn() {
-      if (localStorage.getItem("loggedIn") == "true") return true;
-      else return false;
+      if (localStorage.getItem("isLoggedIn") == "true") {
+        return true;
+      } else return false;
+    },
+    async handleLogout() {
+      try {
+        await axios.post("http://localhost:8000/api/admin/logout");
+        //LocalStorage LoggedIn-Status löschen
+        localStorage.removeItem("isLoggedIn");
+        localStorage;
+        this.$router.push({ name: "adminLogin" });
+      } catch (error) {
+        //console.log(error);
+      }
     },
     submitform() {
       let formToJson = JSON.stringify(this.formdata);
-      console.log(formToJson);
+      //console.log(formToJson);
       try {
-        let result = axios.post("/api/news", {
-          this: this.formdata,
-        });
-        console.log(result.response.data);
-        /*.then((response) => {
-          console.log(response); // debug
-        })
-        .catch(function (error) {
-          // Fehlerbehandlung
-          console.log(error);
-        });*/
+        axios
+          .put("/api/aussteller/", this.formdata)
+          //console.log(result.response.data);
+          .then((response) => {
+            //console.log(response);
+            //alert(response.data);
+            Swal.fire({
+              title: response.data,
+              confirmButtonText: "ok",
+              confirmButtonColor: "#3cb371",
+            });
+            //Swal.fire(response.data);
+          })
+          .catch(function (error) {
+            // Fehlerbehandlung
+            //console.log(error);
+            Swal.fire({
+              title: error,
+              confirmButtonText: "ok",
+              confirmButtonColor: "#3cb371",
+            });
+          });
       } catch (error) {
-        console.error(error.response.data);
+        //console.error(error.response.data);
+      } finally {
+        this.$router.push({ name: "ausstelleruebersicht" });
       }
     },
   },
@@ -737,4 +650,5 @@ export default {
   color: black;
 }
 </style>
+
 

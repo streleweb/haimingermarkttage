@@ -1,140 +1,154 @@
 <template>
+  <div class="w-full h-full bg-gray-700">
+    <div
+      v-if="loggedIn() == false"
+      class="
+        flex
+        w-full
+        h-full
+        items-center
+        justify-center
+        text-red-900
+        bg-gray-900
+      "
+    >
+      Nicht eingeloggt! Bitte loggen Sie sich ein, um auf diese Seite zugreifen
+      zu können...
+    </div>
+    <!-- Check for Login-Status, only display if logged in-->
 
-<div class="w-full h-full bg-gray-700">
-<div v-if="loggedIn() == false" class="flex w-full h-full items-center justify-center text-red-900 bg-gray-900"> 
-  Nicht eingeloggt! Bitte loggen Sie sich ein, um auf diese Seite zugreifen zu können...</div>
-<!-- Check for Login-Status, only display if logged in-->
+    <!-- DASHBOARD -->
+    <div v-if="loggedIn()" class="h-full w-full">
+      <nav class="bg-gray-800 border-b border-gray-300">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div class="relative flex items-center justify-between h-16">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <span class="sr-only">Open main menu</span>
 
-<!-- DASHBOARD -->
-<div v-if="loggedIn()" class="h-full w-full">
- 
-<nav class="bg-gray-800 border-b border-gray-300">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-      <div class="relative flex items-center justify-between h-16">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-          
-            <span class="sr-only">Open main menu</span>
-           
-            <!--
+              <!--
             Icon when menu is open.
 
             Heroicon name: outline/x
 
             Menu open: "block", Menu closed: "hidden"
           -->
-            <svg
-              class="hidden h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="
-            flex-1 flex
-            items-center
-            justify-center
-            sm:items-stretch
-            sm:justify-start
-          "
-        >
-          <div class="flex-shrink-0 flex items-center"></div>
-          <div class="hidden sm:block sm:ml-6">
-            <div class="flex space-x-4">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <router-link to="/app/admin/dashboard"
-                ><span class="text-gray-500 text-lg"
-                  >Dashboard</span
-                ></router-link
+              <svg
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
               >
-              <div
-                class="
-                  bg-gray-900
-                  text-white
-                  px-3
-                  py-2
-                  rounded-md
-                  text-sm
-                  font-medium
-                "
-                aria-current="page"
-              >
-                <router-link to="/app/admin/dashboard/ausstelleruebersicht"
-                  >Aussteller
-                </router-link>
-              </div>
-
-              <div
-                class="
-                  text-gray-300
-                  hover:bg-gray-700
-                  hover:text-white
-                  px-3
-                  py-2
-                  rounded-md
-                  text-sm
-                  font-medium
-                "
-              >
-                <router-link to="/app/admin/dashboard/news">News</router-link>
-              </div>
-
-              <a
-                href="#"
-                class="
-                  text-gray-300
-                  hover:bg-gray-700
-                  hover:text-white
-                  px-3
-                  py-2
-                  rounded-md
-                  text-sm
-                  font-medium
-                "
-                >Programm</a
-              >
-
-              <div
-                class="
-                  text-gray-300
-                  hover:bg-gray-700
-                  hover:text-white
-                  px-3
-                  py-2
-                  rounded-md
-                  text-sm
-                  font-medium
-                "
-                ><router-link to="/app/admin/dashboard/editfotogalerie">Fotogalerie</router-link></div
-              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
             </div>
-          </div>
-        </div>
-        <div
-          class="
-            absolute
-            inset-y-0
-            right-0
-            flex
-            items-center
-            pr-2
-            sm:static
-            sm:inset-auto
-            sm:ml-6
-            sm:pr-0
-          "
-        >
-          <div
+            <div
+              class="
+                flex-1 flex
+                items-center
+                justify-center
+                sm:items-stretch
+                sm:justify-start
+              "
+            >
+              <div class="flex-shrink-0 flex items-center"></div>
+              <div class="hidden sm:block sm:ml-6">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <router-link to="/app/admin/dashboard"
+                    ><span class="text-gray-500 text-lg"
+                      >Dashboard</span
+                    ></router-link
+                  >
+                  <div
+                    class="
+                      bg-gray-900
+                      text-white
+                      px-3
+                      py-2
+                      rounded-md
+                      text-sm
+                      font-medium
+                    "
+                    aria-current="page"
+                  >
+                    <router-link to="/app/admin/dashboard/ausstelleruebersicht"
+                      >Aussteller
+                    </router-link>
+                  </div>
+
+                  <div
+                    class="
+                      text-gray-300
+                      hover:bg-gray-700
+                      hover:text-white
+                      px-3
+                      py-2
+                      rounded-md
+                      text-sm
+                      font-medium
+                    "
+                  >
+                    <router-link to="/app/admin/dashboard/news"
+                      >News</router-link
+                    >
+                  </div>
+
+                  <a
+                    href="#"
+                    class="
+                      text-gray-300
+                      hover:bg-gray-700
+                      hover:text-white
+                      px-3
+                      py-2
+                      rounded-md
+                      text-sm
+                      font-medium
+                    "
+                    >Programm</a
+                  >
+
+                  <div
+                    class="
+                      text-gray-300
+                      hover:bg-gray-700
+                      hover:text-white
+                      px-3
+                      py-2
+                      rounded-md
+                      text-sm
+                      font-medium
+                    "
+                  >
+                    <router-link to="/app/admin/dashboard/editfotogalerie"
+                      >Fotogalerie</router-link
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                absolute
+                inset-y-0
+                right-0
+                flex
+                items-center
+                pr-2
+                sm:static
+                sm:inset-auto
+                sm:ml-6
+                sm:pr-0
+              "
+            >
+              <div
                 class="
                   text-gray-300
                   hover:bg-red-900
@@ -146,197 +160,225 @@
                   font-medium
                 "
               >
-            <span @click="handleLogout()" class="text-white cursor-pointer">Logout <img src="/public/images/icons/svgs/ausloggen.svg" class= "filter-white" alt=""></span>
-          </div></div>
+                <span @click="handleLogout()" class="text-white cursor-pointer"
+                  >Logout
+                  <img
+                    src="/public/images/icons/svgs/ausloggen.svg"
+                    class="filter-white"
+                    alt=""
+                /></span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    
 
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="sm:hidden" id="mobile-menu">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a
-          href="#"
-          class="
-            text-gray-300
-            hover:bg-gray-700
-            hover:text-white
-            block
-            px-3
-            py-1
-            rounded-md
-            text-base
-            font-medium
-          "
-          ><router-link to="/app/admin/dashboard">Dashboard</router-link></a
-        >
-        <a
-          href="#"
-          class="
-            bg-gray-900
-            text-white
-            block
-            px-3
-            py-1
-            rounded-md
-            text-base
-            font-medium
-          "
-          aria-current="page"
-          >Aussteller</a
-        > 
-        <!--Wenn Menü aufgeklappt-->
-        
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a
+              href="#"
+              class="
+                text-gray-300
+                hover:bg-gray-700
+                hover:text-white
+                block
+                px-3
+                py-1
+                rounded-md
+                text-base
+                font-medium
+              "
+              ><router-link to="/app/admin/dashboard">Dashboard</router-link></a
+            >
+            <a
+              href="#"
+              class="
+                bg-gray-900
+                text-white
+                block
+                px-3
+                py-1
+                rounded-md
+                text-base
+                font-medium
+              "
+              aria-current="page"
+              >Aussteller</a
+            >
+            <!--Wenn Menü aufgeklappt-->
 
-        <a
-          href="#"
-          class="
-            text-gray-300
-            hover:bg-gray-700
-            hover:text-white
-            block
-            px-3
-            py-1
-            rounded-md
-            text-base
-            font-medium
-          "
-          >News</a
-        >
+            <div
+              class="
+                text-gray-300
+                hover:bg-gray-700
+                hover:text-white
+                block
+                px-3
+                py-1
+                rounded-md
+                text-base
+                font-medium
+              "
+            >
+              <router-link to="/app/admin/dashboard/news">News</router-link>
+            </div>
 
-        <a
-          href="#"
-          class="
-            text-gray-300
-            hover:bg-gray-700
-            hover:text-white
-            block
-            px-3
-            py-1
-            rounded-md
-            text-base
-            font-medium
-          "
-          >Programm</a
-        >
-      </div>
-    </div>
-  </nav>
-  <!-- DASHBOARD ENDE-->
+            <a
+              href="#"
+              class="
+                text-gray-300
+                hover:bg-gray-700
+                hover:text-white
+                block
+                px-3
+                py-1
+                rounded-md
+                text-base
+                font-medium
+              "
+              >Programm</a
+            >
+          </div>
+        </div>
+      </nav>
+      <!-- DASHBOARD ENDE-->
 
-   <p v-if="loading">
+      <p v-if="loading">
         <img
           src="/images/icons/gifs/loadingtransparent.gif"
           alt="loading..."
-          class="m-auto resize-loadinggif absolute z-5000 bg-gray-900"
+          class="resize-loadinggif fixed top-1/2 left-1/2 z-5000 bg-gray-900"
         />
       </p>
 
-  <div class="ausstellergradient">
-    <div class="ausstellercontainer">
-      
-      <div class="inline-flex justify-start gap-3 pt-5 px-4 items-center w-full">
-      <router-link to="/app/admin/dashboard/ausstelleraendern"><button class="btn btn-blue">Aussteller ändern</button></router-link>
-      <!--Neuen Aussteller hinzufügen Button-->
-      <router-link to="/app/admin/dashboard/ausstelleranlegen"><button class="btn btn-green">Neuen Aussteller hinzufügen</button></router-link>
-      <!--Neuen Aussteller hinzufügen Button END-->
-      </div>
-      <div
-        class="
-          grid grid-cols-1
-          sm:grid-cols-2
-          lg:grid-cols-3
-          gap-8
-          items-center
-          w-full pt-4
-        "
-      >
-      <p v-if="error" style="...">{{error}}</p>
-        <article
-          v-for="(jeweiligerAussteller, index) in aussteller"
-          :key="index"
-          class="articlestyling mx-auto overflow-hidden w-full"
-        >
-          <img
-            v-if="imageUrlNotEmpty(index)"
-            :src="imgUrl(index)"
-            alt=""
-            class="border-b-2 border-yellow-50"
-          />
-          <img
-            v-else
-            src="/images/icons/svgs/aussteller.svg"
-            alt="Ausstellerfoto"
+      <div class="ausstellergradient">
+        <div class="ausstellercontainer">
+          <div
             class="
-              filter-white
-              bg-gray-50 bg-opacity-20
-              border-b-2 border-black
+              inline-flex
+              justify-start
+              gap-3
+              pt-5
+              px-4
+              items-center
+              w-full
             "
-          />
-          <div class="text text-center lg:text-lg">
-            <h3 class="font-bold text-gray-800 mb-2">
-              {{ jeweiligerAussteller.aussteller_fullname }}
-            </h3>
-            <h2
-              v-if="ausstellerBrandingNameNotEmpty(index)"
-              class="font-semibold text-gray-700 mb-2"
+          >
+            <router-link to="/app/admin/dashboard/ausstelleraendern"
+              ><button class="btn btn-blue">
+                Aussteller ändern
+              </button></router-link
             >
-              {{ jeweiligerAussteller.aussteller_brandingname }}
-            </h2>
-            <p class="text-sm lg:text-base mb-2">
-              {{ jeweiligerAussteller.aussteller_beschreibung }}
-            </p>
-            <div
-              class="
-                bg-gray-800
-                relative
-                bottom-0
-                left-0
-                right-0
-                h-10
-                flex
-                justify-center
-                items-center
-                rounded-lg
-              "
+            <!--Neuen Aussteller hinzufügen Button-->
+            <router-link to="/app/admin/dashboard/ausstelleranlegen"
+              ><button class="btn btn-green">
+                Neuen Aussteller hinzufügen
+              </button></router-link
             >
-              <ul class="inline-flex gap-2 justify-center items-center">
-                <li v-if="webUrlNotEmpty(index)">
-                  <a :href="webUrl(index)" target="_blank"
-                    ><img
-                      src="/images/icons/svgs/www.svg"
-                      class="resize-icon filter-white-icons"
-                      alt="website"
-                  /></a>
-                </li>
-
-                <li v-if="ausstellerEmailNotEmpty(index)">
-                  <a :href="ausstellerEmail(index)" target="_newtab"
-                    ><img
-                      src="/images/icons/svgs/email.png"
-                      class="h-4 filter-white-icons"
-                      alt="website"
-                  /></a>
-                </li>
-
-                <li v-if="zonenFarbeNotEmpty(index)" class="h-5 w-32">
-                  <Farbzone :zonen-farbe="zonenFarbe(index)"></Farbzone>
-                </li>
-              </ul>
-            </div>
-            <div class="gap-2 justify-start items-center mt-3">
-              
-              <button key:index @click="deleteAussteller(index)" class="btn btn-red">delete</button>
-            </div>
+            <!--Neuen Aussteller hinzufügen Button END-->
           </div>
-        </article>
+          <div
+            class="
+              grid grid-cols-1
+              sm:grid-cols-2
+              lg:grid-cols-3
+              gap-8
+              items-center
+              w-full
+              pt-4
+            "
+          >
+            <p v-if="error" style="...">{{ error }}</p>
+            <article
+              v-for="(jeweiligerAussteller, index) in aussteller"
+              :key="index"
+              class="articlestyling mx-auto overflow-hidden w-full"
+            >
+              <img
+                v-if="imageUrlNotEmpty(index)"
+                :src="imgUrl(index)"
+                alt=""
+                class="border-b-2 border-yellow-50"
+              />
+              <img
+                v-else
+                src="/images/icons/svgs/aussteller.svg"
+                alt="Ausstellerfoto"
+                class="
+                  filter-white
+                  bg-gray-50 bg-opacity-20
+                  border-b-2 border-black
+                "
+              />
+              <div class="text text-center lg:text-lg">
+                <h3 class="font-bold text-gray-800 mb-2">
+                  {{ jeweiligerAussteller.aussteller_fullname }}
+                </h3>
+                <h2
+                  v-if="ausstellerBrandingNameNotEmpty(index)"
+                  class="font-semibold text-gray-700 mb-2"
+                >
+                  {{ jeweiligerAussteller.aussteller_brandingname }}
+                </h2>
+                <p class="text-sm lg:text-base mb-2">
+                  {{ jeweiligerAussteller.aussteller_beschreibung }}
+                </p>
+                <div
+                  class="
+                    bg-gray-800
+                    relative
+                    bottom-0
+                    left-0
+                    right-0
+                    h-10
+                    flex
+                    justify-center
+                    items-center
+                    rounded-lg
+                  "
+                >
+                  <ul class="inline-flex gap-2 justify-center items-center">
+                    <li v-if="webUrlNotEmpty(index)">
+                      <a :href="webUrl(index)" target="_blank"
+                        ><img
+                          src="/images/icons/svgs/www.svg"
+                          class="resize-icon filter-white-icons"
+                          alt="website"
+                      /></a>
+                    </li>
 
-        <!-- end willkommen -->
+                    <li v-if="ausstellerEmailNotEmpty(index)">
+                      <a :href="ausstellerEmail(index)" target="_newtab"
+                        ><img
+                          src="/images/icons/svgs/email.png"
+                          class="h-4 filter-white-icons"
+                          alt="website"
+                      /></a>
+                    </li>
+
+                    <li v-if="zonenFarbeNotEmpty(index)" class="h-5 w-32">
+                      <Farbzone :zonen-farbe="zonenFarbe(index)"></Farbzone>
+                    </li>
+                  </ul>
+                </div>
+                <div class="gap-2 justify-start items-center mt-3">
+                  <button
+                    key:index
+                    @click="deleteAussteller(index)"
+                    class="btn btn-red"
+                  >
+                    delete
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- end willkommen -->
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  </div>
   </div>
 </template>
 

@@ -12,7 +12,7 @@ import Datenschutz from './components/footercomponents/Datenschutz';
 import Impressum from './components/footercomponents/Impressum';
 import Login from './components/VorstandAdminComponents/Login';
 import Dashboard from './components/VorstandAdminComponents/Dashboard';
-import EditNews from './components/VorstandAdminComponents/EditNews';
+import NewsAnlegen from './components/VorstandAdminComponents/NewsAnlegen';
 import AusstellerUebersicht from './components/VorstandAdminComponents/AusstellerUebersicht';
 import Register from './components/VorstandAdminComponents/Register';
 import AusstellerAendern from './components/VorstandAdminComponents/AusstellerAendern';
@@ -95,7 +95,6 @@ export default {
             path: '/app/admin/dashboard',
             component: Dashboard,
             name: 'admindashboard',
-            meta: { requiresAuth: true } //protected - Login erforderlich
         },
 
         {
@@ -107,20 +106,17 @@ export default {
             path: '/app/admin/dashboard/ausstelleraendern',
             name: 'AusstellerAendern',
             component: AusstellerAendern,
-            meta: { requiresAuth: true } //protected - Login erforderlich
         },
 
         {
             path: '/app/admin/dashboard/news',
-            component: EditNews,
-            meta: { requiresAuth: true } //protected - Login erforderlich
+            component: NewsAnlegen,
         },
 
         {
             path: '/app/admin/dashboard/ausstelleruebersicht',
             component: AusstellerUebersicht,
             name: 'ausstelleruebersicht',
-            meta: { requiresAuth: true } //protected - Login erforderlich
         },
 
         {

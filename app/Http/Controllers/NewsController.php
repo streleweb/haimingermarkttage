@@ -24,10 +24,11 @@ class NewsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    /*
     public function create()
     {
         return view('news.newsanlegen');
-    }
+    }*/
 
     /**
      * Store a newly created resource in storage.
@@ -41,7 +42,7 @@ class NewsController extends Controller
         [
             'news_titel' => 'required|min:2|max:30',
             'news_textfeld'=> 'required|min:10|max:400',
-            'news_bild_url'=> 'nullable|max:100',
+            'news_bild_url'=> 'nullable|max:200',
         ]);
 
         if ($validator->fails()) {
@@ -78,10 +79,11 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
+    /*
     public function edit(News $news)
     {
         return view('news.edit')->with('news',$news);
-    }
+    }*/
 
     /**
      * Update the specified resource in storage.
