@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Storage;
 use Log;
 
 
-class ImageUploadController extends Controller
+class ImageController extends Controller
 {
     /**
      * Speichere Ausstellerfotos, welche vom Admindashboard aus gesendet werden
@@ -48,8 +48,6 @@ class ImageUploadController extends Controller
         $file = $request->file("image");
         Storage::delete($file);
     }
-
-
 
 
 }
