@@ -7452,6 +7452,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -7461,17 +7472,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       loading: null,
       //für die Einblendung vom loading-gif
       image: "",
-      aussteller: [],
+      news: [],
       error: null,
       submitvisibility: "hidden",
       formdata: {
-        aussteller_fullname: null,
-        aussteller_beschreibung: null,
-        aussteller_zonenfarbe: null,
-        aussteller_brandingname: null,
-        aussteller_email: null,
-        aussteller_websiteurl: null,
-        aussteller_bildurl: null
+        news_titel: null,
+        news_textfeld: null,
+        news_bild_url: null
       } //Objekt zum Speichern der Model-Daten von oben
 
     };
@@ -7486,10 +7493,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       });
     }
 
-    this.loadAussteller();
+    this.loadNews();
   },
   methods: {
-    loadAussteller: function loadAussteller() {
+    fotoEnthalten: function fotoEnthalten(index) {
+      return this.news[index].news_bild_url != null && this.news[index].news_bild_url != "" ? true : false;
+    },
+    loadNews: function loadNews() {
       var _this = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
@@ -7501,14 +7511,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _this.loading = true;
                 _context.next = 3;
-                return _repository_repository__WEBPACK_IMPORTED_MODULE_1__.default.getAussteller();
+                return _repository_repository__WEBPACK_IMPORTED_MODULE_1__.default.getNews();
 
               case 3:
                 _yield$repository$get = _context.sent;
                 data = _yield$repository$get.data;
-                _this.aussteller = data.data;
+                _this.news = data.data;
                 _this.loading = false;
-                console.log(_this.aussteller);
+                console.log(_this.news);
 
               case 8:
               case "end":
@@ -7517,6 +7527,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           }
         }, _callee);
       }))();
+    },
+    urlOfFoto: function urlOfFoto(index) {
+      try {
+        return "/images/aussteller/" + this.news[index].news_bild_url;
+      } catch (error) {
+        console.log(error);
+      }
     },
     showSubmitButton: function showSubmitButton() {
       this.submitvisibility = "block";
@@ -7532,35 +7549,31 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var _this2 = this;
 
       //formdata reset, falls öfter aufgerufen wurde
-      this.formdata.aussteller_bildurl = null;
+      this.formdata.news_bild_url = null;
       var formData = new FormData();
       formData.set("image", this.image);
       axios.post("http://localhost:8000/api/imageupload", formData).then(function (response) {
-        //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
-        _this2.formdata.aussteller_bildurl = response.data.filepath;
+        //Server-Responseurl des Images zur bildurl innerhalb der formdata adden
+        _this2.formdata.news_bild_url = response.data.filepath;
         sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
           title: "Foto gespeichert!",
           confirmButtonText: "ok",
           confirmButtonColor: "#3cb371"
         });
-      }); //console.log(this.aussteller_bildurl);
+      });
     },
-    //assign-Color Methods for Radio-Buttons
-    //Wird im Tailwind-Textformat in DB gespeichert und so wieder herausgeholt
-    assignColorRed: function assignColorRed() {
-      this.formdata.aussteller_zonenfarbe = "bg-red-600";
-    },
-    assignColorBlue: function assignColorBlue() {
-      this.formdata.aussteller_zonenfarbe = "bg-blue-500";
-    },
-    assignColorGreen: function assignColorGreen() {
-      this.formdata.aussteller_zonenfarbe = "bg-green-500";
-    },
-    assignColorBrown: function assignColorBrown() {
-      this.formdata.aussteller_zonenfarbe = "bg-yellow-900";
-    },
-    assignColorYellow: function assignColorYellow() {
-      this.formdata.aussteller_zonenfarbe = "bg-yellow-300";
+    deleteNews: function deleteNews(index) {
+      var _this3 = this;
+
+      axios["delete"]("http://localhost:8000/api/news/" + this.news[index].id).then(function (response) {
+        console.log(response); //laravel response zu component object hinzufügen zur späteren Ausgabe
+
+        _this3.laravelResponseData = response.data;
+        sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
+          title: response.data
+        });
+        location.reload();
+      });
     },
     loggedIn: function loggedIn() {
       if (localStorage.getItem("isLoggedIn") == "true") {
@@ -7568,7 +7581,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       } else return false;
     },
     handleLogout: function handleLogout() {
-      var _this3 = this;
+      var _this4 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
@@ -7584,7 +7597,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 localStorage.removeItem("isLoggedIn");
                 localStorage;
 
-                _this3.$router.push({
+                _this4.$router.push({
                   name: "adminLogin"
                 });
 
@@ -7607,7 +7620,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var formToJson = JSON.stringify(this.formdata); //console.log(formToJson);
 
       try {
-        axios.put("/api/aussteller/", this.formdata) //console.log(result.response.data);
+        axios.post("/api/news", this.formdata) //console.log(result.response.data);
         .then(function (response) {
           //console.log(response);
           //alert(response.data);
@@ -7626,10 +7639,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           });
         });
       } catch (error) {//console.error(error.response.data);
-      } finally {
-        this.$router.push({
-          name: "ausstelleruebersicht"
-        });
+      } finally {//location.reload();
       }
     }
   }
@@ -8924,6 +8934,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   getAussteller: function getAussteller() {
     return _api_api__WEBPACK_IMPORTED_MODULE_0__.default.get("http://localhost:8000/api/aussteller");
+  },
+  getNews: function getNews() {
+    return _api_api__WEBPACK_IMPORTED_MODULE_0__.default.get("http://localhost:8000/api/news");
   },
   postFotogalerie: function postFotogalerie(formData) {
     return _api_api__WEBPACK_IMPORTED_MODULE_0__.default.post("http://localhost:8000/api/imageupload", formData);
@@ -39838,16 +39851,43 @@ var render = function() {
                     _vm._v(" "),
                     _vm._l(_vm.news, function(jeweiligeNews, index) {
                       return _c(
-                        "p",
+                        "div",
                         {
                           key: index,
                           staticClass:
-                            "\n              flex\n              justify-center\n              pl-3\n              text-white\n              bg-green-900\n              mb-3\n              border border-gray-600\n            "
+                            "\n              flex\n              justify-evenly\n              pl-3\n              text-white\n              bg-green-900\n              mb-3\n              border border-gray-600\n            "
                         },
                         [
-                          _c("span", { staticClass: "inline-flex" }, [
-                            _vm._v("- " + _vm._s(jeweiligeNews.news_titel))
-                          ])
+                          _c(
+                            "span",
+                            { staticClass: "flex w-32 items-center" },
+                            [_vm._v(_vm._s(jeweiligeNews.news_titel))]
+                          ),
+                          _vm._v(" "),
+                          _vm.fotoEnthalten(index)
+                            ? _c("img", {
+                                staticClass:
+                                  "w-20 h-20 border border-gray-50 rounded-lg my-2",
+                                attrs: {
+                                  src: _vm.urlOfFoto(index),
+                                  alt: "Foto"
+                                }
+                              })
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn btn-red",
+                              attrs: { "key:index": "" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.deleteNews(index)
+                                }
+                              }
+                            },
+                            [_vm._v("\n              delete\n            ")]
+                          )
                         ]
                       )
                     }),

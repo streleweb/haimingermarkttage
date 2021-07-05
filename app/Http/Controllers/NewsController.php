@@ -6,6 +6,7 @@ use App\Models\News;
 use App\Http\Resources\NewsResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Carbon\Carbon; //Date
 
 class NewsController extends Controller
 {
@@ -46,17 +47,20 @@ class NewsController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return Response::json([
-                'error' => $validator->errors()], 200);
+            return \response('Validierung fehlgeschlagen, der News-Titel muss angegeben werden!', 200)
+            ->header('Content-Type', 'text/plain');
             
         }else {
             $news = new News();
             $news->news_titel = $request->news_titel;
             $news->news_textfeld = $request->news_textfeld;
             $news->news_bild_url = $request->news_bild_url;
+            $date = Carbon::now();
+            $news->created_at=$date->toDateTimeString();
            
             if($news->save()){
-                return new NewsResource($news);
+                return \response('News-Post erfolgreich gespeichert!', 200)
+                ->header('Content-Type', 'text/plain');
             }
         }
     }
@@ -92,17 +96,25 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, News $news)
+    public function update($id)
     {
         $news = News::findOrFail($id);
         $news->id = $request->id;
         $news->news_titel = $request->news_titel;
         $news->news_textfeld = $request->news_textfeld;
         $news->news_bild_url = $request->news_bild_url;
+
+        $date = Carbon::now();
+        $news->updated_at=$date->toDateTimeString();
+
         if($news->save())
         {
-            return new NewsResource($news);
-        };
+            return \response('News-Post erfolgreich in DB gespeichert!', 200)
+            ->header('Content-Type', 'text/plain');
+        }else {
+            return \response('News-Post konnte nicht gespeichert werden!', 200)
+            ->header('Content-Type', 'text/plain');
+        }
     }
 
     /**

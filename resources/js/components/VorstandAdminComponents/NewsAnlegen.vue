@@ -243,12 +243,12 @@
               einen neuen an. Folgende News-Titel sind momentan in der DB.
             </div>
 
-            <p
+            <div
               v-for="(jeweiligeNews, index) in news"
               :key="index"
               class="
                 flex
-                justify-center
+                justify-evenly
                 pl-3
                 text-white
                 bg-green-900
@@ -256,8 +256,19 @@
                 border border-gray-600
               "
             >
-              <span class="inline-flex">- {{ jeweiligeNews.news_titel }}</span>
-            </p>
+              <span class="flex w-32 items-center">{{
+                jeweiligeNews.news_titel
+              }}</span>
+              <img
+                v-if="fotoEnthalten(index)"
+                :src="urlOfFoto(index)"
+                class="w-20 h-20 border border-gray-50 rounded-lg my-2"
+                alt="Foto"
+              />
+              <button key:index @click="deleteNews(index)" class="btn btn-red">
+                delete
+              </button>
+            </div>
 
             <div class="mt-5 md:mt-0 md:col-span-2">
               <div>
@@ -431,17 +442,13 @@ export default {
       name: "NewsAnlegen",
       loading: null, //für die Einblendung vom loading-gif
       image: "",
-      aussteller: [],
+      news: [],
       error: null,
       submitvisibility: "hidden",
       formdata: {
-        aussteller_fullname: null,
-        aussteller_beschreibung: null,
-        aussteller_zonenfarbe: null,
-        aussteller_brandingname: null,
-        aussteller_email: null,
-        aussteller_websiteurl: null,
-        aussteller_bildurl: null,
+        news_titel: null,
+        news_textfeld: null,
+        news_bild_url: null,
       }, //Objekt zum Speichern der Model-Daten von oben
     };
   },
@@ -453,16 +460,31 @@ export default {
     if (localStorage.getItem("isLoggedIn") != "true") {
       this.$router.push({ name: "adminLogin" });
     }
-    this.loadAussteller();
+    this.loadNews();
   },
 
   methods: {
-    async loadAussteller() {
+    fotoEnthalten(index) {
+      return this.news[index].news_bild_url != null &&
+        this.news[index].news_bild_url != ""
+        ? true
+        : false;
+    },
+
+    async loadNews() {
       this.loading = true;
-      let { data } = await repository.getAussteller();
-      this.aussteller = data.data;
+      let { data } = await repository.getNews();
+      this.news = data.data;
       this.loading = false;
-      console.log(this.aussteller);
+      console.log(this.news);
+    },
+
+    urlOfFoto(index) {
+      try {
+        return "/images/aussteller/" + this.news[index].news_bild_url;
+      } catch (error) {
+        console.log(error);
+      }
     },
     showSubmitButton() {
       this.submitvisibility = "block";
@@ -476,40 +498,35 @@ export default {
     //image uploaden
     upload() {
       //formdata reset, falls öfter aufgerufen wurde
-      this.formdata.aussteller_bildurl = null;
+      this.formdata.news_bild_url = null;
       const formData = new FormData();
       formData.set("image", this.image);
 
       axios
         .post("http://localhost:8000/api/imageupload", formData)
         .then((response) => {
-          //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
-          this.formdata.aussteller_bildurl = response.data.filepath;
+          //Server-Responseurl des Images zur bildurl innerhalb der formdata adden
+          this.formdata.news_bild_url = response.data.filepath;
           Swal.fire({
             title: "Foto gespeichert!",
             confirmButtonText: "ok",
             confirmButtonColor: "#3cb371",
           });
         });
-      //console.log(this.aussteller_bildurl);
     },
 
-    //assign-Color Methods for Radio-Buttons
-    //Wird im Tailwind-Textformat in DB gespeichert und so wieder herausgeholt
-    assignColorRed() {
-      this.formdata.aussteller_zonenfarbe = "bg-red-600";
-    },
-    assignColorBlue() {
-      this.formdata.aussteller_zonenfarbe = "bg-blue-500";
-    },
-    assignColorGreen() {
-      this.formdata.aussteller_zonenfarbe = "bg-green-500";
-    },
-    assignColorBrown() {
-      this.formdata.aussteller_zonenfarbe = "bg-yellow-900";
-    },
-    assignColorYellow() {
-      this.formdata.aussteller_zonenfarbe = "bg-yellow-300";
+    deleteNews(index) {
+      axios
+        .delete("http://localhost:8000/api/news/" + this.news[index].id)
+        .then((response) => {
+          console.log(response);
+          //laravel response zu component object hinzufügen zur späteren Ausgabe
+          this.laravelResponseData = response.data;
+          Swal.fire({
+            title: response.data,
+          });
+          location.reload();
+        });
     },
 
     loggedIn() {
@@ -533,7 +550,7 @@ export default {
       //console.log(formToJson);
       try {
         axios
-          .put("/api/aussteller/", this.formdata)
+          .post("/api/news", this.formdata)
           //console.log(result.response.data);
           .then((response) => {
             //console.log(response);
@@ -557,7 +574,7 @@ export default {
       } catch (error) {
         //console.error(error.response.data);
       } finally {
-        this.$router.push({ name: "ausstelleruebersicht" });
+        //location.reload();
       }
     },
   },

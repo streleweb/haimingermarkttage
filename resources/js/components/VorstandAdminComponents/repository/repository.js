@@ -20,6 +20,10 @@ export default {
         return api.get("http://localhost:8000/api/aussteller");
     },
 
+    getNews() {
+        return api.get("http://localhost:8000/api/news");
+    },
+
     postFotogalerie(formData) {
         return api.post("http://localhost:8000/api/imageupload", formData);
     },
