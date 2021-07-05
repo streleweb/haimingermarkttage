@@ -265,6 +265,9 @@
                 class="w-20 h-20 border border-gray-50 rounded-lg my-2"
                 alt="Foto"
               />
+              <div v-else class="flex w-20 h-20 justify-center items-center">
+                Kein Foto
+              </div>
               <button key:index @click="deleteNews(index)" class="btn btn-red">
                 delete
               </button>
@@ -281,7 +284,7 @@
                     >
                     <input
                       v-model="formdata.news_titel"
-                      maxlength="30"
+                      maxlength="70"
                       type="text"
                       id="news_titel"
                       placeholder="Pflichtfeld"
@@ -306,7 +309,7 @@
                         >News-Textinhalt</label
                       >
                       <textarea
-                        maxlength="400"
+                        maxlength="255"
                         v-model="formdata.news_textfeld"
                         id="news_textfeld"
                         autocomplete="Beschreibung"
@@ -574,7 +577,7 @@ export default {
       } catch (error) {
         //console.error(error.response.data);
       } finally {
-        //location.reload();
+        location.reload();
       }
     },
   },

@@ -3310,15 +3310,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -7069,6 +7060,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       inputfieldred: false
     };
   },
+  beforeCreate: function beforeCreate() {
+    if (localStorage.getItem("isLoggedIn") == "true") {
+      this.$router.push({
+        name: "admindashboard"
+      });
+    }
+  },
   watch: {
     error: function error() {
       if (this.error != null) {
@@ -7176,6 +7174,9 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+//
+//
+//
 //
 //
 //
@@ -7786,7 +7787,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           });
         });
       } catch (error) {//console.error(error.response.data);
-      } finally {//location.reload();
+      } finally {
+        location.reload();
       }
     }
   }
@@ -9525,7 +9527,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-12793f84] {\n  background: #eee5e9;\n  border: none;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: none;\n  text-align: center;\n  width: 80%;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-12793f84]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-12793f84] {\n  margin-top: 1rem;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: 50%;\n  z-index: 1;\n}\n.text[data-v-12793f84] {\n  padding: 0 20px 20px;\n}\n.ausstellergradient[data-v-12793f84] {\n  background-image: linear-gradient(to bottom, #536976, #292e49);\n  background-repeat: no-repeat;\n  background-size: cover;\n  background: linear-gradient(rgba(90, 65, 42, 0.342), rgba(65, 65, 65, 0.3)),\r\n    url(\"/images/background/hb1.jpg\");\n  background-repeat: no-repeat;\n  background-position: 50% 50%;\n  background-size: cover;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-12793f84] {\n  background: #eee5e9;\n  border: white;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 0.4rem;\n  text-align: center;\n  width: 80%;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-12793f84]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-12793f84] {\n  max-width: 50%;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  margin-left: auto;\n  margin-right: auto;\n  z-index: 1;\n}\n.text[data-v-12793f84] {\n  padding: 0 20px 20px;\n}\n.ausstellergradient[data-v-12793f84] {\n  background-image: linear-gradient(to bottom, #536976, #292e49);\n  background-repeat: no-repeat;\n  background-size: cover;\n  background: linear-gradient(rgba(90, 65, 42, 0.342), rgba(65, 65, 65, 0.3)),\r\n    url(\"/images/background/hb1.jpg\");\n  background-repeat: no-repeat;\n  background-position: 50% 50%;\n  background-size: cover;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -35972,54 +35974,53 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        {
-          staticClass:
-            "\n        grid grid-cols-1\n        sm:grid-cols-2\n        lg:grid-cols-3\n        gap-8\n        items-center\n        w-full\n      "
-        },
+        { staticClass: "grid grid-cols-1 gap-20 items-center w-full" },
         _vm._l(_vm.news, function(jeweiligeNews, index) {
           return _c(
             "article",
-            {
-              key: index,
-              staticClass: "articlestyling mx-auto overflow-hidden w-full"
-            },
+            { key: index, staticClass: "articlestyling mx-auto" },
             [
               _vm.imageUrlNotEmpty(index)
                 ? _c("img", {
-                    staticClass: "border border-green-900 shadow-md",
+                    staticClass:
+                      "border border-green-900 shadow-md lg:max-w-md",
                     attrs: { src: _vm.imgUrl(index), alt: "" }
                   })
                 : _vm._e(),
               _vm._v(" "),
-              _c("div", { staticClass: "text text-center lg:text-lg" }, [
-                _c("h3", { staticClass: "font-bold text-gray-800 mb-1" }, [
-                  _vm._v(
-                    "\n            " +
-                      _vm._s(jeweiligeNews.news_titel) +
-                      "\n          "
-                  )
-                ]),
-                _vm._v(" "),
-                _c(
-                  "h6",
-                  { staticClass: "font-semibold text-xs text-gray-700 mb-2" },
-                  [
+              _c(
+                "div",
+                { staticClass: "text text-lg text-center lg:text-2xl" },
+                [
+                  _c("h3", { staticClass: "font-bold text-gray-800" }, [
                     _vm._v(
-                      "\n            Vom " +
-                        _vm._s(jeweiligeNews.created_at) +
+                      "\n            " +
+                        _vm._s(jeweiligeNews.news_titel) +
                         "\n          "
                     )
-                  ]
-                ),
-                _vm._v(" "),
-                _c("p", { staticClass: "text-sm lg:text-base mb-2" }, [
-                  _vm._v(
-                    "\n            " +
-                      _vm._s(jeweiligeNews.news_textfeld) +
-                      "\n          "
-                  )
-                ])
-              ])
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "h6",
+                    { staticClass: "font-semibold text-xs text-gray-700 mb-2" },
+                    [
+                      _vm._v(
+                        "\n            Vom " +
+                          _vm._s(jeweiligeNews.created_at) +
+                          "\n          "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "text-base lg:text-xl mb-2" }, [
+                    _vm._v(
+                      "\n            " +
+                        _vm._s(jeweiligeNews.news_textfeld) +
+                        "\n          "
+                    )
+                  ])
+                ]
+              )
             ]
           )
         }),
@@ -40176,7 +40177,18 @@ var render = function() {
                                   alt: "Foto"
                                 }
                               })
-                            : _vm._e(),
+                            : _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "flex w-20 h-20 justify-center items-center"
+                                },
+                                [
+                                  _vm._v(
+                                    "\n              Kein Foto\n            "
+                                  )
+                                ]
+                              ),
                           _vm._v(" "),
                           _c(
                             "button",
@@ -40229,7 +40241,7 @@ var render = function() {
                                   staticClass:
                                     "\n                      mt-1\n                      focus:ring-green-500\n                      focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
                                   attrs: {
-                                    maxlength: "30",
+                                    maxlength: "70",
                                     type: "text",
                                     id: "news_titel",
                                     placeholder: "Pflichtfeld",
@@ -40276,7 +40288,7 @@ var render = function() {
                                       staticClass:
                                         "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
                                       attrs: {
-                                        maxlength: "400",
+                                        maxlength: "255",
                                         id: "news_textfeld",
                                         autocomplete: "Beschreibung",
                                         placeholder:

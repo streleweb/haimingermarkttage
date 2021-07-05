@@ -41,9 +41,9 @@ class NewsController extends Controller
     {
         $validator = Validator::make($request->all(),
         [
-            'news_titel' => 'required|min:2|max:30',
-            'news_textfeld'=> 'required|min:10|max:400',
-            'news_bild_url'=> 'nullable|max:200',
+            'news_titel' => 'required|min:2|max:70',
+            'news_textfeld'=> 'required|min:10|max:255',
+            'news_bild_url'=> 'nullable',
         ]);
 
         if ($validator->fails()) {

@@ -15,36 +15,27 @@
         <!-- end willkommenstexte -->
       </div>
 
-      <div
-        class="
-          grid grid-cols-1
-          sm:grid-cols-2
-          lg:grid-cols-3
-          gap-8
-          items-center
-          w-full
-        "
-      >
+      <div class="grid grid-cols-1 gap-20 items-center w-full">
         <article
           v-for="(jeweiligeNews, index) in news"
           :key="index"
-          class="articlestyling mx-auto overflow-hidden w-full"
+          class="articlestyling mx-auto"
         >
           <img
             v-if="imageUrlNotEmpty(index)"
             :src="imgUrl(index)"
             alt=""
-            class="border border-green-900 shadow-md"
+            class="border border-green-900 shadow-md lg:max-w-md"
           />
 
-          <div class="text text-center lg:text-lg">
-            <h3 class="font-bold text-gray-800 mb-1">
+          <div class="text text-lg text-center lg:text-2xl">
+            <h3 class="font-bold text-gray-800">
               {{ jeweiligeNews.news_titel }}
             </h3>
             <h6 class="font-semibold text-xs text-gray-700 mb-2">
               Vom {{ jeweiligeNews.created_at }}
             </h6>
-            <p class="text-sm lg:text-base mb-2">
+            <p class="text-base lg:text-xl mb-2">
               {{ jeweiligeNews.news_textfeld }}
             </p>
           </div>
@@ -173,9 +164,9 @@ export default {
 <style scoped>
 .articlestyling {
   background: #eee5e9;
-  border: none;
+  border: white;
   box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);
-  border-radius: none;
+  border-radius: 0.4rem;
   text-align: center;
   width: 80%;
   transition: transform 0.3s;
@@ -188,10 +179,11 @@ article:hover {
 }
 
 article img {
+  max-width: 50%;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
-  max-width: 50%;
   z-index: 1;
 }
 

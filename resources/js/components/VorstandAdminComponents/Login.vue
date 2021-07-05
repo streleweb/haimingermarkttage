@@ -183,6 +183,12 @@ export default {
     };
   },
 
+  beforeCreate() {
+    if (localStorage.getItem("isLoggedIn") == "true") {
+      this.$router.push({ name: "admindashboard" });
+    }
+  },
+
   watch: {
     error() {
       if (this.error != null) {
