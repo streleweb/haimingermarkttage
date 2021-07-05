@@ -619,7 +619,6 @@ export default {
       error: null,
       submitvisibility: "hidden",
       formdata: {
-        id: null,
         aussteller_fullname: null,
         aussteller_beschreibung: null,
         aussteller_zonenfarbe: null,

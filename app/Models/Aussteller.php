@@ -11,7 +11,7 @@ class Aussteller extends Model
     use HasFactory;
     
     
-    protected $fillable = ['aussteller_fullname', 'aussteller_beschreibung', 'aussteller_brandingname', 'aussteller_email', 'aussteller_telefonnummer', 'aussteller:websiteurl', 'aussteller_zonenfarbe', 'aussteller_bildurl'];
+    protected $fillable = ['aussteller_fullname', 'aussteller_beschreibung', 'aussteller_brandingname', 'aussteller_email', 'aussteller_websiteurl', 'aussteller_zonenfarbe', 'aussteller_bildurl'];
 
 
     protected $table = "aussteller";

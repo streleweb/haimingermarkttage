@@ -4225,7 +4225,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       error: null,
       submitvisibility: "hidden",
       formdata: {
-        id: null,
         aussteller_fullname: null,
         aussteller_beschreibung: null,
         aussteller_zonenfarbe: null,
@@ -34302,7 +34301,7 @@ var staticRenderFns = [
             },
             [
               _vm._v(
-                "\n        Hier finden Sie den heurigen Lageplan von den Markttagen. Diverse\n        Park-Möglichkeiten sind gekennzeichnet. Klicken sie bitte auf das\n        Navigationssymbol, um per Google Maps zum Markt navigiert zu werden.\n      "
+                "\n        Hier finden Sie den heurigen Lageplan von den Markttagen. Diverse\n        Park-Möglichkeiten sind gekennzeichnet. Klicken Sie bitte auf das\n        Navigationssymbol, um per Google Maps zum Markt navigiert zu werden.\n      "
               )
             ]
           )

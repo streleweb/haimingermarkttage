@@ -26,7 +26,7 @@
           "
         >
           Hier finden Sie den heurigen Lageplan von den Markttagen. Diverse
-          Park-Möglichkeiten sind gekennzeichnet. Klicken sie bitte auf das
+          Park-Möglichkeiten sind gekennzeichnet. Klicken Sie bitte auf das
           Navigationssymbol, um per Google Maps zum Markt navigiert zu werden.
         </div>
         <!-- end willkommenstexte -->
