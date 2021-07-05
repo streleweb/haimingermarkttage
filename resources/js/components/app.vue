@@ -5,11 +5,11 @@
     </header>
 
     <Mobilemenu :open="mobileMenuOpen"></Mobilemenu>
+
     <section class="sectionarea">
-      <!--war main flex-1-->
-      <!-- zu flex-grow zuruecksetzen, wenn ausstellerview ausgefeilt -->
       <router-view></router-view>
     </section>
+
     <Footer></Footer>
   </div>
 
@@ -20,19 +20,15 @@
 <script>
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import HomeContent from "./HomeContent";
-import PageNotFound from "./PageNotFound";
 import Mobilemenu from "./Mobilemenu.vue";
 const default_layout = "default";
 import { EventBus, Eventbus } from "../event-bus";
 
 export default {
-  computed: {},
   data() {
     return {
       titleMessage: "Willkommen bei den Haiminger Markttagen!",
       smallDescription: "Flanieren, Probieren und Genießen...",
-      //nicht vergessen, Anreiseinfos entweder in DB abspeichern und  via API Call (Axios oder FetchAPI), oder direkte maske bereitstellen
       mobileMenuOpen: false,
     };
   },

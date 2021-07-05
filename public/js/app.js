@@ -1917,6 +1917,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -2651,6 +2653,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ "./resources/js/components/Button.vue");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_1__);
 //
 //
 //
@@ -2710,6 +2714,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -2720,8 +2728,28 @@ __webpack_require__.r(__webpack_exports__);
 
     };
   },
+  beforeCreate: function beforeCreate() {
+    var _this = this;
+
+    if (!localStorage.getItem("cookieOkClicked")) {
+      sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+        title: "Cookie Notice",
+        heightAuto: false,
+        text: "Wir verwenden Cookies, um unsere Webseite möglichst benutzerfreundlich zu gestalten. Durch die Nutzung unserer Webapp erklären Sie sich mit der Verwendung von Cookies einverstanden. Details dazu finden Sie in der Datenschutzerklärung. (Siehe Footer)",
+        confirmButtonText: "ok",
+        confirmButtonColor: "#3cb371"
+      }).then(function () {
+        return _this.cookieOkClicked();
+      });
+    }
+  },
   components: {
     Button: _Button__WEBPACK_IMPORTED_MODULE_0__.default
+  },
+  methods: {
+    cookieOkClicked: function cookieOkClicked() {
+      localStorage.setItem("cookieOkClicked", "true");
+    }
   }
 });
 
@@ -4438,6 +4466,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         _this2.formdata.aussteller_bildurl = response.data.filepath;
         sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
           title: "Foto gespeichert!",
+          heightAuto: false,
           confirmButtonText: "ok",
           confirmButtonColor: "#3cb371"
         });
@@ -4511,6 +4540,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           //alert(response.data);
           sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
             title: response.data,
+            heightAuto: false,
             confirmButtonText: "ok",
             confirmButtonColor: "#3cb371"
           }); //Swal.fire(response.data);
@@ -4519,6 +4549,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           //console.log(error);
           sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
             title: error,
+            heightAuto: false,
             confirmButtonText: "ok",
             confirmButtonColor: "#3cb371"
           });
@@ -4977,6 +5008,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         _this.laravelResponseData = response.data;
         sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
           title: response.data,
+          heightAuto: false,
           text: "Seite wird in 3 sekunden neu geladen...",
           confirmButtonText: "ok",
           confirmButtonColor: "#3cb371"
@@ -5068,6 +5100,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _context2.t0 = _context2["catch"](1);
                 sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
                   title: "Konnte Aussteller nicht laden.",
+                  heightAuto: false,
                   confirmButtonText: "ok",
                   confirmButtonColor: "#3cb371"
                 });
@@ -5804,6 +5837,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         _this.formdata.aussteller_bildurl = response.data.filepath;
         sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
           title: "Foto gespeichert!",
+          heightAuto: false,
           confirmButtonText: "ok",
           confirmButtonColor: "#3cb371"
         });
@@ -5884,6 +5918,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           //alert(response.data);
           sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
             title: response.data,
+            heightAuto: false,
             confirmButtonText: "ok",
             confirmButtonColor: "#3cb371"
           }); //Swal.fire(response.data);
@@ -5892,6 +5927,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           //console.log(error);
           sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
             title: error,
+            heightAuto: false,
             confirmButtonText: "ok",
             confirmButtonColor: "#3cb371"
           });
@@ -6669,6 +6705,66 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -6744,6 +6840,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
         sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
           title: response.data.filename + " wurde erfolgreich gespeichert!",
+          heightAuto: false,
           confirmButtonText: "ok",
           confirmButtonColor: "#3cb371"
         });
@@ -6757,7 +6854,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
         _this3.laravelResponseData = response.data;
         sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
-          title: response.data
+          title: response.data,
+          heightAuto: false
         });
         location.reload();
       });
@@ -6835,6 +6933,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           //alert(response.data);
           sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
             title: response.data,
+            heightAuto: false,
             confirmButtonText: "ok",
             confirmButtonColor: "#3cb371"
           }); //Swal.fire(response.data);
@@ -6843,6 +6942,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           //console.log(error);
           sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
             title: error,
+            heightAuto: false,
             confirmButtonText: "ok",
             confirmButtonColor: "#3cb371"
           });
@@ -7705,6 +7805,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         _this2.formdata.news_bild_url = response.data.filepath;
         sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
           title: "Foto gespeichert!",
+          heightAuto: false,
           confirmButtonText: "ok",
           confirmButtonColor: "#3cb371"
         });
@@ -7718,7 +7819,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
         _this3.laravelResponseData = response.data;
         sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
-          title: response.data
+          title: "Erfolgreich gelöscht!",
+          heightAuto: false,
+          showConfirmButton: false
         });
         location.reload();
       });
@@ -7774,6 +7877,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           //alert(response.data);
           sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
             title: response.data,
+            heightAuto: false,
             confirmButtonText: "ok",
             confirmButtonColor: "#3cb371"
           }); //Swal.fire(response.data);
@@ -7782,6 +7886,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           //console.log(error);
           sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
             title: error,
+            heightAuto: false,
             confirmButtonText: "ok",
             confirmButtonColor: "#3cb371"
           });
@@ -34563,7 +34668,7 @@ var staticRenderFns = [
             },
             [
               _vm._v(
-                "\n        Hier finden Sie den heurigen Lageplan von den Markttagen. Diverse\n        Park-Möglichkeiten sind gekennzeichnet. Klicken Sie bitte auf das\n        Navigationssymbol, um per Google Maps zum Markt navigiert zu werden.\n      "
+                "\n        Hier finden Sie den heurigen Lageplan von den Markttagen. Diverse\n        Park-Möglichkeiten sind gekennzeichnet. Klicken Sie bitte auf das\n        Navigationssymbol, um per Google Maps nach Haiming navigiert zu\n        werden.\n      "
               )
             ]
           )
@@ -34579,13 +34684,16 @@ var staticRenderFns = [
       "div",
       { staticClass: "flex flex-col justify-center items-center" },
       [
-        _c("img", {
-          staticClass: "h-20 border border-black p-5 rounded-full filter-white",
-          attrs: {
-            src: "/images/icons/svgs/locationpointer.svg",
-            alt: "Google Maps Navigation"
-          }
-        }),
+        _c("a", { attrs: { href: "https://goo.gl/maps/c5LfWFrYFkwVvHJ37" } }, [
+          _c("img", {
+            staticClass:
+              "h-20 border border-black p-5 rounded-full filter-white",
+            attrs: {
+              src: "/images/icons/svgs/locationpointer.svg",
+              alt: "Google Maps Navigation"
+            }
+          })
+        ]),
         _vm._v(" "),
         _c("img", {
           staticClass: "mt-5",
@@ -35288,13 +35396,8 @@ var render = function() {
         ),
         _vm._v(" "),
         _c(
-          "a",
-          {
-            attrs: {
-              href:
-                "https://www.google.com/maps/d/u/0/edit?mid=13qNnDIQECR3-pZ3-vK39FNUhoY7M-qD1&usp=sharing"
-            }
-          },
+          "router-link",
+          { attrs: { to: "/app/karte" } },
           [
             _c("Button", {
               attrs: {
@@ -35308,14 +35411,21 @@ var render = function() {
           1
         ),
         _vm._v(" "),
-        _c("Button", {
-          attrs: {
-            "svg-source": "/../../images/icons/svgs/locationpointer.svg",
-            "button-inhalt": "Anreise",
-            "button-color": "bg-green-900",
-            "on-hover": "hover:bg-yellow-100"
-          }
-        })
+        _c(
+          "router-link",
+          { attrs: { to: "/app/anreise" } },
+          [
+            _c("Button", {
+              attrs: {
+                "svg-source": "/../../images/icons/svgs/locationpointer.svg",
+                "button-inhalt": "Anreise",
+                "button-color": "bg-green-900",
+                "on-hover": "hover:bg-yellow-100"
+              }
+            })
+          ],
+          1
+        )
       ],
       1
     )
@@ -39046,11 +39156,11 @@ var render = function() {
           "div",
           {
             staticClass:
-              "flex w-full h-full items-center justify-center text-red-900 bg-gray-900"
+              "\n      flex\n      w-full\n      h-full\n      items-center\n      justify-center\n      text-red-900\n      bg-gray-900\n    "
           },
           [
             _vm._v(
-              " Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard zugreifen zu können..."
+              "\n    Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard\n    zugreifen zu können...\n  "
             )
           ]
         )
@@ -39111,7 +39221,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\r\n            flex-1 flex\r\n            items-center\r\n            justify-center\r\n            sm:items-stretch\r\n            sm:justify-start\r\n          "
+                          "\n              flex-1 flex\n              items-center\n              justify-center\n              sm:items-stretch\n              sm:justify-start\n            "
                       },
                       [
                         _c("div", {
@@ -39139,7 +39249,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
                                 },
                                 [
                                   _c(
@@ -39150,7 +39260,7 @@ var render = function() {
                                           "/app/admin/dashboard/ausstelleruebersicht"
                                       }
                                     },
-                                    [_vm._v("Aussteller\r\n                ")]
+                                    [_vm._v("Aussteller\n                  ")]
                                   )
                                 ],
                                 1
@@ -39160,7 +39270,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
                                 },
                                 [
                                   _c(
@@ -39178,7 +39288,7 @@ var render = function() {
                                 "a",
                                 {
                                   staticClass:
-                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
                                   attrs: { href: "#" }
                                 },
                                 [_vm._v("Programm")]
@@ -39188,10 +39298,14 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\r\n                  text-gray-300\r\n                  hover:bg-gray-700\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                ",
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
                                   attrs: { "aria-current": "page" }
                                 },
-                                [_vm._v("\r\n                Fotogalerie")]
+                                [
+                                  _vm._v(
+                                    "\n                  Fotogalerie\n                "
+                                  )
+                                ]
                               )
                             ],
                             1
@@ -39204,14 +39318,14 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\r\n            absolute\r\n            inset-y-0\r\n            right-0\r\n            flex\r\n            items-center\r\n            pr-2\r\n            sm:static\r\n            sm:inset-auto\r\n            sm:ml-6\r\n            sm:pr-0\r\n          "
+                          "\n              absolute\n              inset-y-0\n              right-0\n              flex\n              items-center\n              pr-2\n              sm:static\n              sm:inset-auto\n              sm:ml-6\n              sm:pr-0\n            "
                       },
                       [
                         _c(
                           "div",
                           {
                             staticClass:
-                              "\r\n                  text-gray-300\r\n                  hover:bg-red-900\r\n                  hover:text-white\r\n                  px-3\r\n                  py-2\r\n                  rounded-md\r\n                  text-sm\r\n                  font-medium\r\n                "
+                              "\n                text-gray-300\n                hover:bg-red-900\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
                           },
                           [
                             _c(
@@ -39225,7 +39339,7 @@ var render = function() {
                                 }
                               },
                               [
-                                _vm._v("Logout "),
+                                _vm._v("Logout\n                "),
                                 _c("img", {
                                   staticClass: "filter-white",
                                   attrs: {
@@ -39254,7 +39368,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\r\n            bg-gray-900\r\n            text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                        "\n              bg-gray-900\n              text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#", "aria-current": "page" }
                     },
                     [_vm._v("Dashboard")]
@@ -39264,7 +39378,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#" }
                     },
                     [
@@ -39285,7 +39399,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#" }
                     },
                     [_vm._v("News")]
@@ -39295,7 +39409,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\r\n            text-gray-300\r\n            hover:bg-gray-700\r\n            hover:text-white\r\n            block\r\n            px-3\r\n            py-1\r\n            rounded-md\r\n            text-base\r\n            font-medium\r\n          ",
+                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#" }
                     },
                     [_vm._v("Programm")]
@@ -39337,7 +39451,7 @@ var render = function() {
                         {
                           key: index,
                           staticClass:
-                            "\r\n                flex\r\n                justify-evenly\r\n                pl-3\r\n                text-white\r\n                bg-green-900\r\n                mb-3\r\n                border border-gray-600\r\n              "
+                            "\n              flex\n              justify-evenly\n              pl-3\n              text-white\n              bg-green-900\n              mb-3\n              border border-gray-600\n            "
                         },
                         [
                           _c(
@@ -39367,7 +39481,7 @@ var render = function() {
                                 }
                               }
                             },
-                            [_vm._v("delete")]
+                            [_vm._v("\n              delete\n            ")]
                           )
                         ]
                       )
@@ -39389,7 +39503,7 @@ var render = function() {
                               },
                               [
                                 _vm._v(
-                                  "\r\n                Foto hinzufügen\r\n              "
+                                  "\n                  Foto hinzufügen\n                "
                                 )
                               ]
                             ),
@@ -39419,7 +39533,7 @@ var render = function() {
                                     }
                                   ],
                                   staticClass:
-                                    "\r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                    "\n                      mt-1\n                      focus:ring-green-500\n                      focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
                                   attrs: {
                                     maxlength: "30",
                                     type: "text",
@@ -39471,7 +39585,7 @@ var render = function() {
                                         }
                                       ],
                                       staticClass:
-                                        "\r\n                          \r\n                          mt-1\r\n                          focus:ring-green-500\r\n                          focus:border-green-500\r\n                          block\r\n                          w-full\r\n                          shadow-sm\r\n                          sm:text-sm\r\n                          border-gray-300\r\n                          rounded-md\r\n                        ",
+                                        "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
                                       attrs: {
                                         maxlength: "50",
                                         id: "beschreibung",
@@ -39524,10 +39638,14 @@ var render = function() {
                                       "button",
                                       {
                                         staticClass:
-                                          "bg-green-900 text-xs sm:text-base p-1 text-white border border-green-600 rounded-md hover:bg-green-500",
+                                          "\n                        bg-green-900\n                        text-xs\n                        sm:text-base\n                        p-1\n                        text-white\n                        border border-green-600\n                        rounded-md\n                        hover:bg-green-500\n                      ",
                                         on: { click: _vm.showSubmitButton }
                                       },
-                                      [_vm._v("Upload photo")]
+                                      [
+                                        _vm._v(
+                                          "\n                      Upload photo\n                    "
+                                        )
+                                      ]
                                     )
                                   ]
                                 )
@@ -39538,21 +39656,21 @@ var render = function() {
                               "div",
                               {
                                 staticClass:
-                                  " flex justify-center px-4 py-3 bg-gray-600 border-t-2 border-gray-800 text-right sm:px-6"
+                                  "\n                    flex\n                    justify-center\n                    px-4\n                    py-3\n                    bg-gray-600\n                    border-t-2 border-gray-800\n                    text-right\n                    sm:px-6\n                  "
                               },
                               [
                                 _c(
                                   "button",
                                   {
                                     staticClass:
-                                      "\r\n                      inline-flex\r\n                      justify-center\r\n                      py-2\r\n                      px-4\r\n                      border border-transparent\r\n                      shadow-sm\r\n                      text-sm\r\n                      font-medium\r\n                      rounded-md\r\n                      text-white\r\n                      bg-green-600\r\n                      hover:bg-black\r\n                      focus:outline-none\r\n                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\r\n                    ",
+                                      "\n                      inline-flex\n                      justify-center\n                      py-2\n                      px-4\n                      border border-transparent\n                      shadow-sm\n                      text-sm\n                      font-medium\n                      rounded-md\n                      text-white\n                      bg-green-600\n                      hover:bg-black\n                      focus:outline-none\n                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n                    ",
                                     class: _vm.submitvisibility,
                                     attrs: { id: "submitbutton" },
                                     on: { click: _vm.submitform }
                                   },
                                   [
                                     _vm._v(
-                                      "\r\n                    In DB Speichern\r\n                  "
+                                      "\n                    In DB Speichern\n                  "
                                     )
                                   ]
                                 )
@@ -39577,14 +39695,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: " text-gray-400 pb-3" }, [
+    return _c("div", { staticClass: "text-gray-400 pb-3" }, [
       _c(
         "h3",
         { staticClass: "text-lg font-medium leading-6 text-white pb-1" },
-        [_vm._v("\r\n                Fotogalerie\r\n              ")]
+        [_vm._v("\n              Fotogalerie\n            ")]
       ),
       _vm._v(
-        '\r\n              Der Foto-Titel und die Fotobeschreibung werden im Foto-Carousel eingebettet. Maximallänge Foto-Titel: 30 Zeichen, Fotobeschreibung: 50 Zeichen.\r\n              Folgende Fotos sind bereits vorhanden, klicken Sie auf "delete", um diese aus der Datenbank und aus der Galerie zu löschen. Achten Sie bitte darauf,\r\n              dass Sie zuerst das Foto auf "Upload photo" raufladen und danach auf den Button "In DB speichern" klicken. Falls Sie keinen Fototitel hinzufügen möchten,\r\n              können Sie den "In DB speichern"-Button auch nicht drücken. Das Photo wird trotzdem gespeichert und ist in der Fotogalerie ersichtlich.\r\n            '
+        '\n            Der Foto-Titel und die Fotobeschreibung werden im Foto-Carousel\n            eingebettet. Maximallänge Foto-Titel: 30 Zeichen,\n            Fotobeschreibung: 50 Zeichen. Folgende Fotos sind bereits\n            vorhanden, klicken Sie auf "delete", um diese aus der Datenbank\n            und aus der Galerie zu löschen. Achten Sie bitte darauf, dass Sie\n            zuerst das Foto auf "Upload photo" raufladen und danach auf den\n            Button "In DB speichern" klicken. Falls Sie keinen Fototitel\n            hinzufügen möchten, können Sie den "In DB speichern"-Button auch\n            nicht drücken. Das Photo wird trotzdem gespeichert und ist in der\n            Fotogalerie ersichtlich.\n          '
       )
     ])
   },
@@ -39596,7 +39714,7 @@ var staticRenderFns = [
       "div",
       { staticClass: "py-2 bg-green-900 text-white mb-1 px-2" },
       [
-        _vm._v("Foto Upload\r\n                "),
+        _vm._v("\n                    Foto Upload\n                    "),
         _c("div", { staticClass: "alert" }, [
           _c(
             "span",
@@ -39608,10 +39726,10 @@ var staticRenderFns = [
           ),
           _vm._v(" "),
           _c("strong", [_vm._v("Achtung!")]),
-          _vm._v(" Maximale Filesize: 1.9MB "),
+          _vm._v(" Maximale Filesize: 1.9MB\n                      "),
           _c("br"),
           _vm._v(
-            "  Bsp: haimingermarkttage2020-1.jpg , hm1.png..\r\n                "
+            "\n                      Bsp: haimingermarkttage2020-1.jpg , hm1.png..\n                    "
           )
         ])
       ]

@@ -62,7 +62,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
    
     //News
     Route::post('/news', [NewsController::class, 'store']);
-    Route::delete('/news', [NewsController::class, 'destroy']);
+    Route::delete('/news/{id}', [NewsController::class, 'destroy']);
 
 });
 

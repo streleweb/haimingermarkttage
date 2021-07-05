@@ -657,6 +657,7 @@ export default {
           this.formdata.aussteller_bildurl = response.data.filepath;
           Swal.fire({
             title: "Foto gespeichert!",
+            heightAuto: false,
             confirmButtonText: "ok",
             confirmButtonColor: "#3cb371",
           });
@@ -712,6 +713,7 @@ export default {
             //alert(response.data);
             Swal.fire({
               title: response.data,
+              heightAuto: false,
               confirmButtonText: "ok",
               confirmButtonColor: "#3cb371",
             });
@@ -722,6 +724,7 @@ export default {
             //console.log(error);
             Swal.fire({
               title: error,
+              heightAuto: false,
               confirmButtonText: "ok",
               confirmButtonColor: "#3cb371",
             });

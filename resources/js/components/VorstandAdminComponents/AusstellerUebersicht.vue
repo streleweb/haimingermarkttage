@@ -421,6 +421,7 @@ export default {
           this.laravelResponseData = response.data;
           Swal.fire({
             title: response.data,
+            heightAuto: false,
             text: "Seite wird in 3 sekunden neu geladen...",
             confirmButtonText: "ok",
             confirmButtonColor: "#3cb371",
@@ -469,6 +470,7 @@ export default {
       } catch (error) {
         Swal.fire({
           title: "Konnte Aussteller nicht laden.",
+          heightAuto: false,
           confirmButtonText: "ok",
           confirmButtonColor: "#3cb371",
         });

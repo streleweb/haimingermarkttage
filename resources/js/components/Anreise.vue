@@ -27,18 +27,20 @@
         >
           Hier finden Sie den heurigen Lageplan von den Markttagen. Diverse
           Park-Möglichkeiten sind gekennzeichnet. Klicken Sie bitte auf das
-          Navigationssymbol, um per Google Maps zum Markt navigiert zu werden.
+          Navigationssymbol, um per Google Maps nach Haiming navigiert zu
+          werden.
         </div>
         <!-- end willkommenstexte -->
       </div>
     </div>
     <!-- end willkommen -->
     <div class="flex flex-col justify-center items-center">
-      <img
-        class="h-20 border border-black p-5 rounded-full filter-white"
-        src="/images/icons/svgs/locationpointer.svg"
-        alt="Google Maps Navigation"
-      />
+      <a href="https://goo.gl/maps/c5LfWFrYFkwVvHJ37"
+        ><img
+          class="h-20 border border-black p-5 rounded-full filter-white"
+          src="/images/icons/svgs/locationpointer.svg"
+          alt="Google Maps Navigation"
+      /></a>
       <img class="mt-5" src="/images/anreise/img_lageplan.jpg" alt="" />
     </div>
 

@@ -512,6 +512,7 @@ export default {
           this.formdata.news_bild_url = response.data.filepath;
           Swal.fire({
             title: "Foto gespeichert!",
+            heightAuto: false,
             confirmButtonText: "ok",
             confirmButtonColor: "#3cb371",
           });
@@ -526,7 +527,9 @@ export default {
           //laravel response zu component object hinzufügen zur späteren Ausgabe
           this.laravelResponseData = response.data;
           Swal.fire({
-            title: response.data,
+            title: "Erfolgreich gelöscht!",
+            heightAuto: false,
+            showConfirmButton: false,
           });
           location.reload();
         });
@@ -560,6 +563,7 @@ export default {
             //alert(response.data);
             Swal.fire({
               title: response.data,
+              heightAuto: false,
               confirmButtonText: "ok",
               confirmButtonColor: "#3cb371",
             });
@@ -570,6 +574,7 @@ export default {
             //console.log(error);
             Swal.fire({
               title: error,
+              heightAuto: false,
               confirmButtonText: "ok",
               confirmButtonColor: "#3cb371",
             });

@@ -1,139 +1,151 @@
 <template>
-<div class="w-full h-full bg-gray-900">
-<div v-if="loggedIn() == false" class="flex w-full h-full items-center justify-center text-red-900 bg-gray-900"> Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard zugreifen zu können...</div>
-<!-- Check for Login-Status, only display if logged in-->
-<div v-if="loggedIn()" class="w-full">
+  <div class="w-full h-full bg-gray-900">
+    <div
+      v-if="loggedIn() == false"
+      class="
+        flex
+        w-full
+        h-full
+        items-center
+        justify-center
+        text-red-900
+        bg-gray-900
+      "
+    >
+      Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard
+      zugreifen zu können...
+    </div>
+    <!-- Check for Login-Status, only display if logged in-->
+    <div v-if="loggedIn()" class="w-full">
+      <nav class="bg-gray-800 border-b border-gray-300">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div class="relative flex items-center justify-between h-16">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <span class="sr-only">Open main menu</span>
 
- 
-  
-  <nav class="bg-gray-800 border-b border-gray-300">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-      <div class="relative flex items-center justify-between h-16">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-          
-            <span class="sr-only">Open main menu</span>
-           
-            <!--
+              <!--
             Icon when menu is open.
 
             Heroicon name: outline/x
 
             Menu open: "block", Menu closed: "hidden"
           -->
-            <svg
-              class="hidden h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="
-            flex-1 flex
-            items-center
-            justify-center
-            sm:items-stretch
-            sm:justify-start
-          "
-        >
-          <div class="flex-shrink-0 flex items-center"></div>
-          <div class="hidden sm:block sm:ml-6">
-            <div class="flex space-x-4">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <router-link to="/app/admin/dashboard"
-                ><span class="text-gray-500 text-lg"
-                  >Dashboard</span
-                ></router-link
+              <svg
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
               >
-              <div
-                class="
-                  text-gray-300
-                  hover:bg-gray-700
-                  hover:text-white
-                  px-3
-                  py-2
-                  rounded-md
-                  text-sm
-                  font-medium
-                "
-              >
-                <router-link to="/app/admin/dashboard/ausstelleruebersicht"
-                  >Aussteller
-                </router-link>
-              </div>
-
-              <div
-                class="
-                  text-gray-300
-                  hover:bg-gray-700
-                  hover:text-white
-                  px-3
-                  py-2
-                  rounded-md
-                  text-sm
-                  font-medium
-                "
-              >
-                <router-link to="/app/admin/dashboard/news">News</router-link>
-              </div>
-
-              <a
-                href="#"
-                class="
-                  text-gray-300
-                  hover:bg-gray-700
-                  hover:text-white
-                  px-3
-                  py-2
-                  rounded-md
-                  text-sm
-                  font-medium
-                "
-                >Programm</a
-              >
-
-              <div
-              aria-current="page"
-                class="
-                  text-gray-300
-                  hover:bg-gray-700
-                  hover:text-white
-                  px-3
-                  py-2
-                  rounded-md
-                  text-sm
-                  font-medium
-                ">
-                Fotogalerie</div
-              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
             </div>
-          </div>
-        </div>
-        <div
-          class="
-            absolute
-            inset-y-0
-            right-0
-            flex
-            items-center
-            pr-2
-            sm:static
-            sm:inset-auto
-            sm:ml-6
-            sm:pr-0
-          "
-        >
-          <div
+            <div
+              class="
+                flex-1 flex
+                items-center
+                justify-center
+                sm:items-stretch
+                sm:justify-start
+              "
+            >
+              <div class="flex-shrink-0 flex items-center"></div>
+              <div class="hidden sm:block sm:ml-6">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <router-link to="/app/admin/dashboard"
+                    ><span class="text-gray-500 text-lg"
+                      >Dashboard</span
+                    ></router-link
+                  >
+                  <div
+                    class="
+                      text-gray-300
+                      hover:bg-gray-700
+                      hover:text-white
+                      px-3
+                      py-2
+                      rounded-md
+                      text-sm
+                      font-medium
+                    "
+                  >
+                    <router-link to="/app/admin/dashboard/ausstelleruebersicht"
+                      >Aussteller
+                    </router-link>
+                  </div>
+
+                  <div
+                    class="
+                      text-gray-300
+                      hover:bg-gray-700
+                      hover:text-white
+                      px-3
+                      py-2
+                      rounded-md
+                      text-sm
+                      font-medium
+                    "
+                  >
+                    <router-link to="/app/admin/dashboard/news"
+                      >News</router-link
+                    >
+                  </div>
+
+                  <a
+                    href="#"
+                    class="
+                      text-gray-300
+                      hover:bg-gray-700
+                      hover:text-white
+                      px-3
+                      py-2
+                      rounded-md
+                      text-sm
+                      font-medium
+                    "
+                    >Programm</a
+                  >
+
+                  <div
+                    aria-current="page"
+                    class="
+                      text-gray-300
+                      hover:bg-gray-700
+                      hover:text-white
+                      px-3
+                      py-2
+                      rounded-md
+                      text-sm
+                      font-medium
+                    "
+                  >
+                    Fotogalerie
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="
+                absolute
+                inset-y-0
+                right-0
+                flex
+                items-center
+                pr-2
+                sm:static
+                sm:inset-auto
+                sm:ml-6
+                sm:pr-0
+              "
+            >
+              <div
                 class="
                   text-gray-300
                   hover:bg-red-900
@@ -145,107 +157,118 @@
                   font-medium
                 "
               >
-                <span class="text-white cursor-pointer" @click="handleLogout()">Logout <img src="/public/images/icons/svgs/ausloggen.svg" class= "filter-white" alt=""></span>
+                <span class="text-white cursor-pointer" @click="handleLogout()"
+                  >Logout
+                  <img
+                    src="/public/images/icons/svgs/ausloggen.svg"
+                    class="filter-white"
+                    alt=""
+                /></span>
               </div>
-            
+            </div>
           </div>
         </div>
-      </div>
-    
 
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="sm:hidden" id="mobile-menu">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a
-          href="#"
-          class="
-            bg-gray-900
-            text-white
-            block
-            px-3
-            py-1
-            rounded-md
-            text-base
-            font-medium
-          "
-          aria-current="page"
-          >Dashboard</a
-        >
-        <!--Wenn Menü aufgeklappt-->
-        <a
-          href="#"
-          class="
-            text-gray-300
-            hover:bg-gray-700
-            hover:text-white
-            block
-            px-3
-            py-1
-            rounded-md
-            text-base
-            font-medium
-          "
-          ><router-link to="/app/admin/dashboard/ausstelleruebersicht">Aussteller</router-link> </a
-        >
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a
+              href="#"
+              class="
+                bg-gray-900
+                text-white
+                block
+                px-3
+                py-1
+                rounded-md
+                text-base
+                font-medium
+              "
+              aria-current="page"
+              >Dashboard</a
+            >
+            <!--Wenn Menü aufgeklappt-->
+            <a
+              href="#"
+              class="
+                text-gray-300
+                hover:bg-gray-700
+                hover:text-white
+                block
+                px-3
+                py-1
+                rounded-md
+                text-base
+                font-medium
+              "
+              ><router-link to="/app/admin/dashboard/ausstelleruebersicht"
+                >Aussteller</router-link
+              >
+            </a>
 
-        <a
-          href="#"
-          class="
-            text-gray-300
-            hover:bg-gray-700
-            hover:text-white
-            block
-            px-3
-            py-1
-            rounded-md
-            text-base
-            font-medium
-          "
-          >News</a
-        >
+            <a
+              href="#"
+              class="
+                text-gray-300
+                hover:bg-gray-700
+                hover:text-white
+                block
+                px-3
+                py-1
+                rounded-md
+                text-base
+                font-medium
+              "
+              >News</a
+            >
 
-        <a
-          href="#"
-          class="
-            text-gray-300
-            hover:bg-gray-700
-            hover:text-white
-            block
-            px-3
-            py-1
-            rounded-md
-            text-base
-            font-medium
-          "
-          >Programm</a
-        >
-      </div>
-    </div>
-  </nav>
-  <!-- DASHBOARD ENDE-->
- 
-  <div class="bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20">
-      <p v-if="loading" class="mx-auto">
-        <img
-          src="/images/icons/gifs/loadingtransparent.gif"
-          alt="loading..."
-          class="m-auto resize-loadinggif"
-        />
-      </p>
-      <div class="mt-10 sm:mt-0">
-        <div class="">
-          
-            <div class=" text-gray-400 pb-3">
+            <a
+              href="#"
+              class="
+                text-gray-300
+                hover:bg-gray-700
+                hover:text-white
+                block
+                px-3
+                py-1
+                rounded-md
+                text-base
+                font-medium
+              "
+              >Programm</a
+            >
+          </div>
+        </div>
+      </nav>
+      <!-- DASHBOARD ENDE-->
+
+      <div class="bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20">
+        <p v-if="loading" class="mx-auto">
+          <img
+            src="/images/icons/gifs/loadingtransparent.gif"
+            alt="loading..."
+            class="m-auto resize-loadinggif"
+          />
+        </p>
+        <div class="mt-10 sm:mt-0">
+          <div class="">
+            <div class="text-gray-400 pb-3">
               <h3 class="text-lg font-medium leading-6 text-white pb-1">
                 Fotogalerie
               </h3>
-              Der Foto-Titel und die Fotobeschreibung werden im Foto-Carousel eingebettet. Maximallänge Foto-Titel: 30 Zeichen, Fotobeschreibung: 50 Zeichen.
-              Folgende Fotos sind bereits vorhanden, klicken Sie auf "delete", um diese aus der Datenbank und aus der Galerie zu löschen. Achten Sie bitte darauf,
-              dass Sie zuerst das Foto auf "Upload photo" raufladen und danach auf den Button "In DB speichern" klicken. Falls Sie keinen Fototitel hinzufügen möchten,
-              können Sie den "In DB speichern"-Button auch nicht drücken. Das Photo wird trotzdem gespeichert und ist in der Fotogalerie ersichtlich.
+              Der Foto-Titel und die Fotobeschreibung werden im Foto-Carousel
+              eingebettet. Maximallänge Foto-Titel: 30 Zeichen,
+              Fotobeschreibung: 50 Zeichen. Folgende Fotos sind bereits
+              vorhanden, klicken Sie auf "delete", um diese aus der Datenbank
+              und aus der Galerie zu löschen. Achten Sie bitte darauf, dass Sie
+              zuerst das Foto auf "Upload photo" raufladen und danach auf den
+              Button "In DB speichern" klicken. Falls Sie keinen Fototitel
+              hinzufügen möchten, können Sie den "In DB speichern"-Button auch
+              nicht drücken. Das Photo wird trotzdem gespeichert und ist in der
+              Fotogalerie ersichtlich.
             </div>
-            
+
             <div
               v-for="(jeweiligesFoto, index) in fotos"
               :key="index"
@@ -259,47 +282,50 @@
                 border border-gray-600
               "
             >
-              <span class="flex w-32 items-center"
-                >{{ jeweiligesFoto.fotogalerie_fotoname }}</span
-              >
-              <img :src="urlOfFoto(index)" class="w-20 h-20 border border-gray-50 rounded-lg my-2" alt="Foto" />
-              <button key:index @click="deleteFoto(index)" class="btn btn-red">delete</button>
+              <span class="flex w-32 items-center">{{
+                jeweiligesFoto.fotogalerie_fotoname
+              }}</span>
+              <img
+                :src="urlOfFoto(index)"
+                class="w-20 h-20 border border-gray-50 rounded-lg my-2"
+                alt="Foto"
+              />
+              <button key:index @click="deleteFoto(index)" class="btn btn-red">
+                delete
+              </button>
             </div>
-          
-          <div class="mt-5 md:mt-0 md:col-span-2">
-            <div>
-              <div class="shadow overflow-hidden sm:rounded-md">
+
+            <div class="mt-5 md:mt-0 md:col-span-2">
+              <div>
+                <div class="shadow overflow-hidden sm:rounded-md">
                   <h3 class="text-lg font-medium leading-6 text-white pb-1">
-                Foto hinzufügen
-              </h3>
-                <div class="px-4 py-5 bg-gray-300 sm:p-6">
-                  
-                    
-                      <label
-                        for="name"
-                        class="block text-sm font-medium text-gray-700"
-                        >Foto-Titel</label
-                      >
-                      <input
-                        maxlength="30"
-                        type="text"
-                        v-model="formdata.fotogalerie_fotoname"
-                        id="full_name"
-                        placeholder="Pflichtfeld"
-                        autocomplete="given-name"
-                        class="
-                          mt-1
-                          focus:ring-green-500
-                          focus:border-green-500
-                          block
-                          w-full
-                          shadow-sm
-                          sm:text-sm
-                          border-gray-300
-                          rounded-md
-                        "
-                      />
-                      
+                    Foto hinzufügen
+                  </h3>
+                  <div class="px-4 py-5 bg-gray-300 sm:p-6">
+                    <label
+                      for="name"
+                      class="block text-sm font-medium text-gray-700"
+                      >Foto-Titel</label
+                    >
+                    <input
+                      maxlength="30"
+                      type="text"
+                      v-model="formdata.fotogalerie_fotoname"
+                      id="full_name"
+                      placeholder="Pflichtfeld"
+                      autocomplete="given-name"
+                      class="
+                        mt-1
+                        focus:ring-green-500
+                        focus:border-green-500
+                        block
+                        w-full
+                        shadow-sm
+                        sm:text-sm
+                        border-gray-300
+                        rounded-md
+                      "
+                    />
 
                     <div class="col-span-6 sm:col-span-4">
                       <label
@@ -314,7 +340,6 @@
                         autocomplete="Beschreibung"
                         placeholder="Optional"
                         class="
-                          
                           mt-1
                           focus:ring-green-500
                           focus:border-green-500
@@ -328,58 +353,93 @@
                       />
                     </div>
 
-                 
-            <!--IMAGE FILE UPLOAD START-->
-            <div class="py-2 bg-green-900 text-white mb-1 px-2">Foto Upload
-                <div class="alert">
-                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-                        <strong>Achtung!</strong> Maximale Filesize: 1.9MB <br>  Bsp: haimingermarkttage2020-1.jpg , hm1.png..
-                </div>
-            </div>
-            <form @submit.prevent="upload" class="flex items-center justify-center mt-3">
-                <input @change="handleOnChange" type="file" class="text-xs sm:text-base">
-                <button @click="showSubmitButton" class="bg-green-900 text-xs sm:text-base p-1 text-white border border-green-600 rounded-md hover:bg-green-500">Upload photo</button>
-  
-            </form>
-            
-            <!--IMAGE FILE UPLOAD END-->
-             </div>
+                    <!--IMAGE FILE UPLOAD START-->
+                    <div class="py-2 bg-green-900 text-white mb-1 px-2">
+                      Foto Upload
+                      <div class="alert">
+                        <span
+                          class="closebtn"
+                          onclick="this.parentElement.style.display='none';"
+                          >&times;</span
+                        >
+                        <strong>Achtung!</strong> Maximale Filesize: 1.9MB
+                        <br />
+                        Bsp: haimingermarkttage2020-1.jpg , hm1.png..
+                      </div>
+                    </div>
+                    <form
+                      @submit.prevent="upload"
+                      class="flex items-center justify-center mt-3"
+                    >
+                      <input
+                        @change="handleOnChange"
+                        type="file"
+                        class="text-xs sm:text-base"
+                      />
+                      <button
+                        @click="showSubmitButton"
+                        class="
+                          bg-green-900
+                          text-xs
+                          sm:text-base
+                          p-1
+                          text-white
+                          border border-green-600
+                          rounded-md
+                          hover:bg-green-500
+                        "
+                      >
+                        Upload photo
+                      </button>
+                    </form>
 
-                  <div class=" flex justify-center px-4 py-3 bg-gray-600 border-t-2 border-gray-800 text-right sm:px-6">
-                  <button
-                  id="submitbutton"
-                  @click="submitform"
-                  :class=submitvisibility
+                    <!--IMAGE FILE UPLOAD END-->
+                  </div>
+
+                  <div
                     class="
-                      inline-flex
+                      flex
                       justify-center
-                      py-2
                       px-4
-                      border border-transparent
-                      shadow-sm
-                      text-sm
-                      font-medium
-                      rounded-md
-                      text-white
-                      bg-green-600
-                      hover:bg-black
-                      focus:outline-none
-                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500
+                      py-3
+                      bg-gray-600
+                      border-t-2 border-gray-800
+                      text-right
+                      sm:px-6
                     "
                   >
-                    In DB Speichern
-                  </button>
-                
+                    <button
+                      id="submitbutton"
+                      @click="submitform"
+                      :class="submitvisibility"
+                      class="
+                        inline-flex
+                        justify-center
+                        py-2
+                        px-4
+                        border border-transparent
+                        shadow-sm
+                        text-sm
+                        font-medium
+                        rounded-md
+                        text-white
+                        bg-green-600
+                        hover:bg-black
+                        focus:outline-none
+                        focus:ring-2 focus:ring-offset-2 focus:ring-green-500
+                      "
+                    >
+                      In DB Speichern
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-                
             </div>
           </div>
         </div>
       </div>
     </div>
-</div>
-</div>
+  </div>
 </template>
 
 <script>
@@ -459,6 +519,7 @@ export default {
           //console.log(response.data);
           Swal.fire({
             title: response.data.filename + " wurde erfolgreich gespeichert!",
+            heightAuto: false,
             confirmButtonText: "ok",
             confirmButtonColor: "#3cb371",
           });
@@ -475,6 +536,7 @@ export default {
           this.laravelResponseData = response.data;
           Swal.fire({
             title: response.data,
+            heightAuto: false,
           });
           location.reload();
         });
@@ -527,6 +589,7 @@ export default {
             //alert(response.data);
             Swal.fire({
               title: response.data,
+              heightAuto: false,
               confirmButtonText: "ok",
               confirmButtonColor: "#3cb371",
             });
@@ -537,6 +600,7 @@ export default {
             //console.log(error);
             Swal.fire({
               title: error,
+              heightAuto: false,
               confirmButtonText: "ok",
               confirmButtonColor: "#3cb371",
             });
