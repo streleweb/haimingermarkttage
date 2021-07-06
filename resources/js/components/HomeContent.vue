@@ -22,7 +22,7 @@
           svg-source="/../../images/icons/svgs/apple1.svg"
           button-inhalt="Produkte"
           button-color="bg-green-900"
-          on-hover="hover:bg-white"
+          on-hover="hover:bg-yellow-50"
         ></Button>
       </router-link>
 
@@ -31,7 +31,7 @@
           svg-source="/../../images/icons/svgs/aussteller.svg"
           button-inhalt="Aussteller"
           button-color="bg-green-900"
-          on-hover="hover:bg-yellow-50"
+          on-hover="hover:bg-yellow-200"
         ></Button>
       </router-link>
 
@@ -43,7 +43,7 @@
           svg-source="/../../images/icons/svgs/map.svg"
           button-inhalt="Karte"
           button-color="bg-green-900"
-          on-hover="hover:bg-yellow-100"
+          on-hover="hover:bg-yellow-300"
         ></Button
       ></router-link>
       <router-link to="/app/anreise">
@@ -51,7 +51,7 @@
           svg-source="/../../images/icons/svgs/locationpointer.svg"
           button-inhalt="Anreise"
           button-color="bg-green-900"
-          on-hover="hover:bg-yellow-100"
+          on-hover="hover:bg-yellow-400"
         ></Button
       ></router-link>
     </div>

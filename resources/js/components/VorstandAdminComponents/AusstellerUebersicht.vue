@@ -112,7 +112,9 @@
                       text-sm
                       font-medium
                     "
-                    >Programm</a
+                    ><router-link to="/app/admin/dashboard/programmanlegen">
+                      Programm</router-link
+                    ></a
                   >
 
                   <div
@@ -237,7 +239,9 @@
                 text-base
                 font-medium
               "
-              >Programm</a
+              ><router-link to="/app/admin/dashboard/programmanlegen">
+                Programm</router-link
+              ></a
             >
           </div>
         </div>

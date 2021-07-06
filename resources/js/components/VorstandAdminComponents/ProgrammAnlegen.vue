@@ -67,7 +67,6 @@
                   </div>
 
                   <div
-                    aria-current="page"
                     class="
                       text-gray-300
                       hover:bg-gray-700
@@ -85,6 +84,7 @@
                   </div>
 
                   <div
+                    aria-current="page"
                     class="
                       text-gray-300
                       hover:bg-gray-700
@@ -196,7 +196,6 @@
             </div>
 
             <a
-              aria-current="page"
               href="#"
               class="
                 text-gray-300
@@ -214,6 +213,7 @@
             </a>
 
             <a
+              aria-current="page"
               href="#"
               class="
                 text-gray-300
@@ -226,9 +226,7 @@
                 text-base
                 font-medium
               "
-              ><router-link to="/app/admin/dashboard/programmanlegen">
-                Programm</router-link
-              ></a
+              >Programm</a
             >
           </div>
         </div>
@@ -240,11 +238,9 @@
           <div class="">
             <div class="text-gray-400 pb-3">
               <h3 class="text-lg font-medium leading-6 text-white pb-1">
-                News anlegen
+                Programm anlegen
               </h3>
-              Hier können Sie neue News anlegen. Falls Sie alte News ändern
-              möchten, löschen Sie bitte den jeweiligen News-Post und legen Sie
-              einen neuen an. Folgende News-Titel sind momentan in der DB.
+              Hier können Sie ein neues Tagesprogramm verfassen.
             </div>
 
             <div
@@ -284,7 +280,7 @@
                     <label
                       for="name"
                       class="block text-sm font-medium text-gray-700"
-                      >Neuer News-Titel</label
+                      >Neuer Programm-Titel</label
                     >
                     <input
                       v-model="formdata.news_titel"
@@ -310,14 +306,14 @@
                       <label
                         for="email_address"
                         class="block text-sm font-medium text-gray-700"
-                        >News-Textinhalt</label
+                        >Programm-Textinhalt</label
                       >
                       <textarea
                         maxlength="255"
                         v-model="formdata.news_textfeld"
                         id="news_textfeld"
                         autocomplete="Beschreibung"
-                        placeholder="Pflichtfeld. [Inhalt der News, wird unter dem Titel eingefügt]"
+                        placeholder="Pflichtfeld. [Programmbeschreibung, wird unter dem Titel eingefügt]"
                         class="
                           mt-1
                           focus:ring-green-500
@@ -386,7 +382,7 @@
                           hover:bg-green-500
                         "
                       >
-                        Kein News-Foto uploaden
+                        Kein Programm-Bild beifügen
                       </button>
                     </div>
                     <!--IMAGE FILE UPLOAD END-->

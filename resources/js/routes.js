@@ -19,6 +19,9 @@ import AusstellerAendern from './components/VorstandAdminComponents/AusstellerAe
 import AddPhotos from './components/VorstandAdminComponents/FotogalerieComponents/AddPhotos';
 import Karte from './components/Karte';
 import Anreise from './components/Anreise';
+import Sponsoren from './components/Sponsoren';
+//import Programm from './components/Programm';
+import ProgrammAnlegen from './components/VorstandAdminComponents/ProgrammAnlegen';
 
 
 export default {
@@ -36,8 +39,18 @@ export default {
         },
 
         {
-            path: '/app/Produkte',
+            path: '/app/produkte',
             component: Produkte
+        },
+
+        /*{
+            path: '/app/programm',
+            component: Programm
+        },*/
+
+        {
+            path: '/app/admin/dashboard/programmanlegen',
+            component: ProgrammAnlegen
         },
 
         {
@@ -75,6 +88,12 @@ export default {
             path: '/app/kontakt',
             component: Kontakt
         },
+
+        {
+            path: '/app/sponsoren',
+            component: Sponsoren
+        },
+
 
         {
             path: '/app/datenschutz',

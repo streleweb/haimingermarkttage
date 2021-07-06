@@ -19,7 +19,7 @@
         <article
           v-for="(jeweiligeNews, index) in news"
           :key="index"
-          class="articlestyling mx-auto"
+          class="articlestyling mx-auto overflow-hidden w-full"
         >
           <img
             v-if="imageUrlNotEmpty(index)"
@@ -113,6 +113,7 @@ export default {
           //console.log("Debug status:" + response.status);
           if (response.status == 200) {
             this.news = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
+            this.news.reverse();
             this.changeTimeFormat();
             if (this.news.length <= 0) {
               Swal.fire({
