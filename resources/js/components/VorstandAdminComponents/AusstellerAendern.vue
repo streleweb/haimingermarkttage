@@ -171,7 +171,6 @@
                 text-base
                 font-medium
               "
-              aria-current="page"
               >Dashboard</a
             >
             <!--Wenn Menü aufgeklappt-->

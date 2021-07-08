@@ -208,8 +208,7 @@
                 text-base
                 font-medium
               "
-            >
-              News
+              ><router-link to="/app/admin/dashboard/news">News</router-link>
             </a>
 
             <a

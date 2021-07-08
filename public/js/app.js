@@ -4841,7 +4841,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -8405,7 +8404,6 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-//
 //
 //
 //
@@ -38727,7 +38725,7 @@ var render = function() {
                     {
                       staticClass:
                         "\n              bg-gray-900\n              text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
-                      attrs: { href: "#", "aria-current": "page" }
+                      attrs: { href: "#" }
                     },
                     [_vm._v("Dashboard")]
                   ),
@@ -43012,7 +43010,14 @@ var render = function() {
                         "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#" }
                     },
-                    [_vm._v("\n            News\n          ")]
+                    [
+                      _c(
+                        "router-link",
+                        { attrs: { to: "/app/admin/dashboard/news" } },
+                        [_vm._v("News")]
+                      )
+                    ],
+                    1
                   ),
                   _vm._v(" "),
                   _c(
