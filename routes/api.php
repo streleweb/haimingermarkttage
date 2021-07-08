@@ -34,6 +34,7 @@ Route::get('/aussteller', [AusstellerController::class, 'index']);
 Route::get('/aussteller/{id}', [AusstellerController::class, 'show']);
 Route::get('/news', [NewsController::class, 'index']);
 Route::get('/fotogalerie', [FotogalerieController::class, 'index']);
+Route::get('/programm', [ProgrammController::class, 'index']);
 
 /**
  * Protected routes through Sanctum. 

@@ -16,8 +16,8 @@ class ProgrammController extends Controller
      */
     public function index()
     {
-        $programmliste = Programm::paginate(4); // für 4 Programme pro Seite unter /app/programm im Frontend
-        return ProgrammResource::collection($programmliste);
+        //$programmliste = Programm::paginate(4); // für 4 Programme pro Seite unter /app/programm im Frontend
+        return ProgrammResource::collection(Programm::all());
     }
 
     /**
@@ -42,6 +42,7 @@ class ProgrammController extends Controller
         [
             'programm_titel' => 'required|min:2|max:30',
             'programm_beschreibung'=> 'nullable|min:10|max:100',
+            'programm_bild_url' => 'nullable|min:1'
         ]);
 
         if ($validator->fails()) {
@@ -52,6 +53,7 @@ class ProgrammController extends Controller
             $programm = new Programm();
             $programm->programm_titel = $request->programm_titel;
             $programm->programm_beschreibung = $request->programm_beschreibung;
+            $programm->programm_bild_url = $request->programm_bild_url;
            
             if($programm->save()){
                 return new ProgrammResource($programm);
@@ -71,16 +73,6 @@ class ProgrammController extends Controller
         return $programm;
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Programm  $programm
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Programm $programm)
-    {
-        return view('programm.edit')->with('programm',$programm);
-    }
 
     /**
      * Update the specified resource in storage.
@@ -95,6 +87,7 @@ class ProgrammController extends Controller
         $programm->id = $request->id;
         $programm->programm_titel = $request->programm_titel;
         $programm->programm_beschreibung = $request->programm_beschreibung;
+        $programm->programm_bild_url = $request->programm_bild_url;
         if($programm->save())
         {
             return new ProgrammResource($programm);
@@ -107,7 +100,7 @@ class ProgrammController extends Controller
      * @param  \App\Models\Programm  $programm
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Programm $programm)
+    public function destroy($id)
     {
         $programm = Programm::findOrFail($id);
         $programm->delete();
