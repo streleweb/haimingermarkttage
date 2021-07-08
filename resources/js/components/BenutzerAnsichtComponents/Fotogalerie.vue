@@ -6,7 +6,7 @@
 
 <script>
 import Button from "./Button";
-import FotoApp from "../components/Fotoslidergalerie/FotoApp.vue";
+import FotoApp from "../BenutzerAnsichtComponents/Fotoslidergalerie/FotoApp.vue";
 
 export default {
   data() {

@@ -387,8 +387,8 @@
 </template>
 
 <script>
-import Button from "../Button";
-import Farbzone from "../Farbzone";
+import Button from "../BenutzerAnsichtComponents/Button";
+import Farbzone from "../BenutzerAnsichtComponents/Farbzone";
 import repository from "./repository/repository";
 
 import Swal from "sweetalert2";

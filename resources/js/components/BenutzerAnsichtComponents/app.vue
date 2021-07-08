@@ -22,7 +22,7 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Mobilemenu from "./Mobilemenu.vue";
 const default_layout = "default";
-import { EventBus, Eventbus } from "../event-bus";
+import { EventBus, Eventbus } from "../../event-bus";
 
 export default {
   data() {

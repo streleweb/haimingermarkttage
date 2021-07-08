@@ -108,7 +108,7 @@
 
 <script>
 import Mobilemenu from "./Mobilemenu.vue";
-import { EventBus } from "../event-bus";
+import { EventBus } from "../../event-bus";
 
 export default {
   name: "Navbar",

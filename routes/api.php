@@ -23,24 +23,25 @@ use App\Http\Controllers\ImageController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-/*
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});*/
 
-//Public routes
+/**
+ * Public-Routes
+ * Zugänglich für Admin und Benutzer
+ */
+
 Route::get('/aussteller/search/{name}', [AusstellerController::class, 'search']);
 Route::get('/aussteller', [AusstellerController::class, 'index']);
 Route::get('/aussteller/{id}', [AusstellerController::class, 'show']);
 Route::get('/news', [NewsController::class, 'index']);
 Route::get('/fotogalerie', [FotogalerieController::class, 'index']);
 
- //Route::post('/admin/register', [AuthController::class, 'register']);
-//Route::post('/admin/register', [AuthController::class, 'register']);
-//Admin-Public-Routes
-
- //Protected routes through Sanctum. Token-based requests
+/**
+ * Protected routes through Sanctum. 
+ * Token-based requests
+ */
+ 
 Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::post('/admin/register', [AuthController::class, 'register']);
     //logout
     Route::post('/admin/logout', [AuthController::class, 'logout']);
     //login

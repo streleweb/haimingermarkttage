@@ -12,7 +12,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 window.axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 window.axios.defaults.headers.common['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT, DELETE';
 
-var token = '1|exDKmoKBRC9A7Nd4JHmbjLX7p24okrmUdbooFOy0';  //old token 33|ryvH8WgjJDLqDtoZ5vEl9eTz8DJ5mNNzqMLjldpo  und 56|bGo7EMpuLHbpwIkS0DKkMGZRnQXMYViKyuy4R47J
+let token = '1|exDKmoKBRC9A7Nd4JHmbjLX7p24okrmUdbooFOy0';  //old token 33|ryvH8WgjJDLqDtoZ5vEl9eTz8DJ5mNNzqMLjldpo  und 56|bGo7EMpuLHbpwIkS0DKkMGZRnQXMYViKyuy4R47J
 window.axios.defaults.headers.common = { 'Authorization': `Bearer ${token}` }
 window.axios.defaults.crossDomain = true;
 
