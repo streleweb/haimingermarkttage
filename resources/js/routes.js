@@ -19,7 +19,7 @@ import AddPhotos from './components/VorstandAdminComponents/FotogalerieComponent
 import Karte from './components/BenutzerAnsichtComponents/Karte';
 import Anreise from './components/BenutzerAnsichtComponents/Anreise';
 import Sponsoren from './components/BenutzerAnsichtComponents/Sponsoren';
-//import Programm from './components/BenutzerAnsichtComponents/Programm';
+import Programm from './components/BenutzerAnsichtComponents/Programm';
 import ProgrammAnlegen from './components/VorstandAdminComponents/ProgrammAnlegen';
 
 
@@ -42,10 +42,10 @@ export default {
             component: Produkte
         },
 
-        /*{
+        {
             path: '/app/programm',
             component: Programm
-        },*/
+        },
 
         {
             path: '/app/admin/dashboard/programmanlegen',

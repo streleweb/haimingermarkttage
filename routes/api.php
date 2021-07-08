@@ -9,7 +9,6 @@ use App\Http\Controllers\FotogalerieController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProgrammController;
-use App\Http\Controllers\ProgrammpunktController;
 use App\Http\Controllers\SponsorenController;
 use App\Http\Controllers\ImageController;
 
@@ -66,6 +65,10 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/news', [NewsController::class, 'store']);
     Route::delete('/news/{id}', [NewsController::class, 'destroy']);
 
+    //Programm
+    Route::post('/programm', [ProgrammController::class, 'store']);
+    Route::delete('/programm/{id}', [ProgrammController::class, 'destroy']);
+
 });
 
 
@@ -73,10 +76,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 //Achtung, de Routen müssn no abgeändert werdn, nicht für Diplomarbeit verwenden so
 
 
-
-
-Route::resource('programm', ProgrammController::class);
-Route::resource('programmpunkt', ProgrammpunktController::class);
 Route::resource('sponsoren', SponsorenController::class);
 
 

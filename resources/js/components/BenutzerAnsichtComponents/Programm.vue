@@ -1,19 +1,19 @@
 <template>
   <div class="ausstellergradient">
     <div class="ausstellercontainer">
-      <p v-if="loading">
-        <img
-          src="/images/icons/gifs/loadingtransparent.gif"
-          alt="loading..."
-          class="mt-40 mx-auto z-50"
-        />
-      </p>
       <!-- custom font konfiguriert in tailwind.config.js-->
       <!-- Hier noch Background-Pic oder Video rein -->
       <div class="titletext ueberschrift mb-7 w-full textshadow-markant">
         <p>Programm</p>
         <!-- end willkommenstexte -->
       </div>
+      <p v-if="loading">
+        <img
+          src="/images/icons/gifs/loadingtransparent.gif"
+          alt="loading..."
+          class="mt-20 mx-auto z-50"
+        />
+      </p>
 
       <div class="grid grid-cols-1 gap-20 items-center w-full">
         <article
@@ -71,25 +71,22 @@ import Swal from "sweetalert2";
 export default {
   data() {
     return {
-      news: [],
       loading: false,
       programmArray: [],
     };
   },
-  //wenn Component created ist, führe die Methoden zum
-  //Laden der Aussteller und Ausstellerfotos via Axios Request aus
+
   created() {
     this.loading = true;
     this.loadProgammData();
     this.loading = false;
-    /*this.loadAusstellerfoto();*/
   },
 
   methods: {
     changeTimeFormat() {
-      for (let i = 0; i < this.news.length; i++) {
-        let dateOfNews = this.news[i].created_at;
-        let splitItUp = dateOfNews.split("T"); //Carbon return splittable at T
+      for (let i = 0; i < this.programmArray.length; i++) {
+        let dateOfProgrammPost = this.programmArray[i].created_at;
+        let splitItUp = dateOfProgrammPost.split("T"); //Carbon return splittable at T
         let first = splitItUp[0];
         let splitted = first.split("-");
         let reversed = splitted.reverse();
@@ -101,20 +98,10 @@ export default {
           "." +
           joinItAgain.substring(4, joinItAgain.length);
         //console.log(addPoints);
-        this.news[i].created_at = addPoints;
+        this.programmArray[i].created_at = addPoints;
       }
-
-      //Date-Conversion to readable Format
-      /*
-      this.news.forEach((element) => {
-        let dateOfNews = element.created_at;
-        //console.log(dateOfNews);
-        let splitIt = dateOfNews.split("T");
-        element = splitIt[0];
-        console.log(element);
-      });*/
     },
-    loadProgrammData() {
+    loadProgammData() {
       axios
         .get("/api/programm")
         .then((response) => {
@@ -125,7 +112,7 @@ export default {
             this.changeTimeFormat();
             if (this.programmArray.length <= 0) {
               Swal.fire({
-                title: "Momentan gibt es keine Neuigkeiten!",
+                title: "Momentan gibt es keine Programminfos!",
                 text: "Schauen Sie in Kürze wieder vorbei...",
                 confirmButtonText: "ok",
                 confirmButtonColor: "#3cb371",
@@ -133,7 +120,7 @@ export default {
             }
           } else {
             Swal.fire({
-              title: "Konnte News nicht aus der DB laden!",
+              title: "Konnte Programminfos nicht aus der DB laden!",
               text: "Wir werden uns in Kürze darum kümmern.",
               confirmButtonText: "ok",
               confirmButtonColor: "#3cb371",

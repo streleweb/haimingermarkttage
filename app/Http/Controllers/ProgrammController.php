@@ -81,13 +81,17 @@ class ProgrammController extends Controller
      * @param  \App\Models\Programm  $programm
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Programm $programm)
+    public function update($id)
     {
         $programm = Programm::findOrFail($id);
         $programm->id = $request->id;
         $programm->programm_titel = $request->programm_titel;
         $programm->programm_beschreibung = $request->programm_beschreibung;
         $programm->programm_bild_url = $request->programm_bild_url;
+
+        $date = Carbon::now();
+        $programm->created_at=$date->toDateTimeString();
+
         if($programm->save())
         {
             return new ProgrammResource($programm);
