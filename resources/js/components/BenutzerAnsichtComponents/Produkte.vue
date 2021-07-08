@@ -206,8 +206,10 @@ article img {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
     url("/images/background/produktbackground.svg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
+  /*background-position: 50% 50%;*/
+  width: 100%;
+  min-height: 100%;
+  /*background-size: cover;*/
   opacity: 90%;
 }
 </style>

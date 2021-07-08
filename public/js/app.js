@@ -3200,7 +3200,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -10809,7 +10808,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-9dde909a] {\n  background: #eee5e9;\n  border: none;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 20px;\n  text-align: center;\n  width: 250px;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-9dde909a]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-9dde909a] {\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 0.5rem;\n  width: 130px;\n  border-radius: 20px;\n  z-index: 1;\n}\n.text[data-v-9dde909a] {\n  padding: 20px 20px;\n}\n.text h3[data-v-9dde909a] {\n  text-transform: uppercase;\n}\n.produktbackground[data-v-9dde909a] {\n  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),\r\n    url(\"/images/background/produktbackground.svg\");\n  background-repeat: no-repeat;\n  background-position: 50% 50%;\n  background-size: cover;\n  opacity: 90%;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-9dde909a] {\n  background: #eee5e9;\n  border: none;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 20px;\n  text-align: center;\n  width: 250px;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-9dde909a]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-9dde909a] {\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 0.5rem;\n  width: 130px;\n  border-radius: 20px;\n  z-index: 1;\n}\n.text[data-v-9dde909a] {\n  padding: 20px 20px;\n}\n.text h3[data-v-9dde909a] {\n  text-transform: uppercase;\n}\n.produktbackground[data-v-9dde909a] {\n  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),\r\n    url(\"/images/background/produktbackground.svg\");\n  background-repeat: no-repeat;\n  /*background-position: 50% 50%;*/\n  width: 100%;\n  min-height: 100%;\n  /*background-size: cover;*/\n  opacity: 90%;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10833,7 +10832,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-19bafd3e] {\n  background: #eee5e9;\n  border: white;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 0.4rem;\n  text-align: center;\n  width: 80%;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-19bafd3e]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-19bafd3e] {\n  max-width: 50%;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  margin-left: auto;\n  margin-right: auto;\n  z-index: 1;\n}\n.text[data-v-19bafd3e] {\n  padding: 0 20px 20px;\n}\n.ausstellergradient[data-v-19bafd3e] {\n  background-image: linear-gradient(to bottom, #536976, #292e49);\n  background-repeat: no-repeat;\n  background-size: cover;\n  background: linear-gradient(rgba(90, 65, 42, 0.342), rgba(65, 65, 65, 0.3)),\r\n    url(\"/images/background/hb1.jpg\");\n  background-repeat: no-repeat;\n  background-position: 50% 50%;\n  background-size: cover;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-19bafd3e] {\n  background: #eee5e9;\n  border: white;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 0.4rem;\n  text-align: center;\n  width: 80%;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-19bafd3e]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-19bafd3e] {\n  max-width: 50%;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  margin-left: auto;\n  margin-right: auto;\n  z-index: 1;\n}\n.text[data-v-19bafd3e] {\n  padding: 0 20px 20px;\n}\n.programmgradient[data-v-19bafd3e] {\n  background-image: linear-gradient(to bottom, #536976, #292e49);\n  background-repeat: no-repeat;\n  /*background-size: cover;*/\n  background: linear-gradient(rgba(90, 65, 42, 0.342), rgba(65, 65, 65, 0.3)),\r\n    url(\"/images/background/hb1.jpg\");\n  background-repeat: no-repeat;\n  /*background-position: 50% 50%;*/\n  min-width: 100%;\n  min-height: 100%;\n  background-size: cover;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -37474,10 +37473,19 @@ var render = function() {
           _c(
             "router-link",
             {
-              staticClass: "hidden newsbp:inline-flex navbg",
+              staticClass: "hidden newnewsbp:inline-flex navbg",
               attrs: { to: "/app/news", exact: "" }
             },
             [_vm._v("News")]
+          ),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            {
+              staticClass: "hidden newsbp:inline-flex navbg",
+              attrs: { to: "/app/programm", exact: "" }
+            },
+            [_vm._v("Programm")]
           ),
           _vm._v(" "),
           _c(
@@ -37487,15 +37495,6 @@ var render = function() {
               attrs: { to: "/app/fotogalerie", exact: "" }
             },
             [_vm._v("Fotogalerie")]
-          ),
-          _vm._v(" "),
-          _c(
-            "router-link",
-            {
-              staticClass: "hidden kontaktbp:inline-flex navbg",
-              attrs: { to: "/app/kontakt", exact: "" }
-            },
-            [_vm._v("Kontakt")]
           )
         ],
         1
@@ -38000,8 +37999,8 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "ausstellergradient" }, [
-    _c("div", { staticClass: "ausstellercontainer" }, [
+  return _c("div", { staticClass: "programmgradient" }, [
+    _c("div", { staticClass: "programmcontainer" }, [
       _vm._m(0),
       _vm._v(" "),
       _vm.loading

@@ -23,21 +23,20 @@
         <router-link
           to="/app/news"
           exact
-          class="hidden newsbp:inline-flex navbg"
+          class="hidden newnewsbp:inline-flex navbg"
           >News</router-link
+        >
+        <router-link
+          to="/app/programm"
+          exact
+          class="hidden newsbp:inline-flex navbg"
+          >Programm</router-link
         >
         <router-link
           to="/app/fotogalerie"
           exact
           class="hidden fotogaleriebp:inline-flex navbg"
           >Fotogalerie</router-link
-        >
-
-        <router-link
-          to="/app/kontakt"
-          exact
-          class="hidden kontaktbp:inline-flex navbg"
-          >Kontakt</router-link
         >
       </div>
       <!--END-LOGOCONTAINER-->

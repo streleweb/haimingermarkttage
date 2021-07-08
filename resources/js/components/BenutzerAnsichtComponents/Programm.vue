@@ -1,6 +1,6 @@
 <template>
-  <div class="ausstellergradient">
-    <div class="ausstellercontainer">
+  <div class="programmgradient">
+    <div class="programmcontainer">
       <!-- custom font konfiguriert in tailwind.config.js-->
       <!-- Hier noch Background-Pic oder Video rein -->
       <div class="titletext ueberschrift mb-7 w-full textshadow-markant">
@@ -189,15 +189,17 @@ article img {
   padding: 0 20px 20px;
 }
 
-.ausstellergradient {
+.programmgradient {
   background-image: linear-gradient(to bottom, #536976, #292e49);
   background-repeat: no-repeat;
-  background-size: cover;
+  /*background-size: cover;*/
 
   background: linear-gradient(rgba(90, 65, 42, 0.342), rgba(65, 65, 65, 0.3)),
     url("/images/background/hb1.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  /*background-position: 50% 50%;*/
+  min-width: 100%;
+  min-height: 100%;
   background-size: cover;
 }
 </style>
