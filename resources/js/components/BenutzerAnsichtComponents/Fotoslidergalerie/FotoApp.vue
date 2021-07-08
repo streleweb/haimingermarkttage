@@ -15,7 +15,11 @@
           class="text-xs sm:text-base text-gray-400 fixed right-6 bottom-10"
           >{{ foto.fotogalerie_fotobeschreibung }}</span
         >
-        <img :src="urlOfFoto(index)" alt="Foto" />
+        <img
+          :src="urlOfFoto(index)"
+          alt="Foto"
+          class="max-h-96 sm:maxheightsmall lg:maxheightlarge"
+        />
       </carousel-slide>
     </carousel>
   </div>
@@ -92,4 +96,14 @@ export default {
   components: { Carousel, CarouselSlide },
 };
 </script>
+
+<style scoped>
+.maxheightsmall {
+  max-height: 500px;
+}
+
+.maxheightlarge {
+  max-height: 800px;
+}
+</style>
 
