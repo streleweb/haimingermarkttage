@@ -7,18 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Next up
+## Current Version
 
-Frontend: (branch: frontend, last update: 03.03.21 -> in master gemerged, weil pwa funktioniert und Grundgerüst passt)
-
-- Responsive Navbar (Hamburger Menü) + Search-Field, Gischi konsultieren wegen Fotos/Videos für Background Website (eventuell App)
-- Container für die Buttons machen und mit Tailwind so alignen, dass Buttons sich an Screen anpassen (mittig)
-
-Backend: (branch: backend, noch nicht gemerged)
-
-- ER-Diagramm nochmal abchecken, was wir genau brauchen
-- bild doch wieder zu bildurl umbenennen (zeilen) , sind ja links, die wir da abspeichern
-- mvc und migrations generieren
+workingbranch (nicht master) = Aktuelle Version.
 
 
 
