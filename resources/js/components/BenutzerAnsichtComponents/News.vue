@@ -1,19 +1,19 @@
 <template>
-  <div class="ausstellergradient">
-    <div class="ausstellercontainer">
-      <p v-if="loading">
-        <img
-          src="/images/icons/gifs/loadingtransparent.gif"
-          alt="loading..."
-          class="mt-40 mx-auto z-50"
-        />
-      </p>
+  <div class="newsgradient">
+    <div class="newscontainer">
       <!-- custom font konfiguriert in tailwind.config.js-->
       <!-- Hier noch Background-Pic oder Video rein -->
       <div class="titletext ueberschrift mb-7 w-full textshadow-markant">
         <p>News</p>
         <!-- end willkommenstexte -->
       </div>
+      <p v-if="loading">
+        <img
+          src="/images/icons/gifs/loadingtransparent.gif"
+          alt="loading..."
+          class="mt-20 z-50"
+        />
+      </p>
 
       <div class="grid grid-cols-1 gap-20 items-center w-full">
         <article
@@ -25,7 +25,7 @@
             v-if="imageUrlNotEmpty(index)"
             :src="imgUrl(index)"
             alt=""
-            class="border border-green-900 shadow-md lg:max-w-md"
+            class="border border-green-900 shadow-md max-h-56"
           />
 
           <div class="text text-lg text-center lg:text-2xl">
@@ -107,6 +107,7 @@ export default {
       });*/
     },
     loadNews() {
+      this.loading = true;
       axios
         .get("/api/news")
         .then((response) => {
@@ -114,6 +115,7 @@ export default {
           if (response.status == 200) {
             this.news = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
             this.news.reverse();
+            this.loading = false;
             this.changeTimeFormat();
             if (this.news.length <= 0) {
               Swal.fire({
@@ -192,7 +194,7 @@ article img {
   padding: 0 20px 20px;
 }
 
-.ausstellergradient {
+.newsgradient {
   background-image: linear-gradient(to bottom, #536976, #292e49);
   background-repeat: no-repeat;
   background-size: cover;
@@ -200,7 +202,9 @@ article img {
   background: linear-gradient(rgba(90, 65, 42, 0.342), rgba(65, 65, 65, 0.3)),
     url("/images/background/hb1.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  min-width: 100%;
+  min-height: 100%;
+  /*background-position: 50% 50%;*/
   background-size: cover;
 }
 </style>

@@ -3377,12 +3377,15 @@ __webpack_require__.r(__webpack_exports__);
     loadNews: function loadNews() {
       var _this = this;
 
+      this.loading = true;
       axios.get("/api/news").then(function (response) {
         //console.log("Debug status:" + response.status);
         if (response.status == 200) {
           _this.news = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
 
           _this.news.reverse();
+
+          _this.loading = false;
 
           _this.changeTimeFormat();
 
@@ -10760,7 +10763,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-086511b0] {\n  background: #eee5e9;\n  border: white;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 0.4rem;\n  text-align: center;\n  width: 80%;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-086511b0]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-086511b0] {\n  max-width: 50%;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  margin-left: auto;\n  margin-right: auto;\n  z-index: 1;\n}\n.text[data-v-086511b0] {\n  padding: 0 20px 20px;\n}\n.ausstellergradient[data-v-086511b0] {\n  background-image: linear-gradient(to bottom, #536976, #292e49);\n  background-repeat: no-repeat;\n  background-size: cover;\n  background: linear-gradient(rgba(90, 65, 42, 0.342), rgba(65, 65, 65, 0.3)),\r\n    url(\"/images/background/hb1.jpg\");\n  background-repeat: no-repeat;\n  background-position: 50% 50%;\n  background-size: cover;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-086511b0] {\n  background: #eee5e9;\n  border: white;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 0.4rem;\n  text-align: center;\n  width: 80%;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-086511b0]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-086511b0] {\n  max-width: 50%;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  margin-left: auto;\n  margin-right: auto;\n  z-index: 1;\n}\n.text[data-v-086511b0] {\n  padding: 0 20px 20px;\n}\n.newsgradient[data-v-086511b0] {\n  background-image: linear-gradient(to bottom, #536976, #292e49);\n  background-repeat: no-repeat;\n  background-size: cover;\n  background: linear-gradient(rgba(90, 65, 42, 0.342), rgba(65, 65, 65, 0.3)),\r\n    url(\"/images/background/hb1.jpg\");\n  background-repeat: no-repeat;\n  min-width: 100%;\n  min-height: 100%;\n  /*background-position: 50% 50%;*/\n  background-size: cover;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -37617,12 +37620,14 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "ausstellergradient" }, [
-    _c("div", { staticClass: "ausstellercontainer" }, [
+  return _c("div", { staticClass: "newsgradient" }, [
+    _c("div", { staticClass: "newscontainer" }, [
+      _vm._m(0),
+      _vm._v(" "),
       _vm.loading
         ? _c("p", [
             _c("img", {
-              staticClass: "mt-40 mx-auto z-50",
+              staticClass: "mt-20 z-50",
               attrs: {
                 src: "/images/icons/gifs/loadingtransparent.gif",
                 alt: "loading..."
@@ -37630,8 +37635,6 @@ var render = function() {
             })
           ])
         : _vm._e(),
-      _vm._v(" "),
-      _vm._m(0),
       _vm._v(" "),
       _c(
         "div",
@@ -37646,8 +37649,7 @@ var render = function() {
             [
               _vm.imageUrlNotEmpty(index)
                 ? _c("img", {
-                    staticClass:
-                      "border border-green-900 shadow-md lg:max-w-md",
+                    staticClass: "border border-green-900 shadow-md max-h-56",
                     attrs: { src: _vm.imgUrl(index), alt: "" }
                   })
                 : _vm._e(),
