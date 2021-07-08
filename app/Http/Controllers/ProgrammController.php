@@ -6,6 +6,7 @@ use App\Models\Programm;
 use Illuminate\Http\Request;
 use App\Http\Resources\ProgrammResource;
 use Illuminate\Support\Facades\Validator;
+use Carbon\Carbon; //Date
 
 class ProgrammController extends Controller
 {
@@ -46,17 +47,21 @@ class ProgrammController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return Response::json([
-                'error' => $validator->errors()], 200);
+            return \response('Programm-Post nicht gespeichert! Beachten Sie die Maximal-Zeichenlänge und geben Sie einen Titel an.', 200)
+            ->header('Content-Type', 'text/plain');
             
         }else {
             $programm = new Programm();
             $programm->programm_titel = $request->programm_titel;
             $programm->programm_beschreibung = $request->programm_beschreibung;
             $programm->programm_bild_url = $request->programm_bild_url;
+
+            $date = Carbon::now();
+            $programm->created_at=$date->toDateTimeString();
            
             if($programm->save()){
-                return new ProgrammResource($programm);
+                return \response('Programm-Post erfolgreich gespeichert!', 200)
+                ->header('Content-Type', 'text/plain');;
             }
         }
     }
@@ -94,7 +99,8 @@ class ProgrammController extends Controller
 
         if($programm->save())
         {
-            return new ProgrammResource($programm);
+            return \response('Programm erfolgreich aktualisiert!', 200)
+                ->header('Content-Type', 'text/plain');
         };
     }
 

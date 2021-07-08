@@ -3879,8 +3879,7 @@ __webpack_require__.r(__webpack_exports__);
         //console.log("Debug status:" + response.status);
         if (response.status == 200) {
           _this.programmArray = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
-
-          _this.programmArray.reverse();
+          //this.programmArray.reverse();
 
           _this.changeTimeFormat();
 
@@ -8847,6 +8846,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -8877,13 +8878,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       });
     }
 
-    this.loadNews();
+    this.loadProgramm();
   },
   methods: {
     fotoEnthalten: function fotoEnthalten(index) {
       return this.programmArray[index].programm_bild_url != null && this.programmArray[index].programm_bild_url != "" ? true : false;
     },
-    loadNews: function loadNews() {
+    loadProgramm: function loadProgramm() {
       var _this = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
@@ -8902,7 +8903,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 data = _yield$repository$get.data;
                 _this.programmArray = data.data;
                 _this.loading = false;
-                console.log(_this.news);
+                console.log(_this.programmArray);
 
               case 8:
               case "end":
@@ -10330,6 +10331,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   postFotogalerie: function postFotogalerie(formData) {
     return _api_api__WEBPACK_IMPORTED_MODULE_0__.default.post("http://localhost:8000/api/imageupload", formData);
+  },
+  getProgramm: function getProgramm() {
+    return _api_api__WEBPACK_IMPORTED_MODULE_0__.default.get("http://localhost:8000/api/programm");
   }
 });
 
@@ -38122,7 +38126,7 @@ var render = function() {
               _vm.imageUrlNotEmpty(index)
                 ? _c("img", {
                     staticClass:
-                      "border border-green-900 shadow-md lg:max-w-md",
+                      "border border-green-900 shadow-md max-h-96 lg:max-w-md",
                     attrs: { src: _vm.imgUrl(index), alt: "" }
                   })
                 : _vm._e(),
@@ -43039,7 +43043,7 @@ var render = function() {
                   [
                     _vm._m(0),
                     _vm._v(" "),
-                    _vm._l(_vm.programmAray, function(
+                    _vm._l(_vm.programmArray, function(
                       jeweiligesProgramm,
                       index
                     ) {
@@ -43318,12 +43322,12 @@ var staticRenderFns = [
         { staticClass: "text-lg font-medium leading-6 text-white pb-1" },
         [
           _vm._v(
-            "\n              Programm anlegen, löschen oder ändern.\n            "
+            "\n              Tagesprogramm anlegen oder löschen.\n            "
           )
         ]
       ),
       _vm._v(
-        "\n            Hier können Sie ein neues Tagesprogramm verfassen.\n          "
+        "\n            Hier können Sie ein neues Tagesprogramm verfassen oder ein\n            bestehendes löschen. Das zuletzt zugefügte Programm wird unterhalb\n            der bestehenden Artikel eingefügt.\n          "
       )
     ])
   },

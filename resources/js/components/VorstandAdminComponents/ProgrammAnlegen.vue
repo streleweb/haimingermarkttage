@@ -238,13 +238,15 @@
           <div class="">
             <div class="text-gray-400 pb-3">
               <h3 class="text-lg font-medium leading-6 text-white pb-1">
-                Programm anlegen, löschen oder ändern.
+                Tagesprogramm anlegen oder löschen.
               </h3>
-              Hier können Sie ein neues Tagesprogramm verfassen.
+              Hier können Sie ein neues Tagesprogramm verfassen oder ein
+              bestehendes löschen. Das zuletzt zugefügte Programm wird unterhalb
+              der bestehenden Artikel eingefügt.
             </div>
 
             <div
-              v-for="(jeweiligesProgramm, index) in programmAray"
+              v-for="(jeweiligesProgramm, index) in programmArray"
               :key="index"
               class="
                 flex
@@ -467,7 +469,7 @@ export default {
     if (localStorage.getItem("isLoggedIn") != "true") {
       this.$router.push({ name: "adminLogin" });
     }
-    this.loadNews();
+    this.loadProgramm();
   },
 
   methods: {
@@ -478,12 +480,12 @@ export default {
         : false;
     },
 
-    async loadNews() {
+    async loadProgramm() {
       this.loading = true;
       let { data } = await repository.getProgramm();
       this.programmArray = data.data;
       this.loading = false;
-      console.log(this.news);
+      console.log(this.programmArray);
     },
 
     urlOfFoto(index) {

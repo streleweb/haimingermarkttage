@@ -32,7 +32,7 @@
             v-if="imageUrlNotEmpty(index)"
             :src="imgUrl(index)"
             alt=""
-            class="border border-green-900 shadow-md lg:max-w-md"
+            class="border border-green-900 shadow-md max-h-96 lg:max-w-md"
           />
 
           <div class="text text-lg text-left lg:text-2xl">
@@ -108,7 +108,7 @@ export default {
           //console.log("Debug status:" + response.status);
           if (response.status == 200) {
             this.programmArray = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
-            this.programmArray.reverse();
+            //this.programmArray.reverse();
             this.changeTimeFormat();
             if (this.programmArray.length <= 0) {
               Swal.fire({
