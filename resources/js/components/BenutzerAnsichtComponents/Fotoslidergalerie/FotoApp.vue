@@ -28,6 +28,7 @@
 <script>
 import Carousel from "./Carousel.vue";
 import CarouselSlide from "./CarouselSlide.vue";
+import Swal from "sweetalert2";
 
 export default {
   data() {
@@ -36,7 +37,7 @@ export default {
       visibleSlide: 0,
     };
   },
-  /*created wird vor mounted() aufgerufen, deshalb schneller*/
+  /*created wird vor mounted() aufgerufen, deshalb schneller und trotzdem reaktiv*/
   created() {
     this.loadFotos();
   },
@@ -52,6 +53,12 @@ export default {
         .catch(function (error) {
           // Fehlerbehandlung
           console.log(error);
+          Swal.fire({
+            title: "Fotos konnten nicht geladen werden!",
+            heightAuto: false,
+            confirmButtonText: "ok",
+            confirmButtonColor: "#3cb371",
+          });
         });
     },
     urlOfFoto(index) {

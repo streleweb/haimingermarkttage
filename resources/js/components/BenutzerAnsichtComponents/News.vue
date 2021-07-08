@@ -120,6 +120,7 @@ export default {
             if (this.news.length <= 0) {
               Swal.fire({
                 title: "Momentan gibt es keine Neuigkeiten!",
+                heightAuto: false,
                 text: "Schauen Sie in Kürze wieder vorbei...",
                 confirmButtonText: "ok",
                 confirmButtonColor: "#3cb371",
@@ -128,6 +129,7 @@ export default {
           } else {
             Swal.fire({
               title: "Konnte News nicht aus der DB laden!",
+              heightAuto: false,
               text: "Wir werden uns in Kürze darum kümmern.",
               confirmButtonText: "ok",
               confirmButtonColor: "#3cb371",

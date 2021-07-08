@@ -72,10 +72,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 });
 
 
-
-//Achtung, de Routen müssn no abgeändert werdn, nicht für Diplomarbeit verwenden so
-
-
-Route::resource('sponsoren', SponsorenController::class);
+//Route::resource('sponsoren', SponsorenController::class);
 
 

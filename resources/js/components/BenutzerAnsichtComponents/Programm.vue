@@ -113,6 +113,7 @@ export default {
             if (this.programmArray.length <= 0) {
               Swal.fire({
                 title: "Momentan gibt es keine Programminfos!",
+                heightAuto: false,
                 text: "Schauen Sie in Kürze wieder vorbei...",
                 confirmButtonText: "ok",
                 confirmButtonColor: "#3cb371",
@@ -121,6 +122,7 @@ export default {
           } else {
             Swal.fire({
               title: "Konnte Programminfos nicht aus der DB laden!",
+              heightAuto: false,
               text: "Wir werden uns in Kürze darum kümmern.",
               confirmButtonText: "ok",
               confirmButtonColor: "#3cb371",

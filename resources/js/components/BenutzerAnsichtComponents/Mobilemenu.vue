@@ -63,7 +63,7 @@ export default {
     },
   },
   watch: {
-    //when visible changes to false, reset it to null
+    //when visible changes, reset it
     hidden() {
       this.hidden = false;
     },

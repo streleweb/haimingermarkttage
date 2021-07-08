@@ -147,6 +147,7 @@ export default {
               Swal.fire({
                 title:
                   "Momentan befinden sich keine Aussteller in der Datenbank!",
+                heightAuto: false,
                 text: "Die Aussteller für das kommende Jahr werden in Kürze aktualisiert.",
                 confirmButtonText: "ok",
                 confirmButtonColor: "#3cb371",
@@ -155,6 +156,7 @@ export default {
           } else {
             Swal.fire({
               title: "Konnte Aussteller leider nicht aus der DB laden!",
+              heightAuto: false,
               text: "Wir werden uns in Kürze darum kümmern.",
               confirmButtonText: "ok",
               confirmButtonColor: "#3cb371",

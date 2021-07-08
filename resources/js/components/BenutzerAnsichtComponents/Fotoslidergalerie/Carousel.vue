@@ -53,9 +53,7 @@
 <script>
 export default {
   data() {
-    return {
-      /*ausstellerfotos: [],*/
-    };
+    return {};
   },
   methods: {
     goToNext() {
@@ -76,10 +74,7 @@ export default {
 <style scoped>
 .carousel {
   position: relative;
-  /*
-  max-width: 80%;
-  height: auto;
-*/
+
   display: flex;
 
   @apply flex justify-center items-center;
@@ -89,13 +84,6 @@ img:focus,
 img:hover {
   outline: none;
   cursor: pointer;
-
-  /* 
-  height: 120px;
-  width: 160px;
-  top: calc(
-    50% - 20px
-  ); px-Wert halb so viel wie height, damit svg genau in der Mitte ist*/
 }
 
 .next {

@@ -2165,6 +2165,7 @@ __webpack_require__.r(__webpack_exports__);
           if (_this.aussteller.length <= 0) {
             sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
               title: "Momentan befinden sich keine Aussteller in der Datenbank!",
+              heightAuto: false,
               text: "Die Aussteller für das kommende Jahr werden in Kürze aktualisiert.",
               confirmButtonText: "ok",
               confirmButtonColor: "#3cb371"
@@ -2173,6 +2174,7 @@ __webpack_require__.r(__webpack_exports__);
         } else {
           sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
             title: "Konnte Aussteller leider nicht aus der DB laden!",
+            heightAuto: false,
             text: "Wir werden uns in Kürze darum kümmern.",
             confirmButtonText: "ok",
             confirmButtonColor: "#3cb371"
@@ -2478,9 +2480,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {
-      /*ausstellerfotos: [],*/
-    };
+    return {};
   },
   methods: {
     goToNext: function goToNext() {
@@ -2539,6 +2539,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Carousel_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Carousel.vue */ "./resources/js/components/BenutzerAnsichtComponents/Fotoslidergalerie/Carousel.vue");
 /* harmony import */ var _CarouselSlide_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CarouselSlide.vue */ "./resources/js/components/BenutzerAnsichtComponents/Fotoslidergalerie/CarouselSlide.vue");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_2__);
 //
 //
 //
@@ -2566,6 +2568,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2576,7 +2579,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
 
-  /*created wird vor mounted() aufgerufen, deshalb schneller*/
+  /*created wird vor mounted() aufgerufen, deshalb schneller und trotzdem reaktiv*/
   created: function created() {
     this.loadFotos();
   },
@@ -2592,6 +2595,12 @@ __webpack_require__.r(__webpack_exports__);
       ["catch"](function (error) {
         // Fehlerbehandlung
         console.log(error);
+        sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
+          title: "Fotos konnten nicht geladen werden!",
+          heightAuto: false,
+          confirmButtonText: "ok",
+          confirmButtonColor: "#3cb371"
+        });
       });
     },
     urlOfFoto: function urlOfFoto(index) {
@@ -3074,7 +3083,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   watch: {
-    //when visible changes to false, reset it to null
+    //when visible changes, reset it
     hidden: function hidden() {
       this.hidden = false;
     }
@@ -3396,6 +3405,7 @@ __webpack_require__.r(__webpack_exports__);
           if (_this.news.length <= 0) {
             sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
               title: "Momentan gibt es keine Neuigkeiten!",
+              heightAuto: false,
               text: "Schauen Sie in Kürze wieder vorbei...",
               confirmButtonText: "ok",
               confirmButtonColor: "#3cb371"
@@ -3404,6 +3414,7 @@ __webpack_require__.r(__webpack_exports__);
         } else {
           sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
             title: "Konnte News nicht aus der DB laden!",
+            heightAuto: false,
             text: "Wir werden uns in Kürze darum kümmern.",
             confirmButtonText: "ok",
             confirmButtonColor: "#3cb371"
@@ -3876,6 +3887,7 @@ __webpack_require__.r(__webpack_exports__);
           if (_this.programmArray.length <= 0) {
             sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
               title: "Momentan gibt es keine Programminfos!",
+              heightAuto: false,
               text: "Schauen Sie in Kürze wieder vorbei...",
               confirmButtonText: "ok",
               confirmButtonColor: "#3cb371"
@@ -3884,6 +3896,7 @@ __webpack_require__.r(__webpack_exports__);
         } else {
           sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
             title: "Konnte Programminfos nicht aus der DB laden!",
+            heightAuto: false,
             text: "Wir werden uns in Kürze darum kümmern.",
             confirmButtonText: "ok",
             confirmButtonColor: "#3cb371"
@@ -7670,6 +7683,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                       localStorage.setItem("isLoggedIn", "false");
                       sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
                         title: "Login nicht erfolgreich!",
+                        heightAuto: false,
                         text: "Überprüfen Sie bitte Ihre Login-Daten",
                         confirmButtonText: "ok",
                         confirmButtonColor: "#3cb371"
@@ -10623,7 +10637,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".carousel[data-v-69558b2e] {\n  position: relative;\n  /*\r\n  max-width: 80%;\r\n  height: auto;\r\n*/\n  display: flex;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\nimg[data-v-69558b2e]:focus,\r\nimg[data-v-69558b2e]:hover {\n  outline: none;\n  cursor: pointer;\n  /* \r\n  height: 120px;\r\n  width: 160px;\r\n  top: calc(\r\n    50% - 20px\r\n  ); px-Wert halb so viel wie height, damit svg genau in der Mitte ist*/\n}\n.next[data-v-69558b2e] {\n  position: fixed;\n  right: 0px;\n}\n.previous[data-v-69558b2e] {\n  position: fixed;\n  left: 0px;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".carousel[data-v-69558b2e] {\n  position: relative;\n  display: flex;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\nimg[data-v-69558b2e]:focus,\r\nimg[data-v-69558b2e]:hover {\n  outline: none;\n  cursor: pointer;\n}\n.next[data-v-69558b2e] {\n  position: fixed;\n  right: 0px;\n}\n.previous[data-v-69558b2e] {\n  position: fixed;\n  left: 0px;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
