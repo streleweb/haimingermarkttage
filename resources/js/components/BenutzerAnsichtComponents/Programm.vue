@@ -35,7 +35,7 @@
             class="border border-green-900 shadow-md lg:max-w-md"
           />
 
-          <div class="text text-lg text-center lg:text-2xl">
+          <div class="text text-lg text-left lg:text-2xl">
             <h3 class="font-bold text-gray-800">
               {{ jeweiligesProgramm.programm_titel }}
             </h3>

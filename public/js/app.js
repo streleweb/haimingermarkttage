@@ -38127,39 +38127,35 @@ var render = function() {
                   })
                 : _vm._e(),
               _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "text text-lg text-center lg:text-2xl" },
-                [
-                  _c("h3", { staticClass: "font-bold text-gray-800" }, [
+              _c("div", { staticClass: "text text-lg text-left lg:text-2xl" }, [
+                _c("h3", { staticClass: "font-bold text-gray-800" }, [
+                  _vm._v(
+                    "\n            " +
+                      _vm._s(jeweiligesProgramm.programm_titel) +
+                      "\n          "
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "h6",
+                  { staticClass: "font-semibold text-xs text-gray-700 mb-2" },
+                  [
                     _vm._v(
-                      "\n            " +
-                        _vm._s(jeweiligesProgramm.programm_titel) +
+                      "\n            Geschrieben am " +
+                        _vm._s(jeweiligesProgramm.created_at) +
                         "\n          "
                     )
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "h6",
-                    { staticClass: "font-semibold text-xs text-gray-700 mb-2" },
-                    [
-                      _vm._v(
-                        "\n            Geschrieben am " +
-                          _vm._s(jeweiligesProgramm.created_at) +
-                          "\n          "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-base lg:text-xl mb-2" }, [
-                    _vm._v(
-                      "\n            " +
-                        _vm._s(jeweiligesProgramm.programm_beschreibung) +
-                        "\n          "
-                    )
-                  ])
-                ]
-              )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-base lg:text-xl mb-2" }, [
+                  _vm._v(
+                    "\n            " +
+                      _vm._s(jeweiligesProgramm.programm_beschreibung) +
+                      "\n          "
+                  )
+                ])
+              ])
             ]
           )
         }),
