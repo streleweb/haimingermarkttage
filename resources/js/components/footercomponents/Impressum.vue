@@ -216,7 +216,7 @@
 </template>
 
 <script>
-import Button from "../Button";
+import Button from "../BenutzerAnsichtComponents/Button";
 
 export default {
   data() {

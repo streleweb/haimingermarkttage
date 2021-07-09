@@ -208,8 +208,7 @@
                 text-base
                 font-medium
               "
-            >
-              News
+              ><router-link to="/app/admin/dashboard/news">News</router-link>
             </a>
 
             <a
@@ -238,13 +237,15 @@
           <div class="">
             <div class="text-gray-400 pb-3">
               <h3 class="text-lg font-medium leading-6 text-white pb-1">
-                Programm anlegen
+                Tagesprogramm anlegen oder löschen.
               </h3>
-              Hier können Sie ein neues Tagesprogramm verfassen.
+              Hier können Sie ein neues Tagesprogramm verfassen oder ein
+              bestehendes löschen. Das zuletzt zugefügte Programm wird unterhalb
+              der bestehenden Artikel eingefügt.
             </div>
 
             <div
-              v-for="(jeweiligeNews, index) in news"
+              v-for="(jeweiligesProgramm, index) in programmArray"
               :key="index"
               class="
                 flex
@@ -257,7 +258,7 @@
               "
             >
               <span class="flex w-32 items-center">{{
-                jeweiligeNews.news_titel
+                jeweiligesProgramm.programm_titel
               }}</span>
               <img
                 v-if="fotoEnthalten(index)"
@@ -268,7 +269,11 @@
               <div v-else class="flex w-20 h-20 justify-center items-center">
                 Kein Foto
               </div>
-              <button key:index @click="deleteNews(index)" class="btn btn-red">
+              <button
+                key:index
+                @click="deleteProgramm(index)"
+                class="btn btn-red"
+              >
                 delete
               </button>
             </div>
@@ -283,10 +288,10 @@
                       >Neuer Programm-Titel</label
                     >
                     <input
-                      v-model="formdata.news_titel"
+                      v-model="formdata.programm_titel"
                       maxlength="70"
                       type="text"
-                      id="news_titel"
+                      id="programm_titel"
                       placeholder="Pflichtfeld"
                       autocomplete="given-name"
                       class="
@@ -310,10 +315,10 @@
                       >
                       <textarea
                         maxlength="255"
-                        v-model="formdata.news_textfeld"
+                        v-model="formdata.programm_beschreibung"
                         id="news_textfeld"
                         autocomplete="Beschreibung"
-                        placeholder="Pflichtfeld. [Programmbeschreibung, wird unter dem Titel eingefügt]"
+                        placeholder="Optional. [Programmbeschreibung, wird unter dem Titel eingefügt]"
                         class="
                           mt-1
                           focus:ring-green-500
@@ -339,7 +344,7 @@
                         >
                         <strong>Achtung!</strong> Maximale Filesize: 1.9MB
                         <br />
-                        Bsp: newsbildname.jpg oder newsbildname.png
+                        Bsp: bildname.jpg oder bildname.png
                       </div>
                     </div>
                     <form
@@ -442,16 +447,16 @@ import Swal from "sweetalert2";
 export default {
   data() {
     return {
-      name: "NewsAnlegen",
+      name: "ProgrammAnlegen",
       loading: null, //für die Einblendung vom loading-gif
       image: "",
-      news: [],
+      programmArray: [],
       error: null,
       submitvisibility: "hidden",
       formdata: {
-        news_titel: null,
-        news_textfeld: null,
-        news_bild_url: null,
+        programm_titel: null,
+        programm_beschreibung: null,
+        programm_bild_url: null,
       }, //Objekt zum Speichern der Model-Daten von oben
     };
   },
@@ -463,28 +468,30 @@ export default {
     if (localStorage.getItem("isLoggedIn") != "true") {
       this.$router.push({ name: "adminLogin" });
     }
-    this.loadNews();
+    this.loadProgramm();
   },
 
   methods: {
     fotoEnthalten(index) {
-      return this.news[index].news_bild_url != null &&
-        this.news[index].news_bild_url != ""
+      return this.programmArray[index].programm_bild_url != null &&
+        this.programmArray[index].programm_bild_url != ""
         ? true
         : false;
     },
 
-    async loadNews() {
+    async loadProgramm() {
       this.loading = true;
-      let { data } = await repository.getNews();
-      this.news = data.data;
+      let { data } = await repository.getProgramm();
+      this.programmArray = data.data;
       this.loading = false;
-      console.log(this.news);
+      console.log(this.programmArray);
     },
 
     urlOfFoto(index) {
       try {
-        return "/images/aussteller/" + this.news[index].news_bild_url;
+        return (
+          "/images/aussteller/" + this.programmArray[index].programm_bild_url
+        );
       } catch (error) {
         console.log(error);
       }
@@ -501,7 +508,7 @@ export default {
     //image uploaden
     upload() {
       //formdata reset, falls öfter aufgerufen wurde
-      this.formdata.news_bild_url = null;
+      this.formdata.programm_bild_url = null;
       const formData = new FormData();
       formData.set("image", this.image);
 
@@ -509,7 +516,7 @@ export default {
         .post("http://localhost:8000/api/imageupload", formData)
         .then((response) => {
           //Server-Responseurl des Images zur bildurl innerhalb der formdata adden
-          this.formdata.news_bild_url = response.data.filepath;
+          this.formdata.programm_bild_url = response.data.filepath;
           Swal.fire({
             title: "Foto gespeichert!",
             heightAuto: false,
@@ -519,9 +526,11 @@ export default {
         });
     },
 
-    deleteNews(index) {
+    deleteProgramm(index) {
       axios
-        .delete("http://localhost:8000/api/news/" + this.news[index].id)
+        .delete(
+          "http://localhost:8000/api/programm/" + this.programmArray[index].id
+        )
         .then((response) => {
           console.log(response);
           //laravel response zu component object hinzufügen zur späteren Ausgabe
@@ -556,7 +565,7 @@ export default {
       //console.log(formToJson);
       try {
         axios
-          .post("/api/news", this.formdata)
+          .post("/api/programm", this.formdata)
           //console.log(result.response.data);
           .then((response) => {
             //console.log(response);

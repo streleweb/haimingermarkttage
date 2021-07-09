@@ -221,6 +221,7 @@ export default {
                   localStorage.setItem("isLoggedIn", "false");
                   Swal.fire({
                     title: "Login nicht erfolgreich!",
+                    heightAuto: false,
                     text: "Überprüfen Sie bitte Ihre Login-Daten",
                     confirmButtonText: "ok",
                     confirmButtonColor: "#3cb371",

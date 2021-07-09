@@ -1,13 +1,12 @@
-import App from './components/App';
-import Philosophie from './components/Philosophie';
-import Produkte from './components/Produkte';
-import HomeContent from './components/HomeContent';
-import PageNotFound from './components/PageNotFound';
-import Aussteller from './components/Aussteller';
+import Philosophie from './components/BenutzerAnsichtComponents/Philosophie';
+import Produkte from './components/BenutzerAnsichtComponents/Produkte';
+import HomeContent from './components/BenutzerAnsichtComponents/HomeContent';
+import PageNotFound from './components/BenutzerAnsichtComponents/PageNotFound';
+import Aussteller from './components/BenutzerAnsichtComponents/Aussteller';
 import Ausstelleranlegen from './components/VorstandAdminComponents/Ausstelleranlegen';
-import Fotogalerie from './components/Fotogalerie';
-import News from './components/News';
-import Kontakt from './components/Kontakt';
+import Fotogalerie from './components/BenutzerAnsichtComponents/Fotogalerie';
+import News from './components/BenutzerAnsichtComponents/News';
+import Kontakt from './components/BenutzerAnsichtComponents/Kontakt';
 import Datenschutz from './components/footercomponents/Datenschutz';
 import Impressum from './components/footercomponents/Impressum';
 import Login from './components/VorstandAdminComponents/Login';
@@ -17,10 +16,10 @@ import AusstellerUebersicht from './components/VorstandAdminComponents/Ausstelle
 import Register from './components/VorstandAdminComponents/Register';
 import AusstellerAendern from './components/VorstandAdminComponents/AusstellerAendern';
 import AddPhotos from './components/VorstandAdminComponents/FotogalerieComponents/AddPhotos';
-import Karte from './components/Karte';
-import Anreise from './components/Anreise';
-import Sponsoren from './components/Sponsoren';
-//import Programm from './components/Programm';
+import Karte from './components/BenutzerAnsichtComponents/Karte';
+import Anreise from './components/BenutzerAnsichtComponents/Anreise';
+import Sponsoren from './components/BenutzerAnsichtComponents/Sponsoren';
+import Programm from './components/BenutzerAnsichtComponents/Programm';
 import ProgrammAnlegen from './components/VorstandAdminComponents/ProgrammAnlegen';
 
 
@@ -43,10 +42,10 @@ export default {
             component: Produkte
         },
 
-        /*{
+        {
             path: '/app/programm',
             component: Programm
-        },*/
+        },
 
         {
             path: '/app/admin/dashboard/programmanlegen',

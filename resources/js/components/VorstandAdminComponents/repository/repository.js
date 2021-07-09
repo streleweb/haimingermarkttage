@@ -27,4 +27,8 @@ export default {
     postFotogalerie(formData) {
         return api.post("http://localhost:8000/api/imageupload", formData);
     },
+
+    getProgramm() {
+        return api.get("http://localhost:8000/api/programm");
+    }
 }

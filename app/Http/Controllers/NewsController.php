@@ -105,7 +105,7 @@ class NewsController extends Controller
         $news->news_bild_url = $request->news_bild_url;
 
         $date = Carbon::now();
-        $news->updated_at=$date->toDateTimeString();
+        $news->created_at=$date->toDateTimeString();
 
         if($news->save())
         {

@@ -6,7 +6,7 @@ require('./bootstrap'); //bootstrap.js
 //require('axios');
 
 //Main page
-import App from './components/App.vue';
+import App from './components/BenutzerAnsichtComponents/App.vue';
 
 Vue.use(VueRouter);
 Vue.use(Vuex);

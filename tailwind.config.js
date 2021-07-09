@@ -15,16 +15,18 @@ module.exports = {
 
       'iphone6': '375px',
 
-      'fotogaleriebp': '420px',
+      'newnewsbp': '385px',
 
       'newsbp': '480px',
 
-      'philosophiebp': '580px',
+      'fotogaleriebp': '575px',
+
+      'philosophiebp': '750px',
 
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
-      'btnbp': '655px',
+      'btnbp': '664px',
 
       'ausstellersmbp': '705px',
 

@@ -6,6 +6,7 @@ use App\Models\Programm;
 use Illuminate\Http\Request;
 use App\Http\Resources\ProgrammResource;
 use Illuminate\Support\Facades\Validator;
+use Carbon\Carbon; //Date
 
 class ProgrammController extends Controller
 {
@@ -16,8 +17,8 @@ class ProgrammController extends Controller
      */
     public function index()
     {
-        $programmliste = Programm::paginate(4); // für 4 Programme pro Seite unter /app/programm im Frontend
-        return ProgrammResource::collection($programmliste);
+        //$programmliste = Programm::paginate(4); // für 4 Programme pro Seite unter /app/programm im Frontend
+        return ProgrammResource::collection(Programm::all());
     }
 
     /**
@@ -42,19 +43,25 @@ class ProgrammController extends Controller
         [
             'programm_titel' => 'required|min:2|max:30',
             'programm_beschreibung'=> 'nullable|min:10|max:100',
+            'programm_bild_url' => 'nullable|min:1'
         ]);
 
         if ($validator->fails()) {
-            return Response::json([
-                'error' => $validator->errors()], 200);
+            return \response('Programm-Post nicht gespeichert! Beachten Sie die Maximal-Zeichenlänge und geben Sie einen Titel an.', 200)
+            ->header('Content-Type', 'text/plain');
             
         }else {
             $programm = new Programm();
             $programm->programm_titel = $request->programm_titel;
             $programm->programm_beschreibung = $request->programm_beschreibung;
+            $programm->programm_bild_url = $request->programm_bild_url;
+
+            $date = Carbon::now();
+            $programm->created_at=$date->toDateTimeString();
            
             if($programm->save()){
-                return new ProgrammResource($programm);
+                return \response('Programm-Post erfolgreich gespeichert!', 200)
+                ->header('Content-Type', 'text/plain');;
             }
         }
     }
@@ -71,16 +78,6 @@ class ProgrammController extends Controller
         return $programm;
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Programm  $programm
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Programm $programm)
-    {
-        return view('programm.edit')->with('programm',$programm);
-    }
 
     /**
      * Update the specified resource in storage.
@@ -89,15 +86,21 @@ class ProgrammController extends Controller
      * @param  \App\Models\Programm  $programm
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Programm $programm)
+    public function update($id)
     {
         $programm = Programm::findOrFail($id);
         $programm->id = $request->id;
         $programm->programm_titel = $request->programm_titel;
         $programm->programm_beschreibung = $request->programm_beschreibung;
+        $programm->programm_bild_url = $request->programm_bild_url;
+
+        $date = Carbon::now();
+        $programm->created_at=$date->toDateTimeString();
+
         if($programm->save())
         {
-            return new ProgrammResource($programm);
+            return \response('Programm erfolgreich aktualisiert!', 200)
+                ->header('Content-Type', 'text/plain');
         };
     }
 
@@ -107,7 +110,7 @@ class ProgrammController extends Controller
      * @param  \App\Models\Programm  $programm
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Programm $programm)
+    public function destroy($id)
     {
         $programm = Programm::findOrFail($id);
         $programm->delete();
