@@ -1,5 +1,7 @@
 module.exports = {
-  purge: [],
+  purge: ['./resources/**/*.blade.php',
+    './resources/**/*.js',
+    './resources/**/*.vue'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
@@ -13,24 +15,32 @@ module.exports = {
 
       'iphone6': '375px',
 
-      'fotogaleriebp': '420px',
+      'newnewsbp': '385px',
 
       'newsbp': '480px',
 
-      'philosophiebp': '580px',
+      'fotogaleriebp': '575px',
+
+      'philosophiebp': '750px',
 
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
-      'btnbp': '655',
+      'btnbp': '664px',
+
+      'ausstellersmbp': '705px',
 
       'md': '768px',
       // => @media (min-width: 768px) { ... }
 
       'kontaktbp': '760px',
 
+      'ausstellerbp': '940px',
+
       'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
+
+      'produktdescriptionbp': '1060px',
 
       'xl': '1280px',
       // => @media (min-width: 1280px) { ... }
@@ -41,13 +51,25 @@ module.exports = {
     extend: {
       fontFamily: {
         willkommen: ['EB Garamond']
+      },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" }
+        }
+      },
+      animation: {
+        wiggle: "wiggle 200ms ease-in-out"
       }
     },
+
   },
 
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
 

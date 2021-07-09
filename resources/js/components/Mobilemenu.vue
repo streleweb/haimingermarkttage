@@ -81,14 +81,15 @@ export default {
   justify-content: flex-start;
   align-items: center;
   position: fixed;
-  bottom: 0px;
+  top: 58px;
   flex-direction: column;
   width: 100%;
-  height: calc(100vh - 50px);
+  height: 100vh;
   padding-top: 3rem;
-  background-color: rgb(41, 41, 41);
+  background-image: url("/images/background/mobilemenubackground3.svg");
   opacity: 1;
-  z-index: 900;
+  z-index: 4000;
+  overflow: hidden;
 }
 
 .bar-element {
@@ -96,11 +97,24 @@ export default {
   justify-content: center;
   align-items: center;
   width: 60%;
-  height: 3rem;
-  margin-bottom: 8px;
+  height: 10%;
+  margin-bottom: 1rem;
   cursor: pointer;
   color: #fefefe;
-  background-color: #242424;
+  background-color: #2424247e;
+  border-radius: 18%;
+  transition: 0.3s;
+}
+
+.bar-element:hover {
+  background-color: #1b741ed3;
+  color: white;
+}
+
+.bar-element:active {
+  background-color: #6ea070;
+  box-shadow: 3px rgb(0, 56, 33);
+  transform: translateY(4px);
 }
 
 .show {

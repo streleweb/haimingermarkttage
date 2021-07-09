@@ -6,6 +6,7 @@ use App\Models\News;
 use App\Http\Resources\NewsResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Carbon\Carbon; //Date
 
 class NewsController extends Controller
 {
@@ -16,8 +17,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $newsliste = News::paginate(4); // für 4 News pro Seite unter /app/news im Frontend
-        return NewsResource::collection($newsliste);
+        return NewsResource::collection(News::all());
     }
 
     /**
@@ -25,10 +25,11 @@ class NewsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    /*
     public function create()
     {
         return view('news.newsanlegen');
-    }
+    }*/
 
     /**
      * Store a newly created resource in storage.
@@ -40,23 +41,26 @@ class NewsController extends Controller
     {
         $validator = Validator::make($request->all(),
         [
-            'news_titel' => 'required|min:2|max:30',
-            'news_textfeld'=> 'nullable|min:10|max:100',
-            'news_bild_url'=> 'min:10|max:100',
+            'news_titel' => 'required|min:2|max:70',
+            'news_textfeld'=> 'required|min:10|max:255',
+            'news_bild_url'=> 'nullable',
         ]);
 
         if ($validator->fails()) {
-            return Response::json([
-                'error' => $validator->errors()], 200);
+            return \response('Validierung fehlgeschlagen, der News-Titel muss angegeben werden!', 200)
+            ->header('Content-Type', 'text/plain');
             
         }else {
             $news = new News();
             $news->news_titel = $request->news_titel;
             $news->news_textfeld = $request->news_textfeld;
             $news->news_bild_url = $request->news_bild_url;
+            $date = Carbon::now();
+            $news->created_at=$date->toDateTimeString();
            
             if($news->save()){
-                return new NewsResource($news);
+                return \response('News-Post erfolgreich gespeichert!', 200)
+                ->header('Content-Type', 'text/plain');
             }
         }
     }
@@ -79,10 +83,11 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
+    /*
     public function edit(News $news)
     {
         return view('news.edit')->with('news',$news);
-    }
+    }*/
 
     /**
      * Update the specified resource in storage.
@@ -91,17 +96,25 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, News $news)
+    public function update($id)
     {
         $news = News::findOrFail($id);
         $news->id = $request->id;
         $news->news_titel = $request->news_titel;
         $news->news_textfeld = $request->news_textfeld;
         $news->news_bild_url = $request->news_bild_url;
+
+        $date = Carbon::now();
+        $news->created_at=$date->toDateTimeString();
+
         if($news->save())
         {
-            return new NewsResource($news);
-        };
+            return \response('News-Post erfolgreich in DB gespeichert!', 200)
+            ->header('Content-Type', 'text/plain');
+        }else {
+            return \response('News-Post konnte nicht gespeichert werden!', 200)
+            ->header('Content-Type', 'text/plain');
+        }
     }
 
     /**
@@ -110,7 +123,7 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function destroy(News $news)
+    public function destroy($id)
     {
         $news = News::findOrFail($id);
         $news->delete();

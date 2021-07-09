@@ -14,24 +14,13 @@ der tailwind components integriert. Diese Styles werden durch die
 @layer components{
 
     .app {
-        @apply flex flex-col w-screen h-screen max-h-screen;
+        @apply flex flex-col w-full h-full;
     }
 
     body{
-<<<<<<< HEAD
-        @apply bg-green-700;
-
-        
-            background-image: url('/images/background/alotofapples.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-          
-
-=======
-        @apply bg-green-700
-        w-screen h-screen max-h-screen overflow-hidden;
->>>>>>> newbranchfrontend
+        /*bg-green-700*/
+        @apply
+        w-screen h-screen max-h-screen;
     }
 
     
@@ -39,8 +28,11 @@ der tailwind components integriert. Diese Styles werden durch die
         position: absolute;
         bottom: 40px; 
         top: 58px; */
-        @apply w-screen flex flex-col flex-shrink flex-grow;
+        @apply flex flex-col flex-grow; /*flex-shrink flex-grow*/
+        
     }
+
+
 
     /*.contentarea {
         @apply flex flex-col h-full justify-center;
@@ -54,16 +46,10 @@ der tailwind components integriert. Diese Styles werden durch die
         p-3
         bg-green-900
         border-b-2 border-black border-opacity-60;
+        height: 58px;
         
     }
 
-    .navigationbar{
-        position: fixed;
-        top:0px;
-        left:0px;
-        
-        @apply w-full;
-    }
 
     /*Resizing speziell für das Haiminger Markttage-Logo*/
     .resizeLogo {
@@ -74,16 +60,84 @@ der tailwind components integriert. Diese Styles werden durch die
         @apply h-5;
     }
 
+    .resize-loadinggif{
+        @apply h-10;
+    }
+
     .homecontentcontainer{
-        @apply h-full flex flex-col w-full justify-around;
+        @apply h-full flex flex-col w-full justify-around bg-green-900;
+
+        background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.1)), url("/images/background/applebg.jpg");
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        background-size: cover;
+        opacity: 90%;
+
+    }
+
+    .homecontentcontainer:after{
+        content: " ";
+        position: absolute;
+        top: 58px;
+        left: 0px;
+        width: 100%;
+        height: calc(100% - 90px);
+        height: -moz-calc(100% - 90px);
+        height: -webkit-calc(100% - 90px);
+        height: -o-calc(100% - 90px);
+        z-index: 0;
+        background-color: rgba(0, 0, 255,0.1);
     }
 
     .fotogaleriecontentcontainer{
-        @apply h-full flex flex-col w-full;
+        @apply h-full flex w-full justify-center items-center; /*flex-col*/
+        /*background-image: linear-gradient(to bottom, #16222A, #3A6073);*/
+        background-image: url('/images/background/fotogaleriebackground2.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .kontaktcontentcontainer{
-        @apply h-full flex flex-col w-full justify-start;
+        @apply h-full flex flex-col w-full justify-evenly;
+
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url("/images/background/mailbox-big.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        opacity: 90%;
+        z-index: 0;
+    }
+
+    .datenschutzcontentcontainer{
+        @apply h-full flex flex-col w-full justify-evenly;
+
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url("/images/background/newpageturner2.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        z-index: 0; 
+    }
+
+    .philosophiecontentcontainer{
+        @apply h-full flex flex-col w-full justify-evenly;
+
+        background: rgb(0,51,47);
+        background: linear-gradient(90deg, rgba(0,51,47,1) 0%, rgba(18,88,91,0.9262079831932774) 47%, rgba(13,42,27,1) 100%, rgba(21,70,21,1) 100%, rgba(22,73,20,1) 100%, rgba(25,83,18,1) 100%, rgba(0,212,255,1) 100%), url("/images/background/buch.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        
+        z-index: 0;
+    }
+
+    .pagenotfoundcontainer{
+        @apply h-full flex flex-col w-full justify-between;
+
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url("/images/background/404.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        z-index: 0;
     }
 
     /*old contentcontainer
@@ -113,7 +167,9 @@ der tailwind components integriert. Diese Styles werden durch die
     }
 
     .footer {
-       @apply mt-auto p-2 h-8 flex justify-center items-center text-center border-t-2 border-green-400 bg-gray-800 opacity-80 text-xs;
+       @apply mt-auto py-2 h-8 inline-flex flex-nowrap justify-center gap-3 items-center text-center border-t border-white bg-gray-900 w-full;
+
+       z-index: 3000;
     }
     
 
@@ -121,21 +177,29 @@ der tailwind components integriert. Diese Styles werden durch die
         @apply text-xl text-white ;
     }
 
-<<<<<<< HEAD
-=======
     /*------------------------------------------TEXT CONFIGURATION------------------------------------*/
 
     .titletext{
         @apply
         font-willkommen
         flex-shrink
-        mt-5
+        pt-5
         pr-2
         pl-2
-        mb-4
+        pb-4
         flex-grow
-        md:mt-5
         text-center;
+        z-index: 100;
+    }
+
+    .titletextpagenotfound{
+        @apply
+        font-willkommen
+        flex-shrink
+        p-5
+        flex-grow
+        text-center;
+        z-index: 100;
     }
 
     .ueberschrift{
@@ -147,6 +211,28 @@ der tailwind components integriert. Diese Styles werden durch die
         sm:text-3xl
         md:text-5xl
         lg:text-5xl;
+        z-index: 1003;
+    }
+
+    .ueberschriftprodukte{
+        @apply
+      text-white
+        sm:mb-3
+        text-xl
+        ssmm:text-2xl
+        md:text-3xl
+        lg:text-5xl;
+        z-index: 1003;
+    }
+
+    .descriptiontext{
+        @apply text-gray-300 text-sm
+            ssmm:text-base
+            ssm:text-lg
+            mt-1
+            lg:mt-8
+            lg:text-2xl
+            font-thin;  
     }
 
     .logotextstyle{
@@ -154,11 +240,43 @@ der tailwind components integriert. Diese Styles werden durch die
         hidden
         hmbp:inline-flex
         text-xs
-        sm:text-xl
+        btnbp:text-xl
         font-semibold
         text-center
-        tracking-tight
+        tracking-tight;
     }
 
->>>>>>> newbranchfrontend
+    .buttonshadow{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+
+    .customshadow {
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+      }
+
+    .produktecardshadow{
+        box-shadow: 12px 0 15px -4px rgba(0, 0, 0, 0.2), -12px 0 8px -4px rgba(0, 0, 0, 0.2);
+    }
+      
+    .customborder {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+      }
+
+    .textshadow-markant{
+        text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+        0px 8px 13px rgba(0,0,0,0.1),
+        0px 18px 23px rgba(0,0,0,0.1);
+    }
+
+    .navbg{
+        transition: 0.3s;
+    }
+    
+    .navbg:hover {
+        @apply bg-green-800 rounded-lg;
+        color:#FFFFFF;
+    }
+
+
 }

@@ -7,8 +7,18 @@ window._ = require('lodash');
  */
 
 window.axios = require('axios');
+window.axios.defaults.withCredentials = true;
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+window.axios.defaults.headers.common['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT, DELETE';
+
+let token = '1|exDKmoKBRC9A7Nd4JHmbjLX7p24okrmUdbooFOy0';  //old token 33|ryvH8WgjJDLqDtoZ5vEl9eTz8DJ5mNNzqMLjldpo  und 56|bGo7EMpuLHbpwIkS0DKkMGZRnQXMYViKyuy4R47J
+window.axios.defaults.headers.common = { 'Authorization': `Bearer ${token}` }
+window.axios.defaults.crossDomain = true;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

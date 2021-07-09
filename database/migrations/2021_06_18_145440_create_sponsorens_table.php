@@ -15,11 +15,11 @@ class CreateSponsorensTable extends Migration
     {
         Schema::create('sponsoren', function (Blueprint $table) {
             $table->id();
-            $table->string('sponsor_brandname');
-            $table->string('sponsor_vorname');
-            $table->string('sponsor_nachname');
-            $table->string('sponsor_websiteurl');
-            $table->string('sponsor_logourl');
+            $table->string('sponsor_brandname')->nullable();
+            $table->string('sponsor_vorname')->nullable();
+            $table->string('sponsor_nachname')->nullable();
+            $table->string('sponsor_websiteurl')->nullable();
+            $table->string('sponsor_logourl')->nullable();
             $table->timestamps();
         });
     }

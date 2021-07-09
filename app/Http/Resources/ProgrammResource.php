@@ -18,6 +18,8 @@ class ProgrammResource extends JsonResource
             'id' => $this->id,
             'programm_titel' => $this->programm_titel,
             'programm_beschreibung' => $this->programm_beschreibung,
+            'programm_bild_url' => $this->programm_bild_url,
+            'created_at' => $this->created_at
         ];
     }
 }

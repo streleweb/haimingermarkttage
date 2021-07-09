@@ -6,7 +6,7 @@
         id="#LOGO UND LI CONTAINER"
         class="flex items-center flex-shrink space-x-5 text-white mr-6"
       >
-        <router-link class="items-center inline-flex" to="/app"
+        <router-link class="items-center inline-flex navbg" to="/app"
           ><img
             src="/../../images/icons/pngs/7272transparent.png"
             class="resizeLogo"
@@ -17,23 +17,26 @@
         <router-link
           to="/app/philosophie"
           exact
-          class="hidden philosophiebp:inline-flex"
+          class="hidden philosophiebp:inline-flex navbg"
           >Philosophie</router-link
         >
-        <router-link to="/app/news" exact class="hidden newsbp:inline-flex"
+        <router-link
+          to="/app/news"
+          exact
+          class="hidden newsbp:inline-flex navbg"
           >News</router-link
         >
         <router-link
           to="/app/fotogalerie"
           exact
-          class="hidden fotogaleriebp:inline-flex"
+          class="hidden fotogaleriebp:inline-flex navbg"
           >Fotogalerie</router-link
         >
 
         <router-link
           to="/app/kontakt"
           exact
-          class="hidden kontaktbp:inline-flex"
+          class="hidden kontaktbp:inline-flex navbg"
           >Kontakt</router-link
         >
       </div>
@@ -57,7 +60,7 @@
         <a href="mailto:info@haiminger-markttage.at" target="_newtab"
           ><img
             src="/images/icons/svgs/email.svg"
-            class="resize-icon filter-white-icons"
+            class="resize-icon filter-white-icons pl-1"
             alt="email"
         /></a>
       </div>
@@ -83,6 +86,7 @@
             rounded
             px-3
             py-2
+            navbg
           "
         >
           <svg
@@ -123,6 +127,8 @@ export default {
       const navbar = document.querySelector(".navbar");
 
       if (this.showMenu) {
+        //Scrollen deaktivieren
+        document.body.classList.add("stop-scrolling");
         /** Alles ausser Menübutton "hidden" */
         var children = navbar.children;
         for (let i = 0; i < children.length - 1; i++) {
@@ -130,6 +136,8 @@ export default {
           children[i].style.visibility = "hidden";
         }
       } else {
+        //Scrollen wieder aktivieren
+        document.body.classList.add("haveFunScrolling");
         var children = navbar.children;
         for (let i = 0; i < children.length - 1; i++) {
           //console.log(children[i])
@@ -150,5 +158,13 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+.stop-scrolling {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.haveFunScrolling {
+  overflow: visible;
+}
 </style>

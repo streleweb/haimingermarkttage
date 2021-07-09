@@ -10,22 +10,23 @@ class Aussteller extends Model
 {
     use HasFactory;
     
-    protected $fillable = ['aussteller_fullname'];
-
-    protected $table = "aussteller"; //war aussteller_product
     
-    /**
-     * Method for Many-to-Many Product-Relationship
-     */
+    protected $fillable = ['aussteller_fullname', 'aussteller_beschreibung', 'aussteller_brandingname', 'aussteller_email', 'aussteller_websiteurl', 'aussteller_zonenfarbe', 'aussteller_bildurl'];
+
+
+    protected $table = "aussteller";
+    
+    /*
+      Method for Many-to-Many Product-Relationship
+     
     public function product(){
 
         return $this->belongsToMany(Product::class, 'aussteller_product');
     }
 
-    /**
-    * Ausstellerfoto mit Aussteller assoziieren mit One-to-One Beziehung
-    */
+    
+    
     public function ausstellerfoto(){
         return $this->hasOne('App\Models\Ausstellerfoto');
-    }
+    }*/
 }

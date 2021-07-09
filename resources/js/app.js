@@ -1,22 +1,23 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import routes from './routes';
+import Vuex from 'vuex'
 require('./bootstrap'); //bootstrap.js
 //require('axios');
 
-//Main pages
-import App from './components/App.vue';
+//Main page
+import App from './components/BenutzerAnsichtComponents/App.vue';
 
 Vue.use(VueRouter);
+Vue.use(Vuex);
 
-
-/*const app = new Vue({
-    el: '#app',
-    router: new VueRouter(routes),
-    components: { App }
-});*/
-
-
+/**
+ * Neue Vue Instanz zum Mounten des App-Components
+ * hin zum div mit der id #app im welcome.blade.php-File
+ * 
+ * Instanziieren des VueRouters mit dem Konfiguartions-File
+ * routes.js
+ */
 new Vue({
     render(h) {
         return h(App)

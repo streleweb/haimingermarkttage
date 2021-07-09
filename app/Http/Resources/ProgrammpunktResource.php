@@ -17,7 +17,7 @@ class ProgrammpunktResource extends JsonResource
         return [
             'id' => $this->id,
             'programmpunkt_titel' => $this->programmpunkt_titel,
-            'programmpunkt_beschreibung' => $this->programmpunkt_beschreibung,
+            'programmpunkt_beschreibung' => $this->programmpunkt_beschreibung
         ];
     }
 }

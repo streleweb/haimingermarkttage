@@ -1,27 +1,15 @@
 <template>
   <div class="app">
-    <!--Hier video oder Photo noch rein-->
-    <!-- "
-      outercontainer
-      flex flex-col
-      h-full
-      bg-gradient-to-b
-      from-gray-900
-      to-green-500
-      overflow-hidden
-    "-->
-
-    <!-- war bg-gradient-to-b from-gray-900 to-green-500 ... flex h-full flex-col overflow-hidden-->
     <header class="navigationbar">
       <navbar @togglemenu="mobileMenuOpen = !mobileMenuOpen"></navbar>
     </header>
 
     <Mobilemenu :open="mobileMenuOpen"></Mobilemenu>
+
     <section class="sectionarea">
-      <!--war main flex-1-->
-      <!-- zu flex-grow zuruecksetzen, wenn ausstellerview ausgefeilt -->
       <router-view></router-view>
     </section>
+
     <Footer></Footer>
   </div>
 
@@ -30,23 +18,17 @@
 
 
 <script>
-import Background from "./Background.vue";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import Apple from "./svg/Apple";
-import HomeContent from "./HomeContent";
-import PageNotFound from "./PageNotFound";
 import Mobilemenu from "./Mobilemenu.vue";
 const default_layout = "default";
 import { EventBus, Eventbus } from "../event-bus";
 
 export default {
-  computed: {},
   data() {
     return {
       titleMessage: "Willkommen bei den Haiminger Markttagen!",
       smallDescription: "Flanieren, Probieren und Genießen...",
-      //nicht vergessen, Anreiseinfos entweder in DB abspeichern und  via API Call (Axios oder FetchAPI), oder direkte maske bereitstellen
       mobileMenuOpen: false,
     };
   },
@@ -62,7 +44,7 @@ export default {
       EventBus.$on("clickedOnMenuLink", clickHandler);
     },
   },
-  components: { Background, Navbar, Footer, Apple, Mobilemenu },
+  components: { Navbar, Footer, Mobilemenu },
 };
 </script>
 
@@ -71,6 +53,10 @@ export default {
 ::selection {
   color: rgb(0, 255, 8);
   background: rgba(116, 116, 116, 0.496);
+}
+
+.navigationbar {
+  height: 58px;
 }
 </style>
 
