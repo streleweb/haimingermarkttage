@@ -21,11 +21,15 @@
     DB_DATABASE=haimingermarkttageapp
     DB_USERNAME=root
     DB_PASSWORD=
+    
+- npm install
 - dann Laravel Server starten mit php artisan serve
 - dann npm script starten mit npm run watch
 - Es sollte nun eine 404 Not Found Page geöffnet werden, da die Seite auf localhost:3000/app beheimatet ist.
 - Dazu einfach auf Home klicken, oder /app in die Adressleiste geben
 
+Weitere Informationen und Test-Zugangsdaten für den Admin-Login finden Sie in der Abgabe auf Moodle (Benutzerdokumentation).
+Dazu muss die befüllte Test-DB importiert und benutzt werden.
 
 
 ## License
