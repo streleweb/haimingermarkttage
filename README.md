@@ -7,19 +7,24 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Next up
+## Aktueller Stand im MASTER-Branch
 
-Frontend: (branch: frontend, last update: 03.03.21 -> in master gemerged, weil pwa funktioniert und Grundgerüst passt)
+- Code downloaden
+- git checkout master
+-  Befüllte Testtabelle (sql) befindet sich in der Abgabe auf Moodle
+-  Diese Tabelle zB. in phpmyadmin importieren
 
-- Responsive Navbar (Hamburger Menü) + Search-Field, Gischi konsultieren wegen Fotos/Videos für Background Website (eventuell App)
-- Container für die Buttons machen und mit Tailwind so alignen, dass Buttons sich an Screen anpassen (mittig)
-
-Backend: (branch: backend, noch nicht gemerged)
-
-- ER-Diagramm nochmal abchecken, was wir genau brauchen
-- bild doch wieder zu bildurl umbenennen (zeilen) , sind ja links, die wir da abspeichern
-- mvc und migrations generieren
-
+    DB-Zugangsdaten ( .env File ):
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=haimingermarkttageapp
+    DB_USERNAME=root
+    DB_PASSWORD=
+- dann Laravel Server starten mit php artisan serve
+- dann npm script starten mit npm run watch
+- Es sollte nun eine 404 Not Found Page geöffnet werden, da die Seite auf localhost:3000/app beheimatet ist.
+- Dazu einfach auf Home klicken, oder /app in die Adressleiste geben
 
 
 
