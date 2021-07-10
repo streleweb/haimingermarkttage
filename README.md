@@ -21,6 +21,8 @@
     DB_DATABASE=haimingermarkttageapp
     DB_USERNAME=root
     DB_PASSWORD=
+    
+- npm install
 - dann Laravel Server starten mit php artisan serve
 - dann npm script starten mit npm run watch
 - Es sollte nun eine 404 Not Found Page geöffnet werden, da die Seite auf localhost:3000/app beheimatet ist.
