@@ -210,7 +210,7 @@ article img {
   background: linear-gradient(rgba(90, 65, 42, 0.342), rgba(65, 65, 65, 0.3)),
     url("/images/background/hb1.jpg");
   background-repeat: no-repeat;
-  min-width: 100%;
+  width: 100%;
   min-height: 100%;
   /*background-position: 50% 50%;*/
   background-size: cover;

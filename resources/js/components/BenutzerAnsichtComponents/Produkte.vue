@@ -209,7 +209,7 @@ article img {
   /*background-position: 50% 50%;*/
   width: 100%;
   min-height: 100%;
-  /*background-size: cover;*/
+  background-size: cover;
   opacity: 90%;
 }
 </style>

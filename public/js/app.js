@@ -3854,6 +3854,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -10729,7 +10730,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".text[data-v-1dab75c8] {\n  padding: 20px 20px;\n}\n.text h3[data-v-1dab75c8] {\n  text-transform: uppercase;\n}\n.produktbackground[data-v-1dab75c8] {\n  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),\r\n    url(\"/images/background/produktbackground.svg\");\n  background-repeat: no-repeat;\n  background-position: 50% 50%;\n  background-size: cover;\n  opacity: 90%;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".text[data-v-1dab75c8] {\n  padding: 20px 20px;\n}\n.text h3[data-v-1dab75c8] {\n  text-transform: uppercase;\n}\n.produktbackground[data-v-1dab75c8] {\n  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),\r\n    url(\"/images/background/produktbackground.svg\");\n  background-repeat: no-repeat;\n  background-position: 50% 50%;\n  height: 100%;\n  width: 100%;\n  background-size: cover;\n  opacity: 90%;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10825,7 +10826,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-086511b0] {\n  background: #eee5e9;\n  border: white;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 0.4rem;\n  text-align: center;\n  width: 80%;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-086511b0]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-086511b0] {\n  max-width: 50%;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  margin-left: auto;\n  margin-right: auto;\n  z-index: 1;\n}\n.text[data-v-086511b0] {\n  padding: 0 20px 20px;\n}\n.newsgradient[data-v-086511b0] {\n  background-image: linear-gradient(to bottom, #536976, #292e49);\n  background-repeat: no-repeat;\n  background-size: cover;\n  background: linear-gradient(rgba(90, 65, 42, 0.342), rgba(65, 65, 65, 0.3)),\r\n    url(\"/images/background/hb1.jpg\");\n  background-repeat: no-repeat;\n  min-width: 100%;\n  min-height: 100%;\n  /*background-position: 50% 50%;*/\n  background-size: cover;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-086511b0] {\n  background: #eee5e9;\n  border: white;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 0.4rem;\n  text-align: center;\n  width: 80%;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-086511b0]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-086511b0] {\n  max-width: 50%;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  margin-left: auto;\n  margin-right: auto;\n  z-index: 1;\n}\n.text[data-v-086511b0] {\n  padding: 0 20px 20px;\n}\n.newsgradient[data-v-086511b0] {\n  background-image: linear-gradient(to bottom, #536976, #292e49);\n  background-repeat: no-repeat;\n  background-size: cover;\n  background: linear-gradient(rgba(90, 65, 42, 0.342), rgba(65, 65, 65, 0.3)),\r\n    url(\"/images/background/hb1.jpg\");\n  background-repeat: no-repeat;\n  width: 100%;\n  min-height: 100%;\n  /*background-position: 50% 50%;*/\n  background-size: cover;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10873,7 +10874,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-9dde909a] {\n  background: #eee5e9;\n  border: none;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 20px;\n  text-align: center;\n  width: 250px;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-9dde909a]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-9dde909a] {\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 0.5rem;\n  width: 130px;\n  border-radius: 20px;\n  z-index: 1;\n}\n.text[data-v-9dde909a] {\n  padding: 20px 20px;\n}\n.text h3[data-v-9dde909a] {\n  text-transform: uppercase;\n}\n.produktbackground[data-v-9dde909a] {\n  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),\r\n    url(\"/images/background/produktbackground.svg\");\n  background-repeat: no-repeat;\n  /*background-position: 50% 50%;*/\n  width: 100%;\n  min-height: 100%;\n  /*background-size: cover;*/\n  opacity: 90%;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-9dde909a] {\n  background: #eee5e9;\n  border: none;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 20px;\n  text-align: center;\n  width: 250px;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-9dde909a]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-9dde909a] {\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 0.5rem;\n  width: 130px;\n  border-radius: 20px;\n  z-index: 1;\n}\n.text[data-v-9dde909a] {\n  padding: 20px 20px;\n}\n.text h3[data-v-9dde909a] {\n  text-transform: uppercase;\n}\n.produktbackground[data-v-9dde909a] {\n  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),\r\n    url(\"/images/background/produktbackground.svg\");\n  background-repeat: no-repeat;\n  /*background-position: 50% 50%;*/\n  width: 100%;\n  min-height: 100%;\n  background-size: cover;\n  opacity: 90%;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10897,7 +10898,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-19bafd3e] {\n  background: #eee5e9;\n  border: white;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 0.4rem;\n  text-align: center;\n  width: 80%;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-19bafd3e]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-19bafd3e] {\n  max-width: 50%;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  margin-left: auto;\n  margin-right: auto;\n  z-index: 1;\n}\n.text[data-v-19bafd3e] {\n  padding: 0 20px 20px;\n}\n.programmgradient[data-v-19bafd3e] {\n  background-image: linear-gradient(to bottom, #536976, #292e49);\n  background-repeat: no-repeat;\n  /*background-size: cover;*/\n  background: linear-gradient(rgba(90, 65, 42, 0.342), rgba(65, 65, 65, 0.3)),\r\n    url(\"/images/background/hb1.jpg\");\n  background-repeat: no-repeat;\n  /*background-position: 50% 50%;*/\n  min-width: 100%;\n  min-height: 100%;\n  background-size: cover;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-19bafd3e] {\n  background: #eee5e9;\n  border: white;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 0.4rem;\n  text-align: center;\n  width: 80%;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-19bafd3e]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-19bafd3e] {\n  max-width: 50%;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  margin-left: auto;\n  margin-right: auto;\n  z-index: 1;\n}\n.text[data-v-19bafd3e] {\n  padding: 0 20px 20px;\n}\n.programmgradient[data-v-19bafd3e] {\n  background-image: linear-gradient(to bottom, #536976, #292e49);\n  background-repeat: no-repeat;\n  /*background-size: cover;*/\n  background: linear-gradient(rgba(90, 65, 42, 0.342), rgba(65, 65, 65, 0.3)),\r\n    url(\"/images/background/hb1.jpg\");\n  background-repeat: no-repeat;\n  /*background-position: 50% 50%;*/\n  width: 100%;\n  min-height: 100%;\n  background-size: cover;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10921,7 +10922,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#kontaktinfo[data-v-6ec20584] {\n  opacity: 80%;\n}\n.produktbackground[data-v-6ec20584] {\n  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),\r\n    url(\"/images/background/produktbackground.svg\");\n  background-repeat: no-repeat;\n  background-position: 50% 50%;\n  background-size: cover;\n  opacity: 90%;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#kontaktinfo[data-v-6ec20584] {\n  opacity: 80%;\n}\n.produktbackground[data-v-6ec20584] {\n  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),\r\n    url(\"/images/background/produktbackground.svg\");\n  background-repeat: no-repeat;\n  /*background-position: 50% 50%;*/\n  height: 100%;\n  width: 100%;\n  background-size: cover;\n  opacity: 90%;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -38136,7 +38137,7 @@ var render = function() {
             {
               key: index,
               staticClass:
-                "\n          grid grid-cols-2\n          gap-4\n          articlestyling\n          mx-auto\n          overflow-hidden\n          w-full\n        "
+                "\n          grid grid-cols-1\n          newsbp:grid-cols-2\n          gap-4\n          articlestyling\n          mx-auto\n          overflow-hidden\n          w-full\n        "
             },
             [
               _vm.imageUrlNotEmpty(index)

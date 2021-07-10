@@ -20,7 +20,8 @@
           v-for="(jeweiligesProgramm, index) in programmArray"
           :key="index"
           class="
-            grid grid-cols-2
+            grid grid-cols-1
+            newsbp:grid-cols-2
             gap-4
             articlestyling
             mx-auto
@@ -206,7 +207,7 @@ article img {
     url("/images/background/hb1.jpg");
   background-repeat: no-repeat;
   /*background-position: 50% 50%;*/
-  min-width: 100%;
+  width: 100%;
   min-height: 100%;
   background-size: cover;
 }

@@ -279,7 +279,9 @@ export default {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
     url("/images/background/produktbackground.svg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  /*background-position: 50% 50%;*/
+  height: 100%;
+  width: 100%;
   background-size: cover;
   opacity: 90%;
 }
