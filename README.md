@@ -9,10 +9,7 @@
 
 ## Aktueller Stand im MASTER Branch
 
-- Create a pull request for 'master' on GitHub by visiting:
-  https://github.com/streleweb/haimingermarkttage/pull/new/master
-  
-- Oder downloaden, git checkout to master machen und von dort aus durchstarten.
+- Code downloaden, git checkout to master machen und von dort aus durchstarten.
   
 - Informationen zum Durchstarten und zu Test-Zugangsdaten sind in der Abgabe der Benutzerdokumentation.
 
