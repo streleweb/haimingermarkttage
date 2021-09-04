@@ -21,6 +21,7 @@ import Anreise from './components/BenutzerAnsichtComponents/Anreise';
 import Sponsoren from './components/BenutzerAnsichtComponents/Sponsoren';
 import Programm from './components/BenutzerAnsichtComponents/Programm';
 import ProgrammAnlegen from './components/VorstandAdminComponents/ProgrammAnlegen';
+import ProduktReiter from './components/BenutzerAnsichtComponents/ProduktReiter';
 
 
 export default {
@@ -35,6 +36,11 @@ export default {
         {
             path: '/app', //homepage der app= www.haiminger-markttage.at/app, normale HP wird www.haiminger-markttage.at bleiben
             component: HomeContent
+        },
+
+        {
+            path: '/app/produktreiter',
+            component: ProduktReiter
         },
 
         {

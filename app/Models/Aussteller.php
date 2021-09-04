@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Model\Product;
+use Illuminate\Database\Eloquent\Model\Produkt;
+use Illuminate\Database\Eloquent\Model\Produktreiter;
 
 class Aussteller extends Model
 {
@@ -15,6 +16,16 @@ class Aussteller extends Model
 
 
     protected $table = "aussteller";
+
+    public function produkts()
+    {
+        return $this->hasMany(Produkt::class);
+    }
+
+    public function produktreiter()
+    {
+        return $this->hasMany(Produktreiter::class);
+    }
     
     /*
       Method for Many-to-Many Product-Relationship

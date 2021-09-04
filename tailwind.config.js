@@ -35,6 +35,8 @@ module.exports = {
 
       'kontaktbp': '760px',
 
+      'produktreiterbp': '792px',
+
       'ausstellerbp': '940px',
 
       'lg': '1024px',
