@@ -2730,6 +2730,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2780,6 +2785,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ "./resources/js/components/BenutzerAnsichtComponents/Button.vue");
+//
 //
 //
 //
@@ -2999,6 +3005,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -3028,6 +3036,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _event_bus_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../event-bus.js */ "./resources/js/event-bus.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3709,6 +3737,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -3758,7 +3787,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ "./resources/js/components/BenutzerAnsichtComponents/Button.vue");
-//
 //
 //
 //
@@ -10300,10 +10328,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -10913,7 +10937,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".mobiledropdown[data-v-48c18896] {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  position: fixed;\n  top: 58px;\n  flex-direction: column;\n  width: 100%;\n  height: 100vh;\n  padding-top: 3rem;\n  background-image: url(\"/images/background/mobilemenubackground3.svg\");\n  opacity: 1;\n  z-index: 4000;\n  overflow: hidden;\n}\n.bar-element[data-v-48c18896] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 60%;\n  height: 10%;\n  margin-bottom: 1rem;\n  cursor: pointer;\n  color: #fefefe;\n  background-color: #2424247e;\n  border-radius: 18%;\n  transition: 0.3s;\n}\n.bar-element[data-v-48c18896]:hover {\n  background-color: #1b741ed3;\n  color: white;\n}\n.bar-element[data-v-48c18896]:active {\n  background-color: #6ea070;\n  box-shadow: 3px rgb(0, 56, 33);\n  transform: translateY(4px);\n}\n.show[data-v-48c18896] {\n  opacity: 0;\n  transform: translateY(-100%);\n}\n.show-enter[data-v-48c18896],\r\n.show-leave-to[data-v-48c18896] {\n  opacity: 0;\n  transform: translateY(-100%);\n}\n.show-enter-active[data-v-48c18896],\r\n.show-leave-active[data-v-48c18896] {\n  transition: all 800ms;\n  z-index: 998;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".mobiledropdown[data-v-48c18896] {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  position: fixed;\n  top: 58px;\n  flex-direction: column;\n  width: 100%;\n  height: 100vh;\n  padding-top: 1rem;\n  background-image: url(\"/images/background/mobilemenubackground3.svg\");\n  opacity: 1;\n  z-index: 4000;\n  overflow: hidden;\n}\n.bar-element[data-v-48c18896] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 60%;\n  height: 7%;\n  margin-bottom: 1rem;\n  cursor: pointer;\n  color: #fefefe;\n  background-color: #2424247e;\n  border-radius: 18%;\n  transition: 0.3s;\n}\n.bar-element[data-v-48c18896]:hover {\n  background-color: #1b741ed3;\n  color: white;\n}\n.bar-element[data-v-48c18896]:active {\n  background-color: #6ea070;\n  box-shadow: 3px rgb(0, 56, 33);\n  transform: translateY(4px);\n}\n.show[data-v-48c18896] {\n  opacity: 0;\n  transform: translateY(-100%);\n}\n.show-enter[data-v-48c18896],\r\n.show-leave-to[data-v-48c18896] {\n  opacity: 0;\n  transform: translateY(-100%);\n}\n.show-enter-active[data-v-48c18896],\r\n.show-leave-active[data-v-48c18896] {\n  transition: all 800ms;\n  z-index: 998;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -34176,7 +34200,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _HomeContent_vue_vue_type_template_id_b1368b56___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HomeContent.vue?vue&type=template&id=b1368b56& */ "./resources/js/components/BenutzerAnsichtComponents/HomeContent.vue?vue&type=template&id=b1368b56&");
+/* harmony import */ var _HomeContent_vue_vue_type_template_id_b1368b56_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HomeContent.vue?vue&type=template&id=b1368b56&scoped=true& */ "./resources/js/components/BenutzerAnsichtComponents/HomeContent.vue?vue&type=template&id=b1368b56&scoped=true&");
 /* harmony import */ var _HomeContent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HomeContent.vue?vue&type=script&lang=js& */ "./resources/js/components/BenutzerAnsichtComponents/HomeContent.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
@@ -34188,11 +34212,11 @@ __webpack_require__.r(__webpack_exports__);
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
   _HomeContent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _HomeContent_vue_vue_type_template_id_b1368b56___WEBPACK_IMPORTED_MODULE_0__.render,
-  _HomeContent_vue_vue_type_template_id_b1368b56___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _HomeContent_vue_vue_type_template_id_b1368b56_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _HomeContent_vue_vue_type_template_id_b1368b56_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  null,
+  "b1368b56",
   null
   
 )
@@ -36149,19 +36173,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/BenutzerAnsichtComponents/HomeContent.vue?vue&type=template&id=b1368b56&":
-/*!**********************************************************************************************************!*\
-  !*** ./resources/js/components/BenutzerAnsichtComponents/HomeContent.vue?vue&type=template&id=b1368b56& ***!
-  \**********************************************************************************************************/
+/***/ "./resources/js/components/BenutzerAnsichtComponents/HomeContent.vue?vue&type=template&id=b1368b56&scoped=true&":
+/*!**********************************************************************************************************************!*\
+  !*** ./resources/js/components/BenutzerAnsichtComponents/HomeContent.vue?vue&type=template&id=b1368b56&scoped=true& ***!
+  \**********************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeContent_vue_vue_type_template_id_b1368b56___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeContent_vue_vue_type_template_id_b1368b56___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeContent_vue_vue_type_template_id_b1368b56_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeContent_vue_vue_type_template_id_b1368b56_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeContent_vue_vue_type_template_id_b1368b56___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./HomeContent.vue?vue&type=template&id=b1368b56& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BenutzerAnsichtComponents/HomeContent.vue?vue&type=template&id=b1368b56&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_HomeContent_vue_vue_type_template_id_b1368b56_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./HomeContent.vue?vue&type=template&id=b1368b56&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BenutzerAnsichtComponents/HomeContent.vue?vue&type=template&id=b1368b56&scoped=true&");
 
 
 /***/ }),
@@ -36762,7 +36786,7 @@ var render = function() {
                 _c("h3", { staticClass: "font-bold text-gray-800 mb-1" }, [
                   _vm._v(
                     "\n            " +
-                      _vm._s(jeweiligerAussteller.aussteller_fullname) +
+                      _vm._s(jeweiligerAussteller.aussteller_brandingname) +
                       "\n          "
                   )
                 ]),
@@ -36774,9 +36798,7 @@ var render = function() {
                       [
                         _vm._v(
                           "\n            " +
-                            _vm._s(
-                              jeweiligerAussteller.aussteller_brandingname
-                            ) +
+                            _vm._s(jeweiligerAussteller.aussteller_fullname) +
                             "\n          "
                         )
                       ]
@@ -37274,10 +37296,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BenutzerAnsichtComponents/HomeContent.vue?vue&type=template&id=b1368b56&":
-/*!*************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BenutzerAnsichtComponents/HomeContent.vue?vue&type=template&id=b1368b56& ***!
-  \*************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BenutzerAnsichtComponents/HomeContent.vue?vue&type=template&id=b1368b56&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/BenutzerAnsichtComponents/HomeContent.vue?vue&type=template&id=b1368b56&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -37296,7 +37318,20 @@ var render = function() {
         _vm._v("\n      " + _vm._s(_vm.titleMessage) + "\n      "),
         _c("div", { staticClass: "descriptiontext" }, [
           _vm._v("\n        " + _vm._s(_vm.smallDescription) + "\n      ")
-        ])
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "mt-2 descriptiontext text-white",
+            attrs: { id: "hmdate" }
+          },
+          [
+            _vm._v(
+              "\n        9. und 16. Oktober 2021 | 9 - 17 Uhr bei jeder Witterung!\n      "
+            )
+          ]
+        )
       ])
     ]),
     _vm._v(" "),
@@ -37306,7 +37341,7 @@ var render = function() {
       [
         _c(
           "router-link",
-          { attrs: { to: "/app/produkte" } },
+          { attrs: { to: "/app/produktreiter" } },
           [
             _c("Button", {
               attrs: {
@@ -37322,7 +37357,7 @@ var render = function() {
         _vm._v(" "),
         _c(
           "router-link",
-          { attrs: { to: "app/aussteller" } },
+          { attrs: { to: "/app/aussteller" } },
           [
             _c("Button", {
               attrs: {
@@ -37441,7 +37476,7 @@ var staticRenderFns = [
             "div",
             {
               staticClass:
-                "\n          hidden\n          hmbp:block\n          mb-5\n          text-xs\n          px-4\n          pt-4\n          ssm:text-sm\n          btnbp:text-xl\n          btnbp:pt-6\n          btnbp:px-12\n          text-gray-300 text-center\n          produktdescriptionbp:px-14\n        "
+                "\n          hidden\n          hmbp:block\n          mb-5\n          text-sm\n          px-4\n          pt-4\n          ssm:text-base\n          btnbp:text-xl\n          btnbp:pt-6\n          btnbp:px-12\n          text-gray-300 text-center\n          produktdescriptionbp:px-14\n        "
             },
             [
               _vm._v(
@@ -37466,9 +37501,9 @@ var staticRenderFns = [
       _c("iframe", {
         attrs: {
           src:
-            "https://www.google.com/maps/d/embed?mid=13qNnDIQECR3-pZ3-vK39FNUhoY7M-qD1",
-          width: "640",
-          height: "480"
+            "https://www.google.com/maps/d/embed?mid=1Kxrd75PaiWPf5CIYb3pSrpFRScbUORwo",
+          width: "800",
+          height: "600"
         }
       })
     ])
@@ -37567,7 +37602,7 @@ var staticRenderFns = [
       "ul",
       {
         staticClass:
-          "\n      text-white text-xs\n      border-t border-b border-gray-800\n      pb-1\n      ssm:text-base\n      grid\n      justify-center\n      items-center\n      gap-1\n      content-evenly\n      bg-gray-600 bg-gradient-to-bl\n      from-green-900\n      to-gray-700\n    ",
+          "\n      text-white\n      border-t border-b border-gray-800\n      pb-1\n      text-sm\n      ssm:text-lg\n      sm:text-2xl\n      grid\n      justify-center\n      items-center\n      gap-1\n      content-evenly\n      bg-gray-600 bg-gradient-to-bl\n      from-green-900\n      to-gray-700\n    ",
         attrs: { id: "kontaktinfo" }
       },
       [
@@ -37592,7 +37627,7 @@ var staticRenderFns = [
             [
               _vm._v("info@haiminger-markttage.at"),
               _c("img", {
-                staticClass: "resize-icon filter-white-icons mx-auto",
+                staticClass: "resize-icon filter-white-icons mx-auto mt-2",
                 attrs: { src: "/images/icons/svgs/email.svg", alt: "email" }
               })
             ]
@@ -37604,7 +37639,7 @@ var staticRenderFns = [
           _c("a", { attrs: { href: "http://www.haiminger-markttage.at/" } }, [
             _vm._v("haiminger-markttage.at"),
             _c("img", {
-              staticClass: "resize-icon filter-white-icons mx-auto",
+              staticClass: "resize-icon filter-white-icons mx-auto mt-2",
               attrs: { src: "/images/icons/svgs/www.svg", alt: "website" }
             })
           ])
@@ -37617,7 +37652,7 @@ var staticRenderFns = [
             { attrs: { href: "http://www.haiminger-markttage.at/kontakt/" } },
             [
               _c("img", {
-                staticClass: "resize-icon filter-white-icons mx-auto",
+                staticClass: "resize-icon filter-white-icons mx-auto mt-2 mb-2",
                 attrs: {
                   src: "/images/icons/svgs/contact-form.svg",
                   alt: "website"
@@ -37665,6 +37700,50 @@ var render = function() {
               "router-link",
               {
                 staticClass: "bar-element",
+                attrs: { to: "/app/produkte", exact: "" }
+              },
+              [
+                _c(
+                  "span",
+                  {
+                    staticClass: "w-full text-center",
+                    on: {
+                      click: function($event) {
+                        return _vm.emitGlobalClickEvent()
+                      }
+                    }
+                  },
+                  [_vm._v("\n        Produkte")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "bar-element",
+                attrs: { to: "/app/aussteller", exact: "" }
+              },
+              [
+                _c(
+                  "span",
+                  {
+                    staticClass: "w-full text-center",
+                    on: {
+                      click: function($event) {
+                        return _vm.emitGlobalClickEvent()
+                      }
+                    }
+                  },
+                  [_vm._v("\n        Aussteller")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "bar-element",
                 attrs: { to: "/app/news", exact: "" }
               },
               [
@@ -37679,6 +37758,50 @@ var render = function() {
                     }
                   },
                   [_vm._v("\n        News")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "bar-element",
+                attrs: { to: "/app/karte", exact: "" }
+              },
+              [
+                _c(
+                  "span",
+                  {
+                    staticClass: "w-full text-center",
+                    on: {
+                      click: function($event) {
+                        return _vm.emitGlobalClickEvent()
+                      }
+                    }
+                  },
+                  [_vm._v("\n        Karte")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "router-link",
+              {
+                staticClass: "bar-element",
+                attrs: { to: "/app/anreise", exact: "" }
+              },
+              [
+                _c(
+                  "span",
+                  {
+                    staticClass: "w-full text-center",
+                    on: {
+                      click: function($event) {
+                        return _vm.emitGlobalClickEvent()
+                      }
+                    }
+                  },
+                  [_vm._v("\n        Anreise")]
                 )
               ]
             ),
@@ -37788,7 +37911,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("\n        Unsere Sponsoren")]
+                  [_vm._v("\n        Sponsoren")]
                 )
               ]
             )
@@ -38287,7 +38410,8 @@ var render = function() {
     _c(
       "div",
       {
-        staticClass: "font-willkommen pt-5 px-1 mb-10 text-center z-index:100"
+        staticClass:
+          "font-willkommen pt-5 px-2 md:px-1 mb-10 text-center z-index:100"
       },
       [
         _c("div", { staticClass: "ueberschriftprodukte textshadow-markant" }, [
@@ -38296,7 +38420,7 @@ var render = function() {
             "div",
             {
               staticClass:
-                "\n          hidden\n          hmbp:block\n          mb-5\n          text-xs\n          px-4\n          pt-4\n          ssm:text-sm\n          btnbp:text-xl\n          btnbp:pt-6\n          btnbp:px-12\n          text-gray-300 text-center\n          produktdescriptionbp:px-14\n        "
+                "\n          hidden\n          hmbp:block\n          mb-5\n          text-base\n          px-4\n          pt-4\n          btnbp:text-2xl\n          btnbp:pt-6\n          btnbp:px-12\n          text-gray-300 text-center\n          produktdescriptionbp:px-14\n        "
             },
             [_vm._v("\n        " + _vm._s(_vm.smallDescription) + "\n      ")]
           )
@@ -38315,7 +38439,8 @@ var render = function() {
           "article",
           {
             key: index,
-            staticClass: "articlestyling mx-auto overflow-hidden w-96"
+            staticClass:
+              "articlestyling mx-auto overflow-hidden w-52 ssm:w-72 md:w-96"
           },
           [
             _c("img", {
@@ -38323,16 +38448,20 @@ var render = function() {
               attrs: { src: produktart.imgUrl, alt: "" }
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "text text-center lg:text-lg" }, [
-              _c("h3", { staticClass: "font-bold text-gray-800 mb-2 mt-1" }, [
-                _vm._v(
-                  "\n          " +
-                    _vm._s(produktart.produktartTitel) +
-                    "\n        "
-                )
-              ]),
+            _c("div", { staticClass: "text text-center text-lg" }, [
+              _c(
+                "h3",
+                { staticClass: "font-bold text-gray-800 mb-2 lg:mt-1" },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(produktart.produktartTitel) +
+                      "\n        "
+                  )
+                ]
+              ),
               _vm._v(" "),
-              _c("p", { staticClass: "text-sm lg:text-base mb-2" }, [
+              _c("p", { staticClass: "text-base lg:text-base mb-2" }, [
                 _vm._v(
                   "\n          " +
                     _vm._s(produktart.produktartBeschreibung) +
@@ -38406,7 +38535,7 @@ var render = function() {
             "div",
             {
               staticClass:
-                "\n          hidden\n          hmbp:block\n          mb-5\n          text-xs\n          px-4\n          pt-4\n          ssm:text-sm\n          btnbp:text-xl\n          btnbp:pt-6\n          btnbp:px-12\n          text-gray-300 text-center\n          produktdescriptionbp:px-14\n        "
+                "\n          hidden\n          hmbp:block\n          mb-5\n          text-base\n          px-4\n          pt-4\n          btnbp:text-2xl\n          btnbp:pt-6\n          btnbp:px-12\n          text-gray-300 text-center\n          produktdescriptionbp:px-14\n        "
             },
             [_vm._v("\n        " + _vm._s(_vm.smallDescription) + "\n      ")]
           )
@@ -44742,28 +44871,20 @@ var staticRenderFns = [
       "ul",
       {
         staticClass:
-          "\n      text-white text-xs\n      border-t border-b border-gray-800\n      pb-1\n      ssm:text-base\n      grid\n      justify-center\n      items-center\n      gap-1\n      content-evenly\n      bg-gray-600 bg-gradient-to-bl\n      from-green-900\n      to-gray-700\n    ",
+          "\n      text-white\n      border-t border-b border-gray-800\n      pb-1\n      text-sm\n      ssm:text-lg\n      sm:text-2xl\n      grid\n      justify-center\n      items-center\n      gap-1\n      content-evenly\n      bg-gray-600 bg-gradient-to-bl\n      from-green-900\n      to-gray-700\n    ",
         attrs: { id: "kontaktinfo" }
       },
       [
         _c("li", { staticClass: "justify-self-center" }, [
-          _vm._v("\n      Erzeugerorganisation Oberinntalobst GmbH\n    ")
+          _vm._v("Haiminger Markttage")
         ]),
         _vm._v(" "),
         _c("li", { staticClass: "justify-self-center" }, [
-          _vm._v("Wiesrainstraße 13")
+          _vm._v("Brunnenweg 5")
         ]),
         _vm._v(" "),
         _c("li", { staticClass: "justify-self-center" }, [
           _vm._v("A-6425 Haiming")
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "justify-self-center" }, [
-          _vm._v("Tel.: +43 (0) 664 3408802")
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "justify-self-center" }, [
-          _vm._v("Fax: +43 (0) 5266 88429")
         ]),
         _vm._v(" "),
         _c("li", { staticClass: "justify-self-center" }, [
@@ -44772,15 +44893,14 @@ var staticRenderFns = [
             "a",
             {
               attrs: {
-                href:
-                  "mailto:info@haiminger-markttage.at,office@obstlager-haiming.at",
+                href: "mailto:info@haiminger-markttage.at",
                 target: "_newtab"
               }
             },
             [
-              _vm._v("office@obstlager-haiming.at"),
+              _vm._v("info@haiminger-markttage.at"),
               _c("img", {
-                staticClass: "resize-icon filter-white-icons mx-auto",
+                staticClass: "resize-icon filter-white-icons mx-auto mt-2",
                 attrs: { src: "/images/icons/svgs/email.svg", alt: "email" }
               })
             ]
@@ -44792,7 +44912,7 @@ var staticRenderFns = [
           _c("a", { attrs: { href: "http://www.haiminger-markttage.at/" } }, [
             _vm._v("haiminger-markttage.at"),
             _c("img", {
-              staticClass: "resize-icon filter-white-icons mx-auto",
+              staticClass: "resize-icon filter-white-icons mx-auto mt-2",
               attrs: { src: "/images/icons/svgs/www.svg", alt: "website" }
             })
           ])
@@ -44805,10 +44925,10 @@ var staticRenderFns = [
             { attrs: { href: "http://www.haiminger-markttage.at/kontakt/" } },
             [
               _c("img", {
-                staticClass: "resize-icon filter-white-icons mx-auto",
+                staticClass: "resize-icon filter-white-icons mx-auto mt-2 mb-2",
                 attrs: {
                   src: "/images/icons/svgs/contact-form.svg",
-                  alt: "website"
+                  alt: "contact"
                 }
               })
             ]

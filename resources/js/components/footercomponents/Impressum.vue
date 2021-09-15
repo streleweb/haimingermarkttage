@@ -138,10 +138,12 @@
     <ul
       id="kontaktinfo"
       class="
-        text-white text-xs
+        text-white
         border-t border-b border-gray-800
         pb-1
-        ssm:text-base
+        text-sm
+        ssm:text-lg
+        sm:text-2xl
         grid
         justify-center
         items-center
@@ -152,21 +154,15 @@
         to-gray-700
       "
     >
-      <li class="justify-self-center">
-        Erzeugerorganisation Oberinntalobst GmbH
-      </li>
-      <li class="justify-self-center">Wiesrainstraße 13</li>
+      <li class="justify-self-center">Haiminger Markttage</li>
+      <li class="justify-self-center">Brunnenweg 5</li>
       <li class="justify-self-center">A-6425 Haiming</li>
-      <li class="justify-self-center">Tel.: +43 (0) 664 3408802</li>
-      <li class="justify-self-center">Fax: +43 (0) 5266 88429</li>
       <li class="justify-self-center">
         E-Mail:
-        <a
-          href="mailto:info@haiminger-markttage.at,office@obstlager-haiming.at"
-          target="_newtab"
-          >office@obstlager-haiming.at<img
+        <a href="mailto:info@haiminger-markttage.at" target="_newtab"
+          >info@haiminger-markttage.at<img
             src="/images/icons/svgs/email.svg"
-            class="resize-icon filter-white-icons mx-auto"
+            class="resize-icon filter-white-icons mx-auto mt-2"
             alt="email"
         /></a>
       </li>
@@ -175,7 +171,7 @@
         <a href="http://www.haiminger-markttage.at/"
           >haiminger-markttage.at<img
             src="/images/icons/svgs/www.svg"
-            class="resize-icon filter-white-icons mx-auto"
+            class="resize-icon filter-white-icons mx-auto mt-2"
             alt="website"
         /></a>
       </li>
@@ -183,8 +179,8 @@
         Zum Kontaktformular:<a href="http://www.haiminger-markttage.at/kontakt/"
           ><img
             src="/images/icons/svgs/contact-form.svg"
-            class="resize-icon filter-white-icons mx-auto"
-            alt="website"
+            class="resize-icon filter-white-icons mx-auto mt-2 mb-2"
+            alt="contact"
         /></a>
       </li>
     </ul>

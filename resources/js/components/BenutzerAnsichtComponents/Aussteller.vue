@@ -48,13 +48,13 @@
           />
           <div class="text text-center lg:text-lg">
             <h3 class="font-bold text-gray-800 mb-1">
-              {{ jeweiligerAussteller.aussteller_fullname }}
+              {{ jeweiligerAussteller.aussteller_brandingname }}
             </h3>
             <h2
               v-if="ausstellerBrandingNameNotEmpty(index)"
               class="font-semibold text-gray-700 mb-2"
             >
-              {{ jeweiligerAussteller.aussteller_brandingname }}
+              {{ jeweiligerAussteller.aussteller_fullname }}
             </h2>
             <p class="text-sm lg:text-base mb-2">
               {{ jeweiligerAussteller.aussteller_beschreibung }}

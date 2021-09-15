@@ -14,10 +14,10 @@
             hidden
             hmbp:block
             mb-5
-            text-xs
+            text-sm
             px-4
             pt-4
-            ssm:text-sm
+            ssm:text-base
             btnbp:text-xl
             btnbp:pt-6
             btnbp:px-12
@@ -38,11 +38,12 @@
       </div>
     </div>
     <!-- end willkommen -->
+    <!--https://www.google.com/maps/d/embed?mid=13qNnDIQECR3-pZ3-vK39FNUhoY7M-qD1-->
     <div class="flex justify-center items-center">
       <iframe
-        src="https://www.google.com/maps/d/embed?mid=13qNnDIQECR3-pZ3-vK39FNUhoY7M-qD1"
-        width="640"
-        height="480"
+        src="https://www.google.com/maps/d/embed?mid=1Kxrd75PaiWPf5CIYb3pSrpFRScbUORwo"
+        width="800"
+        height="600"
       ></iframe>
     </div>
 

@@ -17,15 +17,11 @@ class Aussteller extends Model
 
     protected $table = "aussteller";
 
-    public function produkts()
-    {
-        return $this->hasMany(Produkt::class);
-    }
-
     public function produktreiter()
     {
         return $this->hasMany(Produktreiter::class);
     }
+
     
     /*
       Method for Many-to-Many Product-Relationship

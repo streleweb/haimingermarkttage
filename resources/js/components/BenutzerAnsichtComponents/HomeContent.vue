@@ -11,13 +11,18 @@
           {{ smallDescription }}
         </div>
         <!-- end willkommenstexte -->
+        <!-- ********** AKTUELLES HM DATUM HIER EINGEBEN *********** -->
+        <div id="hmdate" class="mt-2 descriptiontext text-white">
+          9. und 16. Oktober 2021 | 9 - 17 Uhr bei jeder Witterung!
+        </div>
+        <!-- ********** AKTUELLES HM DATUM HIER EINGEBEN ENDE ******-->
       </div>
     </div>
     <!-- end willkommen -->
 
     <div class="buttonContainer flex flex-col flex-shrink flex-grow">
       <!--Buttons mit Custom Props-->
-      <router-link to="/app/produkte">
+      <router-link to="/app/produktreiter">
         <Button
           svg-source="/../../images/icons/svgs/apple1.svg"
           button-inhalt="Produkte"
@@ -26,7 +31,7 @@
         ></Button>
       </router-link>
 
-      <router-link to="app/aussteller">
+      <router-link to="/app/aussteller">
         <Button
           svg-source="/../../images/icons/svgs/aussteller.svg"
           button-inhalt="Aussteller"
@@ -94,5 +99,5 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 </style>

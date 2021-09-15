@@ -56,10 +56,12 @@
     <ul
       id="kontaktinfo"
       class="
-        text-white text-xs
+        text-white
         border-t border-b border-gray-800
         pb-1
-        ssm:text-base
+        text-sm
+        ssm:text-lg
+        sm:text-2xl
         grid
         justify-center
         items-center
@@ -77,7 +79,7 @@
         <a href="mailto:info@haiminger-markttage.at" target="_newtab"
           >info@haiminger-markttage.at<img
             src="/images/icons/svgs/email.svg"
-            class="resize-icon filter-white-icons mx-auto"
+            class="resize-icon filter-white-icons mx-auto mt-2"
             alt="email"
         /></a>
       </li>
@@ -86,7 +88,7 @@
         <a href="http://www.haiminger-markttage.at/"
           >haiminger-markttage.at<img
             src="/images/icons/svgs/www.svg"
-            class="resize-icon filter-white-icons mx-auto"
+            class="resize-icon filter-white-icons mx-auto mt-2"
             alt="website"
         /></a>
       </li>
@@ -94,7 +96,7 @@
         Zum Kontaktformular:<a href="http://www.haiminger-markttage.at/kontakt/"
           ><img
             src="/images/icons/svgs/contact-form.svg"
-            class="resize-icon filter-white-icons mx-auto"
+            class="resize-icon filter-white-icons mx-auto mt-2 mb-2"
             alt="website"
         /></a>
       </li>

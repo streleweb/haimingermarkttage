@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProduktreiterAusstellerTable extends Migration
+class CreateAusstellerProduktreiterTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateProduktreiterAusstellerTable extends Migration
      */
     public function up()
     {
-        Schema::create('produktreiter_aussteller', function (Blueprint $table) {
+        Schema::create('aussteller_produktreiter', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('produktreiter_id');
             $table->unsignedBigInteger('aussteller_id');
+            $table->unsignedBigInteger('produktreiter_id');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateProduktreiterAusstellerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('produktreiter_aussteller');
+        Schema::dropIfExists('aussteller_produktreiter');
     }
 }

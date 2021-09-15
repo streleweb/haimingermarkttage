@@ -2,7 +2,9 @@
   <div class="max-w-full produktbackground">
     <!-- Content Container von Willkommen (exklusive Navbar) bis exklusive Footer-->
 
-    <div class="font-willkommen pt-5 px-1 mb-10 text-center z-index:100">
+    <div
+      class="font-willkommen pt-5 px-2 md:px-1 mb-10 text-center z-index:100"
+    >
       <!-- custom font konfiguriert in tailwind.config.js-->
       <!-- Hier noch Background-Pic oder Video rein -->
       <div class="ueberschriftprodukte textshadow-markant">
@@ -12,11 +14,10 @@
             hidden
             hmbp:block
             mb-5
-            text-xs
+            text-base
             px-4
             pt-4
-            ssm:text-sm
-            btnbp:text-xl
+            btnbp:text-2xl
             btnbp:pt-6
             btnbp:px-12
             text-gray-300 text-center
@@ -43,7 +44,7 @@
       <article
         v-for="(produktart, index) in produktarten"
         :key="index"
-        class="articlestyling mx-auto overflow-hidden w-96"
+        class="articlestyling mx-auto overflow-hidden w-52 ssm:w-72 md:w-96"
       >
         <img
           :src="produktart.imgUrl"
@@ -51,11 +52,11 @@
           class="border-b border-gray-800 produktecardshadow"
         />
 
-        <div class="text text-center lg:text-lg">
-          <h3 class="font-bold text-gray-800 mb-2 mt-1">
+        <div class="text text-center text-lg">
+          <h3 class="font-bold text-gray-800 mb-2 lg:mt-1">
             {{ produktart.produktartTitel }}
           </h3>
-          <p class="text-sm lg:text-base mb-2">
+          <p class="text-base lg:text-base mb-2">
             {{ produktart.produktartBeschreibung }}
           </p>
         </div>

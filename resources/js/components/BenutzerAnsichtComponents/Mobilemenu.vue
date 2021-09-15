@@ -5,9 +5,29 @@
       class="mobiledropdown mobiledropdowntextconfig"
       v-if="open"
     >
+      <router-link class="bar-element" to="/app/produkte" exact
+        ><span class="w-full text-center" @click="emitGlobalClickEvent()">
+          Produkte</span
+        >
+      </router-link>
+      <router-link class="bar-element" to="/app/aussteller" exact
+        ><span class="w-full text-center" @click="emitGlobalClickEvent()">
+          Aussteller</span
+        >
+      </router-link>
       <router-link class="bar-element" to="/app/news" exact
         ><span class="w-full text-center" @click="emitGlobalClickEvent()">
           News</span
+        >
+      </router-link>
+      <router-link class="bar-element" to="/app/karte" exact
+        ><span class="w-full text-center" @click="emitGlobalClickEvent()">
+          Karte</span
+        >
+      </router-link>
+      <router-link class="bar-element" to="/app/anreise" exact
+        ><span class="w-full text-center" @click="emitGlobalClickEvent()">
+          Anreise</span
         >
       </router-link>
       <router-link class="bar-element" to="/app/philosophie" exact
@@ -32,7 +52,7 @@
       </router-link>
       <router-link class="bar-element" to="/app/sponsoren" exact
         ><span class="w-full text-center" @click="emitGlobalClickEvent()">
-          Unsere Sponsoren</span
+          Sponsoren</span
         >
       </router-link>
     </div>
@@ -85,7 +105,7 @@ export default {
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  padding-top: 3rem;
+  padding-top: 1rem;
   background-image: url("/images/background/mobilemenubackground3.svg");
   opacity: 1;
   z-index: 4000;
@@ -97,7 +117,7 @@ export default {
   justify-content: center;
   align-items: center;
   width: 60%;
-  height: 10%;
+  height: 7%;
   margin-bottom: 1rem;
   cursor: pointer;
   color: #fefefe;

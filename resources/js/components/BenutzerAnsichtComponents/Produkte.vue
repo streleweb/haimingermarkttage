@@ -12,11 +12,10 @@
             hidden
             hmbp:block
             mb-5
-            text-xs
+            text-base
             px-4
             pt-4
-            ssm:text-sm
-            btnbp:text-xl
+            btnbp:text-2xl
             btnbp:pt-6
             btnbp:px-12
             text-gray-300 text-center
