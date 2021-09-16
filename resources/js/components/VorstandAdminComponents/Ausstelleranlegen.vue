@@ -426,73 +426,147 @@
                             class="checkmark"
                           ></span>
                         </label>
-                        <label class="container" @click="assignColorRed"
+                        <label class="container" @click="assignToGastronomie"
                           >Rot
                           <div
-                            @click="assignColorRed"
+                            @click="assignToGastronomie"
                             class="bg-red-600 h-2 w-5 rounded-md"
                           ></div>
                           <input
-                            @click="assignColorRed"
+                            @click="assignToGastronomie"
                             type="radio"
                             name="radio"
                           />
                           <span
-                            @click="assignColorRed"
+                            @click="assignToGastronomie"
                             class="checkmark"
                           ></span>
                         </label>
-                        <label class="container" @click="assignColorYellow"
+                        <label class="container" @click="assignToHandwerk"
                           >Gelb
                           <div
-                            @click="assignColorYellow"
+                            @click="assignToHandwerk"
                             class="bg-yellow-300 h-2 w-5 rounded-md"
                           ></div>
                           <input
-                            @click="assignColorYellow"
+                            @click="assignToHandwerk"
                             type="radio"
                             name="radio"
                           />
                           <span
-                            @click="assignColorYellow"
+                            @click="assignToHandwerk"
                             class="checkmark"
                           ></span>
                         </label>
-                        <label class="container" @click="assignColorGreen"
+                        <label class="container" @click="assignToTextil"
                           >Grün
                           <div
-                            @click="assignColorGreen"
+                            @click="assignToTextil"
                             class="bg-green-500 h-2 w-5 rounded-md"
                           ></div>
                           <input
-                            @click="assignColorGreen"
+                            @click="assignToTextil"
                             type="radio"
                             name="radio"
                           />
                           <span
-                            @click="assignColorGreen"
+                            @click="assignToTextil"
                             class="checkmark"
                           ></span>
                         </label>
-                        <label class="container" @click="assignColorBrown"
+                        <label class="container" @click="assignToAllerlei"
                           >Braun
                           <div
-                            @click="assignColorBrown"
+                            @click="assignToAllerlei"
                             class="bg-yellow-900 h-2 w-5 rounded-md"
                           ></div>
                           <input
-                            @click="assignColorBrown"
+                            @click="assignToAllerlei"
                             type="radio"
                             name="radio"
                           />
                           <span
-                            @click="assignColorBrown"
+                            @click="assignToAllerlei"
                             class="checkmark"
                           ></span>
                         </label>
                       </div>
                       <!--COLORBUTTONS END-->
                     </div>
+                    <!-- 16 09 2021 -->
+                    <div class="col-span-6">
+                      <label
+                        for="street_address"
+                        class="block text-sm font-medium text-gray-700"
+                        >Produktreiter</label
+                      >
+                      <!--COLORBUTTONS START-->
+                      <div class="pt-3">
+                        <label class="container" @click="assignToLebensmittel"
+                          >Lebensmittel
+                          <input
+                            @click="assignToLebensmittel"
+                            type="checkbox"
+                            name="checkbox"
+                          />
+                          <span
+                            @click="assignToLebensmittel"
+                            class="checkmark"
+                          ></span>
+                        </label>
+                        <label class="container" @click="assignToGastronomie"
+                          >Gastronomie
+                          <input
+                            @click="assignToGastronomie"
+                            type="checkbox"
+                            name="checkbox"
+                          />
+                          <span
+                            @click="assignToGastronomie"
+                            class="checkmark"
+                          ></span>
+                        </label>
+                        <label class="container" @click="assignToHandwerk"
+                          >Handwerk
+                          <input
+                            @click="assignToHandwerk"
+                            type="checkbox"
+                            name="checkbox"
+                          />
+                          <span
+                            @click="assignToHandwerk"
+                            class="checkmark"
+                          ></span>
+                        </label>
+                        <label class="container" @click="assignToTextil"
+                          >Textil
+                          <input
+                            @click="assignToTextil"
+                            type="checkbox"
+                            name="checkbox"
+                          />
+                          <span
+                            @click="assignToTextil"
+                            class="checkmark"
+                          ></span>
+                        </label>
+                        <label class="container" @click="assignToAllerlei"
+                          >Allerlei
+                          <input
+                            @click="assignToAllerlei"
+                            type="checkbox"
+                            name="checkbox"
+                          />
+                          <span
+                            @click="assignToAllerlei"
+                            class="checkmark"
+                          ></span>
+                        </label>
+                      </div>
+                      <!--COLORBUTTONS END-->
+                    </div>
+                    <!-- 16 09 2021 END -->
+
                     <!--IMAGE FILE UPLOAD START-->
                     <div class="py-2 bg-green-900 text-white mb-1 px-2">
                       Ausstellerfoto Upload
@@ -618,6 +692,7 @@ export default {
         aussteller_email: null,
         aussteller_websiteurl: null,
         aussteller_bildurl: null,
+        aussteller_produktreiter: [],
       }, //Objekt zum Speichern der Model-Daten von oben
     };
   },
@@ -667,20 +742,37 @@ export default {
 
     //assign-Color Methods for Radio-Buttons
     //Wird im Tailwind-Textformat in DB gespeichert und so wieder herausgeholt
-    assignColorRed() {
+    assignToGastronomie() {
       this.formdata.aussteller_zonenfarbe = "bg-red-600";
     },
     assignColorBlue() {
       this.formdata.aussteller_zonenfarbe = "bg-blue-500";
     },
-    assignColorGreen() {
+    assignToTextil() {
       this.formdata.aussteller_zonenfarbe = "bg-green-500";
     },
-    assignColorBrown() {
+    assignToAllerlei() {
       this.formdata.aussteller_zonenfarbe = "bg-yellow-900";
     },
-    assignColorYellow() {
+    assignToHandwerk() {
       this.formdata.aussteller_zonenfarbe = "bg-yellow-300";
+    },
+
+    //assign to specific produktreiter
+    assignToLebensmittel() {
+      this.formdata.aussteller_produktreiter.push("Lebensmittel");
+    },
+    assignToGastronomie() {
+      this.formdata.aussteller_produktreiter.push("Gastronomie");
+    },
+    assignToHandwerk() {
+      this.formdata.aussteller_produktreiter.push("Handwerk");
+    },
+    assignToTextil() {
+      this.formdata.aussteller_produktreiter.push("Textil");
+    },
+    assignToAllerlei() {
+      this.formdata.aussteller_produktreiter.push("Allerlei");
     },
 
     loggedIn() {

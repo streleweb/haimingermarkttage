@@ -55,7 +55,6 @@ class AusstellerController extends Controller
                   'aussteller_email' => 'nullable|min:2|max:100',
                   'aussteller_websiteurl' => 'nullable|max:200',
                   'aussteller_bildurl' => 'nullable',
-
                 ]);
           
             if ($validator->fails()) {
@@ -74,6 +73,13 @@ class AusstellerController extends Controller
 
 
                   if($aussteller->save()){
+                      //Wenn Aussteller erfolgreich gespeichert wurde, speichere auch die zugehörigen Produktreiter in die DB
+                    $savedAussteller = Aussteller::find(1);
+
+                    foreach ($aussteller->produktreiter as $pr){
+                        //hier weiter
+                    }
+
                     return \response('Aussteller erfolgreich gespeichert!', 200)
                     ->header('Content-Type', 'text/plain');
                   }

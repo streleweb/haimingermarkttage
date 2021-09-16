@@ -19,7 +19,7 @@ class Aussteller extends Model
 
     public function produktreiter()
     {
-        return $this->hasMany(Produktreiter::class);
+        return $this->belongsToMany(Produktreiter::class);
     }
 
     

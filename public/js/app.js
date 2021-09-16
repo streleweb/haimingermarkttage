@@ -5818,12 +5818,90 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_1__);
+var _methods;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -6441,7 +6519,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         aussteller_brandingname: null,
         aussteller_email: null,
         aussteller_websiteurl: null,
-        aussteller_bildurl: null
+        aussteller_bildurl: null,
+        aussteller_produktreiter: []
       } //Objekt zum Speichern der Model-Daten von oben
 
     };
@@ -6458,7 +6537,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       });
     }
   },
-  methods: {
+  methods: (_methods = {
     showSubmitButton: function showSubmitButton() {
       this.submitvisibility = "block";
     },
@@ -6489,101 +6568,110 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     //assign-Color Methods for Radio-Buttons
     //Wird im Tailwind-Textformat in DB gespeichert und so wieder herausgeholt
-    assignColorRed: function assignColorRed() {
+    assignToGastronomie: function assignToGastronomie() {
       this.formdata.aussteller_zonenfarbe = "bg-red-600";
     },
     assignColorBlue: function assignColorBlue() {
       this.formdata.aussteller_zonenfarbe = "bg-blue-500";
     },
-    assignColorGreen: function assignColorGreen() {
+    assignToTextil: function assignToTextil() {
       this.formdata.aussteller_zonenfarbe = "bg-green-500";
     },
-    assignColorBrown: function assignColorBrown() {
+    assignToAllerlei: function assignToAllerlei() {
       this.formdata.aussteller_zonenfarbe = "bg-yellow-900";
     },
-    assignColorYellow: function assignColorYellow() {
+    assignToHandwerk: function assignToHandwerk() {
       this.formdata.aussteller_zonenfarbe = "bg-yellow-300";
     },
-    loggedIn: function loggedIn() {
-      if (localStorage.getItem("isLoggedIn") == "true") {
-        return true;
-      } else return false;
-    },
-    handleLogout: function handleLogout() {
-      var _this2 = this;
-
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _context.prev = 0;
-                _context.next = 3;
-                return axios.post("http://localhost:8000/api/admin/logout");
-
-              case 3:
-                //LocalStorage LoggedIn-Status löschen
-                localStorage.removeItem("isLoggedIn");
-                localStorage;
-
-                _this2.$router.push({
-                  name: "adminLogin"
-                });
-
-                _context.next = 11;
-                break;
-
-              case 8:
-                _context.prev = 8;
-                _context.t0 = _context["catch"](0);
-                console.log(_context.t0);
-
-              case 11:
-                _context.prev = 11;
-                _this2.loading = false;
-                return _context.finish(11);
-
-              case 14:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, null, [[0, 8, 11, 14]]);
-      }))();
-    },
-    submitform: function submitform() {
-      var formToJson = JSON.stringify(this.formdata);
-      console.log(formToJson);
-
-      try {
-        axios.post("/api/aussteller", this.formdata) //console.log(result.response.data);
-        .then(function (response) {
-          //console.log(response);
-          //alert(response.data);
-          sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
-            title: response.data,
-            heightAuto: false,
-            confirmButtonText: "ok",
-            confirmButtonColor: "#3cb371"
-          }); //Swal.fire(response.data);
-        })["catch"](function (error) {
-          // Fehlerbehandlung
-          //console.log(error);
-          sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
-            title: error,
-            heightAuto: false,
-            confirmButtonText: "ok",
-            confirmButtonColor: "#3cb371"
-          });
-        });
-      } catch (error) {//console.error(error.response.data);
-      } finally {
-        this.$router.push({
-          name: "ausstelleruebersicht"
-        });
-      }
+    //assign to specific produktreiter
+    assignToLebensmittel: function assignToLebensmittel() {
+      this.formdata.aussteller_produktreiter.push("Lebensmittel");
     }
-  }
+  }, _defineProperty(_methods, "assignToGastronomie", function assignToGastronomie() {
+    this.formdata.aussteller_produktreiter.push("Gastronomie");
+  }), _defineProperty(_methods, "assignToHandwerk", function assignToHandwerk() {
+    this.formdata.aussteller_produktreiter.push("Handwerk");
+  }), _defineProperty(_methods, "assignToTextil", function assignToTextil() {
+    this.formdata.aussteller_produktreiter.push("Textil");
+  }), _defineProperty(_methods, "assignToAllerlei", function assignToAllerlei() {
+    this.formdata.aussteller_produktreiter.push("Allerlei");
+  }), _defineProperty(_methods, "loggedIn", function loggedIn() {
+    if (localStorage.getItem("isLoggedIn") == "true") {
+      return true;
+    } else return false;
+  }), _defineProperty(_methods, "handleLogout", function handleLogout() {
+    var _this2 = this;
+
+    return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.prev = 0;
+              _context.next = 3;
+              return axios.post("http://localhost:8000/api/admin/logout");
+
+            case 3:
+              //LocalStorage LoggedIn-Status löschen
+              localStorage.removeItem("isLoggedIn");
+              localStorage;
+
+              _this2.$router.push({
+                name: "adminLogin"
+              });
+
+              _context.next = 11;
+              break;
+
+            case 8:
+              _context.prev = 8;
+              _context.t0 = _context["catch"](0);
+              console.log(_context.t0);
+
+            case 11:
+              _context.prev = 11;
+              _this2.loading = false;
+              return _context.finish(11);
+
+            case 14:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee, null, [[0, 8, 11, 14]]);
+    }))();
+  }), _defineProperty(_methods, "submitform", function submitform() {
+    var formToJson = JSON.stringify(this.formdata);
+    console.log(formToJson);
+
+    try {
+      axios.post("/api/aussteller", this.formdata) //console.log(result.response.data);
+      .then(function (response) {
+        //console.log(response);
+        //alert(response.data);
+        sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+          title: response.data,
+          heightAuto: false,
+          confirmButtonText: "ok",
+          confirmButtonColor: "#3cb371"
+        }); //Swal.fire(response.data);
+      })["catch"](function (error) {
+        // Fehlerbehandlung
+        //console.log(error);
+        sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+          title: error,
+          heightAuto: false,
+          confirmButtonText: "ok",
+          confirmButtonColor: "#3cb371"
+        });
+      });
+    } catch (error) {//console.error(error.response.data);
+    } finally {
+      this.$router.push({
+        name: "ausstelleruebersicht"
+      });
+    }
+  }), _methods)
 });
 
 /***/ }),
@@ -41173,24 +41261,24 @@ var render = function() {
                                     "label",
                                     {
                                       staticClass: "container",
-                                      on: { click: _vm.assignColorRed }
+                                      on: { click: _vm.assignToGastronomie }
                                     },
                                     [
                                       _vm._v("Rot\n                        "),
                                       _c("div", {
                                         staticClass:
                                           "bg-red-600 h-2 w-5 rounded-md",
-                                        on: { click: _vm.assignColorRed }
+                                        on: { click: _vm.assignToGastronomie }
                                       }),
                                       _vm._v(" "),
                                       _c("input", {
                                         attrs: { type: "radio", name: "radio" },
-                                        on: { click: _vm.assignColorRed }
+                                        on: { click: _vm.assignToGastronomie }
                                       }),
                                       _vm._v(" "),
                                       _c("span", {
                                         staticClass: "checkmark",
-                                        on: { click: _vm.assignColorRed }
+                                        on: { click: _vm.assignToGastronomie }
                                       })
                                     ]
                                   ),
@@ -41199,24 +41287,24 @@ var render = function() {
                                     "label",
                                     {
                                       staticClass: "container",
-                                      on: { click: _vm.assignColorYellow }
+                                      on: { click: _vm.assignToHandwerk }
                                     },
                                     [
                                       _vm._v("Gelb\n                        "),
                                       _c("div", {
                                         staticClass:
                                           "bg-yellow-300 h-2 w-5 rounded-md",
-                                        on: { click: _vm.assignColorYellow }
+                                        on: { click: _vm.assignToHandwerk }
                                       }),
                                       _vm._v(" "),
                                       _c("input", {
                                         attrs: { type: "radio", name: "radio" },
-                                        on: { click: _vm.assignColorYellow }
+                                        on: { click: _vm.assignToHandwerk }
                                       }),
                                       _vm._v(" "),
                                       _c("span", {
                                         staticClass: "checkmark",
-                                        on: { click: _vm.assignColorYellow }
+                                        on: { click: _vm.assignToHandwerk }
                                       })
                                     ]
                                   ),
@@ -41225,24 +41313,24 @@ var render = function() {
                                     "label",
                                     {
                                       staticClass: "container",
-                                      on: { click: _vm.assignColorGreen }
+                                      on: { click: _vm.assignToTextil }
                                     },
                                     [
                                       _vm._v("Grün\n                        "),
                                       _c("div", {
                                         staticClass:
                                           "bg-green-500 h-2 w-5 rounded-md",
-                                        on: { click: _vm.assignColorGreen }
+                                        on: { click: _vm.assignToTextil }
                                       }),
                                       _vm._v(" "),
                                       _c("input", {
                                         attrs: { type: "radio", name: "radio" },
-                                        on: { click: _vm.assignColorGreen }
+                                        on: { click: _vm.assignToTextil }
                                       }),
                                       _vm._v(" "),
                                       _c("span", {
                                         staticClass: "checkmark",
-                                        on: { click: _vm.assignColorGreen }
+                                        on: { click: _vm.assignToTextil }
                                       })
                                     ]
                                   ),
@@ -41251,24 +41339,163 @@ var render = function() {
                                     "label",
                                     {
                                       staticClass: "container",
-                                      on: { click: _vm.assignColorBrown }
+                                      on: { click: _vm.assignToAllerlei }
                                     },
                                     [
                                       _vm._v("Braun\n                        "),
                                       _c("div", {
                                         staticClass:
                                           "bg-yellow-900 h-2 w-5 rounded-md",
-                                        on: { click: _vm.assignColorBrown }
+                                        on: { click: _vm.assignToAllerlei }
                                       }),
                                       _vm._v(" "),
                                       _c("input", {
                                         attrs: { type: "radio", name: "radio" },
-                                        on: { click: _vm.assignColorBrown }
+                                        on: { click: _vm.assignToAllerlei }
                                       }),
                                       _vm._v(" "),
                                       _c("span", {
                                         staticClass: "checkmark",
-                                        on: { click: _vm.assignColorBrown }
+                                        on: { click: _vm.assignToAllerlei }
+                                      })
+                                    ]
+                                  )
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-span-6" }, [
+                                _c(
+                                  "label",
+                                  {
+                                    staticClass:
+                                      "block text-sm font-medium text-gray-700",
+                                    attrs: { for: "street_address" }
+                                  },
+                                  [_vm._v("Produktreiter")]
+                                ),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "pt-3" }, [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "container",
+                                      on: { click: _vm.assignToLebensmittel }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "Lebensmittel\n                        "
+                                      ),
+                                      _c("input", {
+                                        attrs: {
+                                          type: "checkbox",
+                                          name: "checkbox"
+                                        },
+                                        on: { click: _vm.assignToLebensmittel }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("span", {
+                                        staticClass: "checkmark",
+                                        on: { click: _vm.assignToLebensmittel }
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "container",
+                                      on: { click: _vm.assignToGastronomie }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "Gastronomie\n                        "
+                                      ),
+                                      _c("input", {
+                                        attrs: {
+                                          type: "checkbox",
+                                          name: "checkbox"
+                                        },
+                                        on: { click: _vm.assignToGastronomie }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("span", {
+                                        staticClass: "checkmark",
+                                        on: { click: _vm.assignToGastronomie }
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "container",
+                                      on: { click: _vm.assignToHandwerk }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "Handwerk\n                        "
+                                      ),
+                                      _c("input", {
+                                        attrs: {
+                                          type: "checkbox",
+                                          name: "checkbox"
+                                        },
+                                        on: { click: _vm.assignToHandwerk }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("span", {
+                                        staticClass: "checkmark",
+                                        on: { click: _vm.assignToHandwerk }
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "container",
+                                      on: { click: _vm.assignToTextil }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "Textil\n                        "
+                                      ),
+                                      _c("input", {
+                                        attrs: {
+                                          type: "checkbox",
+                                          name: "checkbox"
+                                        },
+                                        on: { click: _vm.assignToTextil }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("span", {
+                                        staticClass: "checkmark",
+                                        on: { click: _vm.assignToTextil }
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass: "container",
+                                      on: { click: _vm.assignToAllerlei }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "Allerlei\n                        "
+                                      ),
+                                      _c("input", {
+                                        attrs: {
+                                          type: "checkbox",
+                                          name: "checkbox"
+                                        },
+                                        on: { click: _vm.assignToAllerlei }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("span", {
+                                        staticClass: "checkmark",
+                                        on: { click: _vm.assignToAllerlei }
                                       })
                                     ]
                                   )
