@@ -44,6 +44,7 @@
       <article
         v-for="(produktart, index) in produktarten"
         :key="index"
+        @click="goToPage(produktart.produktartTitel)"
         class="articlestyling mx-auto overflow-hidden w-52 ssm:w-72 md:w-96"
       >
         <img
@@ -126,6 +127,11 @@ export default {
     };
   },
   components: { Button },
+  methods: {
+    goToPage(produktartTitel) {
+      this.$router.push({ name: produktartTitel });
+    },
+  },
 };
 </script>
 

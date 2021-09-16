@@ -22,6 +22,11 @@ import Sponsoren from './components/BenutzerAnsichtComponents/Sponsoren';
 import Programm from './components/BenutzerAnsichtComponents/Programm';
 import ProgrammAnlegen from './components/VorstandAdminComponents/ProgrammAnlegen';
 import ProduktReiter from './components/BenutzerAnsichtComponents/ProduktReiter';
+import Lebensmittel from './components/BenutzerAnsichtComponents/Detailansicht Produkte/Lebensmittel';
+import Gastronomie from './components/BenutzerAnsichtComponents/Detailansicht Produkte/Gastronomie';
+import Handwerk from './components/BenutzerAnsichtComponents/Detailansicht Produkte/Handwerk';
+import Textil from './components/BenutzerAnsichtComponents/Detailansicht Produkte/Textil';
+import Allerlei from './components/BenutzerAnsichtComponents/Detailansicht Produkte/Allerlei';
 
 
 export default {
@@ -46,6 +51,31 @@ export default {
         {
             path: '/app/produkte',
             component: Produkte
+        },
+        {
+            path: '/app/lebensmittel',
+            component: Lebensmittel,
+            name: 'Lebensmittel'
+        },
+        {
+            path: '/app/gastronomie',
+            component: Gastronomie,
+            name: 'Gastronomie'
+        },
+        {
+            path: '/app/handwerk',
+            component: Handwerk,
+            name: 'Handwerk'
+        },
+        {
+            path: '/app/textil',
+            component: Textil,
+            name: 'Textil'
+        },
+        {
+            path: '/app/allerlei',
+            component: Allerlei,
+            name: 'Allerlei'
         },
 
         {
