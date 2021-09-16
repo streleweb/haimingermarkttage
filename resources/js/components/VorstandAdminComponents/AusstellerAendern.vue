@@ -509,7 +509,11 @@
                       <div class="pt-3">
                         <label class="container"
                           >Lebensmittel
-                          <input type="checkbox" name="checkbox" />
+                          <input
+                            type="checkbox"
+                            id="lebensmittel_checkbox"
+                            name="checkbox"
+                          />
                           <span
                             @click="assignToLebensmittel"
                             class="checkmark"
@@ -517,7 +521,11 @@
                         </label>
                         <label class="container"
                           >Gastronomie
-                          <input type="checkbox" name="checkbox" />
+                          <input
+                            type="checkbox"
+                            id="gastronomie_checkbox"
+                            name="checkbox"
+                          />
                           <span
                             @click="assignToGastronomie"
                             class="checkmark"
@@ -528,6 +536,7 @@
                           <input
                             @click="assignToHandwerk"
                             type="checkbox"
+                            id="handwerk_checkbox"
                             name="checkbox"
                           />
                           <span
@@ -540,6 +549,7 @@
                           <input
                             @click="assignToTextil"
                             type="checkbox"
+                            id="textil_checkbox"
                             name="checkbox"
                           />
                           <span
@@ -552,6 +562,7 @@
                           <input
                             @click="assignToAllerlei"
                             type="checkbox"
+                            id="allerlei_checkbox"
                             name="checkbox"
                           />
                           <span
@@ -672,6 +683,7 @@
 <script>
 import repository from "./repository/repository";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 export default {
   data() {
@@ -682,7 +694,9 @@ export default {
       aussteller: [],
       error: null,
       submitvisibility: "hidden",
+      currentProduktReiter: [],
       formdata: {
+        aussteller_id: null,
         aussteller_fullname: null,
         aussteller_beschreibung: null,
         aussteller_zonenfarbe: null,
@@ -703,6 +717,8 @@ export default {
       this.$router.push({ name: "adminLogin" });
     }
     this.loadAussteller();
+    // this.loadProduktReiter();
+    // this.aussteller_produktreiter();
   },
 
   methods: {
@@ -710,9 +726,29 @@ export default {
       this.loading = true;
       let { data } = await repository.getAussteller();
       this.aussteller = data.data;
+      //check the checked fields if aussteller-produktreiter is already set
       this.loading = false;
-      //console.log(this.aussteller);
+      // console.log(this.aussteller);
     },
+
+    // loadProduktReiter() {
+    //   axios.get("/api/aussteller/97").then((response) => {
+    //     //console.log("Debug status:" + response.status);
+    //     if (response.status == 200) {
+    //       console.log(response);
+    //     }
+    //   });
+    // },
+
+    // aussteller_produktreiter: function () {
+    //   this.currentProduktReiter.forEach((element) => {
+    //     //get all inputs with the attribute "id" and of type checkbox
+    //     let allInputs = document.querySelectorAll('input[id][type="checkbox"]');
+    //     console.log(allInputs);
+    //     element.produkt_reiter_name;
+    //   });
+    // },
+
     showSubmitButton() {
       this.submitvisibility = "block";
     },
@@ -797,7 +833,15 @@ export default {
     },
     submitform() {
       let formToJson = JSON.stringify(this.formdata);
-      //console.log(formToJson);
+      console.log(formToJson);
+      //submit id aswell for manytomany laravel function
+
+      this.aussteller.forEach((a) => {
+        if (a.aussteller_fullname == this.formdata.aussteller_fullname) {
+          console.log(a.id);
+          this.formdata.aussteller_id = a.id;
+        }
+      });
       try {
         axios
           .put("/api/aussteller/", this.formdata)

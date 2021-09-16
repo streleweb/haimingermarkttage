@@ -30,7 +30,7 @@ use App\Http\Controllers\ImageController;
 
 Route::get('/aussteller/search/{name}', [AusstellerController::class, 'search']);
 Route::get('/aussteller', [AusstellerController::class, 'index']);
-Route::get('/aussteller/{id}', [AusstellerController::class, 'show']);
+Route::get('/aussteller/{id}', [AusstellerController::class, 'show']); //returns produktreiter of aussteller
 Route::get('/news', [NewsController::class, 'index']);
 Route::get('/fotogalerie', [FotogalerieController::class, 'index']);
 Route::get('/programm', [ProgrammController::class, 'index']);
@@ -51,6 +51,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/aussteller', [AusstellerController::class, 'store']);
     Route::put('/aussteller', [AusstellerController::class, 'update']);
     Route::delete('/aussteller/{id}', [AusstellerController::class, 'destroy']);
+    Route::post('/aussteller/getproduktreiterofaussteller', [AusstellerController::class, 'getProduktReiter']);
 
     //Imageupload
     Route::post('/imageupload', [ImageController::class, 'handle']);

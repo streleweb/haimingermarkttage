@@ -108,6 +108,7 @@ class AusstellerController extends Controller
 
                     return \response('Aussteller erfolgreich gespeichert!', 200)
                     ->header('Content-Type', 'text/plain');
+                    
                   }
 
                   else{ 
@@ -127,10 +128,11 @@ class AusstellerController extends Controller
      * @param  \App\Models\Aussteller  $aussteller
      * @return \Illuminate\Http\Response
      */
-    public function show(Aussteller $aussteller)
+    public function show($id)
     {
-        $aussteller = Aussteller::find($id);
-        return $aussteller;
+        // $aussteller = Aussteller::find($id);
+        $produktReiterDesAusstellers = Aussteller::find($id)->produktreiters()->get();
+        return $produktReiterDesAusstellers;
     }
 
     
@@ -155,6 +157,7 @@ class AusstellerController extends Controller
      */
     public function update(Request $request)
     {   //get request data
+        $requestId = $request->get('aussteller_id');
         $requestFullName = $request->get('aussteller_fullname');
         $requestBeschreibung = $request->get('aussteller_beschreibung');
         $requestBrandingName = $request->get('aussteller_brandingname');
@@ -193,12 +196,13 @@ class AusstellerController extends Controller
         if($request->aussteller_produktreiter){
             $aussteller_produktreiter_array = $request->aussteller_produktreiter;
 
-            $ausstellerPseudo = new Aussteller();
+            
+            $ausstellerrr = Aussteller::find($request->aussteller_id);
+                    // $ausstellerrr->produktreiter()->attach([2,3,4]);
             //$ausstellerPseudo->produktreiters()->sync($aussteller_produktreiter_array);
-            $ausstellerPseudo->id = $aussteller->id;
-
-            $ausstellerPseudo->produktreiters()->detach();
-            $ausstellerPseudo->produktreiters()->attach($aussteller_produktreiter_array);
+            
+            $ausstellerrr->produktreiters()->detach();
+            $ausstellerrr->produktreiters()->sync($aussteller_produktreiter_array);
         }
         
 

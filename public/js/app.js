@@ -4406,6 +4406,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _repository_repository__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./repository/repository */ "./resources/js/components/VorstandAdminComponents/repository/repository.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -5083,6 +5085,18 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -5095,7 +5109,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       aussteller: [],
       error: null,
       submitvisibility: "hidden",
+      currentProduktReiter: [],
       formdata: {
+        aussteller_id: null,
         aussteller_fullname: null,
         aussteller_beschreibung: null,
         aussteller_zonenfarbe: null,
@@ -5118,7 +5134,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       });
     }
 
-    this.loadAussteller();
+    this.loadAussteller(); // this.loadProduktReiter();
+    // this.aussteller_produktreiter();
   },
   methods: {
     loadAussteller: function loadAussteller() {
@@ -5138,8 +5155,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 3:
                 _yield$repository$get = _context.sent;
                 data = _yield$repository$get.data;
-                _this.aussteller = data.data;
-                _this.loading = false; //console.log(this.aussteller);
+                _this.aussteller = data.data; //check the checked fields if aussteller-produktreiter is already set
+
+                _this.loading = false; // console.log(this.aussteller);
 
               case 7:
               case "end":
@@ -5149,6 +5167,22 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee);
       }))();
     },
+    // loadProduktReiter() {
+    //   axios.get("/api/aussteller/97").then((response) => {
+    //     //console.log("Debug status:" + response.status);
+    //     if (response.status == 200) {
+    //       console.log(response);
+    //     }
+    //   });
+    // },
+    // aussteller_produktreiter: function () {
+    //   this.currentProduktReiter.forEach((element) => {
+    //     //get all inputs with the attribute "id" and of type checkbox
+    //     let allInputs = document.querySelectorAll('input[id][type="checkbox"]');
+    //     console.log(allInputs);
+    //     element.produkt_reiter_name;
+    //   });
+    // },
     showSubmitButton: function showSubmitButton() {
       this.submitvisibility = "block";
     },
@@ -5166,7 +5200,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       this.formdata.aussteller_bildurl = null;
       var formData = new FormData();
       formData.set("image", this.image);
-      axios.post("http://localhost:8000/api/imageupload", formData).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_3___default().post("http://localhost:8000/api/imageupload", formData).then(function (response) {
         //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
         _this2.formdata.aussteller_bildurl = response.data.filepath;
         sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
@@ -5225,7 +5259,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context2.prev = 0;
                 _context2.next = 3;
-                return axios.post("http://localhost:8000/api/admin/logout");
+                return axios__WEBPACK_IMPORTED_MODULE_3___default().post("http://localhost:8000/api/admin/logout");
 
               case 3:
                 //LocalStorage LoggedIn-Status löschen
@@ -5252,10 +5286,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }))();
     },
     submitform: function submitform() {
-      var formToJson = JSON.stringify(this.formdata); //console.log(formToJson);
+      var _this4 = this;
+
+      var formToJson = JSON.stringify(this.formdata);
+      console.log(formToJson); //submit id aswell for manytomany laravel function
+
+      this.aussteller.forEach(function (a) {
+        if (a.aussteller_fullname == _this4.formdata.aussteller_fullname) {
+          console.log(a.id);
+          _this4.formdata.aussteller_id = a.id;
+        }
+      });
 
       try {
-        axios.put("/api/aussteller/", this.formdata) //console.log(result.response.data);
+        axios__WEBPACK_IMPORTED_MODULE_3___default().put("/api/aussteller/", this.formdata) //console.log(result.response.data);
         .then(function (response) {
           //console.log(response);
           //alert(response.data);
@@ -39989,6 +40033,7 @@ var render = function() {
                                       _c("input", {
                                         attrs: {
                                           type: "checkbox",
+                                          id: "lebensmittel_checkbox",
                                           name: "checkbox"
                                         }
                                       }),
@@ -40006,6 +40051,7 @@ var render = function() {
                                       _c("input", {
                                         attrs: {
                                           type: "checkbox",
+                                          id: "gastronomie_checkbox",
                                           name: "checkbox"
                                         }
                                       }),
@@ -40029,6 +40075,7 @@ var render = function() {
                                         _c("input", {
                                           attrs: {
                                             type: "checkbox",
+                                            id: "handwerk_checkbox",
                                             name: "checkbox"
                                           },
                                           on: { click: _vm.assignToHandwerk }
@@ -40054,6 +40101,7 @@ var render = function() {
                                         _c("input", {
                                           attrs: {
                                             type: "checkbox",
+                                            id: "textil_checkbox",
                                             name: "checkbox"
                                           },
                                           on: { click: _vm.assignToTextil }
@@ -40079,6 +40127,7 @@ var render = function() {
                                         _c("input", {
                                           attrs: {
                                             type: "checkbox",
+                                            id: "allerlei_checkbox",
                                             name: "checkbox"
                                           },
                                           on: { click: _vm.assignToAllerlei }
