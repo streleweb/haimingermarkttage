@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Model\Produkt;
-use Illuminate\Database\Eloquent\Model\Produktreiter;
+
 
 class Aussteller extends Model
 {
@@ -17,9 +17,9 @@ class Aussteller extends Model
 
     protected $table = "aussteller";
 
-    public function produktreiter()
+    public function produktreiters()
     {
-        return $this->belongsToMany(Produktreiter::class);
+        return $this->belongsToMany(Produktreiter::class, 'aussteller_produktreiter', 'aussteller_id', 'produktreiter_id');
     }
 
     

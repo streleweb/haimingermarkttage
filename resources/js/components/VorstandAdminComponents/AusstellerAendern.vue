@@ -498,6 +498,71 @@
                       </div>
                       <!--COLORBUTTONS END-->
                     </div>
+                    <!-- 16 09 2021 -->
+                    <div class="col-span-6">
+                      <label
+                        for="street_address"
+                        class="block text-sm font-medium text-gray-700"
+                        >Produktreiter</label
+                      >
+                      <!--COLORBUTTONS START-->
+                      <div class="pt-3">
+                        <label class="container"
+                          >Lebensmittel
+                          <input type="checkbox" name="checkbox" />
+                          <span
+                            @click="assignToLebensmittel"
+                            class="checkmark"
+                          ></span>
+                        </label>
+                        <label class="container"
+                          >Gastronomie
+                          <input type="checkbox" name="checkbox" />
+                          <span
+                            @click="assignToGastronomie"
+                            class="checkmark"
+                          ></span>
+                        </label>
+                        <label class="container" @click="assignToHandwerk"
+                          >Handwerk
+                          <input
+                            @click="assignToHandwerk"
+                            type="checkbox"
+                            name="checkbox"
+                          />
+                          <span
+                            @click="assignToHandwerk"
+                            class="checkmark"
+                          ></span>
+                        </label>
+                        <label class="container" @click="assignToTextil"
+                          >Textil
+                          <input
+                            @click="assignToTextil"
+                            type="checkbox"
+                            name="checkbox"
+                          />
+                          <span
+                            @click="assignToTextil"
+                            class="checkmark"
+                          ></span>
+                        </label>
+                        <label class="container" @click="assignToAllerlei"
+                          >Allerlei
+                          <input
+                            @click="assignToAllerlei"
+                            type="checkbox"
+                            name="checkbox"
+                          />
+                          <span
+                            @click="assignToAllerlei"
+                            class="checkmark"
+                          ></span>
+                        </label>
+                      </div>
+                      <!--COLORBUTTONS END-->
+                    </div>
+                    <!-- 16 09 2021 END -->
                     <!--IMAGE FILE UPLOAD START-->
                     <div class="py-2 bg-green-900 text-white mb-1 px-2">
                       Ausstellerfoto Upload
@@ -625,6 +690,7 @@ export default {
         aussteller_email: null,
         aussteller_websiteurl: null,
         aussteller_bildurl: null,
+        aussteller_produktreiter: [],
       }, //Objekt zum Speichern der Model-Daten von oben
     };
   },
@@ -645,7 +711,7 @@ export default {
       let { data } = await repository.getAussteller();
       this.aussteller = data.data;
       this.loading = false;
-      console.log(this.aussteller);
+      //console.log(this.aussteller);
     },
     showSubmitButton() {
       this.submitvisibility = "block";
@@ -694,6 +760,23 @@ export default {
     },
     assignColorYellow() {
       this.formdata.aussteller_zonenfarbe = "bg-yellow-300";
+    },
+
+    //assign to specific produktreiter
+    assignToLebensmittel() {
+      this.formdata.aussteller_produktreiter.push(1);
+    },
+    assignToGastronomie() {
+      this.formdata.aussteller_produktreiter.push(2);
+    },
+    assignToHandwerk() {
+      this.formdata.aussteller_produktreiter.push(3);
+    },
+    assignToTextil() {
+      this.formdata.aussteller_produktreiter.push(4);
+    },
+    assignToAllerlei() {
+      this.formdata.aussteller_produktreiter.push(5);
     },
 
     loggedIn() {

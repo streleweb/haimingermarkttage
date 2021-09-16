@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Model\Aussteller;
 
 class Produktreiter extends Model
 {
@@ -14,8 +13,8 @@ class Produktreiter extends Model
 
     protected $fillable = ['produkt_reiter_name'];
 
-    public function aussteller()
+    public function ausstellers()
     {
-        return $this->belongsToMany(Aussteller::class);
+        return $this->belongsToMany(Aussteller::class, 'aussteller_produktreiter', 'produktreiter_id', 'aussteller_id');
     }
 }

@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Http\Resources\AusstellerResource;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Database\Eloquent\Model as Eloquent;
+
 
 class AusstellerController extends Controller
 {
@@ -18,6 +20,18 @@ class AusstellerController extends Controller
     public function index()
     {
         return AusstellerResource::collection(Aussteller::all());
+    }
+
+    /**
+     * ProduktReiter von einem spezifischen Aussteller zurückgeben
+     */
+    public function getProduktReiter($request){
+        if (Aussteller::where('aussteller_fullname', $request->get('aussteller_fullname'))->exists()){
+            $aussteller = Aussteller::where('aussteller_fullname', $requestFullName);
+            $produktReiterDesAusstellers = $aussteller->produktreiter; //returns laravel collection
+
+            return $produktReiterDesAusstellers;
+        }
     }
 
     /**
@@ -74,11 +88,23 @@ class AusstellerController extends Controller
 
                   if($aussteller->save()){
                       //Wenn Aussteller erfolgreich gespeichert wurde, speichere auch die zugehörigen Produktreiter in die DB
-                    $savedAussteller = Aussteller::find(1);
+                    
+                    if($request->aussteller_produktreiter){
+                        $aussteller_produktreiter_array = $request->aussteller_produktreiter;
 
-                    foreach ($aussteller->produktreiter as $pr){
-                        //hier weiter
+                        $aussteller->produktreiters()->sync($aussteller_produktreiter_array);
                     }
+                    
+                    // $ausstellerrr = Aussteller::first();
+                    // $ausstellerrr->produktreiter()->attach([2,3,4]);
+                    
+                    // foreach ($aussteller_produktreiter_array as $pr) {
+                    //     $produktreiterr = Produktreiter::find($pr);
+                    //     $produktreiterr->aussteller()->([1]);
+                    // }
+                    
+                    // //jeweilige ID durch Pivot-Table zuordnen
+                    //  $savedAussteller->produktreiter()->attach($aussteller_produktreiter_array);
 
                     return \response('Aussteller erfolgreich gespeichert!', 200)
                     ->header('Content-Type', 'text/plain');
@@ -162,6 +188,17 @@ class AusstellerController extends Controller
         }
         if($requestBildUrl != null && $requestBildUrl != ""){
             $aussteller->update(['aussteller_bildurl' => $requestBildUrl]);
+        }
+        //16 09 2021
+        if($request->aussteller_produktreiter){
+            $aussteller_produktreiter_array = $request->aussteller_produktreiter;
+
+            $ausstellerPseudo = new Aussteller();
+            //$ausstellerPseudo->produktreiters()->sync($aussteller_produktreiter_array);
+            $ausstellerPseudo->id = $aussteller->id;
+
+            $ausstellerPseudo->produktreiters()->detach();
+            $ausstellerPseudo->produktreiters()->attach($aussteller_produktreiter_array);
         }
         
 
