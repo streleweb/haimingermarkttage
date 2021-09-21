@@ -31,6 +31,7 @@ use App\Http\Controllers\ImageController;
 Route::get('/aussteller/search/{name}', [AusstellerController::class, 'search']);
 Route::get('/aussteller', [AusstellerController::class, 'index']);
 Route::get('/aussteller/{id}', [AusstellerController::class, 'show']); //returns produktreiter of aussteller
+Route::get('/getAllAusstellerOfSpecificProduktreiter/{produktReiterName}', [AusstellerController::class, 'getAllAusstellerOfSpecificProduktreiter']); //returns produktreiter of aussteller
 Route::get('/news', [NewsController::class, 'index']);
 Route::get('/fotogalerie', [FotogalerieController::class, 'index']);
 Route::get('/programm', [ProgrammController::class, 'index']);

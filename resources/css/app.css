@@ -100,7 +100,7 @@ der tailwind components integriert. Diese Styles werden durch die
     .kontaktcontentcontainer{
         @apply h-full flex flex-col w-full justify-evenly;
 
-        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url("/images/background/mailbox-big.jpg");
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url("/images/background/mailbox-big.webp");
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: cover;
@@ -133,7 +133,7 @@ der tailwind components integriert. Diese Styles werden durch die
     .pagenotfoundcontainer{
         @apply h-full flex flex-col w-full justify-between;
 
-        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url("/images/background/404.jpg");
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url("/images/background/404.webp");
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: cover;

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Aussteller;
+use App\Models\Produktreiter;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Http\Resources\AusstellerResource;
@@ -133,6 +134,45 @@ class AusstellerController extends Controller
         // $aussteller = Aussteller::find($id);
         $produktReiterDesAusstellers = Aussteller::find($id)->produktreiters()->get();
         return $produktReiterDesAusstellers;
+    }
+
+    public function getAllAusstellerOfSpecificProduktreiter($produktReiterName){
+        if($produktReiterName == "Lebensmittel"){
+            $allLebensmittelAussteller = Produktreiter::find(1)->ausstellers()->get();
+            return AusstellerResource::collection($allLebensmittelAussteller);
+        }
+        if($produktReiterName == "Gastronomie"){
+            $allLebensmittelAussteller = Produktreiter::find(2)->ausstellers()->get();
+            return AusstellerResource::collection($allLebensmittelAussteller);
+        }
+        if($produktReiterName == "Handwerk"){
+            $allLebensmittelAussteller = Produktreiter::find(3)->ausstellers()->get();
+            return AusstellerResource::collection($allLebensmittelAussteller);
+        }
+        if($produktReiterName == "Textil"){
+            $allLebensmittelAussteller = Produktreiter::find(4)->ausstellers()->get();
+            return AusstellerResource::collection($allLebensmittelAussteller);
+        }
+        if($produktReiterName == "Allerlei"){
+            $allLebensmittelAussteller = Produktreiter::find(5)->ausstellers()->get();
+            return AusstellerResource::collection($allLebensmittelAussteller);
+        }
+    }
+
+    public function getLebensmittelAussteller(){
+        
+    }
+    public function getGastronomieAussteller(){
+
+    }
+    public function getHandwerkAussteller(){
+
+    }
+    public function getTextilAussteller(){
+
+    }
+    public function getAllerleiAussteller(){
+
     }
 
     

@@ -41,7 +41,7 @@
           src="/images/icons/svgs/locationpointer.svg"
           alt="Google Maps Navigation"
       /></a>
-      <img class="mt-5" src="/images/anreise/img_lageplan.jpg" alt="" />
+      <img class="mt-5" src="/images/anreise/img_lageplan.webp" alt="" />
     </div>
 
     <div class="buttonContainer flex flex-col justify-end pb-4 mt-10">

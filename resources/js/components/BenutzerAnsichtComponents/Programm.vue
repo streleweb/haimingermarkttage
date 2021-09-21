@@ -204,7 +204,7 @@ article img {
   /*background-size: cover;*/
 
   background: linear-gradient(rgba(90, 65, 42, 0.342), rgba(65, 65, 65, 0.3)),
-    url("/images/background/hb1.jpg");
+    url("/images/background/hb1.webp");
   background-repeat: no-repeat;
   /*background-position: 50% 50%;*/
   width: 100%;

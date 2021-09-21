@@ -47,19 +47,24 @@
             "
           />
           <div class="text text-center lg:text-lg">
-            <h3 class="font-bold text-gray-800 mb-1">
+            <h3
+              v-if="ausstellerBrandingNameNotEmpty(index)"
+              class="font-bold text-gray-800 mb-1"
+            >
               {{ jeweiligerAussteller.aussteller_brandingname }}
             </h3>
-            <h2
-              v-if="ausstellerBrandingNameNotEmpty(index)"
-              class="font-semibold text-gray-700 mb-2"
-            >
+            <h2 class="font-semibold text-gray-700 mb-2">
               {{ jeweiligerAussteller.aussteller_fullname }}
             </h2>
             <p class="text-sm lg:text-base mb-2">
               {{ jeweiligerAussteller.aussteller_beschreibung }}
             </p>
             <div
+              v-if="
+                webUrlNotEmpty(index) ||
+                ausstellerEmailNotEmpty(index) ||
+                zonenFarbeNotEmpty(index)
+              "
               class="
                 bg-gray-800
                 relative
@@ -90,10 +95,13 @@
                       alt="website"
                   /></a>
                 </li>
-
-                <li v-if="zonenFarbeNotEmpty(index)" class="h-5 w-32">
-                  <Farbzone :zonen-farbe="zonenFarbe(index)"></Farbzone>
-                </li>
+                <a
+                  href="https://www.google.com/maps/d/embed?mid=1Kxrd75PaiWPf5CIYb3pSrpFRScbUORwo"
+                >
+                  <li v-if="zonenFarbeNotEmpty(index)" class="h-5 w-32">
+                    <Farbzone :zonen-farbe="zonenFarbe(index)"></Farbzone>
+                  </li>
+                </a>
               </ul>
             </div>
           </div>
@@ -275,7 +283,7 @@ article img {
   background-size: cover;
 
   background: linear-gradient(rgba(90, 65, 42, 0.342), rgba(65, 65, 65, 0.3)),
-    url("/images/background/hb1.jpg");
+    url("/images/background/hb1.webp");
   background-repeat: no-repeat;
   /*background-position: 50% 50%;*/
   width: 100%;
