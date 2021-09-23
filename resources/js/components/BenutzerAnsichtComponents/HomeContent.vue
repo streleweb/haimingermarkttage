@@ -22,7 +22,7 @@
 
     <div class="buttonContainer flex flex-col flex-shrink flex-grow">
       <!--Buttons mit Custom Props-->
-      <router-link to="/app/produktreiter">
+      <router-link to="/produktreiter">
         <Button
           svg-source="/../../images/icons/svgs/apple1.svg"
           button-inhalt="Produkte"
@@ -31,7 +31,7 @@
         ></Button>
       </router-link>
 
-      <router-link to="/app/aussteller">
+      <router-link to="/aussteller">
         <Button
           svg-source="/../../images/icons/svgs/aussteller.svg"
           button-inhalt="Aussteller"
@@ -43,7 +43,7 @@
       <!-- <a
         href="https://www.google.com/maps/d/u/0/edit?mid=13qNnDIQECR3-pZ3-vK39FNUhoY7M-qD1&usp=sharing"
       >-->
-      <router-link to="/app/karte"
+      <router-link to="/karte"
         ><Button
           svg-source="/../../images/icons/svgs/map.svg"
           button-inhalt="Karte"
@@ -51,7 +51,7 @@
           on-hover="hover:bg-yellow-300"
         ></Button
       ></router-link>
-      <router-link to="/app/anreise">
+      <router-link to="/anreise">
         <Button
           svg-source="/../../images/icons/svgs/locationpointer.svg"
           button-inhalt="Anreise"

@@ -5,52 +5,52 @@
       class="mobiledropdown mobiledropdowntextconfig"
       v-if="open"
     >
-      <router-link class="bar-element" to="/app/produkte" exact
+      <router-link class="bar-element" to="/produkte" exact
         ><span class="w-full text-center" @click="emitGlobalClickEvent()">
           Produkte</span
         >
       </router-link>
-      <router-link class="bar-element" to="/app/aussteller" exact
+      <router-link class="bar-element" to="/aussteller" exact
         ><span class="w-full text-center" @click="emitGlobalClickEvent()">
           Aussteller</span
         >
       </router-link>
-      <router-link class="bar-element" to="/app/news" exact
+      <router-link class="bar-element" to="/news" exact
         ><span class="w-full text-center" @click="emitGlobalClickEvent()">
           News</span
         >
       </router-link>
-      <router-link class="bar-element" to="/app/karte" exact
+      <router-link class="bar-element" to="/karte" exact
         ><span class="w-full text-center" @click="emitGlobalClickEvent()">
           Karte</span
         >
       </router-link>
-      <router-link class="bar-element" to="/app/anreise" exact
+      <router-link class="bar-element" to="/anreise" exact
         ><span class="w-full text-center" @click="emitGlobalClickEvent()">
           Anreise</span
         >
       </router-link>
-      <router-link class="bar-element" to="/app/philosophie" exact
+      <router-link class="bar-element" to="/philosophie" exact
         ><span class="w-full text-center" @click="emitGlobalClickEvent()">
           Philosophie</span
         >
       </router-link>
-      <router-link class="bar-element" to="/app/programm" exact
+      <router-link class="bar-element" to="/programm" exact
         ><span class="w-full text-center" @click="emitGlobalClickEvent()">
           Programm</span
         >
       </router-link>
-      <router-link class="bar-element" to="/app/fotogalerie" exact
+      <router-link class="bar-element" to="/fotogalerie" exact
         ><span class="w-full text-center" @click="emitGlobalClickEvent()">
           Fotogalerie</span
         >
       </router-link>
-      <router-link class="bar-element" to="/app/kontakt" exact
+      <router-link class="bar-element" to="/kontakt" exact
         ><span class="w-full text-center" @click="emitGlobalClickEvent()">
           Kontakt</span
         >
       </router-link>
-      <router-link class="bar-element" to="/app/sponsoren" exact
+      <router-link class="bar-element" to="/sponsoren" exact
         ><span class="w-full text-center" @click="emitGlobalClickEvent()">
           Sponsoren</span
         >

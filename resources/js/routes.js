@@ -39,148 +39,149 @@ export default {
             component: PageNotFound
         },
         {
-            path: '/app', //homepage der app= www.haiminger-markttage.at/app, normale HP wird www.haiminger-markttage.at bleiben
-            component: HomeContent
+            path: '/', //homepage der app= www.haiminger-markttage.at, normale HP wird www.haiminger-markttage.at bleiben
+            component: HomeContent,
+            name: 'Home'
         },
 
         {
-            path: '/app/produktreiter',
+            path: '/produktreiter',
             component: ProduktReiter
         },
 
         {
-            path: '/app/produkte',
+            path: '/produkte',
             component: Produkte
         },
         {
-            path: '/app/lebensmittel',
+            path: '/lebensmittel',
             component: Lebensmittel,
             name: 'Lebensmittel'
         },
         {
-            path: '/app/gastronomie',
+            path: '/gastronomie',
             component: Gastronomie,
             name: 'Gastronomie'
         },
         {
-            path: '/app/handwerk',
+            path: '/handwerk',
             component: Handwerk,
             name: 'Handwerk'
         },
         {
-            path: '/app/textil',
+            path: '/textil',
             component: Textil,
             name: 'Textil'
         },
         {
-            path: '/app/allerlei',
+            path: '/allerlei',
             component: Allerlei,
             name: 'Allerlei'
         },
 
         {
-            path: '/app/programm',
+            path: '/programm',
             component: Programm
         },
 
         {
-            path: '/app/admin/dashboard/programmanlegen',
+            path: '/admin/dashboard/programmanlegen',
             component: ProgrammAnlegen
         },
 
         {
-            path: '/app/philosophie',
+            path: '/philosophie',
             component: Philosophie
         },
 
         {
-            path: '/app/aussteller',
+            path: '/aussteller',
             component: Aussteller
         },
 
         {
-            path: '/app/fotogalerie',
+            path: '/fotogalerie',
             name: 'Fotogalerie',
             component: Fotogalerie
         },
 
         {
-            path: '/app/news',
+            path: '/news',
             component: News
         },
 
         {
-            path: '/app/karte',
+            path: '/karte',
             component: Karte
         },
 
         {
-            path: '/app/anreise',
+            path: '/anreise',
             component: Anreise
         },
 
         {
-            path: '/app/kontakt',
+            path: '/kontakt',
             component: Kontakt
         },
 
         {
-            path: '/app/sponsoren',
+            path: '/sponsoren',
             component: Sponsoren
         },
 
 
         {
-            path: '/app/datenschutz',
+            path: '/datenschutz',
             component: Datenschutz
         },
 
         {
-            path: '/app/impressum',
+            path: '/impressum',
             component: Impressum
         },
         {
-            path: '/app/admin/login',
+            path: '/admin/login',
             component: Login,
             name: 'adminLogin',
         },
 
         {
-            path: '/app/admin/dashboard',
+            path: '/admin/dashboard',
             component: Dashboard,
             name: 'admindashboard',
         },
 
         {
-            path: '/app/admin/dashboard/ausstelleranlegen',
+            path: '/admin/dashboard/ausstelleranlegen',
             component: Ausstelleranlegen
         },
 
         {
-            path: '/app/admin/dashboard/ausstelleraendern',
+            path: '/admin/dashboard/ausstelleraendern',
             name: 'AusstellerAendern',
             component: AusstellerAendern,
         },
 
         {
-            path: '/app/admin/dashboard/news',
+            path: '/admin/dashboard/news',
             component: NewsAnlegen,
         },
 
         {
-            path: '/app/admin/dashboard/ausstelleruebersicht',
+            path: '/admin/dashboard/ausstelleruebersicht',
             component: AusstellerUebersicht,
             name: 'ausstelleruebersicht',
         },
 
         {
-            path: '/app/admin/register',
+            path: '/admin/register',
             component: Register
         },
 
 
         {
-            path: '/app/admin/dashboard/editfotogalerie',
+            path: '/admin/dashboard/editfotogalerie',
             name: AddPhotos,
             component: AddPhotos
         },

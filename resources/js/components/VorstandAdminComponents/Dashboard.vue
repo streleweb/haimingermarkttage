@@ -59,7 +59,7 @@
               <div class="hidden sm:block sm:ml-6">
                 <div class="flex space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  <router-link to="/app/admin/dashboard"
+                  <router-link to="/admin/dashboard"
                     ><span class="text-gray-500 text-lg"
                       >Dashboard</span
                     ></router-link
@@ -76,7 +76,7 @@
                       font-medium
                     "
                   >
-                    <router-link to="/app/admin/dashboard/ausstelleruebersicht"
+                    <router-link to="/admin/dashboard/ausstelleruebersicht"
                       >Aussteller
                     </router-link>
                   </div>
@@ -93,9 +93,7 @@
                       font-medium
                     "
                   >
-                    <router-link to="/app/admin/dashboard/news"
-                      >News</router-link
-                    >
+                    <router-link to="/admin/dashboard/news">News</router-link>
                   </div>
 
                   <div
@@ -110,7 +108,7 @@
                       font-medium
                     "
                   >
-                    <router-link to="/app/admin/dashboard/programmanlegen">
+                    <router-link to="/admin/dashboard/programmanlegen">
                       Programm</router-link
                     >
                   </div>
@@ -127,7 +125,7 @@
                       font-medium
                     "
                   >
-                    <router-link to="/app/admin/dashboard/editfotogalerie"
+                    <router-link to="/admin/dashboard/editfotogalerie"
                       >Fotogalerie</router-link
                     >
                   </div>
@@ -205,7 +203,7 @@
                 font-medium
               "
             >
-              <router-link to="/app/admin/dashboard/ausstelleruebersicht"
+              <router-link to="/admin/dashboard/ausstelleruebersicht"
                 >Aussteller</router-link
               >
             </div>
@@ -223,7 +221,7 @@
                 font-medium
               "
             >
-              <router-link to="/app/admin/dashboard/news">News</router-link>
+              <router-link to="/admin/dashboard/news">News</router-link>
             </div>
 
             <div
@@ -239,7 +237,7 @@
                 font-medium
               "
             >
-              <router-link to="/app/admin/dashboard/programmanlegen">
+              <router-link to="/admin/dashboard/programmanlegen">
                 Programm</router-link
               >
             </div>

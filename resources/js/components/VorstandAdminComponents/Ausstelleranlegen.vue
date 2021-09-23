@@ -59,7 +59,7 @@
               <div class="hidden sm:block sm:ml-6">
                 <div class="flex space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  <router-link to="/app/admin/dashboard"
+                  <router-link to="/admin/dashboard"
                     ><span class="text-gray-500 text-lg"
                       >Dashboard</span
                     ></router-link
@@ -76,7 +76,7 @@
                       font-medium
                     "
                   >
-                    <router-link to="/app/admin/dashboard/ausstelleruebersicht"
+                    <router-link to="/admin/dashboard/ausstelleruebersicht"
                       >Aussteller
                     </router-link>
                   </div>
@@ -93,9 +93,7 @@
                       font-medium
                     "
                   >
-                    <router-link to="/app/admin/dashboard/news"
-                      >News</router-link
-                    >
+                    <router-link to="/admin/dashboard/news">News</router-link>
                   </div>
 
                   <a
@@ -125,7 +123,7 @@
                       font-medium
                     "
                   >
-                    <router-link to="/app/admin/dashboard/editfotogalerie"
+                    <router-link to="/admin/dashboard/editfotogalerie"
                       >Fotogalerie</router-link
                     >
                   </div>
@@ -203,7 +201,7 @@
                 text-base
                 font-medium
               "
-              ><router-link to="/app/admin/dashboard/ausstelleruebersicht"
+              ><router-link to="/admin/dashboard/ausstelleruebersicht"
                 >Aussteller</router-link
               >
             </a>
@@ -718,7 +716,7 @@ export default {
       formData.set("image", this.image);
 
       axios
-        .post("http://app.haiminger-markttage/api/imageupload", formData)
+        .post("http:/.haiminger-markttage/api/imageupload", formData)
         .then((response) => {
           //Server-Response-URL des Images zur aussteller_bildurl innerhalb der formdata adden
           this.formdata.aussteller_bildurl = response.data.filepath;

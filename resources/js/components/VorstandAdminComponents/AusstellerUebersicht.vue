@@ -61,7 +61,7 @@
               <div class="hidden sm:block sm:ml-6">
                 <div class="flex space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  <router-link to="/app/admin/dashboard"
+                  <router-link to="/admin/dashboard"
                     ><span class="text-gray-500 text-lg"
                       >Dashboard</span
                     ></router-link
@@ -78,7 +78,7 @@
                     "
                     aria-current="page"
                   >
-                    <router-link to="/app/admin/dashboard/ausstelleruebersicht"
+                    <router-link to="/admin/dashboard/ausstelleruebersicht"
                       >Aussteller
                     </router-link>
                   </div>
@@ -95,9 +95,7 @@
                       font-medium
                     "
                   >
-                    <router-link to="/app/admin/dashboard/news"
-                      >News</router-link
-                    >
+                    <router-link to="/admin/dashboard/news">News</router-link>
                   </div>
 
                   <a
@@ -112,7 +110,7 @@
                       text-sm
                       font-medium
                     "
-                    ><router-link to="/app/admin/dashboard/programmanlegen">
+                    ><router-link to="/admin/dashboard/programmanlegen">
                       Programm</router-link
                     ></a
                   >
@@ -129,7 +127,7 @@
                       font-medium
                     "
                   >
-                    <router-link to="/app/admin/dashboard/editfotogalerie"
+                    <router-link to="/admin/dashboard/editfotogalerie"
                       >Fotogalerie</router-link
                     >
                   </div>
@@ -191,7 +189,7 @@
                 text-base
                 font-medium
               "
-              ><router-link to="/app/admin/dashboard">Dashboard</router-link></a
+              ><router-link to="/admin/dashboard">Dashboard</router-link></a
             >
             <a
               href="#"
@@ -223,7 +221,7 @@
                 font-medium
               "
             >
-              <router-link to="/app/admin/dashboard/news">News</router-link>
+              <router-link to="/admin/dashboard/news">News</router-link>
             </div>
 
             <a
@@ -239,7 +237,7 @@
                 text-base
                 font-medium
               "
-              ><router-link to="/app/admin/dashboard/programmanlegen">
+              ><router-link to="/admin/dashboard/programmanlegen">
                 Programm</router-link
               ></a
             >
@@ -269,13 +267,13 @@
               w-full
             "
           >
-            <router-link to="/app/admin/dashboard/ausstelleraendern"
+            <router-link to="/admin/dashboard/ausstelleraendern"
               ><button class="btn btn-blue">
                 Aussteller ändern
               </button></router-link
             >
             <!--Neuen Aussteller hinzufügen Button-->
-            <router-link to="/app/admin/dashboard/ausstelleranlegen"
+            <router-link to="/admin/dashboard/ausstelleranlegen"
               ><button class="btn btn-green">
                 Neuen Aussteller hinzufügen
               </button></router-link

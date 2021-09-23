@@ -6,34 +6,31 @@
         id="#LOGO UND LI CONTAINER"
         class="flex items-center flex-shrink space-x-5 text-white mr-6"
       >
-        <router-link class="items-center inline-flex navbg" to="/app"
+        <router-link class="items-center inline-flex navbg" to=""
           ><img
             src="/../../images/icons/pngs/7272transparent.png"
             class="resizeLogo"
             alt="Logo"
           /><span class="logotextstyle">Haiminger Markttage</span></router-link
-        ><!-- Nicht vergessen anstatt to /app noch to haiminger-markttage.at bzw. / -->
+        ><!-- Nicht vergessen anstatt to  noch to haiminger-markttage.at bzw. / -->
 
         <router-link
-          to="/app/philosophie"
+          to="/philosophie"
           exact
           class="hidden philosophiebp:inline-flex navbg"
           >Philosophie</router-link
         >
-        <router-link
-          to="/app/news"
-          exact
-          class="hidden newnewsbp:inline-flex navbg"
+        <router-link to="/news" exact class="hidden newnewsbp:inline-flex navbg"
           >News</router-link
         >
         <router-link
-          to="/app/programm"
+          to="/programm"
           exact
           class="hidden newsbp:inline-flex navbg"
           >Programm</router-link
         >
         <router-link
-          to="/app/fotogalerie"
+          to="/fotogalerie"
           exact
           class="hidden fotogaleriebp:inline-flex navbg"
           >Fotogalerie</router-link

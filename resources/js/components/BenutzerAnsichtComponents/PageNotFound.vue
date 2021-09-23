@@ -15,14 +15,14 @@
     <!-- end willkommen -->
 
     <!--Buttons mit Custom Props-->
-    <router-link to="/app">
+    <a href="http://app.haiminger-markttage.at">
       <Button
         svg-source="/../../images/icons/svgs/home.svg"
         button-inhalt="Home"
         button-color="bg-green-400"
         on-hover="hover:bg-white"
       ></Button>
-    </router-link>
+    </a>
   </div>
 </template>
 
