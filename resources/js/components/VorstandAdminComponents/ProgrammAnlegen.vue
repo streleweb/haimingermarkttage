@@ -512,25 +512,21 @@ export default {
       const formData = new FormData();
       formData.set("image", this.image);
 
-      axios
-        .post("http://localhost:8000/api/imageupload", formData)
-        .then((response) => {
-          //Server-Responseurl des Images zur bildurl innerhalb der formdata adden
-          this.formdata.programm_bild_url = response.data.filepath;
-          Swal.fire({
-            title: "Foto gespeichert!",
-            heightAuto: false,
-            confirmButtonText: "ok",
-            confirmButtonColor: "#3cb371",
-          });
+      axios.post("/api/imageupload", formData).then((response) => {
+        //Server-Responseurl des Images zur bildurl innerhalb der formdata adden
+        this.formdata.programm_bild_url = response.data.filepath;
+        Swal.fire({
+          title: "Foto gespeichert!",
+          heightAuto: false,
+          confirmButtonText: "ok",
+          confirmButtonColor: "#3cb371",
         });
+      });
     },
 
     deleteProgramm(index) {
       axios
-        .delete(
-          "http://localhost:8000/api/programm/" + this.programmArray[index].id
-        )
+        .delete("/api/programm/" + this.programmArray[index].id)
         .then((response) => {
           console.log(response);
           //laravel response zu component object hinzufügen zur späteren Ausgabe
@@ -551,7 +547,7 @@ export default {
     },
     async handleLogout() {
       try {
-        await axios.post("http://localhost:8000/api/admin/logout");
+        await axios.post("/api/admin/logout");
         //LocalStorage LoggedIn-Status löschen
         localStorage.removeItem("isLoggedIn");
         localStorage;

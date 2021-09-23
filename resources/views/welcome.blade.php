@@ -28,7 +28,16 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/images/icons/pngs/7272transparent.png">
 
-    <script type="text/javascript">
+    <script>
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for(let registration of registrations) {
+                registration.unregister()
+            } 
+        })
+    </script>
+
+
+    {{-- <script type="text/javascript">
         // Initialize the service worker
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/serviceworker.js', {
@@ -41,12 +50,12 @@
             console.log('Laravel PWA: ServiceWorker registration failed: ', err);
         });
     }
-    </script>
+    </script> DIES DANN WIEDER AKTIVIEREN--}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
     <!-- possibly change asset back to mix, don´t know yet -->
 
     <title>{{env('APP_NAME')}}</title>
-    @laravelPWA
+    {{-- @laravelPWA    DIES DANN WIEDER AKTIVIEREN--}}
 </head>
 
 <body>

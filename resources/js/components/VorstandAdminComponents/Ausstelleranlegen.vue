@@ -718,7 +718,7 @@ export default {
       formData.set("image", this.image);
 
       axios
-        .post("http://localhost:8000/api/imageupload", formData)
+        .post("http://app.haiminger-markttage/api/imageupload", formData)
         .then((response) => {
           //Server-Response-URL des Images zur aussteller_bildurl innerhalb der formdata adden
           this.formdata.aussteller_bildurl = response.data.filepath;
@@ -774,7 +774,7 @@ export default {
     },
     async handleLogout() {
       try {
-        await axios.post("http://localhost:8000/api/admin/logout");
+        await axios.post("/api/admin/logout");
         //LocalStorage LoggedIn-Status löschen
         localStorage.removeItem("isLoggedIn");
         localStorage;

@@ -282,37 +282,35 @@ export default {
       this.loading = true;
       this.error = null;
       try {
-        await axios
-          .get("/http://localhost/sanctum/csrf-cookie")
-          .then((response) => {
-            axios
-              .post("http://localhost:8000/api/admin/register", this.user)
-              .then((response) => {
-                alert(
-                  "Registrierung erfolgreich, neuer Admin-User " +
-                    response.data.user.name +
-                    " wurde erfolgreich in die Datenbank gespeichert!"
-                );
-                this.einloggenErfolgreich = true;
-                this.$router.push({ name: "adminLogin" });
-                //console.log("axiospost:" + response);
-              })
-              .catch((err) => {
-                if (err.response) {
-                  //Wenn Client error response bekommen hat (5xx, 4xx)
-                  this.error =
-                    "Registrierung nicht erfolgreich.. Überprüfen Sie bitte Ihre Registrierungs-Daten";
-                  console.log(response);
-                } else if (err.request) {
-                  //wenn Client keine Response bekommt, oder der Request nicht gesendet wurde
-                  this.error =
-                    "Konnte keine Server-Response erhalten, bitte überprüfen Sie ihre Internet-Connection";
-                } else {
-                  this.error =
-                    "Datengeingabe korrekt, es ist ein anderer Fehler aufgetreten.";
-                }
-              });
-          });
+        await axios.get("/sanctum/csrf-cookie").then((response) => {
+          axios
+            .post("/api/admin/register", this.user)
+            .then((response) => {
+              alert(
+                "Registrierung erfolgreich, neuer Admin-User " +
+                  response.data.user.name +
+                  " wurde erfolgreich in die Datenbank gespeichert!"
+              );
+              this.einloggenErfolgreich = true;
+              this.$router.push({ name: "adminLogin" });
+              //console.log("axiospost:" + response);
+            })
+            .catch((err) => {
+              if (err.response) {
+                //Wenn Client error response bekommen hat (5xx, 4xx)
+                this.error =
+                  "Registrierung nicht erfolgreich.. Überprüfen Sie bitte Ihre Registrierungs-Daten";
+                console.log(response);
+              } else if (err.request) {
+                //wenn Client keine Response bekommt, oder der Request nicht gesendet wurde
+                this.error =
+                  "Konnte keine Server-Response erhalten, bitte überprüfen Sie ihre Internet-Connection";
+              } else {
+                this.error =
+                  "Datengeingabe korrekt, es ist ein anderer Fehler aufgetreten.";
+              }
+            });
+        });
       } catch (error) {
         console.log("Try: " + error);
       } finally {

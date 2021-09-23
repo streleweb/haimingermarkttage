@@ -509,34 +509,30 @@ export default {
       const formData = new FormData();
       formData.set("image", this.image);
 
-      axios
-        .post("http://localhost:8000/api/imageupload", formData)
-        .then((response) => {
-          //Server-Responseurl des Images zur bildurl innerhalb der formdata adden
-          this.formdata.news_bild_url = response.data.filepath;
-          Swal.fire({
-            title: "Foto gespeichert!",
-            heightAuto: false,
-            confirmButtonText: "ok",
-            confirmButtonColor: "#3cb371",
-          });
+      axios.post("/api/imageupload", formData).then((response) => {
+        //Server-Responseurl des Images zur bildurl innerhalb der formdata adden
+        this.formdata.news_bild_url = response.data.filepath;
+        Swal.fire({
+          title: "Foto gespeichert!",
+          heightAuto: false,
+          confirmButtonText: "ok",
+          confirmButtonColor: "#3cb371",
         });
+      });
     },
 
     deleteNews(index) {
-      axios
-        .delete("http://localhost:8000/api/news/" + this.news[index].id)
-        .then((response) => {
-          console.log(response);
-          //laravel response zu component object hinzufügen zur späteren Ausgabe
-          this.laravelResponseData = response.data;
-          Swal.fire({
-            title: "Erfolgreich gelöscht!",
-            heightAuto: false,
-            showConfirmButton: false,
-          });
-          location.reload();
+      axios.delete("/api/news/" + this.news[index].id).then((response) => {
+        console.log(response);
+        //laravel response zu component object hinzufügen zur späteren Ausgabe
+        this.laravelResponseData = response.data;
+        Swal.fire({
+          title: "Erfolgreich gelöscht!",
+          heightAuto: false,
+          showConfirmButton: false,
         });
+        location.reload();
+      });
     },
 
     loggedIn() {
@@ -546,7 +542,7 @@ export default {
     },
     async handleLogout() {
       try {
-        await axios.post("http://localhost:8000/api/admin/logout");
+        await axios.post("/api/admin/logout");
         //LocalStorage LoggedIn-Status löschen
         localStorage.removeItem("isLoggedIn");
         localStorage;

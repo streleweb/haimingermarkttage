@@ -206,10 +206,10 @@ export default {
           .create({
             withCredentials: true, //siehe CORS-config Laravel
           })
-          .get("http://localhost:8000/api/sanctum/csrf-cookie")
+          .get("/api/sanctum/csrf-cookie")
           .then((response) => {
             axios
-              .post("http://localhost:8000/api/admin/login", this.user)
+              .post("/api/admin/login", this.user)
               .then((response) => {
                 //debug
                 //console.log(response.data.token);

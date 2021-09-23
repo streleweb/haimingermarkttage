@@ -4,31 +4,31 @@ export default {
 
     // Session-Cookie von Laravel Sanctum API abrufen
     createSession() {
-        return api.get("http://localhost/sanctum/csrf-cookie");
+        return api.get("/sanctum/csrf-cookie");
 
     },
 
     login(params) {
-        return api.post("http://localhost:8000/api/admin/login");
+        return api.post("/api/admin/login");
     },
 
     logout() {
-        return api.delete("http://localhost:8000/api/admin/logout");
+        return api.delete("/api/admin/logout");
     },
 
     getAussteller() {
-        return api.get("http://localhost:8000/api/aussteller");
+        return api.get("/api/aussteller");
     },
 
     getNews() {
-        return api.get("http://localhost:8000/api/news");
+        return api.get("/api/news");
     },
 
     postFotogalerie(formData) {
-        return api.post("http://localhost:8000/api/imageupload", formData);
+        return api.post("/api/imageupload", formData);
     },
 
     getProgramm() {
-        return api.get("http://localhost:8000/api/programm");
+        return api.get("/api/programm");
     }
 }

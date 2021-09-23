@@ -765,18 +765,16 @@ export default {
       const formData = new FormData();
       formData.set("image", this.image);
 
-      axios
-        .post("http://localhost:8000/api/imageupload", formData)
-        .then((response) => {
-          //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
-          this.formdata.aussteller_bildurl = response.data.filepath;
-          Swal.fire({
-            title: "Foto gespeichert!",
-            heightAuto: false,
-            confirmButtonText: "ok",
-            confirmButtonColor: "#3cb371",
-          });
+      axios.post("/api/imageupload", formData).then((response) => {
+        //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
+        this.formdata.aussteller_bildurl = response.data.filepath;
+        Swal.fire({
+          title: "Foto gespeichert!",
+          heightAuto: false,
+          confirmButtonText: "ok",
+          confirmButtonColor: "#3cb371",
         });
+      });
       //console.log(this.aussteller_bildurl);
     },
 
@@ -822,7 +820,7 @@ export default {
     },
     async handleLogout() {
       try {
-        await axios.post("http://localhost:8000/api/admin/logout");
+        await axios.post("/api/admin/logout");
         //LocalStorage LoggedIn-Status löschen
         localStorage.removeItem("isLoggedIn");
         localStorage;

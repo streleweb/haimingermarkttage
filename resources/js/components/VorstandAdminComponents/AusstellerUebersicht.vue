@@ -415,10 +415,7 @@ export default {
   methods: {
     deleteAussteller(index) {
       axios
-        .delete(
-          "http://localhost:8000/api/aussteller/" +
-            this.aussteller[index].aussteller_fullname
-        )
+        .delete("/api/aussteller/" + this.aussteller[index].aussteller_fullname)
         .then((response) => {
           console.log(response);
           //laravel response zu component object hinzufügen zur späteren Ausgabe
@@ -444,7 +441,7 @@ export default {
     async handleLogout() {
       this.loading = true;
       try {
-        await axios.post("http://localhost:8000/api/admin/logout");
+        await axios.post("/api/admin/logout");
         //LocalStorage LoggedIn-Status löschen
         localStorage.removeItem("isLoggedIn");
         localStorage;
