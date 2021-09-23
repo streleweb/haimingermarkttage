@@ -6,8 +6,8 @@
         id="#LOGO UND LI CONTAINER"
         class="flex items-center flex-shrink space-x-5 text-white mr-6"
       >
-        <router-link class="items-center inline-flex navbg" to=""
-          ><img
+        <router-link class="items-center inline-flex navbg" to="/" exact>
+          <img
             src="/../../images/icons/pngs/7272transparent.png"
             class="resizeLogo"
             alt="Logo"

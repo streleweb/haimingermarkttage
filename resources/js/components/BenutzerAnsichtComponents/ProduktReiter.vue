@@ -67,7 +67,7 @@
 
     <div class="buttonContainer flex flex-col justify-end pb-4 mt-10">
       <!--Buttons mit Custom Props-->
-      <router-link to="/app">
+      <router-link to="/" exact>
         <Button
           svg-source="/../../images/icons/svgs/home.svg"
           button-inhalt="Home"

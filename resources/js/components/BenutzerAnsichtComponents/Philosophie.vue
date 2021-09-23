@@ -58,7 +58,7 @@
 
     <div class="buttonContainer flex flex-col flex-shrink md:flex-grow mb-2">
       <!--Buttons mit Custom Props-->
-      <router-link to="/app">
+      <router-link to="/" exact>
         <Button
           svg-source="/../../images/icons/svgs/home.svg"
           button-inhalt="Home"

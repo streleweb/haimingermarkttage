@@ -489,7 +489,7 @@
       "
     >
       <!--Buttons mit Custom Props-->
-      <router-link to="/app">
+      <router-link to="/" exact>
         <Button
           svg-source="/../../images/icons/svgs/home.svg"
           button-inhalt="Home"
