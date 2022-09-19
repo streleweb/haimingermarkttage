@@ -36,8 +36,7 @@
                 flex-1 flex
                 items-center
                 justify-center
-                sm:items-stretch
-                sm:justify-start
+                sm:items-stretch sm:justify-start
               "
             >
               <div class="flex-shrink-0 flex items-center"></div>
@@ -52,8 +51,7 @@
                   <div
                     class="
                       text-gray-300
-                      hover:bg-gray-700
-                      hover:text-white
+                      hover:bg-gray-700 hover:text-white
                       px-3
                       py-2
                       rounded-md
@@ -70,8 +68,7 @@
                     aria-current="page"
                     class="
                       text-gray-300
-                      hover:bg-gray-700
-                      hover:text-white
+                      hover:bg-gray-700 hover:text-white
                       px-3
                       py-2
                       rounded-md
@@ -85,8 +82,7 @@
                   <div
                     class="
                       text-gray-300
-                      hover:bg-gray-700
-                      hover:text-white
+                      hover:bg-gray-700 hover:text-white
                       px-3
                       py-2
                       rounded-md
@@ -102,8 +98,7 @@
                   <div
                     class="
                       text-gray-300
-                      hover:bg-gray-700
-                      hover:text-white
+                      hover:bg-gray-700 hover:text-white
                       px-3
                       py-2
                       rounded-md
@@ -126,17 +121,13 @@
                 flex
                 items-center
                 pr-2
-                sm:static
-                sm:inset-auto
-                sm:ml-6
-                sm:pr-0
+                sm:static sm:inset-auto sm:ml-6 sm:pr-0
               "
             >
               <div
                 class="
                   text-gray-300
-                  hover:bg-red-900
-                  hover:text-white
+                  hover:bg-red-900 hover:text-white
                   px-3
                   py-2
                   rounded-md
@@ -178,8 +169,7 @@
             <div
               class="
                 text-gray-300
-                hover:bg-gray-700
-                hover:text-white
+                hover:bg-gray-700 hover:text-white
                 block
                 px-3
                 py-1
@@ -198,8 +188,7 @@
               href="#"
               class="
                 text-gray-300
-                hover:bg-gray-700
-                hover:text-white
+                hover:bg-gray-700 hover:text-white
                 block
                 px-3
                 py-1
@@ -215,8 +204,7 @@
               href="#"
               class="
                 text-gray-300
-                hover:bg-gray-700
-                hover:text-white
+                hover:bg-gray-700 hover:text-white
                 block
                 px-3
                 py-1
@@ -293,8 +281,7 @@
                       autocomplete="given-name"
                       class="
                         mt-1
-                        focus:ring-green-500
-                        focus:border-green-500
+                        focus:ring-green-500 focus:border-green-500
                         block
                         w-full
                         shadow-sm
@@ -311,15 +298,14 @@
                         >News-Textinhalt</label
                       >
                       <textarea
-                        maxlength="255"
+                        maxlength="2000"
                         v-model="formdata.news_textfeld"
                         id="news_textfeld"
                         autocomplete="Beschreibung"
-                        placeholder="Pflichtfeld. [Inhalt der News, wird unter dem Titel eingefügt]"
+                        placeholder="Pflichtfeld. [Inhalt der News, wird unter dem Titel eingefügt] Maximal 2000 Zeichen"
                         class="
                           mt-1
-                          focus:ring-green-500
-                          focus:border-green-500
+                          focus:ring-green-500 focus:border-green-500
                           block
                           w-full
                           shadow-sm
@@ -420,7 +406,9 @@
                         bg-green-600
                         hover:bg-black
                         focus:outline-none
-                        focus:ring-2 focus:ring-offset-2 focus:ring-green-500
+                        focus:ring-2
+                        focus:ring-offset-2
+                        focus:ring-green-500
                       "
                     >
                       In DB Speichern
@@ -580,7 +568,10 @@ export default {
       } catch (error) {
         //console.error(error.response.data);
       } finally {
-        location.reload();
+        setTimeout(function () {
+          location.reload();
+        }, 3000);
+        //location.reload();
       }
     },
   },

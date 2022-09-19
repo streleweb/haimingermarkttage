@@ -42,12 +42,12 @@ class NewsController extends Controller
         $validator = Validator::make($request->all(),
         [
             'news_titel' => 'required|min:2|max:70',
-            'news_textfeld'=> 'required|min:10|max:255',
+            'news_textfeld'=> 'required|min:10|max:2000',
             'news_bild_url'=> 'nullable',
         ]);
 
         if ($validator->fails()) {
-            return \response('Validierung fehlgeschlagen, der News-Titel muss angegeben werden!', 200)
+            return \response('Newstitel min 2 max 70 Zeichen, textfeld min 10 max 2000 Zeichen!', 200)
             ->header('Content-Type', 'text/plain');
             
         }else {

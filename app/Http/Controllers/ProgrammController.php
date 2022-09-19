@@ -41,8 +41,8 @@ class ProgrammController extends Controller
     {
         $validator = Validator::make($request->all(),
         [
-            'programm_titel' => 'required|min:2|max:30',
-            'programm_beschreibung'=> 'nullable|min:10|max:100',
+            'programm_titel' => 'required|min:2|max:70',
+            'programm_beschreibung'=> 'nullable|min:10|max:500',
             'programm_bild_url' => 'nullable|min:1'
         ]);
 

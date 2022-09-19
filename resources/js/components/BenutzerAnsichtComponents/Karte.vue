@@ -18,9 +18,7 @@
             px-4
             pt-4
             ssm:text-base
-            btnbp:text-xl
-            btnbp:pt-6
-            btnbp:px-12
+            btnbp:text-xl btnbp:pt-6 btnbp:px-12
             text-gray-300 text-center
             produktdescriptionbp:px-14
           "
@@ -41,7 +39,7 @@
     <!--https://www.google.com/maps/d/embed?mid=13qNnDIQECR3-pZ3-vK39FNUhoY7M-qD1-->
     <div class="flex justify-center items-center">
       <iframe
-        src="https://www.google.com/maps/d/embed?mid=1Kxrd75PaiWPf5CIYb3pSrpFRScbUORwo"
+        src="https://www.google.com/maps/d/embed?mid=18zYJ568aZGAngWapMG2ZriZWZXYI-vI&ehbc=2E312F"
         width="800"
         height="600"
       ></iframe>

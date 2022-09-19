@@ -4018,7 +4018,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -4069,8 +4068,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ "./resources/js/components/BenutzerAnsichtComponents/Button.vue");
-//
-//
 //
 //
 //
@@ -4937,8 +4934,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ "./resources/js/components/BenutzerAnsichtComponents/Button.vue");
-//
-//
 //
 //
 //
@@ -9842,18 +9837,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -10036,7 +10019,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         });
       } catch (error) {//console.error(error.response.data);
       } finally {
-        location.reload();
+        setTimeout(function () {
+          location.reload();
+        }, 3000); //location.reload();
       }
     }
   }
@@ -10066,18 +10051,6 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -12666,7 +12639,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-35853b8d] {\n  background: #eee5e9;\n  border: none;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 20px;\n  text-align: center;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-35853b8d]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-35853b8d] {\n  margin-left: auto;\n  margin-right: auto;\n  width: 100%;\n  border-radius: 20px 0 0 0;\n  z-index: 1;\n}\n.text[data-v-35853b8d] {\n  padding: 20px 20px;\n}\n.text h3[data-v-35853b8d] {\n  text-transform: uppercase;\n}\n.produktbackground[data-v-35853b8d] {\n  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),\r\n    url(\"/images/background/produktbackground.svg\");\n  background-repeat: no-repeat;\n  /*background-position: 50% 50%;*/\n  width: 100%;\n  min-height: 100%;\n  background-size: cover;\n  opacity: 90%;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-35853b8d] {\n  background: #eee5e9;\n  border: none;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 20px;\n  text-align: center;\n  transition: transform 0.3s;\n  cursor: pointer;\n  z-index: 1;\n}\narticle[data-v-35853b8d]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-35853b8d] {\n  margin-left: auto;\n  margin-right: auto;\n  width: 100%;\n  border-radius: 20px 0 0 0;\n  z-index: 1;\n}\n.text[data-v-35853b8d] {\n  padding: 20px 20px;\n}\n.text h3[data-v-35853b8d] {\n  text-transform: uppercase;\n}\n.produktbackground[data-v-35853b8d] {\n  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),\r\n    url(\"/images/background/produktbackground.svg\");\n  background-repeat: no-repeat;\n  /*background-position: 50% 50%;*/\n  width: 100%;\n  min-height: 100%;\n  background-size: cover;\n  opacity: 90%;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -40903,10 +40876,10 @@ var staticRenderFns = [
         attrs: { id: "hmdate" }
       },
       [
-        _vm._v("\n        HAIMINGER MARKTTAGE 2021 ABGESAGT "),
+        _vm._v("\n        SA. 8. Oktober 2022 & SA. 15. OKTOBER 2022"),
         _c("br"),
         _vm._v(
-          "\n        Anstelle dessen öffnen die Haiminger Höfe und Betriebe am 9. +16.10.\n        ihre Tore.\n      "
+          "\n        Start jeweils um 09:00 Uhr, mehr Infos dazu im Programm.\n      "
         )
       ]
     )
@@ -40980,7 +40953,7 @@ var staticRenderFns = [
             "div",
             {
               staticClass:
-                "\n          hidden\n          hmbp:block\n          mb-5\n          text-sm\n          px-4\n          pt-4\n          ssm:text-base\n          btnbp:text-xl\n          btnbp:pt-6\n          btnbp:px-12\n          text-gray-300 text-center\n          produktdescriptionbp:px-14\n        "
+                "\n          hidden\n          hmbp:block\n          mb-5\n          text-sm\n          px-4\n          pt-4\n          ssm:text-base\n          btnbp:text-xl btnbp:pt-6 btnbp:px-12\n          text-gray-300 text-center\n          produktdescriptionbp:px-14\n        "
             },
             [
               _vm._v(
@@ -41005,7 +40978,7 @@ var staticRenderFns = [
       _c("iframe", {
         attrs: {
           src:
-            "https://www.google.com/maps/d/embed?mid=1Kxrd75PaiWPf5CIYb3pSrpFRScbUORwo",
+            "https://www.google.com/maps/d/embed?mid=18zYJ568aZGAngWapMG2ZriZWZXYI-vI&ehbc=2E312F",
           width: "800",
           height: "600"
         }
@@ -41921,7 +41894,7 @@ var render = function() {
             "div",
             {
               staticClass:
-                "\n          hidden\n          hmbp:block\n          mb-5\n          text-base\n          px-4\n          pt-4\n          btnbp:text-2xl\n          btnbp:pt-6\n          btnbp:px-12\n          text-gray-300 text-center\n          produktdescriptionbp:px-14\n        "
+                "\n          hidden\n          hmbp:block\n          mb-5\n          text-base\n          px-4\n          pt-4\n          btnbp:text-2xl btnbp:pt-6 btnbp:px-12\n          text-gray-300 text-center\n          produktdescriptionbp:px-14\n        "
             },
             [_vm._v("\n        " + _vm._s(_vm.smallDescription) + "\n      ")]
           )
@@ -46424,7 +46397,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              flex-1 flex\n              items-center\n              justify-center\n              sm:items-stretch\n              sm:justify-start\n            "
+                          "\n              flex-1 flex\n              items-center\n              justify-center\n              sm:items-stretch sm:justify-start\n            "
                       },
                       [
                         _c("div", {
@@ -46454,7 +46427,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700 hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
                                 },
                                 [
                                   _c(
@@ -46475,7 +46448,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700 hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
                                   attrs: { "aria-current": "page" }
                                 },
                                 [
@@ -46492,7 +46465,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700 hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
                                 },
                                 [
                                   _c(
@@ -46512,7 +46485,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700 hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
                                 },
                                 [
                                   _c(
@@ -46538,14 +46511,14 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              absolute\n              inset-y-0\n              right-0\n              flex\n              items-center\n              pr-2\n              sm:static\n              sm:inset-auto\n              sm:ml-6\n              sm:pr-0\n            "
+                          "\n              absolute\n              inset-y-0\n              right-0\n              flex\n              items-center\n              pr-2\n              sm:static sm:inset-auto sm:ml-6 sm:pr-0\n            "
                       },
                       [
                         _c(
                           "div",
                           {
                             staticClass:
-                              "\n                text-gray-300\n                hover:bg-red-900\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
+                              "\n                text-gray-300\n                hover:bg-red-900 hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
                           },
                           [
                             _c(
@@ -46602,7 +46575,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            "
+                        "\n              text-gray-300\n              hover:bg-gray-700 hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            "
                     },
                     [
                       _c(
@@ -46620,7 +46593,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n              text-gray-300\n              hover:bg-gray-700 hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { "aria-current": "page", href: "#" }
                     },
                     [_vm._v("\n            News\n          ")]
@@ -46630,7 +46603,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n              text-gray-300\n              hover:bg-gray-700 hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#" }
                     },
                     [
@@ -46747,7 +46720,7 @@ var render = function() {
                                     }
                                   ],
                                   staticClass:
-                                    "\n                      mt-1\n                      focus:ring-green-500\n                      focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
+                                    "\n                      mt-1\n                      focus:ring-green-500 focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
                                   attrs: {
                                     maxlength: "70",
                                     type: "text",
@@ -46794,13 +46767,13 @@ var render = function() {
                                         }
                                       ],
                                       staticClass:
-                                        "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
+                                        "\n                        mt-1\n                        focus:ring-green-500 focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
                                       attrs: {
-                                        maxlength: "255",
+                                        maxlength: "2000",
                                         id: "news_textfeld",
                                         autocomplete: "Beschreibung",
                                         placeholder:
-                                          "Pflichtfeld. [Inhalt der News, wird unter dem Titel eingefügt]"
+                                          "Pflichtfeld. [Inhalt der News, wird unter dem Titel eingefügt] Maximal 2000 Zeichen"
                                       },
                                       domProps: {
                                         value: _vm.formdata.news_textfeld
@@ -46894,7 +46867,7 @@ var render = function() {
                                   "button",
                                   {
                                     staticClass:
-                                      "\n                      inline-flex\n                      justify-center\n                      py-2\n                      px-4\n                      border border-transparent\n                      shadow-sm\n                      text-sm\n                      font-medium\n                      rounded-md\n                      text-white\n                      bg-green-600\n                      hover:bg-black\n                      focus:outline-none\n                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n                    ",
+                                      "\n                      inline-flex\n                      justify-center\n                      py-2\n                      px-4\n                      border border-transparent\n                      shadow-sm\n                      text-sm\n                      font-medium\n                      rounded-md\n                      text-white\n                      bg-green-600\n                      hover:bg-black\n                      focus:outline-none\n                      focus:ring-2\n                      focus:ring-offset-2\n                      focus:ring-green-500\n                    ",
                                     class: _vm.submitvisibility,
                                     attrs: { id: "submitbutton" },
                                     on: { click: _vm.submitform }
@@ -47045,7 +47018,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              flex-1 flex\n              items-center\n              justify-center\n              sm:items-stretch\n              sm:justify-start\n            "
+                          "\n              flex-1 flex\n              items-center\n              justify-center\n              sm:items-stretch sm:justify-start\n            "
                       },
                       [
                         _c("div", {
@@ -47075,7 +47048,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700 hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
                                 },
                                 [
                                   _c(
@@ -47096,7 +47069,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700 hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
                                 },
                                 [
                                   _c(
@@ -47112,7 +47085,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700 hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
                                   attrs: { "aria-current": "page" }
                                 },
                                 [
@@ -47133,7 +47106,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                    text-gray-300\n                    hover:bg-gray-700 hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
                                 },
                                 [
                                   _c(
@@ -47159,14 +47132,14 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              absolute\n              inset-y-0\n              right-0\n              flex\n              items-center\n              pr-2\n              sm:static\n              sm:inset-auto\n              sm:ml-6\n              sm:pr-0\n            "
+                          "\n              absolute\n              inset-y-0\n              right-0\n              flex\n              items-center\n              pr-2\n              sm:static sm:inset-auto sm:ml-6 sm:pr-0\n            "
                       },
                       [
                         _c(
                           "div",
                           {
                             staticClass:
-                              "\n                text-gray-300\n                hover:bg-red-900\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
+                              "\n                text-gray-300\n                hover:bg-red-900 hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
                           },
                           [
                             _c(
@@ -47223,7 +47196,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            "
+                        "\n              text-gray-300\n              hover:bg-gray-700 hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            "
                     },
                     [
                       _c(
@@ -47241,7 +47214,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n              text-gray-300\n              hover:bg-gray-700 hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { href: "#" }
                     },
                     [
@@ -47258,7 +47231,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n              text-gray-300\n              hover:bg-gray-700 hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
                       attrs: { "aria-current": "page", href: "#" }
                     },
                     [_vm._v("Programm")]
@@ -47371,12 +47344,12 @@ var render = function() {
                                     }
                                   ],
                                   staticClass:
-                                    "\n                      mt-1\n                      focus:ring-green-500\n                      focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
+                                    "\n                      mt-1\n                      focus:ring-green-500 focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
                                   attrs: {
                                     maxlength: "70",
                                     type: "text",
                                     id: "programm_titel",
-                                    placeholder: "Pflichtfeld",
+                                    placeholder: "Pflichtfeld, max. 70 Zeichen",
                                     autocomplete: "given-name"
                                   },
                                   domProps: {
@@ -47422,13 +47395,13 @@ var render = function() {
                                         }
                                       ],
                                       staticClass:
-                                        "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
+                                        "\n                        mt-1\n                        focus:ring-green-500 focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
                                       attrs: {
-                                        maxlength: "255",
+                                        maxlength: "500",
                                         id: "news_textfeld",
                                         autocomplete: "Beschreibung",
                                         placeholder:
-                                          "Optional. [Programmbeschreibung, wird unter dem Titel eingefügt]"
+                                          "Optional. max. 500 Zeichen[Programmbeschreibung, wird unter dem Titel eingefügt]"
                                       },
                                       domProps: {
                                         value:
@@ -47523,7 +47496,7 @@ var render = function() {
                                   "button",
                                   {
                                     staticClass:
-                                      "\n                      inline-flex\n                      justify-center\n                      py-2\n                      px-4\n                      border border-transparent\n                      shadow-sm\n                      text-sm\n                      font-medium\n                      rounded-md\n                      text-white\n                      bg-green-600\n                      hover:bg-black\n                      focus:outline-none\n                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n                    ",
+                                      "\n                      inline-flex\n                      justify-center\n                      py-2\n                      px-4\n                      border border-transparent\n                      shadow-sm\n                      text-sm\n                      font-medium\n                      rounded-md\n                      text-white\n                      bg-green-600\n                      hover:bg-black\n                      focus:outline-none\n                      focus:ring-2\n                      focus:ring-offset-2\n                      focus:ring-green-500\n                    ",
                                     class: _vm.submitvisibility,
                                     attrs: { id: "submitbutton" },
                                     on: { click: _vm.submitform }

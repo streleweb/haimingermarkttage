@@ -13,9 +13,8 @@
         <!-- end willkommenstexte -->
         <!-- ********** AKTUELLES HM DATUM HIER EINGEBEN *********** -->
         <div id="hmdate" class="mt-2 descriptiontext text-white">
-          HAIMINGER MARKTTAGE 2021 ABGESAGT <br />
-          Anstelle dessen öffnen die Haiminger Höfe und Betriebe am 9. +16.10.
-          ihre Tore.
+          SA. 8. Oktober 2022 & SA. 15. OKTOBER 2022<br />
+          Start jeweils um 09:00 Uhr, mehr Infos dazu im Programm.
         </div>
         <!-- ********** AKTUELLES HM DATUM HIER EINGEBEN ENDE ******-->
       </div>

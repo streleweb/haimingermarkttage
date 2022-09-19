@@ -17,9 +17,7 @@
             text-base
             px-4
             pt-4
-            btnbp:text-2xl
-            btnbp:pt-6
-            btnbp:px-12
+            btnbp:text-2xl btnbp:pt-6 btnbp:px-12
             text-gray-300 text-center
             produktdescriptionbp:px-14
           "
@@ -143,6 +141,7 @@ export default {
   border-radius: 20px;
   text-align: center;
   transition: transform 0.3s;
+  cursor: pointer;
   z-index: 1;
 }
 
