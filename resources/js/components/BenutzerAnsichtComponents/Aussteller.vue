@@ -96,7 +96,7 @@
                   /></a>
                 </li>
                 <a
-                  href="https://www.google.com/maps/d/embed?mid=1Kxrd75PaiWPf5CIYb3pSrpFRScbUORwo"
+                  href="https://www.google.com/maps/d/embed?mid=18zYJ568aZGAngWapMG2ZriZWZXYI-vI&ehbc=2E312F"
                 >
                   <li v-if="zonenFarbeNotEmpty(index)" class="h-5 w-32">
                     <Farbzone :zonen-farbe="zonenFarbe(index)"></Farbzone>
