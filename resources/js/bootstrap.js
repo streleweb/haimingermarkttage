@@ -16,7 +16,6 @@ let token = '1|exDKmoKBRC9A7Nd4JHmbjLX7p24okrmUdbooFOy0';  //old token 33|ryvH8W
 window.axios.defaults.headers.common = { 'Authorization': `Bearer ${token}` }
 window.axios.defaults.crossDomain = true;
 
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 
 

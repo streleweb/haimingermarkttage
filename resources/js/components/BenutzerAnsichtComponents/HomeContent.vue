@@ -13,7 +13,9 @@
         <!-- end willkommenstexte -->
         <!-- ********** AKTUELLES HM DATUM HIER EINGEBEN *********** -->
         <div id="hmdate" class="mt-2 descriptiontext text-white">
-          9. und 16. Oktober 2021 | 9 - 17 Uhr bei jeder Witterung!
+          HAIMINGER MARKTTAGE 2021 ABGESAGT <br />
+          Anstelle dessen öffnen die Haiminger Höfe und Betriebe am 9. +16.10.
+          ihre Tore.
         </div>
         <!-- ********** AKTUELLES HM DATUM HIER EINGEBEN ENDE ******-->
       </div>
