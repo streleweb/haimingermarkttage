@@ -36,17 +36,19 @@ Route::get('/news', [NewsController::class, 'index']);
 Route::get('/fotogalerie', [FotogalerieController::class, 'index']);
 Route::get('/programm', [ProgrammController::class, 'index']);
 
+//login
+Route::post('/admin/login', [AuthController::class, 'login']);
+
 /**
- * Protected routes through Sanctum. 
+ * Protected routes through Sanctum.
  * Token-based requests
  */
- 
+
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/admin/register', [AuthController::class, 'register']);
     //logout
     Route::post('/admin/logout', [AuthController::class, 'logout']);
-    //login
-    Route::post('/admin/login', [AuthController::class, 'login']);
+
 
     //Aussteller-Post-Routes
     Route::post('/aussteller', [AusstellerController::class, 'store']);
@@ -57,12 +59,12 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //Imageupload
     Route::post('/imageupload', [ImageController::class, 'handle']);
 
-    //Fotogalerie upload/edit 
+    //Fotogalerie upload/edit
     Route::post('fotogalerie', [FotogalerieController::class, 'store']);
     Route::delete('/fotogalerie/{id}', [FotogalerieController::class, 'destroy']);
     Route::put('fotogalerie', [FotogalerieController::class, 'update']);
 
-   
+
     //News
     Route::post('/news', [NewsController::class, 'store']);
     Route::delete('/news/{id}', [NewsController::class, 'destroy']);
