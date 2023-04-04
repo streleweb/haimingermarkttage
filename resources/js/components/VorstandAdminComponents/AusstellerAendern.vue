@@ -21,92 +21,104 @@
               </svg>
             </div>
             <div class="
-                  flex-1 flex
-                  items-center
-                  justify-center
-                  sm:items-stretch
-                  sm:justify-start
-                ">
+                    flex-1 flex
+                    items-center
+                    justify-center
+                    sm:items-stretch
+                    sm:justify-start
+                  ">
               <div class="flex-shrink-0 flex items-center"></div>
               <div class="hidden sm:block sm:ml-6">
                 <div class="flex space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                   <router-link to="/admin/dashboard"><span class="text-gray-500 text-lg">Dashboard</span></router-link>
                   <div class="
-                        text-gray-300
-                        hover:bg-gray-700
-                        hover:text-white
-                        px-3
-                        py-2
-                        rounded-md
-                        text-sm
-                        font-medium
-                      ">
+                          text-gray-300
+                          hover:bg-gray-700
+                          hover:text-white
+                          px-3
+                          py-2
+                          rounded-md
+                          text-sm
+                          font-medium
+                        ">
                     <router-link to="/admin/dashboard/ausstelleruebersicht">Aussteller
                     </router-link>
                   </div>
 
                   <div class="
-                        text-gray-300
-                        hover:bg-gray-700
-                        hover:text-white
-                        px-3
-                        py-2
-                        rounded-md
-                        text-sm
-                        font-medium
-                      ">
+                          text-gray-300
+                          hover:bg-gray-700
+                          hover:text-white
+                          px-3
+                          py-2
+                          rounded-md
+                          text-sm
+                          font-medium
+                        ">
                     <router-link to="/admin/dashboard/news">News</router-link>
                   </div>
 
                   <a href="#" class="
-                        text-gray-300
-                        hover:bg-gray-700
-                        hover:text-white
-                        px-3
-                        py-2
-                        rounded-md
-                        text-sm
-                        font-medium
-                      ">Programm</a>
+                          text-gray-300
+                          hover:bg-gray-700
+                          hover:text-white
+                          px-3
+                          py-2
+                          rounded-md
+                          text-sm
+                          font-medium
+                        ">Programm</a>
 
                   <div class="
-                        text-gray-300
-                        hover:bg-gray-700
-                        hover:text-white
-                        px-3
-                        py-2
-                        rounded-md
-                        text-sm
-                        font-medium
-                      ">
+                          text-gray-300
+                          hover:bg-gray-700
+                          hover:text-white
+                          px-3
+                          py-2
+                          rounded-md
+                          text-sm
+                          font-medium
+                        ">
                     <router-link to="/admin/dashboard/editfotogalerie">Fotogalerie</router-link>
+                  </div>
+                  <div class="
+                              text-gray-300
+                              hover:bg-gray-700
+                              hover:text-white
+                              px-3
+                              py-2
+                              rounded-md
+                              text-sm
+                              font-medium
+                            ">
+                    <router-link to="/admin/dashboard/hometext">Home-Text</router-link>
                   </div>
                 </div>
               </div>
             </div>
             <div class="
-                  absolute
-                  inset-y-0
-                  right-0
-                  flex
-                  items-center
-                  pr-2
-                  sm:static
-                  sm:inset-auto
-                  sm:ml-6
-                  sm:pr-0
-                ">
-              <div class="
-                    text-gray-300
-                    hover:bg-red-900
-                    hover:text-white
-                    px-3
-                    py-2
-                    rounded-md
-                    text-sm
-                    font-medium
+                    absolute
+                    inset-y-0
+                    right-0
+                    flex
+                    items-center
+                    pr-2
+                    sm:static
+                    sm:inset-auto
+                    sm:ml-6
+                    sm:pr-0
                   ">
+              <div class="
+                      text-gray-300
+                      hover:bg-red-900
+                      hover:text-white
+                      px-3
+                      py-2
+                      rounded-md
+                      text-sm
+                      font-medium
+                    ">
                 <span class="text-white cursor-pointer" @click="handleLogout()">Logout
                   <img src="/public/images/icons/svgs/ausloggen.svg" class="filter-white" alt="" /></span>
               </div>
@@ -119,52 +131,52 @@
           <div class="px-2 pt-2 pb-3 space-y-1">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a href="#" class="
-                  bg-gray-900
-                  text-white
-                  block
-                  px-3
-                  py-1
-                  rounded-md
-                  text-base
-                  font-medium
-                ">Dashboard</a>
+                    bg-gray-900
+                    text-white
+                    block
+                    px-3
+                    py-1
+                    rounded-md
+                    text-base
+                    font-medium
+                  ">Dashboard</a>
             <!--Wenn Menü aufgeklappt-->
             <a href="#" class="
-                  text-gray-300
-                  hover:bg-gray-700
-                  hover:text-white
-                  block
-                  px-3
-                  py-1
-                  rounded-md
-                  text-base
-                  font-medium
-                "><router-link to="/admin/dashboard/ausstelleruebersicht">Aussteller</router-link>
+                    text-gray-300
+                    hover:bg-gray-700
+                    hover:text-white
+                    block
+                    px-3
+                    py-1
+                    rounded-md
+                    text-base
+                    font-medium
+                  "><router-link to="/admin/dashboard/ausstelleruebersicht">Aussteller</router-link>
             </a>
 
             <a href="#" class="
-                  text-gray-300
-                  hover:bg-gray-700
-                  hover:text-white
-                  block
-                  px-3
-                  py-1
-                  rounded-md
-                  text-base
-                  font-medium
-                ">News</a>
+                    text-gray-300
+                    hover:bg-gray-700
+                    hover:text-white
+                    block
+                    px-3
+                    py-1
+                    rounded-md
+                    text-base
+                    font-medium
+                  ">News</a>
 
             <a href="#" class="
-                  text-gray-300
-                  hover:bg-gray-700
-                  hover:text-white
-                  block
-                  px-3
-                  py-1
-                  rounded-md
-                  text-base
-                  font-medium
-                ">Programm</a>
+                    text-gray-300
+                    hover:bg-gray-700
+                    hover:text-white
+                    block
+                    px-3
+                    py-1
+                    rounded-md
+                    text-base
+                    font-medium
+                  ">Programm</a>
           </div>
         </div>
       </nav>
@@ -186,14 +198,14 @@
             </div>
 
             <p v-for="(jeweiligerAussteller, index) in aussteller" :key="index" class="
-                  flex
-                  justify-center
-                  pl-3
-                  text-white
-                  bg-green-900
-                  mb-3
-                  border border-gray-600
-                ">
+                    flex
+                    justify-center
+                    pl-3
+                    text-white
+                    bg-green-900
+                    mb-3
+                    border border-gray-600
+                  ">
               <span class="inline-flex">- {{ jeweiligerAussteller.aussteller_fullname }}</span>
             </p>
 
@@ -204,35 +216,6 @@
                     <label for="name" class="block text-sm font-medium text-gray-700">Vor und Nachname</label>
                     <input v-model="formdata.aussteller_fullname" maxlength="30" type="text" id="full_name"
                       placeholder="Pflichtfeld" autocomplete="given-name" class="
-                          mt-1
-                          focus:ring-green-500
-                          focus:border-green-500
-                          block
-                          w-full
-                          shadow-sm
-                          sm:text-sm
-                          border-gray-300
-                          rounded-md
-                        " />
-                    <label class="block text-sm font-medium text-gray-700">Handelsname (Branding-Name) des
-                      Ausstellers</label>
-                    <input maxlength="30" type="text" v-model="formdata.aussteller_brandingname" id="handelsname"
-                      placeholder="Optional" autocomplete="given-name" class="
-                          mt-1
-                          focus:ring-green-500
-                          focus:border-green-500
-                          block
-                          w-full
-                          shadow-sm
-                          sm:text-sm
-                          border-gray-300
-                          rounded-md
-                        " />
-                    <!--EMAIL START-->
-                    <div class="col-span-6 sm:col-span-4">
-                      <label for="email_address" class="block text-sm font-medium text-gray-700">Aussteller-E-Mail</label>
-                      <input maxlength="100" type="text" v-model="formdata.aussteller_email" id="email_address"
-                        autocomplete="email" placeholder="Optional" class="
                             mt-1
                             focus:ring-green-500
                             focus:border-green-500
@@ -243,6 +226,35 @@
                             border-gray-300
                             rounded-md
                           " />
+                    <label class="block text-sm font-medium text-gray-700">Handelsname (Branding-Name) des
+                      Ausstellers</label>
+                    <input maxlength="30" type="text" v-model="formdata.aussteller_brandingname" id="handelsname"
+                      placeholder="Optional" autocomplete="given-name" class="
+                            mt-1
+                            focus:ring-green-500
+                            focus:border-green-500
+                            block
+                            w-full
+                            shadow-sm
+                            sm:text-sm
+                            border-gray-300
+                            rounded-md
+                          " />
+                    <!--EMAIL START-->
+                    <div class="col-span-6 sm:col-span-4">
+                      <label for="email_address" class="block text-sm font-medium text-gray-700">Aussteller-E-Mail</label>
+                      <input maxlength="100" type="text" v-model="formdata.aussteller_email" id="email_address"
+                        autocomplete="email" placeholder="Optional" class="
+                              mt-1
+                              focus:ring-green-500
+                              focus:border-green-500
+                              block
+                              w-full
+                              shadow-sm
+                              sm:text-sm
+                              border-gray-300
+                              rounded-md
+                            " />
                     </div>
                     <!--EMAIL END-->
 
@@ -252,27 +264,27 @@
                       </label>
                       <div class="mt-1 flex rounded-md shadow-sm">
                         <span class="
-                              inline-flex
-                              items-center
-                              px-3
-                              rounded-l-md
-                              border border-r-0 border-gray-300
-                              bg-gray-50
-                              text-gray-500 text-sm
-                            ">
+                                inline-flex
+                                items-center
+                                px-3
+                                rounded-l-md
+                                border border-r-0 border-gray-300
+                                bg-gray-50
+                                text-gray-500 text-sm
+                              ">
                           http://
                         </span>
                         <input maxlength="50" type="text" v-model="formdata.aussteller_websiteurl" id="aussteller_website"
                           class="
-                              focus:ring-green-500
-                              focus:border-green-500
-                              flex-1
-                              block
-                              w-full
-                              rounded-none rounded-r-md
-                              sm:text-sm
-                              border-gray-300
-                            " placeholder="www.example.com" />
+                                focus:ring-green-500
+                                focus:border-green-500
+                                flex-1
+                                block
+                                w-full
+                                rounded-none rounded-r-md
+                                sm:text-sm
+                                border-gray-300
+                              " placeholder="www.example.com" />
                       </div>
                     </div>
 
@@ -281,16 +293,16 @@
                       <textarea maxlength="250" v-model="formdata.aussteller_beschreibung" id="beschreibung"
                         autocomplete="Beschreibung"
                         placeholder="Optional [Beschreibung inkl. der angebotenen Produkte des Ausstellers]" class="
-                            mt-1
-                            focus:ring-green-500
-                            focus:border-green-500
-                            block
-                            w-full
-                            shadow-sm
-                            sm:text-sm
-                            border-gray-300
-                            rounded-md
-                          " />
+                              mt-1
+                              focus:ring-green-500
+                              focus:border-green-500
+                              block
+                              w-full
+                              shadow-sm
+                              sm:text-sm
+                              border-gray-300
+                              rounded-md
+                            " />
                     </div>
 
                     <div class="col-span-6">
@@ -368,30 +380,30 @@
                     <form @submit.prevent="upload" class="flex items-center justify-center mt-3">
                       <input @change="handleOnChange" type="file" class="text-xs sm:text-base" />
                       <button @click="showSubmitButton" class="
-                            bg-green-900
-                            text-xs
-                            sm:text-base
-                            p-1
-                            text-white
-                            border border-green-600
-                            rounded-md
-                            hover:bg-green-500
-                          ">
+                              bg-green-900
+                              text-xs
+                              sm:text-base
+                              p-1
+                              text-white
+                              border border-green-600
+                              rounded-md
+                              hover:bg-green-500
+                            ">
                         Upload photo
                       </button>
                     </form>
                     <div class="flex items-center justify-center">
                       <button @click="showSubmitButton" class="
-                            bg-green-900
-                            text-xs
-                            sm:text-base
-                            p-1
-                            mt-2
-                            text-white
-                            border border-green-600
-                            rounded-md
-                            hover:bg-green-500
-                          ">
+                              bg-green-900
+                              text-xs
+                              sm:text-base
+                              p-1
+                              mt-2
+                              text-white
+                              border border-green-600
+                              rounded-md
+                              hover:bg-green-500
+                            ">
                         Kein Ausstellerfoto uploaden
                       </button>
                     </div>
@@ -399,31 +411,31 @@
                   </div>
 
                   <div class="
-                        flex
-                        justify-center
-                        px-4
-                        py-3
-                        bg-gray-600
-                        border-t-2 border-gray-800
-                        text-right
-                        sm:px-6
-                      ">
-                    <button id="submitbutton" @click="submitform" :class="submitvisibility" class="
-                          inline-flex
+                          flex
                           justify-center
-                          py-2
                           px-4
-                          border border-transparent
-                          shadow-sm
-                          text-sm
-                          font-medium
-                          rounded-md
-                          text-white
-                          bg-green-600
-                          hover:bg-black
-                          focus:outline-none
-                          focus:ring-2 focus:ring-offset-2 focus:ring-green-500
+                          py-3
+                          bg-gray-600
+                          border-t-2 border-gray-800
+                          text-right
+                          sm:px-6
                         ">
+                    <button id="submitbutton" @click="submitform" :class="submitvisibility" class="
+                            inline-flex
+                            justify-center
+                            py-2
+                            px-4
+                            border border-transparent
+                            shadow-sm
+                            text-sm
+                            font-medium
+                            rounded-md
+                            text-white
+                            bg-green-600
+                            hover:bg-black
+                            focus:outline-none
+                            focus:ring-2 focus:ring-offset-2 focus:ring-green-500
+                          ">
                       In DB Speichern
                     </button>
                   </div>

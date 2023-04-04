@@ -11,6 +11,7 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProgrammController;
 use App\Http\Controllers\SponsorenController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\HomeContentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,7 @@ Route::get('/getAllAusstellerOfSpecificProduktreiter/{produktReiterName}', [Auss
 Route::get('/news', [NewsController::class, 'index']);
 Route::get('/fotogalerie', [FotogalerieController::class, 'index']);
 Route::get('/programm', [ProgrammController::class, 'index']);
+Route::get('/homecontent', [HomeContentController::class, 'index']);
 
 //login
 Route::post('/admin/login', [AuthController::class, 'login']);
@@ -52,6 +54,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     //Aussteller-Post-Routes
     Route::post('/aussteller', [AusstellerController::class, 'store']);
+    Route::post('/homecontent', [HomeContentController::class, 'store']);
     Route::put('/aussteller', [AusstellerController::class, 'update']);
     Route::delete('/aussteller/{id}', [AusstellerController::class, 'destroy']);
     Route::post('/aussteller/getproduktreiterofaussteller', [AusstellerController::class, 'getProduktReiter']);
@@ -72,6 +75,10 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //Programm
     Route::post('/programm', [ProgrammController::class, 'store']);
     Route::delete('/programm/{id}', [ProgrammController::class, 'destroy']);
+
+    //HomeContent
+    Route::post('/homecontent', [HomeContentController::class, 'store']);
+    Route::delete('/homecontent', [HomeContentController::class, 'destroy']);
 
 });
 

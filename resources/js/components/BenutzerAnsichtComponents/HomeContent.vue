@@ -13,8 +13,8 @@
         <!-- end willkommenstexte -->
         <!-- ********** AKTUELLES HM DATUM HIER EINGEBEN *********** -->
         <div id="hmdate" class="mt-2 descriptiontext text-white">
-          {{ hmHomeTextTitle }} <br />
-          {{ hmHomeTextDescription }}
+          {{ homecontent.homeContentTitle }} <br />
+          {{ homecontent.homeContentDescription }}
         </div>
         <!-- ********** AKTUELLES HM DATUM HIER EINGEBEN ENDE ******-->
       </div>
@@ -48,6 +48,7 @@
 </template>
 
 <script>
+import repository from "../VorstandAdminComponents/repository/repository";
 import Button from "./Button";
 import Swal from "sweetalert2";
 
@@ -57,8 +58,10 @@ export default {
       name: "HomeContent",
       titleMessage: "Willkommen bei den Haiminger Markttagen!",
       smallDescription: "Flanieren, Probieren und Genießen...",
-      hmHomeTextTitle: "Infos zu den Markttagen 2023 folgen...", //max 45
-      hmHomeTextDescription: "" //max 56
+      homecontent: {
+        homeContentTitle: 'Infos zu den kommenden Markttagen folgen',
+        homeContentDescription: ''
+      }
       //nicht vergessen, Anreiseinfos entweder in DB abspeichern und von dort aus zB via Props zu laden, oder via API Call (Axios oder FetchAPI)..
     };
   },
@@ -73,6 +76,12 @@ export default {
         confirmButtonColor: "#3cb371",
       }).then(() => this.cookieOkClicked());
     }
+  },
+  created() {
+    repository.getHomeContent().then(response => {
+      this.homecontent.homeContentTitle = response.data.homeContentTitle;
+      this.homecontent.homeContentDescription = response.data.homeContentDescription;
+    });
   },
   components: { Button },
   methods: {
