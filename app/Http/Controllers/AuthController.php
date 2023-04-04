@@ -34,9 +34,9 @@ class AuthController extends Controller
     }
 
     public function login(Request $request){
-      
+
         $fields = $request->validate([
-            'email' => 'required|string', 
+            'email' => 'required|string',
             'password' => 'required|string'
         ]);
 
@@ -66,10 +66,11 @@ class AuthController extends Controller
     }
 
     public function logout(Request $request){
+        $request->user()->tokens()->delete();
         Auth::guard('web')->logout();
 /*
         Auth::logout();
-        return response(null, 200); 
+        return response(null, 200);
 */
 
 /*
