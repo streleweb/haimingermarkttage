@@ -1,17 +1,14 @@
 <template>
   <div class="w-full h-full bg-gray-900">
-    <div
-      v-if="loggedIn() == false"
-      class="
-        flex
-        w-full
-        h-full
-        items-center
-        justify-center
-        text-red-900
-        bg-gray-900
-      "
-    >
+    <div v-if="loggedIn() == false" class="
+          flex
+          w-full
+          h-full
+          items-center
+          justify-center
+          text-red-900
+          bg-gray-900
+        ">
       Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard
       zugreifen zu können...
     </div>
@@ -30,140 +27,101 @@
 
             Menu open: "block", Menu closed: "hidden"
           -->
-              <svg
-                class="hidden h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
+              <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </div>
-            <div
-              class="
-                flex-1 flex
-                items-center
-                justify-center
-                sm:items-stretch
-                sm:justify-start
-              "
-            >
+            <div class="
+                  flex-1 flex
+                  items-center
+                  justify-center
+                  sm:items-stretch
+                  sm:justify-start
+                ">
               <div class="flex-shrink-0 flex items-center"></div>
               <div class="hidden sm:block sm:ml-6">
                 <div class="flex space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  <router-link to="/admin/dashboard"
-                    ><span class="text-gray-500 text-lg"
-                      >Dashboard</span
-                    ></router-link
-                  >
-                  <div
-                    class="
-                      text-gray-300
-                      hover:bg-gray-700
-                      hover:text-white
-                      px-3
-                      py-2
-                      rounded-md
-                      text-sm
-                      font-medium
-                    "
-                  >
-                    <router-link to="/admin/dashboard/ausstelleruebersicht"
-                      >Aussteller
+                  <router-link to="/admin/dashboard"><span class="text-gray-500 text-lg">Dashboard</span></router-link>
+                  <div class="
+                        text-gray-300
+                        hover:bg-gray-700
+                        hover:text-white
+                        px-3
+                        py-2
+                        rounded-md
+                        text-sm
+                        font-medium
+                      ">
+                    <router-link to="/admin/dashboard/ausstelleruebersicht">Aussteller
                     </router-link>
                   </div>
 
-                  <div
-                    class="
-                      text-gray-300
-                      hover:bg-gray-700
-                      hover:text-white
-                      px-3
-                      py-2
-                      rounded-md
-                      text-sm
-                      font-medium
-                    "
-                  >
+                  <div class="
+                        text-gray-300
+                        hover:bg-gray-700
+                        hover:text-white
+                        px-3
+                        py-2
+                        rounded-md
+                        text-sm
+                        font-medium
+                      ">
                     <router-link to="/admin/dashboard/news">News</router-link>
                   </div>
 
-                  <a
-                    href="#"
-                    class="
-                      text-gray-300
-                      hover:bg-gray-700
-                      hover:text-white
-                      px-3
-                      py-2
-                      rounded-md
-                      text-sm
-                      font-medium
-                    "
-                    ><router-link to="/admin/dashboard/programmanlegen">
-                      Programm</router-link
-                    ></a
-                  >
+                  <a href="#" class="
+                        text-gray-300
+                        hover:bg-gray-700
+                        hover:text-white
+                        px-3
+                        py-2
+                        rounded-md
+                        text-sm
+                        font-medium
+                      "><router-link to="/admin/dashboard/programmanlegen">
+                      Programm</router-link></a>
 
-                  <div
-                    aria-current="page"
-                    class="
-                      text-gray-300
-                      hover:bg-gray-700
-                      hover:text-white
-                      px-3
-                      py-2
-                      rounded-md
-                      text-sm
-                      font-medium
-                    "
-                  >
+                  <div aria-current="page" class="
+                        text-gray-300
+                        hover:bg-gray-700
+                        hover:text-white
+                        px-3
+                        py-2
+                        rounded-md
+                        text-sm
+                        font-medium
+                      ">
                     Fotogalerie
                   </div>
                 </div>
               </div>
             </div>
-            <div
-              class="
-                absolute
-                inset-y-0
-                right-0
-                flex
-                items-center
-                pr-2
-                sm:static
-                sm:inset-auto
-                sm:ml-6
-                sm:pr-0
-              "
-            >
-              <div
-                class="
-                  text-gray-300
-                  hover:bg-red-900
-                  hover:text-white
-                  px-3
-                  py-2
-                  rounded-md
-                  text-sm
-                  font-medium
-                "
-              >
-                <span class="text-white cursor-pointer" @click="handleLogout()"
-                  >Logout
-                  <img
-                    src="/public/images/icons/svgs/ausloggen.svg"
-                    class="filter-white"
-                    alt=""
-                /></span>
+            <div class="
+                  absolute
+                  inset-y-0
+                  right-0
+                  flex
+                  items-center
+                  pr-2
+                  sm:static
+                  sm:inset-auto
+                  sm:ml-6
+                  sm:pr-0
+                ">
+              <div class="
+                    text-gray-300
+                    hover:bg-red-900
+                    hover:text-white
+                    px-3
+                    py-2
+                    rounded-md
+                    text-sm
+                    font-medium
+                  ">
+                <span class="text-white cursor-pointer" @click="handleLogout()">Logout
+                  <img src="/public/images/icons/svgs/ausloggen.svg" class="filter-white" alt="" /></span>
               </div>
             </div>
           </div>
@@ -173,73 +131,54 @@
         <div class="sm:hidden" id="mobile-menu">
           <div class="px-2 pt-2 pb-3 space-y-1">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a
-              href="#"
-              class="
-                bg-gray-900
-                text-white
-                block
-                px-3
-                py-1
-                rounded-md
-                text-base
-                font-medium
-              "
-              aria-current="page"
-              >Dashboard</a
-            >
+            <a href="#" class="
+                  bg-gray-900
+                  text-white
+                  block
+                  px-3
+                  py-1
+                  rounded-md
+                  text-base
+                  font-medium
+                " aria-current="page">Dashboard</a>
             <!--Wenn Menü aufgeklappt-->
-            <a
-              href="#"
-              class="
-                text-gray-300
-                hover:bg-gray-700
-                hover:text-white
-                block
-                px-3
-                py-1
-                rounded-md
-                text-base
-                font-medium
-              "
-              ><router-link to="/admin/dashboard/ausstelleruebersicht"
-                >Aussteller</router-link
-              >
+            <a href="#" class="
+                  text-gray-300
+                  hover:bg-gray-700
+                  hover:text-white
+                  block
+                  px-3
+                  py-1
+                  rounded-md
+                  text-base
+                  font-medium
+                "><router-link to="/admin/dashboard/ausstelleruebersicht">Aussteller</router-link>
             </a>
 
-            <a
-              href="#"
-              class="
-                text-gray-300
-                hover:bg-gray-700
-                hover:text-white
-                block
-                px-3
-                py-1
-                rounded-md
-                text-base
-                font-medium
-              "
-              >News</a
-            >
+            <a href="#" class="
+                  text-gray-300
+                  hover:bg-gray-700
+                  hover:text-white
+                  block
+                  px-3
+                  py-1
+                  rounded-md
+                  text-base
+                  font-medium
+                ">News</a>
 
-            <a
-              href="#"
-              class="
-                text-gray-300
-                hover:bg-gray-700
-                hover:text-white
-                block
-                px-3
-                py-1
-                rounded-md
-                text-base
-                font-medium
-              "
-              ><router-link to="/admin/dashboard/programmanlegen">
-                Programm</router-link
-              ></a
-            >
+            <a href="#" class="
+                  text-gray-300
+                  hover:bg-gray-700
+                  hover:text-white
+                  block
+                  px-3
+                  py-1
+                  rounded-md
+                  text-base
+                  font-medium
+                "><router-link to="/admin/dashboard/programmanlegen">
+                Programm</router-link></a>
           </div>
         </div>
       </nav>
@@ -247,11 +186,7 @@
 
       <div class="bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20">
         <p v-if="loading" class="mx-auto">
-          <img
-            src="/images/icons/gifs/loadingtransparent.gif"
-            alt="loading..."
-            class="m-auto resize-loadinggif"
-          />
+          <img src="/images/icons/gifs/loadingtransparent.gif" alt="loading..." class="m-auto resize-loadinggif" />
         </p>
         <div class="mt-10 sm:mt-0">
           <div class="">
@@ -271,27 +206,19 @@
               Fotogalerie ersichtlich.
             </div>
 
-            <div
-              v-for="(jeweiligesFoto, index) in fotos"
-              :key="index"
-              class="
-                flex
-                justify-evenly
-                pl-3
-                text-white
-                bg-green-900
-                mb-3
-                border border-gray-600
-              "
-            >
+            <div v-for="(jeweiligesFoto, index) in fotos" :key="index" class="
+                  flex
+                  justify-evenly
+                  pl-3
+                  text-white
+                  bg-green-900
+                  mb-3
+                  border border-gray-600
+                ">
               <span class="flex w-32 items-center">{{
                 jeweiligesFoto.fotogalerie_fotoname
               }}</span>
-              <img
-                :src="urlOfFoto(index)"
-                class="w-20 h-20 border border-gray-50 rounded-lg my-2"
-                alt="Foto"
-              />
+              <img :src="urlOfFoto(index)" class="w-20 h-20 border border-gray-50 rounded-lg my-2" alt="Foto" />
               <button key:index @click="deleteFoto(index)" class="btn btn-red">
                 delete
               </button>
@@ -304,44 +231,9 @@
                     Foto hinzufügen
                   </h3>
                   <div class="px-4 py-5 bg-gray-300 sm:p-6">
-                    <label
-                      for="name"
-                      class="block text-sm font-medium text-gray-700"
-                      >Foto-Titel</label
-                    >
-                    <input
-                      maxlength="30"
-                      type="text"
-                      v-model="formdata.fotogalerie_fotoname"
-                      id="full_name"
-                      placeholder="Pflichtfeld"
-                      autocomplete="given-name"
-                      class="
-                        mt-1
-                        focus:ring-green-500
-                        focus:border-green-500
-                        block
-                        w-full
-                        shadow-sm
-                        sm:text-sm
-                        border-gray-300
-                        rounded-md
-                      "
-                    />
-
-                    <div class="col-span-6 sm:col-span-4">
-                      <label
-                        for="email_address"
-                        class="block text-sm font-medium text-gray-700"
-                        >Fotobeschreibung</label
-                      >
-                      <textarea
-                        maxlength="50"
-                        v-model="formdata.fotogalerie_fotobeschreibung"
-                        id="beschreibung"
-                        autocomplete="Beschreibung"
-                        placeholder="Optional"
-                        class="
+                    <label for="name" class="block text-sm font-medium text-gray-700">Foto-Titel</label>
+                    <input maxlength="30" type="text" v-model="formdata.fotogalerie_fotoname" id="full_name"
+                      placeholder="Pflichtfeld" autocomplete="given-name" class="
                           mt-1
                           focus:ring-green-500
                           focus:border-green-500
@@ -351,46 +243,46 @@
                           sm:text-sm
                           border-gray-300
                           rounded-md
-                        "
-                      />
+                        " />
+
+                    <div class="col-span-6 sm:col-span-4">
+                      <label for="email_address" class="block text-sm font-medium text-gray-700">Fotobeschreibung</label>
+                      <textarea maxlength="50" v-model="formdata.fotogalerie_fotobeschreibung" id="beschreibung"
+                        autocomplete="Beschreibung" placeholder="Optional" class="
+                            mt-1
+                            focus:ring-green-500
+                            focus:border-green-500
+                            block
+                            w-full
+                            shadow-sm
+                            sm:text-sm
+                            border-gray-300
+                            rounded-md
+                          " />
                     </div>
 
                     <!--IMAGE FILE UPLOAD START-->
                     <div class="py-2 bg-green-900 text-white mb-1 px-2">
                       Foto Upload
                       <div class="alert">
-                        <span
-                          class="closebtn"
-                          onclick="this.parentElement.style.display='none';"
-                          >&times;</span
-                        >
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                         <strong>Achtung!</strong> Maximale Filesize: 1.9MB
                         <br />
                         Bsp: haimingermarkttage2020-1.jpg , hm1.png..
                       </div>
                     </div>
-                    <form
-                      @submit.prevent="upload"
-                      class="flex items-center justify-center mt-3"
-                    >
-                      <input
-                        @change="handleOnChange"
-                        type="file"
-                        class="text-xs sm:text-base"
-                      />
-                      <button
-                        @click="showSubmitButton"
-                        class="
-                          bg-green-900
-                          text-xs
-                          sm:text-base
-                          p-1
-                          text-white
-                          border border-green-600
-                          rounded-md
-                          hover:bg-green-500
-                        "
-                      >
+                    <form @submit.prevent="upload" class="flex items-center justify-center mt-3">
+                      <input @change="handleOnChange" type="file" class="text-xs sm:text-base" />
+                      <button @click="showSubmitButton" class="
+                            bg-green-900
+                            text-xs
+                            sm:text-base
+                            p-1
+                            text-white
+                            border border-green-600
+                            rounded-md
+                            hover:bg-green-500
+                          ">
                         Upload photo
                       </button>
                     </form>
@@ -398,39 +290,32 @@
                     <!--IMAGE FILE UPLOAD END-->
                   </div>
 
-                  <div
-                    class="
-                      flex
-                      justify-center
-                      px-4
-                      py-3
-                      bg-gray-600
-                      border-t-2 border-gray-800
-                      text-right
-                      sm:px-6
-                    "
-                  >
-                    <button
-                      id="submitbutton"
-                      @click="submitform"
-                      :class="submitvisibility"
-                      class="
-                        inline-flex
+                  <div class="
+                        flex
                         justify-center
-                        py-2
                         px-4
-                        border border-transparent
-                        shadow-sm
-                        text-sm
-                        font-medium
-                        rounded-md
-                        text-white
-                        bg-green-600
-                        hover:bg-black
-                        focus:outline-none
-                        focus:ring-2 focus:ring-offset-2 focus:ring-green-500
-                      "
-                    >
+                        py-3
+                        bg-gray-600
+                        border-t-2 border-gray-800
+                        text-right
+                        sm:px-6
+                      ">
+                    <button id="submitbutton" @click="submitform" :class="submitvisibility" class="
+                          inline-flex
+                          justify-center
+                          py-2
+                          px-4
+                          border border-transparent
+                          shadow-sm
+                          text-sm
+                          font-medium
+                          rounded-md
+                          text-white
+                          bg-green-600
+                          hover:bg-black
+                          focus:outline-none
+                          focus:ring-2 focus:ring-offset-2 focus:ring-green-500
+                        ">
                       In DB Speichern
                     </button>
                   </div>
@@ -477,6 +362,8 @@ export default {
     if (localStorage.getItem("isLoggedIn") != "true") {
       this.$router.push({ name: "adminLogin" });
     }
+    window._ = require('lodash');
+    window.axios.defaults.headers.common = { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
   },
 
   mounted() {
@@ -609,7 +496,7 @@ export default {
       } catch (error) {
         //console.error(error.response.data);
       } finally {
-        setTimeout(() => {}, 1500);
+        setTimeout(() => { }, 1500);
         location.reload();
       }
     },
@@ -651,12 +538,12 @@ export default {
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.container:hover input~.checkmark {
   background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
-.container input:checked ~ .checkmark {
+.container input:checked~.checkmark {
   background-color: #2196f3;
 }
 
@@ -668,7 +555,7 @@ export default {
 }
 
 /* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
+.container input:checked~.checkmark:after {
   display: block;
 }
 

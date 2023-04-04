@@ -15,133 +15,95 @@
 
             Menu open: "block", Menu closed: "hidden"
           -->
-              <svg
-                class="hidden h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
+              <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </div>
-            <div
-              class="
-                flex-1 flex
-                items-center
-                justify-center
-                sm:items-stretch sm:justify-start
-              "
-            >
+            <div class="
+                  flex-1 flex
+                  items-center
+                  justify-center
+                  sm:items-stretch sm:justify-start
+                ">
               <div class="flex-shrink-0 flex items-center"></div>
               <div class="hidden sm:block sm:ml-6">
                 <div class="flex space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  <router-link to="/admin/dashboard" exact
-                    ><span class="text-gray-500 text-lg"
-                      >Dashboard</span
-                    ></router-link
-                  >
-                  <div
-                    class="
-                      text-gray-300
-                      hover:bg-gray-700 hover:text-white
-                      px-3
-                      py-2
-                      rounded-md
-                      text-sm
-                      font-medium
-                    "
-                  >
-                    <router-link to="/admin/dashboard/ausstelleruebersicht"
-                      >Aussteller
+                  <router-link to="/admin/dashboard" exact><span
+                      class="text-gray-500 text-lg">Dashboard</span></router-link>
+                  <div class="
+                        text-gray-300
+                        hover:bg-gray-700 hover:text-white
+                        px-3
+                        py-2
+                        rounded-md
+                        text-sm
+                        font-medium
+                      ">
+                    <router-link to="/admin/dashboard/ausstelleruebersicht">Aussteller
                     </router-link>
                   </div>
 
-                  <div
-                    class="
-                      text-gray-300
-                      hover:bg-gray-700 hover:text-white
-                      px-3
-                      py-2
-                      rounded-md
-                      text-sm
-                      font-medium
-                    "
-                  >
+                  <div class="
+                        text-gray-300
+                        hover:bg-gray-700 hover:text-white
+                        px-3
+                        py-2
+                        rounded-md
+                        text-sm
+                        font-medium
+                      ">
                     <router-link to="/admin/dashboard/news">News</router-link>
                   </div>
 
-                  <div
-                    aria-current="page"
-                    class="
-                      text-gray-300
-                      hover:bg-gray-700 hover:text-white
-                      px-3
-                      py-2
-                      rounded-md
-                      text-sm
-                      font-medium
-                    "
-                  >
+                  <div aria-current="page" class="
+                        text-gray-300
+                        hover:bg-gray-700 hover:text-white
+                        px-3
+                        py-2
+                        rounded-md
+                        text-sm
+                        font-medium
+                      ">
                     <router-link to="/admin/dashboard/programmanlegen">
-                      Programm</router-link
-                    >
+                      Programm</router-link>
                   </div>
 
-                  <div
-                    class="
-                      text-gray-300
-                      hover:bg-gray-700 hover:text-white
-                      px-3
-                      py-2
-                      rounded-md
-                      text-sm
-                      font-medium
-                    "
-                  >
-                    <router-link to="/admin/dashboard/editfotogalerie"
-                      >Fotogalerie</router-link
-                    >
+                  <div class="
+                        text-gray-300
+                        hover:bg-gray-700 hover:text-white
+                        px-3
+                        py-2
+                        rounded-md
+                        text-sm
+                        font-medium
+                      ">
+                    <router-link to="/admin/dashboard/editfotogalerie">Fotogalerie</router-link>
                   </div>
                 </div>
               </div>
             </div>
-            <div
-              class="
-                absolute
-                inset-y-0
-                right-0
-                flex
-                items-center
-                pr-2
-                sm:static sm:inset-auto sm:ml-6 sm:pr-0
-              "
-            >
-              <div
-                class="
-                  text-gray-300
-                  hover:bg-red-900 hover:text-white
-                  px-3
-                  py-2
-                  rounded-md
-                  text-sm
-                  font-medium
-                "
-              >
-                <span class="text-white cursor-pointer" @click="handleLogout()"
-                  >Logout
-                  <img
-                    src="/public/images/icons/svgs/ausloggen.svg"
-                    class="filter-white"
-                    alt=""
-                /></span>
+            <div class="
+                  absolute
+                  inset-y-0
+                  right-0
+                  flex
+                  items-center
+                  pr-2
+                  sm:static sm:inset-auto sm:ml-6 sm:pr-0
+                ">
+              <div class="
+                    text-gray-300
+                    hover:bg-red-900 hover:text-white
+                    px-3
+                    py-2
+                    rounded-md
+                    text-sm
+                    font-medium
+                  ">
+                <span class="text-white cursor-pointer" @click="handleLogout()">Logout
+                  <img src="/public/images/icons/svgs/ausloggen.svg" class="filter-white" alt="" /></span>
               </div>
             </div>
           </div>
@@ -151,68 +113,54 @@
         <div class="sm:hidden" id="mobile-menu">
           <div class="px-2 pt-2 pb-3 space-y-1">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <div
-              class="
-                bg-gray-900
-                text-white
-                block
-                px-3
-                py-1
-                rounded-md
-                text-base
-                font-medium
-              "
-            >
+            <div class="
+                  bg-gray-900
+                  text-white
+                  block
+                  px-3
+                  py-1
+                  rounded-md
+                  text-base
+                  font-medium
+                ">
               <router-link to="/admin/dashboard">Dashboard</router-link>
             </div>
             <!--Wenn Menü aufgeklappt-->
-            <div
-              class="
-                text-gray-300
-                hover:bg-gray-700 hover:text-white
-                block
-                px-3
-                py-1
-                rounded-md
-                text-base
-                font-medium
-              "
-            >
-              <router-link to="/admin/dashboard/ausstelleruebersicht"
-                >Aussteller</router-link
-              >
+            <div class="
+                  text-gray-300
+                  hover:bg-gray-700 hover:text-white
+                  block
+                  px-3
+                  py-1
+                  rounded-md
+                  text-base
+                  font-medium
+                ">
+              <router-link to="/admin/dashboard/ausstelleruebersicht">Aussteller</router-link>
             </div>
 
-            <a
-              href="#"
-              class="
-                text-gray-300
-                hover:bg-gray-700 hover:text-white
-                block
-                px-3
-                py-1
-                rounded-md
-                text-base
-                font-medium
-              "
-              ><router-link to="/admin/dashboard/news">News</router-link>
+            <a href="#" class="
+                  text-gray-300
+                  hover:bg-gray-700 hover:text-white
+                  block
+                  px-3
+                  py-1
+                  rounded-md
+                  text-base
+                  font-medium
+                "><router-link to="/admin/dashboard/news">News</router-link>
             </a>
 
-            <a
-              aria-current="page"
-              href="#"
-              class="
-                text-gray-300
-                hover:bg-gray-700 hover:text-white
-                block
-                px-3
-                py-1
-                rounded-md
-                text-base
-                font-medium
-              "
-              >Programm</a
-            >
+            <a aria-current="page" href="#" class="
+                  text-gray-300
+                  hover:bg-gray-700 hover:text-white
+                  block
+                  px-3
+                  py-1
+                  rounded-md
+                  text-base
+                  font-medium
+                ">Programm</a>
           </div>
         </div>
       </nav>
@@ -230,36 +178,24 @@
               der bestehenden Artikel eingefügt.
             </div>
 
-            <div
-              v-for="(jeweiligesProgramm, index) in programmArray"
-              :key="index"
-              class="
-                flex
-                justify-evenly
-                pl-3
-                text-white
-                bg-green-900
-                mb-3
-                border border-gray-600
-              "
-            >
+            <div v-for="(jeweiligesProgramm, index) in programmArray" :key="index" class="
+                  flex
+                  justify-evenly
+                  pl-3
+                  text-white
+                  bg-green-900
+                  mb-3
+                  border border-gray-600
+                ">
               <span class="flex w-32 items-center">{{
                 jeweiligesProgramm.programm_titel
               }}</span>
-              <img
-                v-if="fotoEnthalten(index)"
-                :src="urlOfFoto(index)"
-                class="w-20 h-20 border border-gray-50 rounded-lg my-2"
-                alt="Foto"
-              />
+              <img v-if="fotoEnthalten(index)" :src="urlOfFoto(index)"
+                class="w-20 h-20 border border-gray-50 rounded-lg my-2" alt="Foto" />
               <div v-else class="flex w-20 h-20 justify-center items-center">
                 Kein Foto
               </div>
-              <button
-                key:index
-                @click="deleteProgramm(index)"
-                class="btn btn-red"
-              >
+              <button key:index @click="deleteProgramm(index)" class="btn btn-red">
                 delete
               </button>
             </div>
@@ -268,43 +204,9 @@
               <div>
                 <div class="shadow overflow-hidden sm:rounded-md">
                   <div class="px-4 py-5 bg-gray-300 sm:p-6">
-                    <label
-                      for="name"
-                      class="block text-sm font-medium text-gray-700"
-                      >Neuer Programm-Titel</label
-                    >
-                    <input
-                      v-model="formdata.programm_titel"
-                      maxlength="70"
-                      type="text"
-                      id="programm_titel"
-                      placeholder="Pflichtfeld, max. 70 Zeichen"
-                      autocomplete="given-name"
-                      class="
-                        mt-1
-                        focus:ring-green-500 focus:border-green-500
-                        block
-                        w-full
-                        shadow-sm
-                        sm:text-sm
-                        border-gray-300
-                        rounded-md
-                      "
-                    />
-
-                    <div class="col-span-6 sm:col-span-4">
-                      <label
-                        for="email_address"
-                        class="block text-sm font-medium text-gray-700"
-                        >Programm-Textinhalt</label
-                      >
-                      <textarea
-                        maxlength="500"
-                        v-model="formdata.programm_beschreibung"
-                        id="news_textfeld"
-                        autocomplete="Beschreibung"
-                        placeholder="Optional. max. 500 Zeichen[Programmbeschreibung, wird unter dem Titel eingefügt]"
-                        class="
+                    <label for="name" class="block text-sm font-medium text-gray-700">Neuer Programm-Titel</label>
+                    <input v-model="formdata.programm_titel" maxlength="70" type="text" id="programm_titel"
+                      placeholder="Pflichtfeld, max. 70 Zeichen" autocomplete="given-name" class="
                           mt-1
                           focus:ring-green-500 focus:border-green-500
                           block
@@ -313,105 +215,97 @@
                           sm:text-sm
                           border-gray-300
                           rounded-md
-                        "
-                      />
+                        " />
+
+                    <div class="col-span-6 sm:col-span-4">
+                      <label for="email_address"
+                        class="block text-sm font-medium text-gray-700">Programm-Textinhalt</label>
+                      <textarea maxlength="500" v-model="formdata.programm_beschreibung" id="news_textfeld"
+                        autocomplete="Beschreibung"
+                        placeholder="Optional. max. 500 Zeichen[Programmbeschreibung, wird unter dem Titel eingefügt]"
+                        class="
+                            mt-1
+                            focus:ring-green-500 focus:border-green-500
+                            block
+                            w-full
+                            shadow-sm
+                            sm:text-sm
+                            border-gray-300
+                            rounded-md
+                          " />
                     </div>
 
                     <!--IMAGE FILE UPLOAD START-->
                     <div class="py-2 bg-green-900 text-white mb-1 px-2">
                       Foto Upload
                       <div class="alert">
-                        <span
-                          class="closebtn"
-                          onclick="this.parentElement.style.display='none';"
-                          >&times;</span
-                        >
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                         <strong>Achtung!</strong> Maximale Filesize: 1.9MB
                         <br />
                         Bsp: bildname.jpg oder bildname.png
                       </div>
                     </div>
-                    <form
-                      @submit.prevent="upload"
-                      class="flex items-center justify-center mt-3"
-                    >
-                      <input
-                        @change="handleOnChange"
-                        type="file"
-                        class="text-xs sm:text-base"
-                      />
-                      <button
-                        @click="showSubmitButton"
-                        class="
-                          bg-green-900
-                          text-xs
-                          sm:text-base
-                          p-1
-                          text-white
-                          border border-green-600
-                          rounded-md
-                          hover:bg-green-500
-                        "
-                      >
+                    <form @submit.prevent="upload" class="flex items-center justify-center mt-3">
+                      <input @change="handleOnChange" type="file" class="text-xs sm:text-base" />
+                      <button @click="showSubmitButton" class="
+                            bg-green-900
+                            text-xs
+                            sm:text-base
+                            p-1
+                            text-white
+                            border border-green-600
+                            rounded-md
+                            hover:bg-green-500
+                          ">
                         Upload photo
                       </button>
                     </form>
                     <div class="flex items-center justify-center">
-                      <button
-                        @click="showSubmitButton"
-                        class="
-                          bg-green-900
-                          text-xs
-                          sm:text-base
-                          p-1
-                          mt-2
-                          text-white
-                          border border-green-600
-                          rounded-md
-                          hover:bg-green-500
-                        "
-                      >
+                      <button @click="showSubmitButton" class="
+                            bg-green-900
+                            text-xs
+                            sm:text-base
+                            p-1
+                            mt-2
+                            text-white
+                            border border-green-600
+                            rounded-md
+                            hover:bg-green-500
+                          ">
                         Kein Programm-Bild beifügen
                       </button>
                     </div>
                     <!--IMAGE FILE UPLOAD END-->
                   </div>
 
-                  <div
-                    class="
-                      flex
-                      justify-center
-                      px-4
-                      py-3
-                      bg-gray-600
-                      border-t-2 border-gray-800
-                      text-right
-                      sm:px-6
-                    "
-                  >
-                    <button
-                      id="submitbutton"
-                      @click="submitform"
-                      :class="submitvisibility"
-                      class="
-                        inline-flex
+                  <div class="
+                        flex
                         justify-center
-                        py-2
                         px-4
-                        border border-transparent
-                        shadow-sm
-                        text-sm
-                        font-medium
-                        rounded-md
-                        text-white
-                        bg-green-600
-                        hover:bg-black
-                        focus:outline-none
-                        focus:ring-2
-                        focus:ring-offset-2
-                        focus:ring-green-500
-                      "
-                    >
+                        py-3
+                        bg-gray-600
+                        border-t-2 border-gray-800
+                        text-right
+                        sm:px-6
+                      ">
+                    <button id="submitbutton" @click="submitform" :class="submitvisibility" class="
+                          inline-flex
+                          justify-center
+                          py-2
+                          px-4
+                          border border-transparent
+                          shadow-sm
+                          text-sm
+                          font-medium
+                          rounded-md
+                          text-white
+                          bg-green-600
+                          hover:bg-black
+                          focus:outline-none
+                          focus:ring-2
+                          focus:ring-offset-2
+                          focus:ring-green-500
+                        ">
                       In DB Speichern
                     </button>
                   </div>
@@ -455,6 +349,8 @@ export default {
       this.$router.push({ name: "adminLogin" });
     }
     this.loadProgramm();
+    window._ = require('lodash');
+    window.axios.defaults.headers.common = { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
   },
 
   methods: {
@@ -614,12 +510,12 @@ export default {
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.container:hover input~.checkmark {
   background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
-.container input:checked ~ .checkmark {
+.container input:checked~.checkmark {
   background-color: #2196f3;
 }
 
@@ -631,7 +527,7 @@ export default {
 }
 
 /* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
+.container input:checked~.checkmark:after {
   display: block;
 }
 

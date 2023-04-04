@@ -13,8 +13,8 @@
         <!-- end willkommenstexte -->
         <!-- ********** AKTUELLES HM DATUM HIER EINGEBEN *********** -->
         <div id="hmdate" class="mt-2 descriptiontext text-white">
-          SA. 8. Oktober 2022 & SA. 15. OKTOBER 2022<br />
-          Start jeweils um 09:00 Uhr, mehr Infos dazu im Programm.
+          {{ hmHomeTextTitle }} <br />
+          {{ hmHomeTextDescription }}
         </div>
         <!-- ********** AKTUELLES HM DATUM HIER EINGEBEN ENDE ******-->
       </div>
@@ -24,42 +24,23 @@
     <div class="buttonContainer flex flex-col flex-shrink flex-grow">
       <!--Buttons mit Custom Props-->
       <router-link to="/produktreiter">
-        <Button
-          svg-source="/../../images/icons/svgs/apple1.svg"
-          button-inhalt="Produkte"
-          button-color="bg-green-900"
-          on-hover="hover:bg-yellow-50"
-        ></Button>
+        <Button svg-source="/../../images/icons/svgs/apple1.svg" button-inhalt="Produkte" button-color="bg-green-900"
+          on-hover="hover:bg-yellow-50"></Button>
       </router-link>
 
       <router-link to="/aussteller">
-        <Button
-          svg-source="/../../images/icons/svgs/aussteller.svg"
-          button-inhalt="Aussteller"
-          button-color="bg-green-900"
-          on-hover="hover:bg-yellow-200"
-        ></Button>
+        <Button svg-source="/../../images/icons/svgs/aussteller.svg" button-inhalt="Aussteller"
+          button-color="bg-green-900" on-hover="hover:bg-yellow-200"></Button>
       </router-link>
 
       <!-- <a
         href="https://www.google.com/maps/d/u/0/edit?mid=13qNnDIQECR3-pZ3-vK39FNUhoY7M-qD1&usp=sharing"
       >-->
-      <router-link to="/karte"
-        ><Button
-          svg-source="/../../images/icons/svgs/map.svg"
-          button-inhalt="Karte"
-          button-color="bg-green-900"
-          on-hover="hover:bg-yellow-300"
-        ></Button
-      ></router-link>
+      <router-link to="/karte"><Button svg-source="/../../images/icons/svgs/map.svg" button-inhalt="Karte"
+          button-color="bg-green-900" on-hover="hover:bg-yellow-300"></Button></router-link>
       <router-link to="/anreise">
-        <Button
-          svg-source="/../../images/icons/svgs/locationpointer.svg"
-          button-inhalt="Anreise"
-          button-color="bg-green-900"
-          on-hover="hover:bg-yellow-400"
-        ></Button
-      ></router-link>
+        <Button svg-source="/../../images/icons/svgs/locationpointer.svg" button-inhalt="Anreise"
+          button-color="bg-green-900" on-hover="hover:bg-yellow-400"></Button></router-link>
     </div>
     <!-- end buttoncontainer -->
   </div>
@@ -76,6 +57,8 @@ export default {
       name: "HomeContent",
       titleMessage: "Willkommen bei den Haiminger Markttagen!",
       smallDescription: "Flanieren, Probieren und Genießen...",
+      hmHomeTextTitle: "Infos zu den Markttagen 2023 folgen...", //max 45
+      hmHomeTextDescription: "" //max 56
       //nicht vergessen, Anreiseinfos entweder in DB abspeichern und von dort aus zB via Props zu laden, oder via API Call (Axios oder FetchAPI)..
     };
   },
@@ -100,5 +83,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

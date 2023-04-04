@@ -2106,43 +2106,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -3999,25 +3962,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -4025,7 +3969,11 @@ __webpack_require__.r(__webpack_exports__);
     return {
       name: "HomeContent",
       titleMessage: "Willkommen bei den Haiminger Markttagen!",
-      smallDescription: "Flanieren, Probieren und Genießen..." //nicht vergessen, Anreiseinfos entweder in DB abspeichern und von dort aus zB via Props zu laden, oder via API Call (Axios oder FetchAPI)..
+      smallDescription: "Flanieren, Probieren und Genießen...",
+      hmHomeTextTitle: "Infos zu den Markttagen 2023 folgen...",
+      //max 45
+      hmHomeTextDescription: "" //max 56
+      //nicht vergessen, Anreiseinfos entweder in DB abspeichern und von dort aus zB via Props zu laden, oder via API Call (Axios oder FetchAPI)..
 
     };
   },
@@ -6137,247 +6085,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -6416,7 +6123,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       });
     }
 
-    this.loadAussteller(); // this.loadProduktReiter();
+    this.loadAussteller();
+    window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+    window.axios.defaults.headers.common = {
+      'Authorization': "Bearer ".concat(localStorage.getItem('token'))
+    }; // this.loadProduktReiter();
     // this.aussteller_produktreiter();
   },
   methods: {
@@ -6922,107 +6633,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -7046,6 +6656,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
 
     this.loadAussteller();
+    window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+    window.axios.defaults.headers.common = {
+      'Authorization': "Bearer ".concat(localStorage.getItem('token'))
+    };
   },
   methods: {
     deleteAussteller: function deleteAussteller(index) {
@@ -7666,234 +7280,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -7927,6 +7313,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         name: "adminLogin"
       });
     }
+
+    window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+    window.axios.defaults.headers.common = {
+      'Authorization': "Bearer ".concat(localStorage.getItem('token'))
+    };
   },
   methods: {
     showSubmitButton: function showSubmitButton() {
@@ -8305,61 +7696,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Dashboard",
   data: function data() {
@@ -8376,6 +7712,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       this.$router.push({
         name: "adminLogin"
       });
+    } else {
+      var token = localStorage.getItem('token');
+      window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+      window.axios.defaults.headers.common = {
+        'Authorization': "Bearer ".concat(token)
+      };
     }
   },
   methods: {
@@ -8784,121 +8126,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -8932,6 +8159,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         name: "adminLogin"
       });
     }
+
+    window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+    window.axios.defaults.headers.common = {
+      'Authorization': "Bearer ".concat(localStorage.getItem('token'))
+    };
   },
   mounted: function mounted() {
     this.loading = false;
@@ -9108,6 +8340,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_2__);
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -9239,6 +8473,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Login",
   data: function data() {
@@ -9285,8 +8520,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 }).get("/api/sanctum/csrf-cookie").then(function (response) {
                   axios.post("/api/admin/login", _this.user).then(function (response) {
                     //debug
-                    //console.log(response.data.token);
+                    // console.log(response.data.token);
+                    // let token = response.data.token;
                     if (response.status == 201) {
+                      window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+                      var token = response.data.token;
+                      localStorage.setItem('token', response.data.token);
+                      window.axios.defaults.headers.common = {
+                        'Authorization': "Bearer ".concat(token)
+                      }; //LoggedIn-Status in localStorage abspeichern
+
                       //LoggedIn-Status in localStorage abspeichern
                       localStorage.setItem("isLoggedIn", "true");
 
@@ -9690,110 +8933,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -9825,6 +8964,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
 
     this.loadNews();
+    window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+    window.axios.defaults.headers.common = {
+      'Authorization': "Bearer ".concat(localStorage.getItem('token'))
+    };
   },
   methods: {
     fotoEnthalten: function fotoEnthalten(index) {
@@ -10330,112 +9473,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -10467,6 +9504,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
 
     this.loadProgramm();
+    window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+    window.axios.defaults.headers.common = {
+      'Authorization': "Bearer ".concat(localStorage.getItem('token'))
+    };
   },
   methods: {
     fotoEnthalten: function fotoEnthalten(index) {
@@ -11821,11 +10862,6 @@ window.axios.defaults.withCredentials = true;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 window.axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 window.axios.defaults.headers.common['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT, DELETE';
-var token = '1|exDKmoKBRC9A7Nd4JHmbjLX7p24okrmUdbooFOy0'; //old token 33|ryvH8WgjJDLqDtoZ5vEl9eTz8DJ5mNNzqMLjldpo  und 56|bGo7EMpuLHbpwIkS0DKkMGZRnQXMYViKyuy4R47J
-
-window.axios.defaults.headers.common = {
-  'Authorization': "Bearer ".concat(token)
-};
 window.axios.defaults.crossDomain = true;
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
@@ -12188,7 +11224,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-3a5949c7] {\n  background: #eee5e9;\n  border: none;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 20px;\n  text-align: center;\n  width: 250px;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-3a5949c7]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-3a5949c7] {\n  width: 100%;\n  border-top-left-radius: 20px;\n  border-top-right-radius: 20px;\n  z-index: 1;\n}\n.text[data-v-3a5949c7] {\n  padding: 0 20px 20px;\n}\n.text h3[data-v-3a5949c7] {\n  text-transform: uppercase;\n}\n.ausstellergradient[data-v-3a5949c7] {\n  background-image: linear-gradient(to bottom, #536976, #292e49);\n  background-repeat: no-repeat;\n  background-size: cover;\n  background: linear-gradient(rgba(90, 65, 42, 0.342), rgba(65, 65, 65, 0.3)),\r\n    url(\"/images/background/hb1.webp\");\n  background-repeat: no-repeat;\n  /*background-position: 50% 50%;*/\n  width: 100%;\n  min-height: 100%;\n  background-size: cover;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".articlestyling[data-v-3a5949c7] {\n  background: #eee5e9;\n  border: none;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 20px;\n  text-align: center;\n  width: 250px;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-3a5949c7]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3);\n  /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-3a5949c7] {\n  width: 100%;\n  border-top-left-radius: 20px;\n  border-top-right-radius: 20px;\n  z-index: 1;\n}\n.text[data-v-3a5949c7] {\n  padding: 0 20px 20px;\n}\n.text h3[data-v-3a5949c7] {\n  text-transform: uppercase;\n}\n.ausstellergradient[data-v-3a5949c7] {\n  background-image: linear-gradient(to bottom, #536976, #292e49);\n  background-repeat: no-repeat;\n  background-size: cover;\n  background: linear-gradient(rgba(90, 65, 42, 0.342), rgba(65, 65, 65, 0.3)),\n    url(\"/images/background/hb1.webp\");\n  background-repeat: no-repeat;\n  /*background-position: 50% 50%;*/\n  width: 100%;\n  min-height: 100%;\n  background-size: cover;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12692,7 +11728,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* Farbzonenbuttons */\n.container {\n  display: block;\n  position: relative;\n  padding-left: 2rem;\n  margin-bottom: 0.8rem;\n  cursor: pointer;\n  font-size: 0.9rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n/* Hide the browser's default radio button */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n}\n\n/* Create a custom radio button */\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 50%;\n}\n\n/* On mouse-over, add a grey background color */\n.container:hover input ~ .checkmark {\n  background-color: #ccc;\n}\n\n/* When the radio button is checked, add a blue background */\n.container input:checked ~ .checkmark {\n  background-color: #2196f3;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n.container input:checked ~ .checkmark:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n.container .checkmark:after {\n  top: 9px;\n  left: 9px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: white;\n}\n.alert {\n  padding: 20px;\n  background-color: #f44336;\n  color: white;\n}\n.closebtn {\n  margin-left: 15px;\n  color: white;\n  font-weight: bold;\n  float: right;\n  font-size: 22px;\n  line-height: 20px;\n  cursor: pointer;\n  transition: 0.3s;\n}\n.closebtn:hover {\n  color: black;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* Farbzonenbuttons */\n.container {\n  display: block;\n  position: relative;\n  padding-left: 2rem;\n  margin-bottom: 0.8rem;\n  cursor: pointer;\n  font-size: 0.9rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n/* Hide the browser's default radio button */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n}\n\n/* Create a custom radio button */\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 50%;\n}\n\n/* On mouse-over, add a grey background color */\n.container:hover input~.checkmark {\n  background-color: #ccc;\n}\n\n/* When the radio button is checked, add a blue background */\n.container input:checked~.checkmark {\n  background-color: #2196f3;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n.container input:checked~.checkmark:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n.container .checkmark:after {\n  top: 9px;\n  left: 9px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: white;\n}\n.alert {\n  padding: 20px;\n  background-color: #f44336;\n  color: white;\n}\n.closebtn {\n  margin-left: 15px;\n  color: white;\n  font-weight: bold;\n  float: right;\n  font-size: 22px;\n  line-height: 20px;\n  cursor: pointer;\n  transition: 0.3s;\n}\n.closebtn:hover {\n  color: black;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12716,7 +11752,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".btn[data-v-3adb8d1e] {\n  border-radius: 0.25rem;\n  font-weight: 700;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n}\n.btn-blue[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(59, 130, 246, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.btn-gray[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(107, 114, 128, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.btn-green[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(16, 185, 129, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.btn-red[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(239, 68, 68, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.btn-blue[data-v-3adb8d1e]:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(29, 78, 216, var(--tw-bg-opacity));\n}\n.btn-red[data-v-3adb8d1e]:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(185, 28, 28, var(--tw-bg-opacity));\n}\n.btn-gray[data-v-3adb8d1e]:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));\n}\n.btn-green[data-v-3adb8d1e]:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(4, 120, 87, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.articlestyling[data-v-3adb8d1e] {\n  background: #eee5e9;\n  border: none;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 20px;\n  text-align: center;\n  width: 250px;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-3adb8d1e]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-3adb8d1e] {\n  width: 100%;\n  border-top-left-radius: 20px;\n  border-top-right-radius: 20px;\n  z-index: 1;\n}\n.text[data-v-3adb8d1e] {\n  padding: 0 20px 20px;\n}\n.text h3[data-v-3adb8d1e] {\n  text-transform: uppercase;\n}\n.ausstellergradient[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: 50% 50%;\n  background-size: cover;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".btn[data-v-3adb8d1e] {\n  border-radius: 0.25rem;\n  font-weight: 700;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  padding-left: 0.5rem;\n  padding-right: 0.5rem;\n}\n.btn-blue[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(59, 130, 246, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.btn-gray[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(107, 114, 128, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.btn-green[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(16, 185, 129, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.btn-red[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(239, 68, 68, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.btn-blue[data-v-3adb8d1e]:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(29, 78, 216, var(--tw-bg-opacity));\n}\n.btn-red[data-v-3adb8d1e]:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(185, 28, 28, var(--tw-bg-opacity));\n}\n.btn-gray[data-v-3adb8d1e]:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));\n}\n.btn-green[data-v-3adb8d1e]:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(4, 120, 87, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.articlestyling[data-v-3adb8d1e] {\n  background: #eee5e9;\n  border: none;\n  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);\n  border-radius: 20px;\n  text-align: center;\n  width: 250px;\n  transition: transform 0.3s;\n  z-index: 1;\n}\narticle[data-v-3adb8d1e]:hover {\n  transform: translateY(5px);\n  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3);\n  /*Shadow bewegt sich mit nach unten*/\n}\narticle img[data-v-3adb8d1e] {\n  width: 100%;\n  border-top-left-radius: 20px;\n  border-top-right-radius: 20px;\n  z-index: 1;\n}\n.text[data-v-3adb8d1e] {\n  padding: 0 20px 20px;\n}\n.text h3[data-v-3adb8d1e] {\n  text-transform: uppercase;\n}\n.ausstellergradient[data-v-3adb8d1e] {\n  --tw-bg-opacity: 1;\n  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: 50% 50%;\n  background-size: cover;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12740,7 +11776,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* Farbzonenbuttons */\n.container {\n  display: block;\n  position: relative;\n  padding-left: 2rem;\n  margin-bottom: 0.8rem;\n  cursor: pointer;\n  font-size: 0.9rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n/* Hide the browser's default radio button */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n}\n\n/* Create a custom radio button */\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 50%;\n}\n\n/* On mouse-over, add a grey background color */\n.container:hover input ~ .checkmark {\n  background-color: #ccc;\n}\n\n/* When the radio button is checked, add a blue background */\n.container input:checked ~ .checkmark {\n  background-color: #2196f3;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n.container input:checked ~ .checkmark:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n.container .checkmark:after {\n  top: 9px;\n  left: 9px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: white;\n}\n.alert {\n  padding: 20px;\n  background-color: #f44336;\n  color: white;\n}\n.closebtn {\n  margin-left: 15px;\n  color: white;\n  font-weight: bold;\n  float: right;\n  font-size: 22px;\n  line-height: 20px;\n  cursor: pointer;\n  transition: 0.3s;\n}\n.closebtn:hover {\n  color: black;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* Farbzonenbuttons */\n.container {\n  display: block;\n  position: relative;\n  padding-left: 2rem;\n  margin-bottom: 0.8rem;\n  cursor: pointer;\n  font-size: 0.9rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n/* Hide the browser's default radio button */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n}\n\n/* Create a custom radio button */\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 50%;\n}\n\n/* On mouse-over, add a grey background color */\n.container:hover input~.checkmark {\n  background-color: #ccc;\n}\n\n/* When the radio button is checked, add a blue background */\n.container input:checked~.checkmark {\n  background-color: #2196f3;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n.container input:checked~.checkmark:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n.container .checkmark:after {\n  top: 9px;\n  left: 9px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: white;\n}\n.alert {\n  padding: 20px;\n  background-color: #f44336;\n  color: white;\n}\n.closebtn {\n  margin-left: 15px;\n  color: white;\n  font-weight: bold;\n  float: right;\n  font-size: 22px;\n  line-height: 20px;\n  cursor: pointer;\n  transition: 0.3s;\n}\n.closebtn:hover {\n  color: black;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12764,7 +11800,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".dashboardbackground {\n  --tw-bg-opacity: 1;\n  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));\n  background: linear-gradient(rgb(1, 15, 0, 0.99), rgba(0, 0, 0, 0.97)),\r\n    url(\"/images/icons/svgs/wheels.png\");\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".dashboardbackground {\n  --tw-bg-opacity: 1;\n  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));\n  background: linear-gradient(rgb(1, 15, 0, 0.99), rgba(0, 0, 0, 0.97)),\n    url(\"/images/icons/svgs/wheels.png\");\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12788,7 +11824,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* Farbzonenbuttons */\n.container {\n  display: block;\n  position: relative;\n  padding-left: 2rem;\n  margin-bottom: 0.8rem;\n  cursor: pointer;\n  font-size: 0.9rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n/* Hide the browser's default radio button */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n}\n\n/* Create a custom radio button */\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 50%;\n}\n\n/* On mouse-over, add a grey background color */\n.container:hover input ~ .checkmark {\n  background-color: #ccc;\n}\n\n/* When the radio button is checked, add a blue background */\n.container input:checked ~ .checkmark {\n  background-color: #2196f3;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n.container input:checked ~ .checkmark:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n.container .checkmark:after {\n  top: 9px;\n  left: 9px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: white;\n}\n.alert {\n  padding: 20px;\n  background-color: #f44336;\n  color: white;\n}\n.closebtn {\n  margin-left: 15px;\n  color: white;\n  font-weight: bold;\n  float: right;\n  font-size: 22px;\n  line-height: 20px;\n  cursor: pointer;\n  transition: 0.3s;\n}\n.closebtn:hover {\n  color: black;\n}\n.btn-red {\n  --tw-bg-opacity: 1;\n  background-color: rgba(239, 68, 68, var(--tw-bg-opacity));\n  --tw-border-opacity: 1;\n  border-color: rgba(255, 255, 255, var(--tw-border-opacity));\n  border-radius: 0.5rem;\n  border-width: 1px;\n  height: 50%;\n  margin-top: auto;\n  margin-bottom: auto;\n  padding: 0.25rem;\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.btn-red:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(185, 28, 28, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* Farbzonenbuttons */\n.container {\n  display: block;\n  position: relative;\n  padding-left: 2rem;\n  margin-bottom: 0.8rem;\n  cursor: pointer;\n  font-size: 0.9rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n/* Hide the browser's default radio button */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n}\n\n/* Create a custom radio button */\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 50%;\n}\n\n/* On mouse-over, add a grey background color */\n.container:hover input~.checkmark {\n  background-color: #ccc;\n}\n\n/* When the radio button is checked, add a blue background */\n.container input:checked~.checkmark {\n  background-color: #2196f3;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n.container input:checked~.checkmark:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n.container .checkmark:after {\n  top: 9px;\n  left: 9px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: white;\n}\n.alert {\n  padding: 20px;\n  background-color: #f44336;\n  color: white;\n}\n.closebtn {\n  margin-left: 15px;\n  color: white;\n  font-weight: bold;\n  float: right;\n  font-size: 22px;\n  line-height: 20px;\n  cursor: pointer;\n  transition: 0.3s;\n}\n.closebtn:hover {\n  color: black;\n}\n.btn-red {\n  --tw-bg-opacity: 1;\n  background-color: rgba(239, 68, 68, var(--tw-bg-opacity));\n  --tw-border-opacity: 1;\n  border-color: rgba(255, 255, 255, var(--tw-border-opacity));\n  border-radius: 0.5rem;\n  border-width: 1px;\n  height: 50%;\n  margin-top: auto;\n  margin-bottom: auto;\n  padding: 0.25rem;\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n.btn-red:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgba(185, 28, 28, var(--tw-bg-opacity));\n  --tw-text-opacity: 1;\n  color: rgba(255, 255, 255, var(--tw-text-opacity));\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12812,7 +11848,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* Farbzonenbuttons */\n.container {\n  display: block;\n  position: relative;\n  padding-left: 2rem;\n  margin-bottom: 0.8rem;\n  cursor: pointer;\n  font-size: 0.9rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n/* Hide the browser's default radio button */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n}\n\n/* Create a custom radio button */\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 50%;\n}\n\n/* On mouse-over, add a grey background color */\n.container:hover input ~ .checkmark {\n  background-color: #ccc;\n}\n\n/* When the radio button is checked, add a blue background */\n.container input:checked ~ .checkmark {\n  background-color: #2196f3;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n.container input:checked ~ .checkmark:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n.container .checkmark:after {\n  top: 9px;\n  left: 9px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: white;\n}\n.alert {\n  padding: 20px;\n  background-color: #f44336;\n  color: white;\n}\n.closebtn {\n  margin-left: 15px;\n  color: white;\n  font-weight: bold;\n  float: right;\n  font-size: 22px;\n  line-height: 20px;\n  cursor: pointer;\n  transition: 0.3s;\n}\n.closebtn:hover {\n  color: black;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* Farbzonenbuttons */\n.container {\n  display: block;\n  position: relative;\n  padding-left: 2rem;\n  margin-bottom: 0.8rem;\n  cursor: pointer;\n  font-size: 0.9rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n/* Hide the browser's default radio button */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n}\n\n/* Create a custom radio button */\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 50%;\n}\n\n/* On mouse-over, add a grey background color */\n.container:hover input~.checkmark {\n  background-color: #ccc;\n}\n\n/* When the radio button is checked, add a blue background */\n.container input:checked~.checkmark {\n  background-color: #2196f3;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n.container input:checked~.checkmark:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n.container .checkmark:after {\n  top: 9px;\n  left: 9px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: white;\n}\n.alert {\n  padding: 20px;\n  background-color: #f44336;\n  color: white;\n}\n.closebtn {\n  margin-left: 15px;\n  color: white;\n  font-weight: bold;\n  float: right;\n  font-size: 22px;\n  line-height: 20px;\n  cursor: pointer;\n  transition: 0.3s;\n}\n.closebtn:hover {\n  color: black;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12836,7 +11872,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* Farbzonenbuttons */\n.container {\n  display: block;\n  position: relative;\n  padding-left: 2rem;\n  margin-bottom: 0.8rem;\n  cursor: pointer;\n  font-size: 0.9rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n/* Hide the browser's default radio button */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n}\n\n/* Create a custom radio button */\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 50%;\n}\n\n/* On mouse-over, add a grey background color */\n.container:hover input ~ .checkmark {\n  background-color: #ccc;\n}\n\n/* When the radio button is checked, add a blue background */\n.container input:checked ~ .checkmark {\n  background-color: #2196f3;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n.container input:checked ~ .checkmark:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n.container .checkmark:after {\n  top: 9px;\n  left: 9px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: white;\n}\n.alert {\n  padding: 20px;\n  background-color: #f44336;\n  color: white;\n}\n.closebtn {\n  margin-left: 15px;\n  color: white;\n  font-weight: bold;\n  float: right;\n  font-size: 22px;\n  line-height: 20px;\n  cursor: pointer;\n  transition: 0.3s;\n}\n.closebtn:hover {\n  color: black;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* Farbzonenbuttons */\n.container {\n  display: block;\n  position: relative;\n  padding-left: 2rem;\n  margin-bottom: 0.8rem;\n  cursor: pointer;\n  font-size: 0.9rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n/* Hide the browser's default radio button */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n}\n\n/* Create a custom radio button */\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 50%;\n}\n\n/* On mouse-over, add a grey background color */\n.container:hover input~.checkmark {\n  background-color: #ccc;\n}\n\n/* When the radio button is checked, add a blue background */\n.container input:checked~.checkmark {\n  background-color: #2196f3;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n.container input:checked~.checkmark:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n.container .checkmark:after {\n  top: 9px;\n  left: 9px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: white;\n}\n.alert {\n  padding: 20px;\n  background-color: #f44336;\n  color: white;\n}\n.closebtn {\n  margin-left: 15px;\n  color: white;\n  font-weight: bold;\n  float: right;\n  font-size: 22px;\n  line-height: 20px;\n  cursor: pointer;\n  transition: 0.3s;\n}\n.closebtn:hover {\n  color: black;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -38906,7 +37942,7 @@ var render = function() {
         "div",
         {
           staticClass:
-            "\n        grid grid-cols-1\n        sm:grid-cols-2\n        lg:grid-cols-3\n        gap-8\n        items-center\n        w-full\n      "
+            "\n            grid grid-cols-1\n            sm:grid-cols-2\n            lg:grid-cols-3\n            gap-8\n            items-center\n            w-full\n          "
         },
         _vm._l(_vm.aussteller, function(jeweiligerAussteller, index) {
           return _c(
@@ -38923,7 +37959,7 @@ var render = function() {
                   })
                 : _c("img", {
                     staticClass:
-                      "\n            filter-white\n            bg-gray-50 bg-opacity-20\n            border-b-2 border-black\n          ",
+                      "\n                filter-white\n                bg-gray-50 bg-opacity-20\n                border-b-2 border-black\n              ",
                     attrs: {
                       src: "/images/icons/svgs/aussteller.svg",
                       alt: "Ausstellerfoto"
@@ -38964,7 +38000,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              bg-gray-800\n              relative\n              bottom-0\n              left-0\n              right-0\n              h-10\n              flex\n              justify-center\n              items-center\n              rounded-lg\n            "
+                          "\n                  bg-gray-800\n                  relative\n                  bottom-0\n                  left-0\n                  right-0\n                  h-10\n                  flex\n                  justify-center\n                  items-center\n                  rounded-lg\n                "
                       },
                       [
                         _c(
@@ -39016,31 +38052,20 @@ var render = function() {
                                 ])
                               : _vm._e(),
                             _vm._v(" "),
-                            _c(
-                              "a",
-                              {
-                                attrs: {
-                                  href:
-                                    "https://www.google.com/maps/d/embed?mid=18zYJ568aZGAngWapMG2ZriZWZXYI-vI&ehbc=2E312F"
-                                }
-                              },
-                              [
-                                _vm.zonenFarbeNotEmpty(index)
-                                  ? _c(
-                                      "li",
-                                      { staticClass: "h-5 w-32" },
-                                      [
-                                        _c("Farbzone", {
-                                          attrs: {
-                                            "zonen-farbe": _vm.zonenFarbe(index)
-                                          }
-                                        })
-                                      ],
-                                      1
-                                    )
-                                  : _vm._e()
-                              ]
-                            )
+                            _vm.zonenFarbeNotEmpty(index)
+                              ? _c(
+                                  "li",
+                                  { staticClass: "h-5 w-32" },
+                                  [
+                                    _c("Farbzone", {
+                                      attrs: {
+                                        "zonen-farbe": _vm.zonenFarbe(index)
+                                      }
+                                    })
+                                  ],
+                                  1
+                                )
+                              : _vm._e()
                           ]
                         )
                       ]
@@ -40745,7 +39770,20 @@ var render = function() {
           _vm._v("\n        " + _vm._s(_vm.smallDescription) + "\n      ")
         ]),
         _vm._v(" "),
-        _vm._m(0)
+        _c(
+          "div",
+          {
+            staticClass: "mt-2 descriptiontext text-white",
+            attrs: { id: "hmdate" }
+          },
+          [
+            _vm._v("\n        " + _vm._s(_vm.hmHomeTextTitle) + " "),
+            _c("br"),
+            _vm._v(
+              "\n        " + _vm._s(_vm.hmHomeTextDescription) + "\n      "
+            )
+          ]
+        )
       ])
     ]),
     _vm._v(" "),
@@ -40821,27 +39859,7 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "mt-2 descriptiontext text-white",
-        attrs: { id: "hmdate" }
-      },
-      [
-        _vm._v("\n        SA. 8. Oktober 2022 & SA. 15. OKTOBER 2022"),
-        _c("br"),
-        _vm._v(
-          "\n        Start jeweils um 09:00 Uhr, mehr Infos dazu im Programm.\n      "
-        )
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -42540,7 +41558,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              flex-1 flex\n              items-center\n              justify-center\n              sm:items-stretch\n              sm:justify-start\n            "
+                          "\n                flex-1 flex\n                items-center\n                justify-center\n                sm:items-stretch\n                sm:justify-start\n              "
                       },
                       [
                         _c("div", {
@@ -42568,7 +41586,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700\n                      hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                                 },
                                 [
                                   _c(
@@ -42589,7 +41607,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700\n                      hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                                 },
                                 [
                                   _c(
@@ -42605,7 +41623,7 @@ var render = function() {
                                 "a",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700\n                      hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    ",
                                   attrs: { href: "#" }
                                 },
                                 [_vm._v("Programm")]
@@ -42615,7 +41633,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700\n                      hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                                 },
                                 [
                                   _c(
@@ -42641,14 +41659,14 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              absolute\n              inset-y-0\n              right-0\n              flex\n              items-center\n              pr-2\n              sm:static\n              sm:inset-auto\n              sm:ml-6\n              sm:pr-0\n            "
+                          "\n                absolute\n                inset-y-0\n                right-0\n                flex\n                items-center\n                pr-2\n                sm:static\n                sm:inset-auto\n                sm:ml-6\n                sm:pr-0\n              "
                       },
                       [
                         _c(
                           "div",
                           {
                             staticClass:
-                              "\n                text-gray-300\n                hover:bg-red-900\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
+                              "\n                  text-gray-300\n                  hover:bg-red-900\n                  hover:text-white\n                  px-3\n                  py-2\n                  rounded-md\n                  text-sm\n                  font-medium\n                "
                           },
                           [
                             _c(
@@ -42691,7 +41709,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              bg-gray-900\n              text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                bg-gray-900\n                text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              ",
                       attrs: { href: "#" }
                     },
                     [_vm._v("Dashboard")]
@@ -42701,7 +41719,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                text-gray-300\n                hover:bg-gray-700\n                hover:text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              ",
                       attrs: { href: "#" }
                     },
                     [
@@ -42720,7 +41738,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                text-gray-300\n                hover:bg-gray-700\n                hover:text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              ",
                       attrs: { href: "#" }
                     },
                     [_vm._v("News")]
@@ -42730,7 +41748,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                text-gray-300\n                hover:bg-gray-700\n                hover:text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              ",
                       attrs: { href: "#" }
                     },
                     [_vm._v("Programm")]
@@ -42767,7 +41785,7 @@ var render = function() {
                         {
                           key: index,
                           staticClass:
-                            "\n              flex\n              justify-center\n              pl-3\n              text-white\n              bg-green-900\n              mb-3\n              border border-gray-600\n            "
+                            "\n                flex\n                justify-center\n                pl-3\n                text-white\n                bg-green-900\n                mb-3\n                border border-gray-600\n              "
                         },
                         [
                           _c("span", { staticClass: "inline-flex" }, [
@@ -42812,7 +41830,7 @@ var render = function() {
                                     }
                                   ],
                                   staticClass:
-                                    "\n                      mt-1\n                      focus:ring-green-500\n                      focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
+                                    "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
                                   attrs: {
                                     maxlength: "30",
                                     type: "text",
@@ -42845,7 +41863,7 @@ var render = function() {
                                   },
                                   [
                                     _vm._v(
-                                      "Handelsname (Branding-Name) des Ausstellers"
+                                      "Handelsname (Branding-Name) des\n                    Ausstellers"
                                     )
                                   ]
                                 ),
@@ -42862,7 +41880,7 @@ var render = function() {
                                     }
                                   ],
                                   staticClass:
-                                    "\n                      mt-1\n                      focus:ring-green-500\n                      focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
+                                    "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
                                   attrs: {
                                     maxlength: "30",
                                     type: "text",
@@ -42912,7 +41930,7 @@ var render = function() {
                                         }
                                       ],
                                       staticClass:
-                                        "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
+                                        "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
                                       attrs: {
                                         maxlength: "100",
                                         type: "text",
@@ -42965,7 +41983,7 @@ var render = function() {
                                         "span",
                                         {
                                           staticClass:
-                                            "\n                          inline-flex\n                          items-center\n                          px-3\n                          rounded-l-md\n                          border border-r-0 border-gray-300\n                          bg-gray-50\n                          text-gray-500 text-sm\n                        "
+                                            "\n                            inline-flex\n                            items-center\n                            px-3\n                            rounded-l-md\n                            border border-r-0 border-gray-300\n                            bg-gray-50\n                            text-gray-500 text-sm\n                          "
                                         },
                                         [
                                           _vm._v(
@@ -42987,7 +42005,7 @@ var render = function() {
                                           }
                                         ],
                                         staticClass:
-                                          "\n                          focus:ring-green-500\n                          focus:border-green-500\n                          flex-1\n                          block\n                          w-full\n                          rounded-none rounded-r-md\n                          sm:text-sm\n                          border-gray-300\n                        ",
+                                          "\n                            focus:ring-green-500\n                            focus:border-green-500\n                            flex-1\n                            block\n                            w-full\n                            rounded-none rounded-r-md\n                            sm:text-sm\n                            border-gray-300\n                          ",
                                         attrs: {
                                           maxlength: "50",
                                           type: "text",
@@ -43042,7 +42060,7 @@ var render = function() {
                                         }
                                       ],
                                       staticClass:
-                                        "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
+                                        "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
                                       attrs: {
                                         maxlength: "250",
                                         id: "beschreibung",
@@ -43078,7 +42096,11 @@ var render = function() {
                                         "block text-sm font-medium text-gray-700",
                                       attrs: { for: "street_address" }
                                     },
-                                    [_vm._v("Zonenfarbe am Markt")]
+                                    [
+                                      _vm._v(
+                                        "Zonenfarbe am\n                      Markt"
+                                      )
+                                    ]
                                   ),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "pt-3" }, [
@@ -43390,7 +42412,7 @@ var render = function() {
                                       "button",
                                       {
                                         staticClass:
-                                          "\n                        bg-green-900\n                        text-xs\n                        sm:text-base\n                        p-1\n                        text-white\n                        border border-green-600\n                        rounded-md\n                        hover:bg-green-500\n                      ",
+                                          "\n                          bg-green-900\n                          text-xs\n                          sm:text-base\n                          p-1\n                          text-white\n                          border border-green-600\n                          rounded-md\n                          hover:bg-green-500\n                        ",
                                         on: { click: _vm.showSubmitButton }
                                       },
                                       [
@@ -43413,7 +42435,7 @@ var render = function() {
                                       "button",
                                       {
                                         staticClass:
-                                          "\n                        bg-green-900\n                        text-xs\n                        sm:text-base\n                        p-1\n                        mt-2\n                        text-white\n                        border border-green-600\n                        rounded-md\n                        hover:bg-green-500\n                      ",
+                                          "\n                          bg-green-900\n                          text-xs\n                          sm:text-base\n                          p-1\n                          mt-2\n                          text-white\n                          border border-green-600\n                          rounded-md\n                          hover:bg-green-500\n                        ",
                                         on: { click: _vm.showSubmitButton }
                                       },
                                       [
@@ -43431,14 +42453,14 @@ var render = function() {
                               "div",
                               {
                                 staticClass:
-                                  "\n                    flex\n                    justify-center\n                    px-4\n                    py-3\n                    bg-gray-600\n                    border-t-2 border-gray-800\n                    text-right\n                    sm:px-6\n                  "
+                                  "\n                      flex\n                      justify-center\n                      px-4\n                      py-3\n                      bg-gray-600\n                      border-t-2 border-gray-800\n                      text-right\n                      sm:px-6\n                    "
                               },
                               [
                                 _c(
                                   "button",
                                   {
                                     staticClass:
-                                      "\n                      inline-flex\n                      justify-center\n                      py-2\n                      px-4\n                      border border-transparent\n                      shadow-sm\n                      text-sm\n                      font-medium\n                      rounded-md\n                      text-white\n                      bg-green-600\n                      hover:bg-black\n                      focus:outline-none\n                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n                    ",
+                                      "\n                        inline-flex\n                        justify-center\n                        py-2\n                        px-4\n                        border border-transparent\n                        shadow-sm\n                        text-sm\n                        font-medium\n                        rounded-md\n                        text-white\n                        bg-green-600\n                        hover:bg-black\n                        focus:outline-none\n                        focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n                      ",
                                     class: _vm.submitvisibility,
                                     attrs: { id: "submitbutton" },
                                     on: { click: _vm.submitform }
@@ -43541,7 +42563,7 @@ var render = function() {
           "div",
           {
             staticClass:
-              "\n      flex\n      w-full\n      h-full\n      items-center\n      justify-center\n      text-red-900\n      bg-gray-900\n    "
+              "\n            flex\n            w-full\n            h-full\n            items-center\n            justify-center\n            text-red-900\n            bg-gray-900\n          "
           },
           [
             _vm._v(
@@ -43606,7 +42628,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              flex-1 flex\n              items-center\n              justify-center\n              sm:items-stretch\n              sm:justify-start\n            "
+                          "\n                    flex-1 flex\n                    items-center\n                    justify-center\n                    sm:items-stretch\n                    sm:justify-start\n                  "
                       },
                       [
                         _c("div", {
@@ -43634,7 +42656,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    bg-gray-900\n                    text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
+                                    "\n                          bg-gray-900\n                          text-white\n                          px-3\n                          py-2\n                          rounded-md\n                          text-sm\n                          font-medium\n                        ",
                                   attrs: { "aria-current": "page" }
                                 },
                                 [
@@ -43656,7 +42678,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                          text-gray-300\n                          hover:bg-gray-700\n                          hover:text-white\n                          px-3\n                          py-2\n                          rounded-md\n                          text-sm\n                          font-medium\n                        "
                                 },
                                 [
                                   _c(
@@ -43672,7 +42694,7 @@ var render = function() {
                                 "a",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
+                                    "\n                          text-gray-300\n                          hover:bg-gray-700\n                          hover:text-white\n                          px-3\n                          py-2\n                          rounded-md\n                          text-sm\n                          font-medium\n                        ",
                                   attrs: { href: "#" }
                                 },
                                 [
@@ -43693,7 +42715,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                          text-gray-300\n                          hover:bg-gray-700\n                          hover:text-white\n                          px-3\n                          py-2\n                          rounded-md\n                          text-sm\n                          font-medium\n                        "
                                 },
                                 [
                                   _c(
@@ -43719,14 +42741,14 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              absolute\n              inset-y-0\n              right-0\n              flex\n              items-center\n              pr-2\n              sm:static\n              sm:inset-auto\n              sm:ml-6\n              sm:pr-0\n            "
+                          "\n                    absolute\n                    inset-y-0\n                    right-0\n                    flex\n                    items-center\n                    pr-2\n                    sm:static\n                    sm:inset-auto\n                    sm:ml-6\n                    sm:pr-0\n                  "
                       },
                       [
                         _c(
                           "div",
                           {
                             staticClass:
-                              "\n                text-gray-300\n                hover:bg-red-900\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
+                              "\n                      text-gray-300\n                      hover:bg-red-900\n                      hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                           },
                           [
                             _c(
@@ -43769,7 +42791,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    block\n                    px-3\n                    py-1\n                    rounded-md\n                    text-base\n                    font-medium\n                  ",
                       attrs: { href: "#" }
                     },
                     [
@@ -43784,7 +42806,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              bg-gray-900\n              text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                    bg-gray-900\n                    text-white\n                    block\n                    px-3\n                    py-1\n                    rounded-md\n                    text-base\n                    font-medium\n                  ",
                       attrs: { href: "#", "aria-current": "page" }
                     },
                     [_vm._v("Aussteller")]
@@ -43794,7 +42816,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            "
+                        "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    block\n                    px-3\n                    py-1\n                    rounded-md\n                    text-base\n                    font-medium\n                  "
                     },
                     [
                       _c(
@@ -43810,7 +42832,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    block\n                    px-3\n                    py-1\n                    rounded-md\n                    text-base\n                    font-medium\n                  ",
                       attrs: { href: "#" }
                     },
                     [
@@ -43846,7 +42868,7 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "\n            inline-flex\n            justify-start\n            gap-3\n            pt-5\n            px-4\n            items-center\n            w-full\n          "
+                    "\n                  inline-flex\n                  justify-start\n                  gap-3\n                  pt-5\n                  px-4\n                  items-center\n                  w-full\n                "
                 },
                 [
                   _c(
@@ -43880,7 +42902,7 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "\n            grid grid-cols-1\n            sm:grid-cols-2\n            lg:grid-cols-3\n            gap-8\n            items-center\n            w-full\n            pt-4\n          "
+                    "\n                  grid grid-cols-1\n                  sm:grid-cols-2\n                  lg:grid-cols-3\n                  gap-8\n                  items-center\n                  w-full\n                  pt-4\n                "
                 },
                 [
                   _vm.error
@@ -43903,7 +42925,7 @@ var render = function() {
                             })
                           : _c("img", {
                               staticClass:
-                                "\n                filter-white\n                bg-gray-50 bg-opacity-20\n                border-b-2 border-black\n              ",
+                                "\n                      filter-white\n                      bg-gray-50 bg-opacity-20\n                      border-b-2 border-black\n                    ",
                               attrs: {
                                 src: "/images/icons/svgs/aussteller.svg",
                                 alt: "Ausstellerfoto"
@@ -43965,7 +42987,7 @@ var render = function() {
                               "div",
                               {
                                 staticClass:
-                                  "\n                  bg-gray-800\n                  relative\n                  bottom-0\n                  left-0\n                  right-0\n                  h-10\n                  flex\n                  justify-center\n                  items-center\n                  rounded-lg\n                "
+                                  "\n                        bg-gray-800\n                        relative\n                        bottom-0\n                        left-0\n                        right-0\n                        h-10\n                        flex\n                        justify-center\n                        items-center\n                        rounded-lg\n                      "
                               },
                               [
                                 _c(
@@ -44117,7 +43139,7 @@ var render = function() {
           "div",
           {
             staticClass:
-              "\n      flex\n      w-full\n      h-full\n      items-center\n      justify-center\n      text-red-900\n      bg-gray-900\n    "
+              "\n        flex\n        w-full\n        h-full\n        items-center\n        justify-center\n        text-red-900\n        bg-gray-900\n      "
           },
           [
             _vm._v(
@@ -44182,7 +43204,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              flex-1 flex\n              items-center\n              justify-center\n              sm:items-stretch\n              sm:justify-start\n            "
+                          "\n                flex-1 flex\n                items-center\n                justify-center\n                sm:items-stretch\n                sm:justify-start\n              "
                       },
                       [
                         _c("div", {
@@ -44210,7 +43232,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700\n                      hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                                 },
                                 [
                                   _c(
@@ -44231,7 +43253,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700\n                      hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                                 },
                                 [
                                   _c(
@@ -44247,7 +43269,7 @@ var render = function() {
                                 "a",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700\n                      hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    ",
                                   attrs: { href: "#" }
                                 },
                                 [_vm._v("Programm")]
@@ -44257,7 +43279,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700\n                      hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                                 },
                                 [
                                   _c(
@@ -44283,14 +43305,14 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              absolute\n              inset-y-0\n              right-0\n              flex\n              items-center\n              pr-2\n              sm:static\n              sm:inset-auto\n              sm:ml-6\n              sm:pr-0\n            "
+                          "\n                absolute\n                inset-y-0\n                right-0\n                flex\n                items-center\n                pr-2\n                sm:static\n                sm:inset-auto\n                sm:ml-6\n                sm:pr-0\n              "
                       },
                       [
                         _c(
                           "div",
                           {
                             staticClass:
-                              "\n                text-gray-300\n                hover:bg-red-900\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
+                              "\n                  text-gray-300\n                  hover:bg-red-900\n                  hover:text-white\n                  px-3\n                  py-2\n                  rounded-md\n                  text-sm\n                  font-medium\n                "
                           },
                           [
                             _c(
@@ -44333,7 +43355,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              bg-gray-900\n              text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                bg-gray-900\n                text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              ",
                       attrs: { href: "#", "aria-current": "page" }
                     },
                     [_vm._v("Dashboard")]
@@ -44343,7 +43365,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                text-gray-300\n                hover:bg-gray-700\n                hover:text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              ",
                       attrs: { href: "#" }
                     },
                     [
@@ -44362,7 +43384,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                text-gray-300\n                hover:bg-gray-700\n                hover:text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              ",
                       attrs: { href: "#" }
                     },
                     [_vm._v("News")]
@@ -44372,7 +43394,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                text-gray-300\n                hover:bg-gray-700\n                hover:text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              ",
                       attrs: { href: "#" }
                     },
                     [_vm._v("Programm")]
@@ -44423,7 +43445,7 @@ var render = function() {
                                   }
                                 ],
                                 staticClass:
-                                  "\n                      mt-1\n                      focus:ring-green-500\n                      focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
+                                  "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
                                 attrs: {
                                   maxlength: "30",
                                   type: "text",
@@ -44456,7 +43478,7 @@ var render = function() {
                                 },
                                 [
                                   _vm._v(
-                                    "Handelsname (Branding-Name) des Ausstellers"
+                                    "Handelsname (Branding-Name) des\n                    Ausstellers"
                                   )
                                 ]
                               ),
@@ -44472,7 +43494,7 @@ var render = function() {
                                   }
                                 ],
                                 staticClass:
-                                  "\n                      mt-1\n                      focus:ring-green-500\n                      focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
+                                  "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
                                 attrs: {
                                   maxlength: "30",
                                   type: "text",
@@ -44521,7 +43543,7 @@ var render = function() {
                                       }
                                     ],
                                     staticClass:
-                                      "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
+                                      "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
                                     attrs: {
                                       maxlength: "100",
                                       type: "text",
@@ -44574,7 +43596,7 @@ var render = function() {
                                       "span",
                                       {
                                         staticClass:
-                                          "\n                          inline-flex\n                          items-center\n                          px-3\n                          rounded-l-md\n                          border border-r-0 border-gray-300\n                          bg-gray-50\n                          text-gray-500 text-sm\n                        "
+                                          "\n                            inline-flex\n                            items-center\n                            px-3\n                            rounded-l-md\n                            border border-r-0 border-gray-300\n                            bg-gray-50\n                            text-gray-500 text-sm\n                          "
                                       },
                                       [
                                         _vm._v(
@@ -44595,7 +43617,7 @@ var render = function() {
                                         }
                                       ],
                                       staticClass:
-                                        "\n                          focus:ring-green-500\n                          focus:border-green-500\n                          flex-1\n                          block\n                          w-full\n                          rounded-none rounded-r-md\n                          sm:text-sm\n                          border-gray-300\n                        ",
+                                        "\n                            focus:ring-green-500\n                            focus:border-green-500\n                            flex-1\n                            block\n                            w-full\n                            rounded-none rounded-r-md\n                            sm:text-sm\n                            border-gray-300\n                          ",
                                       attrs: {
                                         maxlength: "50",
                                         type: "text",
@@ -44649,7 +43671,7 @@ var render = function() {
                                       }
                                     ],
                                     staticClass:
-                                      "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
+                                      "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
                                     attrs: {
                                       maxlength: "250",
                                       id: "beschreibung",
@@ -44685,7 +43707,11 @@ var render = function() {
                                       "block text-sm font-medium text-gray-700",
                                     attrs: { for: "street_address" }
                                   },
-                                  [_vm._v("Zonenfarbe am Markt")]
+                                  [
+                                    _vm._v(
+                                      "Zonenfarbe am\n                      Markt"
+                                    )
+                                  ]
                                 ),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "pt-3" }, [
@@ -44969,7 +43995,7 @@ var render = function() {
                                     "button",
                                     {
                                       staticClass:
-                                        "\n                        bg-green-900\n                        text-xs\n                        sm:text-base\n                        p-1\n                        text-white\n                        border border-green-600\n                        rounded-md\n                        hover:bg-green-500\n                      ",
+                                        "\n                          bg-green-900\n                          text-xs\n                          sm:text-base\n                          p-1\n                          text-white\n                          border border-green-600\n                          rounded-md\n                          hover:bg-green-500\n                        ",
                                       on: { click: _vm.showSubmitButton }
                                     },
                                     [
@@ -44992,7 +44018,7 @@ var render = function() {
                                     "button",
                                     {
                                       staticClass:
-                                        "\n                        bg-green-900\n                        text-xs\n                        sm:text-base\n                        p-1\n                        mt-2\n                        text-white\n                        border border-green-600\n                        rounded-md\n                        hover:bg-green-500\n                      ",
+                                        "\n                          bg-green-900\n                          text-xs\n                          sm:text-base\n                          p-1\n                          mt-2\n                          text-white\n                          border border-green-600\n                          rounded-md\n                          hover:bg-green-500\n                        ",
                                       on: { click: _vm.showSubmitButton }
                                     },
                                     [
@@ -45010,14 +44036,14 @@ var render = function() {
                             "div",
                             {
                               staticClass:
-                                "\n                    flex\n                    justify-center\n                    px-4\n                    py-3\n                    bg-gray-600\n                    border-t-2 border-gray-800\n                    text-right\n                    sm:px-6\n                  "
+                                "\n                      flex\n                      justify-center\n                      px-4\n                      py-3\n                      bg-gray-600\n                      border-t-2 border-gray-800\n                      text-right\n                      sm:px-6\n                    "
                             },
                             [
                               _c(
                                 "button",
                                 {
                                   staticClass:
-                                    "\n                      inline-flex\n                      justify-center\n                      py-2\n                      px-4\n                      border border-transparent\n                      shadow-sm\n                      text-sm\n                      font-medium\n                      rounded-md\n                      text-white\n                      bg-green-600\n                      hover:bg-black\n                      focus:outline-none\n                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n                    ",
+                                    "\n                        inline-flex\n                        justify-center\n                        py-2\n                        px-4\n                        border border-transparent\n                        shadow-sm\n                        text-sm\n                        font-medium\n                        rounded-md\n                        text-white\n                        bg-green-600\n                        hover:bg-black\n                        focus:outline-none\n                        focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n                      ",
                                   class: _vm.submitvisibility,
                                   attrs: { id: "submitbutton" },
                                   on: { click: _vm.submitform }
@@ -45118,7 +44144,7 @@ var render = function() {
           "div",
           {
             staticClass:
-              "\n      flex\n      w-full\n      h-full\n      items-center\n      justify-center\n      text-red-900\n      bg-gray-900\n    "
+              "\n        flex\n        w-full\n        h-full\n        items-center\n        justify-center\n        text-red-900\n        bg-gray-900\n      "
           },
           [
             _vm._v(
@@ -45183,7 +44209,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              flex-1 flex\n              items-center\n              justify-center\n              sm:items-stretch\n              sm:justify-start\n            "
+                          "\n                flex-1 flex\n                items-center\n                justify-center\n                sm:items-stretch\n                sm:justify-start\n              "
                       },
                       [
                         _c("div", {
@@ -45211,7 +44237,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700\n                      hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                                 },
                                 [
                                   _c(
@@ -45232,7 +44258,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700\n                      hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                                 },
                                 [
                                   _c(
@@ -45248,7 +44274,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700\n                      hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                                 },
                                 [
                                   _c(
@@ -45268,7 +44294,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700\n                      hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                                 },
                                 [
                                   _c(
@@ -45294,14 +44320,14 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              absolute\n              inset-y-0\n              right-0\n              flex\n              items-center\n              pr-2\n              sm:static\n              sm:inset-auto\n              sm:ml-6\n              sm:pr-0\n            "
+                          "\n                absolute\n                inset-y-0\n                right-0\n                flex\n                items-center\n                pr-2\n                sm:static\n                sm:inset-auto\n                sm:ml-6\n                sm:pr-0\n              "
                       },
                       [
                         _c(
                           "div",
                           {
                             staticClass:
-                              "\n                text-gray-300\n                hover:bg-red-900\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
+                              "\n                  text-gray-300\n                  hover:bg-red-900\n                  hover:text-white\n                  px-3\n                  py-2\n                  rounded-md\n                  text-sm\n                  font-medium\n                "
                           },
                           [
                             _c(
@@ -45344,7 +44370,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "\n              bg-gray-900\n              text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                bg-gray-900\n                text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              ",
                       attrs: { "aria-current": "page" }
                     },
                     [_vm._v("\n            Dashboard\n          ")]
@@ -45354,7 +44380,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            "
+                        "\n                text-gray-300\n                hover:bg-gray-700\n                hover:text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              "
                     },
                     [
                       _c(
@@ -45372,7 +44398,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            "
+                        "\n                text-gray-300\n                hover:bg-gray-700\n                hover:text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              "
                     },
                     [
                       _c(
@@ -45388,7 +44414,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            "
+                        "\n                text-gray-300\n                hover:bg-gray-700\n                hover:text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              "
                     },
                     [
                       _c(
@@ -45422,7 +44448,7 @@ var staticRenderFns = [
           "div",
           {
             staticClass:
-              "\n          flex\n          pt-40\n          lg:pt-60\n          w-full\n          justify-center\n          text-2xl\n          sm:text-3xl\n          md:text-4xl\n          text-gray-800\n        "
+              "\n            flex\n            pt-40\n            lg:pt-60\n            w-full\n            justify-center\n            text-2xl\n            sm:text-3xl\n            md:text-4xl\n            text-gray-800\n          "
           },
           [_vm._v("\n        Welcome Home\n      ")]
         )
@@ -45458,7 +44484,7 @@ var render = function() {
           "div",
           {
             staticClass:
-              "\n      flex\n      w-full\n      h-full\n      items-center\n      justify-center\n      text-red-900\n      bg-gray-900\n    "
+              "\n        flex\n        w-full\n        h-full\n        items-center\n        justify-center\n        text-red-900\n        bg-gray-900\n      "
           },
           [
             _vm._v(
@@ -45523,7 +44549,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              flex-1 flex\n              items-center\n              justify-center\n              sm:items-stretch\n              sm:justify-start\n            "
+                          "\n                flex-1 flex\n                items-center\n                justify-center\n                sm:items-stretch\n                sm:justify-start\n              "
                       },
                       [
                         _c("div", {
@@ -45551,7 +44577,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700\n                      hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                                 },
                                 [
                                   _c(
@@ -45572,7 +44598,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700\n                      hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                                 },
                                 [
                                   _c(
@@ -45588,7 +44614,7 @@ var render = function() {
                                 "a",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700\n                      hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    ",
                                   attrs: { href: "#" }
                                 },
                                 [
@@ -45609,7 +44635,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700\n                      hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    ",
                                   attrs: { "aria-current": "page" }
                                 },
                                 [
@@ -45629,14 +44655,14 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              absolute\n              inset-y-0\n              right-0\n              flex\n              items-center\n              pr-2\n              sm:static\n              sm:inset-auto\n              sm:ml-6\n              sm:pr-0\n            "
+                          "\n                absolute\n                inset-y-0\n                right-0\n                flex\n                items-center\n                pr-2\n                sm:static\n                sm:inset-auto\n                sm:ml-6\n                sm:pr-0\n              "
                       },
                       [
                         _c(
                           "div",
                           {
                             staticClass:
-                              "\n                text-gray-300\n                hover:bg-red-900\n                hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
+                              "\n                  text-gray-300\n                  hover:bg-red-900\n                  hover:text-white\n                  px-3\n                  py-2\n                  rounded-md\n                  text-sm\n                  font-medium\n                "
                           },
                           [
                             _c(
@@ -45679,7 +44705,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              bg-gray-900\n              text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                bg-gray-900\n                text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              ",
                       attrs: { href: "#", "aria-current": "page" }
                     },
                     [_vm._v("Dashboard")]
@@ -45689,7 +44715,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                text-gray-300\n                hover:bg-gray-700\n                hover:text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              ",
                       attrs: { href: "#" }
                     },
                     [
@@ -45708,7 +44734,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                text-gray-300\n                hover:bg-gray-700\n                hover:text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              ",
                       attrs: { href: "#" }
                     },
                     [_vm._v("News")]
@@ -45718,7 +44744,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700\n              hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                text-gray-300\n                hover:bg-gray-700\n                hover:text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              ",
                       attrs: { href: "#" }
                     },
                     [
@@ -45767,7 +44793,7 @@ var render = function() {
                         {
                           key: index,
                           staticClass:
-                            "\n              flex\n              justify-evenly\n              pl-3\n              text-white\n              bg-green-900\n              mb-3\n              border border-gray-600\n            "
+                            "\n                flex\n                justify-evenly\n                pl-3\n                text-white\n                bg-green-900\n                mb-3\n                border border-gray-600\n              "
                         },
                         [
                           _c(
@@ -45849,7 +44875,7 @@ var render = function() {
                                     }
                                   ],
                                   staticClass:
-                                    "\n                      mt-1\n                      focus:ring-green-500\n                      focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
+                                    "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
                                   attrs: {
                                     maxlength: "30",
                                     type: "text",
@@ -45901,7 +44927,7 @@ var render = function() {
                                         }
                                       ],
                                       staticClass:
-                                        "\n                        mt-1\n                        focus:ring-green-500\n                        focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
+                                        "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
                                       attrs: {
                                         maxlength: "50",
                                         id: "beschreibung",
@@ -45954,7 +44980,7 @@ var render = function() {
                                       "button",
                                       {
                                         staticClass:
-                                          "\n                        bg-green-900\n                        text-xs\n                        sm:text-base\n                        p-1\n                        text-white\n                        border border-green-600\n                        rounded-md\n                        hover:bg-green-500\n                      ",
+                                          "\n                          bg-green-900\n                          text-xs\n                          sm:text-base\n                          p-1\n                          text-white\n                          border border-green-600\n                          rounded-md\n                          hover:bg-green-500\n                        ",
                                         on: { click: _vm.showSubmitButton }
                                       },
                                       [
@@ -45972,14 +44998,14 @@ var render = function() {
                               "div",
                               {
                                 staticClass:
-                                  "\n                    flex\n                    justify-center\n                    px-4\n                    py-3\n                    bg-gray-600\n                    border-t-2 border-gray-800\n                    text-right\n                    sm:px-6\n                  "
+                                  "\n                      flex\n                      justify-center\n                      px-4\n                      py-3\n                      bg-gray-600\n                      border-t-2 border-gray-800\n                      text-right\n                      sm:px-6\n                    "
                               },
                               [
                                 _c(
                                   "button",
                                   {
                                     staticClass:
-                                      "\n                      inline-flex\n                      justify-center\n                      py-2\n                      px-4\n                      border border-transparent\n                      shadow-sm\n                      text-sm\n                      font-medium\n                      rounded-md\n                      text-white\n                      bg-green-600\n                      hover:bg-black\n                      focus:outline-none\n                      focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n                    ",
+                                      "\n                        inline-flex\n                        justify-center\n                        py-2\n                        px-4\n                        border border-transparent\n                        shadow-sm\n                        text-sm\n                        font-medium\n                        rounded-md\n                        text-white\n                        bg-green-600\n                        hover:bg-black\n                        focus:outline-none\n                        focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n                      ",
                                     class: _vm.submitvisibility,
                                     attrs: { id: "submitbutton" },
                                     on: { click: _vm.submitform }
@@ -46078,14 +45104,14 @@ var render = function() {
     "div",
     {
       staticClass:
-        "\n      min-h-screen\n      flex\n      items-center\n      justify-center\n      bg-gray-50\n      py-12\n      px-4\n      sm:px-6\n      lg:px-8\n      w-screen\n    "
+        "\n                                min-h-screen\n                                flex\n                                items-center\n                                justify-center\n                                bg-gray-50\n                                py-12\n                                px-4\n                                sm:px-6\n                                lg:px-8\n                                w-screen\n                              "
     },
     [
       _c(
         "div",
         {
           staticClass:
-            "\n        max-w-md\n        w-full\n        space-y-8\n        flex flex-col\n        justify-center\n        items-center\n      "
+            "\n                                  max-w-md\n                                  w-full\n                                  space-y-8\n                                  flex flex-col\n                                  justify-center\n                                  items-center\n                                "
         },
         [
           _vm.loading
@@ -46136,7 +45162,7 @@ var render = function() {
                     }
                   ],
                   staticClass:
-                    "\n                appearance-none\n                rounded-none\n                relative\n                block\n                w-full\n                px-3\n                py-2\n                border border-gray-300\n                placeholder-gray-500\n                text-gray-900\n                rounded-t-md\n                focus:outline-none\n                focus:ring-green-500\n                focus:border-green-500\n                focus:z-10\n                sm:text-sm\n              ",
+                    "\n                                          appearance-none\n                                          rounded-none\n                                          relative\n                                          block\n                                          w-full\n                                          px-3\n                                          py-2\n                                          border border-gray-300\n                                          placeholder-gray-500\n                                          text-gray-900\n                                          rounded-t-md\n                                          focus:outline-none\n                                          focus:ring-green-500\n                                          focus:border-green-500\n                                          focus:z-10\n                                          sm:text-sm\n                                        ",
                   class: { "border-red-600": _vm.inputfieldred },
                   attrs: {
                     id: "email-address",
@@ -46175,7 +45201,7 @@ var render = function() {
                     }
                   ],
                   staticClass:
-                    "\n                appearance-none\n                rounded-none\n                relative\n                block\n                w-full\n                px-3\n                py-2\n                border border-gray-300\n                placeholder-gray-500\n                text-gray-900\n                rounded-b-md\n                focus:outline-none\n                focus:ring-green-500\n                focus:border-green-500\n                focus:z-10\n                sm:text-sm\n              ",
+                    "\n                                          appearance-none\n                                          rounded-none\n                                          relative\n                                          block\n                                          w-full\n                                          px-3\n                                          py-2\n                                          border border-gray-300\n                                          placeholder-gray-500\n                                          text-gray-900\n                                          rounded-b-md\n                                          focus:outline-none\n                                          focus:ring-green-500\n                                          focus:border-green-500\n                                          focus:z-10\n                                          sm:text-sm\n                                        ",
                   class: { "border-red-600": _vm.inputfieldred },
                   attrs: {
                     id: "password",
@@ -46205,7 +45231,7 @@ var render = function() {
                 "button",
                 {
                   staticClass:
-                    "\n              group\n              relative\n              w-full\n              flex\n              justify-center\n              py-2\n              px-4\n              border border-transparent\n              text-sm\n              font-medium\n              rounded-md\n              text-white\n              bg-green-900\n              hover:bg-green-700\n              focus:outline-none\n              focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n            ",
+                    "\n                                        group\n                                        relative\n                                        w-full\n                                        flex\n                                        justify-center\n                                        py-2\n                                        px-4\n                                        border border-transparent\n                                        text-sm\n                                        font-medium\n                                        rounded-md\n                                        text-white\n                                        bg-green-900\n                                        hover:bg-green-700\n                                        focus:outline-none\n                                        focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n                                      ",
                   on: {
                     click: function($event) {
                       return _vm.handleLogin()
@@ -46354,7 +45380,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              flex-1 flex\n              items-center\n              justify-center\n              sm:items-stretch sm:justify-start\n            "
+                          "\n                flex-1 flex\n                items-center\n                justify-center\n                sm:items-stretch sm:justify-start\n              "
                       },
                       [
                         _c("div", {
@@ -46384,7 +45410,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700 hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700 hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                                 },
                                 [
                                   _c(
@@ -46405,7 +45431,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700 hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700 hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    ",
                                   attrs: { "aria-current": "page" }
                                 },
                                 [
@@ -46422,7 +45448,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700 hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700 hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                                 },
                                 [
                                   _c(
@@ -46442,7 +45468,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700 hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700 hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                                 },
                                 [
                                   _c(
@@ -46468,14 +45494,14 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              absolute\n              inset-y-0\n              right-0\n              flex\n              items-center\n              pr-2\n              sm:static sm:inset-auto sm:ml-6 sm:pr-0\n            "
+                          "\n                absolute\n                inset-y-0\n                right-0\n                flex\n                items-center\n                pr-2\n                sm:static sm:inset-auto sm:ml-6 sm:pr-0\n              "
                       },
                       [
                         _c(
                           "div",
                           {
                             staticClass:
-                              "\n                text-gray-300\n                hover:bg-red-900 hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
+                              "\n                  text-gray-300\n                  hover:bg-red-900 hover:text-white\n                  px-3\n                  py-2\n                  rounded-md\n                  text-sm\n                  font-medium\n                "
                           },
                           [
                             _c(
@@ -46518,7 +45544,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "\n              bg-gray-900\n              text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            "
+                        "\n                bg-gray-900\n                text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              "
                     },
                     [
                       _c("router-link", { attrs: { to: "/admin/dashboard" } }, [
@@ -46532,7 +45558,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700 hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            "
+                        "\n                text-gray-300\n                hover:bg-gray-700 hover:text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              "
                     },
                     [
                       _c(
@@ -46550,7 +45576,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700 hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                text-gray-300\n                hover:bg-gray-700 hover:text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              ",
                       attrs: { "aria-current": "page", href: "#" }
                     },
                     [_vm._v("\n            News\n          ")]
@@ -46560,7 +45586,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700 hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                text-gray-300\n                hover:bg-gray-700 hover:text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              ",
                       attrs: { href: "#" }
                     },
                     [
@@ -46597,7 +45623,7 @@ var render = function() {
                         {
                           key: index,
                           staticClass:
-                            "\n              flex\n              justify-evenly\n              pl-3\n              text-white\n              bg-green-900\n              mb-3\n              border border-gray-600\n            "
+                            "\n                flex\n                justify-evenly\n                pl-3\n                text-white\n                bg-green-900\n                mb-3\n                border border-gray-600\n              "
                         },
                         [
                           _c(
@@ -46677,7 +45703,7 @@ var render = function() {
                                     }
                                   ],
                                   staticClass:
-                                    "\n                      mt-1\n                      focus:ring-green-500 focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
+                                    "\n                        mt-1\n                        focus:ring-green-500 focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
                                   attrs: {
                                     maxlength: "70",
                                     type: "text",
@@ -46724,7 +45750,7 @@ var render = function() {
                                         }
                                       ],
                                       staticClass:
-                                        "\n                        mt-1\n                        focus:ring-green-500 focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
+                                        "\n                          mt-1\n                          focus:ring-green-500 focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
                                       attrs: {
                                         maxlength: "2000",
                                         id: "news_textfeld",
@@ -46776,7 +45802,7 @@ var render = function() {
                                       "button",
                                       {
                                         staticClass:
-                                          "\n                        bg-green-900\n                        text-xs\n                        sm:text-base\n                        p-1\n                        text-white\n                        border border-green-600\n                        rounded-md\n                        hover:bg-green-500\n                      ",
+                                          "\n                          bg-green-900\n                          text-xs\n                          sm:text-base\n                          p-1\n                          text-white\n                          border border-green-600\n                          rounded-md\n                          hover:bg-green-500\n                        ",
                                         on: { click: _vm.showSubmitButton }
                                       },
                                       [
@@ -46799,7 +45825,7 @@ var render = function() {
                                       "button",
                                       {
                                         staticClass:
-                                          "\n                        bg-green-900\n                        text-xs\n                        sm:text-base\n                        p-1\n                        mt-2\n                        text-white\n                        border border-green-600\n                        rounded-md\n                        hover:bg-green-500\n                      ",
+                                          "\n                          bg-green-900\n                          text-xs\n                          sm:text-base\n                          p-1\n                          mt-2\n                          text-white\n                          border border-green-600\n                          rounded-md\n                          hover:bg-green-500\n                        ",
                                         on: { click: _vm.showSubmitButton }
                                       },
                                       [
@@ -46817,14 +45843,14 @@ var render = function() {
                               "div",
                               {
                                 staticClass:
-                                  "\n                    flex\n                    justify-center\n                    px-4\n                    py-3\n                    bg-gray-600\n                    border-t-2 border-gray-800\n                    text-right\n                    sm:px-6\n                  "
+                                  "\n                      flex\n                      justify-center\n                      px-4\n                      py-3\n                      bg-gray-600\n                      border-t-2 border-gray-800\n                      text-right\n                      sm:px-6\n                    "
                               },
                               [
                                 _c(
                                   "button",
                                   {
                                     staticClass:
-                                      "\n                      inline-flex\n                      justify-center\n                      py-2\n                      px-4\n                      border border-transparent\n                      shadow-sm\n                      text-sm\n                      font-medium\n                      rounded-md\n                      text-white\n                      bg-green-600\n                      hover:bg-black\n                      focus:outline-none\n                      focus:ring-2\n                      focus:ring-offset-2\n                      focus:ring-green-500\n                    ",
+                                      "\n                        inline-flex\n                        justify-center\n                        py-2\n                        px-4\n                        border border-transparent\n                        shadow-sm\n                        text-sm\n                        font-medium\n                        rounded-md\n                        text-white\n                        bg-green-600\n                        hover:bg-black\n                        focus:outline-none\n                        focus:ring-2\n                        focus:ring-offset-2\n                        focus:ring-green-500\n                      ",
                                     class: _vm.submitvisibility,
                                     attrs: { id: "submitbutton" },
                                     on: { click: _vm.submitform }
@@ -46975,7 +46001,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              flex-1 flex\n              items-center\n              justify-center\n              sm:items-stretch sm:justify-start\n            "
+                          "\n                flex-1 flex\n                items-center\n                justify-center\n                sm:items-stretch sm:justify-start\n              "
                       },
                       [
                         _c("div", {
@@ -47005,7 +46031,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700 hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700 hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                                 },
                                 [
                                   _c(
@@ -47026,7 +46052,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700 hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700 hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                                 },
                                 [
                                   _c(
@@ -47042,7 +46068,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700 hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  ",
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700 hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    ",
                                   attrs: { "aria-current": "page" }
                                 },
                                 [
@@ -47063,7 +46089,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "\n                    text-gray-300\n                    hover:bg-gray-700 hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
+                                    "\n                      text-gray-300\n                      hover:bg-gray-700 hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
                                 },
                                 [
                                   _c(
@@ -47089,14 +46115,14 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "\n              absolute\n              inset-y-0\n              right-0\n              flex\n              items-center\n              pr-2\n              sm:static sm:inset-auto sm:ml-6 sm:pr-0\n            "
+                          "\n                absolute\n                inset-y-0\n                right-0\n                flex\n                items-center\n                pr-2\n                sm:static sm:inset-auto sm:ml-6 sm:pr-0\n              "
                       },
                       [
                         _c(
                           "div",
                           {
                             staticClass:
-                              "\n                text-gray-300\n                hover:bg-red-900 hover:text-white\n                px-3\n                py-2\n                rounded-md\n                text-sm\n                font-medium\n              "
+                              "\n                  text-gray-300\n                  hover:bg-red-900 hover:text-white\n                  px-3\n                  py-2\n                  rounded-md\n                  text-sm\n                  font-medium\n                "
                           },
                           [
                             _c(
@@ -47139,7 +46165,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "\n              bg-gray-900\n              text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            "
+                        "\n                bg-gray-900\n                text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              "
                     },
                     [
                       _c("router-link", { attrs: { to: "/admin/dashboard" } }, [
@@ -47153,7 +46179,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700 hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            "
+                        "\n                text-gray-300\n                hover:bg-gray-700 hover:text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              "
                     },
                     [
                       _c(
@@ -47171,7 +46197,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700 hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                text-gray-300\n                hover:bg-gray-700 hover:text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              ",
                       attrs: { href: "#" }
                     },
                     [
@@ -47188,7 +46214,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "\n              text-gray-300\n              hover:bg-gray-700 hover:text-white\n              block\n              px-3\n              py-1\n              rounded-md\n              text-base\n              font-medium\n            ",
+                        "\n                text-gray-300\n                hover:bg-gray-700 hover:text-white\n                block\n                px-3\n                py-1\n                rounded-md\n                text-base\n                font-medium\n              ",
                       attrs: { "aria-current": "page", href: "#" }
                     },
                     [_vm._v("Programm")]
@@ -47221,7 +46247,7 @@ var render = function() {
                         {
                           key: index,
                           staticClass:
-                            "\n              flex\n              justify-evenly\n              pl-3\n              text-white\n              bg-green-900\n              mb-3\n              border border-gray-600\n            "
+                            "\n                flex\n                justify-evenly\n                pl-3\n                text-white\n                bg-green-900\n                mb-3\n                border border-gray-600\n              "
                         },
                         [
                           _c(
@@ -47301,7 +46327,7 @@ var render = function() {
                                     }
                                   ],
                                   staticClass:
-                                    "\n                      mt-1\n                      focus:ring-green-500 focus:border-green-500\n                      block\n                      w-full\n                      shadow-sm\n                      sm:text-sm\n                      border-gray-300\n                      rounded-md\n                    ",
+                                    "\n                        mt-1\n                        focus:ring-green-500 focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
                                   attrs: {
                                     maxlength: "70",
                                     type: "text",
@@ -47352,7 +46378,7 @@ var render = function() {
                                         }
                                       ],
                                       staticClass:
-                                        "\n                        mt-1\n                        focus:ring-green-500 focus:border-green-500\n                        block\n                        w-full\n                        shadow-sm\n                        sm:text-sm\n                        border-gray-300\n                        rounded-md\n                      ",
+                                        "\n                          mt-1\n                          focus:ring-green-500 focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
                                       attrs: {
                                         maxlength: "500",
                                         id: "news_textfeld",
@@ -47405,7 +46431,7 @@ var render = function() {
                                       "button",
                                       {
                                         staticClass:
-                                          "\n                        bg-green-900\n                        text-xs\n                        sm:text-base\n                        p-1\n                        text-white\n                        border border-green-600\n                        rounded-md\n                        hover:bg-green-500\n                      ",
+                                          "\n                          bg-green-900\n                          text-xs\n                          sm:text-base\n                          p-1\n                          text-white\n                          border border-green-600\n                          rounded-md\n                          hover:bg-green-500\n                        ",
                                         on: { click: _vm.showSubmitButton }
                                       },
                                       [
@@ -47428,7 +46454,7 @@ var render = function() {
                                       "button",
                                       {
                                         staticClass:
-                                          "\n                        bg-green-900\n                        text-xs\n                        sm:text-base\n                        p-1\n                        mt-2\n                        text-white\n                        border border-green-600\n                        rounded-md\n                        hover:bg-green-500\n                      ",
+                                          "\n                          bg-green-900\n                          text-xs\n                          sm:text-base\n                          p-1\n                          mt-2\n                          text-white\n                          border border-green-600\n                          rounded-md\n                          hover:bg-green-500\n                        ",
                                         on: { click: _vm.showSubmitButton }
                                       },
                                       [
@@ -47446,14 +46472,14 @@ var render = function() {
                               "div",
                               {
                                 staticClass:
-                                  "\n                    flex\n                    justify-center\n                    px-4\n                    py-3\n                    bg-gray-600\n                    border-t-2 border-gray-800\n                    text-right\n                    sm:px-6\n                  "
+                                  "\n                      flex\n                      justify-center\n                      px-4\n                      py-3\n                      bg-gray-600\n                      border-t-2 border-gray-800\n                      text-right\n                      sm:px-6\n                    "
                               },
                               [
                                 _c(
                                   "button",
                                   {
                                     staticClass:
-                                      "\n                      inline-flex\n                      justify-center\n                      py-2\n                      px-4\n                      border border-transparent\n                      shadow-sm\n                      text-sm\n                      font-medium\n                      rounded-md\n                      text-white\n                      bg-green-600\n                      hover:bg-black\n                      focus:outline-none\n                      focus:ring-2\n                      focus:ring-offset-2\n                      focus:ring-green-500\n                    ",
+                                      "\n                        inline-flex\n                        justify-center\n                        py-2\n                        px-4\n                        border border-transparent\n                        shadow-sm\n                        text-sm\n                        font-medium\n                        rounded-md\n                        text-white\n                        bg-green-600\n                        hover:bg-black\n                        focus:outline-none\n                        focus:ring-2\n                        focus:ring-offset-2\n                        focus:ring-green-500\n                      ",
                                     class: _vm.submitvisibility,
                                     attrs: { id: "submitbutton" },
                                     on: { click: _vm.submitform }

@@ -1,24 +1,24 @@
 <template>
   <div class="
-        min-h-screen
-        flex
-        items-center
-        justify-center
-        bg-gray-50
-        py-12
-        px-4
-        sm:px-6
-        lg:px-8
-        w-screen
-      ">
+                                  min-h-screen
+                                  flex
+                                  items-center
+                                  justify-center
+                                  bg-gray-50
+                                  py-12
+                                  px-4
+                                  sm:px-6
+                                  lg:px-8
+                                  w-screen
+                                ">
     <div class="
-          max-w-md
-          w-full
-          space-y-8
-          flex flex-col
-          justify-center
-          items-center
-        ">
+                                    max-w-md
+                                    w-full
+                                    space-y-8
+                                    flex flex-col
+                                    justify-center
+                                    items-center
+                                  ">
       <p v-if="loading">
         <img src="/images/icons/gifs/loadingtransparent.gif" alt="loading..." class="resize-loadinggif" />
       </p>
@@ -40,45 +40,45 @@
             <label for="email-address" class="sr-only">Email address</label>
             <input v-model="user.email" :class="{ 'border-red-600': inputfieldred }" id="email-address" name="email"
               type="email" autocomplete="email" required class="
-                  appearance-none
-                  rounded-none
-                  relative
-                  block
-                  w-full
-                  px-3
-                  py-2
-                  border border-gray-300
-                  placeholder-gray-500
-                  text-gray-900
-                  rounded-t-md
-                  focus:outline-none
-                  focus:ring-green-500
-                  focus:border-green-500
-                  focus:z-10
-                  sm:text-sm
-                " placeholder="E-Mail Adresse" />
+                                            appearance-none
+                                            rounded-none
+                                            relative
+                                            block
+                                            w-full
+                                            px-3
+                                            py-2
+                                            border border-gray-300
+                                            placeholder-gray-500
+                                            text-gray-900
+                                            rounded-t-md
+                                            focus:outline-none
+                                            focus:ring-green-500
+                                            focus:border-green-500
+                                            focus:z-10
+                                            sm:text-sm
+                                          " placeholder="E-Mail Adresse" />
           </div>
           <div>
             <label for="password" class="sr-only">Passwort</label>
             <input v-model="user.password" :class="{ 'border-red-600': inputfieldred }" id="password" name="password"
               type="password" autocomplete="current-password" required class="
-                  appearance-none
-                  rounded-none
-                  relative
-                  block
-                  w-full
-                  px-3
-                  py-2
-                  border border-gray-300
-                  placeholder-gray-500
-                  text-gray-900
-                  rounded-b-md
-                  focus:outline-none
-                  focus:ring-green-500
-                  focus:border-green-500
-                  focus:z-10
-                  sm:text-sm
-                " placeholder="Passwort" />
+                                            appearance-none
+                                            rounded-none
+                                            relative
+                                            block
+                                            w-full
+                                            px-3
+                                            py-2
+                                            border border-gray-300
+                                            placeholder-gray-500
+                                            text-gray-900
+                                            rounded-b-md
+                                            focus:outline-none
+                                            focus:ring-green-500
+                                            focus:border-green-500
+                                            focus:z-10
+                                            sm:text-sm
+                                          " placeholder="Passwort" />
           </div>
         </div>
 
@@ -86,23 +86,23 @@
 
         <div>
           <button @click="handleLogin()" class="
-                group
-                relative
-                w-full
-                flex
-                justify-center
-                py-2
-                px-4
-                border border-transparent
-                text-sm
-                font-medium
-                rounded-md
-                text-white
-                bg-green-900
-                hover:bg-green-700
-                focus:outline-none
-                focus:ring-2 focus:ring-offset-2 focus:ring-green-500
-              ">
+                                          group
+                                          relative
+                                          w-full
+                                          flex
+                                          justify-center
+                                          py-2
+                                          px-4
+                                          border border-transparent
+                                          text-sm
+                                          font-medium
+                                          rounded-md
+                                          text-white
+                                          bg-green-900
+                                          hover:bg-green-700
+                                          focus:outline-none
+                                          focus:ring-2 focus:ring-offset-2 focus:ring-green-500
+                                        ">
             <span class="absolute left-0 inset-y-0 flex items-center pl-3">
               <!-- Heroicon name: solid/lock-closed -->
               <svg class="h-5 w-5 text-white group-hover:text-gray-50" xmlns="http://www.w3.org/2000/svg"
@@ -124,6 +124,7 @@
 
 <script>
 import Swal from "sweetalert2";
+import _ from 'lodash';
 
 export default {
   name: "Login",
@@ -169,8 +170,15 @@ export default {
               .post("/api/admin/login", this.user)
               .then((response) => {
                 //debug
-                //console.log(response.data.token);
+                // console.log(response.data.token);
+                // let token = response.data.token;
+
                 if (response.status == 201) {
+
+                  window._ = require('lodash');
+                  let token = response.data.token;
+                  localStorage.setItem('token', response.data.token)
+                  window.axios.defaults.headers.common = { 'Authorization': `Bearer ${token}` }
                   //LoggedIn-Status in localStorage abspeichern
                   localStorage.setItem("isLoggedIn", "true");
                   this.$router.push({ name: "admindashboard" });
