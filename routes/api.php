@@ -40,7 +40,8 @@ Route::get('/homecontent', [HomeContentController::class, 'index']);
 
 //login
 Route::post('/admin/login', [AuthController::class, 'login']);
-
+//logout
+Route::post('/admin/logout', [AuthController::class, 'logout']);
 /**
  * Protected routes through Sanctum.
  * Token-based requests
@@ -48,8 +49,7 @@ Route::post('/admin/login', [AuthController::class, 'login']);
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/admin/register', [AuthController::class, 'register']);
-    //logout
-    Route::post('/admin/logout', [AuthController::class, 'logout']);
+
 
 
     //Aussteller-Post-Routes

@@ -12,21 +12,21 @@
       </div>
 
       <div class="
-              grid grid-cols-1
-              sm:grid-cols-2
-              lg:grid-cols-3
-              gap-8
-              items-center
-              w-full
-            ">
+                grid grid-cols-1
+                sm:grid-cols-2
+                lg:grid-cols-3
+                gap-8
+                items-center
+                w-full
+              ">
         <article v-for="(jeweiligerAussteller, index) in aussteller" :key="index"
           class="articlestyling mx-auto overflow-hidden w-full">
           <img v-if="imageUrlNotEmpty(index)" :src="imgUrl(index)" alt="" class="border-b-2 border-yellow-50" />
           <img v-else src="/images/icons/svgs/aussteller.svg" alt="Ausstellerfoto" class="
-                  filter-white
-                  bg-gray-50 bg-opacity-20
-                  border-b-2 border-black
-                " />
+                    filter-white
+                    bg-gray-50 bg-opacity-20
+                    border-b-2 border-black
+                  " />
           <div class="text text-center lg:text-lg">
             <h3 v-if="ausstellerBrandingNameNotEmpty(index)" class="font-bold text-gray-800 mb-1">
               {{ jeweiligerAussteller.aussteller_brandingname }}
@@ -42,17 +42,17 @@
               ausstellerEmailNotEmpty(index) ||
               zonenFarbeNotEmpty(index)
             " class="
-                    bg-gray-800
-                    relative
-                    bottom-0
-                    left-0
-                    right-0
-                    h-10
-                    flex
-                    justify-center
-                    items-center
-                    rounded-lg
-                  ">
+                      bg-gray-800
+                      relative
+                      bottom-0
+                      left-0
+                      right-0
+                      h-10
+                      flex
+                      justify-center
+                      items-center
+                      rounded-lg
+                    ">
               <ul class="inline-flex gap-2 justify-center items-center">
                 <li v-if="webUrlNotEmpty(index)">
                   <a :href="webUrl(index)"><img src="/images/icons/svgs/www.svg" class="resize-icon filter-white-icons"
@@ -65,9 +65,11 @@
                 <!-- <a
                   href="https://www.google.com/maps/d/embed?mid=18zYJ568aZGAngWapMG2ZriZWZXYI-vI&ehbc=2E312F"
                 > -->
-                <li v-if="zonenFarbeNotEmpty(index)" class="h-5 w-32">
-                  <Farbzone :zonen-farbe="zonenFarbe(index)"></Farbzone>
-                </li>
+                <router-link to="/karte">
+                  <li v-if="zonenFarbeNotEmpty(index)" class="h-5 w-32">
+                    <Farbzone :zonen-farbe="zonenFarbe(index)"></Farbzone>
+                  </li>
+                </router-link>
                 <!-- </a> -->
               </ul>
             </div>

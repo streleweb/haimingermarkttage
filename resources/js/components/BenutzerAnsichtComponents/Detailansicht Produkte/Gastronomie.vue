@@ -2,72 +2,48 @@
   <div class="ausstellergradient">
     <div v-if="!loading" class="ausstellercontainer">
       <p v-if="loading">
-        <img
-          src="/images/icons/gifs/loadingtransparent.gif"
-          alt="loading..."
-          class="mt-40 mx-auto z-50"
-        />
+        <img src="/images/icons/gifs/loadingtransparent.gif" alt="loading..." class="mt-40 mx-auto z-50" />
       </p>
       <!-- custom font konfiguriert in tailwind.config.js-->
       <!-- Hier noch Background-Pic oder Video rein -->
       <div class="titletext ueberschrift mb-7 w-full textshadow-markant">
         <p>Gastronomie</p>
         <!-- end willkommenstexte -->
-        <div
-          class="
-            hidden
-            hmbp:block
-            mb-5
-            text-base
-            px-4
-            pt-4
-            btnbp:text-2xl
-            btnbp:pt-6
-            btnbp:px-12
-            text-gray-300 text-center
-            produktdescriptionbp:px-14
-          "
-        >
+        <div class="
+              hidden
+              hmbp:block
+              mb-5
+              text-base
+              px-4
+              pt-4
+              btnbp:text-2xl
+              btnbp:pt-6
+              btnbp:px-12
+              text-gray-300 text-center
+              produktdescriptionbp:px-14
+            ">
           {{ smallDescription }}
         </div>
       </div>
 
-      <div
-        class="
-          grid grid-cols-1
-          sm:grid-cols-2
-          lg:grid-cols-3
-          gap-8
-          items-center
-          w-full
-        "
-      >
-        <article
-          v-for="(jeweiligerAussteller, index) in aussteller"
-          :key="index"
-          class="articlestyling mx-auto overflow-hidden w-full"
-        >
-          <img
-            v-if="imageUrlNotEmpty(index)"
-            :src="imgUrl(index)"
-            alt=""
-            class="border-b-2 border-yellow-50"
-          />
-          <img
-            v-else
-            src="/images/icons/svgs/aussteller.svg"
-            alt="Ausstellerfoto"
-            class="
-              filter-white
-              bg-gray-50 bg-opacity-20
-              border-b-2 border-black
-            "
-          />
+      <div class="
+            grid grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-3
+            gap-8
+            items-center
+            w-full
+          ">
+        <article v-for="(jeweiligerAussteller, index) in aussteller" :key="index"
+          class="articlestyling mx-auto overflow-hidden w-full">
+          <img v-if="imageUrlNotEmpty(index)" :src="imgUrl(index)" alt="" class="border-b-2 border-yellow-50" />
+          <img v-else src="/images/icons/svgs/aussteller.svg" alt="Ausstellerfoto" class="
+                filter-white
+                bg-gray-50 bg-opacity-20
+                border-b-2 border-black
+              " />
           <div class="text text-center lg:text-lg">
-            <h3
-              v-if="ausstellerBrandingNameNotEmpty(index)"
-              class="font-bold text-gray-800 mb-1"
-            >
+            <h3 v-if="ausstellerBrandingNameNotEmpty(index)" class="font-bold text-gray-800 mb-1">
               {{ jeweiligerAussteller.aussteller_brandingname }}
             </h3>
             <h2 class="font-semibold text-gray-700 mb-2">
@@ -76,49 +52,36 @@
             <p class="text-sm lg:text-base mb-2">
               {{ jeweiligerAussteller.aussteller_beschreibung }}
             </p>
-            <div
-              v-if="
-                webUrlNotEmpty(index) ||
-                ausstellerEmailNotEmpty(index) ||
-                zonenFarbeNotEmpty(index)
-              "
-              class="
-                bg-gray-800
-                relative
-                bottom-0
-                left-0
-                right-0
-                h-10
-                flex
-                justify-center
-                items-center
-                rounded-lg
-              "
-            >
+            <div v-if="
+              webUrlNotEmpty(index) ||
+              ausstellerEmailNotEmpty(index) ||
+              zonenFarbeNotEmpty(index)
+            " class="
+                  bg-gray-800
+                  relative
+                  bottom-0
+                  left-0
+                  right-0
+                  h-10
+                  flex
+                  justify-center
+                  items-center
+                  rounded-lg
+                ">
               <ul class="inline-flex gap-2 justify-center items-center">
                 <li v-if="webUrlNotEmpty(index)">
-                  <a :href="webUrl(index)"
-                    ><img
-                      src="/images/icons/svgs/www.svg"
-                      class="resize-icon filter-white-icons"
-                      alt="website"
-                  /></a>
+                  <a :href="webUrl(index)"><img src="/images/icons/svgs/www.svg" class="resize-icon filter-white-icons"
+                      alt="website" /></a>
                 </li>
                 <li v-if="ausstellerEmailNotEmpty(index)">
-                  <a :href="ausstellerEmail(index)" target="_newtab"
-                    ><img
-                      src="/images/icons/svgs/email.png"
-                      class="h-4 filter-white-icons"
-                      alt="website"
-                  /></a>
+                  <a :href="ausstellerEmail(index)" target="_newtab"><img src="/images/icons/svgs/email.png"
+                      class="h-4 filter-white-icons" alt="website" /></a>
                 </li>
-                <a
-                  href="https://www.google.com/maps/d/embed?mid=1Kxrd75PaiWPf5CIYb3pSrpFRScbUORwo"
-                >
+                <router-link to="/karte">
                   <li v-if="zonenFarbeNotEmpty(index)" class="h-5 w-32">
                     <Farbzone :zonen-farbe="zonenFarbe(index)"></Farbzone>
                   </li>
-                </a>
+                </router-link>
               </ul>
             </div>
           </div>
@@ -128,12 +91,8 @@
     <div class="flex justify-center mt-5 mb-5">
       <!--Buttons mit Custom Props-->
       <router-link to="/" exact>
-        <Button
-          svg-source="/../../images/icons/svgs/home.svg"
-          button-inhalt="Home"
-          button-color="bg-green-400"
-          on-hover="hover:bg-yellow-200"
-        ></Button>
+        <Button svg-source="/../../images/icons/svgs/home.svg" button-inhalt="Home" button-color="bg-green-400"
+          on-hover="hover:bg-yellow-200"></Button>
       </router-link>
     </div>
   </div>
@@ -279,7 +238,8 @@ export default {
 
 article:hover {
   transform: translateY(5px);
-  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/
+  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3);
+  /*Shadow bewegt sich mit nach unten*/
 }
 
 article img {
