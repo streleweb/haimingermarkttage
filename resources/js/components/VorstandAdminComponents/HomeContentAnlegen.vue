@@ -21,11 +21,11 @@
               </svg>
             </div>
             <div class="
-                                                          flex-1 flex
-                                                          items-center
-                                                          justify-center
-                                                          sm:items-stretch sm:justify-start
-                                                        ">
+                                                            flex-1 flex
+                                                            items-center
+                                                            justify-center
+                                                            sm:items-stretch sm:justify-start
+                                                          ">
               <div class="flex-shrink-0 flex items-center"></div>
               <div class="hidden sm:block sm:ml-6">
                 <div class="flex space-x-4">
@@ -33,87 +33,87 @@
                   <router-link to="/admin/dashboard" exact><span
                       class="text-gray-500 text-lg">Dashboard</span></router-link>
                   <div class="
-                                                                text-gray-300
-                                                                hover:bg-gray-700 hover:text-white
-                                                                px-3
-                                                                py-2
-                                                                rounded-md
-                                                                text-sm
-                                                                font-medium
-                                                              ">
-                    <router-link to="/admin/dashboard/ausstelleruebersicht">Aussteller
-                    </router-link>
-                  </div>
-
-                  <div aria-current="page" class="
-                                                                text-gray-300
-                                                                hover:bg-gray-700 hover:text-white
-                                                                px-3
-                                                                py-2
-                                                                rounded-md
-                                                                text-sm
-                                                                font-medium
-                                                              ">
-                    <router-link to="/admin/dashboard/news">News</router-link>
-                  </div>
-
-                  <div class="
-                                                                text-gray-300
-                                                                hover:bg-gray-700 hover:text-white
-                                                                px-3
-                                                                py-2
-                                                                rounded-md
-                                                                text-sm
-                                                                font-medium
-                                                              ">
-                    <router-link to="/admin/dashboard/programmanlegen">
-                      Programm</router-link>
-                  </div>
-
-                  <div class="
-                                                                text-gray-300
-                                                                hover:bg-gray-700 hover:text-white
-                                                                px-3
-                                                                py-2
-                                                                rounded-md
-                                                                text-sm
-                                                                font-medium
-                                                              ">
-                    <router-link to="/admin/dashboard/editfotogalerie">Fotogalerie</router-link>
-                  </div>
-                  <div class="
                                                                   text-gray-300
-                                                                  hover:bg-gray-700
-                                                                  hover:text-white
+                                                                  hover:bg-gray-700 hover:text-white
                                                                   px-3
                                                                   py-2
                                                                   rounded-md
                                                                   text-sm
                                                                   font-medium
                                                                 ">
+                    <router-link to="/admin/dashboard/ausstelleruebersicht">Aussteller
+                    </router-link>
+                  </div>
+
+                  <div aria-current="page" class="
+                                                                  text-gray-300
+                                                                  hover:bg-gray-700 hover:text-white
+                                                                  px-3
+                                                                  py-2
+                                                                  rounded-md
+                                                                  text-sm
+                                                                  font-medium
+                                                                ">
+                    <router-link to="/admin/dashboard/news">News</router-link>
+                  </div>
+
+                  <div class="
+                                                                  text-gray-300
+                                                                  hover:bg-gray-700 hover:text-white
+                                                                  px-3
+                                                                  py-2
+                                                                  rounded-md
+                                                                  text-sm
+                                                                  font-medium
+                                                                ">
+                    <router-link to="/admin/dashboard/programmanlegen">
+                      Programm</router-link>
+                  </div>
+
+                  <div class="
+                                                                  text-gray-300
+                                                                  hover:bg-gray-700 hover:text-white
+                                                                  px-3
+                                                                  py-2
+                                                                  rounded-md
+                                                                  text-sm
+                                                                  font-medium
+                                                                ">
+                    <router-link to="/admin/dashboard/editfotogalerie">Fotogalerie</router-link>
+                  </div>
+                  <div class="
+                                                                    text-gray-300
+                                                                    hover:bg-gray-700
+                                                                    hover:text-white
+                                                                    px-3
+                                                                    py-2
+                                                                    rounded-md
+                                                                    text-sm
+                                                                    font-medium
+                                                                  ">
                     <router-link to="/admin/dashboard/hometext">Home-Text</router-link>
                   </div>
                 </div>
               </div>
             </div>
             <div class="
-                                                          absolute
-                                                          inset-y-0
-                                                          right-0
-                                                          flex
-                                                          items-center
-                                                          pr-2
-                                                          sm:static sm:inset-auto sm:ml-6 sm:pr-0
-                                                        ">
-              <div class="
-                                                            text-gray-300
-                                                            hover:bg-red-900 hover:text-white
-                                                            px-3
-                                                            py-2
-                                                            rounded-md
-                                                            text-sm
-                                                            font-medium
+                                                            absolute
+                                                            inset-y-0
+                                                            right-0
+                                                            flex
+                                                            items-center
+                                                            pr-2
+                                                            sm:static sm:inset-auto sm:ml-6 sm:pr-0
                                                           ">
+              <div class="
+                                                              text-gray-300
+                                                              hover:bg-red-900 hover:text-white
+                                                              px-3
+                                                              py-2
+                                                              rounded-md
+                                                              text-sm
+                                                              font-medium
+                                                            ">
                 <span class="text-white cursor-pointer" @click="handleLogout()">Logout
                   <img src="/public/images/icons/svgs/ausloggen.svg" class="filter-white" alt="" /></span>
               </div>
@@ -122,61 +122,7 @@
         </div>
 
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden" id="mobile-menu">
-          <div class="px-2 pt-2 pb-3 space-y-1">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <div class="
-                                                          bg-gray-900
-                                                          text-white
-                                                          block
-                                                          px-3
-                                                          py-1
-                                                          rounded-md
-                                                          text-base
-                                                          font-medium
-                                                        ">
-              <router-link to="/admin/dashboard">Dashboard</router-link>
-            </div>
-            <!--Wenn Menü aufgeklappt-->
-            <div class="
-                                                          text-gray-300
-                                                          hover:bg-gray-700 hover:text-white
-                                                          block
-                                                          px-3
-                                                          py-1
-                                                          rounded-md
-                                                          text-base
-                                                          font-medium
-                                                        ">
-              <router-link to="/admin/dashboard/ausstelleruebersicht">Aussteller</router-link>
-            </div>
-
-            <a aria-current="page" href="#" class="
-                                                          text-gray-300
-                                                          hover:bg-gray-700 hover:text-white
-                                                          block
-                                                          px-3
-                                                          py-1
-                                                          rounded-md
-                                                          text-base
-                                                          font-medium
-                                                        ">
-              News
-            </a>
-
-            <a href="#" class="
-                                                          text-gray-300
-                                                          hover:bg-gray-700 hover:text-white
-                                                          block
-                                                          px-3
-                                                          py-1
-                                                          rounded-md
-                                                          text-base
-                                                          font-medium
-                                                        "><router-link to="/admin/dashboard/programmanlegen">
-                Programm</router-link></a>
-          </div>
-        </div>
+        <MobileMenu />
       </nav>
       <!--END DASHBOARD-->
 
@@ -193,14 +139,14 @@
             </div>
 
             <div v-if="homecontent.title.length != 0" class="
-                                                          flex
-                                                          justify-evenly
-                                                          pl-3
-                                                          text-white
-                                                          bg-green-900
-                                                          mb-3
-                                                          border border-gray-600
-                                                        ">
+                                                            flex
+                                                            justify-evenly
+                                                            pl-3
+                                                            text-white
+                                                            bg-green-900
+                                                            mb-3
+                                                            border border-gray-600
+                                                          ">
               <span class="flex w-32 items-center">{{
                 homecontent.title
               }}</span>
@@ -217,21 +163,6 @@
                     <label for="name" class="block text-sm font-medium text-gray-700">Titel</label>
                     <input v-model="formdata.homeContentTitle" maxlength="45" type="text" id="news_titel"
                       placeholder="Maximal 45 Zeichen" autocomplete="given-name" class="
-                                                                  mt-1
-                                                                  focus:ring-green-500 focus:border-green-500
-                                                                  block
-                                                                  w-full
-                                                                  shadow-sm
-                                                                  sm:text-sm
-                                                                  border-gray-300
-                                                                  rounded-md
-                                                                " />
-
-                    <div class="col-span-6 sm:col-span-4">
-                      <label for="email_address" class="block text-sm font-medium text-gray-700">Beschreibung</label>
-                      <textarea maxlength="56" v-model="formdata.homeContentDescription" id="news_textfeld"
-                        autocomplete="Beschreibung"
-                        placeholder="Wird unter dem Titel etwas kleiner eingefügt. Maximal 56 Zeichen" class="
                                                                     mt-1
                                                                     focus:ring-green-500 focus:border-green-500
                                                                     block
@@ -241,38 +172,53 @@
                                                                     border-gray-300
                                                                     rounded-md
                                                                   " />
+
+                    <div class="col-span-6 sm:col-span-4">
+                      <label for="email_address" class="block text-sm font-medium text-gray-700">Beschreibung</label>
+                      <textarea maxlength="56" v-model="formdata.homeContentDescription" id="news_textfeld"
+                        autocomplete="Beschreibung"
+                        placeholder="Wird unter dem Titel etwas kleiner eingefügt. Maximal 56 Zeichen" class="
+                                                                      mt-1
+                                                                      focus:ring-green-500 focus:border-green-500
+                                                                      block
+                                                                      w-full
+                                                                      shadow-sm
+                                                                      sm:text-sm
+                                                                      border-gray-300
+                                                                      rounded-md
+                                                                    " />
                     </div>
 
                   </div>
 
                   <div class="
-                                                                flex
-                                                                justify-center
-                                                                px-4
-                                                                py-3
-                                                                bg-gray-600
-                                                                border-t-2 border-gray-800
-                                                                text-right
-                                                                sm:px-6
-                                                              ">
-                    <button id="submitbutton" @click="submitform" class="
-                                                                  inline-flex
+                                                                  flex
                                                                   justify-center
-                                                                  py-2
                                                                   px-4
-                                                                  border border-transparent
-                                                                  shadow-sm
-                                                                  text-sm
-                                                                  font-medium
-                                                                  rounded-md
-                                                                  text-white
-                                                                  bg-green-600
-                                                                  hover:bg-black
-                                                                  focus:outline-none
-                                                                  focus:ring-2
-                                                                  focus:ring-offset-2
-                                                                  focus:ring-green-500
+                                                                  py-3
+                                                                  bg-gray-600
+                                                                  border-t-2 border-gray-800
+                                                                  text-right
+                                                                  sm:px-6
                                                                 ">
+                    <button id="submitbutton" @click="submitform" class="
+                                                                    inline-flex
+                                                                    justify-center
+                                                                    py-2
+                                                                    px-4
+                                                                    border border-transparent
+                                                                    shadow-sm
+                                                                    text-sm
+                                                                    font-medium
+                                                                    rounded-md
+                                                                    text-white
+                                                                    bg-green-600
+                                                                    hover:bg-black
+                                                                    focus:outline-none
+                                                                    focus:ring-2
+                                                                    focus:ring-offset-2
+                                                                    focus:ring-green-500
+                                                                  ">
                       In DB Speichern
                     </button>
                   </div>
@@ -288,6 +234,7 @@
 
 
 <script>
+import MobileMenu from "./MobileMenu.vue";
 import repository from "./repository/repository";
 import Swal from "sweetalert2";
 
@@ -295,21 +242,20 @@ export default {
   data() {
     return {
       name: "HomeContentAnlegen",
-      loading: null, //für die Einblendung vom loading-gif
+      loading: null,
       image: "",
       homecontent: {
-        title: '',
-        description: ''
+        title: "",
+        description: ""
       },
       error: null,
       submitvisibility: "hidden",
       formdata: {
-        homeContentTitle: '',
-        homeContentDescription: '',
+        homeContentTitle: "",
+        homeContentDescription: "",
       }, //Objekt zum Speichern der Model-Daten von oben
     };
   },
-
   //Noch bevor Component gemounted ist, checke Login-Status
   //Falls nicht eingeloggt -> Redirect zu Login-Page
   created() {
@@ -318,10 +264,9 @@ export default {
       this.$router.push({ name: "adminLogin" });
     }
     this.loadHomeContent();
-    window._ = require('lodash');
-    window.axios.defaults.headers.common = { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+    window._ = require("lodash");
+    window.axios.defaults.headers.common = { "Authorization": `Bearer ${localStorage.getItem("token")}` };
   },
-
   methods: {
     fotoEnthalten(index) {
       return this.news[index].news_bild_url != null &&
@@ -329,7 +274,6 @@ export default {
         ? true
         : false;
     },
-
     async loadHomeContent() {
       this.loading = true;
       let { data } = await repository.getHomeContent();
@@ -338,7 +282,6 @@ export default {
       this.loading = false;
       console.log(this.homecontent);
     },
-
     deleteHomecontent() {
       axios.delete("/api/homecontent").then(() => {
         // console.log(response);
@@ -350,11 +293,12 @@ export default {
         location.reload();
       });
     },
-
     loggedIn() {
       if (localStorage.getItem("isLoggedIn") == "true") {
         return true;
-      } else return false;
+      }
+      else
+        return false;
     },
     async handleLogout() {
       try {
@@ -363,7 +307,8 @@ export default {
         localStorage.removeItem("isLoggedIn");
         localStorage;
         this.$router.push({ name: "adminLogin" });
-      } catch (error) {
+      }
+      catch (error) {
         //console.log(error);
       }
     },
@@ -395,9 +340,11 @@ export default {
               confirmButtonColor: "#3cb371",
             });
           });
-      } catch (error) {
+      }
+      catch (error) {
         //console.error(error.response.data);
-      } finally {
+      }
+      finally {
         setTimeout(function () {
           location.reload();
         }, 3000);
@@ -405,6 +352,7 @@ export default {
       }
     },
   },
+  components: { MobileMenu }
 };
 </script>
 

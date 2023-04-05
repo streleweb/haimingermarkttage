@@ -1,14 +1,14 @@
 <template>
   <div class="w-full h-full bg-gray-900">
     <div v-if="loggedIn() == false" class="
-          flex
-          w-full
-          h-full
-          items-center
-          justify-center
-          text-red-900
-          bg-gray-900
-        ">
+            flex
+            w-full
+            h-full
+            items-center
+            justify-center
+            text-red-900
+            bg-gray-900
+          ">
       Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard
       zugreifen zu können...
     </div>
@@ -33,93 +33,93 @@
               </svg>
             </div>
             <div class="
-                  flex-1 flex
-                  items-center
-                  justify-center
-                  sm:items-stretch
-                  sm:justify-start
-                ">
+                    flex-1 flex
+                    items-center
+                    justify-center
+                    sm:items-stretch
+                    sm:justify-start
+                  ">
               <div class="flex-shrink-0 flex items-center"></div>
               <div class="hidden sm:block sm:ml-6">
                 <div class="flex space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                   <router-link to="/admin/dashboard"><span class="text-gray-500 text-lg">Dashboard</span></router-link>
                   <div class="
-                        text-gray-300
-                        hover:bg-gray-700
-                        hover:text-white
-                        px-3
-                        py-2
-                        rounded-md
-                        text-sm
-                        font-medium
-                      ">
+                          text-gray-300
+                          hover:bg-gray-700
+                          hover:text-white
+                          px-3
+                          py-2
+                          rounded-md
+                          text-sm
+                          font-medium
+                        ">
                     <router-link to="/admin/dashboard/ausstelleruebersicht">Aussteller
                     </router-link>
                   </div>
 
                   <div class="
-                        text-gray-300
-                        hover:bg-gray-700
-                        hover:text-white
-                        px-3
-                        py-2
-                        rounded-md
-                        text-sm
-                        font-medium
-                      ">
+                          text-gray-300
+                          hover:bg-gray-700
+                          hover:text-white
+                          px-3
+                          py-2
+                          rounded-md
+                          text-sm
+                          font-medium
+                        ">
                     <router-link to="/admin/dashboard/news">News</router-link>
                   </div>
 
                   <a href="#" class="
-                        text-gray-300
-                        hover:bg-gray-700
-                        hover:text-white
-                        px-3
-                        py-2
-                        rounded-md
-                        text-sm
-                        font-medium
-                      "><router-link to="/admin/dashboard/programmanlegen">
+                          text-gray-300
+                          hover:bg-gray-700
+                          hover:text-white
+                          px-3
+                          py-2
+                          rounded-md
+                          text-sm
+                          font-medium
+                        "><router-link to="/admin/dashboard/programmanlegen">
                       Programm</router-link></a>
 
                   <div aria-current="page" class="
-                        text-gray-300
-                        hover:bg-gray-700
-                        hover:text-white
-                        px-3
-                        py-2
-                        rounded-md
-                        text-sm
-                        font-medium
-                      ">
+                          text-gray-300
+                          hover:bg-gray-700
+                          hover:text-white
+                          px-3
+                          py-2
+                          rounded-md
+                          text-sm
+                          font-medium
+                        ">
                     Fotogalerie
                   </div>
                 </div>
               </div>
             </div>
             <div class="
-                  absolute
-                  inset-y-0
-                  right-0
-                  flex
-                  items-center
-                  pr-2
-                  sm:static
-                  sm:inset-auto
-                  sm:ml-6
-                  sm:pr-0
-                ">
-              <div class="
-                    text-gray-300
-                    hover:bg-red-900
-                    hover:text-white
-                    px-3
-                    py-2
-                    rounded-md
-                    text-sm
-                    font-medium
+                    absolute
+                    inset-y-0
+                    right-0
+                    flex
+                    items-center
+                    pr-2
+                    sm:static
+                    sm:inset-auto
+                    sm:ml-6
+                    sm:pr-0
                   ">
+              <div class="
+                      text-gray-300
+                      hover:bg-red-900
+                      hover:text-white
+                      px-3
+                      py-2
+                      rounded-md
+                      text-sm
+                      font-medium
+                    ">
                 <span class="text-white cursor-pointer" @click="handleLogout()">Logout
                   <img src="/public/images/icons/svgs/ausloggen.svg" class="filter-white" alt="" /></span>
               </div>
@@ -128,59 +128,7 @@
         </div>
 
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden" id="mobile-menu">
-          <div class="px-2 pt-2 pb-3 space-y-1">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="
-                  bg-gray-900
-                  text-white
-                  block
-                  px-3
-                  py-1
-                  rounded-md
-                  text-base
-                  font-medium
-                " aria-current="page">Dashboard</a>
-            <!--Wenn Menü aufgeklappt-->
-            <a href="#" class="
-                  text-gray-300
-                  hover:bg-gray-700
-                  hover:text-white
-                  block
-                  px-3
-                  py-1
-                  rounded-md
-                  text-base
-                  font-medium
-                "><router-link to="/admin/dashboard/ausstelleruebersicht">Aussteller</router-link>
-            </a>
-
-            <a href="#" class="
-                  text-gray-300
-                  hover:bg-gray-700
-                  hover:text-white
-                  block
-                  px-3
-                  py-1
-                  rounded-md
-                  text-base
-                  font-medium
-                ">News</a>
-
-            <a href="#" class="
-                  text-gray-300
-                  hover:bg-gray-700
-                  hover:text-white
-                  block
-                  px-3
-                  py-1
-                  rounded-md
-                  text-base
-                  font-medium
-                "><router-link to="/admin/dashboard/programmanlegen">
-                Programm</router-link></a>
-          </div>
-        </div>
+        <MobileMenu />
       </nav>
       <!-- DASHBOARD ENDE-->
 
@@ -207,14 +155,14 @@
             </div>
 
             <div v-for="(jeweiligesFoto, index) in fotos" :key="index" class="
-                  flex
-                  justify-evenly
-                  pl-3
-                  text-white
-                  bg-green-900
-                  mb-3
-                  border border-gray-600
-                ">
+                    flex
+                    justify-evenly
+                    pl-3
+                    text-white
+                    bg-green-900
+                    mb-3
+                    border border-gray-600
+                  ">
               <span class="flex w-32 items-center">{{
                 jeweiligesFoto.fotogalerie_fotoname
               }}</span>
@@ -234,21 +182,6 @@
                     <label for="name" class="block text-sm font-medium text-gray-700">Foto-Titel</label>
                     <input maxlength="30" type="text" v-model="formdata.fotogalerie_fotoname" id="full_name"
                       placeholder="Pflichtfeld" autocomplete="given-name" class="
-                          mt-1
-                          focus:ring-green-500
-                          focus:border-green-500
-                          block
-                          w-full
-                          shadow-sm
-                          sm:text-sm
-                          border-gray-300
-                          rounded-md
-                        " />
-
-                    <div class="col-span-6 sm:col-span-4">
-                      <label for="email_address" class="block text-sm font-medium text-gray-700">Fotobeschreibung</label>
-                      <textarea maxlength="50" v-model="formdata.fotogalerie_fotobeschreibung" id="beschreibung"
-                        autocomplete="Beschreibung" placeholder="Optional" class="
                             mt-1
                             focus:ring-green-500
                             focus:border-green-500
@@ -259,6 +192,21 @@
                             border-gray-300
                             rounded-md
                           " />
+
+                    <div class="col-span-6 sm:col-span-4">
+                      <label for="email_address" class="block text-sm font-medium text-gray-700">Fotobeschreibung</label>
+                      <textarea maxlength="50" v-model="formdata.fotogalerie_fotobeschreibung" id="beschreibung"
+                        autocomplete="Beschreibung" placeholder="Optional" class="
+                              mt-1
+                              focus:ring-green-500
+                              focus:border-green-500
+                              block
+                              w-full
+                              shadow-sm
+                              sm:text-sm
+                              border-gray-300
+                              rounded-md
+                            " />
                     </div>
 
                     <!--IMAGE FILE UPLOAD START-->
@@ -274,15 +222,15 @@
                     <form @submit.prevent="upload" class="flex items-center justify-center mt-3">
                       <input @change="handleOnChange" type="file" class="text-xs sm:text-base" />
                       <button @click="showSubmitButton" class="
-                            bg-green-900
-                            text-xs
-                            sm:text-base
-                            p-1
-                            text-white
-                            border border-green-600
-                            rounded-md
-                            hover:bg-green-500
-                          ">
+                              bg-green-900
+                              text-xs
+                              sm:text-base
+                              p-1
+                              text-white
+                              border border-green-600
+                              rounded-md
+                              hover:bg-green-500
+                            ">
                         Upload photo
                       </button>
                     </form>
@@ -291,31 +239,31 @@
                   </div>
 
                   <div class="
-                        flex
-                        justify-center
-                        px-4
-                        py-3
-                        bg-gray-600
-                        border-t-2 border-gray-800
-                        text-right
-                        sm:px-6
-                      ">
-                    <button id="submitbutton" @click="submitform" :class="submitvisibility" class="
-                          inline-flex
+                          flex
                           justify-center
-                          py-2
                           px-4
-                          border border-transparent
-                          shadow-sm
-                          text-sm
-                          font-medium
-                          rounded-md
-                          text-white
-                          bg-green-600
-                          hover:bg-black
-                          focus:outline-none
-                          focus:ring-2 focus:ring-offset-2 focus:ring-green-500
+                          py-3
+                          bg-gray-600
+                          border-t-2 border-gray-800
+                          text-right
+                          sm:px-6
                         ">
+                    <button id="submitbutton" @click="submitform" :class="submitvisibility" class="
+                            inline-flex
+                            justify-center
+                            py-2
+                            px-4
+                            border border-transparent
+                            shadow-sm
+                            text-sm
+                            font-medium
+                            rounded-md
+                            text-white
+                            bg-green-600
+                            hover:bg-black
+                            focus:outline-none
+                            focus:ring-2 focus:ring-offset-2 focus:ring-green-500
+                          ">
                       In DB Speichern
                     </button>
                   </div>
@@ -331,6 +279,7 @@
 
 <script>
 import Swal from "sweetalert2";
+import MobileMenu from "../MobileMenu.vue";
 
 export default {
   data() {
@@ -350,7 +299,6 @@ export default {
       }, //Objekt zum Speichern der Model-Daten von oben
     };
   },
-
   //Noch bevor Component gemounted ist, checke Login-Status...
   //Lade Aussteller nur dann, wenn Admin eingeloggt ist,
   //andernfalls erfolgt ein Redirect zur Login-Page
@@ -362,14 +310,12 @@ export default {
     if (localStorage.getItem("isLoggedIn") != "true") {
       this.$router.push({ name: "adminLogin" });
     }
-    window._ = require('lodash');
-    window.axios.defaults.headers.common = { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+    window._ = require("lodash");
+    window.axios.defaults.headers.common = { "Authorization": `Bearer ${localStorage.getItem("token")}` };
   },
-
   mounted() {
     this.loading = false;
   },
-
   methods: {
     showSubmitButton() {
       this.submitvisibility = "block";
@@ -393,13 +339,11 @@ export default {
           console.log(error);
         });
     },
-
     upload() {
       //formdata reset, falls öfter aufgerufen wird
       this.formdata.aussteller_bildurl = null;
       const formData = new FormData();
       formData.set("image", this.image);
-
       axios.post("/api/imageupload", formData).then((response) => {
         //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
         this.formdata.fotogalerie_fotourl = response.data.filepath;
@@ -413,7 +357,6 @@ export default {
       });
       //console.log(this.aussteller_bildurl);
     },
-
     deleteFoto(index) {
       axios
         .delete("/api/fotogalerie/" + this.fotos[index].id)
@@ -429,28 +372,29 @@ export default {
           location.reload();
         });
     },
-
     urlOfFoto(index) {
       try {
         return "/images/aussteller/" + this.fotos[index].fotogalerie_fotourl;
-      } catch (error) {
+      }
+      catch (error) {
         console.log(error);
       }
     },
-
     id(index) {
       try {
         console.log(this.fotos[index].id);
         return this.fotos[index].id;
-      } catch (error) {
+      }
+      catch (error) {
         console.log(error);
       }
     },
-
     loggedIn() {
       if (localStorage.getItem("isLoggedIn") == "true") {
         return true;
-      } else return false;
+      }
+      else
+        return false;
     },
     async handleLogout() {
       try {
@@ -459,9 +403,11 @@ export default {
         localStorage.removeItem("isLoggedIn");
         localStorage;
         this.$router.push({ name: "adminLogin" });
-      } catch (error) {
+      }
+      catch (error) {
         console.log(error);
-      } finally {
+      }
+      finally {
         this.loading = false;
       }
     },
@@ -493,14 +439,17 @@ export default {
               confirmButtonColor: "#3cb371",
             });
           });
-      } catch (error) {
+      }
+      catch (error) {
         //console.error(error.response.data);
-      } finally {
+      }
+      finally {
         setTimeout(() => { }, 1500);
         location.reload();
       }
     },
   },
+  components: { MobileMenu }
 };
 </script>
 

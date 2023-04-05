@@ -21,11 +21,11 @@
               </svg>
             </div>
             <div class="
-                    flex-1 flex
-                    items-center
-                    justify-center
-                    sm:items-stretch sm:justify-start
-                  ">
+                      flex-1 flex
+                      items-center
+                      justify-center
+                      sm:items-stretch sm:justify-start
+                    ">
               <div class="flex-shrink-0 flex items-center"></div>
               <div class="hidden sm:block sm:ml-6">
                 <div class="flex space-x-4">
@@ -33,87 +33,87 @@
                   <router-link to="/admin/dashboard" exact><span
                       class="text-gray-500 text-lg">Dashboard</span></router-link>
                   <div class="
-                          text-gray-300
-                          hover:bg-gray-700 hover:text-white
-                          px-3
-                          py-2
-                          rounded-md
-                          text-sm
-                          font-medium
-                        ">
+                            text-gray-300
+                            hover:bg-gray-700 hover:text-white
+                            px-3
+                            py-2
+                            rounded-md
+                            text-sm
+                            font-medium
+                          ">
                     <router-link to="/admin/dashboard/ausstelleruebersicht">Aussteller
                     </router-link>
                   </div>
 
                   <div aria-current="page" class="
-                          text-gray-300
-                          hover:bg-gray-700 hover:text-white
-                          px-3
-                          py-2
-                          rounded-md
-                          text-sm
-                          font-medium
-                        ">
+                            text-gray-300
+                            hover:bg-gray-700 hover:text-white
+                            px-3
+                            py-2
+                            rounded-md
+                            text-sm
+                            font-medium
+                          ">
                     <router-link to="/admin/dashboard/news">News</router-link>
                   </div>
 
                   <div class="
-                          text-gray-300
-                          hover:bg-gray-700 hover:text-white
-                          px-3
-                          py-2
-                          rounded-md
-                          text-sm
-                          font-medium
-                        ">
+                            text-gray-300
+                            hover:bg-gray-700 hover:text-white
+                            px-3
+                            py-2
+                            rounded-md
+                            text-sm
+                            font-medium
+                          ">
                     <router-link to="/admin/dashboard/programmanlegen">
                       Programm</router-link>
                   </div>
 
                   <div class="
-                          text-gray-300
-                          hover:bg-gray-700 hover:text-white
-                          px-3
-                          py-2
-                          rounded-md
-                          text-sm
-                          font-medium
-                        ">
+                            text-gray-300
+                            hover:bg-gray-700 hover:text-white
+                            px-3
+                            py-2
+                            rounded-md
+                            text-sm
+                            font-medium
+                          ">
                     <router-link to="/admin/dashboard/editfotogalerie">Fotogalerie</router-link>
                   </div>
                   <div class="
-                              text-gray-300
-                              hover:bg-gray-700
-                              hover:text-white
-                              px-3
-                              py-2
-                              rounded-md
-                              text-sm
-                              font-medium
-                            ">
+                                text-gray-300
+                                hover:bg-gray-700
+                                hover:text-white
+                                px-3
+                                py-2
+                                rounded-md
+                                text-sm
+                                font-medium
+                              ">
                     <router-link to="/admin/dashboard/hometext">Home-Text</router-link>
                   </div>
                 </div>
               </div>
             </div>
             <div class="
-                    absolute
-                    inset-y-0
-                    right-0
-                    flex
-                    items-center
-                    pr-2
-                    sm:static sm:inset-auto sm:ml-6 sm:pr-0
-                  ">
-              <div class="
-                      text-gray-300
-                      hover:bg-red-900 hover:text-white
-                      px-3
-                      py-2
-                      rounded-md
-                      text-sm
-                      font-medium
+                      absolute
+                      inset-y-0
+                      right-0
+                      flex
+                      items-center
+                      pr-2
+                      sm:static sm:inset-auto sm:ml-6 sm:pr-0
                     ">
+              <div class="
+                        text-gray-300
+                        hover:bg-red-900 hover:text-white
+                        px-3
+                        py-2
+                        rounded-md
+                        text-sm
+                        font-medium
+                      ">
                 <span class="text-white cursor-pointer" @click="handleLogout()">Logout
                   <img src="/public/images/icons/svgs/ausloggen.svg" class="filter-white" alt="" /></span>
               </div>
@@ -122,61 +122,7 @@
         </div>
 
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden" id="mobile-menu">
-          <div class="px-2 pt-2 pb-3 space-y-1">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <div class="
-                    bg-gray-900
-                    text-white
-                    block
-                    px-3
-                    py-1
-                    rounded-md
-                    text-base
-                    font-medium
-                  ">
-              <router-link to="/admin/dashboard">Dashboard</router-link>
-            </div>
-            <!--Wenn Menü aufgeklappt-->
-            <div class="
-                    text-gray-300
-                    hover:bg-gray-700 hover:text-white
-                    block
-                    px-3
-                    py-1
-                    rounded-md
-                    text-base
-                    font-medium
-                  ">
-              <router-link to="/admin/dashboard/ausstelleruebersicht">Aussteller</router-link>
-            </div>
-
-            <a aria-current="page" href="#" class="
-                    text-gray-300
-                    hover:bg-gray-700 hover:text-white
-                    block
-                    px-3
-                    py-1
-                    rounded-md
-                    text-base
-                    font-medium
-                  ">
-              News
-            </a>
-
-            <a href="#" class="
-                    text-gray-300
-                    hover:bg-gray-700 hover:text-white
-                    block
-                    px-3
-                    py-1
-                    rounded-md
-                    text-base
-                    font-medium
-                  "><router-link to="/admin/dashboard/programmanlegen">
-                Programm</router-link></a>
-          </div>
-        </div>
+        <MobileMenu />
       </nav>
       <!--END DASHBOARD-->
 
@@ -193,14 +139,14 @@
             </div>
 
             <div v-for="(jeweiligeNews, index) in news" :key="index" class="
-                    flex
-                    justify-evenly
-                    pl-3
-                    text-white
-                    bg-green-900
-                    mb-3
-                    border border-gray-600
-                  ">
+                      flex
+                      justify-evenly
+                      pl-3
+                      text-white
+                      bg-green-900
+                      mb-3
+                      border border-gray-600
+                    ">
               <span class="flex w-32 items-center">{{
                 jeweiligeNews.news_titel
               }}</span>
@@ -221,22 +167,6 @@
                     <label for="name" class="block text-sm font-medium text-gray-700">Neuer News-Titel</label>
                     <input v-model="formdata.news_titel" maxlength="70" type="text" id="news_titel"
                       placeholder="Pflichtfeld" autocomplete="given-name" class="
-                            mt-1
-                            focus:ring-green-500 focus:border-green-500
-                            block
-                            w-full
-                            shadow-sm
-                            sm:text-sm
-                            border-gray-300
-                            rounded-md
-                          " />
-
-                    <div class="col-span-6 sm:col-span-4">
-                      <label for="email_address" class="block text-sm font-medium text-gray-700">News-Textinhalt</label>
-                      <textarea maxlength="2000" v-model="formdata.news_textfeld" id="news_textfeld"
-                        autocomplete="Beschreibung"
-                        placeholder="Pflichtfeld. [Inhalt der News, wird unter dem Titel eingefügt] Maximal 2000 Zeichen"
-                        class="
                               mt-1
                               focus:ring-green-500 focus:border-green-500
                               block
@@ -246,6 +176,22 @@
                               border-gray-300
                               rounded-md
                             " />
+
+                    <div class="col-span-6 sm:col-span-4">
+                      <label for="email_address" class="block text-sm font-medium text-gray-700">News-Textinhalt</label>
+                      <textarea maxlength="2000" v-model="formdata.news_textfeld" id="news_textfeld"
+                        autocomplete="Beschreibung"
+                        placeholder="Pflichtfeld. [Inhalt der News, wird unter dem Titel eingefügt] Maximal 2000 Zeichen"
+                        class="
+                                mt-1
+                                focus:ring-green-500 focus:border-green-500
+                                block
+                                w-full
+                                shadow-sm
+                                sm:text-sm
+                                border-gray-300
+                                rounded-md
+                              " />
                     </div>
 
                     <!--IMAGE FILE UPLOAD START-->
@@ -261,30 +207,30 @@
                     <form @submit.prevent="upload" class="flex items-center justify-center mt-3">
                       <input @change="handleOnChange" type="file" class="text-xs sm:text-base" />
                       <button @click="showSubmitButton" class="
-                              bg-green-900
-                              text-xs
-                              sm:text-base
-                              p-1
-                              text-white
-                              border border-green-600
-                              rounded-md
-                              hover:bg-green-500
-                            ">
+                                bg-green-900
+                                text-xs
+                                sm:text-base
+                                p-1
+                                text-white
+                                border border-green-600
+                                rounded-md
+                                hover:bg-green-500
+                              ">
                         Upload photo
                       </button>
                     </form>
                     <div class="flex items-center justify-center">
                       <button @click="showSubmitButton" class="
-                              bg-green-900
-                              text-xs
-                              sm:text-base
-                              p-1
-                              mt-2
-                              text-white
-                              border border-green-600
-                              rounded-md
-                              hover:bg-green-500
-                            ">
+                                bg-green-900
+                                text-xs
+                                sm:text-base
+                                p-1
+                                mt-2
+                                text-white
+                                border border-green-600
+                                rounded-md
+                                hover:bg-green-500
+                              ">
                         Kein News-Foto uploaden
                       </button>
                     </div>
@@ -292,33 +238,33 @@
                   </div>
 
                   <div class="
-                          flex
-                          justify-center
-                          px-4
-                          py-3
-                          bg-gray-600
-                          border-t-2 border-gray-800
-                          text-right
-                          sm:px-6
-                        ">
-                    <button id="submitbutton" @click="submitform" :class="submitvisibility" class="
-                            inline-flex
+                            flex
                             justify-center
-                            py-2
                             px-4
-                            border border-transparent
-                            shadow-sm
-                            text-sm
-                            font-medium
-                            rounded-md
-                            text-white
-                            bg-green-600
-                            hover:bg-black
-                            focus:outline-none
-                            focus:ring-2
-                            focus:ring-offset-2
-                            focus:ring-green-500
+                            py-3
+                            bg-gray-600
+                            border-t-2 border-gray-800
+                            text-right
+                            sm:px-6
                           ">
+                    <button id="submitbutton" @click="submitform" :class="submitvisibility" class="
+                              inline-flex
+                              justify-center
+                              py-2
+                              px-4
+                              border border-transparent
+                              shadow-sm
+                              text-sm
+                              font-medium
+                              rounded-md
+                              text-white
+                              bg-green-600
+                              hover:bg-black
+                              focus:outline-none
+                              focus:ring-2
+                              focus:ring-offset-2
+                              focus:ring-green-500
+                            ">
                       In DB Speichern
                     </button>
                   </div>
@@ -334,6 +280,7 @@
 
 
 <script>
+import MobileMenu from "./MobileMenu.vue";
 import repository from "./repository/repository";
 import Swal from "sweetalert2";
 
@@ -341,7 +288,7 @@ export default {
   data() {
     return {
       name: "NewsAnlegen",
-      loading: null, //für die Einblendung vom loading-gif
+      loading: null,
       image: "",
       news: [],
       error: null,
@@ -353,7 +300,6 @@ export default {
       }, //Objekt zum Speichern der Model-Daten von oben
     };
   },
-
   //Noch bevor Component gemounted ist, checke Login-Status
   //Falls nicht eingeloggt -> Redirect zu Login-Page
   created() {
@@ -362,10 +308,9 @@ export default {
       this.$router.push({ name: "adminLogin" });
     }
     this.loadNews();
-    window._ = require('lodash');
-    window.axios.defaults.headers.common = { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+    window._ = require("lodash");
+    window.axios.defaults.headers.common = { "Authorization": `Bearer ${localStorage.getItem("token")}` };
   },
-
   methods: {
     fotoEnthalten(index) {
       return this.news[index].news_bild_url != null &&
@@ -373,7 +318,6 @@ export default {
         ? true
         : false;
     },
-
     async loadNews() {
       this.loading = true;
       let { data } = await repository.getNews();
@@ -381,11 +325,11 @@ export default {
       this.loading = false;
       console.log(this.news);
     },
-
     urlOfFoto(index) {
       try {
         return "/images/aussteller/" + this.news[index].news_bild_url;
-      } catch (error) {
+      }
+      catch (error) {
         console.log(error);
       }
     },
@@ -404,7 +348,6 @@ export default {
       this.formdata.news_bild_url = null;
       const formData = new FormData();
       formData.set("image", this.image);
-
       axios.post("/api/imageupload", formData).then((response) => {
         //Server-Responseurl des Images zur bildurl innerhalb der formdata adden
         this.formdata.news_bild_url = response.data.filepath;
@@ -416,7 +359,6 @@ export default {
         });
       });
     },
-
     deleteNews(index) {
       axios.delete("/api/news/" + this.news[index].id).then((response) => {
         console.log(response);
@@ -430,11 +372,12 @@ export default {
         location.reload();
       });
     },
-
     loggedIn() {
       if (localStorage.getItem("isLoggedIn") == "true") {
         return true;
-      } else return false;
+      }
+      else
+        return false;
     },
     async handleLogout() {
       try {
@@ -443,7 +386,8 @@ export default {
         localStorage.removeItem("isLoggedIn");
         localStorage;
         this.$router.push({ name: "adminLogin" });
-      } catch (error) {
+      }
+      catch (error) {
         //console.log(error);
       }
     },
@@ -475,9 +419,11 @@ export default {
               confirmButtonColor: "#3cb371",
             });
           });
-      } catch (error) {
+      }
+      catch (error) {
         //console.error(error.response.data);
-      } finally {
+      }
+      finally {
         setTimeout(function () {
           location.reload();
         }, 3000);
@@ -485,6 +431,7 @@ export default {
       }
     },
   },
+  components: { MobileMenu }
 };
 </script>
 
