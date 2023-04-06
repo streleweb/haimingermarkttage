@@ -13,8 +13,11 @@ require('laravel-mix-purgecss');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js').vue()
-    .postCss('resources/css/app.css', 'public/css', [
-        require("tailwindcss"),
-    ]).purgeCss().browserSync('http://127.0.0.1:8000/');
-
+mix.js('resources/js/app.js', 'public/js')
+  .vue()
+  .postCss('resources/css/app.css', 'public/css', [
+    require('tailwindcss'),
+  ])
+  .purgeCss()
+  .minify('public/js/app.js')
+  .browserSync('http://127.0.0.1:8000/');

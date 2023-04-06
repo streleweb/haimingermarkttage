@@ -71,7 +71,8 @@ export default {
       Swal.fire({
         title: "Cookie Notice",
         heightAuto: false,
-        text: "Wir verwenden Cookies, um unsere Webseite möglichst benutzerfreundlich zu gestalten. Durch die Nutzung unserer Webapp erklären Sie sich mit der Verwendung von Cookies einverstanden. Details dazu finden Sie in der Datenschutzerklärung. (Siehe Footer)",
+        // text: "Wir verwenden Cookies, um unsere Webseite möglichst benutzerfreundlich zu gestalten. Durch die Nutzung unserer Webapp erklären Sie sich mit der Verwendung von Cookies einverstanden. Details dazu finden Sie in der Datenschutzerklärung.",
+        html: 'Wir verwenden Cookies, um unsere Webseite möglichst benutzerfreundlich zu gestalten. Durch die Nutzung unserer Webapp erklären Sie sich mit der Verwendung von Cookies einverstanden. Details dazu finden Sie in der Datenschutzerklärung.<br><br><strong>Jede Seite, die Sie in dieser App online besucht haben, können Sie auch ohne Internetverbindung öffnen!</strong>',
         confirmButtonText: "ok",
         confirmButtonColor: "#3cb371",
       }).then(() => this.cookieOkClicked());

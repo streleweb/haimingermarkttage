@@ -8,25 +8,14 @@
         <!-- end willkommenstexte -->
       </div>
       <p v-if="loading">
-        <img
-          src="/images/icons/gifs/loadingtransparent.gif"
-          alt="loading..."
-          class="mt-20 z-50"
-        />
+        <img src="/images/icons/gifs/loadingtransparent.gif" alt="loading..." class="mt-20 z-50" />
       </p>
 
       <div class="grid grid-cols-1 gap-20 items-center w-full">
-        <article
-          v-for="(jeweiligeNews, index) in news"
-          :key="index"
-          class="articlestyling mx-auto overflow-hidden w-full"
-        >
-          <img
-            v-if="imageUrlNotEmpty(index)"
-            :src="imgUrl(index)"
-            alt=""
-            class="border border-green-900 shadow-md max-h-56"
-          />
+        <article v-for="(jeweiligeNews, index) in news" :key="index"
+          class="articlestyling mx-auto overflow-hidden w-full">
+          <img v-if="imageUrlNotEmpty(index)" :src="imgUrl(index)" alt=""
+            class="border border-green-900 shadow-md max-h-56" />
 
           <div class="text text-lg text-center lg:text-2xl">
             <h3 class="font-bold text-gray-800">
@@ -45,12 +34,8 @@
     <div class="flex justify-center mt-5 mb-5">
       <!--Buttons mit Custom Props-->
       <router-link to="/" exact>
-        <Button
-          svg-source="/../../images/icons/svgs/home.svg"
-          button-inhalt="Home"
-          button-color="bg-green-400"
-          on-hover="hover:bg-yellow-200"
-        ></Button>
+        <Button svg-source="/../../images/icons/svgs/home.svg" button-inhalt="Home" button-color="bg-green-400"
+          on-hover="hover:bg-yellow-200"></Button>
       </router-link>
     </div>
   </div>
@@ -140,7 +125,7 @@ export default {
           Swal.fire({
             title: "Konnte Connection zur DB nicht herstellen!",
             heightAuto: false,
-            text: "Wir kümmern uns in Kürze darum",
+            text: "Überprüfen Sie bitte Ihre Verbindung",
             confirmButtonText: "ok",
             confirmButtonColor: "#3cb371",
           });
@@ -186,7 +171,8 @@ export default {
 
 article:hover {
   transform: translateY(5px);
-  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/
+  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3);
+  /*Shadow bewegt sich mit nach unten*/
 }
 
 article img {

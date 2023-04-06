@@ -20,6 +20,8 @@
 
 
 
+
+
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
 
@@ -40,7 +42,7 @@
     <script type="text/javascript">
         // Initialize the service worker
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/serviceworker.js', {
+        navigator.serviceWorker.register('/sw.js', {
             scope: '.'
         }).then(function (registration) {
             // Registration was successful
