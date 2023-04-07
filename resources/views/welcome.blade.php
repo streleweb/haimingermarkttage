@@ -40,18 +40,24 @@
 
 
     <script type="text/javascript">
-        // Initialize the service worker
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js', {
-            scope: '.'
-        }).then(function (registration) {
-            // Registration was successful
-            console.log('Laravel PWA: ServiceWorker registration successful with scope: ', registration.scope);
-        }, function (err) {
-            // registration failed :(
-            console.log('Laravel PWA: ServiceWorker registration failed: ', err);
-        });
-    }
+        // redirect http to https
+        if (location.protocol !== 'https:') {
+        location.replace(`https:${location.href.substring(location.protocol.length)}`);
+    } else{
+            // Initialize the service worker
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js', {
+                    scope: '.'
+                }).then(function (registration) {
+                    // Registration was successful
+                    console.log('Laravel PWA: ServiceWorker registration successful with scope: ', registration.scope);
+                }, function (err) {
+                    // registration failed :(
+                    console.log('Laravel PWA: ServiceWorker registration failed: ', err);
+                });
+            }
+
+        }
     </script>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
     <!-- possibly change asset back to mix, don´t know yet -->
