@@ -8,16 +8,16 @@
       <div class="ueberschriftprodukte textshadow-markant">
         {{ titleMessage }}
         <div class="
-                  hidden
-                  hmbp:block
-                  mb-5
-                  text-base
-                  px-4
-                  pt-4
-                  btnbp:text-2xl btnbp:pt-6 btnbp:px-12
-                  text-gray-300 text-center
-                  produktdescriptionbp:px-14
-                ">
+                    hidden
+                    hmbp:block
+                    mb-5
+                    text-base
+                    px-4
+                    pt-4
+                    btnbp:text-2xl btnbp:pt-6 btnbp:px-12
+                    text-gray-300 text-center
+                    produktdescriptionbp:px-14
+                  ">
           {{ smallDescription }}
         </div>
         <!-- end willkommenstexte -->
@@ -26,13 +26,13 @@
     <!-- end willkommen -->
 
     <div class="
-              grid grid-cols-1
-              produktreiterbp:grid-cols-2
-              xl:grid-cols-3
-              gap-6
-              m-auto
-              max-w-full
-            ">
+                grid grid-cols-1
+                produktreiterbp:grid-cols-2
+                xl:grid-cols-3
+                gap-6
+                m-auto
+                max-w-full
+              ">
       <article v-for="(produktart, index) in produktarten" :key="index" @click="goToPage(produktart.produktartTitel)"
         class="articlestyling mx-auto overflow-hidden w-52 ssm:w-72 md:w-96">
         <img :src="produktart.imgUrl" alt="" class="border-b border-gray-800 produktecardshadow" />
@@ -73,7 +73,7 @@ export default {
           produktartTitel: "Lebensmittel",
           imgUrl: "/images/produkte/apples.jpg",
           produktartBeschreibung:
-            "Obst, Gemüse, Kartoffeln, Wein, Getreide, Fleischwaren, Käse, Säfte, Süßigkeiten und vieles mehr...",
+            "Obst, Gemüse, Wein, Getreide, Fleischwaren, Käse, Säfte, Süßigkeiten und vieles mehr...",
         },
         {
           produktartTitel: "Gastronomie",
