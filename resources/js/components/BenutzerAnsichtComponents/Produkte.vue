@@ -7,8 +7,7 @@
       <!-- Hier noch Background-Pic oder Video rein -->
       <div class="ueberschriftprodukte textshadow-markant">
         {{ titleMessage }}
-        <div
-          class="
+        <div class="
             hidden
             hmbp:block
             mb-5
@@ -20,8 +19,7 @@
             btnbp:px-12
             text-gray-300 text-center
             produktdescriptionbp:px-14
-          "
-        >
+          ">
           {{ smallDescription }}
         </div>
         <!-- end willkommenstexte -->
@@ -29,26 +27,16 @@
     </div>
     <!-- end willkommen -->
 
-    <div
-      class="
+    <div class="
         grid grid-cols-1
         sm:grid-cols-2
         lg:grid-cols-3
         gap-6
         m-auto
         max-w-full
-      "
-    >
-      <article
-        v-for="(jeweiligesImg, index) in images"
-        :key="index"
-        class="articlestyling mx-auto overflow-hidden"
-      >
-        <img
-          :src="jeweiligesImg.imgUrl"
-          alt=""
-          class="border-b border-gray-800 produktecardshadow"
-        />
+      ">
+      <article v-for="(jeweiligesImg, index) in images" :key="index" class="articlestyling mx-auto overflow-hidden">
+        <img :src="jeweiligesImg.imgUrl" alt="" class="border-b border-gray-800 produktecardshadow" />
 
         <div class="text text-center lg:text-lg">
           <h3 class="font-bold text-gray-800 mb-2 mt-1">
@@ -65,12 +53,8 @@
     <div class="buttonContainer flex flex-col justify-end pb-4 mt-10">
       <!--Buttons mit Custom Props-->
       <router-link to="/" exact>
-        <Button
-          svg-source="/../../images/icons/svgs/home.svg"
-          button-inhalt="Home"
-          button-color="bg-green-400"
-          on-hover="hover:bg-white"
-        ></Button>
+        <Button svg-source="/../../images/icons/svgs/home.svg" button-inhalt="Home" button-color="bg-green-400"
+          on-hover="hover:bg-white"></Button>
       </router-link>
     </div>
     <!-- end buttoncontainer -->
@@ -126,7 +110,7 @@ export default {
           imgTitel: "Brot, Getreide und Gebäck",
           imgUrl: "/images/produkte/img_brot.jpg",
           imgBeschreibung:
-            "Fertige Brote oder aber auch Bio-Brotgetreide für's selber-backen.",
+            "Fertige Brote oder aber auch Bio-Brotgetreide für's Selber-backen.",
         },
         {
           imgTitel: "Honig und Marmeladen",
@@ -183,7 +167,8 @@ export default {
 
 article:hover {
   transform: translateY(5px);
-  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3); /*Shadow bewegt sich mit nach unten*/
+  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3);
+  /*Shadow bewegt sich mit nach unten*/
 }
 
 article img {
