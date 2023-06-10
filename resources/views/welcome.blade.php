@@ -40,8 +40,9 @@
 
 
     <script type="text/javascript">
-        // redirect http to https
-        if (location.protocol !== 'https:') {
+        // redirect http to https, WARNING: set to local if for development!
+        const environment = 'local'
+        if (location.protocol !== 'https:' && environment !== 'local') {
         location.replace(`https:${location.href.substring(location.protocol.length)}`);
     } else{
             // Initialize the service worker

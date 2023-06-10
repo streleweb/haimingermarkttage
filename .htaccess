@@ -2,12 +2,19 @@
 RewriteCond %{HTTP:Authorization} .
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
+Order Allow,Deny
+Allow from all
+
 <IfModule mod_rewrite.c>
   <IfModule mod_negotiation.c>
     Options -MultiViews
   </IfModule>
 
   RewriteEngine On
+
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
 
   RewriteCond %{REQUEST_FILENAME} -d [OR]
   RewriteCond %{REQUEST_FILENAME} -f
@@ -20,5 +27,5 @@ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule ^ server.php
 
-  CGIPassAuth on #FIX
+  CGIPassAuth on
 </IfModule>

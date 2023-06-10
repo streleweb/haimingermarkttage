@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <PageLoader></PageLoader>
     <header class="navigationbar">
       <navbar @togglemenu="mobileMenuOpen = !mobileMenuOpen"></navbar>
     </header>
@@ -18,11 +19,12 @@
 
 
 <script>
+import PageLoader from "./PageLoader.vue";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Mobilemenu from "./Mobilemenu.vue";
 const default_layout = "default";
-import { EventBus, Eventbus } from "../../event-bus";
+import { EventBus } from "../../event-bus";
 
 export default {
   data() {
@@ -44,7 +46,7 @@ export default {
       EventBus.$on("clickedOnMenuLink", clickHandler);
     },
   },
-  components: { Navbar, Footer, Mobilemenu },
+  components: { PageLoader, Navbar, Footer, Mobilemenu },
 };
 </script>
 

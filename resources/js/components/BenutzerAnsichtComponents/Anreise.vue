@@ -9,8 +9,7 @@
       <!-- Hier noch Background-Pic oder Video rein -->
       <div class="ueberschriftprodukte textshadow-markant">
         Anreise
-        <div
-          class="
+        <div class="
             hidden
             hmbp:block
             mb-5
@@ -23,8 +22,7 @@
             btnbp:px-12
             text-gray-300 text-center
             produktdescriptionbp:px-14
-          "
-        >
+          ">
           Hier finden Sie den heurigen Lageplan von den Markttagen. Diverse
           Park-Möglichkeiten sind gekennzeichnet. Klicken Sie bitte auf das
           Navigationssymbol, um per Google Maps nach Haiming navigiert zu
@@ -35,24 +33,16 @@
     </div>
     <!-- end willkommen -->
     <div class="flex flex-col justify-center items-center">
-      <a href="https://goo.gl/maps/c5LfWFrYFkwVvHJ37"
-        ><img
-          class="h-20 border border-black p-5 rounded-full filter-white"
-          src="/images/icons/svgs/locationpointer.svg"
-          alt="Google Maps Navigation"
-      /></a>
+      <a href="https://goo.gl/maps/c5LfWFrYFkwVvHJ37"><img class="h-20 border border-black p-5 rounded-full filter-white"
+          src="/images/icons/svgs/locationpointer.svg" alt="Google Maps Navigation" /></a>
       <img class="mt-5" src="/images/anreise/img_lageplan.webp" alt="" />
     </div>
 
     <div class="buttonContainer flex flex-col justify-end pb-4 mt-10">
       <!--Buttons mit Custom Props-->
       <router-link to="/" exact>
-        <Button
-          svg-source="/../../images/icons/svgs/home.svg"
-          button-inhalt="Home"
-          button-color="bg-green-400"
-          on-hover="hover:bg-white"
-        ></Button>
+        <Button svg-source="/../../images/icons/svgs/home.svg" button-inhalt="Home" button-color="bg-green-400"
+          on-hover="hover:bg-white"></Button>
       </router-link>
     </div>
     <!-- end buttoncontainer -->
@@ -69,7 +59,7 @@ export default {
       name: "Anreise",
     };
   },
-  components: { Button },
+  components: { Button }
 };
 </script>
 
@@ -89,5 +79,6 @@ export default {
   background-position: 50% 50%;
   background-size: cover;
   opacity: 90%;
+  height: 100%;
 }
 </style>
