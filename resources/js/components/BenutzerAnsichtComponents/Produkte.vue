@@ -66,6 +66,9 @@
 import Button from "./Button";
 
 export default {
+  metaInfo: {
+    title: 'Produkte'
+  },
   data() {
     return {
       name: "Produkte",

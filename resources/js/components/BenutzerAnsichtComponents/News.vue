@@ -47,6 +47,9 @@ import Farbzone from "./Farbzone";
 import Swal from "sweetalert2";
 
 export default {
+  metaInfo: {
+    title: 'News'
+  },
   data() {
     return {
       news: [],

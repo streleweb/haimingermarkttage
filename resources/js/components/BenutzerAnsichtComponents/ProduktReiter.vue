@@ -65,6 +65,9 @@
 import Button from "./Button";
 
 export default {
+  metaInfo: {
+    title: 'Produktreiter'
+  },
   data() {
     return {
       name: "ProduktReiter",

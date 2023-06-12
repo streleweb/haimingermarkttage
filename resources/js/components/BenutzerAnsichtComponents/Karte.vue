@@ -9,8 +9,7 @@
       <!-- Hier noch Background-Pic oder Video rein -->
       <div class="ueberschriftprodukte textshadow-markant">
         Farbzonen-Übersicht
-        <div
-          class="
+        <div class="
             hidden
             hmbp:block
             mb-5
@@ -21,8 +20,7 @@
             btnbp:text-xl btnbp:pt-6 btnbp:px-12
             text-gray-300 text-center
             produktdescriptionbp:px-14
-          "
-        >
+          ">
           Damit Sie einen besseren Überblick über unsere Aussteller und deren
           Position am Markt bekommen, ist jedem Aussteller eine Zonenfarbe
           zugewiesen. Sie sehen hier die gekennzeichneten Farbzonen anhand einer
@@ -38,22 +36,15 @@
     <!-- end willkommen -->
     <!--https://www.google.com/maps/d/embed?mid=13qNnDIQECR3-pZ3-vK39FNUhoY7M-qD1-->
     <div class="flex justify-center items-center">
-      <iframe
-        src="https://www.google.com/maps/d/embed?mid=18zYJ568aZGAngWapMG2ZriZWZXYI-vI&ehbc=2E312F"
-        width="800"
-        height="600"
-      ></iframe>
+      <iframe src="https://www.google.com/maps/d/embed?mid=18zYJ568aZGAngWapMG2ZriZWZXYI-vI&ehbc=2E312F" width="800"
+        height="600"></iframe>
     </div>
 
     <div class="buttonContainer flex flex-col justify-end pb-4 mt-10">
       <!--Buttons mit Custom Props-->
       <router-link to="/" exact>
-        <Button
-          svg-source="/../../images/icons/svgs/home.svg"
-          button-inhalt="Home"
-          button-color="bg-green-400"
-          on-hover="hover:bg-white"
-        ></Button>
+        <Button svg-source="/../../images/icons/svgs/home.svg" button-inhalt="Home" button-color="bg-green-400"
+          on-hover="hover:bg-white"></Button>
       </router-link>
     </div>
     <!-- end buttoncontainer -->
@@ -65,6 +56,9 @@
 import Button from "./Button";
 
 export default {
+  metaInfo: {
+    title: 'Karte'
+  },
   data() {
     return {
       name: "Karte",

@@ -53,6 +53,9 @@ import Button from "./Button";
 import Swal from "sweetalert2";
 
 export default {
+  metaInfo: {
+    title: 'Willkommen bei den Haiminger Markttagen!'
+  },
   data() {
     return {
       name: "HomeContent",

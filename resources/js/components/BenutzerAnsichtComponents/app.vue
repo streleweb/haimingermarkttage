@@ -27,6 +27,18 @@ const default_layout = "default";
 import { EventBus } from "../../event-bus";
 
 export default {
+  name: 'App',
+  metaInfo: {
+    title: 'Haiminger Markttage',
+    titleTemplate: '%s | Haiminger Markttage',
+    htmlAttrs: {
+      lang: 'de-DE'
+    },
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'description', content: 'Haiminger Markttage App. Der Weg zum guten Geschmack führt über die Haiminger Markttage' }
+    ]
+  },
   data() {
     return {
       titleMessage: "Willkommen bei den Haiminger Markttagen!",

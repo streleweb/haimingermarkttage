@@ -52,11 +52,10 @@
             <p class="text-sm lg:text-base mb-2">
               {{ jeweiligerAussteller.aussteller_beschreibung }}
             </p>
-            <div v-if="
-              webUrlNotEmpty(index) ||
+            <div v-if="webUrlNotEmpty(index) ||
               ausstellerEmailNotEmpty(index) ||
               zonenFarbeNotEmpty(index)
-            " class="
+              " class="
                     bg-gray-800
                     relative
                     bottom-0
@@ -104,6 +103,9 @@ import Farbzone from "../Farbzone";
 import Swal from "sweetalert2";
 
 export default {
+  metaInfo: {
+    title: 'Gastronomie'
+  },
   data() {
     return {
       aussteller: [],

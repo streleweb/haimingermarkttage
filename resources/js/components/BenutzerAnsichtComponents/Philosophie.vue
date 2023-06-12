@@ -2,8 +2,7 @@
   <div class="philosophiecontentcontainer">
     <!-- Content Container von Willkommen (exklusive Navbar) bis exklusive Footer-->
 
-    <div
-      class="
+    <div class="
         willkommen
         font-willkommen
         flex-shrink
@@ -14,12 +13,10 @@
         md:flex-grow
         md:mt-5
         text-center
-      "
-    >
+      ">
       <!-- custom font konfiguriert in tailwind.config.js-->
       <!-- Hier noch Background-Pic oder Video rein -->
-      <div
-        class="
+      <div class="
           text-white
           sm:mb-5
           text-xl
@@ -28,11 +25,9 @@
           md:text-5xl
           lg:text-5xl
           font-s
-        "
-      >
+        ">
         {{ titleMessage }}
-        <div
-          class="
+        <div class="
             text-gray-100 text-xs
             sssm:text-base
             text-justify
@@ -47,8 +42,7 @@
             lg:text-2xl
             font-thin
             bg
-          "
-        >
+          ">
           {{ description }}
         </div>
         <!-- end willkommenstexte -->
@@ -59,12 +53,8 @@
     <div class="buttonContainer flex flex-col flex-shrink md:flex-grow mb-2">
       <!--Buttons mit Custom Props-->
       <router-link to="/" exact>
-        <Button
-          svg-source="/../../images/icons/svgs/home.svg"
-          button-inhalt="Home"
-          button-color="bg-green-400"
-          on-hover="hover:bg-white"
-        ></Button>
+        <Button svg-source="/../../images/icons/svgs/home.svg" button-inhalt="Home" button-color="bg-green-400"
+          on-hover="hover:bg-white"></Button>
       </router-link>
     </div>
     <!-- end buttoncontainer -->
@@ -76,6 +66,9 @@
 import Button from "./Button";
 
 export default {
+  metaInfo: {
+    title: 'Philosophie'
+  },
   data() {
     return {
       name: "Philosophie",

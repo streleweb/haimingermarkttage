@@ -9,6 +9,9 @@ import Button from "./Button";
 import FotoApp from "../BenutzerAnsichtComponents/Fotoslidergalerie/FotoApp.vue";
 
 export default {
+  metaInfo: {
+    title: 'Fotogalerie'
+  },
   data() {
     return {
       /*ausstellerfotos: [],*/

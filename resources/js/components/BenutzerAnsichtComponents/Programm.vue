@@ -54,6 +54,9 @@ import Farbzone from "./Farbzone";
 import Swal from "sweetalert2";
 
 export default {
+  metaInfo: {
+    title: 'Programm'
+  },
   data() {
     return {
       loading: false,

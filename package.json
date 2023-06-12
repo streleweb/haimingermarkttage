@@ -26,6 +26,7 @@
         "sweetalert2": "^11.0.18",
         "tailwindcss": "^2.0.3",
         "vue": "^2.6.12",
+        "vue-meta": "^2.4.0",
         "vue-router": "^3.5.1",
         "vuex": "^3.6.2"
     }
