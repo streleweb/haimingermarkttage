@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="Haiminger Markttage. Direktverkauf regionaler bäuerlicher Produkte von hoher Qualität.">
     <meta name="theme-color" content="#000000">
     <link rel="manifest" href="/manifest.json">
     <!-- Add to homescreen for Chrome on Android -->
