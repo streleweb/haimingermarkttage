@@ -1,6 +1,5 @@
 <template>
-  <div
-    class="
+  <div class="
       z-50
       buttoncontainer
       flex
@@ -9,14 +8,12 @@
       items-center
       text-white text-center
       sm:mb-2
-    "
-  >
+    ">
     <!--Custom Button-->
     <div class="w-40 sm:w-60 md:w-80 text-center z-50">
       <div class="p-1 rounded-lg shadow-2xl" :class="onHover">
         <!-- Hoverdiv Start -->
-        <div
-          class="
+        <div class="
             flex
             items-center
             justify-between
@@ -33,13 +30,8 @@
             cshadow
             z-50
             buttoncolor1
-          "
-          :class="buttonColor"
-        >
-          <img
-            :src="svgSource"
-            class="filter-white iconsmall ssm:iconmedium z-50"
-          />
+          " :class="buttonColor">
+          <img :src="svgSource" class="filter-white iconsmall ssm:iconmedium z-50" alt="Menu Icon" />
           <!--<svg
             class="h-6 fill-current hover:text-gray-100"
             role="img"
@@ -52,8 +44,7 @@
             />
           </svg>-->
           <div>
-            <p
-              class="
+            <p class="
                 text-2xl
                 sm:text-3xl
                 font-medium
@@ -61,8 +52,7 @@
                 md:text-3xl
                 md:p-2
                 z-50
-              "
-            >
+              ">
               {{ buttonInhalt }}
             </p>
           </div>
@@ -90,5 +80,7 @@ export default {
 
 .buttoncolor1 {
   background-color: #003d33d2;
-} /*Tailwind color: #004d40d2;*/
+}
+
+/*Tailwind color: #004d40d2;*/
 </style>
