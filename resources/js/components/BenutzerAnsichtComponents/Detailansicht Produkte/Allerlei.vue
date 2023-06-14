@@ -130,7 +130,7 @@ export default {
         .then((response) => {
           //console.log("Debug status:" + response.status);
           if (response.status == 200) {
-            console.log(response.data.data);
+            //console.log(response.data.data);
             this.aussteller = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
             if (this.aussteller.length <= 0) {
               Swal.fire({

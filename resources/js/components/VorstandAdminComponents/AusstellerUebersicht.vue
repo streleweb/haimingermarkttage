@@ -261,7 +261,7 @@ export default {
   },
 
   created() {
-    console.log(localStorage.getItem("isLoggedIn"));
+    //console.log(localStorage.getItem("isLoggedIn"));
     //Wenn Admin nicht eingeloggt ist, redirect auf LoginPage
     if (localStorage.getItem("isLoggedIn") != "true") {
       this.$router.push({ name: "adminLogin" });
@@ -276,7 +276,7 @@ export default {
       axios
         .delete("/api/aussteller/" + this.aussteller[index].aussteller_fullname)
         .then((response) => {
-          console.log(response);
+          //console.log(response);
           //laravel response zu component object hinzufügen zur späteren Ausgabe
           this.laravelResponseData = response.data;
           Swal.fire({

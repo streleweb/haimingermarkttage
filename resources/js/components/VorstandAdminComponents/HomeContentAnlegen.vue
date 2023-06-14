@@ -280,7 +280,7 @@ export default {
       this.homecontent.title = data.homeContentTitle;
       this.homecontent.description = data.homeContentDescription;
       this.loading = false;
-      console.log(this.homecontent);
+      //console.log(this.homecontent);
     },
     deleteHomecontent() {
       axios.delete("/api/homecontent").then(() => {
