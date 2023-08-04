@@ -45,6 +45,7 @@
 import Button from "./Button";
 import Farbzone from "./Farbzone";
 import Swal from "sweetalert2";
+import { sortMostRecentFirst } from '../../utilityfunctions/utils'
 
 export default {
   metaInfo: {
@@ -101,8 +102,7 @@ export default {
         .then((response) => {
           //console.log("Debug status:" + response.status);
           if (response.status == 200) {
-            this.news = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
-            this.news.reverse();
+            this.news = sortMostRecentFirst(response.data.data); // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
             this.loading = false;
             this.changeTimeFormat();
             if (this.news.length <= 0) {

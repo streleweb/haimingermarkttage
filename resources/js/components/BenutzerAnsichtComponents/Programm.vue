@@ -52,6 +52,7 @@
 import Button from "./Button";
 import Farbzone from "./Farbzone";
 import Swal from "sweetalert2";
+import { sortMostRecentFirst } from '../../utilityfunctions/utils'
 
 export default {
   metaInfo: {
@@ -95,8 +96,8 @@ export default {
         .then((response) => {
           //console.log("Debug status:" + response.status);
           if (response.status == 200) {
-            this.programmArray = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
-            //this.programmArray.reverse();
+            this.programmArray = sortMostRecentFirst(response.data.data); // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
+
             this.changeTimeFormat();
             if (this.programmArray.length <= 0) {
               Swal.fire({
