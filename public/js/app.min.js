@@ -9156,6 +9156,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _repository_repository__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./repository/repository */ "./resources/js/components/VorstandAdminComponents/repository/repository.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _utilityfunctions_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utilityfunctions/utils */ "./resources/js/utilityfunctions/utils.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -9447,6 +9448,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -9501,11 +9503,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 3:
                 _yield$repository$get = _context.sent;
                 data = _yield$repository$get.data;
-                _this.programmArray = data.data;
-                _this.loading = false;
-                console.log(_this.programmArray);
+                _this.programmArray = (0,_utilityfunctions_utils__WEBPACK_IMPORTED_MODULE_4__.sortMostRecentFirst)(data.data);
+                _this.loading = false; //console.log(this.programmArray);
 
-              case 8:
+              case 7:
               case "end":
                 return _context.stop();
             }
@@ -41659,35 +41660,39 @@ var render = function() {
                   })
                 : _vm._e(),
               _vm._v(" "),
-              _c("div", { staticClass: "text text-lg text-left lg:text-2xl" }, [
-                _c("h3", { staticClass: "font-bold text-gray-800" }, [
-                  _vm._v(
-                    "\n            " +
-                      _vm._s(jeweiligesProgramm.programm_titel) +
-                      "\n          "
-                  )
-                ]),
-                _vm._v(" "),
-                _c(
-                  "h6",
-                  { staticClass: "font-semibold text-xs text-gray-700 mb-2" },
-                  [
+              _c(
+                "div",
+                { staticClass: "text text-lg text-left lg:text-2xl mt-5 mb-5" },
+                [
+                  _c("h3", { staticClass: "font-bold text-gray-800" }, [
                     _vm._v(
-                      "\n            Geschrieben am " +
-                        _vm._s(jeweiligesProgramm.created_at) +
+                      "\n            " +
+                        _vm._s(jeweiligesProgramm.programm_titel) +
                         "\n          "
                     )
-                  ]
-                ),
-                _vm._v(" "),
-                _c("p", { staticClass: "text-base lg:text-xl mb-2" }, [
-                  _vm._v(
-                    "\n            " +
-                      _vm._s(jeweiligesProgramm.programm_beschreibung) +
-                      "\n          "
-                  )
-                ])
-              ])
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "h6",
+                    { staticClass: "font-semibold text-xs text-gray-700 mb-2" },
+                    [
+                      _vm._v(
+                        "\n            Geschrieben am " +
+                          _vm._s(jeweiligesProgramm.created_at) +
+                          "\n          "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "text-base lg:text-xl mb-2" }, [
+                    _vm._v(
+                      "\n            " +
+                        _vm._s(jeweiligesProgramm.programm_beschreibung) +
+                        "\n          "
+                    )
+                  ])
+                ]
+              )
             ]
           )
         }),

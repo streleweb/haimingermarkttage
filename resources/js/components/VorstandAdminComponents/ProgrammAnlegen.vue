@@ -284,6 +284,7 @@
 import MobileMenu from "./MobileMenu.vue";
 import repository from "./repository/repository";
 import Swal from "sweetalert2";
+import { sortMostRecentFirst } from '../../utilityfunctions/utils'
 
 export default {
   data() {
@@ -322,9 +323,9 @@ export default {
     async loadProgramm() {
       this.loading = true;
       let { data } = await repository.getProgramm();
-      this.programmArray = data.data;
+      this.programmArray = sortMostRecentFirst(data.data);
       this.loading = false;
-      console.log(this.programmArray);
+      //console.log(this.programmArray);
     },
     urlOfFoto(index) {
       try {

@@ -24,7 +24,7 @@
           <img v-if="imageUrlNotEmpty(index)" :src="imgUrl(index)" alt=""
             class="border border-green-900 shadow-md max-h-96 lg:max-w-md" />
 
-          <div class="text text-lg text-left lg:text-2xl">
+          <div class="text text-lg text-left lg:text-2xl mt-5 mb-5">
             <h3 class="font-bold text-gray-800">
               {{ jeweiligesProgramm.programm_titel }}
             </h3>
