@@ -61,6 +61,7 @@ export default {
       name: "HomeContent",
       titleMessage: "Willkommen bei den Haiminger Markttagen!",
       smallDescription: "Flanieren, Probieren und Genießen...",
+      beforeInstallPromptEvent: Event,
       homecontent: {
         homeContentTitle: 'Infos zu den kommenden Markttagen folgen',
         homeContentDescription: ''
@@ -70,6 +71,34 @@ export default {
   },
 
   beforeCreate() {
+    // Check if the PWA is eligible for installation and if it's already installed
+    window.addEventListener('beforeinstallprompt', (e) => {
+      // Prevent the default browser UI from displaying the install prompt
+      e.preventDefault();
+      this.beforeInstallPromptEvent = e;
+
+      // Check if the app is already installed on the home screen
+      if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
+        console.log('PWA bereits installiert.');
+      } else {
+        console.log('PWA ist noch nicht installiert.');
+
+        Swal.fire({
+          title: "App installieren",
+          text: "App zum Startbildschirm hinzufügen?",
+          heightAuto: false,
+          showCancelButton: true,
+          cancelButtonText: "Nein",
+          confirmButtonText: "Ja",
+          confirmButtonColor: "#3cb371",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            this.beforeInstallPromptEvent.prompt();
+          }
+        });
+      }
+    });
+
     if (!localStorage.getItem("cookieOkClicked")) {
       Swal.fire({
         title: "Cookie Notice",
@@ -96,4 +125,10 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style>
+#installapp {
+  position: absolute;
+  background: black;
+  background-color: black;
+}
+</style>
