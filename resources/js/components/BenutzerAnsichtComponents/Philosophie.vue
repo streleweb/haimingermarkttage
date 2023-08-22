@@ -19,6 +19,7 @@
       <div class="
           text-white
           sm:mb-5
+          mt-7
           text-xl
           iphone6:text-3xl
           sm:text-3xl
@@ -37,13 +38,66 @@
             sm:pb-0
             md:px-20
             md:text-xl
-            lg:mt-8
+            lg:mt-10
             lg:px-40
             lg:text-2xl
             font-thin
             bg
           ">
-          {{ description }}
+
+          <div class="grid grid-cols-1 xl:grid-cols-2 gap-20 items">
+            <div id="philtext1">Im Jahr 1987 entstand die Idee, eine bäuerliche Vermarktungsstruktur in Haiming zu
+              etablieren. Die
+              Initiatoren Anton Raffl, Ewald Höpperger und Altbürgermeister Wilfried Stigger erarbeiteten ein Konzept für
+              die ersten „Haiminger Markttage“.
+              Am Vorabend des 10. Oktobers 1987, der als erster Haiminger Markttag in die Geschichte des Dorfes einging,
+              wurde bis weit nach Mitternacht gemeinsam gearbeitet, vorbereitet und auch gebangt, was den Verlauf dieser
+              Veranstaltung anging. Auf insgesamt 12 Marktständen verkauften die Haiminger Bauern und einige Haiminger
+              Unternehmer ihre Produkte. Der Andrang auf diesen ersten Erntemarkt war dermaßen überwältigend, dass die
+              Obstbauern bereits um 11 Uhr ausverkauft waren.
+            </div>
+            <div id="philimg1" class="flex flex-col justify-end">
+              <img class="border-white border-2" alt="Markttage 1987" src="/images/philosophie/1987.jpg">
+              <div class="text-gray-50 text-sm pt-2 text-center opacity-60">Erster Markttag 1987</div>
+            </div>
+          </div>
+          <div id="philtext2" class="pt-10 mb-10">
+            Dieser durchschlagende Erfolg hat aufgezeigt, welche Möglichkeiten für die Vermarktung regionaler bäuerlicher
+            Erzeugnisse bestehen.
+            Die Haiminger Bauern waren die ersten in Tirol, die landwirtschaftliche Produkte nach marktwirtschaftlichen
+            Kriterien herstellten und vertrieben.
+          </div>
+
+          <div class="grid grid-cols-1 xl:grid-cols-2 gap-20 pt-10 mb-20">
+            <div id="philimg2">
+              <img class="border-white border-2" alt="Markttage 1987" src="/images/philosophie/eingang.jpg">
+              <div class="text-gray-50 text-sm pt-2 text-center opacity-60">Eingang Haiminger Markttage
+              </div>
+            </div>
+            <div id="philtext3">Die Faszination der Haiminger Markttage ist nach wie vor außerordentlich. Seit 1987
+              strömen jedes Jahr am zweiten und dritten Oktobersamstag tausende Marktbesucher ins Tiroler Oberland.
+              Erntefrische Produkte locken mit Qualität und Frische nach Haiming. Gut 85 Aussteller präsentieren mitten im
+              Dorf erlesene jahreszeitliche Produkte aus der Region.
+            </div>
+
+            <div id="philtext3">Tirols größter Erntemarkt präsentiert sich
+              mittlerweile als Tirols längste Schmankerlmeile. Im Zentrum des Angebotes sind zahllose bäuerliche
+              Spezialitäten, darunter die Haiminger Äpfel in all ihren Facetten von der Frucht bis zu Säften.
+            </div>
+            <div id="philimg3" class="flex flex-col justify-end">
+              <img class="border-white border-2" alt="Markttage 1987" src="/images/philosophie/verkostung.jpg">
+              <div class="text-gray-50 text-sm pt-2 text-center opacity-60">Verkostung an den Markttagen</div>
+            </div>
+
+
+          </div>
+          <div class="flex justify-center">
+            <div id="philimg5" class="max-w-8xl">
+              <img class="border-white border-2" alt="Markttage 1987" src="/images/philosophie/1990.jpg">
+              <div class="text-gray-50 text-sm pt-2 text-center opacity-60">90er Jahre - Äpfelanlieferung Dieter Wegleiter
+              </div>
+            </div>
+          </div>
         </div>
         <!-- end willkommenstexte -->
       </div>
@@ -72,13 +126,9 @@ export default {
   data() {
     return {
       name: "Philosophie",
-      titleMessage: "Geschichte der Haiminger Markttage",
+      titleMessage: "Philosophie Haiminger Markttage",
       description:
-        "Im Jahr 1987 entstand die Idee eine bäuerliche Vermarktungsstruktur zu etablieren. Die Initiatoren Anton Raffl, Ewald Höpperger und der verstorbene Altbürgermeister Wilfried Stigger erarbeiteten ein Konzept für die ersten Haiminger Markttage. " +
-        "Am Vorabend des 10. Oktobers 1987, der als erster Haiminger Markttag in die Geschichte des Dorfes einging, wurde bis weit nach Mitternacht gemeinsam gearbeitet, vorbereitet und auch gebangt, was den Verlauf dieser Veranstaltung anging. Auf insgesamt 12 Marktständen verkauften die Haiminger Bauern und einige Haiminger Unternehmer ihre Produkte. Der Andrang auf diesen ersten Erntemarkt war dermaßen überwältigend, dass die Obstbauern bereits um 11 Uhr ausverkauft waren. " +
-        "Dieser durchschlagende Erfolg hat aufgezeigt, welche Möglichkeiten für die Vermarktung regionaler bäuerlicher Erzeugnisse bestehen. Die Haiminger Bauern waren die ersten in Tirol, die landwirtschaftliche Produkte nach marktwirtschaftlichen Kriterien herstellten und vertrieben. Im Laufe der Jahre erlebten die Haiminger Markttage unter Obmann Hubert Wammes ein stetiges Wachstum. Mittlerweile kann man bei über 80 Anbietern deren Produkte erwerben. " +
-        "Die Haiminger Markttage haben zum Ziel, den Direktverkauf regionaler bäuerlicher Produkte von hoher Qualität zu unterstützen und so den Erzeugern nachhaltige, marktgerechte Preise zu sichern. " +
-        "So konnten nicht nur Endverbraucher, sondern auch Supermarktketten, wie Spar, MPreis oder Billa von der Qualität heimischer Produkte überzeugt werden. ",
+        ` `
     };
   },
   components: { Button },
