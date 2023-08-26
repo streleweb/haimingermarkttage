@@ -47,9 +47,9 @@ class NewsController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return \response('Newstitel min 2 max 70 Zeichen, textfeld min 10 max 2000 Zeichen!', 200)
+            return \response('Newstitel min 2 max 70 Zeichen, textfeld min 10 max 2000 Zeichen!', 400)
             ->header('Content-Type', 'text/plain');
-            
+
         }else {
             $news = new News();
             $news->news_titel = $request->news_titel;
@@ -57,7 +57,7 @@ class NewsController extends Controller
             $news->news_bild_url = $request->news_bild_url;
             $date = Carbon::now();
             $news->created_at=$date->toDateTimeString();
-           
+
             if($news->save()){
                 return \response('News-Post erfolgreich gespeichert!', 200)
                 ->header('Content-Type', 'text/plain');
@@ -96,10 +96,9 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function update($id)
+    public function update(Request $request)
     {
-        $news = News::findOrFail($id);
-        $news->id = $request->id;
+        $news = News::findOrFail($request->id);
         $news->news_titel = $request->news_titel;
         $news->news_textfeld = $request->news_textfeld;
         $news->news_bild_url = $request->news_bild_url;
@@ -109,10 +108,10 @@ class NewsController extends Controller
 
         if($news->save())
         {
-            return \response('News-Post erfolgreich in DB gespeichert!', 200)
+            return \response('News-Post erfolgreich editiert!', 200)
             ->header('Content-Type', 'text/plain');
         }else {
-            return \response('News-Post konnte nicht gespeichert werden!', 200)
+            return \response('News-Post update in DB fehlgeschlagen!', 400)
             ->header('Content-Type', 'text/plain');
         }
     }

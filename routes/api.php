@@ -71,10 +71,12 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //News
     Route::post('/news', [NewsController::class, 'store']);
     Route::delete('/news/{id}', [NewsController::class, 'destroy']);
+    Route::put('/news/{id}', [NewsController::class, 'update']);
 
     //Programm
     Route::post('/programm', [ProgrammController::class, 'store']);
     Route::delete('/programm/{id}', [ProgrammController::class, 'destroy']);
+    Route::put('/programm/{id}', [ProgrammController::class, 'update']);
 
     //HomeContent
     Route::post('/homecontent', [HomeContentController::class, 'store']);
