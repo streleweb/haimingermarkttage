@@ -141,25 +141,40 @@
                 Aussteller ändern
               </h3>
               Folgende Aussteller sind momentan gespeichert und können verändert
-              werden. Bitte Geben Sie den Namen genau wie angezeigt in das
-              Pflichtfeld "Vor und Nachname" ein, um die Ausstellerinformationen
-              dieses Ausstellers abzuändern.
+              werden.
             </div>
 
-            <p v-for="(jeweiligerAussteller, index) in aussteller" :key="index" class="
-                        flex
-                        justify-center
-                        pl-3
-                        text-white
-                        bg-green-900
-                        mb-3
-                        border border-gray-600
-                      ">
-              <span class="inline-flex">- {{ jeweiligerAussteller.aussteller_fullname }}</span>
-            </p>
+            <div class="md:grid md:grid-cols-2 lg:w-80vw gap-5">
+              <div v-for="(jeweiligerAussteller, index) in aussteller" :key="index" class="
+                flex
+                pl-3
+                pt-4
+                pb-4
+              text-white
+              bg-green-900
+                mb-3
+                border border-gray-600
+                gap-3
+                justify-between
+              ">
+                <span class="inline-flex">{{ jeweiligerAussteller.aussteller_fullname }}</span>
+                <div class="flex justify-center items-center mr-4 gap-5">
+                  <button key:index @click="toggleEditPopup(index)"
+                    class="bg-gray-400 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded">
+                    edit
+                  </button>
+                  <button key:index @click="deleteProgramm(index)"
+                    class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                    delete
+                  </button>
+                </div>
+              </div>
+            </div>
 
-            <div class="mt-5 md:mt-0 md:col-span-2">
-              <div>
+            <!-- START EDIT POPUP -->
+            <div class="popup-overlay" v-if="showEditPopup">
+              <div class="popup">
+                <button @click="closeEditPopup()" class="close-btn">&times;</button>
                 <div class="shadow overflow-hidden sm:rounded-md">
                   <div class="px-4 py-5 bg-gray-300 sm:p-6">
                     <label for="name" class="block text-sm font-medium text-gray-700">Vor und Nachname</label>
@@ -254,76 +269,87 @@
                                 " />
                     </div>
 
-                    <div class="col-span-6">
-                      <label for="street_address" class="block text-sm font-medium text-gray-700">Zonenfarbe am
-                        Markt</label>
-                      <!--COLORBUTTONS START-->
-                      <div class="pt-3">
-                        <label class="container" @click="assignColorBlue">Blau
-                          <div class="bg-blue-500 h-2 w-5 rounded-md" @click="assignColorBlue"></div>
-                          <input @click="assignColorBlue" type="radio" name="radio" />
-                          <span @click="assignColorBlue" class="checkmark"></span>
-                        </label>
-                        <label class="container" @click="assignColorRed">Rot
-                          <div @click="assignColorRed" class="bg-red-600 h-2 w-5 rounded-md"></div>
-                          <input @click="assignColorRed" type="radio" name="radio" />
-                          <span @click="assignColorRed" class="checkmark"></span>
-                        </label>
-                        <label class="container" @click="assignColorYellow">Gelb
-                          <div @click="assignColorYellow" class="bg-yellow-300 h-2 w-5 rounded-md"></div>
-                          <input @click="assignColorYellow" type="radio" name="radio" />
-                          <span @click="assignColorYellow" class="checkmark"></span>
-                        </label>
-                        <label class="container" @click="assignColorGreen">Grün
-                          <div @click="assignColorGreen" class="bg-green-500 h-2 w-5 rounded-md"></div>
-                          <input @click="assignColorGreen" type="radio" name="radio" />
-                          <span @click="assignColorGreen" class="checkmark"></span>
-                        </label>
-                        <label class="container" @click="assignColorBrown">Braun
-                          <div @click="assignColorBrown" class="bg-yellow-900 h-2 w-5 rounded-md"></div>
-                          <input @click="assignColorBrown" type="radio" name="radio" />
-                          <span @click="assignColorBrown" class="checkmark"></span>
-                        </label>
+                    <section class="flex justify-evenly mt-4">
+                      <div>
+                        <label for="street_address" class="block text-sm font-medium text-gray-700">Top Aussteller</label>
+                        <input type="checkbox" v-model="formdata.aussteller_istopaussteller" :id="formdata.aussteller_id">
                       </div>
-                      <!--COLORBUTTONS END-->
-                    </div>
-                    <!-- 16 09 2021 -->
-                    <div class="col-span-6">
-                      <label for="street_address" class="block text-sm font-medium text-gray-700">Produktreiter</label>
-                      <!--COLORBUTTONS START-->
-                      <div class="pt-3">
-                        <label class="container">Lebensmittel
-                          <input type="checkbox" id="lebensmittel_checkbox" name="checkbox" />
-                          <span @click="assignToLebensmittel" class="checkmark"></span>
-                        </label>
-                        <label class="container">Gastronomie
-                          <input type="checkbox" id="gastronomie_checkbox" name="checkbox" />
-                          <span @click="assignToGastronomie" class="checkmark"></span>
-                        </label>
-                        <label class="container" @click="assignToHandwerk">Handwerk
-                          <input @click="assignToHandwerk" type="checkbox" id="handwerk_checkbox" name="checkbox" />
-                          <span @click="assignToHandwerk" class="checkmark"></span>
-                        </label>
-                        <label class="container" @click="assignToTextil">Textil
-                          <input @click="assignToTextil" type="checkbox" id="textil_checkbox" name="checkbox" />
-                          <span @click="assignToTextil" class="checkmark"></span>
-                        </label>
-                        <label class="container" @click="assignToAllerlei">Allerlei
-                          <input @click="assignToAllerlei" type="checkbox" id="allerlei_checkbox" name="checkbox" />
-                          <span @click="assignToAllerlei" class="checkmark"></span>
-                        </label>
+                      <div class="col-span-6">
+                        <label for="street_address" class="block text-sm font-medium text-gray-700">Zonenfarbe am
+                          Markt</label>
+                        <!--COLORBUTTONS START-->
+                        <div class="pt-3">
+                          <label class="container" @click="assignColorBlue">Blau
+                            <div class="bg-blue-500 h-2 w-5 rounded-md" @click="assignColorBlue"></div>
+                            <input @click="assignColorBlue" type="radio" name="radio" />
+                            <span @click="assignColorBlue" class="checkmark"></span>
+                          </label>
+                          <label class="container" @click="assignColorRed">Rot
+                            <div @click="assignColorRed" class="bg-red-600 h-2 w-5 rounded-md"></div>
+                            <input @click="assignColorRed" type="radio" name="radio" />
+                            <span @click="assignColorRed" class="checkmark"></span>
+                          </label>
+                          <label class="container" @click="assignColorYellow">Gelb
+                            <div @click="assignColorYellow" class="bg-yellow-300 h-2 w-5 rounded-md"></div>
+                            <input @click="assignColorYellow" type="radio" name="radio" />
+                            <span @click="assignColorYellow" class="checkmark"></span>
+                          </label>
+                          <label class="container" @click="assignColorGreen">Grün
+                            <div @click="assignColorGreen" class="bg-green-500 h-2 w-5 rounded-md"></div>
+                            <input @click="assignColorGreen" type="radio" name="radio" />
+                            <span @click="assignColorGreen" class="checkmark"></span>
+                          </label>
+                          <label class="container" @click="assignColorBrown">Braun
+                            <div @click="assignColorBrown" class="bg-yellow-900 h-2 w-5 rounded-md"></div>
+                            <input @click="assignColorBrown" type="radio" name="radio" />
+                            <span @click="assignColorBrown" class="checkmark"></span>
+                          </label>
+                        </div>
+                        <!--COLORBUTTONS END-->
                       </div>
-                      <!--COLORBUTTONS END-->
-                    </div>
+                      <!-- 16 09 2021 -->
+                      <div class="col-span-6">
+                        <label for="street_address" class="block text-sm font-medium text-gray-700">Produktreiter</label>
+                        <!--COLORBUTTONS START-->
+                        <div class="pt-3">
+                          <label class="container">Lebensmittel
+                            <input type="checkbox" id="lebensmittel_checkbox" name="checkbox" />
+                            <span @click="assignToLebensmittel" class="checkmark"></span>
+                          </label>
+                          <label class="container">Gastronomie
+                            <input type="checkbox" id="gastronomie_checkbox" name="checkbox" />
+                            <span @click="assignToGastronomie" class="checkmark"></span>
+                          </label>
+                          <label class="container" @click="assignToHandwerk">Handwerk
+                            <input @click="assignToHandwerk" type="checkbox" id="handwerk_checkbox" name="checkbox" />
+                            <span @click="assignToHandwerk" class="checkmark"></span>
+                          </label>
+                          <label class="container" @click="assignToTextil">Textil
+                            <input @click="assignToTextil" type="checkbox" id="textil_checkbox" name="checkbox" />
+                            <span @click="assignToTextil" class="checkmark"></span>
+                          </label>
+                          <label class="container" @click="assignToAllerlei">Allerlei
+                            <input @click="assignToAllerlei" type="checkbox" id="allerlei_checkbox" name="checkbox" />
+                            <span @click="assignToAllerlei" class="checkmark"></span>
+                          </label>
+                        </div>
+                        <!--COLORBUTTONS END-->
+                      </div>
+                    </section>
                     <!-- 16 09 2021 END -->
                     <!--IMAGE FILE UPLOAD START-->
-                    <div class="py-2 bg-green-900 text-white mb-1 px-2">
-                      Ausstellerfoto Upload
+                    <div class="py-2 bg-green-900 text-white mb-1 px-2 text-center font-bold">
+                      Aktuelles Foto
+                      <div class="flex justify-center">
+                        <img v-if="formdata.aussteller_bildurl" :src="formdataEditBildUrl()"
+                          class="w-20 h-20 border border-gray-50 rounded-lg my-2" alt="Foto" />
+                        <div v-else class="font-thin">Kein Foto</div>
+                      </div>
                       <div class="alert">
                         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                         <strong>Achtung!</strong> Maximale Filesize: 1.9MB
                         <br />
-                        Bsp: ausstellername.jpg oder ausstellername.png
+                        Bsp: newsbildname.jpg oder newsbildname.png
                       </div>
                     </div>
                     <form @submit.prevent="upload" class="flex items-center justify-center mt-3">
@@ -391,6 +417,7 @@
                 </div>
               </div>
             </div>
+            <!-- END EDIT POPUP -->
           </div>
         </div>
       </div>
@@ -414,6 +441,7 @@ export default {
       error: null,
       submitvisibility: "hidden",
       currentProduktReiter: [],
+      showEditPopup: false,
       formdata: {
         aussteller_id: null,
         aussteller_fullname: null,
@@ -424,6 +452,7 @@ export default {
         aussteller_websiteurl: null,
         aussteller_bildurl: null,
         aussteller_produktreiter: [],
+        aussteller_istopaussteller: false
       }, //Objekt zum Speichern der Model-Daten von oben
     };
   },
@@ -437,34 +466,58 @@ export default {
     this.loadAussteller();
     window._ = require("lodash");
     window.axios.defaults.headers.common = { "Authorization": `Bearer ${localStorage.getItem("token")}` };
-    // this.loadProduktReiter();
     // this.aussteller_produktreiter();
   },
   methods: {
+    async toggleEditPopup(index) {
+      const ausstellerId = this.aussteller[index].id;
+
+      await this.loadProduktReiter(ausstellerId);
+
+      this.showEditPopup = !this.showEditPopup;
+      if (this.showEditPopup) {
+        this.fillFormDataByAusstellerIndex(index);
+      }
+    },
+
+    fillFormDataByAusstellerIndex(index) {
+      this.formdata = this.aussteller[index];
+      console.log("fillFormDataByAusstellerIndex: " + this.formdata.aussteller_fullname)
+    },
+    closeEditPopup() {
+      this.showEditPopup = false;
+    },
+    formdataEditBildUrl() {
+      return "/images/aussteller/" + this.formdata.aussteller_bildurl;
+    },
     async loadAussteller() {
       this.loading = true;
       let { data } = await repository.getAussteller();
       this.aussteller = data.data;
       //check the checked fields if aussteller-produktreiter is already set
       this.loading = false;
-      // console.log(this.aussteller);
+      console.log("Aussteller geladen: " + this.aussteller[0].aussteller_produktreiter);
     },
-    // loadProduktReiter() {
-    //   axios.get("/api/aussteller/97").then((response) => {
-    //     //console.log("Debug status:" + response.status);
-    //     if (response.status == 200) {
-    //       console.log(response);
-    //     }
-    //   });
-    // },
-    // aussteller_produktreiter: function () {
-    //   this.currentProduktReiter.forEach((element) => {
-    //     //get all inputs with the attribute "id" and of type checkbox
-    //     let allInputs = document.querySelectorAll('input[id][type="checkbox"]');
-    //     console.log(allInputs);
-    //     element.produkt_reiter_name;
-    //   });
-    // },
+    loadProduktReiter(id) {
+      axios.get("/api/aussteller/" + id).then((response) => {
+        //console.log("Debug status:" + response.status);
+        if (response.status == 200) {
+          // console.log("loadProduktreiter successful: ");
+          // console.log(JSON.stringify(response.data, null, 2));
+          response.data.forEach(produktreiter => {
+            this.currentProduktReiter.push(produktreiter.id)
+          });
+        }
+      });
+    },
+    aussteller_produktreiter: function () {
+      this.currentProduktReiter.forEach((element) => {
+        //get all inputs with the attribute "id" and of type checkbox
+        let allInputs = document.querySelectorAll('input[id][type="checkbox"]');
+        console.log(allInputs);
+        element.produkt_reiter_name;
+      });
+    },
     showSubmitButton() {
       this.submitvisibility = "block";
     },
@@ -676,6 +729,49 @@ export default {
 
 .closebtn:hover {
   color: black;
+}
+
+/* POPUP OVERLAY */
+/* Styles for the overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Dark background overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  /* Ensure the overlay is above other content */
+}
+
+/* Styles for the popup */
+.popup {
+  background-color: #D1D5DB;
+  padding: 10px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 100%;
+  max-height: 90vh;
+  /* Limit the maximum height to 90% of the viewport height */
+  overflow-y: auto;
+  /* Add vertical scroll if content overflows */
+  position: relative;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
 }
 </style>
 

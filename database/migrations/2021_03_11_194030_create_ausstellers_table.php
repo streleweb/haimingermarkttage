@@ -11,7 +11,7 @@ class CreateAusstellersTable extends Migration
      *
      * @return void
      */
-    public function up() 
+    public function up()
     {
         Schema::create('aussteller', function (Blueprint $table) {
             $table->id();
@@ -23,6 +23,7 @@ class CreateAusstellersTable extends Migration
             $table->string('aussteller_websiteurl')->unique()->nullable();
             $table->string('aussteller_zonenfarbe')->nullable();
             $table->string('aussteller_bildurl')->nullable();
+            $table->boolean('aussteller_istopaussteller')->default(false);
             $table->timestamps();
         });
     }

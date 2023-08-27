@@ -19,11 +19,12 @@ class AusstellerResource extends JsonResource
             'id' => $this->id,
             'aussteller_fullname' => $this->aussteller_fullname,
             'aussteller_beschreibung' => $this->aussteller_beschreibung,
-            'aussteller_brandingname' => $this->aussteller_brandingname,           
+            'aussteller_brandingname' => $this->aussteller_brandingname,
             'aussteller_email'=> $this->aussteller_email,
             'aussteller_websiteurl'=> $this->aussteller_websiteurl,
             'aussteller_zonenfarbe'=> $this->aussteller_zonenfarbe,
-            'aussteller_bildurl'=> $this->aussteller_bildurl
+            'aussteller_bildurl'=> $this->aussteller_bildurl,
+            'aussteller_istopaussteller' => $this->aussteller_istopaussteller
         ];
     }
 }

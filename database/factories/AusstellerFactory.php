@@ -28,7 +28,8 @@ class AusstellerFactory extends Factory
             'aussteller_telefonnummer' => $this->faker->phoneNumber(),
             'aussteller_websiteurl' => $this->faker->url(),
             'aussteller_brandingname' => $this->faker->words(1,true),
-            'aussteller_email' => $this->faker->email()
+            'aussteller_email' => $this->faker->email(),
+            'aussteller_istopaussteller' => $this->faker->boolean()
         ];
     }
 }
