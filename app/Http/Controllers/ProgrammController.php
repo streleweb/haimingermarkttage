@@ -47,9 +47,9 @@ class ProgrammController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return \response('Programm-Post nicht gespeichert! Beachten Sie die Maximal-Zeichenlänge und geben Sie einen Titel an.', 200)
+            return \response('Programm-Post nicht gespeichert! Beachten Sie die Maximal-Zeichenlänge und geben Sie einen Titel an.', 400)
             ->header('Content-Type', 'text/plain');
-            
+
         }else {
             $programm = new Programm();
             $programm->programm_titel = $request->programm_titel;
@@ -58,7 +58,7 @@ class ProgrammController extends Controller
 
             $date = Carbon::now();
             $programm->created_at=$date->toDateTimeString();
-           
+
             if($programm->save()){
                 return \response('Programm-Post erfolgreich gespeichert!', 200)
                 ->header('Content-Type', 'text/plain');;
@@ -86,9 +86,9 @@ class ProgrammController extends Controller
      * @param  \App\Models\Programm  $programm
      * @return \Illuminate\Http\Response
      */
-    public function update($id)
+    public function update(Request $request)
     {
-        $programm = Programm::findOrFail($id);
+        $programm = Programm::findOrFail($request->id);
         $programm->id = $request->id;
         $programm->programm_titel = $request->programm_titel;
         $programm->programm_beschreibung = $request->programm_beschreibung;
@@ -101,7 +101,10 @@ class ProgrammController extends Controller
         {
             return \response('Programm erfolgreich aktualisiert!', 200)
                 ->header('Content-Type', 'text/plain');
-        };
+        }else{
+            return \response('Programm update in DB fehlgeschlagen!', 400)
+            ->header('Content-Type', 'text/plain');
+        }
     }
 
     /**
