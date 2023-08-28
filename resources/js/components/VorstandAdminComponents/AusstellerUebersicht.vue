@@ -401,7 +401,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .btn {
   @apply font-bold py-2 px-2 rounded;
 }

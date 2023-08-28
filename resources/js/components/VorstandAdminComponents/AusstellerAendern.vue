@@ -279,30 +279,35 @@
                           Markt</label>
                         <!--COLORBUTTONS START-->
                         <div class="pt-3">
-                          <label class="container" @click="assignColorBlue">Blau
-                            <div class="bg-blue-500 h-2 w-5 rounded-md" @click="assignColorBlue"></div>
-                            <input @click="assignColorBlue" type="radio" name="radio" />
-                            <span @click="assignColorBlue" class="checkmark"></span>
+                          <label class="container" @click="assignColor(BLAU)">Blau
+                            <div class="bg-blue-500 h-2 w-5 rounded-md" @click="assignColor(BLAU)"></div>
+                            <input @click="assignColor(BLAU)" v-bind:checked="formdata.aussteller_zonenfarbe === BLAU"
+                              type="radio" name="radio" />
+                            <span @click="assignColor(BLAU)" class="checkmark"></span>
                           </label>
-                          <label class="container" @click="assignColorRed">Rot
-                            <div @click="assignColorRed" class="bg-red-600 h-2 w-5 rounded-md"></div>
-                            <input @click="assignColorRed" type="radio" name="radio" />
-                            <span @click="assignColorRed" class="checkmark"></span>
+                          <label class="container" @click="assignColor(ROT)">Rot
+                            <div @click="assignColor(ROT)" class="bg-red-600 h-2 w-5 rounded-md"></div>
+                            <input @click="assignColor(ROT)" :checked="formdata.aussteller_zonenfarbe === ROT"
+                              type="radio" name="radio" />
+                            <span @click="assignColor(ROT)" class="checkmark"></span>
                           </label>
-                          <label class="container" @click="assignColorYellow">Gelb
-                            <div @click="assignColorYellow" class="bg-yellow-300 h-2 w-5 rounded-md"></div>
-                            <input @click="assignColorYellow" type="radio" name="radio" />
-                            <span @click="assignColorYellow" class="checkmark"></span>
+                          <label class="container" @click="assignColor(GELB)">Gelb
+                            <div @click="assignColor(GELB)" class="bg-yellow-300 h-2 w-5 rounded-md"></div>
+                            <input @click="assignColor(GELB)" :checked="formdata.aussteller_zonenfarbe === GELB"
+                              type="radio" name="radio" />
+                            <span @click="assignColor(GELB)" class="checkmark"></span>
                           </label>
-                          <label class="container" @click="assignColorGreen">Grün
-                            <div @click="assignColorGreen" class="bg-green-500 h-2 w-5 rounded-md"></div>
-                            <input @click="assignColorGreen" type="radio" name="radio" />
-                            <span @click="assignColorGreen" class="checkmark"></span>
+                          <label class="container" @click="assignColor(GRUEN)">Grün
+                            <div @click="assignColor(GRUEN)" class="bg-green-500 h-2 w-5 rounded-md"></div>
+                            <input @click="assignColor(GRUEN)" :checked="formdata.aussteller_zonenfarbe === GRUEN"
+                              type="radio" name="radio" />
+                            <span @click="assignColor(GRUEN)" class="checkmark"></span>
                           </label>
-                          <label class="container" @click="assignColorBrown">Braun
-                            <div @click="assignColorBrown" class="bg-yellow-900 h-2 w-5 rounded-md"></div>
-                            <input @click="assignColorBrown" type="radio" name="radio" />
-                            <span @click="assignColorBrown" class="checkmark"></span>
+                          <label class="container" @click="assignColor(BRAUN)">Braun
+                            <div @click="assignColor(BRAUN)" class="bg-yellow-900 h-2 w-5 rounded-md"></div>
+                            <input @click="assignColor(BRAUN)" :checked="formdata.aussteller_zonenfarbe === BRAUN"
+                              type="radio" name="radio" />
+                            <span @click="assignColor(BRAUN)" class="checkmark"></span>
                           </label>
                         </div>
                         <!--COLORBUTTONS END-->
@@ -313,23 +318,28 @@
                         <!--COLORBUTTONS START-->
                         <div class="pt-3">
                           <label class="container">Lebensmittel
-                            <input type="checkbox" id="lebensmittel_checkbox" name="checkbox" />
+                            <input type="checkbox" id="lebensmittel_checkbox"
+                              :checked="formdata.aussteller_produktreiter.includes(1)" name="checkbox" />
                             <span @click="assignToLebensmittel" class="checkmark"></span>
                           </label>
                           <label class="container">Gastronomie
-                            <input type="checkbox" id="gastronomie_checkbox" name="checkbox" />
+                            <input type="checkbox" id="gastronomie_checkbox"
+                              :checked="formdata.aussteller_produktreiter.includes(2)" name="checkbox" />
                             <span @click="assignToGastronomie" class="checkmark"></span>
                           </label>
                           <label class="container" @click="assignToHandwerk">Handwerk
-                            <input @click="assignToHandwerk" type="checkbox" id="handwerk_checkbox" name="checkbox" />
+                            <input @click="assignToHandwerk" type="checkbox" id="handwerk_checkbox"
+                              :checked="formdata.aussteller_produktreiter.includes(3)" name="checkbox" />
                             <span @click="assignToHandwerk" class="checkmark"></span>
                           </label>
                           <label class="container" @click="assignToTextil">Textil
-                            <input @click="assignToTextil" type="checkbox" id="textil_checkbox" name="checkbox" />
+                            <input @click="assignToTextil" type="checkbox" id="textil_checkbox"
+                              :checked="formdata.aussteller_produktreiter.includes(4)" name="checkbox" />
                             <span @click="assignToTextil" class="checkmark"></span>
                           </label>
                           <label class="container" @click="assignToAllerlei">Allerlei
-                            <input @click="assignToAllerlei" type="checkbox" id="allerlei_checkbox" name="checkbox" />
+                            <input @click="assignToAllerlei" type="checkbox" id="allerlei_checkbox"
+                              :checked="formdata.aussteller_produktreiter.includes(5)" name="checkbox" />
                             <span @click="assignToAllerlei" class="checkmark"></span>
                           </label>
                         </div>
@@ -440,8 +450,12 @@ export default {
       aussteller: [],
       error: null,
       submitvisibility: "hidden",
-      currentProduktReiter: [],
       showEditPopup: false,
+      BLAU: "bg-blue-500",
+      ROT: "bg-red-600",
+      GELB: "bg-yellow-300",
+      GRUEN: "bg-green-500",
+      BRAUN: "bg-yellow-900",
       formdata: {
         aussteller_id: null,
         aussteller_fullname: null,
@@ -480,9 +494,25 @@ export default {
       }
     },
 
+    isColorChecked(color) {
+      return this.formdata.aussteller_zonenfarbe === color;
+    },
+
+    assignColor(color) {
+      this.formdata.aussteller_zonenfarbe = color;
+    },
+
     fillFormDataByAusstellerIndex(index) {
-      this.formdata = this.aussteller[index];
-      console.log("fillFormDataByAusstellerIndex: " + this.formdata.aussteller_fullname)
+      this.formdata.aussteller_id = this.aussteller[index].id,
+        this.formdata.aussteller_fullname = this.aussteller[index].aussteller_fullname,
+        this.formdata.aussteller_beschreibung = this.aussteller[index].aussteller_beschreibung,
+        this.formdata.aussteller_zonenfarbe = this.aussteller[index].aussteller_zonenfarbe,
+        this.formdata.aussteller_brandingname = this.aussteller[index].aussteller_brandingname,
+        this.formdata.aussteller_email = this.aussteller[index].aussteller_email,
+        this.formdata.aussteller_websiteurl = this.aussteller[index].aussteller_websiteurl,
+        this.formdata.aussteller_bildurl = this.aussteller[index].aussteller_bildurl,
+        this.formdata.aussteller_istopaussteller = this.aussteller[index].aussteller_istopaussteller,
+        console.log("fillFormDataByAusstellerIndex: " + this.formdata.aussteller_produktreiter)
     },
     closeEditPopup() {
       this.showEditPopup = false;
@@ -496,7 +526,7 @@ export default {
       this.aussteller = data.data;
       //check the checked fields if aussteller-produktreiter is already set
       this.loading = false;
-      console.log("Aussteller geladen: " + this.aussteller[0].aussteller_produktreiter);
+      // console.log("Aussteller geladen: " + this.aussteller[0].aussteller_produktreiter);
     },
     loadProduktReiter(id) {
       axios.get("/api/aussteller/" + id).then((response) => {
@@ -505,17 +535,11 @@ export default {
           // console.log("loadProduktreiter successful: ");
           // console.log(JSON.stringify(response.data, null, 2));
           response.data.forEach(produktreiter => {
-            this.currentProduktReiter.push(produktreiter.id)
+            this.formdata.aussteller_produktreiter.push(produktreiter.id)
           });
+          console.log("formdata produktreiter after loadProduktReiter:" + this.formdata.aussteller_produktreiter)
+
         }
-      });
-    },
-    aussteller_produktreiter: function () {
-      this.currentProduktReiter.forEach((element) => {
-        //get all inputs with the attribute "id" and of type checkbox
-        let allInputs = document.querySelectorAll('input[id][type="checkbox"]');
-        console.log(allInputs);
-        element.produkt_reiter_name;
       });
     },
     showSubmitButton() {
@@ -545,38 +569,24 @@ export default {
       });
       //console.log(this.aussteller_bildurl);
     },
-    //assign-Color Methods for Radio-Buttons
-    //Wird im Tailwind-Textformat in DB gespeichert und so wieder herausgeholt
-    assignColorRed() {
-      this.formdata.aussteller_zonenfarbe = "bg-red-600";
-    },
-    assignColorBlue() {
-      this.formdata.aussteller_zonenfarbe = "bg-blue-500";
-    },
-    assignColorGreen() {
-      this.formdata.aussteller_zonenfarbe = "bg-green-500";
-    },
-    assignColorBrown() {
-      this.formdata.aussteller_zonenfarbe = "bg-yellow-900";
-    },
-    assignColorYellow() {
-      this.formdata.aussteller_zonenfarbe = "bg-yellow-300";
+    produktreiterContains(number) {
+      return this.formdata.aussteller_produktreiter.includes(number);
     },
     //assign to specific produktreiter
     assignToLebensmittel() {
-      this.formdata.aussteller_produktreiter.push(1);
+      if (!this.produktreiterContains(1)) this.formdata.aussteller_produktreiter.push(1);
     },
     assignToGastronomie() {
-      this.formdata.aussteller_produktreiter.push(2);
+      if (!this.produktreiterContains(2)) this.formdata.aussteller_produktreiter.push(2);
     },
     assignToHandwerk() {
-      this.formdata.aussteller_produktreiter.push(3);
+      if (!this.produktreiterContains(3)) this.formdata.aussteller_produktreiter.push(3);
     },
     assignToTextil() {
-      this.formdata.aussteller_produktreiter.push(4);
+      if (!this.produktreiterContains(4)) this.formdata.aussteller_produktreiter.push(4);
     },
     assignToAllerlei() {
-      this.formdata.aussteller_produktreiter.push(5);
+      if (!this.produktreiterContains(5)) this.formdata.aussteller_produktreiter.push(5);
     },
     loggedIn() {
       if (localStorage.getItem("isLoggedIn") == "true") {

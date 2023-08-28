@@ -199,7 +199,7 @@ class AusstellerController extends Controller
      */
     public function update(Request $request)
 {
-    $aussteller = Aussteller::findOrFail($request->id);
+    $aussteller = Aussteller::findOrFail($request->aussteller_id);
     $aussteller->aussteller_fullname = $request->aussteller_fullname;
     $aussteller->aussteller_beschreibung = $request->aussteller_beschreibung;
     $aussteller->aussteller_brandingname = $request->aussteller_brandingname;
@@ -212,10 +212,13 @@ class AusstellerController extends Controller
     if ($aussteller->save()) {
         if ($request->aussteller_produktreiter) {
             $aussteller_produktreiter_array = $request->aussteller_produktreiter;
-            $ausstellerrr = Aussteller::find($request->id);
+            if($ausstellerrr = Aussteller::find($request->aussteller_id)){
+                $ausstellerrr->produktreiters()->detach();
+                $ausstellerrr->produktreiters()->sync($aussteller_produktreiter_array);
+            } else{
+                return \response('Error updating produktreiter.', 400)->header('Content-Type', 'text/plain');
+            }
 
-            $ausstellerrr->produktreiters()->detach();
-            $ausstellerrr->produktreiters()->sync($aussteller_produktreiter_array);
         }
 
         return \response('Updated.', 200)->header('Content-Type', 'text/plain');
