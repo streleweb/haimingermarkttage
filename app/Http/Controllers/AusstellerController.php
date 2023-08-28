@@ -20,7 +20,9 @@ class AusstellerController extends Controller
      */
     public function index()
     {
-        return AusstellerResource::collection(Aussteller::all());
+        return AusstellerResource::collection(Aussteller::orderByDesc('aussteller_istopaussteller')
+            ->orderBy('aussteller_fullname') // You can replace this with any other property you want to sort by
+            ->get());
     }
 
     /**
