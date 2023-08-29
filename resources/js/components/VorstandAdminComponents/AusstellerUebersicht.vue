@@ -185,7 +185,7 @@
               <img v-if="imageUrlNotEmpty(index)" :src="imgUrl(index)" alt="" class="border-b-2 border-yellow-50" />
               <img v-else src="/images/icons/svgs/aussteller.svg" alt="Ausstellerfoto" class="
                             filter-white
-                            bg-gray-50 bg-opacity-20
+                            bg-gray-50 bg-opacity-20 p-8
                             border-b-2 border-black
                           " />
               <div class="text text-center lg:text-lg">

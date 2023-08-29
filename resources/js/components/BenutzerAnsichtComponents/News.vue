@@ -15,7 +15,7 @@
         <article v-for="(jeweiligeNews, index) in news" :key="index"
           class="articlestyling mx-auto overflow-hidden w-full">
           <img v-if="imageUrlNotEmpty(index)" :src="imgUrl(index)" alt=""
-            class="border border-green-900 shadow-md max-h-56" />
+            class="border border-green-900 shadow-md maximum50vh object-cover" />
 
           <div class="text text-lg text-center lg:text-2xl">
             <h3 class="font-bold text-gray-800">
@@ -203,5 +203,9 @@ article img {
   min-height: 100%;
   /*background-position: 50% 50%;*/
   background-size: cover;
+}
+
+.maximum50vh {
+  max-height: 50vh;
 }
 </style>
