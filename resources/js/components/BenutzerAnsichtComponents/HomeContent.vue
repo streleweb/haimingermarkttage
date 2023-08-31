@@ -71,31 +71,32 @@ export default {
   },
 
   beforeCreate() {
-    // Check if the PWA is eligible for installation and if it's already installed
-    window.addEventListener('beforeinstallprompt', (e) => {
-      // Prevent the default browser UI from displaying the install prompt
-      e.preventDefault();
-      this.beforeInstallPromptEvent = e;
+    const isNotChromiumBased = /^(?!.*(Chrome|Chromium|Edge|Opera|Brave|Vivaldi|Yandex|Samsung|Epic|UC)\b).*$/i.test(navigator.userAgent);
 
-      // Check if the app is already installed on the home screen
-      if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
-        console.log('PWA bereits installiert.');
-      } else {
-        console.log('PWA ist noch nicht installiert.');
+    if (isNotChromiumBased) {
+      Swal.fire({
+        title: "App installieren",
+        html: "App installieren, so geht`s:<ol><li>Tippe auf den <strong>Share</strong>-Button unten in der Mitte.</li><li>Scrolle nach unten und tippe auf <strong>Add to Home Screen</strong>. </li><li>Gib der App einen Namen und tippe auf <strong>Add</strong>.</li></ol>",
+        confirmButtonText: "Verstanden",
+        confirmButtonColor: "#3cb371",
+      }).then(() => {
+        this.showCookiePopup();
+      });
+    } else {
+      // Check if the PWA is eligible for installation and if it's already installed
+      window.addEventListener('beforeinstallprompt', (e) => {
+        // Prevent the default browser UI from displaying the install prompt
+        e.preventDefault();
+        this.beforeInstallPromptEvent = e;
 
-        // Check if the user is using Safari browser
-        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-        if (isSafari) {
-          Swal.fire({
-            title: "App installieren",
-            html: "App installieren, so geht`s:<ol><li>Tippe auf den <strong>Teilen</strong>-Button unten in der Mitte.</li><li>Scrolle nach unten und tippe auf <strong>Zum Home-Bildschirm</strong> hinzufügen.</li><li>Gib der App einen Namen und tippe auf <strong>Hinzufügen</strong>.</li></ol>",
-            confirmButtonText: "Verstanden",
-            confirmButtonColor: "#3cb371",
-          }).then(() => {
-            this.showCookiePopup();
-          });
+        // Check if the app is already installed on the home screen
+        if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
+          console.log('PWA bereits installiert.');
         } else {
+          console.log('PWA ist noch nicht installiert.');
+
+          // Check if the user is using Safari browser
+
           Swal.fire({
             title: "App installieren",
             text: "App zum Startbildschirm hinzufügen?",
@@ -112,9 +113,10 @@ export default {
               this.showCookiePopup();
             }, 3000);
           });
+
         }
-      }
-    });
+      });
+    }
   },
   created() {
     repository.getHomeContent().then(response => {
