@@ -74,14 +74,18 @@ export default {
     const isNotChromiumBased = /^(?!.*(Chrome|Chromium|Edge|Opera|Brave|Vivaldi|Yandex|Samsung|Epic|UC)\b).*$/i.test(navigator.userAgent);
 
     if (isNotChromiumBased) {
-      Swal.fire({
-        title: "App installieren",
-        html: "App installieren, so geht`s:<ol><li>Tippe auf den <strong>Share</strong>-Button unten in der Mitte.</li><li>Scrolle nach unten und tippe auf <strong>Add to Home Screen</strong>. </li><li>Gib der App einen Namen und tippe auf <strong>Add</strong>.</li></ol>",
-        confirmButtonText: "Verstanden",
-        confirmButtonColor: "#3cb371",
-      }).then(() => {
-        this.showCookiePopup();
-      });
+      if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
+        console.log('PWA bereits installiert.');
+      } else {
+        Swal.fire({
+          title: "App installieren",
+          html: "App installieren, so geht`s:<ol><li>Tippe auf den <strong>Share</strong>-Button unten in der Mitte.</li><li>Scrolle nach unten und tippe auf <strong>Add to Home Screen</strong>. </li><li>Gib der App einen Namen und tippe auf <strong>Add</strong>.</li></ol>",
+          confirmButtonText: "Verstanden",
+          confirmButtonColor: "#3cb371",
+        }).then(() => {
+          this.showCookiePopup();
+        });
+      }
     } else {
       // Check if the PWA is eligible for installation and if it's already installed
       window.addEventListener('beforeinstallprompt', (e) => {
