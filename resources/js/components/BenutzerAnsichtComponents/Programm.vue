@@ -24,14 +24,14 @@
           <img v-if="imageUrlNotEmpty(index)" :src="imgUrl(index)" alt=""
             class="border border-green-900 shadow-md max-h-96 lg:max-w-md" />
 
-          <div class="text text-lg text-left lg:text-2xl mt-5 mb-5">
-            <h3 class="font-bold text-gray-800">
+          <div class="text text-lg text-left font-willkommen leading-5 lg:text-2xl mt-5 mb-5">
+            <h3 class="font-bold text-gray-800 ">
               {{ jeweiligesProgramm.programm_titel }}
             </h3>
-            <h6 class="font-semibold text-xs text-gray-700 mb-2">
+            <h6 class="font-semibold text-xs text-gray-700 mb-4">
               Geschrieben am {{ jeweiligesProgramm.created_at }}
             </h6>
-            <p class="text-base lg:text-xl mb-2">
+            <p class="text-base text-justify lg:text-xl mb-2">
               {{ jeweiligesProgramm.programm_beschreibung }}
             </p>
           </div>

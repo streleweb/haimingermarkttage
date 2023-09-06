@@ -38,10 +38,10 @@
         <img :src="produktart.imgUrl" alt="" class="border-b border-gray-800 produktecardshadow" />
 
         <div class="text text-center text-lg">
-          <h3 class="font-bold text-gray-800 mb-2 lg:mt-1">
+          <h3 class="font-bold font-willkommen text-gray-800 mb-3 lg:mt-1">
             {{ produktart.produktartTitel }}
           </h3>
-          <p class="text-base lg:text-base mb-2">
+          <p class="text-base font-willkommen lg:text-base mb-2">
             {{ produktart.produktartBeschreibung }}
           </p>
         </div>
@@ -144,7 +144,7 @@ article img {
 }
 
 .text {
-  padding: 20px 20px;
+  padding: 8px 20px 20px;
 }
 
 .text h3 {

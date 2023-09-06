@@ -555,7 +555,7 @@ export default {
             // Fehlerbehandlung
             console.log(error);
             Swal.fire({
-              title: error,
+              title: "News Textinhalt minimum 10 Zeichen, Titel min 2 max. 70 Zeichen",
               heightAuto: false,
               confirmButtonText: "ok",
               confirmButtonColor: "#3cb371",
@@ -623,9 +623,9 @@ export default {
           })
           .catch(function (error) {
             // Fehlerbehandlung
-            //console.log(error);
+            console.log(error);
             Swal.fire({
-              title: error,
+              title: "News Textinhalt minimum 10 Zeichen, Titel min 2 max. 70 Zeichen",
               heightAuto: false,
               confirmButtonText: "ok",
               confirmButtonColor: "#3cb371",

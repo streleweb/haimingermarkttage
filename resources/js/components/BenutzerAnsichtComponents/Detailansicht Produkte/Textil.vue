@@ -34,39 +34,39 @@
               items-center
               w-full
             ">
-        <article v-for="(jeweiligerAussteller, index) in aussteller" :key="index"
+            <article v-for="(jeweiligerAussteller, index) in aussteller" :key="index"
           class="articlestyling mx-auto overflow-hidden w-full">
-          <img v-if="imageUrlNotEmpty(index)" :src="imgUrl(index)" alt="" class="border-b-2 border-yellow-50" />
+          <img v-if="imageUrlNotEmpty(index)" :src="imgUrl(index)" alt="" class="border-b-2 mb-2 border-yellow-50" />
           <img v-else src="/images/icons/svgs/aussteller.svg" alt="Ausstellerfoto" class="
-                  filter-white
-                  bg-gray-50 bg-opacity-20 p-8
-                  border-b-2 border-black
-                " />
+                      filter-white
+                      bg-gray-50 bg-opacity-20 p-8
+                      border-b-2 border-black mb-2
+                    " />
           <div class="text text-center lg:text-lg">
-            <h3 v-if="ausstellerBrandingNameNotEmpty(index)" class="font-bold text-gray-800 mb-1">
+            <h3 v-if="ausstellerBrandingNameNotEmpty(index)" class="font-bold font-willkommen leading-5 text-gray-800 mb-2">
               {{ jeweiligerAussteller.aussteller_brandingname }}
             </h3>
-            <h2 class="font-semibold text-gray-700 mb-2">
+            <h2 class="font-semibold text-sm text-gray-700 mb-1">
               {{ jeweiligerAussteller.aussteller_fullname }}
             </h2>
-            <p class="text-sm lg:text-base mb-2">
+            <p class="text-sm font-willkommen lg:text-base mb-2">
               {{ jeweiligerAussteller.aussteller_beschreibung }}
             </p>
             <div v-if="webUrlNotEmpty(index) ||
               ausstellerEmailNotEmpty(index) ||
               zonenFarbeNotEmpty(index)
               " class="
-                    bg-gray-800
-                    relative
-                    bottom-0
-                    left-0
-                    right-0
-                    h-10
-                    flex
-                    justify-center
-                    items-center
-                    rounded-lg
-                  ">
+                        bg-gray-800
+                        relative
+                        bottom-0
+                        left-0
+                        right-0
+                        h-10
+                        flex
+                        justify-center
+                        items-center
+                        rounded-lg
+                      ">
               <ul class="inline-flex gap-2 justify-center items-center">
                 <li v-if="webUrlNotEmpty(index)">
                   <a :href="webUrl(index)"><img src="/images/icons/svgs/www.svg" class="resize-icon filter-white-icons"
@@ -76,11 +76,15 @@
                   <a :href="ausstellerEmail(index)" target="_newtab"><img src="/images/icons/svgs/email.png"
                       class="h-4 filter-white-icons" alt="website" /></a>
                 </li>
+                <!-- <a
+                  href="https://www.google.com/maps/d/embed?mid=1Kxrd75PaiWPf5CIYb3pSrpFRScbUORwo"
+                > -->
                 <router-link to="/karte">
                   <li v-if="zonenFarbeNotEmpty(index)" class="h-5 w-32">
                     <Farbzone :zonen-farbe="zonenFarbe(index)"></Farbzone>
                   </li>
                 </router-link>
+                <!-- </a> -->
               </ul>
             </div>
           </div>

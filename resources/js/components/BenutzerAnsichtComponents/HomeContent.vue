@@ -79,6 +79,7 @@ export default {
       } else {
         Swal.fire({
           title: "App installieren",
+          heightAuto: false,
           html: "App installieren, so geht`s:<ol><li>Tippe auf den <strong>Share</strong>-Button unten in der Mitte.</li><li>Scrolle nach unten und tippe auf <strong>Add to Home Screen</strong>. </li><li>Gib der App einen Namen und tippe auf <strong>Add</strong>.</li></ol>",
           confirmButtonText: "Verstanden",
           confirmButtonColor: "#3cb371",

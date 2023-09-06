@@ -20,7 +20,7 @@
             rounded-lg
             h-10
             px-2
-            ssm:px-1
+            ssm:px-2
             sm:px-4
             sm:h-20
             shadow-xl
@@ -48,6 +48,7 @@
                 text-2xl
                 sm:text-3xl
                 font-medium
+                font-willkommen
                 md:mr-10
                 md:text-3xl
                 md:p-2

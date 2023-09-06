@@ -17,14 +17,14 @@
           <img v-if="imageUrlNotEmpty(index)" :src="imgUrl(index)" alt=""
             class="border border-green-900 shadow-md maximum50vh object-cover" />
 
-          <div class="text text-lg text-center lg:text-2xl">
-            <h3 class="font-bold text-gray-800">
+          <div class="text text-lg font-willkommen lg:text-2xl">
+            <h3 class="font-bold leading-5 text-gray-800">
               {{ jeweiligeNews.news_titel }}
             </h3>
-            <h6 class="font-semibold text-xs text-gray-700 mb-2">
+            <h6 class="font-semibold text-xs text-gray-700 mb-4">
               Vom {{ jeweiligeNews.created_at }}
             </h6>
-            <p class="text-base lg:text-xl mb-2">
+            <p class="text-base text-justify lg:text-xl mb-2">
               {{ jeweiligeNews.news_textfeld }}
             </p>
           </div>

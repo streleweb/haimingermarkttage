@@ -36,20 +36,20 @@
                 ">
         <article v-for="(jeweiligerAussteller, index) in aussteller" :key="index"
           class="articlestyling mx-auto overflow-hidden w-full">
-          <img v-if="imageUrlNotEmpty(index)" :src="imgUrl(index)" alt="" class="border-b-2 border-yellow-50" />
+          <img v-if="imageUrlNotEmpty(index)" :src="imgUrl(index)" alt="" class="border-b-2 mb-2 border-yellow-50" />
           <img v-else src="/images/icons/svgs/aussteller.svg" alt="Ausstellerfoto" class="
                       filter-white
                       bg-gray-50 bg-opacity-20 p-8
-                      border-b-2 border-black
+                      border-b-2 border-black mb-2
                     " />
           <div class="text text-center lg:text-lg">
-            <h3 v-if="ausstellerBrandingNameNotEmpty(index)" class="font-bold text-gray-800 mb-1">
+            <h3 v-if="ausstellerBrandingNameNotEmpty(index)" class="font-bold font-willkommen leading-5 text-gray-800 mb-2">
               {{ jeweiligerAussteller.aussteller_brandingname }}
             </h3>
-            <h2 class="font-semibold text-gray-700 mb-2">
+            <h2 class="font-semibold text-sm text-gray-700 mb-1">
               {{ jeweiligerAussteller.aussteller_fullname }}
             </h2>
-            <p class="text-sm lg:text-base mb-2">
+            <p class="text-sm font-willkommen lg:text-base mb-2">
               {{ jeweiligerAussteller.aussteller_beschreibung }}
             </p>
             <div v-if="webUrlNotEmpty(index) ||

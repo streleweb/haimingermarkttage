@@ -251,6 +251,11 @@
                               " />
                     </div>
 
+                    <section class="flex justify-evenly mt-4">
+                      <div>
+                        <label for="street_address" class="block text-sm font-medium text-gray-700">Top Aussteller</label>
+                        <input type="checkbox" v-model="formdata.aussteller_istopaussteller" :id="formdata.aussteller_id">
+                      </div>
                     <div class="col-span-6">
                       <label for="street_address" class="block text-sm font-medium text-gray-700">Zonenfarbe am
                         Markt</label>
@@ -284,6 +289,7 @@
                       </div>
                       <!--COLORBUTTONS END-->
                     </div>
+
                     <!-- 16 09 2021 -->
                     <div class="col-span-6">
                       <label for="street_address" class="block text-sm font-medium text-gray-700">Produktreiter</label>
@@ -312,6 +318,7 @@
                       </div>
                       <!--COLORBUTTONS END-->
                     </div>
+                  </section>
                     <!-- 16 09 2021 END -->
 
                     <!--IMAGE FILE UPLOAD START-->
@@ -417,6 +424,7 @@ export default {
         aussteller_websiteurl: null,
         aussteller_bildurl: null,
         aussteller_produktreiter: [],
+        aussteller_istopaussteller: false
       }, //Objekt zum Speichern der Model-Daten von oben
     };
   },

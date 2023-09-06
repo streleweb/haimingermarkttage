@@ -8,7 +8,7 @@
 Extracted Components zur Wiederverwendung und Code-Reduktion...
 
 Extrahierte Components werden via @layer von Tailwind automatisch im Speicher
-der tailwind components integriert. Diese Styles werden durch die 
+der tailwind components integriert. Diese Styles werden durch die
 @layer-directive auch "ge-purged" */
 
 @layer components{
@@ -23,13 +23,13 @@ der tailwind components integriert. Diese Styles werden durch die
         w-screen h-screen max-h-screen;
     }
 
-    
+
     .sectionarea {/*
         position: absolute;
-        bottom: 40px; 
+        bottom: 40px;
         top: 58px; */
         @apply flex flex-col flex-grow; /*flex-shrink flex-grow*/
-        
+
     }
 
 
@@ -47,7 +47,7 @@ der tailwind components integriert. Diese Styles werden durch die
         bg-green-900
         border-b-2 border-black border-opacity-60;
         height: 58px;
-        
+
     }
 
 
@@ -115,7 +115,7 @@ der tailwind components integriert. Diese Styles werden durch die
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: cover;
-        z-index: 0; 
+        z-index: 0;
     }
 
     .philosophiecontentcontainer{
@@ -126,7 +126,7 @@ der tailwind components integriert. Diese Styles werden durch die
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: cover;
-        
+
         z-index: 0;
     }
 
@@ -158,7 +158,7 @@ der tailwind components integriert. Diese Styles werden durch die
     /*Small Icon Size Class - für sehr kleine Handyscreens    w-full fixed h-10 text-center border-t-2 bottom-0 border-green-400 p-2 bg-gray-800 opacity-80 flex-nowrap text-xs;*/
     .iconsmall{
         height: 3em;
-        width: 2em;
+        width: 1.8em;
     }
 
     .filter-white-icons {
@@ -171,7 +171,7 @@ der tailwind components integriert. Diese Styles werden durch die
 
        z-index: 3000;
     }
-    
+
 
     .mobiledropdowntextconfig{
         @apply text-xl text-white ;
@@ -232,11 +232,11 @@ der tailwind components integriert. Diese Styles werden durch die
             mt-1
             lg:mt-8
             lg:text-2xl
-            font-thin;  
+            font-thin;
     }
 
     .logotextstyle{
-        @apply   
+        @apply
         hidden
         hmbp:inline-flex
         text-xs
@@ -257,7 +257,7 @@ der tailwind components integriert. Diese Styles werden durch die
     .produktecardshadow{
         box-shadow: 12px 0 15px -4px rgba(0, 0, 0, 0.2), -12px 0 8px -4px rgba(0, 0, 0, 0.2);
     }
-      
+
     .customborder {
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
         rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
@@ -272,7 +272,7 @@ der tailwind components integriert. Diese Styles werden durch die
     .navbg{
         transition: 0.3s;
     }
-    
+
     .navbg:hover {
         @apply bg-green-800 rounded-lg;
         color:#FFFFFF;

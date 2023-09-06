@@ -318,7 +318,7 @@
                         class="block text-sm font-medium text-gray-700">Programm-Textinhalt</label>
                       <textarea maxlength="500" v-model="formdata.programm_beschreibung" id="programm_beschreibung"
                         autocomplete="Beschreibung"
-                        placeholder="Optional. max. 500 Zeichen[Programmbeschreibung, wird unter dem Titel eingefügt]"
+                        placeholder="Optional. MIN 10 Zeichen! max. 500 Zeichen[Programmbeschreibung, wird unter dem Titel eingefügt]"
                         class="
                                 mt-1
                                 focus:ring-green-500 focus:border-green-500
@@ -559,7 +559,7 @@ export default {
             // Fehlerbehandlung
             console.log(error);
             Swal.fire({
-              title: error,
+              title: "Beschreibung min:10|max:500, Titel min:2|max:70",
               heightAuto: false,
               confirmButtonText: "ok",
               confirmButtonColor: "#3cb371",
@@ -631,7 +631,7 @@ export default {
             // Fehlerbehandlung
             //console.log(error);
             Swal.fire({
-              title: error,
+              title: "Beschreibung min:10|max:500, Titel min:2|max:70",
               heightAuto: false,
               confirmButtonText: "ok",
               confirmButtonColor: "#3cb371",

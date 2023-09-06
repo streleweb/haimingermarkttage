@@ -72,7 +72,7 @@ class AusstellerController extends Controller
                   'aussteller_email' => 'nullable|min:2|max:100',
                   'aussteller_websiteurl' => 'nullable|max:200',
                   'aussteller_bildurl' => 'nullable',
-                  'aussteller_istopaussteller' => 'boolean',
+                  'aussteller_istopaussteller' => 'nullable|boolean',
                 ]);
 
             if ($validator->fails()) {
@@ -88,7 +88,7 @@ class AusstellerController extends Controller
                   $aussteller->aussteller_websiteurl = $request->aussteller_websiteurl;
                   $aussteller->aussteller_zonenfarbe = $request->aussteller_zonenfarbe;
                   $aussteller->aussteller_bildurl = $request->aussteller_bildurl;
-                  $aussteller->aussteller_istopaussteller = $request->aussteller_istopaussteller;
+                  $aussteller->aussteller_istopaussteller = $request->aussteller_istopaussteller ?? false;
 
 
                   if($aussteller->save()){
