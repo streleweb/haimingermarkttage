@@ -2,11 +2,8 @@
 
 <template>
   <div class="max-w-full produktbackground">
-    <!-- Content Container von Willkommen (exklusive Navbar) bis exklusive Footer-->
-
     <div class="font-willkommen pt-5 px-1 mb-10 text-center z-index:100">
       <!-- custom font konfiguriert in tailwind.config.js-->
-      <!-- Hier noch Background-Pic oder Video rein -->
       <div class="ueberschriftprodukte textshadow-markant">
         Farbzonen-Übersicht
         <div class="
@@ -30,11 +27,9 @@
           welcher sich der jeweilige Aussteller befindet. Am Besten folgen Sie
           den mit Farbe gekennzeichneten Schildern am Markt.
         </div>
-        <!-- end willkommenstexte -->
       </div>
     </div>
-    <!-- end willkommen -->
-    <!--https://www.google.com/maps/d/embed?mid=13qNnDIQECR3-pZ3-vK39FNUhoY7M-qD1-->
+
     <div class="flex justify-center items-center">
       <iframe src="https://www.google.com/maps/d/embed?mid=18zYJ568aZGAngWapMG2ZriZWZXYI-vI&ehbc=2E312F" width="800"
         height="600"></iframe>
@@ -53,8 +48,7 @@
 </template>
 
 <script>
-import Button from "./Button";
-
+import Button from "../ReusableComponents/Button";
 export default {
   metaInfo: {
     title: 'Karte'
@@ -62,7 +56,6 @@ export default {
   data() {
     return {
       name: "Karte",
-
       titleMessage:
         "Weitreichende Produktpalette bei den Haiminger Markttagen!",
       smallDescription:

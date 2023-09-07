@@ -2,10 +2,8 @@
   <div class="newsgradient">
     <div class="newscontainer">
       <!-- custom font konfiguriert in tailwind.config.js-->
-      <!-- Hier noch Background-Pic oder Video rein -->
       <div class="titletext ueberschrift mb-7 w-full textshadow-markant">
         <p>News</p>
-        <!-- end willkommenstexte -->
       </div>
       <p v-if="loading">
         <img src="/images/icons/gifs/loadingtransparent.gif" alt="loading..." class="mt-20 z-50" />
@@ -42,8 +40,8 @@
 </template>
 
 <script>
-import Button from "./Button";
-import Farbzone from "./Farbzone";
+import Button from "../ReusableComponents/Button";
+import Farbzone from "../ReusableComponents/Farbzone";
 import Swal from "sweetalert2";
 import { sortMostRecentFirst } from '../../utilityfunctions/utils'
 
@@ -84,16 +82,6 @@ export default {
         //console.log(addPoints);
         this.news[i].created_at = addPoints;
       }
-
-      //Date-Conversion to readable Format
-      /*
-      this.news.forEach((element) => {
-        let dateOfNews = element.created_at;
-        //console.log(dateOfNews);
-        let splitIt = dateOfNews.split("T");
-        element = splitIt[0];
-        console.log(element);
-      });*/
     },
     loadNews() {
       this.loading = true;
@@ -175,7 +163,6 @@ export default {
 article:hover {
   transform: translateY(5px);
   box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3);
-  /*Shadow bewegt sich mit nach unten*/
 }
 
 article img {
@@ -201,7 +188,6 @@ article img {
   background-repeat: no-repeat;
   width: 100%;
   min-height: 100%;
-  /*background-position: 50% 50%;*/
   background-size: cover;
 }
 

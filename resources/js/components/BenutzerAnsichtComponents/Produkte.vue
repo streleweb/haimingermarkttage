@@ -1,10 +1,6 @@
 <template>
   <div class="max-w-full produktbackground">
-    <!-- Content Container von Willkommen (exklusive Navbar) bis exklusive Footer-->
-
     <div class="font-willkommen pt-5 px-1 mb-10 text-center z-index:100">
-      <!-- custom font konfiguriert in tailwind.config.js-->
-      <!-- Hier noch Background-Pic oder Video rein -->
       <div class="ueberschriftprodukte textshadow-markant">
         {{ titleMessage }}
         <div class="
@@ -63,7 +59,7 @@
 </template>
 
 <script>
-import Button from "./Button";
+import Button from "../ReusableComponents/Button";
 
 export default {
   metaInfo: {

@@ -1,10 +1,6 @@
 <template>
   <div class="max-w-full produktbackground">
-    <!-- Content Container von Willkommen (exklusive Navbar) bis exklusive Footer-->
-
     <div class="font-willkommen pt-5 px-2 md:px-1 mb-10 text-center z-index:100">
-      <!-- custom font konfiguriert in tailwind.config.js-->
-      <!-- Hier noch Background-Pic oder Video rein -->
       <div class="ueberschriftprodukte textshadow-markant">
         {{ titleMessage }}
         <div class="
@@ -20,10 +16,8 @@
                   ">
           {{ smallDescription }}
         </div>
-        <!-- end willkommenstexte -->
       </div>
     </div>
-    <!-- end willkommen -->
 
     <div class="
                 grid grid-cols-1
@@ -62,7 +56,7 @@
 </template>
 
 <script>
-import Button from "./Button";
+import Button from "../ReusableComponents/Button";
 
 export default {
   metaInfo: {
@@ -133,7 +127,6 @@ export default {
 article:hover {
   transform: translateY(5px);
   box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.3);
-  /*Shadow bewegt sich mit nach unten*/
 }
 
 article img {
@@ -155,7 +148,6 @@ article img {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
     url("/images/background/produktbackground.svg");
   background-repeat: no-repeat;
-  /*background-position: 50% 50%;*/
   width: 100%;
   min-height: 100%;
   background-size: cover;

@@ -13,16 +13,14 @@
 
     <Footer></Footer>
   </div>
-
-  <!-- end outercontainer -->
 </template>
 
 
 <script>
-import PageLoader from "./PageLoader.vue";
+import PageLoader from "./PageLoader";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import Mobilemenu from "./Mobilemenu.vue";
+import Mobilemenu from "./Mobilemenu";
 const default_layout = "default";
 import { EventBus } from "../../event-bus";
 

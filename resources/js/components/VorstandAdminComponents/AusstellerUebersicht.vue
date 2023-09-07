@@ -13,7 +13,6 @@
       zu können...
     </div>
     <!-- Check for Login-Status, only display if logged in-->
-
     <!-- DASHBOARD -->
     <div v-if="loggedIn()" class="h-full w-full">
       <nav class="bg-gray-800 border-b border-gray-300">
@@ -22,13 +21,6 @@
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
               <span class="sr-only">Open main menu</span>
 
-              <!--
-            Icon when menu is open.
-
-            Heroicon name: outline/x
-
-            Menu open: "block", Menu closed: "hidden"
-          -->
               <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -44,7 +36,6 @@
               <div class="flex-shrink-0 flex items-center"></div>
               <div class="hidden sm:block sm:ml-6">
                 <div class="flex space-x-4">
-                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                   <router-link to="/admin/dashboard"><span class="text-gray-500 text-lg">Dashboard</span></router-link>
                   <div class="
                                 bg-gray-900
@@ -98,6 +89,7 @@
                               ">
                     <router-link to="/admin/dashboard/editfotogalerie">Fotogalerie</router-link>
                   </div>
+
                   <div class="
                                 text-gray-300
                                 hover:bg-gray-700
@@ -225,15 +217,12 @@
                       <a :href="ausstellerEmail(index)" target="_newtab"><img src="/images/icons/svgs/email.png"
                           class="h-4 filter-white-icons" alt="website" /></a>
                     </li>
-                    <!-- <a
-                  href="https://www.google.com/maps/d/embed?mid=1Kxrd75PaiWPf5CIYb3pSrpFRScbUORwo"
-                > -->
+
                     <router-link to="/karte">
                       <li v-if="zonenFarbeNotEmpty(index)" class="h-5 w-32">
                         <Farbzone :zonen-farbe="zonenFarbe(index)"></Farbzone>
                       </li>
                     </router-link>
-                    <!-- </a> -->
                   </ul>
                 </div>
                 <div class="gap-2 justify-start items-center mt-3">
@@ -243,8 +232,6 @@
                 </div>
               </div>
             </article>
-
-            <!-- end willkommen -->
           </div>
         </div>
       </div>
@@ -253,8 +240,8 @@
 </template>
 
 <script>
-import Button from "../BenutzerAnsichtComponents/Button";
-import Farbzone from "../BenutzerAnsichtComponents/Farbzone";
+import Button from "../ReusableComponents/Button";
+import Farbzone from "../ReusableComponents/Farbzone";
 import MobileMenu from "./MobileMenu.vue";
 import repository from "./repository/repository";
 
@@ -296,7 +283,6 @@ export default {
             confirmButtonText: "ok",
             confirmButtonColor: "#3cb371",
           });
-          //Nach 3 Sekunden Page refresh
           setTimeout(() => {
             location.reload();
           }, 3000);
@@ -320,17 +306,6 @@ export default {
         console.log(error);
       }
     },
-    /*loadAussteller: function () {
-      axios
-        .get("/api/aussteller") // load API
-        .then((response) => {
-          this.aussteller = response.data.data; // 1. data = axios syntax, 2. data = das Property "data" innerhalb der JSON response
-          console.log(this.aussteller);
-        }) // assign to this.aussteller array
-        .catch(function (error) {
-          // Fehlerbehandlung
-          console.log(error);
-        });*/
 
     async loadAussteller() {
       this.loading = true;

@@ -1,7 +1,5 @@
 <template>
   <div class="philosophiecontentcontainer">
-    <!-- Content Container von Willkommen (exklusive Navbar) bis exklusive Footer-->
-
     <div class="
         willkommen
         font-willkommen
@@ -14,8 +12,6 @@
         md:mt-5
         text-center
       ">
-      <!-- custom font konfiguriert in tailwind.config.js-->
-      <!-- Hier noch Background-Pic oder Video rein -->
       <div class="
           text-white
           sm:mb-5
@@ -99,10 +95,8 @@
             </div>
           </div>
         </div>
-        <!-- end willkommenstexte -->
       </div>
     </div>
-    <!-- end willkommen -->
 
     <div class="buttonContainer flex flex-col flex-shrink md:flex-grow mb-2">
       <!--Buttons mit Custom Props-->
@@ -117,7 +111,7 @@
 </template>
 
 <script>
-import Button from "./Button";
+import Button from "../ReusableComponents/Button";
 
 export default {
   metaInfo: {

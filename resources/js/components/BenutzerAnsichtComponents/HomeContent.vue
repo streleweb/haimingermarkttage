@@ -1,22 +1,18 @@
 <template>
   <div class="homecontentcontainer">
     <!-- Content Container von Willkommen (exklusive Navbar) bis exklusive Footer-->
-
     <div class="titletext">
       <!-- custom font konfiguriert in tailwind.config.js-->
-      <!-- Hier noch Background-Pic oder Video rein -->
       <div class="ueberschrift textshadow-markant">
         {{ titleMessage }}
         <div class="descriptiontext">
           {{ smallDescription }}
         </div>
         <!-- end willkommenstexte -->
-        <!-- ********** AKTUELLES HM DATUM HIER EINGEBEN *********** -->
         <div id="hmdate" class="mt-2 descriptiontext text-white">
           {{ homecontent.homeContentTitle }} <br />
           {{ homecontent.homeContentDescription }}
         </div>
-        <!-- ********** AKTUELLES HM DATUM HIER EINGEBEN ENDE ******-->
       </div>
     </div>
     <!-- end willkommen -->
@@ -33,9 +29,6 @@
           button-color="bg-green-900" on-hover="hover:bg-yellow-200"></Button>
       </router-link>
 
-      <!-- <a
-        href="https://www.google.com/maps/d/u/0/edit?mid=13qNnDIQECR3-pZ3-vK39FNUhoY7M-qD1&usp=sharing"
-      >-->
       <router-link to="/karte"><Button svg-source="/../../images/icons/svgs/map.svg" button-inhalt="Karte"
           button-color="bg-green-900" on-hover="hover:bg-yellow-300"></Button></router-link>
       <router-link to="/anreise">
@@ -49,7 +42,7 @@
 
 <script>
 import repository from "../VorstandAdminComponents/repository/repository";
-import Button from "./Button";
+import Button from "../ReusableComponents/Button";
 import Swal from "sweetalert2";
 
 export default {
@@ -66,7 +59,6 @@ export default {
         homeContentTitle: 'Infos zu den kommenden Markttagen folgen',
         homeContentDescription: ''
       }
-      //nicht vergessen, Anreiseinfos entweder in DB abspeichern und von dort aus zB via Props zu laden, oder via API Call (Axios oder FetchAPI)..
     };
   },
 
@@ -100,8 +92,6 @@ export default {
         } else {
           console.log('PWA ist noch nicht installiert.');
 
-          // Check if the user is using Safari browser
-
           Swal.fire({
             title: "App installieren",
             text: "App zum Startbildschirm hinzufügen?",
@@ -118,7 +108,6 @@ export default {
               this.showCookiePopup();
             }, 3000);
           });
-
         }
       });
     }
@@ -136,7 +125,6 @@ export default {
         Swal.fire({
           title: "Cookie Notice",
           heightAuto: false,
-          // text: "Wir verwenden Cookies, um unsere Webseite möglichst benutzerfreundlich zu gestalten. Durch die Nutzung unserer Webapp erklären Sie sich mit der Verwendung von Cookies einverstanden. Details dazu finden Sie in der Datenschutzerklärung.",
           html: 'Wir verwenden Cookies, um unsere Webseite möglichst benutzerfreundlich zu gestalten. Durch die Nutzung unserer Webapp erklären Sie sich mit der Verwendung von Cookies einverstanden. Details dazu finden Sie in der Datenschutzerklärung.<br><br><strong>Jede Seite, die Sie in dieser App online besucht haben, können Sie auch ohne Internetverbindung öffnen!</strong>',
           confirmButtonText: "ok",
           confirmButtonColor: "#3cb371",

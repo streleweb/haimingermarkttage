@@ -2,8 +2,7 @@
   <div class="datenschutzcontentcontainer">
     <!-- Content Container von Willkommen (exklusive Navbar) bis exklusive Footer-->
 
-    <div
-      class="
+    <div class="
         willkommen
         font-willkommen
         flex-shrink
@@ -14,12 +13,10 @@
         md:flex-grow
         md:mt-5
         text-left
-      "
-    >
+      ">
       <!-- custom font konfiguriert in tailwind.config.js-->
       <!-- Hier noch Background-Pic oder Video rein -->
-      <div
-        class="
+      <div class="
           text-white
           sm:mb-5
           text-xl
@@ -29,11 +26,9 @@
           lg:text-5xl
           font-s
           text-center
-        "
-      >
+        ">
         {{ titleMessage }}
-        <div
-          class="
+        <div class="
             text-gray-100 text-base text-left
             pt-4
             sssm:px-4
@@ -46,8 +41,7 @@
             lg:text-2xl
             font-thin
             bg
-          "
-        >
+          ">
           Diese Datenschutzerklärung soll die Nutzer dieser Website über die
           Art, den Umfang und den Zweck der Erhebung und Verwendung
           personenbezogener Daten durch den Websitebetreiber
@@ -396,27 +390,22 @@
           nicht einfach gelöscht werden. Die Daten werden beim Seitenaufruf
           automatisch an Google übermittelt. Um diese Daten vorzeitig löschen zu
           können, müssen Sie den Google-Support auf
-          <a href="https://support.google.com/?hl=de&tid=211103817"
-            >https://support.google.com/?hl=de&tid=211103817</a
-          >
+          <a href="https://support.google.com/?hl=de&tid=211103817">https://support.google.com/?hl=de&tid=211103817</a>
           kontaktieren. Datenspeicherung verhindern Sie in diesem Fall nur, wenn
           Sie unsere Seite nicht besuchen. Anders als andere Web-Schriften
           erlaubt uns Google uneingeschränkten Zugriff auf alle Schriftarten.
           Wir können also unlimitiert auf ein Meer an Schriftarten zugreifen und
           so das Optimum für unsere Webseite rausholen. Mehr zu Google Fonts und
           weiteren Fragen finden Sie auf
-          <a href="https://developers.google.com/fonts/faq?tid=211103817"
-            >https://developers.google.com/fonts/faq?tid=211103817</a
-          >
+          <a
+            href="https://developers.google.com/fonts/faq?tid=211103817">https://developers.google.com/fonts/faq?tid=211103817</a>
           . Dort geht zwar Google auf datenschutzrelevante Angelegenheiten ein,
           doch wirklich detaillierte Informationen über Datenspeicherung sind
           nicht enthalten. Es ist relativ schwierig, von Google wirklich präzise
           Informationen über gespeicherten Daten zu bekommen. Welche Daten
           grundsätzlich von Google erfasst werden und wofür diese Daten
           verwendet werden, können Sie auch auf
-          <a href="https://www.google.com/intl/de/policies/privacy/"
-            >https://www.google.com/intl/de/policies/privacy/</a
-          >
+          <a href="https://www.google.com/intl/de/policies/privacy/">https://www.google.com/intl/de/policies/privacy/</a>
           nachlesen.
         </div>
         <!-- end willkommenstexte -->
@@ -424,9 +413,7 @@
     </div>
     <!-- end willkommen -->
 
-    <ul
-      id="kontaktinfo"
-      class="
+    <ul id="kontaktinfo" class="
         text-white text-xs
         border-t border-b border-gray-800
         pb-1
@@ -439,8 +426,7 @@
         bg-gray-600 bg-gradient-to-bl
         from-green-900
         to-gray-700
-      "
-    >
+      ">
       <li class="justify-self-center">
         Erzeugerorganisation Oberinntalobst GmbH
       </li>
@@ -450,35 +436,21 @@
       <li class="justify-self-center">Fax: +43 (0) 5266 88429</li>
       <li class="justify-self-center">
         E-Mail:
-        <a
-          href="mailto:info@haiminger-markttage.at,office@obstlager-haiming.at"
-          target="_newtab"
-          >office@obstlager-haiming.at<img
-            src="/images/icons/svgs/email.svg"
-            class="resize-icon filter-white-icons mx-auto"
-            alt="email"
-        /></a>
+        <a href="mailto:info@haiminger-markttage.at,office@obstlager-haiming.at"
+          target="_newtab">office@obstlager-haiming.at<img src="/images/icons/svgs/email.svg"
+            class="resize-icon filter-white-icons mx-auto" alt="email" /></a>
       </li>
       <li class="justify-self-center">
         Website:
-        <a href="http://www.haiminger-markttage.at/"
-          >haiminger-markttage.at<img
-            src="/images/icons/svgs/www.svg"
-            class="resize-icon filter-white-icons mx-auto"
-            alt="website"
-        /></a>
+        <a href="http://www.haiminger-markttage.at/">haiminger-markttage.at<img src="/images/icons/svgs/www.svg"
+            class="resize-icon filter-white-icons mx-auto" alt="website" /></a>
       </li>
       <li class="justify-self-center">
-        Zum Kontaktformular:<a href="http://www.haiminger-markttage.at/kontakt/"
-          ><img
-            src="/images/icons/svgs/contact-form.svg"
-            class="resize-icon filter-white-icons mx-auto"
-            alt="website"
-        /></a>
+        Zum Kontaktformular:<a href="http://www.haiminger-markttage.at/kontakt/"><img
+            src="/images/icons/svgs/contact-form.svg" class="resize-icon filter-white-icons mx-auto" alt="website" /></a>
       </li>
     </ul>
-    <div
-      class="
+    <div class="
         buttonContainer
         flex flex-col flex-shrink
         sm:pt-4
@@ -486,16 +458,11 @@
         mt-2
         ssm:mt-4
         mb-2
-      "
-    >
+      ">
       <!--Buttons mit Custom Props-->
       <router-link to="/" exact>
-        <Button
-          svg-source="/../../images/icons/svgs/home.svg"
-          button-inhalt="Home"
-          button-color="bg-green-400"
-          on-hover="hover:bg-white"
-        ></Button>
+        <Button svg-source="/../../images/icons/svgs/home.svg" button-inhalt="Home" button-color="bg-green-400"
+          on-hover="hover:bg-white"></Button>
       </router-link>
     </div>
     <!-- end buttoncontainer -->
@@ -504,7 +471,7 @@
 </template>
 
 <script>
-import Button from "../BenutzerAnsichtComponents/Button";
+import Button from "../ReusableComponents/Button.vue";
 
 export default {
   data() {

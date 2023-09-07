@@ -2,11 +2,8 @@
 
 <template>
   <div class="max-w-full produktbackground">
-    <!-- Content Container von Willkommen (exklusive Navbar) bis exklusive Footer-->
-
     <div class="font-willkommen pt-5 px-1 mb-10 text-center z-index:100">
       <!-- custom font konfiguriert in tailwind.config.js-->
-      <!-- Hier noch Background-Pic oder Video rein -->
       <div class="ueberschriftprodukte textshadow-markant">
         Anreise
         <div class="
@@ -28,10 +25,9 @@
           Navigationssymbol, um per Google Maps nach Haiming navigiert zu
           werden.
         </div>
-        <!-- end willkommenstexte -->
       </div>
     </div>
-    <!-- end willkommen -->
+
     <div class="flex flex-col justify-center items-center">
       <a href="https://goo.gl/maps/c5LfWFrYFkwVvHJ37"><img class="h-20 border border-black p-5 rounded-full filter-white"
           src="/images/icons/svgs/locationpointer.svg" alt="Google Maps Navigation" /></a>
@@ -51,8 +47,7 @@
 </template>
 
 <script>
-import Button from "./Button";
-
+import Button from "../ReusableComponents/Button";
 export default {
   data() {
     return {

@@ -5,7 +5,6 @@ export default {
   // Session-Cookie von Laravel Sanctum API abrufen
   createSession() {
     return api.get("/sanctum/csrf-cookie");
-
   },
 
   login(params) {

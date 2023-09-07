@@ -49,8 +49,8 @@
 </template>
 
 <script>
-import Button from "./Button";
-import Farbzone from "./Farbzone";
+import Button from "../ReusableComponents/Button";
+import Farbzone from "../ReusableComponents/Farbzone";
 import Swal from "sweetalert2";
 import { sortMostRecentFirst } from '../../utilityfunctions/utils'
 

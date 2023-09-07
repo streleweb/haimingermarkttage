@@ -3,8 +3,7 @@
     <!--Slot für CarouselSlide-->
     <slot></slot>
 
-    <img
-      class="
+    <img class="
         next
         filter-white-icons
         animate-pulse
@@ -20,13 +19,8 @@
         sm:w-36
         lg:h-34
         lg:w-36
-      "
-      src="/images/icons/svgs/next1.svg"
-      alt="Next"
-      @click="goToNext()"
-    />
-    <img
-      class="
+      " src="/images/icons/svgs/next1.svg" alt="Next" @click="goToNext()" />
+    <img class="
         h-8
         w-10
         ssm:h-14
@@ -42,11 +36,7 @@
         animate-pulse
         hover:bg-white
         hover:opacity-50
-      "
-      src="/images/icons/svgs/back.svg"
-      alt="Previous"
-      @click="goToPrevious()"
-    />
+      " src="/images/icons/svgs/back.svg" alt="Previous" @click="goToPrevious()" />
   </div>
 </template>
 
@@ -57,12 +47,10 @@ export default {
   },
   methods: {
     goToNext() {
-      //console.log("basst");
       this.$emit("next");
     },
 
     goToPrevious() {
-      //console.log("basst auch");
       this.$emit("previous");
     },
   },

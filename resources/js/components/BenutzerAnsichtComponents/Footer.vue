@@ -1,15 +1,8 @@
 <template>
   <footer class="footer">
-    <span class="footer-text"
-      ><router-link to="/impressum">Impressum</router-link></span
-    >
-    <span class="footer-text"
-      ><router-link to="/datenschutz">Datenschutz</router-link></span
-    >
-    <span class="footer-text"
-      ><router-link to="/kontakt">Kontakt</router-link></span
-    >
-    <!-- Noch dynamisch machen und verlinken -->
+    <span class="footer-text"><router-link to="/impressum">Impressum</router-link></span>
+    <span class="footer-text"><router-link to="/datenschutz">Datenschutz</router-link></span>
+    <span class="footer-text"><router-link to="/kontakt">Kontakt</router-link></span>
   </footer>
 </template>
 

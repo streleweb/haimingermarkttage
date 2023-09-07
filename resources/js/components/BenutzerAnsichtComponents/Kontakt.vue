@@ -1,7 +1,5 @@
 <template>
   <div class="kontaktcontentcontainer">
-    <!-- Content Container von Willkommen (exklusive Navbar) bis exklusive Footer-->
-
     <div class="
         willkommen
         font-willkommen
@@ -14,7 +12,7 @@
         md:mt-5
         text-center
       ">
-      <!-- custom font konfiguriert in tailwind.config.js-->
+
       <div class="
           text-white
           sm:mb-5
@@ -42,10 +40,8 @@
           ">
           {{ contactDescription }}
         </div>
-        <!-- end willkommenstexte -->
       </div>
     </div>
-    <!-- end willkommen -->
 
     <ul id="kontaktinfo" class="
         text-white
@@ -102,8 +98,7 @@
 </template>
 
 <script>
-import Button from "./Button";
-
+import Button from "../ReusableComponents/Button";
 export default {
   metaInfo: {
     title: 'Kontakt'
@@ -114,7 +109,6 @@ export default {
       titleMessage: "Kontaktieren Sie uns gerne!",
       contactDescription:
         "Das Organisationskomitee der Haiminger Markttage steht Ihnen bei Fragen, Anregungen, Kritik oder sonstigen Anliegen gerne zur Verfügung. Schicken Sie uns einfach eine Email oder schreiben Sie uns – wir antworten gerne!",
-      //nicht vergessen, Anreiseinfos entweder in DB abspeichern und von dort aus zB via Props zu laden, oder via API Call (Axios oder FetchAPI)..
     };
   },
   components: { Button },

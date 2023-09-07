@@ -1,8 +1,6 @@
 <template>
   <div>
     <div class="produktbackground h-full flex flex-col w-full justify-evenly">
-      <!-- Content Container von Willkommen (exklusive Navbar) bis exklusive Footer-->
-
       <div class="
           willkommen
           font-willkommen
@@ -14,7 +12,6 @@
           md:mt-5
           text-center
         ">
-        <!-- custom font konfiguriert in tailwind.config.js-->
         <div class="
             text-white
             sm:mb-5
@@ -45,10 +42,9 @@
             ">
             {{ contactDescription }}
           </div>
-          <!-- end willkommenstexte -->
         </div>
       </div>
-      <!-- end willkommen -->
+
       <div class="
           text-white
           grid grid-cols-1
@@ -199,7 +195,7 @@
 </template>
 
 <script>
-import Button from "./Button";
+import Button from "../ReusableComponents/Button";
 
 export default {
   metaInfo: {
@@ -210,7 +206,6 @@ export default {
       name: "Sponsoren",
       titleMessage: "Partner der Haiminger Markttage",
       contactDescription: "Hier finden Sie eine Liste unserer Partner.",
-      //nicht vergessen, Anreiseinfos entweder in DB abspeichern und von dort aus zB via Props zu laden, oder via API Call (Axios oder FetchAPI)..
     };
   },
   components: { Button },
