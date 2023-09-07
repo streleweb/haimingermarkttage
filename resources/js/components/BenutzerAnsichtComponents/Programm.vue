@@ -15,14 +15,14 @@
         <article v-for="(jeweiligesProgramm, index) in programmArray" :key="index" class="
               grid grid-cols-1
               newsbp:grid-cols-2
-              gap-4
+              gap-1
               articlestyling
               mx-auto
               overflow-hidden
               w-full
             ">
           <img v-if="imageUrlNotEmpty(index)" :src="imgUrl(index)" alt=""
-            class="border border-green-900 shadow-md max-h-96 lg:max-w-md" />
+            class="border border-green-900 shadow-md self-center" />
 
           <div class="text text-lg text-left font-willkommen leading-5 lg:text-2xl mt-5 mb-5">
             <h3 class="font-bold text-gray-800 ">
@@ -175,12 +175,11 @@ article:hover {
 }
 
 article img {
-  max-width: 50%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 90%;
+  margin: 8px auto;
+  border-radius: 0;
   z-index: 1;
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);
 }
 
 .text {

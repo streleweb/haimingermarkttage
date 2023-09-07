@@ -135,7 +135,7 @@
                                 font-medium
                               ">
                 <span class="text-white cursor-pointer" @click="handleLogout()">Logout
-                  <img src="/public/images/icons/svgs/ausloggen.svg" class="filter-white" alt="" /></span>
+                </span>
               </div>
             </div>
           </div>

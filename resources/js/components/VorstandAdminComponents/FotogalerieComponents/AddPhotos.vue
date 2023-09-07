@@ -95,6 +95,18 @@
                         ">
                     Fotogalerie
                   </div>
+                  <div class="
+                                text-gray-300
+                                hover:bg-gray-700
+                                hover:text-white
+                                px-3
+                                py-2
+                                rounded-md
+                                text-sm
+                                font-medium
+                              ">
+                    <router-link to="/admin/dashboard/hometext">Home-Text</router-link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -121,7 +133,7 @@
                       font-medium
                     ">
                 <span class="text-white cursor-pointer" @click="handleLogout()">Logout
-                  <img src="/public/images/icons/svgs/ausloggen.svg" class="filter-white" alt="" /></span>
+                </span>
               </div>
             </div>
           </div>
@@ -441,11 +453,12 @@ export default {
           });
       }
       catch (error) {
-        //console.error(error.response.data);
+        console.error(error.response.data);
       }
       finally {
-        setTimeout(() => { }, 1500);
-        location.reload();
+        setTimeout(() => {
+          location.reload();
+        }, 1500);
       }
     },
   },

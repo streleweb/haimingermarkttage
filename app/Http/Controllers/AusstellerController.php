@@ -135,9 +135,14 @@ class AusstellerController extends Controller
      */
     public function show($id)
     {
-        // $aussteller = Aussteller::find($id);
-        $produktReiterDesAusstellers = Aussteller::find($id)->produktreiters()->get();
-        return $produktReiterDesAusstellers;
+        $aussteller = Aussteller::find($id);
+
+        if ($aussteller) {
+            $produktReiterDesAusstellers = $aussteller->produktreiters()->get();
+            return $produktReiterDesAusstellers;
+        } else {
+            return \response('Aussteller not found.', 404)->header('Content-Type', 'text/plain');
+        }
     }
 
     public function getAllAusstellerOfSpecificProduktreiter($produktReiterName){
@@ -236,14 +241,24 @@ class AusstellerController extends Controller
      * @param  \App\Models\Aussteller  $aussteller
      * @return \Illuminate\Http\Response
      */
-    public function destroy($ausstellerFullName)
+    public function destroy($id)
     {
-        if(Aussteller::where('aussteller_fullname', $ausstellerFullName)->delete()){
-            return \response('Aussteller erfolgreich gelöscht!', 200)
-            ->header('Content-Type', 'text/plain');
+        $aussteller = Aussteller::find($id);
+
+        if ($aussteller) {
+            if ($aussteller->delete()) {
+                return \response('Aussteller erfolgreich gelöscht!', 200)
+                    ->header('Content-Type', 'text/plain');
+            } else {
+                return \response('Fehler beim Löschen des Ausstellers.', 500)
+                    ->header('Content-Type', 'text/plain');
+            }
+        } else {
+            return \response('Aussteller nicht vorhanden...', 404)
+                ->header('Content-Type', 'text/plain');
         }
-        else return \response('Aussteller nicht vorhanden...', 200)->header('Content-Type', 'text/plain');
     }
+
 
     /**
      * Search for Aussteller-name

@@ -71,7 +71,7 @@
                     <router-link to="/admin/dashboard/news">News</router-link>
                   </div>
 
-                  <a href="#" class="
+                  <div class="
                             text-gray-300
                             hover:bg-gray-700
                             hover:text-white
@@ -80,7 +80,10 @@
                             rounded-md
                             text-sm
                             font-medium
-                          ">Programm</a>
+                                  ">
+                    <router-link to="/admin/dashboard/programmanlegen">
+                      Programm</router-link>
+                  </div>
 
                   <div class="
                             text-gray-300
@@ -132,7 +135,7 @@
                         font-medium
                       ">
                 <span class="text-white cursor-pointer" @click="handleLogout()">Logout
-                  <img src="/public/images/icons/svgs/ausloggen.svg" class="filter-white" alt="" /></span>
+                </span>
               </div>
             </div>
           </div>
@@ -256,69 +259,69 @@
                         <label for="street_address" class="block text-sm font-medium text-gray-700">Top Aussteller</label>
                         <input type="checkbox" v-model="formdata.aussteller_istopaussteller" :id="formdata.aussteller_id">
                       </div>
-                    <div class="col-span-6">
-                      <label for="street_address" class="block text-sm font-medium text-gray-700">Zonenfarbe am
-                        Markt</label>
-                      <!--COLORBUTTONS START-->
-                      <div class="pt-3">
-                        <label class="container" @click="assignColorBlue">Blau
-                          <div class="bg-blue-500 h-2 w-5 rounded-md" @click="assignColorBlue"></div>
-                          <input @click="assignColorBlue" type="radio" name="radio" />
-                          <span @click="assignColorBlue" class="checkmark"></span>
-                        </label>
-                        <label class="container" @click="assignColorRed">Rot
-                          <div @click="assignColorRed" class="bg-red-600 h-2 w-5 rounded-md"></div>
-                          <input @click="assignColorRed" type="radio" name="radio" />
-                          <span @click="assignColorRed" class="checkmark"></span>
-                        </label>
-                        <label class="container" @click="assignColorYellow">Gelb
-                          <div @click="assignColorYellow" class="bg-yellow-300 h-2 w-5 rounded-md"></div>
-                          <input @click="assignColorYellow" type="radio" name="radio" />
-                          <span @click="assignColorYellow" class="checkmark"></span>
-                        </label>
-                        <label class="container" @click="assignColorGreen">Grün
-                          <div @click="assignColorGreen" class="bg-green-500 h-2 w-5 rounded-md"></div>
-                          <input @click="assignColorGreen" type="radio" name="radio" />
-                          <span @click="assignColorGreen" class="checkmark"></span>
-                        </label>
-                        <label class="container" @click="assignColorBrown">Braun
-                          <div @click="assignColorBrown" class="bg-yellow-900 h-2 w-5 rounded-md"></div>
-                          <input @click="assignColorBrown" type="radio" name="radio" />
-                          <span @click="assignColorBrown" class="checkmark"></span>
-                        </label>
+                      <div class="col-span-6">
+                        <label for="street_address" class="block text-sm font-medium text-gray-700">Zonenfarbe am
+                          Markt</label>
+                        <!--COLORBUTTONS START-->
+                        <div class="pt-3">
+                          <label class="container" @click="assignColorBlue">Blau
+                            <div class="bg-blue-500 h-2 w-5 rounded-md" @click="assignColorBlue"></div>
+                            <input @click="assignColorBlue" type="radio" name="radio" />
+                            <span @click="assignColorBlue" class="checkmark"></span>
+                          </label>
+                          <label class="container" @click="assignColorRed">Rot
+                            <div @click="assignColorRed" class="bg-red-600 h-2 w-5 rounded-md"></div>
+                            <input @click="assignColorRed" type="radio" name="radio" />
+                            <span @click="assignColorRed" class="checkmark"></span>
+                          </label>
+                          <label class="container" @click="assignColorYellow">Gelb
+                            <div @click="assignColorYellow" class="bg-yellow-300 h-2 w-5 rounded-md"></div>
+                            <input @click="assignColorYellow" type="radio" name="radio" />
+                            <span @click="assignColorYellow" class="checkmark"></span>
+                          </label>
+                          <label class="container" @click="assignColorGreen">Grün
+                            <div @click="assignColorGreen" class="bg-green-500 h-2 w-5 rounded-md"></div>
+                            <input @click="assignColorGreen" type="radio" name="radio" />
+                            <span @click="assignColorGreen" class="checkmark"></span>
+                          </label>
+                          <label class="container" @click="assignColorBrown">Braun
+                            <div @click="assignColorBrown" class="bg-yellow-900 h-2 w-5 rounded-md"></div>
+                            <input @click="assignColorBrown" type="radio" name="radio" />
+                            <span @click="assignColorBrown" class="checkmark"></span>
+                          </label>
+                        </div>
+                        <!--COLORBUTTONS END-->
                       </div>
-                      <!--COLORBUTTONS END-->
-                    </div>
 
-                    <!-- 16 09 2021 -->
-                    <div class="col-span-6">
-                      <label for="street_address" class="block text-sm font-medium text-gray-700">Produktreiter</label>
-                      <!--COLORBUTTONS START-->
-                      <div class="pt-3">
-                        <label class="container">Lebensmittel
-                          <input type="checkbox" name="checkbox" />
-                          <span @click="assignToLebensmittel" class="checkmark"></span>
-                        </label>
-                        <label class="container">Gastronomie
-                          <input type="checkbox" name="checkbox" />
-                          <span @click="assignToGastronomie" class="checkmark"></span>
-                        </label>
-                        <label class="container" @click="assignToHandwerk">Handwerk
-                          <input @click="assignToHandwerk" type="checkbox" name="checkbox" />
-                          <span @click="assignToHandwerk" class="checkmark"></span>
-                        </label>
-                        <label class="container" @click="assignToTextil">Textil
-                          <input @click="assignToTextil" type="checkbox" name="checkbox" />
-                          <span @click="assignToTextil" class="checkmark"></span>
-                        </label>
-                        <label class="container" @click="assignToAllerlei">Allerlei
-                          <input @click="assignToAllerlei" type="checkbox" name="checkbox" />
-                          <span @click="assignToAllerlei" class="checkmark"></span>
-                        </label>
+                      <!-- 16 09 2021 -->
+                      <div class="col-span-6">
+                        <label for="street_address" class="block text-sm font-medium text-gray-700">Produktreiter</label>
+                        <!--COLORBUTTONS START-->
+                        <div class="pt-3">
+                          <label class="container">Lebensmittel
+                            <input type="checkbox" name="checkbox" />
+                            <span @click="assignToLebensmittel" class="checkmark"></span>
+                          </label>
+                          <label class="container">Gastronomie
+                            <input type="checkbox" name="checkbox" />
+                            <span @click="assignToGastronomie" class="checkmark"></span>
+                          </label>
+                          <label class="container" @click="assignToHandwerk">Handwerk
+                            <input @click="assignToHandwerk" type="checkbox" name="checkbox" />
+                            <span @click="assignToHandwerk" class="checkmark"></span>
+                          </label>
+                          <label class="container" @click="assignToTextil">Textil
+                            <input @click="assignToTextil" type="checkbox" name="checkbox" />
+                            <span @click="assignToTextil" class="checkmark"></span>
+                          </label>
+                          <label class="container" @click="assignToAllerlei">Allerlei
+                            <input @click="assignToAllerlei" type="checkbox" name="checkbox" />
+                            <span @click="assignToAllerlei" class="checkmark"></span>
+                          </label>
+                        </div>
+                        <!--COLORBUTTONS END-->
                       </div>
-                      <!--COLORBUTTONS END-->
-                    </div>
-                  </section>
+                    </section>
                     <!-- 16 09 2021 END -->
 
                     <!--IMAGE FILE UPLOAD START-->
@@ -457,7 +460,7 @@ export default {
       const formData = new FormData();
       formData.set("image", this.image);
       axios
-        .post("http:/.haiminger-markttage/api/imageupload", formData)
+        .post("/api/imageupload", formData)
         .then((response) => {
           //Server-Response-URL des Images zur aussteller_bildurl innerhalb der formdata adden
           this.formdata.aussteller_bildurl = response.data.filepath;

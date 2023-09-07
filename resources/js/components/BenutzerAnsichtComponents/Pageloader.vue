@@ -1,9 +1,9 @@
 <template>
   <div class="page-loader" v-if="!domContentLoaded">
-    <div class="apple"><img src="images/loaderapple.svg" alt="apple-svg"></div>
-    <div class="apple"><img src="images/loaderapple.svg" alt="apple-svg"></div>
-    <div class="apple"><img src="images/loaderapple.svg" alt="apple-svg"></div>
-    <div class="apple"><img src="images/loaderapple.svg" alt="apple-svg"></div>
+    <div class="apple"><img src="https://app.haiminger-markttage.at/images/loaderapple.svg" alt="apple-svg"></div>
+    <div class="apple"><img src="https://app.haiminger-markttage.at/images/loaderapple.svg" alt="apple-svg"></div>
+    <div class="apple"><img src="https://app.haiminger-markttage.at/images/loaderapple.svg" alt="apple-svg"></div>
+    <div class="apple"><img src="https://app.haiminger-markttage.at/images/loaderapple.svg" alt="apple-svg"></div>
   </div>
 </template>
 

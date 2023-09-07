@@ -1,9 +1,8 @@
-const version = 11;
+const version = 14;
 const cacheName = `haimingermarkttagecache${version}`;
 
 const cacheList = [
   './',
-  './images/loaderapple.svg',
   './images/background/applebg.jpg',
   './images/icons/icon-144x144.png',
   './images/icons/pngs/7272transparent.png',

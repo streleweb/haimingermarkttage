@@ -115,7 +115,7 @@
                         font-medium
                       ">
                 <span class="text-white cursor-pointer" @click="handleLogout()">Logout
-                  <img src="/public/images/icons/svgs/ausloggen.svg" class="filter-white" alt="" /></span>
+                </span>
               </div>
             </div>
           </div>
@@ -642,7 +642,9 @@ export default {
         //console.error(error.response.data);
       }
       finally {
-        location.reload();
+        setTimeout(function () {
+          location.reload();
+        }, 3000);
       }
     },
   },

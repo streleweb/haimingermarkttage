@@ -59,16 +59,19 @@
                     <router-link to="/admin/dashboard/news">News</router-link>
                   </div>
 
-                  <a href="#" class="
-                              text-gray-300
-                              hover:bg-gray-700
-                              hover:text-white
-                              px-3
-                              py-2
-                              rounded-md
-                              text-sm
-                              font-medium
-                            ">Programm</a>
+                  <div class="
+                            text-gray-300
+                            hover:bg-gray-700
+                            hover:text-white
+                            px-3
+                            py-2
+                            rounded-md
+                            text-sm
+                            font-medium
+                                  ">
+                    <router-link to="/admin/dashboard/programmanlegen">
+                      Programm</router-link>
+                  </div>
 
                   <div class="
                               text-gray-300
@@ -119,8 +122,7 @@
                           text-sm
                           font-medium
                         ">
-                <span class="text-white cursor-pointer" @click="handleLogout()">Logout
-                  <img src="/public/images/icons/svgs/ausloggen.svg" class="filter-white" alt="" /></span>
+                <span class="text-white cursor-pointer" @click="handleLogout()">Logout</span>
               </div>
             </div>
           </div>
@@ -163,7 +165,7 @@
                     class="bg-gray-400 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded">
                     edit
                   </button>
-                  <button key:index @click="deleteProgramm(index)"
+                  <button key:index @click="deleteAussteller(index)"
                     class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                     delete
                   </button>
@@ -483,6 +485,26 @@ export default {
     // this.aussteller_produktreiter();
   },
   methods: {
+    deleteAussteller(index) {
+      axios
+        .delete("/api/aussteller/" + this.aussteller[index].id)
+        .then((response) => {
+          //console.log(response);
+          //laravel response zu component object hinzufügen zur späteren Ausgabe
+          this.laravelResponseData = response.data;
+          Swal.fire({
+            title: response.data,
+            heightAuto: false,
+            text: "Seite wird in 3 sekunden neu geladen...",
+            confirmButtonText: "ok",
+            confirmButtonColor: "#3cb371",
+          });
+          //Nach 3 Sekunden Page refresh
+          setTimeout(() => {
+            location.reload();
+          }, 3000);
+        });
+    },
     async toggleEditPopup(index) {
       const ausstellerId = this.aussteller[index].id;
 

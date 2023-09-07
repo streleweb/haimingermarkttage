@@ -72,17 +72,19 @@
                     <router-link to="/admin/dashboard/news">News</router-link>
                   </div>
 
-                  <a href="#" class="
-                                text-gray-300
-                                hover:bg-gray-700
-                                hover:text-white
-                                px-3
-                                py-2
-                                rounded-md
-                                text-sm
-                                font-medium
-                              "><router-link to="/admin/dashboard/programmanlegen">
-                      Programm</router-link></a>
+                  <div class="
+                            text-gray-300
+                            hover:bg-gray-700
+                            hover:text-white
+                            px-3
+                            py-2
+                            rounded-md
+                            text-sm
+                            font-medium
+                                  ">
+                    <router-link to="/admin/dashboard/programmanlegen">
+                      Programm</router-link>
+                  </div>
 
                   <div class="
                                 text-gray-300
@@ -134,7 +136,7 @@
                             font-medium
                           ">
                 <span @click="handleLogout()" class="text-white cursor-pointer">Logout
-                  <img src="/public/images/icons/svgs/ausloggen.svg" class="filter-white" alt="" /></span>
+                </span>
               </div>
             </div>
           </div>
@@ -182,48 +184,56 @@
             <p v-if="error" style="...">{{ error }}</p>
             <article v-for="(jeweiligerAussteller, index) in aussteller" :key="index"
               class="articlestyling mx-auto overflow-hidden w-full">
-              <img v-if="imageUrlNotEmpty(index)" :src="imgUrl(index)" alt="" class="border-b-2 border-yellow-50" />
+              <img v-if="imageUrlNotEmpty(index)" :src="imgUrl(index)" alt="" class="border-b-2 mb-2 border-yellow-50" />
               <img v-else src="/images/icons/svgs/aussteller.svg" alt="Ausstellerfoto" class="
-                            filter-white
-                            bg-gray-50 bg-opacity-20 p-8
-                            border-b-2 border-black
-                          " />
+                      filter-white
+                      bg-gray-50 bg-opacity-20 p-8
+                      border-b-2 border-black mb-2
+                    " />
               <div class="text text-center lg:text-lg">
-                <h3 class="font-bold text-gray-800 mb-2">
-                  {{ jeweiligerAussteller.aussteller_fullname }}
-                </h3>
-                <h2 v-if="ausstellerBrandingNameNotEmpty(index)" class="font-semibold text-gray-700 mb-2">
+                <h3 v-if="ausstellerBrandingNameNotEmpty(index)"
+                  class="font-bold font-willkommen leading-5 text-gray-800 mb-2">
                   {{ jeweiligerAussteller.aussteller_brandingname }}
+                </h3>
+                <h2 class="font-semibold text-sm text-gray-700 mb-1">
+                  {{ jeweiligerAussteller.aussteller_fullname }}
                 </h2>
-                <p class="text-sm lg:text-base mb-2">
+                <p class="text-sm font-willkommen lg:text-base mb-2">
                   {{ jeweiligerAussteller.aussteller_beschreibung }}
                 </p>
-                <div class="
-                              bg-gray-800
-                              relative
-                              bottom-0
-                              left-0
-                              right-0
-                              h-10
-                              flex
-                              justify-center
-                              items-center
-                              rounded-lg
-                            ">
+                <div v-if="webUrlNotEmpty(index) ||
+                  ausstellerEmailNotEmpty(index) ||
+                  zonenFarbeNotEmpty(index)
+                  " class="
+                        bg-gray-800
+                        relative
+                        bottom-0
+                        left-0
+                        right-0
+                        h-10
+                        flex
+                        justify-center
+                        items-center
+                        rounded-lg
+                      ">
                   <ul class="inline-flex gap-2 justify-center items-center">
                     <li v-if="webUrlNotEmpty(index)">
-                      <a :href="webUrl(index)" target="_blank"><img src="/images/icons/svgs/www.svg"
+                      <a :href="webUrl(index)"><img src="/images/icons/svgs/www.svg"
                           class="resize-icon filter-white-icons" alt="website" /></a>
                     </li>
-
                     <li v-if="ausstellerEmailNotEmpty(index)">
                       <a :href="ausstellerEmail(index)" target="_newtab"><img src="/images/icons/svgs/email.png"
                           class="h-4 filter-white-icons" alt="website" /></a>
                     </li>
-
-                    <li v-if="zonenFarbeNotEmpty(index)" class="h-5 w-32">
-                      <Farbzone :zonen-farbe="zonenFarbe(index)"></Farbzone>
-                    </li>
+                    <!-- <a
+                  href="https://www.google.com/maps/d/embed?mid=1Kxrd75PaiWPf5CIYb3pSrpFRScbUORwo"
+                > -->
+                    <router-link to="/karte">
+                      <li v-if="zonenFarbeNotEmpty(index)" class="h-5 w-32">
+                        <Farbzone :zonen-farbe="zonenFarbe(index)"></Farbzone>
+                      </li>
+                    </router-link>
+                    <!-- </a> -->
                   </ul>
                 </div>
                 <div class="gap-2 justify-start items-center mt-3">
@@ -274,7 +284,7 @@ export default {
   methods: {
     deleteAussteller(index) {
       axios
-        .delete("/api/aussteller/" + this.aussteller[index].aussteller_fullname)
+        .delete("/api/aussteller/" + this.aussteller[index].id)
         .then((response) => {
           //console.log(response);
           //laravel response zu component object hinzufügen zur späteren Ausgabe

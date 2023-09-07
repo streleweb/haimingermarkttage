@@ -115,7 +115,7 @@
                                                               font-medium
                                                             ">
                 <span class="text-white cursor-pointer" @click="handleLogout()">Logout
-                  <img src="/public/images/icons/svgs/ausloggen.svg" class="filter-white" alt="" /></span>
+                </span>
               </div>
             </div>
           </div>
@@ -151,9 +151,9 @@
                 homecontent.title
               }}</span>
               <span>{{ homecontent.description }}</span>
-              <button @click="deleteHomecontent(index)" class="btn btn-red">
+              <!-- <button @click="deleteHomecontent(index)" class="btn btn-red">
                 delete
-              </button>
+              </button> -->
             </div>
 
             <div class="mt-5 md:mt-0 md:col-span-2">
@@ -219,7 +219,7 @@
                                                                     focus:ring-offset-2
                                                                     focus:ring-green-500
                                                                   ">
-                      In DB Speichern
+                      Update
                     </button>
                   </div>
                 </div>
@@ -323,7 +323,7 @@ export default {
             //console.log(response);
             //alert(response.data);
             Swal.fire({
-              title: response.data,
+              title: "Text erfolgreich überschrieben!",
               heightAuto: false,
               confirmButtonText: "ok",
               confirmButtonColor: "#3cb371",
