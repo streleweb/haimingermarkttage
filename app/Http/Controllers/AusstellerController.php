@@ -100,17 +100,6 @@ class AusstellerController extends Controller
                         $aussteller->produktreiters()->sync($aussteller_produktreiter_array);
                     }
 
-                    // $ausstellerrr = Aussteller::first();
-                    // $ausstellerrr->produktreiter()->attach([2,3,4]);
-
-                    // foreach ($aussteller_produktreiter_array as $pr) {
-                    //     $produktreiterr = Produktreiter::find($pr);
-                    //     $produktreiterr->aussteller()->([1]);
-                    // }
-
-                    // //jeweilige ID durch Pivot-Table zuordnen
-                    //  $savedAussteller->produktreiter()->attach($aussteller_produktreiter_array);
-
                     return \response('Aussteller erfolgreich gespeichert!', 200)
                     ->header('Content-Type', 'text/plain');
 
@@ -184,18 +173,6 @@ class AusstellerController extends Controller
 
     }
 
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Aussteller  $aussteller
-     * @return \Illuminate\Http\Response
-     */
-    /*
-    public function edit(Aussteller $aussteller)
-    {
-        return view('aussteller.edit')->with('aussteller',$aussteller);
-    }*/
 
     /**
      * Update the specified resource in storage.

@@ -17,7 +17,6 @@ class FotogalerieController extends Controller
      */
     public function index()
     {
-
         //$fotogalerieliste = Fotogalerie::paginate(4); // für 4 Fotogalerien pro Seite unter /app/fotogalerie im Frontend
         //return FotogalerieResource::collection($fotogalerieliste);
         return FotogalerieResource::collection(Fotogalerie::all());
@@ -51,7 +50,7 @@ class FotogalerieController extends Controller
         if ($validator->fails()) {
             return \response('Validation-Error: Achten Sie auf die Zeichenlängen! ', 200)
             ->header('Content-Type', 'text/plain');
-            
+
         }else {
             $fotogalerie = new Fotogalerie();
             $fotogalerie->fotogalerie_fotoname = $request->fotogalerie_fotoname;
@@ -59,7 +58,7 @@ class FotogalerieController extends Controller
             $fotogalerie->fotogalerie_fotourl = $request->fotogalerie_fotourl;
             $date = Carbon::now();
             $fotogalerie->created_at=$date->toDateTimeString();
-           
+
             if($fotogalerie->save()){
                 //return new FotogalerieResource($fotogalerie);
                 return \response('Fotoinfos gespeichert! ', 200)

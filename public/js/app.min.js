@@ -4423,7 +4423,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _MobileMenu_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MobileMenu.vue */ "./resources/js/components/VorstandAdminComponents/MobileMenu.vue");
+/* harmony import */ var _ReusableComponents_MobileMenu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ReusableComponents/MobileMenu */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -5158,7 +5158,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   components: {
-    MobileMenu: _MobileMenu_vue__WEBPACK_IMPORTED_MODULE_4__.default
+    MobileMenu: _ReusableComponents_MobileMenu__WEBPACK_IMPORTED_MODULE_4__.default
   }
 });
 
@@ -5179,10 +5179,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _ReusableComponents_Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ReusableComponents/Button */ "./resources/js/components/ReusableComponents/Button.vue");
 /* harmony import */ var _ReusableComponents_Farbzone__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ReusableComponents/Farbzone */ "./resources/js/components/ReusableComponents/Farbzone.vue");
-/* harmony import */ var _MobileMenu_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MobileMenu.vue */ "./resources/js/components/VorstandAdminComponents/MobileMenu.vue");
-/* harmony import */ var _repository_repository__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./repository/repository */ "./resources/js/components/VorstandAdminComponents/repository/repository.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _ReusableComponents_MobileMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ReusableComponents/MobileMenu */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue");
+/* harmony import */ var _ReusableComponents_DashboardLayout_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ReusableComponents/DashboardLayout.vue */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue");
+/* harmony import */ var _repository_repository__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./repository/repository */ "./resources/js/components/VorstandAdminComponents/repository/repository.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_6__);
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -5293,143 +5294,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 
 
 
@@ -5445,14 +5310,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     };
   },
   created: function created() {
-    //console.log(localStorage.getItem("isLoggedIn"));
-    //Wenn Admin nicht eingeloggt ist, redirect auf LoginPage
-    if (localStorage.getItem("isLoggedIn") != "true") {
-      this.$router.push({
-        name: "adminLogin"
-      });
-    }
-
     this.loadAussteller();
     window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
     window.axios.defaults.headers.common = {
@@ -5467,7 +5324,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         //console.log(response);
         //laravel response zu component object hinzufügen zur späteren Ausgabe
         _this.laravelResponseData = response.data;
-        sweetalert2__WEBPACK_IMPORTED_MODULE_5___default().fire({
+        sweetalert2__WEBPACK_IMPORTED_MODULE_6___default().fire({
           title: response.data,
           heightAuto: false,
           text: "Seite wird in 3 sekunden neu geladen...",
@@ -5479,13 +5336,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, 3000);
       });
     },
-    loggedIn: function loggedIn() {
-      if (localStorage.getItem("isLoggedIn") == "true") return true;else return false;
-    },
-    handleLogout: function handleLogout() {
+    loadAussteller: function loadAussteller() {
       var _this2 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        var _yield$repository$get, data;
+
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -5493,60 +5349,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _this2.loading = true;
                 _context.prev = 1;
                 _context.next = 4;
-                return axios.post("/api/admin/logout");
+                return _repository_repository__WEBPACK_IMPORTED_MODULE_5__.default.getAussteller();
 
               case 4:
-                //LocalStorage LoggedIn-Status löschen
-                localStorage.removeItem("isLoggedIn");
-                localStorage;
-                _this2.loading = false;
-
-                _this2.$router.push({
-                  name: "adminLogin"
-                });
-
-                _context.next = 13;
-                break;
-
-              case 10:
-                _context.prev = 10;
-                _context.t0 = _context["catch"](1);
-                console.log(_context.t0);
-
-              case 13:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, null, [[1, 10]]);
-      }))();
-    },
-    loadAussteller: function loadAussteller() {
-      var _this3 = this;
-
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
-        var _yield$repository$get, data;
-
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                _this3.loading = true;
-                _context2.prev = 1;
-                _context2.next = 4;
-                return _repository_repository__WEBPACK_IMPORTED_MODULE_4__.default.getAussteller();
-
-              case 4:
-                _yield$repository$get = _context2.sent;
+                _yield$repository$get = _context.sent;
                 data = _yield$repository$get.data;
-                _this3.aussteller = data.data;
-                _context2.next = 12;
+                _this2.aussteller = data.data;
+                _context.next = 12;
                 break;
 
               case 9:
-                _context2.prev = 9;
-                _context2.t0 = _context2["catch"](1);
-                sweetalert2__WEBPACK_IMPORTED_MODULE_5___default().fire({
+                _context.prev = 9;
+                _context.t0 = _context["catch"](1);
+                sweetalert2__WEBPACK_IMPORTED_MODULE_6___default().fire({
                   title: "Konnte Aussteller nicht laden.",
                   heightAuto: false,
                   confirmButtonText: "ok",
@@ -5554,16 +5369,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 });
 
               case 12:
-                _context2.prev = 12;
-                _this3.loading = false;
-                return _context2.finish(12);
+                _context.prev = 12;
+                _this2.loading = false;
+                return _context.finish(12);
 
               case 15:
               case "end":
-                return _context2.stop();
+                return _context.stop();
             }
           }
-        }, _callee2, null, [[1, 9, 12, 15]]);
+        }, _callee, null, [[1, 9, 12, 15]]);
       }))();
     },
     imgUrl: function imgUrl(index) {
@@ -5602,7 +5417,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   components: {
     Button: _ReusableComponents_Button__WEBPACK_IMPORTED_MODULE_1__.default,
     Farbzone: _ReusableComponents_Farbzone__WEBPACK_IMPORTED_MODULE_2__.default,
-    MobileMenu: _MobileMenu_vue__WEBPACK_IMPORTED_MODULE_3__.default
+    MobileMenu: _ReusableComponents_MobileMenu__WEBPACK_IMPORTED_MODULE_3__.default,
+    DashboardLayout: _ReusableComponents_DashboardLayout_vue__WEBPACK_IMPORTED_MODULE_4__.default
   }
 });
 
@@ -5623,7 +5439,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _MobileMenu_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MobileMenu.vue */ "./resources/js/components/VorstandAdminComponents/MobileMenu.vue");
+/* harmony import */ var _ReusableComponents_MobileMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ReusableComponents/MobileMenu */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -6222,7 +6038,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   components: {
-    MobileMenu: _MobileMenu_vue__WEBPACK_IMPORTED_MODULE_2__.default
+    MobileMenu: _ReusableComponents_MobileMenu__WEBPACK_IMPORTED_MODULE_2__.default
   }
 });
 
@@ -6239,161 +6055,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _MobileMenu_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MobileMenu.vue */ "./resources/js/components/VorstandAdminComponents/MobileMenu.vue");
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var _VorstandAdminComponents_ReusableComponents_DashboardLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../VorstandAdminComponents/ReusableComponents/DashboardLayout */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue");
 //
 //
 //
@@ -6415,81 +6077,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "Dashboard",
-  data: function data() {
-    return {
-      loading: null
-    };
-  },
-  //wenn Component geladen ist, führe die Methoden zum
-  //Laden der Aussteller und Ausstellerfotos via Axios Request aus
-  created: function created() {
-    //console.log(localStorage.getItem("isLoggedIn"));
-    //Wenn Admin nicht eingeloggt ist, redirect auf LoginPage
-    if (localStorage.getItem("isLoggedIn") != "true") {
-      this.$router.push({
-        name: "adminLogin"
-      });
-    } else {
-      var token = localStorage.getItem("token");
-      window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-      window.axios.defaults.headers.common = {
-        "Authorization": "Bearer ".concat(token)
-      };
-    }
-  },
-  methods: {
-    loggedIn: function loggedIn() {
-      if (localStorage.getItem("isLoggedIn") == "true") {
-        return true;
-      } else return false;
-    },
-    handleLogout: function handleLogout() {
-      var _this = this;
-
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _this.loading = true;
-                _context.prev = 1;
-                _context.next = 4;
-                return axios.post("/api/admin/logout");
-
-              case 4:
-                //LocalStorage LoggedIn-Status löschen
-                localStorage.removeItem("isLoggedIn");
-                localStorage;
-
-                _this.$router.push({
-                  name: "adminLogin"
-                });
-
-                _context.next = 12;
-                break;
-
-              case 9:
-                _context.prev = 9;
-                _context.t0 = _context["catch"](1);
-                console.log(_context.t0);
-
-              case 12:
-                _context.prev = 12;
-                _this.loading = false;
-                return _context.finish(12);
-
-              case 15:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, null, [[1, 9, 12, 15]]);
-      }))();
-    }
-  },
   components: {
-    MobileMenu: _MobileMenu_vue__WEBPACK_IMPORTED_MODULE_1__.default
+    DashboardLayout: _VorstandAdminComponents_ReusableComponents_DashboardLayout__WEBPACK_IMPORTED_MODULE_0__.default
   }
 });
 
@@ -6506,308 +6095,160 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _MobileMenu_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../MobileMenu.vue */ "./resources/js/components/VorstandAdminComponents/MobileMenu.vue");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ReusableComponents_MobileMenu_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ReusableComponents/MobileMenu.vue */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue");
+/* harmony import */ var _ReusableComponents_DashboardLayout_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ReusableComponents/DashboardLayout.vue */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -6834,15 +6275,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   //andernfalls erfolgt ein Redirect zur Login-Page
   created: function created() {
     this.loading = true;
-    this.loadFotos(); //console.log(localStorage.getItem("isLoggedIn"));
-    //Wenn Admin nicht eingeloggt ist, redirect auf LoginPage
-
-    if (localStorage.getItem("isLoggedIn") != "true") {
-      this.$router.push({
-        name: "adminLogin"
-      });
-    }
-
+    this.loadFotos();
     window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
     window.axios.defaults.headers.common = {
       "Authorization": "Bearer ".concat(localStorage.getItem("token"))
@@ -6887,7 +6320,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         //Server-Responseurl des Images zur aussteller_bildurl innerhalb der formdata adden
         _this2.formdata.fotogalerie_fotourl = response.data.filepath; //console.log(response.data);
 
-        sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+        sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
           title: response.data.filename + " wurde erfolgreich gespeichert!",
           heightAuto: false,
           confirmButtonText: "ok",
@@ -6902,7 +6335,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         console.log(response); //laravel response zu component object hinzufügen zur späteren Ausgabe
 
         _this3.laravelResponseData = response.data;
-        sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+        sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
           title: response.data,
           heightAuto: false,
           confirmButtonColor: "#3cb371"
@@ -6925,53 +6358,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         console.log(error);
       }
     },
-    loggedIn: function loggedIn() {
-      if (localStorage.getItem("isLoggedIn") == "true") {
-        return true;
-      } else return false;
-    },
-    handleLogout: function handleLogout() {
-      var _this4 = this;
-
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _context.prev = 0;
-                _context.next = 3;
-                return axios.post("/api/admin/logout");
-
-              case 3:
-                //LocalStorage LoggedIn-Status löschen
-                localStorage.removeItem("isLoggedIn");
-                localStorage;
-
-                _this4.$router.push({
-                  name: "adminLogin"
-                });
-
-                _context.next = 11;
-                break;
-
-              case 8:
-                _context.prev = 8;
-                _context.t0 = _context["catch"](0);
-                console.log(_context.t0);
-
-              case 11:
-                _context.prev = 11;
-                _this4.loading = false;
-                return _context.finish(11);
-
-              case 14:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, null, [[0, 8, 11, 14]]);
-      }))();
-    },
     submitform: function submitform() {
       var formToJson = JSON.stringify(this.formdata);
       console.log(formToJson);
@@ -6981,7 +6367,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         .then(function (response) {
           //console.log(response);
           //alert(response.data);
-          sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+          sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
             title: response.data,
             heightAuto: false,
             confirmButtonText: "ok",
@@ -6990,7 +6376,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         })["catch"](function (error) {
           // Fehlerbehandlung
           //console.log(error);
-          sweetalert2__WEBPACK_IMPORTED_MODULE_1___default().fire({
+          sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
             title: error,
             heightAuto: false,
             confirmButtonText: "ok",
@@ -7007,7 +6393,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   components: {
-    MobileMenu: _MobileMenu_vue__WEBPACK_IMPORTED_MODULE_2__.default
+    MobileMenu: _ReusableComponents_MobileMenu_vue__WEBPACK_IMPORTED_MODULE_1__.default,
+    DashboardLayout: _ReusableComponents_DashboardLayout_vue__WEBPACK_IMPORTED_MODULE_2__.default
   }
 });
 
@@ -7026,10 +6413,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _MobileMenu_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MobileMenu.vue */ "./resources/js/components/VorstandAdminComponents/MobileMenu.vue");
-/* harmony import */ var _repository_repository__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./repository/repository */ "./resources/js/components/VorstandAdminComponents/repository/repository.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _ReusableComponents_MobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ReusableComponents/MobileMenu */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue");
+/* harmony import */ var _ReusableComponents_DashboardLayout_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ReusableComponents/DashboardLayout.vue */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue");
+/* harmony import */ var _repository_repository__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./repository/repository */ "./resources/js/components/VorstandAdminComponents/repository/repository.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_4__);
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -7146,131 +6534,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 
 
 
@@ -7325,7 +6589,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _this.loading = true;
                 _context.next = 3;
-                return _repository_repository__WEBPACK_IMPORTED_MODULE_2__.default.getHomeContent();
+                return _repository_repository__WEBPACK_IMPORTED_MODULE_3__.default.getHomeContent();
 
               case 3:
                 _yield$repository$get = _context.sent;
@@ -7345,7 +6609,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     deleteHomecontent: function deleteHomecontent() {
       axios["delete"]("/api/homecontent").then(function () {
         // console.log(response);
-        sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+        sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
           title: "Erfolgreich gelöscht!",
           heightAuto: false,
           showConfirmButton: false
@@ -7402,7 +6666,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         .then(function (response) {
           //console.log(response);
           //alert(response.data);
-          sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+          sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
             title: "Text erfolgreich überschrieben!",
             heightAuto: false,
             confirmButtonText: "ok",
@@ -7411,7 +6675,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         })["catch"](function (error) {
           // Fehlerbehandlung
           //console.log(error);
-          sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+          sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
             title: error,
             heightAuto: false,
             confirmButtonText: "ok",
@@ -7427,7 +6691,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   components: {
-    MobileMenu: _MobileMenu_vue__WEBPACK_IMPORTED_MODULE_1__.default
+    MobileMenu: _ReusableComponents_MobileMenu__WEBPACK_IMPORTED_MODULE_1__.default,
+    DashboardLayout: _ReusableComponents_DashboardLayout_vue__WEBPACK_IMPORTED_MODULE_2__.default
   }
 });
 
@@ -7696,114 +6961,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/MobileMenu.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/MobileMenu.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "Mobilemenu"
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/NewsAnlegen.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/NewsAnlegen.vue?vue&type=script&lang=js& ***!
@@ -7817,10 +6974,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _MobileMenu_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MobileMenu.vue */ "./resources/js/components/VorstandAdminComponents/MobileMenu.vue");
-/* harmony import */ var _repository_repository__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./repository/repository */ "./resources/js/components/VorstandAdminComponents/repository/repository.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _ReusableComponents_MobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ReusableComponents/MobileMenu */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue");
+/* harmony import */ var _ReusableComponents_DashboardLayout_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ReusableComponents/DashboardLayout.vue */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue");
+/* harmony import */ var _repository_repository__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./repository/repository */ "./resources/js/components/VorstandAdminComponents/repository/repository.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_4__);
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -8116,131 +7274,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 
 
 
@@ -8248,7 +7282,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   data: function data() {
     return {
       name: "NewsAnlegen",
-      loading: null,
       image: "",
       news: [],
       error: null,
@@ -8269,16 +7302,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       formdataEditIndex: null
     };
   },
-  //Noch bevor Component gemounted ist, checke Login-Status
-  //Falls nicht eingeloggt -> Redirect zu Login-Page
   created: function created() {
-    //console.log(localStorage.getItem("isLoggedIn"));
-    if (localStorage.getItem("isLoggedIn") != "true") {
-      this.$router.push({
-        name: "adminLogin"
-      });
-    }
-
     this.loadNews();
     window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
     window.axios.defaults.headers.common = {
@@ -8318,7 +7342,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _this.loading = true;
                 _context.next = 3;
-                return _repository_repository__WEBPACK_IMPORTED_MODULE_2__.default.getNews();
+                return _repository_repository__WEBPACK_IMPORTED_MODULE_3__.default.getNews();
 
               case 3:
                 _yield$repository$get = _context.sent;
@@ -8348,8 +7372,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     //image aus dem inputfield lesen
     handleOnChange: function handleOnChange(e) {
       this.image = e.target.files[0];
-      /*console.log(this.image);
-      console.log(this.image.name);*/
     },
     //image uploaden
     upload: function upload() {
@@ -8362,7 +7384,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       axios.post("/api/imageupload", formData).then(function (response) {
         //Server-Responseurl des Images zur bildurl innerhalb der formdata adden
         _this2.formdata.news_bild_url = response.data.filepath;
-        sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+        sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
           title: "Foto gespeichert!",
           heightAuto: false,
           confirmButtonText: "ok",
@@ -8380,7 +7402,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       axios.post("/api/imageupload", formDataEdit).then(function (response) {
         //Server-Responseurl des Images zur bildurl innerhalb der formdata adden
         _this3.formdataEdit.news_bild_url = response.data.filepath;
-        sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+        sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
           title: "Foto gespeichert!",
           heightAuto: false,
           confirmButtonText: "ok",
@@ -8389,14 +7411,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       });
     },
     update: function update() {
-      //let formToJson = JSON.stringify(this.formdataEdit);
-      //console.log(formToJson);
       try {
         axios.put("/api/news/" + this.formdataEdit.id, this.formdataEdit) //console.log(result.response.data);
         .then(function (response) {
           //console.log(response);
           //alert(response.data);
-          sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+          sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
             title: response.data,
             heightAuto: false,
             confirmButtonText: "ok",
@@ -8405,7 +7425,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         })["catch"](function (error) {
           // Fehlerbehandlung
           console.log(error);
-          sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+          sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
             title: "News Textinhalt minimum 10 Zeichen, Titel min 2 max. 70 Zeichen",
             heightAuto: false,
             confirmButtonText: "ok",
@@ -8426,54 +7446,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         console.log(response); //laravel response zu component object hinzufügen zur späteren Ausgabe
 
         _this4.laravelResponseData = response.data;
-        sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+        sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
           title: "Erfolgreich gelöscht!",
           heightAuto: false,
           showConfirmButton: false
         });
         location.reload();
       });
-    },
-    loggedIn: function loggedIn() {
-      if (localStorage.getItem("isLoggedIn") == "true") {
-        return true;
-      } else return false;
-    },
-    handleLogout: function handleLogout() {
-      var _this5 = this;
-
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                _context2.prev = 0;
-                _context2.next = 3;
-                return axios.post("/api/admin/logout");
-
-              case 3:
-                //LocalStorage LoggedIn-Status löschen
-                localStorage.removeItem("isLoggedIn");
-                localStorage;
-
-                _this5.$router.push({
-                  name: "adminLogin"
-                });
-
-                _context2.next = 10;
-                break;
-
-              case 8:
-                _context2.prev = 8;
-                _context2.t0 = _context2["catch"](0);
-
-              case 10:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2, null, [[0, 8]]);
-      }))();
     },
     submitform: function submitform() {
       var formToJson = JSON.stringify(this.formdata); //console.log(formToJson);
@@ -8483,7 +7462,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         .then(function (response) {
           //console.log(response);
           //alert(response.data);
-          sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+          sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
             title: response.data,
             heightAuto: false,
             confirmButtonText: "ok",
@@ -8492,7 +7471,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         })["catch"](function (error) {
           // Fehlerbehandlung
           console.log(error);
-          sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+          sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
             title: "News Textinhalt minimum 10 Zeichen, Titel min 2 max. 70 Zeichen",
             heightAuto: false,
             confirmButtonText: "ok",
@@ -8508,7 +7487,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   components: {
-    MobileMenu: _MobileMenu_vue__WEBPACK_IMPORTED_MODULE_1__.default
+    MobileMenu: _ReusableComponents_MobileMenu__WEBPACK_IMPORTED_MODULE_1__.default,
+    DashboardLayout: _ReusableComponents_DashboardLayout_vue__WEBPACK_IMPORTED_MODULE_2__.default
   }
 });
 
@@ -8527,11 +7507,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _MobileMenu_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MobileMenu.vue */ "./resources/js/components/VorstandAdminComponents/MobileMenu.vue");
+/* harmony import */ var _ReusableComponents_MobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ReusableComponents/MobileMenu */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue");
 /* harmony import */ var _repository_repository__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./repository/repository */ "./resources/js/components/VorstandAdminComponents/repository/repository.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _utilityfunctions_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utilityfunctions/utils */ "./resources/js/utilityfunctions/utils.js");
+/* harmony import */ var _ReusableComponents_DashboardLayout_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ReusableComponents/DashboardLayout.vue */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -8831,131 +7812,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 
 
 
@@ -8964,7 +7821,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   data: function data() {
     return {
       name: "ProgrammAnlegen",
-      loading: null,
       image: "",
       programmArray: [],
       error: null,
@@ -8985,16 +7841,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       formdataEditIndex: null
     };
   },
-  //Noch bevor Component gemounted ist, checke Login-Status
-  //Falls nicht eingeloggt -> Redirect zu Login-Page
   created: function created() {
-    //console.log(localStorage.getItem("isLoggedIn"));
-    if (localStorage.getItem("isLoggedIn") != "true") {
-      this.$router.push({
-        name: "adminLogin"
-      });
-    }
-
     this.loadProgramm();
     window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
     window.axios.defaults.headers.common = {
@@ -9104,8 +7951,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       });
     },
     update: function update() {
-      //let formToJson = JSON.stringify(this.formdataEdit);
-      //console.log(formToJson);
       try {
         axios.put("/api/programm/" + this.formdataEdit.id, this.formdataEdit) //console.log(result.response.data);
         .then(function (response) {
@@ -9149,47 +7994,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         location.reload();
       });
     },
-    loggedIn: function loggedIn() {
-      if (localStorage.getItem("isLoggedIn") == "true") {
-        return true;
-      } else return false;
-    },
-    handleLogout: function handleLogout() {
-      var _this5 = this;
-
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                _context2.prev = 0;
-                _context2.next = 3;
-                return axios.post("/api/admin/logout");
-
-              case 3:
-                //LocalStorage LoggedIn-Status löschen
-                localStorage.removeItem("isLoggedIn");
-                localStorage;
-
-                _this5.$router.push({
-                  name: "adminLogin"
-                });
-
-                _context2.next = 10;
-                break;
-
-              case 8:
-                _context2.prev = 8;
-                _context2.t0 = _context2["catch"](0);
-
-              case 10:
-              case "end":
-                return _context2.stop();
-            }
-          }
-        }, _callee2, null, [[0, 8]]);
-      }))();
-    },
     submitform: function submitform() {
       var formToJson = JSON.stringify(this.formdata); //console.log(formToJson);
 
@@ -9223,7 +8027,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   components: {
-    MobileMenu: _MobileMenu_vue__WEBPACK_IMPORTED_MODULE_1__.default
+    MobileMenu: _ReusableComponents_MobileMenu__WEBPACK_IMPORTED_MODULE_1__.default,
+    DashboardLayout: _ReusableComponents_DashboardLayout_vue__WEBPACK_IMPORTED_MODULE_5__.default
   }
 });
 
@@ -9583,6 +8388,369 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }))();
     }
   }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _MobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MobileMenu */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "DashboardLayout",
+  props: {
+    path: String
+  },
+  data: function data() {
+    return {
+      loading: null
+    };
+  },
+  //wenn Component geladen ist, führe die Methoden zum
+  //Laden der Aussteller und Ausstellerfotos via Axios Request aus
+  created: function created() {
+    //console.log(localStorage.getItem("isLoggedIn"));
+    //Wenn Admin nicht eingeloggt ist, redirect auf LoginPage
+    if (localStorage.getItem("isLoggedIn") != "true") {
+      this.$router.push({
+        name: "adminLogin"
+      });
+    } else {
+      var token = localStorage.getItem("token");
+      window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+      window.axios.defaults.headers.common = {
+        "Authorization": "Bearer ".concat(token)
+      };
+    }
+  },
+  computed: {},
+  methods: {
+    ariaCurrent: function ariaCurrent(page) {
+      return this.path === page ? 'page' : null;
+    },
+    loggedIn: function loggedIn() {
+      if (localStorage.getItem("isLoggedIn") == "true") {
+        return true;
+      } else return false;
+    },
+    handleLogout: function handleLogout() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _this.loading = true;
+                _context.prev = 1;
+                _context.next = 4;
+                return axios.post("/api/admin/logout");
+
+              case 4:
+                //LocalStorage LoggedIn-Status löschen
+                localStorage.removeItem("isLoggedIn");
+                localStorage;
+
+                _this.$router.push({
+                  name: "adminLogin"
+                });
+
+                _context.next = 12;
+                break;
+
+              case 9:
+                _context.prev = 9;
+                _context.t0 = _context["catch"](1);
+                console.log(_context.t0);
+
+              case 12:
+                _context.prev = 12;
+                _this.loading = false;
+                return _context.finish(12);
+
+              case 15:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[1, 9, 12, 15]]);
+      }))();
+    }
+  },
+  components: {
+    MobileMenu: _MobileMenu__WEBPACK_IMPORTED_MODULE_1__.default
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "Mobilemenu"
 });
 
 /***/ }),
@@ -11245,30 +10413,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, "/* Farbzonenbuttons */\n.container {\n
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Dashboard.vue?vue&type=style&index=0&lang=css&":
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Dashboard.vue?vue&type=style&index=0&lang=css& ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".dashboardbackground {\n  --tw-bg-opacity: 1;\n  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));\n  background: linear-gradient(rgb(1, 15, 0, 0.99), rgba(0, 0, 0, 0.97)),\n    url(\"/images/icons/svgs/wheels.png\");\n}\n", ""]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=style&index=0&lang=css&":
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=style&index=0&lang=css& ***!
@@ -11359,6 +10503,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "/* Farbzonenbuttons */\n.container {\n  display: block;\n  position: relative;\n  padding-left: 2rem;\n  margin-bottom: 0.8rem;\n  cursor: pointer;\n  font-size: 0.9rem;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n/* Hide the browser's default radio button */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n}\n\n/* Create a custom radio button */\n.checkmark {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 25px;\n  width: 25px;\n  background-color: #eee;\n  border-radius: 50%;\n}\n\n/* On mouse-over, add a grey background color */\n.container:hover input~.checkmark {\n  background-color: #ccc;\n}\n\n/* When the radio button is checked, add a blue background */\n.container input:checked~.checkmark {\n  background-color: #2196f3;\n}\n\n/* Create the indicator (the dot/circle - hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the indicator (dot/circle) when checked */\n.container input:checked~.checkmark:after {\n  display: block;\n}\n\n/* Style the indicator (dot/circle) */\n.container .checkmark:after {\n  top: 9px;\n  left: 9px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background: white;\n}\n.alert {\n  padding: 20px;\n  background-color: #f44336;\n  color: white;\n}\n.closebtn {\n  margin-left: 15px;\n  color: white;\n  font-weight: bold;\n  float: right;\n  font-size: 22px;\n  line-height: 20px;\n  cursor: pointer;\n  transition: 0.3s;\n}\n.closebtn:hover {\n  color: black;\n}\n\n/* POPUP OVERLAY */\n\n/* Styles for the overlay */\n.popup-overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n  /* Dark background overlay */\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  z-index: 1000;\n  /* Ensure the overlay is above other content */\n}\n\n/* Styles for the popup */\n.popup {\n  background-color: #D1D5DB;\n  padding: 20px;\n  border-radius: 8px;\n  width: 90%;\n  max-width: 100%;\n  position: relative;\n}\n.close-btn {\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  font-size: 20px;\n  cursor: pointer;\n  background: none;\n  border: none;\n  padding: 0;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=style&index=0&lang=css&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=style&index=0&lang=css& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".dashboardbackground {\n  --tw-bg-opacity: 1;\n  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));\n  background: linear-gradient(rgb(1, 15, 0, 0.99), rgba(0, 0, 0, 0.97)),\n    url(\"/images/icons/svgs/wheels.png\");\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -30500,36 +29668,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Dashboard.vue?vue&type=style&index=0&lang=css&":
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Dashboard.vue?vue&type=style&index=0&lang=css& ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Dashboard.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Dashboard.vue?vue&type=style&index=0&lang=css&");
-
-            
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
-
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
-
-/***/ }),
-
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=style&index=0&lang=css&":
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=style&index=0&lang=css& ***!
@@ -30647,6 +29785,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ProgrammAnlegen_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=style&index=0&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=style&index=0&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_DashboardLayout_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DashboardLayout.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=style&index=0&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_DashboardLayout_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_DashboardLayout_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
 
@@ -35409,17 +34577,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Dashboard_vue_vue_type_template_id_79dd259c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Dashboard.vue?vue&type=template&id=79dd259c& */ "./resources/js/components/VorstandAdminComponents/Dashboard.vue?vue&type=template&id=79dd259c&");
 /* harmony import */ var _Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Dashboard.vue?vue&type=script&lang=js& */ "./resources/js/components/VorstandAdminComponents/Dashboard.vue?vue&type=script&lang=js&");
-/* harmony import */ var _Dashboard_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Dashboard.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/VorstandAdminComponents/Dashboard.vue?vue&type=style&index=0&lang=css&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
-;
 
 
 /* normalize component */
-
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
   _Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
   _Dashboard_vue_vue_type_template_id_79dd259c___WEBPACK_IMPORTED_MODULE_0__.render,
   _Dashboard_vue_vue_type_template_id_79dd259c___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
@@ -35558,45 +34724,6 @@ component.options.__file = "resources/js/components/VorstandAdminComponents/Logi
 
 /***/ }),
 
-/***/ "./resources/js/components/VorstandAdminComponents/MobileMenu.vue":
-/*!************************************************************************!*\
-  !*** ./resources/js/components/VorstandAdminComponents/MobileMenu.vue ***!
-  \************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _MobileMenu_vue_vue_type_template_id_96258c1a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MobileMenu.vue?vue&type=template&id=96258c1a&scoped=true& */ "./resources/js/components/VorstandAdminComponents/MobileMenu.vue?vue&type=template&id=96258c1a&scoped=true&");
-/* harmony import */ var _MobileMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MobileMenu.vue?vue&type=script&lang=js& */ "./resources/js/components/VorstandAdminComponents/MobileMenu.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
-  _MobileMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _MobileMenu_vue_vue_type_template_id_96258c1a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _MobileMenu_vue_vue_type_template_id_96258c1a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  "96258c1a",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/VorstandAdminComponents/MobileMenu.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
 /***/ "./resources/js/components/VorstandAdminComponents/NewsAnlegen.vue":
 /*!*************************************************************************!*\
   !*** ./resources/js/components/VorstandAdminComponents/NewsAnlegen.vue ***!
@@ -35714,6 +34841,86 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/components/VorstandAdminComponents/Register.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue ***!
+  \************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _DashboardLayout_vue_vue_type_template_id_19c4be62___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DashboardLayout.vue?vue&type=template&id=19c4be62& */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=template&id=19c4be62&");
+/* harmony import */ var _DashboardLayout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DashboardLayout.vue?vue&type=script&lang=js& */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=script&lang=js&");
+/* harmony import */ var _DashboardLayout_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DashboardLayout.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
+  _DashboardLayout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _DashboardLayout_vue_vue_type_template_id_19c4be62___WEBPACK_IMPORTED_MODULE_0__.render,
+  _DashboardLayout_vue_vue_type_template_id_19c4be62___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue ***!
+  \*******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _MobileMenu_vue_vue_type_template_id_4f305066_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MobileMenu.vue?vue&type=template&id=4f305066&scoped=true& */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue?vue&type=template&id=4f305066&scoped=true&");
+/* harmony import */ var _MobileMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MobileMenu.vue?vue&type=script&lang=js& */ "./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _MobileMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _MobileMenu_vue_vue_type_template_id_4f305066_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _MobileMenu_vue_vue_type_template_id_4f305066_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "4f305066",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -36376,22 +35583,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/VorstandAdminComponents/MobileMenu.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************!*\
-  !*** ./resources/js/components/VorstandAdminComponents/MobileMenu.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./MobileMenu.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/MobileMenu.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
-
-/***/ }),
-
 /***/ "./resources/js/components/VorstandAdminComponents/NewsAnlegen.vue?vue&type=script&lang=js&":
 /*!**************************************************************************************************!*\
   !*** ./resources/js/components/VorstandAdminComponents/NewsAnlegen.vue?vue&type=script&lang=js& ***!
@@ -36437,6 +35628,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Register.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Register.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DashboardLayout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DashboardLayout.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DashboardLayout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./MobileMenu.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileMenu_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
@@ -36771,19 +35994,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/VorstandAdminComponents/Dashboard.vue?vue&type=style&index=0&lang=css&":
-/*!********************************************************************************************************!*\
-  !*** ./resources/js/components/VorstandAdminComponents/Dashboard.vue?vue&type=style&index=0&lang=css& ***!
-  \********************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Dashboard_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Dashboard.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Dashboard.vue?vue&type=style&index=0&lang=css&");
-
-
-/***/ }),
-
 /***/ "./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=style&index=0&lang=css&":
 /*!******************************************************************************************************************************!*\
   !*** ./resources/js/components/VorstandAdminComponents/FotogalerieComponents/AddPhotos.vue?vue&type=style&index=0&lang=css& ***!
@@ -36832,6 +36042,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ProgrammAnlegen_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ProgrammAnlegen.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ProgrammAnlegen.vue?vue&type=style&index=0&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=style&index=0&lang=css&":
+/*!*********************************************************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=style&index=0&lang=css& ***!
+  \*********************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_DashboardLayout_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DashboardLayout.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=style&index=0&lang=css&");
 
 
 /***/ }),
@@ -37474,23 +36697,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/VorstandAdminComponents/MobileMenu.vue?vue&type=template&id=96258c1a&scoped=true&":
-/*!*******************************************************************************************************************!*\
-  !*** ./resources/js/components/VorstandAdminComponents/MobileMenu.vue?vue&type=template&id=96258c1a&scoped=true& ***!
-  \*******************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileMenu_vue_vue_type_template_id_96258c1a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileMenu_vue_vue_type_template_id_96258c1a_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileMenu_vue_vue_type_template_id_96258c1a_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./MobileMenu.vue?vue&type=template&id=96258c1a&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/MobileMenu.vue?vue&type=template&id=96258c1a&scoped=true&");
-
-
-/***/ }),
-
 /***/ "./resources/js/components/VorstandAdminComponents/NewsAnlegen.vue?vue&type=template&id=4bdbf475&":
 /*!********************************************************************************************************!*\
   !*** ./resources/js/components/VorstandAdminComponents/NewsAnlegen.vue?vue&type=template&id=4bdbf475& ***!
@@ -37538,6 +36744,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_template_id_0d2344f5___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_template_id_0d2344f5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Register.vue?vue&type=template&id=0d2344f5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/Register.vue?vue&type=template&id=0d2344f5&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=template&id=19c4be62&":
+/*!*******************************************************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=template&id=19c4be62& ***!
+  \*******************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DashboardLayout_vue_vue_type_template_id_19c4be62___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DashboardLayout_vue_vue_type_template_id_19c4be62___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DashboardLayout_vue_vue_type_template_id_19c4be62___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DashboardLayout.vue?vue&type=template&id=19c4be62& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=template&id=19c4be62&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue?vue&type=template&id=4f305066&scoped=true&":
+/*!**************************************************************************************************************************************!*\
+  !*** ./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue?vue&type=template&id=4f305066&scoped=true& ***!
+  \**************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileMenu_vue_vue_type_template_id_4f305066_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileMenu_vue_vue_type_template_id_4f305066_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MobileMenu_vue_vue_type_template_id_4f305066_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./MobileMenu.vue?vue&type=template&id=4f305066&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue?vue&type=template&id=4f305066&scoped=true&");
 
 
 /***/ }),
@@ -41980,541 +41220,268 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "w-full h-full bg-gray-700" }, [
-    _vm.loggedIn() == false
-      ? _c(
-          "div",
-          {
-            staticClass:
-              "\n                flex\n                w-full\n                h-full\n                items-center\n                justify-center\n                text-red-900\n                bg-gray-900\n              "
-          },
-          [
-            _vm._v(
-              "\n    Nicht eingeloggt! Bitte loggen Sie sich ein, um auf diese Seite zugreifen\n    zu können...\n  "
-            )
-          ]
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.loggedIn()
-      ? _c("div", { staticClass: "h-full w-full" }, [
+  return _c("DashboardLayout", { attrs: { path: "ausstelleruebersicht" } }, [
+    _c("div", { staticClass: "w-full h-full bg-gray-700" }, [
+      _vm.loading
+        ? _c("p", [
+            _c("img", {
+              staticClass:
+                "resize-loadinggif fixed top-1/2 left-1/2 z-5000 bg-gray-900",
+              attrs: {
+                src: "/images/icons/gifs/loadingtransparent.gif",
+                alt: "loading..."
+              }
+            })
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _c("div", { staticClass: "ausstellergradient" }, [
+        _c("div", { staticClass: "ausstellercontainer" }, [
           _c(
-            "nav",
-            { staticClass: "bg-gray-800 border-b border-gray-300" },
+            "div",
+            {
+              staticClass:
+                "\n                      inline-flex\n                      justify-start\n                      gap-3\n                      pt-5\n                      px-4\n                      items-center\n                      w-full\n                    "
+            },
             [
               _c(
-                "div",
-                { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" },
+                "router-link",
+                { attrs: { to: "/admin/dashboard/ausstelleraendern" } },
                 [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "relative flex items-center justify-between h-16"
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
+                  _c("button", { staticClass: "btn btn-blue" }, [
+                    _vm._v("\n              Aussteller ändern\n            ")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "router-link",
+                { attrs: { to: "/admin/dashboard/ausstelleranlegen" } },
+                [
+                  _c("button", { staticClass: "btn btn-green" }, [
+                    _vm._v(
+                      "\n              Neuen Aussteller hinzufügen\n            "
+                    )
+                  ])
+                ]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "\n                      grid grid-cols-1\n                      sm:grid-cols-2\n                      lg:grid-cols-3\n                      gap-8\n                      items-center\n                      w-full\n                      pt-4\n                    "
+            },
+            [
+              _vm.error
+                ? _c("p", { staticStyle: {} }, [_vm._v(_vm._s(_vm.error))])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm._l(_vm.aussteller, function(jeweiligerAussteller, index) {
+                return _c(
+                  "article",
+                  {
+                    key: index,
+                    staticClass: "articlestyling mx-auto overflow-hidden w-full"
+                  },
+                  [
+                    _vm.imageUrlNotEmpty(index)
+                      ? _c("img", {
+                          staticClass: "border-b-2 mb-2 border-yellow-50",
+                          attrs: { src: _vm.imgUrl(index), alt: "" }
+                        })
+                      : _c("img", {
                           staticClass:
-                            "absolute inset-y-0 left-0 flex items-center sm:hidden"
-                        },
-                        [
-                          _c("span", { staticClass: "sr-only" }, [
-                            _vm._v("Open main menu")
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "svg",
+                            "\n                    filter-white\n                    bg-gray-50 bg-opacity-20 p-8\n                    border-b-2 border-black mb-2\n                  ",
+                          attrs: {
+                            src: "/images/icons/svgs/aussteller.svg",
+                            alt: "Ausstellerfoto"
+                          }
+                        }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "text text-center lg:text-lg" }, [
+                      _vm.ausstellerBrandingNameNotEmpty(index)
+                        ? _c(
+                            "h3",
                             {
-                              staticClass: "hidden h-6 w-6",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor",
-                                "aria-hidden": "true"
-                              }
+                              staticClass:
+                                "font-bold font-willkommen leading-5 text-gray-800 mb-2"
                             },
                             [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d: "M6 18L18 6M6 6l12 12"
-                                }
-                              })
+                              _vm._v(
+                                "\n                " +
+                                  _vm._s(
+                                    jeweiligerAussteller.aussteller_brandingname
+                                  ) +
+                                  "\n              "
+                              )
                             ]
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _c(
+                        "h2",
+                        {
+                          staticClass:
+                            "font-semibold text-sm text-gray-700 mb-1"
+                        },
+                        [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(jeweiligerAussteller.aussteller_fullname) +
+                              "\n              "
                           )
                         ]
                       ),
                       _vm._v(" "),
                       _c(
-                        "div",
+                        "p",
                         {
                           staticClass:
-                            "\n                        flex-1 flex\n                        items-center\n                        justify-center\n                        sm:items-stretch\n                        sm:justify-start\n                      "
+                            "text-sm font-willkommen lg:text-base mb-2"
                         },
                         [
-                          _c("div", {
-                            staticClass: "flex-shrink-0 flex items-center"
-                          }),
-                          _vm._v(" "),
-                          _c(
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(
+                                jeweiligerAussteller.aussteller_beschreibung
+                              ) +
+                              "\n              "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _vm.webUrlNotEmpty(index) ||
+                      _vm.ausstellerEmailNotEmpty(index) ||
+                      _vm.zonenFarbeNotEmpty(index)
+                        ? _c(
                             "div",
-                            { staticClass: "hidden sm:block sm:ml-6" },
+                            {
+                              staticClass:
+                                "\n                      bg-gray-800\n                      relative\n                      bottom-0\n                      left-0\n                      right-0\n                      h-10\n                      flex\n                      justify-center\n                      items-center\n                      rounded-lg\n                    "
+                            },
                             [
                               _c(
-                                "div",
-                                { staticClass: "flex space-x-4" },
+                                "ul",
+                                {
+                                  staticClass:
+                                    "inline-flex gap-2 justify-center items-center"
+                                },
                                 [
+                                  _vm.webUrlNotEmpty(index)
+                                    ? _c("li", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: { href: _vm.webUrl(index) }
+                                          },
+                                          [
+                                            _c("img", {
+                                              staticClass:
+                                                "resize-icon filter-white-icons",
+                                              attrs: {
+                                                src:
+                                                  "/images/icons/svgs/www.svg",
+                                                alt: "website"
+                                              }
+                                            })
+                                          ]
+                                        )
+                                      ])
+                                    : _vm._e(),
+                                  _vm._v(" "),
+                                  _vm.ausstellerEmailNotEmpty(index)
+                                    ? _c("li", [
+                                        _c(
+                                          "a",
+                                          {
+                                            attrs: {
+                                              href: _vm.ausstellerEmail(index),
+                                              target: "_newtab"
+                                            }
+                                          },
+                                          [
+                                            _c("img", {
+                                              staticClass:
+                                                "h-4 filter-white-icons",
+                                              attrs: {
+                                                src:
+                                                  "/images/icons/svgs/email.png",
+                                                alt: "website"
+                                              }
+                                            })
+                                          ]
+                                        )
+                                      ])
+                                    : _vm._e(),
+                                  _vm._v(" "),
                                   _c(
                                     "router-link",
-                                    { attrs: { to: "/admin/dashboard" } },
+                                    { attrs: { to: "/karte" } },
                                     [
-                                      _c(
-                                        "span",
-                                        {
-                                          staticClass: "text-gray-500 text-lg"
-                                        },
-                                        [_vm._v("Dashboard")]
-                                      )
+                                      _vm.zonenFarbeNotEmpty(index)
+                                        ? _c(
+                                            "li",
+                                            { staticClass: "h-5 w-32" },
+                                            [
+                                              _c("Farbzone", {
+                                                attrs: {
+                                                  "zonen-farbe": _vm.zonenFarbe(
+                                                    index
+                                                  )
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          )
+                                        : _vm._e()
                                     ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                              bg-gray-900\n                              text-white\n                              px-3\n                              py-2\n                              rounded-md\n                              text-sm\n                              font-medium\n                            ",
-                                      attrs: { "aria-current": "page" }
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to:
-                                              "/admin/dashboard/ausstelleruebersicht"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Aussteller\n                  "
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                              text-gray-300\n                              hover:bg-gray-700\n                              hover:text-white\n                              px-3\n                              py-2\n                              rounded-md\n                              text-sm\n                              font-medium\n                            "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: { to: "/admin/dashboard/news" }
-                                        },
-                                        [_vm._v("News")]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                          text-gray-300\n                          hover:bg-gray-700\n                          hover:text-white\n                          px-3\n                          py-2\n                          rounded-md\n                          text-sm\n                          font-medium\n                                "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to:
-                                              "/admin/dashboard/programmanlegen"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                    Programm"
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                              text-gray-300\n                              hover:bg-gray-700\n                              hover:text-white\n                              px-3\n                              py-2\n                              rounded-md\n                              text-sm\n                              font-medium\n                            "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to:
-                                              "/admin/dashboard/editfotogalerie"
-                                          }
-                                        },
-                                        [_vm._v("Fotogalerie")]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                              text-gray-300\n                              hover:bg-gray-700\n                              hover:text-white\n                              px-3\n                              py-2\n                              rounded-md\n                              text-sm\n                              font-medium\n                            "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to: "/admin/dashboard/hometext"
-                                          }
-                                        },
-                                        [_vm._v("Home-Text")]
-                                      )
-                                    ],
-                                    1
                                   )
                                 ],
                                 1
                               )
                             ]
                           )
-                        ]
-                      ),
+                        : _vm._e(),
                       _vm._v(" "),
                       _c(
                         "div",
                         {
-                          staticClass:
-                            "\n                        absolute\n                        inset-y-0\n                        right-0\n                        flex\n                        items-center\n                        pr-2\n                        sm:static\n                        sm:inset-auto\n                        sm:ml-6\n                        sm:pr-0\n                      "
+                          staticClass: "gap-2 justify-start items-center mt-3"
                         },
                         [
                           _c(
-                            "div",
+                            "button",
                             {
-                              staticClass:
-                                "\n                          text-gray-300\n                          hover:bg-red-900\n                          hover:text-white\n                          px-3\n                          py-2\n                          rounded-md\n                          text-sm\n                          font-medium\n                        "
+                              staticClass: "btn btn-red",
+                              attrs: { "key:index": "" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.deleteAussteller(index)
+                                }
+                              }
                             },
                             [
-                              _c(
-                                "span",
-                                {
-                                  staticClass: "text-white cursor-pointer",
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.handleLogout()
-                                    }
-                                  }
-                                },
-                                [_vm._v("Logout\n              ")]
+                              _vm._v(
+                                "\n                  delete\n                "
                               )
                             ]
                           )
                         ]
                       )
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("MobileMenu")
+                    ])
+                  ]
+                )
+              })
             ],
-            1
-          ),
-          _vm._v(" "),
-          _vm.loading
-            ? _c("p", [
-                _c("img", {
-                  staticClass:
-                    "resize-loadinggif fixed top-1/2 left-1/2 z-5000 bg-gray-900",
-                  attrs: {
-                    src: "/images/icons/gifs/loadingtransparent.gif",
-                    alt: "loading..."
-                  }
-                })
-              ])
-            : _vm._e(),
-          _vm._v(" "),
-          _c("div", { staticClass: "ausstellergradient" }, [
-            _c("div", { staticClass: "ausstellercontainer" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "\n                      inline-flex\n                      justify-start\n                      gap-3\n                      pt-5\n                      px-4\n                      items-center\n                      w-full\n                    "
-                },
-                [
-                  _c(
-                    "router-link",
-                    { attrs: { to: "/admin/dashboard/ausstelleraendern" } },
-                    [
-                      _c("button", { staticClass: "btn btn-blue" }, [
-                        _vm._v(
-                          "\n              Aussteller ändern\n            "
-                        )
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "router-link",
-                    { attrs: { to: "/admin/dashboard/ausstelleranlegen" } },
-                    [
-                      _c("button", { staticClass: "btn btn-green" }, [
-                        _vm._v(
-                          "\n              Neuen Aussteller hinzufügen\n            "
-                        )
-                      ])
-                    ]
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "\n                      grid grid-cols-1\n                      sm:grid-cols-2\n                      lg:grid-cols-3\n                      gap-8\n                      items-center\n                      w-full\n                      pt-4\n                    "
-                },
-                [
-                  _vm.error
-                    ? _c("p", { staticStyle: {} }, [_vm._v(_vm._s(_vm.error))])
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm._l(_vm.aussteller, function(jeweiligerAussteller, index) {
-                    return _c(
-                      "article",
-                      {
-                        key: index,
-                        staticClass:
-                          "articlestyling mx-auto overflow-hidden w-full"
-                      },
-                      [
-                        _vm.imageUrlNotEmpty(index)
-                          ? _c("img", {
-                              staticClass: "border-b-2 mb-2 border-yellow-50",
-                              attrs: { src: _vm.imgUrl(index), alt: "" }
-                            })
-                          : _c("img", {
-                              staticClass:
-                                "\n                    filter-white\n                    bg-gray-50 bg-opacity-20 p-8\n                    border-b-2 border-black mb-2\n                  ",
-                              attrs: {
-                                src: "/images/icons/svgs/aussteller.svg",
-                                alt: "Ausstellerfoto"
-                              }
-                            }),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "text text-center lg:text-lg" },
-                          [
-                            _vm.ausstellerBrandingNameNotEmpty(index)
-                              ? _c(
-                                  "h3",
-                                  {
-                                    staticClass:
-                                      "font-bold font-willkommen leading-5 text-gray-800 mb-2"
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                " +
-                                        _vm._s(
-                                          jeweiligerAussteller.aussteller_brandingname
-                                        ) +
-                                        "\n              "
-                                    )
-                                  ]
-                                )
-                              : _vm._e(),
-                            _vm._v(" "),
-                            _c(
-                              "h2",
-                              {
-                                staticClass:
-                                  "font-semibold text-sm text-gray-700 mb-1"
-                              },
-                              [
-                                _vm._v(
-                                  "\n                " +
-                                    _vm._s(
-                                      jeweiligerAussteller.aussteller_fullname
-                                    ) +
-                                    "\n              "
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "p",
-                              {
-                                staticClass:
-                                  "text-sm font-willkommen lg:text-base mb-2"
-                              },
-                              [
-                                _vm._v(
-                                  "\n                " +
-                                    _vm._s(
-                                      jeweiligerAussteller.aussteller_beschreibung
-                                    ) +
-                                    "\n              "
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _vm.webUrlNotEmpty(index) ||
-                            _vm.ausstellerEmailNotEmpty(index) ||
-                            _vm.zonenFarbeNotEmpty(index)
-                              ? _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "\n                      bg-gray-800\n                      relative\n                      bottom-0\n                      left-0\n                      right-0\n                      h-10\n                      flex\n                      justify-center\n                      items-center\n                      rounded-lg\n                    "
-                                  },
-                                  [
-                                    _c(
-                                      "ul",
-                                      {
-                                        staticClass:
-                                          "inline-flex gap-2 justify-center items-center"
-                                      },
-                                      [
-                                        _vm.webUrlNotEmpty(index)
-                                          ? _c("li", [
-                                              _c(
-                                                "a",
-                                                {
-                                                  attrs: {
-                                                    href: _vm.webUrl(index)
-                                                  }
-                                                },
-                                                [
-                                                  _c("img", {
-                                                    staticClass:
-                                                      "resize-icon filter-white-icons",
-                                                    attrs: {
-                                                      src:
-                                                        "/images/icons/svgs/www.svg",
-                                                      alt: "website"
-                                                    }
-                                                  })
-                                                ]
-                                              )
-                                            ])
-                                          : _vm._e(),
-                                        _vm._v(" "),
-                                        _vm.ausstellerEmailNotEmpty(index)
-                                          ? _c("li", [
-                                              _c(
-                                                "a",
-                                                {
-                                                  attrs: {
-                                                    href: _vm.ausstellerEmail(
-                                                      index
-                                                    ),
-                                                    target: "_newtab"
-                                                  }
-                                                },
-                                                [
-                                                  _c("img", {
-                                                    staticClass:
-                                                      "h-4 filter-white-icons",
-                                                    attrs: {
-                                                      src:
-                                                        "/images/icons/svgs/email.png",
-                                                      alt: "website"
-                                                    }
-                                                  })
-                                                ]
-                                              )
-                                            ])
-                                          : _vm._e(),
-                                        _vm._v(" "),
-                                        _c(
-                                          "router-link",
-                                          { attrs: { to: "/karte" } },
-                                          [
-                                            _vm.zonenFarbeNotEmpty(index)
-                                              ? _c(
-                                                  "li",
-                                                  { staticClass: "h-5 w-32" },
-                                                  [
-                                                    _c("Farbzone", {
-                                                      attrs: {
-                                                        "zonen-farbe": _vm.zonenFarbe(
-                                                          index
-                                                        )
-                                                      }
-                                                    })
-                                                  ],
-                                                  1
-                                                )
-                                              : _vm._e()
-                                          ]
-                                        )
-                                      ],
-                                      1
-                                    )
-                                  ]
-                                )
-                              : _vm._e(),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "gap-2 justify-start items-center mt-3"
-                              },
-                              [
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass: "btn btn-red",
-                                    attrs: { "key:index": "" },
-                                    on: {
-                                      click: function($event) {
-                                        return _vm.deleteAussteller(index)
-                                      }
-                                    }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                  delete\n                "
-                                    )
-                                  ]
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    )
-                  })
-                ],
-                2
-              )
-            ])
-          ])
+            2
+          )
         ])
-      : _vm._e()
+      ])
+    ])
   ])
 }
 var staticRenderFns = []
@@ -43655,291 +42622,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "w-full h-full dashboardbackground" }, [
-    _vm.loggedIn == false
-      ? _c(
-          "div",
-          {
-            staticClass:
-              "\n                    flex\n                    w-full\n                    h-full\n                    items-center\n                    justify-center\n                    text-red-900\n                    bg-gray-900\n                  "
-          },
-          [
-            _vm._v(
-              "\n    Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard\n    zugreifen zu können...\n  "
-            )
-          ]
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.loggedIn
-      ? _c("div", { staticClass: "w-full" }, [
-          _c(
-            "nav",
-            { staticClass: "bg-gray-800 border-b border-gray-300" },
-            [
-              _c(
-                "div",
-                { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "relative flex items-center justify-between h-16"
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute inset-y-0 left-0 flex items-center sm:hidden"
-                        },
-                        [
-                          _c("span", { staticClass: "sr-only" }, [
-                            _vm._v("Open main menu")
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "svg",
-                            {
-                              staticClass: "hidden h-6 w-6",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor",
-                                "aria-hidden": "true"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d: "M6 18L18 6M6 6l12 12"
-                                }
-                              })
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\n                            flex-1 flex\n                            items-center\n                            justify-center\n                            sm:items-stretch\n                            sm:justify-start\n                          "
-                        },
-                        [
-                          _c("div", {
-                            staticClass: "flex-shrink-0 flex items-center"
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "hidden sm:block sm:ml-6" },
-                            [
-                              _c(
-                                "div",
-                                { staticClass: "flex space-x-4" },
-                                [
-                                  _c(
-                                    "router-link",
-                                    { attrs: { to: "/admin/dashboard" } },
-                                    [
-                                      _c(
-                                        "span",
-                                        {
-                                          staticClass: "text-gray-500 text-lg"
-                                        },
-                                        [_vm._v("Dashboard")]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                                  text-gray-300\n                                  hover:bg-gray-700\n                                  hover:text-white\n                                  px-3\n                                  py-2\n                                  rounded-md\n                                  text-sm\n                                  font-medium\n                                "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to:
-                                              "/admin/dashboard/ausstelleruebersicht"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Aussteller\n                  "
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                                  text-gray-300\n                                  hover:bg-gray-700\n                                  hover:text-white\n                                  px-3\n                                  py-2\n                                  rounded-md\n                                  text-sm\n                                  font-medium\n                                "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: { to: "/admin/dashboard/news" }
-                                        },
-                                        [_vm._v("News")]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                                  text-gray-300\n                                  hover:bg-gray-700\n                                  hover:text-white\n                                  px-3\n                                  py-2\n                                  rounded-md\n                                  text-sm\n                                  font-medium\n                                "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to:
-                                              "/admin/dashboard/programmanlegen"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                    Programm"
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                                  text-gray-300\n                                  hover:bg-gray-700\n                                  hover:text-white\n                                  px-3\n                                  py-2\n                                  rounded-md\n                                  text-sm\n                                  font-medium\n                                "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to:
-                                              "/admin/dashboard/editfotogalerie"
-                                          }
-                                        },
-                                        [_vm._v("Fotogalerie")]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                                  text-gray-300\n                                  hover:bg-gray-700\n                                  hover:text-white\n                                  px-3\n                                  py-2\n                                  rounded-md\n                                  text-sm\n                                  font-medium\n                                "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to: "/admin/dashboard/hometext"
-                                          }
-                                        },
-                                        [_vm._v("Home-Text")]
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\n                            absolute\n                            inset-y-0\n                            right-0\n                            flex\n                            items-center\n                            pr-2\n                            sm:static\n                            sm:inset-auto\n                            sm:ml-6\n                            sm:pr-0\n                          "
-                        },
-                        [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "\n                              text-gray-300\n                              hover:bg-red-900\n                              hover:text-white\n                              px-3\n                              py-2\n                              rounded-md\n                              text-sm\n                              font-medium\n                            "
-                            },
-                            [
-                              _c(
-                                "span",
-                                {
-                                  staticClass: "text-white cursor-pointer",
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.handleLogout()
-                                    }
-                                  }
-                                },
-                                [_vm._v("Logout\n              ")]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("MobileMenu")
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _vm._m(0)
-        ])
-      : _vm._e()
+  return _c("DashboardLayout", [
+    _c(
+      "div",
+      {
+        staticClass:
+          "\n            flex\n            pt-40\n            lg:pt-60\n            w-full\n            justify-center\n            text-2xl\n            sm:text-3xl\n            md:text-4xl\n            text-gray-800\n            "
+      },
+      [_vm._v("\n    Welcome Home\n  ")]
+    )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "h-full w-full", attrs: { id: "dashboardcontent" } },
-      [
-        _c(
-          "div",
-          {
-            staticClass:
-              "\n                        flex\n                        pt-40\n                        lg:pt-60\n                        w-full\n                        justify-center\n                        text-2xl\n                        sm:text-3xl\n                        md:text-4xl\n                        text-gray-800\n                      "
-          },
-          [_vm._v("\n        Welcome Home\n      ")]
-        )
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -43962,383 +42656,187 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "w-full h-full bg-gray-900" }, [
-    _vm.loggedIn() == false
-      ? _c(
-          "div",
-          {
-            staticClass:
-              "\n          flex\n          w-full\n          h-full\n          items-center\n          justify-center\n          text-red-900\n          bg-gray-900\n        "
-          },
-          [
-            _vm._v(
-              "\n    Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard\n    zugreifen zu können...\n  "
-            )
-          ]
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.loggedIn()
-      ? _c("div", { staticClass: "w-full" }, [
-          _c(
-            "nav",
-            { staticClass: "bg-gray-800 border-b border-gray-300" },
-            [
-              _c(
-                "div",
-                { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" },
-                [
+  return _c("DashboardLayout", { attrs: { path: "editfotogalerie" } }, [
+    _c("div", { staticClass: "w-full h-full bg-gray-900" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20"
+        },
+        [
+          _vm.loading
+            ? _c("p", { staticClass: "mx-auto" }, [
+                _c("img", {
+                  staticClass: "m-auto resize-loadinggif",
+                  attrs: {
+                    src: "/images/icons/gifs/loadingtransparent.gif",
+                    alt: "loading..."
+                  }
+                })
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _c("div", { staticClass: "mt-10 sm:mt-0" }, [
+            _c(
+              "div",
+              {},
+              [
+                _c("div", { staticClass: "text-gray-400 pb-3" }, [
                   _c(
-                    "div",
+                    "h3",
                     {
                       staticClass:
-                        "relative flex items-center justify-between h-16"
+                        "text-lg font-medium leading-6 text-white pb-1"
+                    },
+                    [_vm._v("\n              Fotogalerie\n            ")]
+                  ),
+                  _vm._v(
+                    '\n            Der Foto-Titel und die Fotobeschreibung werden im Foto-Carousel\n            eingebettet. Maximallänge Foto-Titel: 30 Zeichen,\n            Fotobeschreibung: 50 Zeichen. Folgende Fotos sind bereits\n            vorhanden, klicken Sie auf "delete", um diese aus der Datenbank\n            und aus der Galerie zu löschen. Achten Sie bitte darauf, dass Sie\n            zuerst das Foto auf "Upload photo" raufladen und danach auf den\n            Button "In DB speichern" klicken. Falls Sie keinen Fototitel\n            hinzufügen möchten, können Sie den "In DB speichern"-Button auch\n            nicht drücken. Das Photo wird trotzdem gespeichert und ist in der\n            Fotogalerie ersichtlich.\n          '
+                  )
+                ]),
+                _vm._v(" "),
+                _vm._l(_vm.fotos, function(jeweiligesFoto, index) {
+                  return _c(
+                    "div",
+                    {
+                      key: index,
+                      staticClass:
+                        "\n                  flex\n                  justify-evenly\n                  pl-3\n                  text-white\n                  bg-green-900\n                  mb-3\n                  border border-gray-600\n                "
                     },
                     [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute inset-y-0 left-0 flex items-center sm:hidden"
-                        },
-                        [
-                          _c("span", { staticClass: "sr-only" }, [
-                            _vm._v("Open main menu")
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "svg",
-                            {
-                              staticClass: "hidden h-6 w-6",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor",
-                                "aria-hidden": "true"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d: "M6 18L18 6M6 6l12 12"
-                                }
-                              })
-                            ]
-                          )
-                        ]
-                      ),
+                      _c("span", { staticClass: "flex w-32 items-center" }, [
+                        _vm._v(_vm._s(jeweiligesFoto.fotogalerie_fotoname))
+                      ]),
+                      _vm._v(" "),
+                      _c("img", {
+                        staticClass:
+                          "w-20 h-20 border border-gray-50 rounded-lg my-2",
+                        attrs: { src: _vm.urlOfFoto(index), alt: "Foto" }
+                      }),
                       _vm._v(" "),
                       _c(
-                        "div",
+                        "button",
                         {
-                          staticClass:
-                            "\n                  flex-1 flex\n                  items-center\n                  justify-center\n                  sm:items-stretch\n                  sm:justify-start\n                "
+                          staticClass: "btn btn-red",
+                          attrs: { "key:index": "" },
+                          on: {
+                            click: function($event) {
+                              return _vm.deleteFoto(index)
+                            }
+                          }
                         },
-                        [
-                          _c("div", {
-                            staticClass: "flex-shrink-0 flex items-center"
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "hidden sm:block sm:ml-6" },
-                            [
-                              _c(
-                                "div",
-                                { staticClass: "flex space-x-4" },
-                                [
-                                  _c(
-                                    "router-link",
-                                    { attrs: { to: "/admin/dashboard" } },
-                                    [
-                                      _c(
-                                        "span",
-                                        {
-                                          staticClass: "text-gray-500 text-lg"
-                                        },
-                                        [_vm._v("Dashboard")]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                        text-gray-300\n                        hover:bg-gray-700\n                        hover:text-white\n                        px-3\n                        py-2\n                        rounded-md\n                        text-sm\n                        font-medium\n                      "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to:
-                                              "/admin/dashboard/ausstelleruebersicht"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Aussteller\n                  "
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                        text-gray-300\n                        hover:bg-gray-700\n                        hover:text-white\n                        px-3\n                        py-2\n                        rounded-md\n                        text-sm\n                        font-medium\n                      "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: { to: "/admin/dashboard/news" }
-                                        },
-                                        [_vm._v("News")]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass:
-                                        "\n                        text-gray-300\n                        hover:bg-gray-700\n                        hover:text-white\n                        px-3\n                        py-2\n                        rounded-md\n                        text-sm\n                        font-medium\n                      ",
-                                      attrs: { href: "#" }
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to:
-                                              "/admin/dashboard/programmanlegen"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                    Programm"
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                        text-gray-300\n                        hover:bg-gray-700\n                        hover:text-white\n                        px-3\n                        py-2\n                        rounded-md\n                        text-sm\n                        font-medium\n                      ",
-                                      attrs: { "aria-current": "page" }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                  Fotogalerie\n                "
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                              text-gray-300\n                              hover:bg-gray-700\n                              hover:text-white\n                              px-3\n                              py-2\n                              rounded-md\n                              text-sm\n                              font-medium\n                            "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to: "/admin/dashboard/hometext"
-                                          }
-                                        },
-                                        [_vm._v("Home-Text")]
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\n                  absolute\n                  inset-y-0\n                  right-0\n                  flex\n                  items-center\n                  pr-2\n                  sm:static\n                  sm:inset-auto\n                  sm:ml-6\n                  sm:pr-0\n                "
-                        },
-                        [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "\n                    text-gray-300\n                    hover:bg-red-900\n                    hover:text-white\n                    px-3\n                    py-2\n                    rounded-md\n                    text-sm\n                    font-medium\n                  "
-                            },
-                            [
-                              _c(
-                                "span",
-                                {
-                                  staticClass: "text-white cursor-pointer",
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.handleLogout()
-                                    }
-                                  }
-                                },
-                                [_vm._v("Logout\n              ")]
-                              )
-                            ]
-                          )
-                        ]
+                        [_vm._v("\n              delete\n            ")]
                       )
                     ]
                   )
-                ]
-              ),
-              _vm._v(" "),
-              _c("MobileMenu")
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20"
-            },
-            [
-              _vm.loading
-                ? _c("p", { staticClass: "mx-auto" }, [
-                    _c("img", {
-                      staticClass: "m-auto resize-loadinggif",
-                      attrs: {
-                        src: "/images/icons/gifs/loadingtransparent.gif",
-                        alt: "loading..."
-                      }
-                    })
-                  ])
-                : _vm._e(),
-              _vm._v(" "),
-              _c("div", { staticClass: "mt-10 sm:mt-0" }, [
-                _c(
-                  "div",
-                  {},
-                  [
-                    _vm._m(0),
-                    _vm._v(" "),
-                    _vm._l(_vm.fotos, function(jeweiligesFoto, index) {
-                      return _c(
-                        "div",
-                        {
-                          key: index,
-                          staticClass:
-                            "\n                  flex\n                  justify-evenly\n                  pl-3\n                  text-white\n                  bg-green-900\n                  mb-3\n                  border border-gray-600\n                "
-                        },
-                        [
-                          _c(
-                            "span",
-                            { staticClass: "flex w-32 items-center" },
-                            [
-                              _vm._v(
-                                _vm._s(jeweiligesFoto.fotogalerie_fotoname)
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("img", {
-                            staticClass:
-                              "w-20 h-20 border border-gray-50 rounded-lg my-2",
-                            attrs: { src: _vm.urlOfFoto(index), alt: "Foto" }
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-red",
-                              attrs: { "key:index": "" },
-                              on: {
-                                click: function($event) {
-                                  return _vm.deleteFoto(index)
-                                }
-                              }
-                            },
-                            [_vm._v("\n              delete\n            ")]
-                          )
-                        ]
-                      )
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
-                      _c("div", [
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
+                  _c("div", [
+                    _c(
+                      "div",
+                      { staticClass: "shadow overflow-hidden sm:rounded-md" },
+                      [
                         _c(
-                          "div",
+                          "h3",
                           {
-                            staticClass: "shadow overflow-hidden sm:rounded-md"
+                            staticClass:
+                              "text-lg font-medium leading-6 text-white pb-1"
                           },
                           [
+                            _vm._v(
+                              "\n                  Foto hinzufügen\n                "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "px-4 py-5 bg-gray-300 sm:p-6" },
+                          [
                             _c(
-                              "h3",
+                              "label",
                               {
                                 staticClass:
-                                  "text-lg font-medium leading-6 text-white pb-1"
+                                  "block text-sm font-medium text-gray-700",
+                                attrs: { for: "name" }
                               },
-                              [
-                                _vm._v(
-                                  "\n                  Foto hinzufügen\n                "
-                                )
-                              ]
+                              [_vm._v("Foto-Titel")]
                             ),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.formdata.fotogalerie_fotoname,
+                                  expression: "formdata.fotogalerie_fotoname"
+                                }
+                              ],
+                              staticClass:
+                                "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
+                              attrs: {
+                                maxlength: "30",
+                                type: "text",
+                                id: "full_name",
+                                placeholder: "Pflichtfeld",
+                                autocomplete: "given-name"
+                              },
+                              domProps: {
+                                value: _vm.formdata.fotogalerie_fotoname
+                              },
+                              on: {
+                                input: function($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(
+                                    _vm.formdata,
+                                    "fotogalerie_fotoname",
+                                    $event.target.value
+                                  )
+                                }
+                              }
+                            }),
                             _vm._v(" "),
                             _c(
                               "div",
-                              { staticClass: "px-4 py-5 bg-gray-300 sm:p-6" },
+                              { staticClass: "col-span-6 sm:col-span-4" },
                               [
                                 _c(
                                   "label",
                                   {
                                     staticClass:
                                       "block text-sm font-medium text-gray-700",
-                                    attrs: { for: "name" }
+                                    attrs: { for: "email_address" }
                                   },
-                                  [_vm._v("Foto-Titel")]
+                                  [_vm._v("Fotobeschreibung")]
                                 ),
                                 _vm._v(" "),
-                                _c("input", {
+                                _c("textarea", {
                                   directives: [
                                     {
                                       name: "model",
                                       rawName: "v-model",
-                                      value: _vm.formdata.fotogalerie_fotoname,
+                                      value:
+                                        _vm.formdata
+                                          .fotogalerie_fotobeschreibung,
                                       expression:
-                                        "formdata.fotogalerie_fotoname"
+                                        "formdata.fotogalerie_fotobeschreibung"
                                     }
                                   ],
                                   staticClass:
-                                    "\n                          mt-1\n                          focus:ring-green-500\n                          focus:border-green-500\n                          block\n                          w-full\n                          shadow-sm\n                          sm:text-sm\n                          border-gray-300\n                          rounded-md\n                        ",
+                                    "\n                            mt-1\n                            focus:ring-green-500\n                            focus:border-green-500\n                            block\n                            w-full\n                            shadow-sm\n                            sm:text-sm\n                            border-gray-300\n                            rounded-md\n                          ",
                                   attrs: {
-                                    maxlength: "30",
-                                    type: "text",
-                                    id: "full_name",
-                                    placeholder: "Pflichtfeld",
-                                    autocomplete: "given-name"
+                                    maxlength: "50",
+                                    id: "beschreibung",
+                                    autocomplete: "Beschreibung",
+                                    placeholder: "Optional"
                                   },
                                   domProps: {
-                                    value: _vm.formdata.fotogalerie_fotoname
+                                    value:
+                                      _vm.formdata.fotogalerie_fotobeschreibung
                                   },
                                   on: {
                                     input: function($event) {
@@ -44347,104 +42845,12 @@ var render = function() {
                                       }
                                       _vm.$set(
                                         _vm.formdata,
-                                        "fotogalerie_fotoname",
+                                        "fotogalerie_fotobeschreibung",
                                         $event.target.value
                                       )
                                     }
                                   }
-                                }),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  { staticClass: "col-span-6 sm:col-span-4" },
-                                  [
-                                    _c(
-                                      "label",
-                                      {
-                                        staticClass:
-                                          "block text-sm font-medium text-gray-700",
-                                        attrs: { for: "email_address" }
-                                      },
-                                      [_vm._v("Fotobeschreibung")]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("textarea", {
-                                      directives: [
-                                        {
-                                          name: "model",
-                                          rawName: "v-model",
-                                          value:
-                                            _vm.formdata
-                                              .fotogalerie_fotobeschreibung,
-                                          expression:
-                                            "formdata.fotogalerie_fotobeschreibung"
-                                        }
-                                      ],
-                                      staticClass:
-                                        "\n                            mt-1\n                            focus:ring-green-500\n                            focus:border-green-500\n                            block\n                            w-full\n                            shadow-sm\n                            sm:text-sm\n                            border-gray-300\n                            rounded-md\n                          ",
-                                      attrs: {
-                                        maxlength: "50",
-                                        id: "beschreibung",
-                                        autocomplete: "Beschreibung",
-                                        placeholder: "Optional"
-                                      },
-                                      domProps: {
-                                        value:
-                                          _vm.formdata
-                                            .fotogalerie_fotobeschreibung
-                                      },
-                                      on: {
-                                        input: function($event) {
-                                          if ($event.target.composing) {
-                                            return
-                                          }
-                                          _vm.$set(
-                                            _vm.formdata,
-                                            "fotogalerie_fotobeschreibung",
-                                            $event.target.value
-                                          )
-                                        }
-                                      }
-                                    })
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _vm._m(1),
-                                _vm._v(" "),
-                                _c(
-                                  "form",
-                                  {
-                                    staticClass:
-                                      "flex items-center justify-center mt-3",
-                                    on: {
-                                      submit: function($event) {
-                                        $event.preventDefault()
-                                        return _vm.upload($event)
-                                      }
-                                    }
-                                  },
-                                  [
-                                    _c("input", {
-                                      staticClass: "text-xs sm:text-base",
-                                      attrs: { type: "file" },
-                                      on: { change: _vm.handleOnChange }
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "button",
-                                      {
-                                        staticClass:
-                                          "\n                            bg-green-900\n                            text-xs\n                            sm:text-base\n                            p-1\n                            text-white\n                            border border-green-600\n                            rounded-md\n                            hover:bg-green-500\n                          ",
-                                        on: { click: _vm.showSubmitButton }
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                      Upload photo\n                    "
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
+                                })
                               ]
                             ),
                             _vm._v(" "),
@@ -44452,86 +42858,112 @@ var render = function() {
                               "div",
                               {
                                 staticClass:
-                                  "\n                        flex\n                        justify-center\n                        px-4\n                        py-3\n                        bg-gray-600\n                        border-t-2 border-gray-800\n                        text-right\n                        sm:px-6\n                      "
+                                  "py-2 bg-green-900 text-white mb-1 px-2"
                               },
                               [
+                                _vm._v(
+                                  "\n                    Foto Upload\n                    "
+                                ),
+                                _c("div", { staticClass: "alert" }, [
+                                  _c(
+                                    "span",
+                                    {
+                                      staticClass: "closebtn",
+                                      attrs: {
+                                        onclick:
+                                          "this.parentElement.style.display='none';"
+                                      }
+                                    },
+                                    [_vm._v("×")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("strong", [_vm._v("Achtung!")]),
+                                  _vm._v(
+                                    " Maximale Filesize: 1.9MB\n                      "
+                                  ),
+                                  _c("br"),
+                                  _vm._v(
+                                    "\n                      Bsp: haimingermarkttage2020-1.jpg , hm1.png..\n                    "
+                                  )
+                                ])
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "form",
+                              {
+                                staticClass:
+                                  "flex items-center justify-center mt-3",
+                                on: {
+                                  submit: function($event) {
+                                    $event.preventDefault()
+                                    return _vm.upload($event)
+                                  }
+                                }
+                              },
+                              [
+                                _c("input", {
+                                  staticClass: "text-xs sm:text-base",
+                                  attrs: { type: "file" },
+                                  on: { change: _vm.handleOnChange }
+                                }),
+                                _vm._v(" "),
                                 _c(
                                   "button",
                                   {
                                     staticClass:
-                                      "\n                          inline-flex\n                          justify-center\n                          py-2\n                          px-4\n                          border border-transparent\n                          shadow-sm\n                          text-sm\n                          font-medium\n                          rounded-md\n                          text-white\n                          bg-green-600\n                          hover:bg-black\n                          focus:outline-none\n                          focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n                        ",
-                                    class: _vm.submitvisibility,
-                                    attrs: { id: "submitbutton" },
-                                    on: { click: _vm.submitform }
+                                      "\n                            bg-green-900\n                            text-xs\n                            sm:text-base\n                            p-1\n                            text-white\n                            border border-green-600\n                            rounded-md\n                            hover:bg-green-500\n                          ",
+                                    on: { click: _vm.showSubmitButton }
                                   },
                                   [
                                     _vm._v(
-                                      "\n                    In DB Speichern\n                  "
+                                      "\n                      Upload photo\n                    "
                                     )
                                   ]
                                 )
                               ]
                             )
                           ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "\n                        flex\n                        justify-center\n                        px-4\n                        py-3\n                        bg-gray-600\n                        border-t-2 border-gray-800\n                        text-right\n                        sm:px-6\n                      "
+                          },
+                          [
+                            _c(
+                              "button",
+                              {
+                                staticClass:
+                                  "\n                          inline-flex\n                          justify-center\n                          py-2\n                          px-4\n                          border border-transparent\n                          shadow-sm\n                          text-sm\n                          font-medium\n                          rounded-md\n                          text-white\n                          bg-green-600\n                          hover:bg-black\n                          focus:outline-none\n                          focus:ring-2 focus:ring-offset-2 focus:ring-green-500\n                        ",
+                                class: _vm.submitvisibility,
+                                attrs: { id: "submitbutton" },
+                                on: { click: _vm.submitform }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                    In DB Speichern\n                  "
+                                )
+                              ]
+                            )
+                          ]
                         )
-                      ])
-                    ])
-                  ],
-                  2
-                )
-              ])
-            ]
-          )
-        ])
-      : _vm._e()
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-gray-400 pb-3" }, [
-      _c(
-        "h3",
-        { staticClass: "text-lg font-medium leading-6 text-white pb-1" },
-        [_vm._v("\n              Fotogalerie\n            ")]
-      ),
-      _vm._v(
-        '\n            Der Foto-Titel und die Fotobeschreibung werden im Foto-Carousel\n            eingebettet. Maximallänge Foto-Titel: 30 Zeichen,\n            Fotobeschreibung: 50 Zeichen. Folgende Fotos sind bereits\n            vorhanden, klicken Sie auf "delete", um diese aus der Datenbank\n            und aus der Galerie zu löschen. Achten Sie bitte darauf, dass Sie\n            zuerst das Foto auf "Upload photo" raufladen und danach auf den\n            Button "In DB speichern" klicken. Falls Sie keinen Fototitel\n            hinzufügen möchten, können Sie den "In DB speichern"-Button auch\n            nicht drücken. Das Photo wird trotzdem gespeichert und ist in der\n            Fotogalerie ersichtlich.\n          '
+                      ]
+                    )
+                  ])
+                ])
+              ],
+              2
+            )
+          ])
+        ]
       )
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "py-2 bg-green-900 text-white mb-1 px-2" },
-      [
-        _vm._v("\n                    Foto Upload\n                    "),
-        _c("div", { staticClass: "alert" }, [
-          _c(
-            "span",
-            {
-              staticClass: "closebtn",
-              attrs: { onclick: "this.parentElement.style.display='none';" }
-            },
-            [_vm._v("×")]
-          ),
-          _vm._v(" "),
-          _c("strong", [_vm._v("Achtung!")]),
-          _vm._v(" Maximale Filesize: 1.9MB\n                      "),
-          _c("br"),
-          _vm._v(
-            "\n                      Bsp: haimingermarkttage2020-1.jpg , hm1.png..\n                    "
-          )
-        ])
-      ]
-    )
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -44554,54 +42986,147 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "w-full h-full bg-gray-900" }, [
-    _vm.loggedIn
-      ? _c("div", { staticClass: "w-full" }, [
-          _c(
-            "nav",
-            { staticClass: "bg-gray-800 border-b border-gray-300" },
-            [
-              _c(
-                "div",
-                { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" },
-                [
-                  _c(
+  return _c("DashboardLayout", { attrs: { path: "hometext" } }, [
+    _c("div", { staticClass: "w-full h-full bg-gray-900" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20"
+        },
+        [
+          _c("div", { staticClass: "mt-10 sm:mt-0" }, [
+            _c("div", {}, [
+              _c("div", { staticClass: "text-gray-400 pb-3" }, [
+                _c(
+                  "h3",
+                  {
+                    staticClass: "text-lg font-medium leading-6 text-white pb-1"
+                  },
+                  [_vm._v("\n              Startseite\n            ")]
+                ),
+                _vm._v(
+                  '\n            Infotext, welcher direkt unter "Willkommen bei den\n            Haiminger Markttagen!" am Startscreen angezeigt wird. Zum Überschreiben\n            einfach neuen Titel oder Beschreibung eingeben.\n          '
+                )
+              ]),
+              _vm._v(" "),
+              _vm.homecontent.title.length != 0
+                ? _c(
                     "div",
                     {
                       staticClass:
-                        "relative flex items-center justify-between h-16"
+                        "\n                                                          flex\n                                                          justify-evenly\n                                                          pl-3\n                                                          text-white\n                                                          bg-green-900\n                                                          mb-3\n                                                          border border-gray-600\n                                                        "
                     },
+                    [
+                      _c("span", { staticClass: "flex w-32 items-center" }, [
+                        _vm._v(_vm._s(_vm.homecontent.title))
+                      ]),
+                      _vm._v(" "),
+                      _c("span", [_vm._v(_vm._s(_vm.homecontent.description))])
+                    ]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
+                _c("div", [
+                  _c(
+                    "div",
+                    { staticClass: "shadow overflow-hidden sm:rounded-md" },
                     [
                       _c(
                         "div",
-                        {
-                          staticClass:
-                            "absolute inset-y-0 left-0 flex items-center sm:hidden"
-                        },
+                        { staticClass: "px-4 py-5 bg-gray-300 sm:p-6" },
                         [
-                          _c("span", { staticClass: "sr-only" }, [
-                            _vm._v("Open main menu")
-                          ]),
+                          _c(
+                            "label",
+                            {
+                              staticClass:
+                                "block text-sm font-medium text-gray-700",
+                              attrs: { for: "name" }
+                            },
+                            [_vm._v("Titel")]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.formdata.homeContentTitle,
+                                expression: "formdata.homeContentTitle"
+                              }
+                            ],
+                            staticClass:
+                              "\n                                                                  mt-1\n                                                                  focus:ring-green-500 focus:border-green-500\n                                                                  block\n                                                                  w-full\n                                                                  shadow-sm\n                                                                  sm:text-sm\n                                                                  border-gray-300\n                                                                  rounded-md\n                                                                ",
+                            attrs: {
+                              maxlength: "45",
+                              type: "text",
+                              id: "news_titel",
+                              placeholder: "Maximal 45 Zeichen",
+                              autocomplete: "given-name"
+                            },
+                            domProps: { value: _vm.formdata.homeContentTitle },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(
+                                  _vm.formdata,
+                                  "homeContentTitle",
+                                  $event.target.value
+                                )
+                              }
+                            }
+                          }),
                           _vm._v(" "),
                           _c(
-                            "svg",
-                            {
-                              staticClass: "hidden h-6 w-6",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor",
-                                "aria-hidden": "true"
-                              }
-                            },
+                            "div",
+                            { staticClass: "col-span-6 sm:col-span-4" },
                             [
-                              _c("path", {
+                              _c(
+                                "label",
+                                {
+                                  staticClass:
+                                    "block text-sm font-medium text-gray-700",
+                                  attrs: { for: "email_address" }
+                                },
+                                [_vm._v("Beschreibung")]
+                              ),
+                              _vm._v(" "),
+                              _c("textarea", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.formdata.homeContentDescription,
+                                    expression:
+                                      "formdata.homeContentDescription"
+                                  }
+                                ],
+                                staticClass:
+                                  "\n                                                                    mt-1\n                                                                    focus:ring-green-500 focus:border-green-500\n                                                                    block\n                                                                    w-full\n                                                                    shadow-sm\n                                                                    sm:text-sm\n                                                                    border-gray-300\n                                                                    rounded-md\n                                                                  ",
                                 attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d: "M6 18L18 6M6 6l12 12"
+                                  maxlength: "56",
+                                  id: "news_textfeld",
+                                  autocomplete: "Beschreibung",
+                                  placeholder:
+                                    "Wird unter dem Titel etwas kleiner eingefügt. Maximal 56 Zeichen"
+                                },
+                                domProps: {
+                                  value: _vm.formdata.homeContentDescription
+                                },
+                                on: {
+                                  input: function($event) {
+                                    if ($event.target.composing) {
+                                      return
+                                    }
+                                    _vm.$set(
+                                      _vm.formdata,
+                                      "homeContentDescription",
+                                      $event.target.value
+                                    )
+                                  }
                                 }
                               })
                             ]
@@ -44613,182 +43138,20 @@ var render = function() {
                         "div",
                         {
                           staticClass:
-                            "\n                                                          flex-1 flex\n                                                          items-center\n                                                          justify-center\n                                                          sm:items-stretch sm:justify-start\n                                                        "
-                        },
-                        [
-                          _c("div", {
-                            staticClass: "flex-shrink-0 flex items-center"
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "hidden sm:block sm:ml-6" },
-                            [
-                              _c(
-                                "div",
-                                { staticClass: "flex space-x-4" },
-                                [
-                                  _c(
-                                    "router-link",
-                                    {
-                                      attrs: {
-                                        to: "/admin/dashboard",
-                                        exact: ""
-                                      }
-                                    },
-                                    [
-                                      _c(
-                                        "span",
-                                        {
-                                          staticClass: "text-gray-500 text-lg"
-                                        },
-                                        [_vm._v("Dashboard")]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                                                                text-gray-300\n                                                                hover:bg-gray-700 hover:text-white\n                                                                px-3\n                                                                py-2\n                                                                rounded-md\n                                                                text-sm\n                                                                font-medium\n                                                              "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to:
-                                              "/admin/dashboard/ausstelleruebersicht"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Aussteller\n                  "
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                                                                text-gray-300\n                                                                hover:bg-gray-700 hover:text-white\n                                                                px-3\n                                                                py-2\n                                                                rounded-md\n                                                                text-sm\n                                                                font-medium\n                                                              ",
-                                      attrs: { "aria-current": "page" }
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: { to: "/admin/dashboard/news" }
-                                        },
-                                        [_vm._v("News")]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                                                                text-gray-300\n                                                                hover:bg-gray-700 hover:text-white\n                                                                px-3\n                                                                py-2\n                                                                rounded-md\n                                                                text-sm\n                                                                font-medium\n                                                              "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to:
-                                              "/admin/dashboard/programmanlegen"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                    Programm"
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                                                                text-gray-300\n                                                                hover:bg-gray-700 hover:text-white\n                                                                px-3\n                                                                py-2\n                                                                rounded-md\n                                                                text-sm\n                                                                font-medium\n                                                              "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to:
-                                              "/admin/dashboard/editfotogalerie"
-                                          }
-                                        },
-                                        [_vm._v("Fotogalerie")]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                                                                  text-gray-300\n                                                                  hover:bg-gray-700\n                                                                  hover:text-white\n                                                                  px-3\n                                                                  py-2\n                                                                  rounded-md\n                                                                  text-sm\n                                                                  font-medium\n                                                                "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to: "/admin/dashboard/hometext"
-                                          }
-                                        },
-                                        [_vm._v("Home-Text")]
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\n                                                          absolute\n                                                          inset-y-0\n                                                          right-0\n                                                          flex\n                                                          items-center\n                                                          pr-2\n                                                          sm:static sm:inset-auto sm:ml-6 sm:pr-0\n                                                        "
+                            "\n                                                                flex\n                                                                justify-center\n                                                                px-4\n                                                                py-3\n                                                                bg-gray-600\n                                                                border-t-2 border-gray-800\n                                                                text-right\n                                                                sm:px-6\n                                                              "
                         },
                         [
                           _c(
-                            "div",
+                            "button",
                             {
                               staticClass:
-                                "\n                                                            text-gray-300\n                                                            hover:bg-red-900 hover:text-white\n                                                            px-3\n                                                            py-2\n                                                            rounded-md\n                                                            text-sm\n                                                            font-medium\n                                                          "
+                                "\n                                                                  inline-flex\n                                                                  justify-center\n                                                                  py-2\n                                                                  px-4\n                                                                  border border-transparent\n                                                                  shadow-sm\n                                                                  text-sm\n                                                                  font-medium\n                                                                  rounded-md\n                                                                  text-white\n                                                                  bg-green-600\n                                                                  hover:bg-black\n                                                                  focus:outline-none\n                                                                  focus:ring-2\n                                                                  focus:ring-offset-2\n                                                                  focus:ring-green-500\n                                                                ",
+                              attrs: { id: "submitbutton" },
+                              on: { click: _vm.submitform }
                             },
                             [
-                              _c(
-                                "span",
-                                {
-                                  staticClass: "text-white cursor-pointer",
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.handleLogout()
-                                    }
-                                  }
-                                },
-                                [_vm._v("Logout\n              ")]
+                              _vm._v(
+                                "\n                    Update\n                  "
                               )
                             ]
                           )
@@ -44796,208 +43159,16 @@ var render = function() {
                       )
                     ]
                   )
-                ]
-              ),
-              _vm._v(" "),
-              _c("MobileMenu")
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20"
-            },
-            [
-              _c("div", { staticClass: "mt-10 sm:mt-0" }, [
-                _c("div", {}, [
-                  _vm._m(0),
-                  _vm._v(" "),
-                  _vm.homecontent.title.length != 0
-                    ? _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\n                                                          flex\n                                                          justify-evenly\n                                                          pl-3\n                                                          text-white\n                                                          bg-green-900\n                                                          mb-3\n                                                          border border-gray-600\n                                                        "
-                        },
-                        [
-                          _c(
-                            "span",
-                            { staticClass: "flex w-32 items-center" },
-                            [_vm._v(_vm._s(_vm.homecontent.title))]
-                          ),
-                          _vm._v(" "),
-                          _c("span", [
-                            _vm._v(_vm._s(_vm.homecontent.description))
-                          ])
-                        ]
-                      )
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
-                    _c("div", [
-                      _c(
-                        "div",
-                        { staticClass: "shadow overflow-hidden sm:rounded-md" },
-                        [
-                          _c(
-                            "div",
-                            { staticClass: "px-4 py-5 bg-gray-300 sm:p-6" },
-                            [
-                              _c(
-                                "label",
-                                {
-                                  staticClass:
-                                    "block text-sm font-medium text-gray-700",
-                                  attrs: { for: "name" }
-                                },
-                                [_vm._v("Titel")]
-                              ),
-                              _vm._v(" "),
-                              _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.formdata.homeContentTitle,
-                                    expression: "formdata.homeContentTitle"
-                                  }
-                                ],
-                                staticClass:
-                                  "\n                                                                  mt-1\n                                                                  focus:ring-green-500 focus:border-green-500\n                                                                  block\n                                                                  w-full\n                                                                  shadow-sm\n                                                                  sm:text-sm\n                                                                  border-gray-300\n                                                                  rounded-md\n                                                                ",
-                                attrs: {
-                                  maxlength: "45",
-                                  type: "text",
-                                  id: "news_titel",
-                                  placeholder: "Maximal 45 Zeichen",
-                                  autocomplete: "given-name"
-                                },
-                                domProps: {
-                                  value: _vm.formdata.homeContentTitle
-                                },
-                                on: {
-                                  input: function($event) {
-                                    if ($event.target.composing) {
-                                      return
-                                    }
-                                    _vm.$set(
-                                      _vm.formdata,
-                                      "homeContentTitle",
-                                      $event.target.value
-                                    )
-                                  }
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "col-span-6 sm:col-span-4" },
-                                [
-                                  _c(
-                                    "label",
-                                    {
-                                      staticClass:
-                                        "block text-sm font-medium text-gray-700",
-                                      attrs: { for: "email_address" }
-                                    },
-                                    [_vm._v("Beschreibung")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("textarea", {
-                                    directives: [
-                                      {
-                                        name: "model",
-                                        rawName: "v-model",
-                                        value:
-                                          _vm.formdata.homeContentDescription,
-                                        expression:
-                                          "formdata.homeContentDescription"
-                                      }
-                                    ],
-                                    staticClass:
-                                      "\n                                                                    mt-1\n                                                                    focus:ring-green-500 focus:border-green-500\n                                                                    block\n                                                                    w-full\n                                                                    shadow-sm\n                                                                    sm:text-sm\n                                                                    border-gray-300\n                                                                    rounded-md\n                                                                  ",
-                                    attrs: {
-                                      maxlength: "56",
-                                      id: "news_textfeld",
-                                      autocomplete: "Beschreibung",
-                                      placeholder:
-                                        "Wird unter dem Titel etwas kleiner eingefügt. Maximal 56 Zeichen"
-                                    },
-                                    domProps: {
-                                      value: _vm.formdata.homeContentDescription
-                                    },
-                                    on: {
-                                      input: function($event) {
-                                        if ($event.target.composing) {
-                                          return
-                                        }
-                                        _vm.$set(
-                                          _vm.formdata,
-                                          "homeContentDescription",
-                                          $event.target.value
-                                        )
-                                      }
-                                    }
-                                  })
-                                ]
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "\n                                                                flex\n                                                                justify-center\n                                                                px-4\n                                                                py-3\n                                                                bg-gray-600\n                                                                border-t-2 border-gray-800\n                                                                text-right\n                                                                sm:px-6\n                                                              "
-                            },
-                            [
-                              _c(
-                                "button",
-                                {
-                                  staticClass:
-                                    "\n                                                                  inline-flex\n                                                                  justify-center\n                                                                  py-2\n                                                                  px-4\n                                                                  border border-transparent\n                                                                  shadow-sm\n                                                                  text-sm\n                                                                  font-medium\n                                                                  rounded-md\n                                                                  text-white\n                                                                  bg-green-600\n                                                                  hover:bg-black\n                                                                  focus:outline-none\n                                                                  focus:ring-2\n                                                                  focus:ring-offset-2\n                                                                  focus:ring-green-500\n                                                                ",
-                                  attrs: { id: "submitbutton" },
-                                  on: { click: _vm.submitform }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                    Update\n                  "
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    ])
-                  ])
                 ])
               ])
-            ]
-          )
-        ])
-      : _vm._e()
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-gray-400 pb-3" }, [
-      _c(
-        "h3",
-        { staticClass: "text-lg font-medium leading-6 text-white pb-1" },
-        [_vm._v("\n              Startseite\n            ")]
-      ),
-      _vm._v(
-        '\n            Infotext, welcher direkt unter "Willkommen bei den\n            Haiminger Markttagen!" am Startscreen angezeigt wird. Zum Überschreiben\n            einfach neuen Titel oder Beschreibung eingeben.\n          '
+            ])
+          ])
+        ]
       )
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -45228,123 +43399,6 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/MobileMenu.vue?vue&type=template&id=96258c1a&scoped=true&":
-/*!**********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/MobileMenu.vue?vue&type=template&id=96258c1a&scoped=true& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "sm:hidden", attrs: { id: "mobile-menu" } }, [
-    _c(
-      "div",
-      { staticClass: "px-2 pt-2 pb-3 space-y-1" },
-      [
-        _c(
-          "div",
-          {
-            staticClass:
-              "\n                              bg-gray-900\n                              text-white\n                              block\n                              px-3\n                              py-1\n                              rounded-md\n                              text-base\n                              font-medium\n                            ",
-            attrs: { "aria-current": "page" }
-          },
-          [_vm._v("\n      Dashboard\n    ")]
-        ),
-        _vm._v(" "),
-        _c(
-          "router-link",
-          { attrs: { to: "/admin/dashboard/ausstelleruebersicht" } },
-          [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "\n                              text-gray-300\n                              hover:bg-gray-700\n                              hover:text-white\n                              block\n                              px-3\n                              py-1\n                              rounded-md\n                              text-base\n                              font-medium\n                            "
-              },
-              [_vm._v("\n        Aussteller\n      ")]
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "\n                              text-gray-300\n                              hover:bg-gray-700\n                              hover:text-white\n                              block\n                              px-3\n                              py-1\n                              rounded-md\n                              text-base\n                              font-medium\n                            "
-          },
-          [
-            _c("router-link", { attrs: { to: "/admin/dashboard/news" } }, [
-              _vm._v("News")
-            ])
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "\n                              text-gray-300\n                              hover:bg-gray-700\n                              hover:text-white\n                              block\n                              px-3\n                              py-1\n                              rounded-md\n                              text-base\n                              font-medium\n                            "
-          },
-          [
-            _c(
-              "router-link",
-              { attrs: { to: "/admin/dashboard/programmanlegen" } },
-              [_vm._v("\n        Programm")]
-            )
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "\n                              text-gray-300\n                              hover:bg-gray-700\n                              hover:text-white\n                              block\n                              px-3\n                              py-1\n                              rounded-md\n                              text-base\n                              font-medium\n                            "
-          },
-          [
-            _c(
-              "router-link",
-              { attrs: { to: "/admin/dashboard/editfotogalerie" } },
-              [_vm._v("Fotogalerie")]
-            )
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "\n                              text-gray-300\n                              hover:bg-gray-700\n                              hover:text-white\n                              block\n                              px-3\n                              py-1\n                              rounded-md\n                              text-base\n                              font-medium\n                            "
-          },
-          [
-            _c("router-link", { attrs: { to: "/admin/dashboard/hometext" } }, [
-              _vm._v("Home-Text")
-            ])
-          ],
-          1
-        )
-      ],
-      1
-    )
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/NewsAnlegen.vue?vue&type=template&id=4bdbf475&":
 /*!***********************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/NewsAnlegen.vue?vue&type=template&id=4bdbf475& ***!
@@ -45361,419 +43415,212 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "w-full h-full bg-gray-900" }, [
-    _vm.loggedIn
-      ? _c("div", { staticClass: "w-full" }, [
-          _c(
-            "nav",
-            { staticClass: "bg-gray-800 border-b border-gray-300" },
-            [
-              _c(
-                "div",
-                { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" },
-                [
+  return _c("DashboardLayout", [
+    _c("div", { staticClass: "w-full h-full bg-gray-900" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20"
+        },
+        [
+          _c("div", { staticClass: "mt-10 sm:mt-0" }, [
+            _c(
+              "div",
+              {},
+              [
+                _c("div", { staticClass: "text-gray-400 pb-3" }, [
                   _c(
-                    "div",
+                    "h3",
                     {
                       staticClass:
-                        "relative flex items-center justify-between h-16"
+                        "text-lg font-medium leading-6 text-white pb-1"
+                    },
+                    [_vm._v("\n              News anlegen\n            ")]
+                  ),
+                  _vm._v(
+                    "\n            Hier können Sie News Artikel schreiben, editieren und löschen. Folgende News-Titel sind momentan in der DB.\n          "
+                  )
+                ]),
+                _vm._v(" "),
+                _vm._l(_vm.news, function(jeweiligeNews, index) {
+                  return _c(
+                    "div",
+                    {
+                      key: index,
+                      staticClass:
+                        "\n                    flex\n                    justify-evenly\n                    pl-3\n                    text-white\n                    bg-green-900\n                    mb-3\n                    border border-gray-600\n                  "
                     },
                     [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute inset-y-0 left-0 flex items-center sm:hidden"
-                        },
-                        [
-                          _c("span", { staticClass: "sr-only" }, [
-                            _vm._v("Open main menu")
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "svg",
-                            {
-                              staticClass: "hidden h-6 w-6",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor",
-                                "aria-hidden": "true"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d: "M6 18L18 6M6 6l12 12"
-                                }
-                              })
-                            ]
-                          )
-                        ]
-                      ),
+                      _c("span", { staticClass: "flex w-32 items-center" }, [
+                        _vm._v(_vm._s(jeweiligeNews.news_titel))
+                      ]),
                       _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\n                    flex-1 flex\n                    items-center\n                    justify-center\n                    sm:items-stretch sm:justify-start\n                  "
-                        },
-                        [
-                          _c("div", {
-                            staticClass: "flex-shrink-0 flex items-center"
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "hidden sm:block sm:ml-6" },
-                            [
-                              _c(
-                                "div",
-                                { staticClass: "flex space-x-4" },
-                                [
-                                  _c(
-                                    "router-link",
-                                    {
-                                      attrs: {
-                                        to: "/admin/dashboard",
-                                        exact: ""
-                                      }
-                                    },
-                                    [
-                                      _c(
-                                        "span",
-                                        {
-                                          staticClass: "text-gray-500 text-lg"
-                                        },
-                                        [_vm._v("Dashboard")]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                          text-gray-300\n                          hover:bg-gray-700 hover:text-white\n                          px-3\n                          py-2\n                          rounded-md\n                          text-sm\n                          font-medium\n                        "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to:
-                                              "/admin/dashboard/ausstelleruebersicht"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Aussteller\n                  "
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                          text-gray-300\n                          hover:bg-gray-700 hover:text-white\n                          px-3\n                          py-2\n                          rounded-md\n                          text-sm\n                          font-medium\n                        ",
-                                      attrs: { "aria-current": "page" }
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: { to: "/admin/dashboard/news" }
-                                        },
-                                        [_vm._v("News")]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                          text-gray-300\n                          hover:bg-gray-700 hover:text-white\n                          px-3\n                          py-2\n                          rounded-md\n                          text-sm\n                          font-medium\n                        "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to:
-                                              "/admin/dashboard/programmanlegen"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                    Programm"
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                          text-gray-300\n                          hover:bg-gray-700 hover:text-white\n                          px-3\n                          py-2\n                          rounded-md\n                          text-sm\n                          font-medium\n                        "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to:
-                                              "/admin/dashboard/editfotogalerie"
-                                          }
-                                        },
-                                        [_vm._v("Fotogalerie")]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                              text-gray-300\n                              hover:bg-gray-700\n                              hover:text-white\n                              px-3\n                              py-2\n                              rounded-md\n                              text-sm\n                              font-medium\n                            "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to: "/admin/dashboard/hometext"
-                                          }
-                                        },
-                                        [_vm._v("Home-Text")]
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\n                    absolute\n                    inset-y-0\n                    right-0\n                    flex\n                    items-center\n                    pr-2\n                    sm:static sm:inset-auto sm:ml-6 sm:pr-0\n                  "
-                        },
-                        [
-                          _c(
+                      _vm.fotoEnthalten(index)
+                        ? _c("img", {
+                            staticClass:
+                              "w-20 h-20 border border-gray-50 rounded-lg my-2",
+                            attrs: { src: _vm.urlOfFoto(index), alt: "Foto" }
+                          })
+                        : _c(
                             "div",
                             {
                               staticClass:
-                                "\n                      text-gray-300\n                      hover:bg-red-900 hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
+                                "flex w-20 h-20 justify-center items-center"
                             },
-                            [
-                              _c(
-                                "span",
-                                {
-                                  staticClass: "text-white cursor-pointer",
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.handleLogout()
-                                    }
-                                  }
-                                },
-                                [_vm._v("Logout\n              ")]
-                              )
-                            ]
+                            [_vm._v("\n              Kein Foto\n            ")]
+                          ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "flex justify-center items-center gap-3"
+                        },
+                        [
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "bg-gray-400 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded",
+                              attrs: { "key:index": "" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.toggleEditPopup(index)
+                                }
+                              }
+                            },
+                            [_vm._v("\n                edit\n              ")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded",
+                              attrs: { "key:index": "" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.deleteNews(index)
+                                }
+                              }
+                            },
+                            [_vm._v("\n                delete\n              ")]
                           )
                         ]
                       )
                     ]
                   )
-                ]
-              ),
-              _vm._v(" "),
-              _c("MobileMenu")
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20"
-            },
-            [
-              _c("div", { staticClass: "mt-10 sm:mt-0" }, [
-                _c(
-                  "div",
-                  {},
-                  [
-                    _vm._m(0),
-                    _vm._v(" "),
-                    _vm._l(_vm.news, function(jeweiligeNews, index) {
-                      return _c(
-                        "div",
-                        {
-                          key: index,
-                          staticClass:
-                            "\n                    flex\n                    justify-evenly\n                    pl-3\n                    text-white\n                    bg-green-900\n                    mb-3\n                    border border-gray-600\n                  "
-                        },
-                        [
-                          _c(
-                            "span",
-                            { staticClass: "flex w-32 items-center" },
-                            [_vm._v(_vm._s(jeweiligeNews.news_titel))]
-                          ),
-                          _vm._v(" "),
-                          _vm.fotoEnthalten(index)
-                            ? _c("img", {
-                                staticClass:
-                                  "w-20 h-20 border border-gray-50 rounded-lg my-2",
-                                attrs: {
-                                  src: _vm.urlOfFoto(index),
-                                  alt: "Foto"
-                                }
-                              })
-                            : _c(
-                                "div",
-                                {
-                                  staticClass:
-                                    "flex w-20 h-20 justify-center items-center"
-                                },
-                                [
-                                  _vm._v(
-                                    "\n              Kein Foto\n            "
-                                  )
-                                ]
-                              ),
-                          _vm._v(" "),
+                }),
+                _vm._v(" "),
+                _vm.showEditPopup
+                  ? _c("div", { staticClass: "popup-overlay" }, [
+                      _c("div", { staticClass: "popup" }, [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "close-btn",
+                            on: {
+                              click: function($event) {
+                                return _vm.closeEditPopup()
+                              }
+                            }
+                          },
+                          [_vm._v("×")]
+                        ),
+                        _vm._v(" "),
+                        _c("div", [
                           _c(
                             "div",
                             {
                               staticClass:
-                                "flex justify-center items-center gap-3"
+                                "shadow overflow-hidden sm:rounded-md"
                             },
                             [
                               _c(
-                                "button",
-                                {
-                                  staticClass:
-                                    "bg-gray-400 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded",
-                                  attrs: { "key:index": "" },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.toggleEditPopup(index)
-                                    }
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                edit\n              "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "button",
-                                {
-                                  staticClass:
-                                    "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded",
-                                  attrs: { "key:index": "" },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.deleteNews(index)
-                                    }
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                delete\n              "
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    }),
-                    _vm._v(" "),
-                    _vm.showEditPopup
-                      ? _c("div", { staticClass: "popup-overlay" }, [
-                          _c("div", { staticClass: "popup" }, [
-                            _c(
-                              "button",
-                              {
-                                staticClass: "close-btn",
-                                on: {
-                                  click: function($event) {
-                                    return _vm.closeEditPopup()
-                                  }
-                                }
-                              },
-                              [_vm._v("×")]
-                            ),
-                            _vm._v(" "),
-                            _c("div", [
-                              _c(
                                 "div",
-                                {
-                                  staticClass:
-                                    "shadow overflow-hidden sm:rounded-md"
-                                },
+                                { staticClass: "px-4 py-5 bg-gray-300 sm:p-6" },
                                 [
                                   _c(
-                                    "div",
+                                    "label",
                                     {
                                       staticClass:
-                                        "px-4 py-5 bg-gray-300 sm:p-6"
+                                        "block text-sm font-medium text-gray-700",
+                                      attrs: { for: "name" }
                                     },
+                                    [_vm._v("News-Titel")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.formdataEdit.news_titel,
+                                        expression: "formdataEdit.news_titel"
+                                      }
+                                    ],
+                                    staticClass:
+                                      "\n                            mt-1\n                            focus:ring-green-500 focus:border-green-500\n                            block\n                            w-full\n                            shadow-sm\n                            sm:text-sm\n                            border-gray-300\n                            rounded-md\n                          ",
+                                    attrs: {
+                                      maxlength: "70",
+                                      type: "text",
+                                      id: "news_titel",
+                                      placeholder: "Pflichtfeld",
+                                      autocomplete: "given-name"
+                                    },
+                                    domProps: {
+                                      value: _vm.formdataEdit.news_titel
+                                    },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.formdataEdit,
+                                          "news_titel",
+                                          $event.target.value
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "col-span-6 sm:col-span-4" },
                                     [
                                       _c(
                                         "label",
                                         {
                                           staticClass:
                                             "block text-sm font-medium text-gray-700",
-                                          attrs: { for: "name" }
+                                          attrs: { for: "email_address" }
                                         },
-                                        [_vm._v("News-Titel")]
+                                        [_vm._v("News-Textinhalt")]
                                       ),
                                       _vm._v(" "),
-                                      _c("input", {
+                                      _c("textarea", {
                                         directives: [
                                           {
                                             name: "model",
                                             rawName: "v-model",
-                                            value: _vm.formdataEdit.news_titel,
+                                            value:
+                                              _vm.formdataEdit.news_textfeld,
                                             expression:
-                                              "formdataEdit.news_titel"
+                                              "formdataEdit.news_textfeld"
                                           }
                                         ],
                                         staticClass:
-                                          "\n                            mt-1\n                            focus:ring-green-500 focus:border-green-500\n                            block\n                            w-full\n                            shadow-sm\n                            sm:text-sm\n                            border-gray-300\n                            rounded-md\n                          ",
+                                          "\n                              mt-1\n                              focus:ring-green-500 focus:border-green-500\n                              block\n                              w-full\n                              shadow-sm\n                              sm:text-sm\n                              border-gray-300\n                              rounded-md\n                            ",
                                         attrs: {
-                                          maxlength: "70",
-                                          type: "text",
-                                          id: "news_titel",
-                                          placeholder: "Pflichtfeld",
-                                          autocomplete: "given-name"
+                                          maxlength: "2000",
+                                          id: "news_textfeld",
+                                          autocomplete: "Beschreibung",
+                                          placeholder:
+                                            "Pflichtfeld. [Inhalt der News, wird unter dem Titel eingefügt] Maximal 2000 Zeichen"
                                         },
                                         domProps: {
-                                          value: _vm.formdataEdit.news_titel
+                                          value: _vm.formdataEdit.news_textfeld
                                         },
                                         on: {
                                           input: function($event) {
@@ -45782,162 +43629,96 @@ var render = function() {
                                             }
                                             _vm.$set(
                                               _vm.formdataEdit,
-                                              "news_titel",
+                                              "news_textfeld",
                                               $event.target.value
                                             )
                                           }
                                         }
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "py-2 bg-green-900 text-white mb-1 px-2 text-center"
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                      Aktuelles Foto\n                      "
+                                      ),
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex justify-center" },
+                                        [
+                                          _vm.formdataEdit.news_bild_url
+                                            ? _c("img", {
+                                                staticClass:
+                                                  "w-20 h-20 border border-gray-50 rounded-lg my-2",
+                                                attrs: {
+                                                  src: _vm.formdataEditBildUrl(),
+                                                  alt: "Foto"
+                                                }
+                                              })
+                                            : _vm._e()
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "alert" }, [
+                                        _c(
+                                          "span",
+                                          {
+                                            staticClass: "closebtn",
+                                            attrs: {
+                                              onclick:
+                                                "this.parentElement.style.display='none';"
+                                            }
+                                          },
+                                          [_vm._v("×")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("strong", [_vm._v("Achtung!")]),
+                                        _vm._v(
+                                          " Maximale Filesize: 1.9MB\n                        "
+                                        ),
+                                        _c("br"),
+                                        _vm._v(
+                                          "\n                        Bsp: newsbildname.jpg oder newsbildname.png\n                      "
+                                        )
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "form",
+                                    {
+                                      staticClass:
+                                        "flex items-center justify-center mt-3",
+                                      on: {
+                                        submit: function($event) {
+                                          $event.preventDefault()
+                                          return _vm.uploadFromEdit($event)
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c("input", {
+                                        staticClass: "text-xs sm:text-base",
+                                        attrs: { type: "file" },
+                                        on: { change: _vm.handleOnChange }
                                       }),
                                       _vm._v(" "),
                                       _c(
-                                        "div",
+                                        "button",
                                         {
                                           staticClass:
-                                            "col-span-6 sm:col-span-4"
-                                        },
-                                        [
-                                          _c(
-                                            "label",
-                                            {
-                                              staticClass:
-                                                "block text-sm font-medium text-gray-700",
-                                              attrs: { for: "email_address" }
-                                            },
-                                            [_vm._v("News-Textinhalt")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c("textarea", {
-                                            directives: [
-                                              {
-                                                name: "model",
-                                                rawName: "v-model",
-                                                value:
-                                                  _vm.formdataEdit
-                                                    .news_textfeld,
-                                                expression:
-                                                  "formdataEdit.news_textfeld"
-                                              }
-                                            ],
-                                            staticClass:
-                                              "\n                              mt-1\n                              focus:ring-green-500 focus:border-green-500\n                              block\n                              w-full\n                              shadow-sm\n                              sm:text-sm\n                              border-gray-300\n                              rounded-md\n                            ",
-                                            attrs: {
-                                              maxlength: "2000",
-                                              id: "news_textfeld",
-                                              autocomplete: "Beschreibung",
-                                              placeholder:
-                                                "Pflichtfeld. [Inhalt der News, wird unter dem Titel eingefügt] Maximal 2000 Zeichen"
-                                            },
-                                            domProps: {
-                                              value:
-                                                _vm.formdataEdit.news_textfeld
-                                            },
-                                            on: {
-                                              input: function($event) {
-                                                if ($event.target.composing) {
-                                                  return
-                                                }
-                                                _vm.$set(
-                                                  _vm.formdataEdit,
-                                                  "news_textfeld",
-                                                  $event.target.value
-                                                )
-                                              }
-                                            }
-                                          })
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "py-2 bg-green-900 text-white mb-1 px-2 text-center"
+                                            "\n                              bg-green-900\n                              text-xs\n                              sm:text-base\n                              p-1\n                              text-white\n                              border border-green-600\n                              rounded-md\n                              hover:bg-green-500\n                            ",
+                                          on: { click: _vm.showSubmitButton }
                                         },
                                         [
                                           _vm._v(
-                                            "\n                      Aktuelles Foto\n                      "
-                                          ),
-                                          _c(
-                                            "div",
-                                            {
-                                              staticClass: "flex justify-center"
-                                            },
-                                            [
-                                              _vm.formdataEdit.news_bild_url
-                                                ? _c("img", {
-                                                    staticClass:
-                                                      "w-20 h-20 border border-gray-50 rounded-lg my-2",
-                                                    attrs: {
-                                                      src: _vm.formdataEditBildUrl(),
-                                                      alt: "Foto"
-                                                    }
-                                                  })
-                                                : _vm._e()
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _vm._m(1)
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "form",
-                                        {
-                                          staticClass:
-                                            "flex items-center justify-center mt-3",
-                                          on: {
-                                            submit: function($event) {
-                                              $event.preventDefault()
-                                              return _vm.uploadFromEdit($event)
-                                            }
-                                          }
-                                        },
-                                        [
-                                          _c("input", {
-                                            staticClass: "text-xs sm:text-base",
-                                            attrs: { type: "file" },
-                                            on: { change: _vm.handleOnChange }
-                                          }),
-                                          _vm._v(" "),
-                                          _c(
-                                            "button",
-                                            {
-                                              staticClass:
-                                                "\n                              bg-green-900\n                              text-xs\n                              sm:text-base\n                              p-1\n                              text-white\n                              border border-green-600\n                              rounded-md\n                              hover:bg-green-500\n                            ",
-                                              on: {
-                                                click: _vm.showSubmitButton
-                                              }
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                        Upload photo\n                      "
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "flex items-center justify-center"
-                                        },
-                                        [
-                                          _c(
-                                            "button",
-                                            {
-                                              staticClass:
-                                                "\n                              bg-green-900\n                              text-xs\n                              sm:text-base\n                              p-1\n                              mt-2\n                              text-white\n                              border border-green-600\n                              rounded-md\n                              hover:bg-green-500\n                            ",
-                                              on: {
-                                                click: _vm.showSubmitButton
-                                              }
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                        Kein News-Foto uploaden\n                      "
-                                              )
-                                            ]
+                                            "\n                        Upload photo\n                      "
                                           )
                                         ]
                                       )
@@ -45948,327 +43729,298 @@ var render = function() {
                                     "div",
                                     {
                                       staticClass:
-                                        "\n                          flex\n                          justify-center\n                          px-4\n                          py-3\n                          bg-gray-600\n                          border-t-2 border-gray-800\n                          text-right\n                          sm:px-6\n                        "
+                                        "flex items-center justify-center"
                                     },
                                     [
                                       _c(
                                         "button",
                                         {
                                           staticClass:
-                                            "\n                            inline-flex\n                            justify-center\n                            py-2\n                            px-4\n                            border border-transparent\n                            shadow-sm\n                            text-sm\n                            font-medium\n                            rounded-md\n                            text-white\n                            bg-green-600\n                            hover:bg-black\n                            focus:outline-none\n                            focus:ring-2\n                            focus:ring-offset-2\n                            focus:ring-green-500\n                          ",
-                                          attrs: { id: "submitbutton" },
-                                          on: { click: _vm.update }
+                                            "\n                              bg-green-900\n                              text-xs\n                              sm:text-base\n                              p-1\n                              mt-2\n                              text-white\n                              border border-green-600\n                              rounded-md\n                              hover:bg-green-500\n                            ",
+                                          on: { click: _vm.showSubmitButton }
                                         },
                                         [
                                           _vm._v(
-                                            "\n                      In DB Speichern\n                    "
+                                            "\n                        Kein News-Foto uploaden\n                      "
                                           )
                                         ]
                                       )
                                     ]
                                   )
                                 ]
-                              )
-                            ])
-                          ])
-                        ])
-                      : _vm._e(),
-                    _vm._v(" "),
-                    !_vm.showEditPopup
-                      ? _c(
-                          "div",
-                          { staticClass: "mt-5 md:mt-0 md:col-span-2" },
-                          [
-                            _c("div", [
+                              ),
+                              _vm._v(" "),
                               _c(
                                 "div",
                                 {
                                   staticClass:
-                                    "shadow overflow-hidden sm:rounded-md"
+                                    "\n                          flex\n                          justify-center\n                          px-4\n                          py-3\n                          bg-gray-600\n                          border-t-2 border-gray-800\n                          text-right\n                          sm:px-6\n                        "
                                 },
                                 [
                                   _c(
-                                    "div",
+                                    "button",
                                     {
                                       staticClass:
-                                        "px-4 py-5 bg-gray-300 sm:p-6"
+                                        "\n                            inline-flex\n                            justify-center\n                            py-2\n                            px-4\n                            border border-transparent\n                            shadow-sm\n                            text-sm\n                            font-medium\n                            rounded-md\n                            text-white\n                            bg-green-600\n                            hover:bg-black\n                            focus:outline-none\n                            focus:ring-2\n                            focus:ring-offset-2\n                            focus:ring-green-500\n                          ",
+                                      attrs: { id: "submitbutton" },
+                                      on: { click: _vm.update }
                                     },
                                     [
-                                      _c(
-                                        "label",
-                                        {
-                                          staticClass:
-                                            "block text-sm font-medium text-gray-700",
-                                          attrs: { for: "name" }
-                                        },
-                                        [_vm._v("Neuer News-Titel")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("input", {
-                                        directives: [
-                                          {
-                                            name: "model",
-                                            rawName: "v-model",
-                                            value: _vm.formdata.news_titel,
-                                            expression: "formdata.news_titel"
-                                          }
-                                        ],
-                                        staticClass:
-                                          "\n                            mt-1\n                            focus:ring-green-500 focus:border-green-500\n                            block\n                            w-full\n                            shadow-sm\n                            sm:text-sm\n                            border-gray-300\n                            rounded-md\n                          ",
-                                        attrs: {
-                                          maxlength: "70",
-                                          type: "text",
-                                          id: "news_titel",
-                                          placeholder: "Pflichtfeld",
-                                          autocomplete: "given-name"
-                                        },
-                                        domProps: {
-                                          value: _vm.formdata.news_titel
-                                        },
-                                        on: {
-                                          input: function($event) {
-                                            if ($event.target.composing) {
-                                              return
-                                            }
-                                            _vm.$set(
-                                              _vm.formdata,
-                                              "news_titel",
-                                              $event.target.value
-                                            )
-                                          }
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "col-span-6 sm:col-span-4"
-                                        },
-                                        [
-                                          _c(
-                                            "label",
-                                            {
-                                              staticClass:
-                                                "block text-sm font-medium text-gray-700",
-                                              attrs: { for: "email_address" }
-                                            },
-                                            [_vm._v("News-Textinhalt")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c("textarea", {
-                                            directives: [
-                                              {
-                                                name: "model",
-                                                rawName: "v-model",
-                                                value:
-                                                  _vm.formdata.news_textfeld,
-                                                expression:
-                                                  "formdata.news_textfeld"
-                                              }
-                                            ],
-                                            staticClass:
-                                              "\n                              mt-1\n                              focus:ring-green-500 focus:border-green-500\n                              block\n                              w-full\n                              shadow-sm\n                              sm:text-sm\n                              border-gray-300\n                              rounded-md\n                            ",
-                                            attrs: {
-                                              maxlength: "2000",
-                                              id: "news_textfeld",
-                                              autocomplete: "Beschreibung",
-                                              placeholder:
-                                                "Pflichtfeld. [Inhalt der News, wird unter dem Titel eingefügt] Maximal 2000 Zeichen"
-                                            },
-                                            domProps: {
-                                              value: _vm.formdata.news_textfeld
-                                            },
-                                            on: {
-                                              input: function($event) {
-                                                if ($event.target.composing) {
-                                                  return
-                                                }
-                                                _vm.$set(
-                                                  _vm.formdata,
-                                                  "news_textfeld",
-                                                  $event.target.value
-                                                )
-                                              }
-                                            }
-                                          })
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _vm._m(2),
-                                      _vm._v(" "),
-                                      _c(
-                                        "form",
-                                        {
-                                          staticClass:
-                                            "flex items-center justify-center mt-3",
-                                          on: {
-                                            submit: function($event) {
-                                              $event.preventDefault()
-                                              return _vm.upload($event)
-                                            }
-                                          }
-                                        },
-                                        [
-                                          _c("input", {
-                                            staticClass: "text-xs sm:text-base",
-                                            attrs: { type: "file" },
-                                            on: { change: _vm.handleOnChange }
-                                          }),
-                                          _vm._v(" "),
-                                          _c(
-                                            "button",
-                                            {
-                                              staticClass:
-                                                "\n                              bg-green-900\n                              text-xs\n                              sm:text-base\n                              p-1\n                              text-white\n                              border border-green-600\n                              rounded-md\n                              hover:bg-green-500\n                            ",
-                                              on: {
-                                                click: _vm.showSubmitButton
-                                              }
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                      Upload photo\n                    "
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "flex items-center justify-center"
-                                        },
-                                        [
-                                          _c(
-                                            "button",
-                                            {
-                                              staticClass:
-                                                "\n                              bg-green-900\n                              text-xs\n                              sm:text-base\n                              p-1\n                              mt-2\n                              text-white\n                              border border-green-600\n                              rounded-md\n                              hover:bg-green-500\n                            ",
-                                              on: {
-                                                click: _vm.showSubmitButton
-                                              }
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                      Kein News-Foto uploaden\n                    "
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                          flex\n                          justify-center\n                          px-4\n                          py-3\n                          bg-gray-600\n                          border-t-2 border-gray-800\n                          text-right\n                          sm:px-6\n                        "
-                                    },
-                                    [
-                                      _c(
-                                        "button",
-                                        {
-                                          staticClass:
-                                            "\n                            inline-flex\n                            justify-center\n                            py-2\n                            px-4\n                            border border-transparent\n                            shadow-sm\n                            text-sm\n                            font-medium\n                            rounded-md\n                            text-white\n                            bg-green-600\n                            hover:bg-black\n                            focus:outline-none\n                            focus:ring-2\n                            focus:ring-offset-2\n                            focus:ring-green-500\n                          ",
-                                          class: _vm.submitvisibility,
-                                          attrs: { id: "submitbutton" },
-                                          on: { click: _vm.submitform }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                    In DB Speichern\n                  "
-                                          )
-                                        ]
+                                      _vm._v(
+                                        "\n                      In DB Speichern\n                    "
                                       )
                                     ]
                                   )
                                 ]
                               )
-                            ])
+                            ]
+                          )
+                        ])
+                      ])
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                !_vm.showEditPopup
+                  ? _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
+                      _c("div", [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "shadow overflow-hidden sm:rounded-md"
+                          },
+                          [
+                            _c(
+                              "div",
+                              { staticClass: "px-4 py-5 bg-gray-300 sm:p-6" },
+                              [
+                                _c(
+                                  "label",
+                                  {
+                                    staticClass:
+                                      "block text-sm font-medium text-gray-700",
+                                    attrs: { for: "name" }
+                                  },
+                                  [_vm._v("Neuer News-Titel")]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.formdata.news_titel,
+                                      expression: "formdata.news_titel"
+                                    }
+                                  ],
+                                  staticClass:
+                                    "\n                            mt-1\n                            focus:ring-green-500 focus:border-green-500\n                            block\n                            w-full\n                            shadow-sm\n                            sm:text-sm\n                            border-gray-300\n                            rounded-md\n                          ",
+                                  attrs: {
+                                    maxlength: "70",
+                                    type: "text",
+                                    id: "news_titel",
+                                    placeholder: "Pflichtfeld",
+                                    autocomplete: "given-name"
+                                  },
+                                  domProps: { value: _vm.formdata.news_titel },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.formdata,
+                                        "news_titel",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "col-span-6 sm:col-span-4" },
+                                  [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass:
+                                          "block text-sm font-medium text-gray-700",
+                                        attrs: { for: "email_address" }
+                                      },
+                                      [_vm._v("News-Textinhalt")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("textarea", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.formdata.news_textfeld,
+                                          expression: "formdata.news_textfeld"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "\n                              mt-1\n                              focus:ring-green-500 focus:border-green-500\n                              block\n                              w-full\n                              shadow-sm\n                              sm:text-sm\n                              border-gray-300\n                              rounded-md\n                            ",
+                                      attrs: {
+                                        maxlength: "2000",
+                                        id: "news_textfeld",
+                                        autocomplete: "Beschreibung",
+                                        placeholder:
+                                          "Pflichtfeld. [Inhalt der News, wird unter dem Titel eingefügt] Maximal 2000 Zeichen"
+                                      },
+                                      domProps: {
+                                        value: _vm.formdata.news_textfeld
+                                      },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.formdata,
+                                            "news_textfeld",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-2 bg-green-900 text-white mb-1 px-2"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                    Foto Upload\n                    "
+                                    ),
+                                    _c("div", { staticClass: "alert" }, [
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass: "closebtn",
+                                          attrs: {
+                                            onclick:
+                                              "this.parentElement.style.display='none';"
+                                          }
+                                        },
+                                        [_vm._v("×")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("strong", [_vm._v("Achtung!")]),
+                                      _vm._v(
+                                        " Maximale Filesize: 1.9MB\n                      "
+                                      ),
+                                      _c("br"),
+                                      _vm._v(
+                                        "\n                      Bsp: newsbildname.jpg oder newsbildname.png\n                    "
+                                      )
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "form",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-center mt-3",
+                                    on: {
+                                      submit: function($event) {
+                                        $event.preventDefault()
+                                        return _vm.upload($event)
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("input", {
+                                      staticClass: "text-xs sm:text-base",
+                                      attrs: { type: "file" },
+                                      on: { change: _vm.handleOnChange }
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass:
+                                          "\n                              bg-green-900\n                              text-xs\n                              sm:text-base\n                              p-1\n                              text-white\n                              border border-green-600\n                              rounded-md\n                              hover:bg-green-500\n                            ",
+                                        on: { click: _vm.showSubmitButton }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                      Upload photo\n                    "
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-center"
+                                  },
+                                  [
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass:
+                                          "\n                              bg-green-900\n                              text-xs\n                              sm:text-base\n                              p-1\n                              mt-2\n                              text-white\n                              border border-green-600\n                              rounded-md\n                              hover:bg-green-500\n                            ",
+                                        on: { click: _vm.showSubmitButton }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                      Kein News-Foto uploaden\n                    "
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "\n                          flex\n                          justify-center\n                          px-4\n                          py-3\n                          bg-gray-600\n                          border-t-2 border-gray-800\n                          text-right\n                          sm:px-6\n                        "
+                              },
+                              [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass:
+                                      "\n                            inline-flex\n                            justify-center\n                            py-2\n                            px-4\n                            border border-transparent\n                            shadow-sm\n                            text-sm\n                            font-medium\n                            rounded-md\n                            text-white\n                            bg-green-600\n                            hover:bg-black\n                            focus:outline-none\n                            focus:ring-2\n                            focus:ring-offset-2\n                            focus:ring-green-500\n                          ",
+                                    class: _vm.submitvisibility,
+                                    attrs: { id: "submitbutton" },
+                                    on: { click: _vm.submitform }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                    In DB Speichern\n                  "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
                           ]
                         )
-                      : _vm._e()
-                  ],
-                  2
-                )
-              ])
-            ]
-          )
-        ])
-      : _vm._e()
+                      ])
+                    ])
+                  : _vm._e()
+              ],
+              2
+            )
+          ])
+        ]
+      )
+    ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-gray-400 pb-3" }, [
-      _c(
-        "h3",
-        { staticClass: "text-lg font-medium leading-6 text-white pb-1" },
-        [_vm._v("\n              News anlegen\n            ")]
-      ),
-      _vm._v(
-        "\n            Hier können Sie News Artikel schreiben, editieren und löschen. Folgende News-Titel sind momentan in der DB.\n          "
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "alert" }, [
-      _c(
-        "span",
-        {
-          staticClass: "closebtn",
-          attrs: { onclick: "this.parentElement.style.display='none';" }
-        },
-        [_vm._v("×")]
-      ),
-      _vm._v(" "),
-      _c("strong", [_vm._v("Achtung!")]),
-      _vm._v(" Maximale Filesize: 1.9MB\n                        "),
-      _c("br"),
-      _vm._v(
-        "\n                        Bsp: newsbildname.jpg oder newsbildname.png\n                      "
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "py-2 bg-green-900 text-white mb-1 px-2" },
-      [
-        _vm._v("\n                    Foto Upload\n                    "),
-        _c("div", { staticClass: "alert" }, [
-          _c(
-            "span",
-            {
-              staticClass: "closebtn",
-              attrs: { onclick: "this.parentElement.style.display='none';" }
-            },
-            [_vm._v("×")]
-          ),
-          _vm._v(" "),
-          _c("strong", [_vm._v("Achtung!")]),
-          _vm._v(" Maximale Filesize: 1.9MB\n                      "),
-          _c("br"),
-          _vm._v(
-            "\n                      Bsp: newsbildname.jpg oder newsbildname.png\n                    "
-          )
-        ])
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -46291,423 +44043,220 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "w-full h-full bg-gray-900" }, [
-    _vm.loggedIn
-      ? _c("div", { staticClass: "w-full" }, [
-          _c(
-            "nav",
-            { staticClass: "bg-gray-800 border-b border-gray-300" },
-            [
-              _c(
-                "div",
-                { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" },
-                [
+  return _c("DashboardLayout", { attrs: { path: "programmanlegen" } }, [
+    _c("div", { staticClass: "w-full h-full bg-gray-900" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20"
+        },
+        [
+          _c("div", { staticClass: "mt-10 sm:mt-0" }, [
+            _c(
+              "div",
+              {},
+              [
+                _c("div", { staticClass: "text-gray-400 pb-3" }, [
                   _c(
-                    "div",
+                    "h3",
                     {
                       staticClass:
-                        "relative flex items-center justify-between h-16"
+                        "text-lg font-medium leading-6 text-white pb-1"
                     },
                     [
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "absolute inset-y-0 left-0 flex items-center sm:hidden"
-                        },
-                        [
-                          _c("span", { staticClass: "sr-only" }, [
-                            _vm._v("Open main menu")
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "svg",
-                            {
-                              staticClass: "hidden h-6 w-6",
-                              attrs: {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor",
-                                "aria-hidden": "true"
-                              }
-                            },
-                            [
-                              _c("path", {
-                                attrs: {
-                                  "stroke-linecap": "round",
-                                  "stroke-linejoin": "round",
-                                  "stroke-width": "2",
-                                  d: "M6 18L18 6M6 6l12 12"
-                                }
-                              })
-                            ]
-                          )
-                        ]
-                      ),
+                      _vm._v(
+                        "\n              Tagesprogramm anlegen oder löschen.\n            "
+                      )
+                    ]
+                  ),
+                  _vm._v(
+                    "\n            Hier können Sie ein neues Tagesprogramm verfassen oder ein\n            bestehendes bearbeiten, sowie löschen.\n          "
+                  )
+                ]),
+                _vm._v(" "),
+                _vm._l(_vm.programmArray, function(jeweiligesProgramm, index) {
+                  return _c(
+                    "div",
+                    {
+                      key: index,
+                      staticClass:
+                        "\n                    flex\n                    justify-evenly\n                    pl-3\n                    text-white\n                    bg-green-900\n                    mb-3\n                    border border-gray-600\n                  "
+                    },
+                    [
+                      _c("span", { staticClass: "flex w-32 items-center" }, [
+                        _vm._v(_vm._s(jeweiligesProgramm.programm_titel))
+                      ]),
                       _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\n                    flex-1 flex\n                    items-center\n                    justify-center\n                    sm:items-stretch sm:justify-start\n                  "
-                        },
-                        [
-                          _c("div", {
-                            staticClass: "flex-shrink-0 flex items-center"
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "hidden sm:block sm:ml-6" },
-                            [
-                              _c(
-                                "div",
-                                { staticClass: "flex space-x-4" },
-                                [
-                                  _c(
-                                    "router-link",
-                                    {
-                                      attrs: {
-                                        to: "/admin/dashboard",
-                                        exact: ""
-                                      }
-                                    },
-                                    [
-                                      _c(
-                                        "span",
-                                        {
-                                          staticClass: "text-gray-500 text-lg"
-                                        },
-                                        [_vm._v("Dashboard")]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                          text-gray-300\n                          hover:bg-gray-700 hover:text-white\n                          px-3\n                          py-2\n                          rounded-md\n                          text-sm\n                          font-medium\n                        "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to:
-                                              "/admin/dashboard/ausstelleruebersicht"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "Aussteller\n                  "
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                          text-gray-300\n                          hover:bg-gray-700 hover:text-white\n                          px-3\n                          py-2\n                          rounded-md\n                          text-sm\n                          font-medium\n                        "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: { to: "/admin/dashboard/news" }
-                                        },
-                                        [_vm._v("News")]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                          text-gray-300\n                          hover:bg-gray-700 hover:text-white\n                          px-3\n                          py-2\n                          rounded-md\n                          text-sm\n                          font-medium\n                        ",
-                                      attrs: { "aria-current": "page" }
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to:
-                                              "/admin/dashboard/programmanlegen"
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                    Programm"
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                          text-gray-300\n                          hover:bg-gray-700 hover:text-white\n                          px-3\n                          py-2\n                          rounded-md\n                          text-sm\n                          font-medium\n                        "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to:
-                                              "/admin/dashboard/editfotogalerie"
-                                          }
-                                        },
-                                        [_vm._v("Fotogalerie")]
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                              text-gray-300\n                              hover:bg-gray-700\n                              hover:text-white\n                              px-3\n                              py-2\n                              rounded-md\n                              text-sm\n                              font-medium\n                            "
-                                    },
-                                    [
-                                      _c(
-                                        "router-link",
-                                        {
-                                          attrs: {
-                                            to: "/admin/dashboard/hometext"
-                                          }
-                                        },
-                                        [_vm._v("Home-Text")]
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass:
-                            "\n                    absolute\n                    inset-y-0\n                    right-0\n                    flex\n                    items-center\n                    pr-2\n                    sm:static sm:inset-auto sm:ml-6 sm:pr-0\n                  "
-                        },
-                        [
-                          _c(
+                      _vm.fotoEnthalten(index)
+                        ? _c("img", {
+                            staticClass:
+                              "w-20 h-20 border border-gray-50 rounded-lg my-2",
+                            attrs: { src: _vm.urlOfFoto(index), alt: "Foto" }
+                          })
+                        : _c(
                             "div",
                             {
                               staticClass:
-                                "\n                      text-gray-300\n                      hover:bg-red-900 hover:text-white\n                      px-3\n                      py-2\n                      rounded-md\n                      text-sm\n                      font-medium\n                    "
+                                "flex w-20 h-20 justify-center items-center"
                             },
-                            [
-                              _c(
-                                "span",
-                                {
-                                  staticClass: "text-white cursor-pointer",
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.handleLogout()
-                                    }
-                                  }
-                                },
-                                [_vm._v("Logout\n              ")]
-                              )
-                            ]
+                            [_vm._v("\n              Kein Foto\n            ")]
+                          ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "flex justify-center items-center gap-3"
+                        },
+                        [
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "bg-gray-400 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded",
+                              attrs: { "key:index": "" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.toggleEditPopup(index)
+                                }
+                              }
+                            },
+                            [_vm._v("\n                edit\n              ")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded",
+                              attrs: { "key:index": "" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.deleteProgramm(index)
+                                }
+                              }
+                            },
+                            [_vm._v("\n                delete\n              ")]
                           )
                         ]
                       )
                     ]
                   )
-                ]
-              ),
-              _vm._v(" "),
-              _c("MobileMenu")
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "bg-gray-800 flex flex-col justify-evenly p-4 md:p-10 lg:p-20"
-            },
-            [
-              _c("div", { staticClass: "mt-10 sm:mt-0" }, [
-                _c(
-                  "div",
-                  {},
-                  [
-                    _vm._m(0),
-                    _vm._v(" "),
-                    _vm._l(_vm.programmArray, function(
-                      jeweiligesProgramm,
-                      index
-                    ) {
-                      return _c(
-                        "div",
-                        {
-                          key: index,
-                          staticClass:
-                            "\n                    flex\n                    justify-evenly\n                    pl-3\n                    text-white\n                    bg-green-900\n                    mb-3\n                    border border-gray-600\n                  "
-                        },
-                        [
-                          _c(
-                            "span",
-                            { staticClass: "flex w-32 items-center" },
-                            [_vm._v(_vm._s(jeweiligesProgramm.programm_titel))]
-                          ),
-                          _vm._v(" "),
-                          _vm.fotoEnthalten(index)
-                            ? _c("img", {
-                                staticClass:
-                                  "w-20 h-20 border border-gray-50 rounded-lg my-2",
-                                attrs: {
-                                  src: _vm.urlOfFoto(index),
-                                  alt: "Foto"
-                                }
-                              })
-                            : _c(
-                                "div",
-                                {
-                                  staticClass:
-                                    "flex w-20 h-20 justify-center items-center"
-                                },
-                                [
-                                  _vm._v(
-                                    "\n              Kein Foto\n            "
-                                  )
-                                ]
-                              ),
-                          _vm._v(" "),
+                }),
+                _vm._v(" "),
+                _vm.showEditPopup
+                  ? _c("div", { staticClass: "popup-overlay" }, [
+                      _c("div", { staticClass: "popup" }, [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "close-btn",
+                            on: {
+                              click: function($event) {
+                                return _vm.closeEditPopup()
+                              }
+                            }
+                          },
+                          [_vm._v("×")]
+                        ),
+                        _vm._v(" "),
+                        _c("div", [
                           _c(
                             "div",
                             {
                               staticClass:
-                                "flex justify-center items-center gap-3"
+                                "shadow overflow-hidden sm:rounded-md"
                             },
                             [
                               _c(
-                                "button",
-                                {
-                                  staticClass:
-                                    "bg-gray-400 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded",
-                                  attrs: { "key:index": "" },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.toggleEditPopup(index)
-                                    }
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                edit\n              "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "button",
-                                {
-                                  staticClass:
-                                    "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded",
-                                  attrs: { "key:index": "" },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.deleteProgramm(index)
-                                    }
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                delete\n              "
-                                  )
-                                ]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    }),
-                    _vm._v(" "),
-                    _vm.showEditPopup
-                      ? _c("div", { staticClass: "popup-overlay" }, [
-                          _c("div", { staticClass: "popup" }, [
-                            _c(
-                              "button",
-                              {
-                                staticClass: "close-btn",
-                                on: {
-                                  click: function($event) {
-                                    return _vm.closeEditPopup()
-                                  }
-                                }
-                              },
-                              [_vm._v("×")]
-                            ),
-                            _vm._v(" "),
-                            _c("div", [
-                              _c(
                                 "div",
-                                {
-                                  staticClass:
-                                    "shadow overflow-hidden sm:rounded-md"
-                                },
+                                { staticClass: "px-4 py-5 bg-gray-300 sm:p-6" },
                                 [
                                   _c(
-                                    "div",
+                                    "label",
                                     {
                                       staticClass:
-                                        "px-4 py-5 bg-gray-300 sm:p-6"
+                                        "block text-sm font-medium text-gray-700",
+                                      attrs: { for: "name" }
                                     },
+                                    [_vm._v("Programm-Titel")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.formdataEdit.programm_titel,
+                                        expression:
+                                          "formdataEdit.programm_titel"
+                                      }
+                                    ],
+                                    staticClass:
+                                      "\n                            mt-1\n                            focus:ring-green-500 focus:border-green-500\n                            block\n                            w-full\n                            shadow-sm\n                            sm:text-sm\n                            border-gray-300\n                            rounded-md\n                          ",
+                                    attrs: {
+                                      maxlength: "70",
+                                      type: "text",
+                                      id: "programm_titel",
+                                      placeholder: "Pflichtfeld",
+                                      autocomplete: "given-name"
+                                    },
+                                    domProps: {
+                                      value: _vm.formdataEdit.programm_titel
+                                    },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.formdataEdit,
+                                          "programm_titel",
+                                          $event.target.value
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "col-span-6 sm:col-span-4" },
                                     [
                                       _c(
                                         "label",
                                         {
                                           staticClass:
                                             "block text-sm font-medium text-gray-700",
-                                          attrs: { for: "name" }
+                                          attrs: { for: "email_address" }
                                         },
-                                        [_vm._v("Programm-Titel")]
+                                        [_vm._v("Programmbeschreibung")]
                                       ),
                                       _vm._v(" "),
-                                      _c("input", {
+                                      _c("textarea", {
                                         directives: [
                                           {
                                             name: "model",
                                             rawName: "v-model",
                                             value:
-                                              _vm.formdataEdit.programm_titel,
+                                              _vm.formdataEdit
+                                                .programm_beschreibung,
                                             expression:
-                                              "formdataEdit.programm_titel"
+                                              "formdataEdit.programm_beschreibung"
                                           }
                                         ],
                                         staticClass:
-                                          "\n                            mt-1\n                            focus:ring-green-500 focus:border-green-500\n                            block\n                            w-full\n                            shadow-sm\n                            sm:text-sm\n                            border-gray-300\n                            rounded-md\n                          ",
+                                          "\n                              mt-1\n                              focus:ring-green-500 focus:border-green-500\n                              block\n                              w-full\n                              shadow-sm\n                              sm:text-sm\n                              border-gray-300\n                              rounded-md\n                            ",
                                         attrs: {
-                                          maxlength: "70",
-                                          type: "text",
-                                          id: "programm_titel",
-                                          placeholder: "Pflichtfeld",
-                                          autocomplete: "given-name"
+                                          maxlength: "2000",
+                                          id: "programm_beschreibung",
+                                          autocomplete: "Beschreibung",
+                                          placeholder:
+                                            "Pflichtfeld. [Inhalt des Programms, wird unter dem Titel eingefügt] Maximal 2000 Zeichen"
                                         },
                                         domProps: {
-                                          value: _vm.formdataEdit.programm_titel
+                                          value:
+                                            _vm.formdataEdit
+                                              .programm_beschreibung
                                         },
                                         on: {
                                           input: function($event) {
@@ -46716,163 +44265,96 @@ var render = function() {
                                             }
                                             _vm.$set(
                                               _vm.formdataEdit,
-                                              "programm_titel",
+                                              "programm_beschreibung",
                                               $event.target.value
                                             )
                                           }
                                         }
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "py-2 bg-green-900 text-white mb-1 px-2 text-center"
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                      Aktuelles Foto\n                      "
+                                      ),
+                                      _c(
+                                        "div",
+                                        { staticClass: "flex justify-center" },
+                                        [
+                                          _vm.formdataEdit.programm_bild_url
+                                            ? _c("img", {
+                                                staticClass:
+                                                  "w-20 h-20 border border-gray-50 rounded-lg my-2",
+                                                attrs: {
+                                                  src: _vm.formdataEditBildUrl(),
+                                                  alt: "Foto"
+                                                }
+                                              })
+                                            : _vm._e()
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "alert" }, [
+                                        _c(
+                                          "span",
+                                          {
+                                            staticClass: "closebtn",
+                                            attrs: {
+                                              onclick:
+                                                "this.parentElement.style.display='none';"
+                                            }
+                                          },
+                                          [_vm._v("×")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("strong", [_vm._v("Achtung!")]),
+                                        _vm._v(
+                                          " Maximale Filesize: 1.9MB\n                        "
+                                        ),
+                                        _c("br"),
+                                        _vm._v(
+                                          "\n                        Bsp: programmbildname.jpg oder programmbildname.png\n                      "
+                                        )
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "form",
+                                    {
+                                      staticClass:
+                                        "flex items-center justify-center mt-3",
+                                      on: {
+                                        submit: function($event) {
+                                          $event.preventDefault()
+                                          return _vm.uploadFromEdit($event)
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c("input", {
+                                        staticClass: "text-xs sm:text-base",
+                                        attrs: { type: "file" },
+                                        on: { change: _vm.handleOnChange }
                                       }),
                                       _vm._v(" "),
                                       _c(
-                                        "div",
+                                        "button",
                                         {
                                           staticClass:
-                                            "col-span-6 sm:col-span-4"
-                                        },
-                                        [
-                                          _c(
-                                            "label",
-                                            {
-                                              staticClass:
-                                                "block text-sm font-medium text-gray-700",
-                                              attrs: { for: "email_address" }
-                                            },
-                                            [_vm._v("Programmbeschreibung")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c("textarea", {
-                                            directives: [
-                                              {
-                                                name: "model",
-                                                rawName: "v-model",
-                                                value:
-                                                  _vm.formdataEdit
-                                                    .programm_beschreibung,
-                                                expression:
-                                                  "formdataEdit.programm_beschreibung"
-                                              }
-                                            ],
-                                            staticClass:
-                                              "\n                              mt-1\n                              focus:ring-green-500 focus:border-green-500\n                              block\n                              w-full\n                              shadow-sm\n                              sm:text-sm\n                              border-gray-300\n                              rounded-md\n                            ",
-                                            attrs: {
-                                              maxlength: "2000",
-                                              id: "programm_beschreibung",
-                                              autocomplete: "Beschreibung",
-                                              placeholder:
-                                                "Pflichtfeld. [Inhalt des Programms, wird unter dem Titel eingefügt] Maximal 2000 Zeichen"
-                                            },
-                                            domProps: {
-                                              value:
-                                                _vm.formdataEdit
-                                                  .programm_beschreibung
-                                            },
-                                            on: {
-                                              input: function($event) {
-                                                if ($event.target.composing) {
-                                                  return
-                                                }
-                                                _vm.$set(
-                                                  _vm.formdataEdit,
-                                                  "programm_beschreibung",
-                                                  $event.target.value
-                                                )
-                                              }
-                                            }
-                                          })
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "py-2 bg-green-900 text-white mb-1 px-2 text-center"
+                                            "\n                              bg-green-900\n                              text-xs\n                              sm:text-base\n                              p-1\n                              text-white\n                              border border-green-600\n                              rounded-md\n                              hover:bg-green-500\n                            ",
+                                          on: { click: _vm.showSubmitButton }
                                         },
                                         [
                                           _vm._v(
-                                            "\n                      Aktuelles Foto\n                      "
-                                          ),
-                                          _c(
-                                            "div",
-                                            {
-                                              staticClass: "flex justify-center"
-                                            },
-                                            [
-                                              _vm.formdataEdit.programm_bild_url
-                                                ? _c("img", {
-                                                    staticClass:
-                                                      "w-20 h-20 border border-gray-50 rounded-lg my-2",
-                                                    attrs: {
-                                                      src: _vm.formdataEditBildUrl(),
-                                                      alt: "Foto"
-                                                    }
-                                                  })
-                                                : _vm._e()
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _vm._m(1)
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "form",
-                                        {
-                                          staticClass:
-                                            "flex items-center justify-center mt-3",
-                                          on: {
-                                            submit: function($event) {
-                                              $event.preventDefault()
-                                              return _vm.uploadFromEdit($event)
-                                            }
-                                          }
-                                        },
-                                        [
-                                          _c("input", {
-                                            staticClass: "text-xs sm:text-base",
-                                            attrs: { type: "file" },
-                                            on: { change: _vm.handleOnChange }
-                                          }),
-                                          _vm._v(" "),
-                                          _c(
-                                            "button",
-                                            {
-                                              staticClass:
-                                                "\n                              bg-green-900\n                              text-xs\n                              sm:text-base\n                              p-1\n                              text-white\n                              border border-green-600\n                              rounded-md\n                              hover:bg-green-500\n                            ",
-                                              on: {
-                                                click: _vm.showSubmitButton
-                                              }
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                        Upload photo\n                      "
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "flex items-center justify-center"
-                                        },
-                                        [
-                                          _c(
-                                            "button",
-                                            {
-                                              staticClass:
-                                                "\n                              bg-green-900\n                              text-xs\n                              sm:text-base\n                              p-1\n                              mt-2\n                              text-white\n                              border border-green-600\n                              rounded-md\n                              hover:bg-green-500\n                            ",
-                                              on: {
-                                                click: _vm.showSubmitButton
-                                              }
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                        Kein Programm-Foto uploaden\n                      "
-                                              )
-                                            ]
+                                            "\n                        Upload photo\n                      "
                                           )
                                         ]
                                       )
@@ -46883,336 +44365,303 @@ var render = function() {
                                     "div",
                                     {
                                       staticClass:
-                                        "\n                          flex\n                          justify-center\n                          px-4\n                          py-3\n                          bg-gray-600\n                          border-t-2 border-gray-800\n                          text-right\n                          sm:px-6\n                        "
+                                        "flex items-center justify-center"
                                     },
                                     [
                                       _c(
                                         "button",
                                         {
                                           staticClass:
-                                            "\n                            inline-flex\n                            justify-center\n                            py-2\n                            px-4\n                            border border-transparent\n                            shadow-sm\n                            text-sm\n                            font-medium\n                            rounded-md\n                            text-white\n                            bg-green-600\n                            hover:bg-black\n                            focus:outline-none\n                            focus:ring-2\n                            focus:ring-offset-2\n                            focus:ring-green-500\n                          ",
-                                          attrs: { id: "submitbutton" },
-                                          on: { click: _vm.update }
+                                            "\n                              bg-green-900\n                              text-xs\n                              sm:text-base\n                              p-1\n                              mt-2\n                              text-white\n                              border border-green-600\n                              rounded-md\n                              hover:bg-green-500\n                            ",
+                                          on: { click: _vm.showSubmitButton }
                                         },
                                         [
                                           _vm._v(
-                                            "\n                      In DB Speichern\n                    "
+                                            "\n                        Kein Programm-Foto uploaden\n                      "
                                           )
                                         ]
                                       )
                                     ]
                                   )
                                 ]
-                              )
-                            ])
-                          ])
-                        ])
-                      : _vm._e(),
-                    _vm._v(" "),
-                    !_vm.showEditPopup
-                      ? _c(
-                          "div",
-                          { staticClass: "mt-5 md:mt-0 md:col-span-2" },
-                          [
-                            _c("div", [
+                              ),
+                              _vm._v(" "),
                               _c(
                                 "div",
                                 {
                                   staticClass:
-                                    "shadow overflow-hidden sm:rounded-md"
+                                    "\n                          flex\n                          justify-center\n                          px-4\n                          py-3\n                          bg-gray-600\n                          border-t-2 border-gray-800\n                          text-right\n                          sm:px-6\n                        "
                                 },
                                 [
                                   _c(
-                                    "div",
+                                    "button",
                                     {
                                       staticClass:
-                                        "px-4 py-5 bg-gray-300 sm:p-6"
+                                        "\n                            inline-flex\n                            justify-center\n                            py-2\n                            px-4\n                            border border-transparent\n                            shadow-sm\n                            text-sm\n                            font-medium\n                            rounded-md\n                            text-white\n                            bg-green-600\n                            hover:bg-black\n                            focus:outline-none\n                            focus:ring-2\n                            focus:ring-offset-2\n                            focus:ring-green-500\n                          ",
+                                      attrs: { id: "submitbutton" },
+                                      on: { click: _vm.update }
                                     },
                                     [
-                                      _c(
-                                        "label",
-                                        {
-                                          staticClass:
-                                            "block text-sm font-medium text-gray-700",
-                                          attrs: { for: "name" }
-                                        },
-                                        [_vm._v("Neuer Programm-Titel")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("input", {
-                                        directives: [
-                                          {
-                                            name: "model",
-                                            rawName: "v-model",
-                                            value: _vm.formdata.programm_titel,
-                                            expression:
-                                              "formdata.programm_titel"
-                                          }
-                                        ],
-                                        staticClass:
-                                          "\n                            mt-1\n                            focus:ring-green-500 focus:border-green-500\n                            block\n                            w-full\n                            shadow-sm\n                            sm:text-sm\n                            border-gray-300\n                            rounded-md\n                          ",
-                                        attrs: {
-                                          maxlength: "70",
-                                          type: "text",
-                                          id: "programm_titel",
-                                          placeholder:
-                                            "Pflichtfeld, max. 70 Zeichen",
-                                          autocomplete: "given-name"
-                                        },
-                                        domProps: {
-                                          value: _vm.formdata.programm_titel
-                                        },
-                                        on: {
-                                          input: function($event) {
-                                            if ($event.target.composing) {
-                                              return
-                                            }
-                                            _vm.$set(
-                                              _vm.formdata,
-                                              "programm_titel",
-                                              $event.target.value
-                                            )
-                                          }
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "col-span-6 sm:col-span-4"
-                                        },
-                                        [
-                                          _c(
-                                            "label",
-                                            {
-                                              staticClass:
-                                                "block text-sm font-medium text-gray-700",
-                                              attrs: { for: "email_address" }
-                                            },
-                                            [_vm._v("Programm-Textinhalt")]
-                                          ),
-                                          _vm._v(" "),
-                                          _c("textarea", {
-                                            directives: [
-                                              {
-                                                name: "model",
-                                                rawName: "v-model",
-                                                value:
-                                                  _vm.formdata
-                                                    .programm_beschreibung,
-                                                expression:
-                                                  "formdata.programm_beschreibung"
-                                              }
-                                            ],
-                                            staticClass:
-                                              "\n                              mt-1\n                              focus:ring-green-500 focus:border-green-500\n                              block\n                              w-full\n                              shadow-sm\n                              sm:text-sm\n                              border-gray-300\n                              rounded-md\n                            ",
-                                            attrs: {
-                                              maxlength: "500",
-                                              id: "programm_beschreibung",
-                                              autocomplete: "Beschreibung",
-                                              placeholder:
-                                                "Optional. MIN 10 Zeichen! max. 500 Zeichen[Programmbeschreibung, wird unter dem Titel eingefügt]"
-                                            },
-                                            domProps: {
-                                              value:
-                                                _vm.formdata
-                                                  .programm_beschreibung
-                                            },
-                                            on: {
-                                              input: function($event) {
-                                                if ($event.target.composing) {
-                                                  return
-                                                }
-                                                _vm.$set(
-                                                  _vm.formdata,
-                                                  "programm_beschreibung",
-                                                  $event.target.value
-                                                )
-                                              }
-                                            }
-                                          })
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _vm._m(2),
-                                      _vm._v(" "),
-                                      _c(
-                                        "form",
-                                        {
-                                          staticClass:
-                                            "flex items-center justify-center mt-3",
-                                          on: {
-                                            submit: function($event) {
-                                              $event.preventDefault()
-                                              return _vm.upload($event)
-                                            }
-                                          }
-                                        },
-                                        [
-                                          _c("input", {
-                                            staticClass: "text-xs sm:text-base",
-                                            attrs: { type: "file" },
-                                            on: { change: _vm.handleOnChange }
-                                          }),
-                                          _vm._v(" "),
-                                          _c(
-                                            "button",
-                                            {
-                                              staticClass:
-                                                "\n                              bg-green-900\n                              text-xs\n                              sm:text-base\n                              p-1\n                              text-white\n                              border border-green-600\n                              rounded-md\n                              hover:bg-green-500\n                            ",
-                                              on: {
-                                                click: _vm.showSubmitButton
-                                              }
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                      Upload photo\n                    "
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "flex items-center justify-center"
-                                        },
-                                        [
-                                          _c(
-                                            "button",
-                                            {
-                                              staticClass:
-                                                "\n                              bg-green-900\n                              text-xs\n                              sm:text-base\n                              p-1\n                              mt-2\n                              text-white\n                              border border-green-600\n                              rounded-md\n                              hover:bg-green-500\n                            ",
-                                              on: {
-                                                click: _vm.showSubmitButton
-                                              }
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                      Kein Programm-Bild beifügen\n                    "
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "\n                          flex\n                          justify-center\n                          px-4\n                          py-3\n                          bg-gray-600\n                          border-t-2 border-gray-800\n                          text-right\n                          sm:px-6\n                        "
-                                    },
-                                    [
-                                      _c(
-                                        "button",
-                                        {
-                                          staticClass:
-                                            "\n                            inline-flex\n                            justify-center\n                            py-2\n                            px-4\n                            border border-transparent\n                            shadow-sm\n                            text-sm\n                            font-medium\n                            rounded-md\n                            text-white\n                            bg-green-600\n                            hover:bg-black\n                            focus:outline-none\n                            focus:ring-2\n                            focus:ring-offset-2\n                            focus:ring-green-500\n                          ",
-                                          class: _vm.submitvisibility,
-                                          attrs: { id: "submitbutton" },
-                                          on: { click: _vm.submitform }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                    In DB Speichern\n                  "
-                                          )
-                                        ]
+                                      _vm._v(
+                                        "\n                      In DB Speichern\n                    "
                                       )
                                     ]
                                   )
                                 ]
                               )
-                            ])
+                            ]
+                          )
+                        ])
+                      ])
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                !_vm.showEditPopup
+                  ? _c("div", { staticClass: "mt-5 md:mt-0 md:col-span-2" }, [
+                      _c("div", [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "shadow overflow-hidden sm:rounded-md"
+                          },
+                          [
+                            _c(
+                              "div",
+                              { staticClass: "px-4 py-5 bg-gray-300 sm:p-6" },
+                              [
+                                _c(
+                                  "label",
+                                  {
+                                    staticClass:
+                                      "block text-sm font-medium text-gray-700",
+                                    attrs: { for: "name" }
+                                  },
+                                  [_vm._v("Neuer Programm-Titel")]
+                                ),
+                                _vm._v(" "),
+                                _c("input", {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.formdata.programm_titel,
+                                      expression: "formdata.programm_titel"
+                                    }
+                                  ],
+                                  staticClass:
+                                    "\n                            mt-1\n                            focus:ring-green-500 focus:border-green-500\n                            block\n                            w-full\n                            shadow-sm\n                            sm:text-sm\n                            border-gray-300\n                            rounded-md\n                          ",
+                                  attrs: {
+                                    maxlength: "70",
+                                    type: "text",
+                                    id: "programm_titel",
+                                    placeholder: "Pflichtfeld, max. 70 Zeichen",
+                                    autocomplete: "given-name"
+                                  },
+                                  domProps: {
+                                    value: _vm.formdata.programm_titel
+                                  },
+                                  on: {
+                                    input: function($event) {
+                                      if ($event.target.composing) {
+                                        return
+                                      }
+                                      _vm.$set(
+                                        _vm.formdata,
+                                        "programm_titel",
+                                        $event.target.value
+                                      )
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "col-span-6 sm:col-span-4" },
+                                  [
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass:
+                                          "block text-sm font-medium text-gray-700",
+                                        attrs: { for: "email_address" }
+                                      },
+                                      [_vm._v("Programm-Textinhalt")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("textarea", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value:
+                                            _vm.formdata.programm_beschreibung,
+                                          expression:
+                                            "formdata.programm_beschreibung"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "\n                              mt-1\n                              focus:ring-green-500 focus:border-green-500\n                              block\n                              w-full\n                              shadow-sm\n                              sm:text-sm\n                              border-gray-300\n                              rounded-md\n                            ",
+                                      attrs: {
+                                        maxlength: "500",
+                                        id: "programm_beschreibung",
+                                        autocomplete: "Beschreibung",
+                                        placeholder:
+                                          "Optional. MIN 10 Zeichen! max. 500 Zeichen[Programmbeschreibung, wird unter dem Titel eingefügt]"
+                                      },
+                                      domProps: {
+                                        value:
+                                          _vm.formdata.programm_beschreibung
+                                      },
+                                      on: {
+                                        input: function($event) {
+                                          if ($event.target.composing) {
+                                            return
+                                          }
+                                          _vm.$set(
+                                            _vm.formdata,
+                                            "programm_beschreibung",
+                                            $event.target.value
+                                          )
+                                        }
+                                      }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-2 bg-green-900 text-white mb-1 px-2"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                    Foto Upload\n                    "
+                                    ),
+                                    _c("div", { staticClass: "alert" }, [
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass: "closebtn",
+                                          attrs: {
+                                            onclick:
+                                              "this.parentElement.style.display='none';"
+                                          }
+                                        },
+                                        [_vm._v("×")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("strong", [_vm._v("Achtung!")]),
+                                      _vm._v(
+                                        " Maximale Filesize: 1.9MB\n                      "
+                                      ),
+                                      _c("br"),
+                                      _vm._v(
+                                        "\n                      Bsp: bildname.jpg oder bildname.png\n                    "
+                                      )
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "form",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-center mt-3",
+                                    on: {
+                                      submit: function($event) {
+                                        $event.preventDefault()
+                                        return _vm.upload($event)
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("input", {
+                                      staticClass: "text-xs sm:text-base",
+                                      attrs: { type: "file" },
+                                      on: { change: _vm.handleOnChange }
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass:
+                                          "\n                              bg-green-900\n                              text-xs\n                              sm:text-base\n                              p-1\n                              text-white\n                              border border-green-600\n                              rounded-md\n                              hover:bg-green-500\n                            ",
+                                        on: { click: _vm.showSubmitButton }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                      Upload photo\n                    "
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-center"
+                                  },
+                                  [
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass:
+                                          "\n                              bg-green-900\n                              text-xs\n                              sm:text-base\n                              p-1\n                              mt-2\n                              text-white\n                              border border-green-600\n                              rounded-md\n                              hover:bg-green-500\n                            ",
+                                        on: { click: _vm.showSubmitButton }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                      Kein Programm-Bild beifügen\n                    "
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "\n                          flex\n                          justify-center\n                          px-4\n                          py-3\n                          bg-gray-600\n                          border-t-2 border-gray-800\n                          text-right\n                          sm:px-6\n                        "
+                              },
+                              [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass:
+                                      "\n                            inline-flex\n                            justify-center\n                            py-2\n                            px-4\n                            border border-transparent\n                            shadow-sm\n                            text-sm\n                            font-medium\n                            rounded-md\n                            text-white\n                            bg-green-600\n                            hover:bg-black\n                            focus:outline-none\n                            focus:ring-2\n                            focus:ring-offset-2\n                            focus:ring-green-500\n                          ",
+                                    class: _vm.submitvisibility,
+                                    attrs: { id: "submitbutton" },
+                                    on: { click: _vm.submitform }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                    In DB Speichern\n                  "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
                           ]
                         )
-                      : _vm._e()
-                  ],
-                  2
-                )
-              ])
-            ]
-          )
-        ])
-      : _vm._e()
+                      ])
+                    ])
+                  : _vm._e()
+              ],
+              2
+            )
+          ])
+        ]
+      )
+    ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-gray-400 pb-3" }, [
-      _c(
-        "h3",
-        { staticClass: "text-lg font-medium leading-6 text-white pb-1" },
-        [
-          _vm._v(
-            "\n              Tagesprogramm anlegen oder löschen.\n            "
-          )
-        ]
-      ),
-      _vm._v(
-        "\n            Hier können Sie ein neues Tagesprogramm verfassen oder ein\n            bestehendes bearbeiten, sowie löschen.\n          "
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "alert" }, [
-      _c(
-        "span",
-        {
-          staticClass: "closebtn",
-          attrs: { onclick: "this.parentElement.style.display='none';" }
-        },
-        [_vm._v("×")]
-      ),
-      _vm._v(" "),
-      _c("strong", [_vm._v("Achtung!")]),
-      _vm._v(" Maximale Filesize: 1.9MB\n                        "),
-      _c("br"),
-      _vm._v(
-        "\n                        Bsp: programmbildname.jpg oder programmbildname.png\n                      "
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "py-2 bg-green-900 text-white mb-1 px-2" },
-      [
-        _vm._v("\n                    Foto Upload\n                    "),
-        _c("div", { staticClass: "alert" }, [
-          _c(
-            "span",
-            {
-              staticClass: "closebtn",
-              attrs: { onclick: "this.parentElement.style.display='none';" }
-            },
-            [_vm._v("×")]
-          ),
-          _vm._v(" "),
-          _c("strong", [_vm._v("Achtung!")]),
-          _vm._v(" Maximale Filesize: 1.9MB\n                      "),
-          _c("br"),
-          _vm._v(
-            "\n                      Bsp: bildname.jpg oder bildname.png\n                    "
-          )
-        ])
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -47553,6 +45002,438 @@ var staticRenderFns = [
     ])
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=template&id=19c4be62&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ReusableComponents/DashboardLayout.vue?vue&type=template&id=19c4be62& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "w-full h-full dashboardbackground" }, [
+    _vm.loggedIn == false
+      ? _c(
+          "div",
+          {
+            staticClass:
+              "\n                    flex\n                    w-full\n                    h-full\n                    items-center\n                    justify-center\n                    text-red-900\n                    bg-gray-900\n                  "
+          },
+          [
+            _vm._v(
+              "\n    Nicht eingeloggt! Bitte loggen Sie sich ein, um auf das Dashboard\n    zugreifen zu können...\n  "
+            )
+          ]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.loggedIn
+      ? _c("div", { staticClass: "w-full" }, [
+          _c(
+            "nav",
+            { staticClass: "bg-gray-800 border-b border-gray-300" },
+            [
+              _c(
+                "div",
+                { staticClass: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "relative flex items-center justify-between h-16"
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "absolute inset-y-0 left-0 flex items-center sm:hidden"
+                        },
+                        [
+                          _c("span", { staticClass: "sr-only" }, [
+                            _vm._v("Open main menu")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "svg",
+                            {
+                              staticClass: "hidden h-6 w-6",
+                              attrs: {
+                                xmlns: "http://www.w3.org/2000/svg",
+                                fill: "none",
+                                viewBox: "0 0 24 24",
+                                stroke: "currentColor",
+                                "aria-hidden": "true"
+                              }
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  "stroke-linecap": "round",
+                                  "stroke-linejoin": "round",
+                                  "stroke-width": "2",
+                                  d: "M6 18L18 6M6 6l12 12"
+                                }
+                              })
+                            ]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "\n                            flex-1 flex\n                            items-center\n                            justify-center\n                            sm:items-stretch\n                            sm:justify-start\n                          "
+                        },
+                        [
+                          _c("div", {
+                            staticClass: "flex-shrink-0 flex items-center"
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "hidden sm:block sm:ml-6" },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "flex space-x-4" },
+                                [
+                                  _c(
+                                    "router-link",
+                                    { attrs: { to: "/admin/dashboard" } },
+                                    [
+                                      _c(
+                                        "span",
+                                        {
+                                          staticClass: "text-gray-500 text-lg"
+                                        },
+                                        [_vm._v("Dashboard")]
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "\n                                  text-gray-300\n                                  hover:bg-gray-700\n                                  hover:text-white\n                                  px-3\n                                  py-2\n                                  rounded-md\n                                  text-sm\n                                  font-medium\n                                ",
+                                      attrs: {
+                                        "aria-current": _vm.ariaCurrent(
+                                          "ausstelleruebersicht"
+                                        )
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "router-link",
+                                        {
+                                          attrs: {
+                                            to:
+                                              "/admin/dashboard/ausstelleruebersicht"
+                                          }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "Aussteller\n                  "
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "\n                                  text-gray-300\n                                  hover:bg-gray-700\n                                  hover:text-white\n                                  px-3\n                                  py-2\n                                  rounded-md\n                                  text-sm\n                                  font-medium\n                                ",
+                                      attrs: {
+                                        "aria-current": _vm.ariaCurrent("news")
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "router-link",
+                                        {
+                                          attrs: { to: "/admin/dashboard/news" }
+                                        },
+                                        [_vm._v("News")]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "\n                                  text-gray-300\n                                  hover:bg-gray-700\n                                  hover:text-white\n                                  px-3\n                                  py-2\n                                  rounded-md\n                                  text-sm\n                                  font-medium\n                                ",
+                                      attrs: {
+                                        "aria-current": _vm.ariaCurrent(
+                                          "programmanlegen"
+                                        )
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "router-link",
+                                        {
+                                          attrs: {
+                                            to:
+                                              "/admin/dashboard/programmanlegen"
+                                          }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                    Programm"
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "\n                                  text-gray-300\n                                  hover:bg-gray-700\n                                  hover:text-white\n                                  px-3\n                                  py-2\n                                  rounded-md\n                                  text-sm\n                                  font-medium\n                                ",
+                                      attrs: {
+                                        "aria-current": _vm.ariaCurrent(
+                                          "editfotogalerie"
+                                        )
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "router-link",
+                                        {
+                                          attrs: {
+                                            to:
+                                              "/admin/dashboard/editfotogalerie"
+                                          }
+                                        },
+                                        [_vm._v("Fotogalerie")]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "\n                                  text-gray-300\n                                  hover:bg-gray-700\n                                  hover:text-white\n                                  px-3\n                                  py-2\n                                  rounded-md\n                                  text-sm\n                                  font-medium\n                                ",
+                                      attrs: {
+                                        "aria-current": _vm.ariaCurrent(
+                                          "hometext"
+                                        )
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "router-link",
+                                        {
+                                          attrs: {
+                                            to: "/admin/dashboard/hometext"
+                                          }
+                                        },
+                                        [_vm._v("Home-Text")]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "\n                            absolute\n                            inset-y-0\n                            right-0\n                            flex\n                            items-center\n                            pr-2\n                            sm:static\n                            sm:inset-auto\n                            sm:ml-6\n                            sm:pr-0\n                          "
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "\n                              text-gray-300\n                              hover:bg-red-900\n                              hover:text-white\n                              px-3\n                              py-2\n                              rounded-md\n                              text-sm\n                              font-medium\n                            "
+                            },
+                            [
+                              _c(
+                                "span",
+                                {
+                                  staticClass: "text-white cursor-pointer",
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.handleLogout()
+                                    }
+                                  }
+                                },
+                                [_vm._v("Logout\n              ")]
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("MobileMenu")
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "h-full w-full", attrs: { id: "dashboardcontent" } },
+            [_vm._t("default")],
+            2
+          )
+        ])
+      : _vm._e()
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue?vue&type=template&id=4f305066&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/VorstandAdminComponents/ReusableComponents/MobileMenu.vue?vue&type=template&id=4f305066&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "sm:hidden", attrs: { id: "mobile-menu" } }, [
+    _c(
+      "div",
+      { staticClass: "px-2 pt-2 pb-3 space-y-1" },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "\n                              bg-gray-900\n                              text-white\n                              block\n                              px-3\n                              py-1\n                              rounded-md\n                              text-base\n                              font-medium\n                            ",
+            attrs: { "aria-current": "page" }
+          },
+          [_vm._v("\n      Dashboard\n    ")]
+        ),
+        _vm._v(" "),
+        _c(
+          "router-link",
+          { attrs: { to: "/admin/dashboard/ausstelleruebersicht" } },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "\n                              text-gray-300\n                              hover:bg-gray-700\n                              hover:text-white\n                              block\n                              px-3\n                              py-1\n                              rounded-md\n                              text-base\n                              font-medium\n                            "
+              },
+              [_vm._v("\n        Aussteller\n      ")]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "\n                              text-gray-300\n                              hover:bg-gray-700\n                              hover:text-white\n                              block\n                              px-3\n                              py-1\n                              rounded-md\n                              text-base\n                              font-medium\n                            "
+          },
+          [
+            _c("router-link", { attrs: { to: "/admin/dashboard/news" } }, [
+              _vm._v("News")
+            ])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "\n                              text-gray-300\n                              hover:bg-gray-700\n                              hover:text-white\n                              block\n                              px-3\n                              py-1\n                              rounded-md\n                              text-base\n                              font-medium\n                            "
+          },
+          [
+            _c(
+              "router-link",
+              { attrs: { to: "/admin/dashboard/programmanlegen" } },
+              [_vm._v("\n        Programm")]
+            )
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "\n                              text-gray-300\n                              hover:bg-gray-700\n                              hover:text-white\n                              block\n                              px-3\n                              py-1\n                              rounded-md\n                              text-base\n                              font-medium\n                            "
+          },
+          [
+            _c(
+              "router-link",
+              { attrs: { to: "/admin/dashboard/editfotogalerie" } },
+              [_vm._v("Fotogalerie")]
+            )
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "\n                              text-gray-300\n                              hover:bg-gray-700\n                              hover:text-white\n                              block\n                              px-3\n                              py-1\n                              rounded-md\n                              text-base\n                              font-medium\n                            "
+          },
+          [
+            _c("router-link", { attrs: { to: "/admin/dashboard/hometext" } }, [
+              _vm._v("Home-Text")
+            ])
+          ],
+          1
+        )
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 

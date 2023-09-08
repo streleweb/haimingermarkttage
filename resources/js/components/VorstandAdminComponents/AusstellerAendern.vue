@@ -441,7 +441,7 @@
 import repository from "./repository/repository";
 import Swal from "sweetalert2";
 import axios from "axios";
-import MobileMenu from "./MobileMenu.vue";
+import MobileMenu from "./ReusableComponents/MobileMenu";
 
 export default {
   data() {

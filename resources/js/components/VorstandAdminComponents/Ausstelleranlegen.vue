@@ -408,7 +408,7 @@
 
 <script>
 import Swal from "sweetalert2";
-import MobileMenu from "./MobileMenu.vue";
+import MobileMenu from "./ReusableComponents/MobileMenu";
 
 export default {
   data() {
