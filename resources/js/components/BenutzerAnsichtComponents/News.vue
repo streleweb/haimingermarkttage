@@ -2,9 +2,9 @@
   <div class="newsgradient">
     <div class="newscontainer">
       <!-- custom font konfiguriert in tailwind.config.js-->
-      <div class="titletext ueberschrift mb-7 w-full textshadow-markant">
-        <p>News</p>
-      </div>
+      <h1 class="titletext ueberschrift mb-7 w-full textshadow-markant">
+        News
+      </h1>
       <p v-if="loading">
         <img src="/images/icons/gifs/loadingtransparent.gif" alt="loading..." class="mt-20 z-50" />
       </p>

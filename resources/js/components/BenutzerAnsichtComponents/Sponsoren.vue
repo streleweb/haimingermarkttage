@@ -22,7 +22,7 @@
             lg:text-5xl
             font-s
           ">
-          {{ titleMessage }}
+          <h1>{{ titleMessage }}</h1>
           <div class="
               text-gray-100 text-base
               flex

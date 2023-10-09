@@ -2,7 +2,7 @@
   <div class="max-w-full produktbackground">
     <div class="font-willkommen pt-5 px-1 mb-10 text-center z-index:100">
       <div class="ueberschriftprodukte textshadow-markant">
-        {{ titleMessage }}
+        <h1>{{ titleMessage }}</h1>
         <div class="
             hidden
             hmbp:block

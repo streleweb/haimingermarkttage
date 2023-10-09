@@ -5,7 +5,7 @@
     <div class="font-willkommen pt-5 px-1 mb-10 text-center z-index:100">
       <!-- custom font konfiguriert in tailwind.config.js-->
       <div class="ueberschriftprodukte textshadow-markant">
-        Farbzonen-Übersicht
+        <h1>Farbzonen-Übersicht</h1>
         <div class="
             hidden
             hmbp:block

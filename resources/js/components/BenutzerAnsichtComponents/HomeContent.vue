@@ -4,9 +4,9 @@
     <div class="titletext">
       <!-- custom font konfiguriert in tailwind.config.js-->
       <div class="ueberschrift textshadow-markant">
-        {{ titleMessage }}
+        <h1>{{ titleMessage }}</h1>
         <div class="descriptiontext">
-          {{ smallDescription }}
+          <h2>{{ smallDescription }}</h2>
         </div>
         <!-- end willkommenstexte -->
         <div id="hmdate" class="mt-2 descriptiontext text-white">
@@ -46,9 +46,9 @@ import Button from "../ReusableComponents/Button";
 import Swal from "sweetalert2";
 
 export default {
-  metaInfo: {
-    title: 'Willkommen bei den Haiminger Markttagen!'
-  },
+  // metaInfo: {
+  //   title: 'Willkommen bei den Haiminger Markttagen!'
+  // },
   data() {
     return {
       name: "HomeContent",

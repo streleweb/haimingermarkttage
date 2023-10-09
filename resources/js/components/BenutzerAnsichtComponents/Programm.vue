@@ -4,7 +4,7 @@
       <!-- custom font konfiguriert in tailwind.config.js-->
       <!-- Hier noch Background-Pic oder Video rein -->
       <div class="titletext ueberschrift mb-7 w-full textshadow-markant">
-        <p>Programm</p>
+        <h1>Programm</h1>
         <!-- end willkommenstexte -->
       </div>
       <p v-if="loading">

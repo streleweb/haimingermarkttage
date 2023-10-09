@@ -1,3 +1,23 @@
 User-agent: *
-Disallow:
+Disallow: /admin/
+
+Allow: /$
+
+Allow: /produktreiter
+Allow: /lebensmittel
+Allow: /gastronomie
+Allow: /handwerk
+Allow: /textil
+Allow: /allerlei
+Allow: /philosophie
+Allow: /news
+Allow: /programm
+Allow: /fotogalerie
+Allow: /aussteller
+Allow: /karte
+Allow: /anreise
+Allow: /kontakt
+
+Sitemap: https://app.haiminger-markttage.at/sitemap.xml
+
 

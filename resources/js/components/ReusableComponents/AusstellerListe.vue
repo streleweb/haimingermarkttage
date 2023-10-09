@@ -5,7 +5,7 @@
         <img src="/images/icons/gifs/loadingtransparent.gif" alt="loading..." class="mt-40 mx-auto z-50" />
       </p>
       <div class="titletext ueberschrift mb-7 w-full textshadow-markant">
-        <p>{{ pageTitle }}</p>
+        <h1>{{ pageTitle }}</h1>
         <div class="
                     hidden
                     hmbp:block
